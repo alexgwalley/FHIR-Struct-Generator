@@ -1,3 +1,6 @@
+#ifndef ARENA_H
+#define ARENA_H
+
 #include <stdlib.h>
 
 typedef unsigned long long u64;
@@ -34,3 +37,5 @@ void TempEnd(ArenaTemp temp);
 
 void GenerateScratchArenas(Arena **scratch1, Arena **scratch2, u64 size);
 
+
+#endif
