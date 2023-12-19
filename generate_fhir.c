@@ -450,6 +450,26 @@ AppendSerializeImports(StringBuilder *builder) {
 	StringBuilder_Append(builder, "#include \"fhir_structs_gen.h\"\n");
 }
 
+//TODO(alex): see how to remove
+void
+AppendSerializeHardcoded(StringBuilder *builder) {
+	char *number_serialize = 
+"bool number_Serialize(StringBuilder *builder, number number_, char* key, int indent) {\n"
+"\tif(!number_) return false;"
+"\tStringBuilder_Append(builder, \"\\\"%s\\\": \\\"%f\\\"\", key, number_);\n"
+"\treturn true;"
+"}";
+
+	StringBuilder_Append(builder, "%s\n", number_serialize);
+	char *xhtml_serialize = 
+"bool xhtml_Serialize(StringBuilder *builder, xhtml xhtml_, char* key, int indent) {\n"
+"\tif(!xhtml_) return false;"
+"\tStringBuilder_Append(builder, \"\\\"%s\\\": \\\"%s\\\"\", key, xhtml_);\n"
+"\treturn true;"
+"}\n";
+	StringBuilder_Append(builder, "%s\n", xhtml_serialize);
+}
+
 char *
 ToLower(Arena *arena, char *str)
 {
@@ -493,7 +513,7 @@ MemberNameFromProperty(Arena *arena, FhirProperty *prop)
 void 
 AppendStructSerializeFunctionHead(StringBuilder *builder, FhirResource *res, char *argument_name)
 {
-	char *func_format = "void %s_Serialize(StringBuilder *builder, %s *%s, char* key, int indent)";
+	char *func_format = "bool %s_Serialize(StringBuilder *builder, %s *%s, char* key, int indent)";
 	char *struct_name = StructNameFromResource(res);
 	StringBuilder_Append(builder, func_format, struct_name, struct_name, argument_name);
 }
@@ -501,7 +521,7 @@ AppendStructSerializeFunctionHead(StringBuilder *builder, FhirResource *res, cha
 void
 AppendStringSerializeFunctionHead(StringBuilder *builder, FhirResource *res, char *argument_name)
 {
-	char *func_format = "void %s_Serialize(StringBuilder *builder, %s %s, char* key, int indent)";
+	char *func_format = "bool %s_Serialize(StringBuilder *builder, %s %s, char* key, int indent)";
 	char *struct_name = StructNameFromResource(res);
 	StringBuilder_Append(builder, func_format, struct_name, struct_name, argument_name);
 }
@@ -512,7 +532,7 @@ AppendStructSerializeFunction(StringBuilder *builder, FhirResource *res, char *a
 	ArenaTemp scratch = GetScratch(0);
 
 
-	char *null_check = "\tif(!%s) return;\n";
+	char *null_check = "\tif(!%s) return false;\n";
 	StringBuilder_Append(builder, null_check, argument_name);
 
 	char *sb_format = "\tStringBuilder_Append(builder, \"\\\"%s\\\": {\\n\");\n";
@@ -521,27 +541,29 @@ AppendStructSerializeFunction(StringBuilder *builder, FhirResource *res, char *a
 		FhirProperty prop = res->data.props.properties[i];
 		char *member_name = MemberNameFromProperty(scratch.arena, &prop);
 		char *struct_name = StructNameFromProperty(scratch.arena, &prop);
-		char *call_serialize = "\t%s_Serialize(builder, %s->%s, \"%s\", indent);\n";
+		char *call_serialize = "\tif(%s_Serialize(builder, %s->%s, \"%s\", indent)) {\n";
 			StringBuilder_Append(builder, call_serialize, struct_name, argument_name, member_name, member_name);
 
 		if(i != res->data.props.count - 1) {
-			char *trailing_comma = "\tStringBuilder_Append(builder, \",\\n\");\n";
+			char *trailing_comma = "\t\tStringBuilder_Append(builder, \",\\n\");\n";
 			StringBuilder_Append(builder, trailing_comma);
 		}
+		StringBuilder_Append(builder, "\t}\n");
 	}
 	StringBuilder_Append(builder, "\tStringBuilder_Append(builder, \"}\");\n");
 
+	StringBuilder_Append(builder, "\treturn true;\n");
 	ReleaseScratch(scratch);
 }
 
 void
 AppendStringSerializeFunction(StringBuilder *builder, FhirResource *res, char *argument_name) 
 {
-	char *sb_format = "\tStringBuilder_Append(builder, \"\\\"%s\\\": \"\\n\");\n";
-	StringBuilder_Append(builder, sb_format, argument_name);
-
-
-	StringBuilder_Append(builder, "\tStringBuilder_Append(builder, \"\"\");\n");
+	char *sb_format = 
+		"\tif(!%s) return false;\n"
+		"\tStringBuilder_Append(builder, \"\\\"%%s\\\": \\\"%%s\\\"\", key, %s);\n"
+		"\treturn true;\n";
+	StringBuilder_Append(builder, sb_format, argument_name, argument_name);
 }
 
 char *
@@ -570,13 +592,14 @@ AppendSerializeFunction(StringBuilder *builder, FhirResource *res)
 		AppendStructSerializeFunctionHead(builder, res, argument_name);
 		StringBuilder_Append(builder, "{\n");
 		AppendStructSerializeFunction(builder, res, argument_name);
-
+		StringBuilder_Append(builder, "}\n");
 	} else if(res->type != FhirResourceType_Unknown){
 		AppendStringSerializeFunctionHead(builder, res, argument_name);
 		StringBuilder_Append(builder, "{\n");
+		AppendStringSerializeFunction(builder, res, argument_name);
+		StringBuilder_Append(builder, "}\n");
 	}
 
-	StringBuilder_Append(builder, "}\n");
 
 	ReleaseScratch(temp);
 }
@@ -601,6 +624,7 @@ void
 GenerateSerializationFile(StringBuilder *builder, FhirResource *resources, int resource_count)
 {
 	AppendSerializeImports(builder);
+	AppendSerializeHardcoded(builder);
 	for(int i = 0; i < resource_count; i++) {
 		FhirResource res = resources[i];
 		if(res.data_type == FhirResourceDataType_Properties &&
@@ -612,7 +636,7 @@ GenerateSerializationFile(StringBuilder *builder, FhirResource *resources, int r
 	}
 	for(int i = 0; i < resource_count; i++) {
 		FhirResource res = resources[i];
-		if(res.data_type == FhirResourceDataType_Properties &&
+		if(res.type == FhirResourceType_Struct && res.data_type == FhirResourceDataType_Properties &&
 			res.data.props.count == 0) {
 			continue;
 		}
