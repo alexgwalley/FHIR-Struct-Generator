@@ -9,17 +9,36 @@
 using namespace std;
 
 
+class FinalClassMemberDefinition {
+
+	string name;
+	string full_path;
+
+	ValueType value_type;
+	union {
+		string _string;
+		bool _boolean;
+		double _number;
+		string _class_reference;
+		vector<string> _options;
+	} value;
+
+	Cardinality cardinality;
+
+};
+
 class ElementDefinition;
 class ClassDefinition;
 
-class ClassMemberDefinition {
+class IntermediateClassMemberDefinition {
 public:
 	string name;
 	string path;
 	vector<string> possible_types;
 	Cardinality cardinality;
 	optional<string> content_reference_path;
-	DefinitionType type;
+	DefinitionType definition_type;
+	ValueType value_type;
 
 	ClassMemberDefinition(){}
 	ClassMemberDefinition(string _name,
@@ -33,25 +52,27 @@ public:
 	possible_types(_possible_types),
 	cardinality(_cardinality),
 	content_reference_path(_content_reference_path),
-	type(_type)
+	definition_type(_type)
 	{}
 
 	void OutputToStream(ostream &os, ClassDefinition& parent, map<string, ClassDefinition>& other_definitions);
 	vector<string>
 	GetDependencies(map<string, ClassDefinition>& definitions);
 	string GetCleanName();
+	void ResolveTypes(const ClassDefinition& parent,
+	                  const map<string, ClassDefinition>& all_definitions);
 };
 
 class ClassDefinition {
 public:
 	string path;
-	map<string, ClassMemberDefinition> members;
+	map<string, IntermediateClassMemberDefinition> members;
 
 	ClassDefinition() {}
 	ClassDefinition(string _path): path(_path) {}
 
 	void
-	AddMemberIfNotPresent(ClassMemberDefinition def);
+	AddMemberIfNotPresent(IntermediateClassMemberDefinition def);
 	string GetClassName() const;
 	void OutputToStream(ostream &os, map<string, ClassDefinition>& other_definitions);
 	void OutputForwardDeclaration(ostream &os);

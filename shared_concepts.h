@@ -35,6 +35,15 @@ enum DefinitionType {
 	Primative
 };
 
+enum ValueType {
+	ValueType_Unknown,
+	String,
+	Boolean,
+	Number,
+	Class_Reference,
+	Multiple
+};
+
 
 extern std::set<std::string> primative_paths;
 extern map<string, string> fhir_primatives_map;

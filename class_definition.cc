@@ -192,7 +192,7 @@ ClassMemberDefinition::OutputToStream(ostream& os, ClassDefinition& parent, map<
 		}
 	}
 
-	if (type_name && type == DefinitionType::Class_Reference &&
+	if (type_name && definition_type == DefinitionType::Class_Reference &&
 		primative_paths.find(*type_name) == primative_paths.end()) {
 		type_name = "std::shared_ptr<" + *type_name +">";
 	}
@@ -229,7 +229,7 @@ ClassMemberDefinition::GetDependencies(map<string, ClassDefinition>& definitions
 {
 	vector<string> result;
 
-	if (type == DefinitionType::Primative) return result;
+	if (definition_type == DefinitionType::Primative) return result;
 
 	for (auto pt : possible_types) {
 		bool found = definitions.find(pt) != definitions.end();
@@ -238,6 +238,28 @@ ClassMemberDefinition::GetDependencies(map<string, ClassDefinition>& definitions
 	}
 
 	return result;
+}
+
+void
+OutputDeserialization(ostream &os, string json_name, ClassMemberDefinition& def)
+{
+
+	cJSON* member = cJSON_GetStringValue(json_name);
+	cJSON* member = cJSON_GetNumberValue(json_name);
+	cJSON* member = cJSON_GetStringValue(json_name);
+
+	switch (def.value_type) {
+		case ValueType::Class: {
+
+		} break;
+		case DefinitionType::Primative: {
+
+		} break;
+		case DefinitionType::Class_Reference: {
+
+		} break;
+	}
+	
 }
 
 void
@@ -255,6 +277,16 @@ ClassDefinition::OutputToStream(ostream& os, map<string, ClassDefinition>& other
 	for (auto mem : members) {
 		mem.second.OutputToStream(os, *this, other_definitions);
 	}
+
+	os << endl;
+	os << GetClassName() << "(cJSON *" <<  PascalToSnake(GetClassName()) << ") {" << endl;
+
+	for (auto mem : members) {
+		OutputDeserialization(os, *this, mem);
+	}
+
+
+	os << "}" << endl;
 
 	os << "};" << endl;
 }

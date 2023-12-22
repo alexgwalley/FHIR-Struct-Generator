@@ -221,6 +221,8 @@ main()
 	set <string> in_process;
 	vector<string> stack_of_paths;
 
+	out_file << "namespace R4 {" << endl;
+
 #if 1
 	for (auto def : class_definitions) {
 		def.second.OutputForwardDeclaration(out_file);
@@ -235,6 +237,7 @@ main()
 		out_file << endl;
 	}
 
+	out_file << "};" << endl;
 
 	return 0;
 }

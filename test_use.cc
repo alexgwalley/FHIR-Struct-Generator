@@ -11,5 +11,6 @@ int main()
 	Patient patient;
 	patient.name.push_back(make_shared<HumanName>(name));
 	std::cout << patient.name[0]->given[0] << std::endl;
+
 	return 0;
 }
