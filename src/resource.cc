@@ -225,11 +225,20 @@ ResourceAddMemberOrSubresourceMember(Arena *arena, Resource *res, FhirPath path,
 Resource*
 ResourceFromStructureDefinition(Arena *arena, StructureDefinition* def)
 {
+	Temp scratch = ScratchBegin(&arena, 1);
+	for (int i = 0; i < ArrayCount(str_type_pairs); i++)
+	{
+		if (Str8Match(def->id.parts.first->string, str_type_pairs[i].str, 0))
+		{
+			ScratchEnd(scratch);
+			return nullptr;
+		}
+	}
+
 	Resource *result = PushArray(arena, Resource, 1);
 	result->name = Str8FromFhirPath(arena, def->id);
 	result->sub_resources = PushArray(arena, ResourceList, 1);
 
-	Temp scratch = ScratchBegin(&arena, 1);
 
 	for (int i = 0; i < def->elements.count; i++) {
 		ElementDefinition elem = def->elements.v[i];

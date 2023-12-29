@@ -5,6 +5,9 @@ String8 illegal_member_names[] = {
 	Str8Lit("template"),
 	Str8Lit("for"),
 	Str8Lit("while"),
+	Str8Lit("function"),
+	Str8Lit("global"),
+	Str8Lit("resourceType"),
 	Str8Lit("short")
 };
 
@@ -75,6 +78,11 @@ ClassNameFromResourceName(Arena *arena, String8 res_name)
 		{
 			result.str[i] = res_name.str[i];
 		}
+	}
+
+	if (result.size > 0)
+	{
+		result.str[0] = CharToUpper(result.str[0]);
 	}
 
 	return result;
@@ -186,6 +194,15 @@ GetClassDefinitionsFromResource(Arena *arena, Resource *res)
 	class_def->name = ClassNameFromResourceName(arena, res->name);
 	class_def->inherits = res->inherits;
 
+	ClassMember *resource_type_mem = PushArray(arena, ClassMember, 1);
+	resource_type_mem->name = Str8Lit("resourceType");
+	resource_type_mem->cardinality = Cardinality::OneToOne;
+	resource_type_mem->types.num_types = 1;
+	resource_type_mem->types.types = PushArray(arena, ValueType, 1);
+	resource_type_mem->types.types[0] = ValueType::ResourceType;
+	resource_type_mem->types.type_name = PushArray(arena, String8, 1);
+	CMListPush(arena, &class_def->members, *resource_type_mem);
+
 	ResourceMemberNode *ptr = res->members.first;
 	for (int i = 0; i < res->members.count; i++)
 	{
@@ -193,6 +210,7 @@ GetClassDefinitionsFromResource(Arena *arena, Resource *res)
 		CMListPush(arena, &class_def->members, *mem);
 		ptr = ptr->next;
 	}
+
 
 
 	CDListPush(arena, &result, *class_def);

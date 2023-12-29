@@ -7,6 +7,8 @@
 #include "resource.h"
 #include "fhir_class.h"
 #include "arena_struct_exporter.h"
+#include "serialization.h"
+#include "deserialization.h"
 #include "cJSON.h"
 
 #include "code/base/base_inc.c"
@@ -14,6 +16,8 @@
 #include "fhir_structure.cc"
 #include "resource.cc"
 #include "fhir_class.cc"
+#include "serialization.cc"
+#include "deserialization.cc"
 #include "cJSON.c"
 #include "arena_struct_exporter.cc"
 
@@ -97,30 +101,75 @@ GetAllClassDefinitions(Arena *arena, ResourceList *res_list)
 }
 
 
+String8
+GetOutputTypeFromValueType(Arena *arena, ValueType type, ClassDefinitionList *list)
+{
+	switch (type)
+	{
+		case ValueType::Boolean:
+			return Str8Lit("boolean");
+		case ValueType::PositiveInt:
+		case ValueType::UnsignedInt:
+			return Str8Lit("unsigned long int");
+		case ValueType::Decimal:
+			return Str8Lit("double");
+		case ValueType::ResourceType:
+		{
+			Temp scratch = ScratchBegin(&arena, 1);
+			String8List result_list = { 0 };
+			Str8ListPush(scratch.arena, &result_list,
+			              Str8Lit("enum class ResourceType {\n"));
+			Str8ListPush(scratch.arena, &result_list,
+			              Str8Lit("\tUnknown,\n"));
+			for (ClassDefinitionNode *node = list->first;
+				node;
+				node = node->next)
+			{
+				Str8ListPushF(scratch.arena, 
+				              &result_list,
+				              "\t%.*s,\n", 
+				              node->def.name.size,
+				              node->def.name.str);
+			}
+			Str8ListPush(scratch.arena, &result_list,
+			              Str8Lit("}"));
+			String8 result = Str8ListJoin(arena, result_list, 0);
+			ScratchEnd(scratch);
+			return result;
+		}
+		default:
+			return Str8Lit("String8");
+	}
+}
 
 String8
-OutputBaseTypes(Arena *arena)
+OutputBaseTypes(Arena *arena, ClassDefinitionList *list)
 {
 	Temp scratch = ScratchBegin(&arena, 1);
-	String8List list = { 0 };
+	String8List result_list = { 0 };
 
 	for (int i = 0; i < ArrayCount(str_type_pairs_export); i++)
 	{
 		StringValueTypePair svtp = str_type_pairs_export[i];
+		String8 output_type = GetOutputTypeFromValueType(arena, svtp.type, list);
 		Str8ListPushF(scratch.arena, 
-					&list,
-					"typedef char* %.*s;\n",
-					svtp.str.size,
-					svtp.str.str);
+		              &result_list,
+					"typedef %.*s %.*s;\n",
+					output_type.size, output_type.str,
+					svtp.str.size, svtp.str.str);
 	}
 
-	String8 result = Str8ListJoin(arena, list, 0);
+	String8 result = Str8ListJoin(arena, result_list, 0);
 	ScratchEnd(scratch);
 	return result;
 }
 
 void
-OutputClassDefinitionImpl(Arena *arena, ClassDefinitionList *all, ClassDefinition *def, String8List *completed, FILE *f)
+OutputClassDefinitionImpl(Arena *arena, 
+                          ClassDefinitionList *all,
+                          ClassDefinition *def,
+                          String8List *completed,
+                          FILE *f)
 {
 	String8Node *node = completed->first;
 	for (int i = 0; i < completed->node_count; i++)
@@ -176,7 +225,7 @@ OutputClassDefinitions(Arena *arena, String8 file_name, ClassDefinitionList *lis
 	Assert(f);
 	fopen_s(&f, (char*)file_name.str, "w");
 
-	String8 primative_types = OutputBaseTypes(arena);
+	String8 primative_types = OutputBaseTypes(arena, list);
 	String8List completed = { 0 };
 	fwrite(primative_types.str, primative_types.size, 1, f);
 
@@ -204,6 +253,57 @@ OutputClassDefinitions(Arena *arena, String8 file_name, ClassDefinitionList *lis
 	ScratchEnd(scratch);
 }
 
+void
+OutputClassDefinitionDeserialization(Arena *arena,
+                                     String8 header_file_name,
+                                     String8 cc_file_name,
+                                     ClassDefinitionList *list)
+{
+	Temp scratch = ScratchBegin(&arena, 1);
+	FILE *f;
+	fopen_s(&f, (char*)cc_file_name.str, "w");
+	Assert(f);
+
+	DeserializationOptions opts = { 0 };
+	opts.flags = (int)DeserializationFlag::USE_STRING8 |
+				 (int)DeserializationFlag::USE_CJSON;
+	
+	String8 type_from_string_table = DeserializationResourceTypeFromString8Table(scratch.arena, opts, list);
+	fwrite(type_from_string_table.str, type_from_string_table.size, 1, f);
+
+	String8 type_from_string = DeserializationResourceTypeFromString8(scratch.arena, opts);
+	fwrite(type_from_string.str, type_from_string.size, 1, f);
+
+	FILE *header_file;
+	fopen_s(&header_file, (char*)header_file_name.str, "w");
+	Assert(header_file);
+
+	String8 define_header = Str8Lit("#ifndef FHIR_DESERIALIZATION_H\n"
+	                                "#define FHIR_DESERIALIZATION_H\n");
+	fwrite(define_header.str, define_header.size, 1, header_file);
+
+	ClassDefinitionNode *node = list->first;
+	for (int i = 0; i < list->count; i++)
+	{
+		String8 des = DeserializationCodeFrom(scratch.arena, opts, &node->def, list);
+		fwrite(des.str, des.size, 1, f);
+		String8 header = DeserializationCodeHeaderFrom(scratch.arena, opts, &node->def);
+		fwrite(header.str, header.size, 1, header_file);
+		node = node->next;
+	}
+
+
+	String8 end_header = Str8Lit("#endif");
+	fwrite(end_header.str, end_header.size, 1, header_file);
+
+	fflush(f);
+	fclose(f);
+	fflush(header_file);
+	fclose(header_file);
+
+	ScratchEnd(scratch);
+}
+
 function void
 EntryPoint(CmdLine *cmdln)
 {
@@ -228,7 +328,10 @@ EntryPoint(CmdLine *cmdln)
 	for (int i = 0; i < list.count; i++)
 	{
 		Resource *res = ResourceFromStructureDefinition(arena, &ptr->def);
-		ResourceListPush(arena, resource_list, res);
+		if (res)
+		{
+			ResourceListPush(arena, resource_list, res);
+		}
 		ptr = ptr->next;
 		//printf("Resource: %.*s\n", (int)res->name.size, res->name.str);
 	}
@@ -238,7 +341,14 @@ EntryPoint(CmdLine *cmdln)
 	ClassDefinitionList class_defs = GetAllClassDefinitions(arena, resource_list);
 
 	// Output class definitions
-	OutputClassDefinitions(arena, Str8Lit("fhir_class_definitions.cc"), &class_defs);
+
+	OutputClassDefinitions(arena,
+	                       Str8Lit("fhir_class_definitions.h"),
+	                       &class_defs);
+	OutputClassDefinitionDeserialization(arena, 
+	                                     Str8Lit("fhir_class_deserialization.h"),
+	                                     Str8Lit("fhir_class_deserialization.cc"),
+	                                     &class_defs);
 
 	// NOTE(alex): should have two options, one using c++ stdlib
 	// another to use arenas/Ryan's system :)

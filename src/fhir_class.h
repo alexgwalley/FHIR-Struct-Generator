@@ -31,7 +31,8 @@ enum class ValueType {
 	DateTime,
 	Time,
 	Instant,
-	Class_Reference
+	Class_Reference,
+	ResourceType
 };
 
 typedef struct StringValueTypePair StringValueTypePair;
@@ -87,6 +88,7 @@ StringValueTypePair str_type_pairs_export[] = {
 	{Str8Lit("fhir_dateTime"), ValueType::DateTime},
 	{Str8Lit("fhir_time"), ValueType::Time },
 	{Str8Lit("fhir_instant"), ValueType::Instant},
+	{Str8Lit("ResourceType"), ValueType::ResourceType},
 };
 
 struct ValueTypes {

@@ -40,7 +40,7 @@ EnumNameFromMemberName(Arena *arena, String8 member_name)
 {
 	// member_name will likely have [x] suffix
 	// ex. incoming camelCase[x] => CamelCase
-	String8 result = PushStr8Copy(arena, member_name);
+	String8 result = PushStr8F(arena, "%.*sType", member_name.size, member_name.str);
 	result.str[0] = CharToUpper(result.str[0]);
 
 	return result;
@@ -70,8 +70,35 @@ SerializeEnumFromValueTypes(Arena *arena, ValueTypes types, String8 member_name)
 	}
 
 
-	Str8ListPushF(scratch.arena, &result_list, "\t} %.*s_type;\n", member_name.size, member_name.str);
+	Str8ListPushF(scratch.arena, &result_list, "\t};\n", member_name.size, member_name.str);
+	Str8ListPushF(scratch.arena,
+	              &result_list,
+	              "\t%.*s %.*s_type;\n",
+	              enum_name.size, enum_name.str,
+	              member_name.size, member_name.str);
 	String8 result = Str8ListJoin(arena, result_list, 0);
+	ScratchEnd(scratch);
+	return result;
+}
+
+String8
+GetUnionInternalTypeName(Arena *arena, ValueType type, String8 type_name)
+{
+	Temp scratch = ScratchBegin(&arena, 1);
+	String8 str = PushStr8Copy(scratch.arena, type_name);
+	for (int i = 0; i < ArrayCount(str_type_pairs); i++)
+	{
+		if (type == str_type_pairs[i].type)
+		{
+			str = PushStr8Copy(scratch.arena, str_type_pairs[i].str);
+			break;
+		}
+	}
+
+	str.str[0] = CharToUpper(str.str[0]);
+	String8 result = PushStr8F(arena, 
+	                 "value%.*s",
+	                 str.size, str.str);
 	ScratchEnd(scratch);
 	return result;
 }
@@ -93,10 +120,9 @@ SerializeUnionFromValueTypes(Arena *arena, ValueTypes types, String8 member_name
 			Str8ListPush(scratch.arena, &result_list, Str8Lit("*"));
 		}
 
-		String8 internal_name = PushStr8Copy(scratch.arena, value_type);
+		String8 internal_name = GetUnionInternalTypeName(scratch.arena, types.types[i], types.type_name[i]);
 
-		internal_name.str[0] = CharToLower(internal_name.str[0]);
-		Str8ListPush(scratch.arena, &result_list, Str8Lit(" _"));
+		Str8ListPush(scratch.arena, &result_list, Str8Lit(" "));
 		Str8ListPush(scratch.arena, &result_list, internal_name);
 
 		Str8ListPush(scratch.arena, &result_list, Str8Lit(";"));
@@ -110,30 +136,31 @@ SerializeUnionFromValueTypes(Arena *arena, ValueTypes types, String8 member_name
 	return result;
 }
 
-String8 SerializeValueTypes(Arena *arena, ValueTypes types, String8 member_name)
+String8 SerializeValueTypes(Arena *arena, ClassMember mem)
 {
-
-	if (types.num_types == 1)
+	if (mem.types.num_types == 1)
 	{
-		String8 value_type = SerializeValueType(types.types[0], types.type_name[0]);
+		String8 value_type = SerializeValueType(mem.types.types[0], mem.types.type_name[0]);
 		String8 result = value_type;
-		if (types.types[0] == ValueType::Class_Reference)
+		Temp scratch = ScratchBegin(&arena, 1);
+	
+		String8List res_list = { 0 };
+		Str8ListPush(scratch.arena, &res_list, value_type);
+		if (mem.cardinality == Cardinality::ZeroToInf ||
+			mem.cardinality == Cardinality::OneToInf
+			|| mem.types.types[0] == ValueType::Class_Reference)
 		{
-			Temp scratch = ScratchBegin(&arena, 1);
-		
-			String8List res_list = { 0 };
-			Str8ListPush(scratch.arena, &res_list, value_type);
 			Str8ListPush(scratch.arena, &res_list, Str8Lit("*"));
-			result = Str8ListJoin(arena, res_list, 0);
-			ScratchEnd(scratch);
 		}
+		result = Str8ListJoin(arena, res_list, 0);
+		ScratchEnd(scratch);
 		return result;
 	}
 
 	// NOTE(agw): build union and enum
 	Temp scratch = ScratchBegin(&arena, 1);
-	String8 enum_str = SerializeEnumFromValueTypes(scratch.arena, types, member_name);
-	String8 union_str = SerializeUnionFromValueTypes(scratch.arena, types, member_name);
+	String8 enum_str = SerializeEnumFromValueTypes(scratch.arena, mem.types, mem.name);
+	String8 union_str = SerializeUnionFromValueTypes(scratch.arena, mem.types, mem.name);
 
 	String8List res_list = { 0 };
 	Str8ListPush(scratch.arena, &res_list, enum_str);
@@ -147,10 +174,10 @@ String8 SerializeValueTypes(Arena *arena, ValueTypes types, String8 member_name)
 }
 
 String8 
-OutputClassMember(Arena *arena, ClassMember mem)
+OutputClassMember(Arena *arena, ClassMember mem, String8 class_name)
 {
 	Temp scratch = ScratchBegin(&arena, 1);
-	String8 type_def = SerializeValueTypes(arena, mem.types, mem.name);
+	String8 type_def = SerializeValueTypes(arena, mem);
 	String8List result_list = { 0 };
 
 	Str8ListPush(scratch.arena, &result_list, Str8Lit("\t"));
@@ -179,6 +206,15 @@ OutputClassMember(Arena *arena, ClassMember mem)
 	{
 		Str8ListPush(scratch.arena, &result_list, Str8Lit(" "));
 		Str8ListPush(scratch.arena, &result_list, mem.name);
+
+		if (mem.types.types[0] == ValueType::ResourceType)
+		{
+			Str8ListPushF(scratch.arena,
+			              &result_list,
+			              " = ResourceType::%.*s",
+			              class_name.size, 
+			              class_name.str);
+		}
 		Str8ListPush(scratch.arena, &result_list, Str8Lit(";"));
 	}
 
@@ -190,16 +226,6 @@ OutputClassMember(Arena *arena, ClassMember mem)
 String8
 OutputClassDefinition(Arena *arena, ClassDefinition *def)
 {
-
-	for (int i = 0; i < ArrayCount(str_type_pairs); i++)
-	{
-		if (Str8Match(def->name, str_type_pairs[i].str, 0))
-		{
-			return Str8Lit("");
-		}
-	}
-	
-
 	Temp scratch = ScratchBegin(&arena, 1);
 	String8List result_list = { 0 };
 	Assert(def->name.size);
@@ -215,7 +241,7 @@ OutputClassDefinition(Arena *arena, ClassDefinition *def)
 	ClassMemberNode *node = def->members.first;
 	for (int i = 0; i < def->members.count; i++)
 	{
-		String8 member_str = OutputClassMember(scratch.arena, node->mem);
+		String8 member_str = OutputClassMember(scratch.arena, node->mem, def->name);
 		Str8ListPush(scratch.arena, &result_list, member_str);
 		Str8ListPush(scratch.arena, &result_list, Str8Lit("\n"));
 		node = node->next;
