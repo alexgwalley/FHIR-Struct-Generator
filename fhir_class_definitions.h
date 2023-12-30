@@ -9,8 +9,8 @@ typedef String8 fhir_uri;
 typedef String8 fhir_url;
 typedef String8 fhir_uuid;
 typedef boolean fhir_boolean;
-typedef unsigned long int fhir_positiveInt;
-typedef unsigned long int fhir_unsignedInt;
+typedef unsigned long fhir_positiveInt;
+typedef unsigned long fhir_unsignedInt;
 typedef double fhir_decimal;
 typedef String8 fhir_date;
 typedef String8 fhir_dateTime;
@@ -1442,83 +1442,83 @@ class Elementdefinition_de;
 class Ehrsrle_auditevent;
 class Ehrsrle_provenance;
 class Resource {
-public:
-	ResourceType resourceType = ResourceType::Resource;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
 };
 class Account {
-public:
-	ResourceType resourceType = ResourceType::Account;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* type;
+	CodeableConcept *type;
 	fhir_string name;
-	int subject_count;
-	Reference* subject;
-	Period* servicePeriod;
-	int coverage_count;
-	Account_Coverage* coverage;
-	Reference* owner;
+	U64 subject_count;
+	Reference *subject;
+	Period *servicePeriod;
+	U64 coverage_count;
+	Account_Coverage *coverage;
+	Reference *owner;
 	fhir_string description;
-	int guarantor_count;
-	Account_Guarantor* guarantor;
-	Reference* partOf;
+	U64 guarantor_count;
+	Account_Guarantor *guarantor;
+	Reference *partOf;
 };
 class Account_Coverage {
-public:
-	ResourceType resourceType = ResourceType::Account_Coverage;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* coverage;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *coverage;
 	fhir_positiveInt priority;
 };
 class Account_Guarantor {
-public:
-	ResourceType resourceType = ResourceType::Account_Guarantor;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* party;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *party;
 	fhir_boolean onHold;
-	Period* period;
+	Period *period;
 };
 class ActivityDefinition {
-public:
-	ResourceType resourceType = ResourceType::ActivityDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -1530,6 +1530,7 @@ public:
 		Reference
 	};
 	SubjectType subject_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -1537,36 +1538,36 @@ public:
 
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	int topic_count;
-	CodeableConcept* topic;
-	int author_count;
-	ContactDetail* author;
-	int editor_count;
-	ContactDetail* editor;
-	int reviewer_count;
-	ContactDetail* reviewer;
-	int endorser_count;
-	ContactDetail* endorser;
-	int relatedArtifact_count;
-	RelatedArtifact* relatedArtifact;
-	int library_count;
-	fhir_canonical* library;
+	Period *effectivePeriod;
+	U64 topic_count;
+	CodeableConcept *topic;
+	U64 author_count;
+	ContactDetail *author;
+	U64 editor_count;
+	ContactDetail *editor;
+	U64 reviewer_count;
+	ContactDetail *reviewer;
+	U64 endorser_count;
+	ContactDetail *endorser;
+	U64 relatedArtifact_count;
+	RelatedArtifact *relatedArtifact;
+	U64 library_count;
+	fhir_canonical *library;
 	fhir_code kind;
 	fhir_canonical profile;
-	CodeableConcept* code;
+	CodeableConcept *code;
 	fhir_code intent;
 	fhir_code priority;
 	fhir_boolean doNotPerform;
@@ -1579,6 +1580,7 @@ public:
 		Duration
 	};
 	TimingType timing_type;
+
 	union {
 		Timing* valueTiming;
 		fhir_dateTime valueDateTime;
@@ -1588,148 +1590,149 @@ public:
 		Duration* valueDuration;
 	} timing;
 
-	Reference* location;
-	int participant_count;
-	ActivityDefinition_Participant* participant;
+	Reference *location;
+	U64 participant_count;
+	ActivityDefinition_Participant *participant;
 	enum class ProductType {
 		Reference,
 		CodeableConcept
 	};
 	ProductType product_type;
+
 	union {
 		Reference* valueReference;
 		CodeableConcept* valueCodeableConcept;
 	} product;
 
-	Quantity* quantity;
-	int dosage_count;
-	Dosage* dosage;
-	int bodySite_count;
-	CodeableConcept* bodySite;
-	int specimenRequirement_count;
-	Reference* specimenRequirement;
-	int observationRequirement_count;
-	Reference* observationRequirement;
-	int observationResultRequirement_count;
-	Reference* observationResultRequirement;
+	Quantity *quantity;
+	U64 dosage_count;
+	Dosage *dosage;
+	U64 bodySite_count;
+	CodeableConcept *bodySite;
+	U64 specimenRequirement_count;
+	Reference *specimenRequirement;
+	U64 observationRequirement_count;
+	Reference *observationRequirement;
+	U64 observationResultRequirement_count;
+	Reference *observationResultRequirement;
 	fhir_canonical transform;
-	int dynamicValue_count;
-	ActivityDefinition_DynamicValue* dynamicValue;
+	U64 dynamicValue_count;
+	ActivityDefinition_DynamicValue *dynamicValue;
 };
 class ActivityDefinition_Participant {
-public:
-	ResourceType resourceType = ResourceType::ActivityDefinition_Participant;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
-	CodeableConcept* role;
+	CodeableConcept *role;
 };
 class ActivityDefinition_DynamicValue {
-public:
-	ResourceType resourceType = ResourceType::ActivityDefinition_DynamicValue;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string path;
-	Expression* expression;
+	Expression *expression;
 };
 class AdverseEvent {
-public:
-	ResourceType resourceType = ResourceType::AdverseEvent;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
 	fhir_code actuality;
-	int category_count;
-	CodeableConcept* category;
-	CodeableConcept* event;
-	Reference* subject;
-	Reference* encounter;
+	U64 category_count;
+	CodeableConcept *category;
+	CodeableConcept *event;
+	Reference *subject;
+	Reference *encounter;
 	fhir_dateTime date;
 	fhir_dateTime detected;
 	fhir_dateTime recordedDate;
-	int resultingCondition_count;
-	Reference* resultingCondition;
-	Reference* location;
-	CodeableConcept* seriousness;
-	CodeableConcept* severity;
-	CodeableConcept* outcome;
-	Reference* recorder;
-	int contributor_count;
-	Reference* contributor;
-	int suspectEntity_count;
-	AdverseEvent_SuspectEntity* suspectEntity;
-	int subjectMedicalHistory_count;
-	Reference* subjectMedicalHistory;
-	int referenceDocument_count;
-	Reference* referenceDocument;
-	int study_count;
-	Reference* study;
+	U64 resultingCondition_count;
+	Reference *resultingCondition;
+	Reference *location;
+	CodeableConcept *seriousness;
+	CodeableConcept *severity;
+	CodeableConcept *outcome;
+	Reference *recorder;
+	U64 contributor_count;
+	Reference *contributor;
+	U64 suspectEntity_count;
+	AdverseEvent_SuspectEntity *suspectEntity;
+	U64 subjectMedicalHistory_count;
+	Reference *subjectMedicalHistory;
+	U64 referenceDocument_count;
+	Reference *referenceDocument;
+	U64 study_count;
+	Reference *study;
 };
 class AdverseEvent_SuspectEntity {
-public:
-	ResourceType resourceType = ResourceType::AdverseEvent_SuspectEntity;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* instance;
-	int causality_count;
-	AdverseEvent_SuspectEntity_Causality* causality;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *instance;
+	U64 causality_count;
+	AdverseEvent_SuspectEntity_Causality *causality;
 };
 class AdverseEvent_SuspectEntity_Causality {
-public:
-	ResourceType resourceType = ResourceType::AdverseEvent_SuspectEntity_Causality;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* assessment;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *assessment;
 	fhir_string productRelatedness;
-	Reference* author;
-	CodeableConcept* method;
+	Reference *author;
+	CodeableConcept *method;
 };
 class AllergyIntolerance {
-public:
-	ResourceType resourceType = ResourceType::AllergyIntolerance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* clinicalStatus;
-	CodeableConcept* verificationStatus;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *clinicalStatus;
+	CodeableConcept *verificationStatus;
 	fhir_code type;
-	int category_count;
-	fhir_code* category;
+	U64 category_count;
+	fhir_code *category;
 	fhir_code criticality;
-	CodeableConcept* code;
-	Reference* patient;
-	Reference* encounter;
+	CodeableConcept *code;
+	Reference *patient;
+	Reference *encounter;
 	enum class OnsetType {
 		fhir_dateTime,
 		Age,
@@ -1738,6 +1741,7 @@ public:
 		fhir_string
 	};
 	OnsetType onset_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Age* valueAge;
@@ -1747,231 +1751,232 @@ public:
 	} onset;
 
 	fhir_dateTime recordedDate;
-	Reference* recorder;
-	Reference* asserter;
+	Reference *recorder;
+	Reference *asserter;
 	fhir_dateTime lastOccurrence;
-	int note_count;
-	Annotation* note;
-	int reaction_count;
-	AllergyIntolerance_Reaction* reaction;
+	U64 note_count;
+	Annotation *note;
+	U64 reaction_count;
+	AllergyIntolerance_Reaction *reaction;
 };
 class AllergyIntolerance_Reaction {
-public:
-	ResourceType resourceType = ResourceType::AllergyIntolerance_Reaction;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* substance;
-	int manifestation_count;
-	CodeableConcept* manifestation;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *substance;
+	U64 manifestation_count;
+	CodeableConcept *manifestation;
 	fhir_string description;
 	fhir_dateTime onset;
 	fhir_code severity;
-	CodeableConcept* exposureRoute;
-	int note_count;
-	Annotation* note;
+	CodeableConcept *exposureRoute;
+	U64 note_count;
+	Annotation *note;
 };
 class Appointment {
-public:
-	ResourceType resourceType = ResourceType::Appointment;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* cancelationReason;
-	int serviceCategory_count;
-	CodeableConcept* serviceCategory;
-	int serviceType_count;
-	CodeableConcept* serviceType;
-	int specialty_count;
-	CodeableConcept* specialty;
-	CodeableConcept* appointmentType;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
+	CodeableConcept *cancelationReason;
+	U64 serviceCategory_count;
+	CodeableConcept *serviceCategory;
+	U64 serviceType_count;
+	CodeableConcept *serviceType;
+	U64 specialty_count;
+	CodeableConcept *specialty;
+	CodeableConcept *appointmentType;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
 	fhir_unsignedInt priority;
 	fhir_string description;
-	int supportingInformation_count;
-	Reference* supportingInformation;
+	U64 supportingInformation_count;
+	Reference *supportingInformation;
 	fhir_instant start;
 	fhir_instant end;
 	fhir_positiveInt minutesDuration;
-	int slot_count;
-	Reference* slot;
+	U64 slot_count;
+	Reference *slot;
 	fhir_dateTime created;
 	fhir_string comment;
 	fhir_string patientInstruction;
-	int basedOn_count;
-	Reference* basedOn;
-	int participant_count;
-	Appointment_Participant* participant;
-	int requestedPeriod_count;
-	Period* requestedPeriod;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 participant_count;
+	Appointment_Participant *participant;
+	U64 requestedPeriod_count;
+	Period *requestedPeriod;
 };
 class Appointment_Participant {
-public:
-	ResourceType resourceType = ResourceType::Appointment_Participant;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int type_count;
-	CodeableConcept* type;
-	Reference* actor;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 type_count;
+	CodeableConcept *type;
+	Reference *actor;
 	fhir_code required;
 	fhir_code status;
-	Period* period;
+	Period *period;
 };
 class AppointmentResponse {
-public:
-	ResourceType resourceType = ResourceType::AppointmentResponse;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	Reference* appointment;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	Reference *appointment;
 	fhir_instant start;
 	fhir_instant end;
-	int participantType_count;
-	CodeableConcept* participantType;
-	Reference* actor;
+	U64 participantType_count;
+	CodeableConcept *participantType;
+	Reference *actor;
 	fhir_code participantStatus;
 	fhir_string comment;
 };
 class AuditEvent {
-public:
-	ResourceType resourceType = ResourceType::AuditEvent;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Coding* type;
-	int subtype_count;
-	Coding* subtype;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Coding *type;
+	U64 subtype_count;
+	Coding *subtype;
 	fhir_code action;
-	Period* period;
+	Period *period;
 	fhir_instant recorded;
 	fhir_code outcome;
 	fhir_string outcomeDesc;
-	int purposeOfEvent_count;
-	CodeableConcept* purposeOfEvent;
-	int agent_count;
-	AuditEvent_Agent* agent;
-	AuditEvent_Source* source;
-	int entity_count;
-	AuditEvent_Entity* entity;
+	U64 purposeOfEvent_count;
+	CodeableConcept *purposeOfEvent;
+	U64 agent_count;
+	AuditEvent_Agent *agent;
+	AuditEvent_Source *source;
+	U64 entity_count;
+	AuditEvent_Entity *entity;
 };
 class AuditEvent_Agent {
-public:
-	ResourceType resourceType = ResourceType::AuditEvent_Agent;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	int role_count;
-	CodeableConcept* role;
-	Reference* who;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	U64 role_count;
+	CodeableConcept *role;
+	Reference *who;
 	fhir_string altId;
 	fhir_string name;
 	fhir_boolean requestor;
-	Reference* location;
-	int policy_count;
-	fhir_uri* policy;
-	Coding* media;
-	AuditEvent_Agent_Network* network;
-	int purposeOfUse_count;
-	CodeableConcept* purposeOfUse;
+	Reference *location;
+	U64 policy_count;
+	fhir_uri *policy;
+	Coding *media;
+	AuditEvent_Agent_Network *network;
+	U64 purposeOfUse_count;
+	CodeableConcept *purposeOfUse;
 };
 class AuditEvent_Agent_Network {
-public:
-	ResourceType resourceType = ResourceType::AuditEvent_Agent_Network;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string address;
 	fhir_code type;
 };
 class AuditEvent_Source {
-public:
-	ResourceType resourceType = ResourceType::AuditEvent_Source;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string site;
-	Reference* observer;
-	int type_count;
-	Coding* type;
+	Reference *observer;
+	U64 type_count;
+	Coding *type;
 };
 class AuditEvent_Entity {
-public:
-	ResourceType resourceType = ResourceType::AuditEvent_Entity;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* what;
-	Coding* type;
-	Coding* role;
-	Coding* lifecycle;
-	int securityLabel_count;
-	Coding* securityLabel;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *what;
+	Coding *type;
+	Coding *role;
+	Coding *lifecycle;
+	U64 securityLabel_count;
+	Coding *securityLabel;
 	fhir_string name;
 	fhir_string description;
 	fhir_base64Binary query;
-	int detail_count;
-	AuditEvent_Entity_Detail* detail;
+	U64 detail_count;
+	AuditEvent_Entity_Detail *detail;
 };
 class AuditEvent_Entity_Detail {
-public:
-	ResourceType resourceType = ResourceType::AuditEvent_Entity_Detail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string type;
 	enum class ValueType {
 		fhir_string,
 		fhir_base64Binary
 	};
 	ValueType value_type;
+
 	union {
 		fhir_string valueString;
 		fhir_base64Binary valueBase64Binary;
@@ -1979,83 +1984,84 @@ public:
 
 };
 class Basic {
-public:
-	ResourceType resourceType = ResourceType::Basic;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* code;
-	Reference* subject;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *code;
+	Reference *subject;
 	fhir_date created;
-	Reference* author;
+	Reference *author;
 };
 class Binary {
-public:
-	ResourceType resourceType = ResourceType::Binary;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
 	fhir_code contentType;
-	Reference* securityContext;
+	Reference *securityContext;
 	fhir_base64Binary data;
 };
 class BiologicallyDerivedProduct {
-public:
-	ResourceType resourceType = ResourceType::BiologicallyDerivedProduct;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code productCategory;
-	CodeableConcept* productCode;
+	CodeableConcept *productCode;
 	fhir_code status;
-	int request_count;
-	Reference* request;
-	Integer* quantity;
-	int parent_count;
-	Reference* parent;
-	BiologicallyDerivedProduct_Collection* collection;
-	int processing_count;
-	BiologicallyDerivedProduct_Processing* processing;
-	BiologicallyDerivedProduct_Manipulation* manipulation;
-	int storage_count;
-	BiologicallyDerivedProduct_Storage* storage;
+	U64 request_count;
+	Reference *request;
+	Integer *quantity;
+	U64 parent_count;
+	Reference *parent;
+	BiologicallyDerivedProduct_Collection *collection;
+	U64 processing_count;
+	BiologicallyDerivedProduct_Processing *processing;
+	BiologicallyDerivedProduct_Manipulation *manipulation;
+	U64 storage_count;
+	BiologicallyDerivedProduct_Storage *storage;
 };
 class BiologicallyDerivedProduct_Collection {
-public:
-	ResourceType resourceType = ResourceType::BiologicallyDerivedProduct_Collection;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* collector;
-	Reference* source;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *collector;
+	Reference *source;
 	enum class CollectedType {
 		fhir_dateTime,
 		Period
 	};
 	CollectedType collected_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -2063,21 +2069,22 @@ public:
 
 };
 class BiologicallyDerivedProduct_Processing {
-public:
-	ResourceType resourceType = ResourceType::BiologicallyDerivedProduct_Processing;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
-	CodeableConcept* procedure;
-	Reference* additive;
+	CodeableConcept *procedure;
+	Reference *additive;
 	enum class TimeType {
 		fhir_dateTime,
 		Period
 	};
 	TimeType time_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -2085,19 +2092,20 @@ public:
 
 };
 class BiologicallyDerivedProduct_Manipulation {
-public:
-	ResourceType resourceType = ResourceType::BiologicallyDerivedProduct_Manipulation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
 	enum class TimeType {
 		fhir_dateTime,
 		Period
 	};
 	TimeType time_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -2105,107 +2113,107 @@ public:
 
 };
 class BiologicallyDerivedProduct_Storage {
-public:
-	ResourceType resourceType = ResourceType::BiologicallyDerivedProduct_Storage;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
 	fhir_decimal temperature;
 	fhir_code scale;
-	Period* duration;
+	Period *duration;
 };
 class BodyStructure {
-public:
-	ResourceType resourceType = ResourceType::BodyStructure;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_boolean active;
-	CodeableConcept* morphology;
-	CodeableConcept* location;
-	int locationQualifier_count;
-	CodeableConcept* locationQualifier;
+	CodeableConcept *morphology;
+	CodeableConcept *location;
+	U64 locationQualifier_count;
+	CodeableConcept *locationQualifier;
 	fhir_string description;
-	int image_count;
-	Attachment* image;
-	Reference* patient;
+	U64 image_count;
+	Attachment *image;
+	Reference *patient;
 };
 class Bundle {
-public:
-	ResourceType resourceType = ResourceType::Bundle;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Identifier* identifier;
+	Identifier *identifier;
 	fhir_code type;
 	fhir_instant timestamp;
 	fhir_unsignedInt total;
-	int link_count;
-	Bundle_Link* link;
-	int entry_count;
-	Bundle_Entry* entry;
-	Signature* signature;
+	U64 link_count;
+	Bundle_Link *link;
+	U64 entry_count;
+	Bundle_Entry *entry;
+	Signature *signature;
 };
 class Bundle_Link {
-public:
-	ResourceType resourceType = ResourceType::Bundle_Link;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string relation;
 	fhir_uri url;
 };
 class Bundle_Entry {
-public:
-	ResourceType resourceType = ResourceType::Bundle_Entry;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int link_count;
-	Bundle_Link* link;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 link_count;
+	Bundle_Link *link;
 	fhir_uri fullUrl;
-	Resource* resource;
-	Bundle_Entry_Search* search;
-	Bundle_Entry_Request* request;
-	Bundle_Entry_Response* response;
+	Resource *resource;
+	Bundle_Entry_Search *search;
+	Bundle_Entry_Request *request;
+	Bundle_Entry_Response *response;
 };
 class Bundle_Entry_Search {
-public:
-	ResourceType resourceType = ResourceType::Bundle_Entry_Search;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code mode;
 	fhir_decimal score;
 };
 class Bundle_Entry_Request {
-public:
-	ResourceType resourceType = ResourceType::Bundle_Entry_Request;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code method;
 	fhir_uri url;
 	fhir_string ifNoneMatch;
@@ -2214,33 +2222,33 @@ public:
 	fhir_string ifNoneExist;
 };
 class Bundle_Entry_Response {
-public:
-	ResourceType resourceType = ResourceType::Bundle_Entry_Response;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string status;
 	fhir_uri location;
 	fhir_string etag;
 	fhir_instant lastModified;
-	Resource* outcome;
+	Resource *outcome;
 };
 class CapabilityStatement {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -2249,110 +2257,110 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	fhir_code kind;
-	int instantiates_count;
-	fhir_canonical* instantiates;
-	int imports_count;
-	fhir_canonical* imports;
-	CapabilityStatement_Software* software;
-	CapabilityStatement_Implementation* implementation;
+	U64 instantiates_count;
+	fhir_canonical *instantiates;
+	U64 imports_count;
+	fhir_canonical *imports;
+	CapabilityStatement_Software *software;
+	CapabilityStatement_Implementation *implementation;
 	fhir_code fhirVersion;
-	int format_count;
-	fhir_code* format;
-	int patchFormat_count;
-	fhir_code* patchFormat;
-	int implementationGuide_count;
-	fhir_canonical* implementationGuide;
-	int rest_count;
-	CapabilityStatement_Rest* rest;
-	int messaging_count;
-	CapabilityStatement_Messaging* messaging;
-	int document_count;
-	CapabilityStatement_Document* document;
+	U64 format_count;
+	fhir_code *format;
+	U64 patchFormat_count;
+	fhir_code *patchFormat;
+	U64 implementationGuide_count;
+	fhir_canonical *implementationGuide;
+	U64 rest_count;
+	CapabilityStatement_Rest *rest;
+	U64 messaging_count;
+	CapabilityStatement_Messaging *messaging;
+	U64 document_count;
+	CapabilityStatement_Document *document;
 };
 class CapabilityStatement_Software {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Software;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_string version;
 	fhir_dateTime releaseDate;
 };
 class CapabilityStatement_Implementation {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Implementation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
 	fhir_url url;
-	Reference* custodian;
+	Reference *custodian;
 };
 class CapabilityStatement_Rest {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Rest;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code mode;
 	fhir_markdown documentation;
-	CapabilityStatement_Rest_Security* security;
-	int resource_count;
-	CapabilityStatement_Rest_Resource* resource;
-	int interaction_count;
-	CapabilityStatement_Rest_Interaction* interaction;
-	int searchParam_count;
-	CapabilityStatement_Rest_Resource_SearchParam* searchParam;
-	int operation_count;
-	CapabilityStatement_Rest_Resource_Operation* operation;
-	int compartment_count;
-	fhir_canonical* compartment;
+	CapabilityStatement_Rest_Security *security;
+	U64 resource_count;
+	CapabilityStatement_Rest_Resource *resource;
+	U64 interaction_count;
+	CapabilityStatement_Rest_Interaction *interaction;
+	U64 searchParam_count;
+	CapabilityStatement_Rest_Resource_SearchParam *searchParam;
+	U64 operation_count;
+	CapabilityStatement_Rest_Resource_Operation *operation;
+	U64 compartment_count;
+	fhir_canonical *compartment;
 };
 class CapabilityStatement_Rest_Security {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Rest_Security;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean cors;
-	int service_count;
-	CodeableConcept* service;
+	U64 service_count;
+	CodeableConcept *service;
 	fhir_markdown description;
 };
 class CapabilityStatement_Rest_Resource {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Rest_Resource;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
 	fhir_canonical profile;
-	int supportedProfile_count;
-	fhir_canonical* supportedProfile;
+	U64 supportedProfile_count;
+	fhir_canonical *supportedProfile;
 	fhir_markdown documentation;
-	int interaction_count;
-	CapabilityStatement_Rest_Resource_Interaction* interaction;
+	U64 interaction_count;
+	CapabilityStatement_Rest_Resource_Interaction *interaction;
 	fhir_code versioning;
 	fhir_boolean readHistory;
 	fhir_boolean updateCreate;
@@ -2360,204 +2368,204 @@ public:
 	fhir_code conditionalRead;
 	fhir_boolean conditionalUpdate;
 	fhir_code conditionalDelete;
-	int referencePolicy_count;
-	fhir_code* referencePolicy;
-	int searchInclude_count;
-	fhir_string* searchInclude;
-	int searchRevInclude_count;
-	fhir_string* searchRevInclude;
-	int searchParam_count;
-	CapabilityStatement_Rest_Resource_SearchParam* searchParam;
-	int operation_count;
-	CapabilityStatement_Rest_Resource_Operation* operation;
+	U64 referencePolicy_count;
+	fhir_code *referencePolicy;
+	U64 searchInclude_count;
+	fhir_string *searchInclude;
+	U64 searchRevInclude_count;
+	fhir_string *searchRevInclude;
+	U64 searchParam_count;
+	CapabilityStatement_Rest_Resource_SearchParam *searchParam;
+	U64 operation_count;
+	CapabilityStatement_Rest_Resource_Operation *operation;
 };
 class CapabilityStatement_Rest_Resource_Interaction {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Rest_Resource_Interaction;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	fhir_markdown documentation;
 };
 class CapabilityStatement_Rest_Resource_SearchParam {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Rest_Resource_SearchParam;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_canonical definition;
 	fhir_code type;
 	fhir_markdown documentation;
 };
 class CapabilityStatement_Rest_Resource_Operation {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Rest_Resource_Operation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_canonical definition;
 	fhir_markdown documentation;
 };
 class CapabilityStatement_Rest_Interaction {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Rest_Interaction;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	fhir_markdown documentation;
 };
 class CapabilityStatement_Messaging {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Messaging;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int endpoint_count;
-	CapabilityStatement_Messaging_Endpoint* endpoint;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 endpoint_count;
+	CapabilityStatement_Messaging_Endpoint *endpoint;
 	fhir_unsignedInt reliableCache;
 	fhir_markdown documentation;
-	int supportedMessage_count;
-	CapabilityStatement_Messaging_SupportedMessage* supportedMessage;
+	U64 supportedMessage_count;
+	CapabilityStatement_Messaging_SupportedMessage *supportedMessage;
 };
 class CapabilityStatement_Messaging_Endpoint {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Messaging_Endpoint;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Coding* protocol;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Coding *protocol;
 	fhir_url address;
 };
 class CapabilityStatement_Messaging_SupportedMessage {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Messaging_SupportedMessage;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code mode;
 	fhir_canonical definition;
 };
 class CapabilityStatement_Document {
-public:
-	ResourceType resourceType = ResourceType::CapabilityStatement_Document;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code mode;
 	fhir_markdown documentation;
 	fhir_canonical profile;
 };
 class CarePlan {
-public:
-	ResourceType resourceType = ResourceType::CarePlan;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int instantiatesCanonical_count;
-	fhir_canonical* instantiatesCanonical;
-	int instantiatesUri_count;
-	fhir_uri* instantiatesUri;
-	int basedOn_count;
-	Reference* basedOn;
-	int replaces_count;
-	Reference* replaces;
-	int partOf_count;
-	Reference* partOf;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 instantiatesCanonical_count;
+	fhir_canonical *instantiatesCanonical;
+	U64 instantiatesUri_count;
+	fhir_uri *instantiatesUri;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 replaces_count;
+	Reference *replaces;
+	U64 partOf_count;
+	Reference *partOf;
 	fhir_code status;
 	fhir_code intent;
-	int category_count;
-	CodeableConcept* category;
+	U64 category_count;
+	CodeableConcept *category;
 	fhir_string title;
 	fhir_string description;
-	Reference* subject;
-	Reference* encounter;
-	Period* period;
+	Reference *subject;
+	Reference *encounter;
+	Period *period;
 	fhir_dateTime created;
-	Reference* author;
-	int contributor_count;
-	Reference* contributor;
-	int careTeam_count;
-	Reference* careTeam;
-	int addresses_count;
-	Reference* addresses;
-	int supportingInfo_count;
-	Reference* supportingInfo;
-	int goal_count;
-	Reference* goal;
-	int activity_count;
-	CarePlan_Activity* activity;
-	int note_count;
-	Annotation* note;
+	Reference *author;
+	U64 contributor_count;
+	Reference *contributor;
+	U64 careTeam_count;
+	Reference *careTeam;
+	U64 addresses_count;
+	Reference *addresses;
+	U64 supportingInfo_count;
+	Reference *supportingInfo;
+	U64 goal_count;
+	Reference *goal;
+	U64 activity_count;
+	CarePlan_Activity *activity;
+	U64 note_count;
+	Annotation *note;
 };
 class CarePlan_Activity {
-public:
-	ResourceType resourceType = ResourceType::CarePlan_Activity;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int outcomeCodeableConcept_count;
-	CodeableConcept* outcomeCodeableConcept;
-	int outcomeReference_count;
-	Reference* outcomeReference;
-	int progress_count;
-	Annotation* progress;
-	Reference* reference;
-	CarePlan_Activity_Detail* detail;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 outcomeCodeableConcept_count;
+	CodeableConcept *outcomeCodeableConcept;
+	U64 outcomeReference_count;
+	Reference *outcomeReference;
+	U64 progress_count;
+	Annotation *progress;
+	Reference *reference;
+	CarePlan_Activity_Detail *detail;
 };
 class CarePlan_Activity_Detail {
-public:
-	ResourceType resourceType = ResourceType::CarePlan_Activity_Detail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code kind;
-	int instantiatesCanonical_count;
-	fhir_canonical* instantiatesCanonical;
-	int instantiatesUri_count;
-	fhir_uri* instantiatesUri;
-	CodeableConcept* code;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int goal_count;
-	Reference* goal;
+	U64 instantiatesCanonical_count;
+	fhir_canonical *instantiatesCanonical;
+	U64 instantiatesUri_count;
+	fhir_uri *instantiatesUri;
+	CodeableConcept *code;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 goal_count;
+	Reference *goal;
 	fhir_code status;
-	CodeableConcept* statusReason;
+	CodeableConcept *statusReason;
 	fhir_boolean doNotPerform;
 	enum class ScheduledType {
 		Timing,
@@ -2565,396 +2573,401 @@ public:
 		fhir_string
 	};
 	ScheduledType scheduled_type;
+
 	union {
 		Timing* valueTiming;
 		Period* valuePeriod;
 		fhir_string valueString;
 	} scheduled;
 
-	Reference* location;
-	int performer_count;
-	Reference* performer;
+	Reference *location;
+	U64 performer_count;
+	Reference *performer;
 	enum class ProductType {
 		CodeableConcept,
 		Reference
 	};
 	ProductType product_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} product;
 
-	Quantity* dailyAmount;
-	Quantity* quantity;
+	Quantity *dailyAmount;
+	Quantity *quantity;
 	fhir_string description;
 };
 class CareTeam {
-public:
-	ResourceType resourceType = ResourceType::CareTeam;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	int category_count;
-	CodeableConcept* category;
+	U64 category_count;
+	CodeableConcept *category;
 	fhir_string name;
-	Reference* subject;
-	Reference* encounter;
-	Period* period;
-	int participant_count;
-	CareTeam_Participant* participant;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int managingOrganization_count;
-	Reference* managingOrganization;
-	int telecom_count;
-	ContactPoint* telecom;
-	int note_count;
-	Annotation* note;
+	Reference *subject;
+	Reference *encounter;
+	Period *period;
+	U64 participant_count;
+	CareTeam_Participant *participant;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 managingOrganization_count;
+	Reference *managingOrganization;
+	U64 telecom_count;
+	ContactPoint *telecom;
+	U64 note_count;
+	Annotation *note;
 };
 class CareTeam_Participant {
-public:
-	ResourceType resourceType = ResourceType::CareTeam_Participant;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int role_count;
-	CodeableConcept* role;
-	Reference* member;
-	Reference* onBehalfOf;
-	Period* period;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 role_count;
+	CodeableConcept *role;
+	Reference *member;
+	Reference *onBehalfOf;
+	Period *period;
 };
 class CatalogEntry {
-public:
-	ResourceType resourceType = ResourceType::CatalogEntry;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* type;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *type;
 	fhir_boolean orderable;
-	Reference* referencedItem;
-	int additionalIdentifier_count;
-	Identifier* additionalIdentifier;
-	int classification_count;
-	CodeableConcept* classification;
+	Reference *referencedItem;
+	U64 additionalIdentifier_count;
+	Identifier *additionalIdentifier;
+	U64 classification_count;
+	CodeableConcept *classification;
 	fhir_code status;
-	Period* validityPeriod;
+	Period *validityPeriod;
 	fhir_dateTime validTo;
 	fhir_dateTime lastUpdated;
-	int additionalCharacteristic_count;
-	CodeableConcept* additionalCharacteristic;
-	int additionalClassification_count;
-	CodeableConcept* additionalClassification;
-	int relatedEntry_count;
-	CatalogEntry_RelatedEntry* relatedEntry;
+	U64 additionalCharacteristic_count;
+	CodeableConcept *additionalCharacteristic;
+	U64 additionalClassification_count;
+	CodeableConcept *additionalClassification;
+	U64 relatedEntry_count;
+	CatalogEntry_RelatedEntry *relatedEntry;
 };
 class CatalogEntry_RelatedEntry {
-public:
-	ResourceType resourceType = ResourceType::CatalogEntry_RelatedEntry;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code relationtype;
-	Reference* item;
+	Reference *item;
 };
 class ChargeItem {
-public:
-	ResourceType resourceType = ResourceType::ChargeItem;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int definitionUri_count;
-	fhir_uri* definitionUri;
-	int definitionCanonical_count;
-	fhir_canonical* definitionCanonical;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 definitionUri_count;
+	fhir_uri *definitionUri;
+	U64 definitionCanonical_count;
+	fhir_canonical *definitionCanonical;
 	fhir_code status;
-	int partOf_count;
-	Reference* partOf;
-	CodeableConcept* code;
-	Reference* subject;
-	Reference* context;
+	U64 partOf_count;
+	Reference *partOf;
+	CodeableConcept *code;
+	Reference *subject;
+	Reference *context;
 	enum class OccurrenceType {
 		fhir_dateTime,
 		Period,
 		Timing
 	};
 	OccurrenceType occurrence_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
 		Timing* valueTiming;
 	} occurrence;
 
-	int performer_count;
-	ChargeItem_Performer* performer;
-	Reference* performingOrganization;
-	Reference* requestingOrganization;
-	Reference* costCenter;
-	Quantity* quantity;
-	int bodysite_count;
-	CodeableConcept* bodysite;
+	U64 performer_count;
+	ChargeItem_Performer *performer;
+	Reference *performingOrganization;
+	Reference *requestingOrganization;
+	Reference *costCenter;
+	Quantity *quantity;
+	U64 bodysite_count;
+	CodeableConcept *bodysite;
 	fhir_decimal factorOverride;
-	Money* priceOverride;
+	Money *priceOverride;
 	fhir_string overrideReason;
-	Reference* enterer;
+	Reference *enterer;
 	fhir_dateTime enteredDate;
-	int reason_count;
-	CodeableConcept* reason;
-	int service_count;
-	Reference* service;
+	U64 reason_count;
+	CodeableConcept *reason;
+	U64 service_count;
+	Reference *service;
 	enum class ProductType {
 		Reference,
 		CodeableConcept
 	};
 	ProductType product_type;
+
 	union {
 		Reference* valueReference;
 		CodeableConcept* valueCodeableConcept;
 	} product;
 
-	int account_count;
-	Reference* account;
-	int note_count;
-	Annotation* note;
-	int supportingInformation_count;
-	Reference* supportingInformation;
+	U64 account_count;
+	Reference *account;
+	U64 note_count;
+	Annotation *note;
+	U64 supportingInformation_count;
+	Reference *supportingInformation;
 };
 class ChargeItem_Performer {
-public:
-	ResourceType resourceType = ResourceType::ChargeItem_Performer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* function_;
-	Reference* actor;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *function_;
+	Reference *actor;
 };
 class ChargeItemDefinition {
-public:
-	ResourceType resourceType = ResourceType::ChargeItemDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string title;
-	int derivedFromUri_count;
-	fhir_uri* derivedFromUri;
-	int partOf_count;
-	fhir_canonical* partOf;
-	int replaces_count;
-	fhir_canonical* replaces;
+	U64 derivedFromUri_count;
+	fhir_uri *derivedFromUri;
+	U64 partOf_count;
+	fhir_canonical *partOf;
+	U64 replaces_count;
+	fhir_canonical *replaces;
 	fhir_code status;
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	CodeableConcept* code;
-	int instance_count;
-	Reference* instance;
-	int applicability_count;
-	ChargeItemDefinition_Applicability* applicability;
-	int propertyGroup_count;
-	ChargeItemDefinition_PropertyGroup* propertyGroup;
+	Period *effectivePeriod;
+	CodeableConcept *code;
+	U64 instance_count;
+	Reference *instance;
+	U64 applicability_count;
+	ChargeItemDefinition_Applicability *applicability;
+	U64 propertyGroup_count;
+	ChargeItemDefinition_PropertyGroup *propertyGroup;
 };
 class ChargeItemDefinition_Applicability {
-public:
-	ResourceType resourceType = ResourceType::ChargeItemDefinition_Applicability;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
 	fhir_string language;
 	fhir_string expression;
 };
 class ChargeItemDefinition_PropertyGroup {
-public:
-	ResourceType resourceType = ResourceType::ChargeItemDefinition_PropertyGroup;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int applicability_count;
-	ChargeItemDefinition_Applicability* applicability;
-	int priceComponent_count;
-	ChargeItemDefinition_PropertyGroup_PriceComponent* priceComponent;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 applicability_count;
+	ChargeItemDefinition_Applicability *applicability;
+	U64 priceComponent_count;
+	ChargeItemDefinition_PropertyGroup_PriceComponent *priceComponent;
 };
 class ChargeItemDefinition_PropertyGroup_PriceComponent {
-public:
-	ResourceType resourceType = ResourceType::ChargeItemDefinition_PropertyGroup_PriceComponent;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
-	CodeableConcept* code;
+	CodeableConcept *code;
 	fhir_decimal factor;
-	Money* amount;
+	Money *amount;
 };
 class Claim {
-public:
-	ResourceType resourceType = ResourceType::Claim;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* type;
-	CodeableConcept* subType;
+	CodeableConcept *type;
+	CodeableConcept *subType;
 	fhir_code use;
-	Reference* patient;
-	Period* billablePeriod;
+	Reference *patient;
+	Period *billablePeriod;
 	fhir_dateTime created;
-	Reference* enterer;
-	Reference* insurer;
-	Reference* provider;
-	CodeableConcept* priority;
-	CodeableConcept* fundsReserve;
-	int related_count;
-	Claim_Related* related;
-	Reference* prescription;
-	Reference* originalPrescription;
-	Claim_Payee* payee;
-	Reference* referral;
-	Reference* facility;
-	int careTeam_count;
-	Claim_CareTeam* careTeam;
-	int supportingInfo_count;
-	Claim_SupportingInfo* supportingInfo;
-	int diagnosis_count;
-	Claim_Diagnosis* diagnosis;
-	int procedure_count;
-	Claim_Procedure* procedure;
-	int insurance_count;
-	Claim_Insurance* insurance;
-	Claim_Accident* accident;
-	int item_count;
-	Claim_Item* item;
-	Money* total;
+	Reference *enterer;
+	Reference *insurer;
+	Reference *provider;
+	CodeableConcept *priority;
+	CodeableConcept *fundsReserve;
+	U64 related_count;
+	Claim_Related *related;
+	Reference *prescription;
+	Reference *originalPrescription;
+	Claim_Payee *payee;
+	Reference *referral;
+	Reference *facility;
+	U64 careTeam_count;
+	Claim_CareTeam *careTeam;
+	U64 supportingInfo_count;
+	Claim_SupportingInfo *supportingInfo;
+	U64 diagnosis_count;
+	Claim_Diagnosis *diagnosis;
+	U64 procedure_count;
+	Claim_Procedure *procedure;
+	U64 insurance_count;
+	Claim_Insurance *insurance;
+	Claim_Accident *accident;
+	U64 item_count;
+	Claim_Item *item;
+	Money *total;
 };
 class Claim_Related {
-public:
-	ResourceType resourceType = ResourceType::Claim_Related;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* claim;
-	CodeableConcept* relationship;
-	Identifier* reference;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *claim;
+	CodeableConcept *relationship;
+	Identifier *reference;
 };
 class Claim_Payee {
-public:
-	ResourceType resourceType = ResourceType::Claim_Payee;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	Reference* party;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	Reference *party;
 };
 class Claim_CareTeam {
-public:
-	ResourceType resourceType = ResourceType::Claim_CareTeam;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	Reference* provider;
+	Reference *provider;
 	fhir_boolean responsible;
-	CodeableConcept* role;
-	CodeableConcept* qualification;
+	CodeableConcept *role;
+	CodeableConcept *qualification;
 };
 class Claim_SupportingInfo {
-public:
-	ResourceType resourceType = ResourceType::Claim_SupportingInfo;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	CodeableConcept* category;
-	CodeableConcept* code;
+	CodeableConcept *category;
+	CodeableConcept *code;
 	enum class TimingType {
 		fhir_date,
 		Period
 	};
 	TimingType timing_type;
+
 	union {
 		fhir_date valueDate;
 		Period* valuePeriod;
@@ -2968,6 +2981,7 @@ public:
 		Reference
 	};
 	ValueType value_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		fhir_string valueString;
@@ -2976,89 +2990,92 @@ public:
 		Reference* valueReference;
 	} value;
 
-	CodeableConcept* reason;
+	CodeableConcept *reason;
 };
 class Claim_Diagnosis {
-public:
-	ResourceType resourceType = ResourceType::Claim_Diagnosis;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
 	enum class DiagnosisType {
 		CodeableConcept,
 		Reference
 	};
 	DiagnosisType diagnosis_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} diagnosis;
 
-	int type_count;
-	CodeableConcept* type;
-	CodeableConcept* onAdmission;
-	CodeableConcept* packageCode;
+	U64 type_count;
+	CodeableConcept *type;
+	CodeableConcept *onAdmission;
+	CodeableConcept *packageCode;
 };
 class Claim_Procedure {
-public:
-	ResourceType resourceType = ResourceType::Claim_Procedure;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	int type_count;
-	CodeableConcept* type;
+	U64 type_count;
+	CodeableConcept *type;
 	fhir_dateTime date;
 	enum class ProcedureType {
 		CodeableConcept,
 		Reference
 	};
 	ProcedureType procedure_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} procedure;
 
-	int udi_count;
-	Reference* udi;
+	U64 udi_count;
+	Reference *udi;
 };
 class Claim_Insurance {
-public:
-	ResourceType resourceType = ResourceType::Claim_Insurance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
 	fhir_boolean focal;
-	Identifier* identifier;
-	Reference* coverage;
+	Identifier *identifier;
+	Reference *coverage;
 	fhir_string businessArrangement;
-	int preAuthRef_count;
-	fhir_string* preAuthRef;
-	Reference* claimResponse;
+	U64 preAuthRef_count;
+	fhir_string *preAuthRef;
+	Reference *claimResponse;
 };
 class Claim_Accident {
-public:
-	ResourceType resourceType = ResourceType::Claim_Accident;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_date date;
-	CodeableConcept* type;
+	CodeableConcept *type;
 	enum class LocationType {
 		Address,
 		Reference
 	};
 	LocationType location_type;
+
 	union {
 		Address* valueAddress;
 		Reference* valueReference;
@@ -3066,34 +3083,35 @@ public:
 
 };
 class Claim_Item {
-public:
-	ResourceType resourceType = ResourceType::Claim_Item;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	int careTeamSequence_count;
-	fhir_positiveInt* careTeamSequence;
-	int diagnosisSequence_count;
-	fhir_positiveInt* diagnosisSequence;
-	int procedureSequence_count;
-	fhir_positiveInt* procedureSequence;
-	int informationSequence_count;
-	fhir_positiveInt* informationSequence;
-	CodeableConcept* revenue;
-	CodeableConcept* category;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	int programCode_count;
-	CodeableConcept* programCode;
+	U64 careTeamSequence_count;
+	fhir_positiveInt *careTeamSequence;
+	U64 diagnosisSequence_count;
+	fhir_positiveInt *diagnosisSequence;
+	U64 procedureSequence_count;
+	fhir_positiveInt *procedureSequence;
+	U64 informationSequence_count;
+	fhir_positiveInt *informationSequence;
+	CodeableConcept *revenue;
+	CodeableConcept *category;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	U64 programCode_count;
+	CodeableConcept *programCode;
 	enum class ServicedType {
 		fhir_date,
 		Period
 	};
 	ServicedType serviced_type;
+
 	union {
 		fhir_date valueDate;
 		Period* valuePeriod;
@@ -3105,210 +3123,212 @@ public:
 		Reference
 	};
 	LocationType location_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Address* valueAddress;
 		Reference* valueReference;
 	} location;
 
-	Quantity* quantity;
-	Money* unitPrice;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
-	Money* net;
-	int udi_count;
-	Reference* udi;
-	CodeableConcept* bodySite;
-	int subSite_count;
-	CodeableConcept* subSite;
-	int encounter_count;
-	Reference* encounter;
-	int detail_count;
-	Claim_Item_Detail* detail;
+	Money *net;
+	U64 udi_count;
+	Reference *udi;
+	CodeableConcept *bodySite;
+	U64 subSite_count;
+	CodeableConcept *subSite;
+	U64 encounter_count;
+	Reference *encounter;
+	U64 detail_count;
+	Claim_Item_Detail *detail;
 };
 class Claim_Item_Detail {
-public:
-	ResourceType resourceType = ResourceType::Claim_Item_Detail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	CodeableConcept* revenue;
-	CodeableConcept* category;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	int programCode_count;
-	CodeableConcept* programCode;
-	Quantity* quantity;
-	Money* unitPrice;
+	CodeableConcept *revenue;
+	CodeableConcept *category;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	U64 programCode_count;
+	CodeableConcept *programCode;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
-	Money* net;
-	int udi_count;
-	Reference* udi;
-	int subDetail_count;
-	Claim_Item_Detail_SubDetail* subDetail;
+	Money *net;
+	U64 udi_count;
+	Reference *udi;
+	U64 subDetail_count;
+	Claim_Item_Detail_SubDetail *subDetail;
 };
 class Claim_Item_Detail_SubDetail {
-public:
-	ResourceType resourceType = ResourceType::Claim_Item_Detail_SubDetail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	CodeableConcept* revenue;
-	CodeableConcept* category;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	int programCode_count;
-	CodeableConcept* programCode;
-	Quantity* quantity;
-	Money* unitPrice;
+	CodeableConcept *revenue;
+	CodeableConcept *category;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	U64 programCode_count;
+	CodeableConcept *programCode;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
-	Money* net;
-	int udi_count;
-	Reference* udi;
+	Money *net;
+	U64 udi_count;
+	Reference *udi;
 };
 class ClaimResponse {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* type;
-	CodeableConcept* subType;
+	CodeableConcept *type;
+	CodeableConcept *subType;
 	fhir_code use;
-	Reference* patient;
+	Reference *patient;
 	fhir_dateTime created;
-	Reference* insurer;
-	Reference* requestor;
-	Reference* request;
+	Reference *insurer;
+	Reference *requestor;
+	Reference *request;
 	fhir_code outcome;
 	fhir_string disposition;
 	fhir_string preAuthRef;
-	Period* preAuthPeriod;
-	CodeableConcept* payeeType;
-	int item_count;
-	ClaimResponse_Item* item;
-	int addItem_count;
-	ClaimResponse_AddItem* addItem;
-	int adjudication_count;
-	ClaimResponse_Item_Adjudication* adjudication;
-	int total_count;
-	ClaimResponse_Total* total;
-	ClaimResponse_Payment* payment;
-	CodeableConcept* fundsReserve;
-	CodeableConcept* formCode;
-	Attachment* form;
-	int processNote_count;
-	ClaimResponse_ProcessNote* processNote;
-	int communicationRequest_count;
-	Reference* communicationRequest;
-	int insurance_count;
-	ClaimResponse_Insurance* insurance;
-	int error_count;
-	ClaimResponse_Error* error;
+	Period *preAuthPeriod;
+	CodeableConcept *payeeType;
+	U64 item_count;
+	ClaimResponse_Item *item;
+	U64 addItem_count;
+	ClaimResponse_AddItem *addItem;
+	U64 adjudication_count;
+	ClaimResponse_Item_Adjudication *adjudication;
+	U64 total_count;
+	ClaimResponse_Total *total;
+	ClaimResponse_Payment *payment;
+	CodeableConcept *fundsReserve;
+	CodeableConcept *formCode;
+	Attachment *form;
+	U64 processNote_count;
+	ClaimResponse_ProcessNote *processNote;
+	U64 communicationRequest_count;
+	Reference *communicationRequest;
+	U64 insurance_count;
+	ClaimResponse_Insurance *insurance;
+	U64 error_count;
+	ClaimResponse_Error *error;
 };
 class ClaimResponse_Item {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse_Item;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt itemSequence;
-	int noteNumber_count;
-	fhir_positiveInt* noteNumber;
-	int adjudication_count;
-	ClaimResponse_Item_Adjudication* adjudication;
-	int detail_count;
-	ClaimResponse_Item_Detail* detail;
+	U64 noteNumber_count;
+	fhir_positiveInt *noteNumber;
+	U64 adjudication_count;
+	ClaimResponse_Item_Adjudication *adjudication;
+	U64 detail_count;
+	ClaimResponse_Item_Detail *detail;
 };
 class ClaimResponse_Item_Adjudication {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse_Item_Adjudication;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* category;
-	CodeableConcept* reason;
-	Money* amount;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *category;
+	CodeableConcept *reason;
+	Money *amount;
 	fhir_decimal value;
 };
 class ClaimResponse_Item_Detail {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse_Item_Detail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt detailSequence;
-	int noteNumber_count;
-	fhir_positiveInt* noteNumber;
-	int adjudication_count;
-	ClaimResponse_Item_Adjudication* adjudication;
-	int subDetail_count;
-	ClaimResponse_Item_Detail_SubDetail* subDetail;
+	U64 noteNumber_count;
+	fhir_positiveInt *noteNumber;
+	U64 adjudication_count;
+	ClaimResponse_Item_Adjudication *adjudication;
+	U64 subDetail_count;
+	ClaimResponse_Item_Detail_SubDetail *subDetail;
 };
 class ClaimResponse_Item_Detail_SubDetail {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse_Item_Detail_SubDetail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt subDetailSequence;
-	int noteNumber_count;
-	fhir_positiveInt* noteNumber;
-	int adjudication_count;
-	ClaimResponse_Item_Adjudication* adjudication;
+	U64 noteNumber_count;
+	fhir_positiveInt *noteNumber;
+	U64 adjudication_count;
+	ClaimResponse_Item_Adjudication *adjudication;
 };
 class ClaimResponse_AddItem {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse_AddItem;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int itemSequence_count;
-	fhir_positiveInt* itemSequence;
-	int detailSequence_count;
-	fhir_positiveInt* detailSequence;
-	int subdetailSequence_count;
-	fhir_positiveInt* subdetailSequence;
-	int provider_count;
-	Reference* provider;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	int programCode_count;
-	CodeableConcept* programCode;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 itemSequence_count;
+	fhir_positiveInt *itemSequence;
+	U64 detailSequence_count;
+	fhir_positiveInt *detailSequence;
+	U64 subdetailSequence_count;
+	fhir_positiveInt *subdetailSequence;
+	U64 provider_count;
+	Reference *provider;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	U64 programCode_count;
+	CodeableConcept *programCode;
 	enum class ServicedType {
 		fhir_date,
 		Period
 	};
 	ServicedType serviced_type;
+
 	union {
 		fhir_date valueDate;
 		Period* valuePeriod;
@@ -3320,228 +3340,230 @@ public:
 		Reference
 	};
 	LocationType location_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Address* valueAddress;
 		Reference* valueReference;
 	} location;
 
-	Quantity* quantity;
-	Money* unitPrice;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
-	Money* net;
-	CodeableConcept* bodySite;
-	int subSite_count;
-	CodeableConcept* subSite;
-	int noteNumber_count;
-	fhir_positiveInt* noteNumber;
-	int adjudication_count;
-	ClaimResponse_Item_Adjudication* adjudication;
-	int detail_count;
-	ClaimResponse_AddItem_Detail* detail;
+	Money *net;
+	CodeableConcept *bodySite;
+	U64 subSite_count;
+	CodeableConcept *subSite;
+	U64 noteNumber_count;
+	fhir_positiveInt *noteNumber;
+	U64 adjudication_count;
+	ClaimResponse_Item_Adjudication *adjudication;
+	U64 detail_count;
+	ClaimResponse_AddItem_Detail *detail;
 };
 class ClaimResponse_AddItem_Detail {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse_AddItem_Detail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	Quantity* quantity;
-	Money* unitPrice;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
-	Money* net;
-	int noteNumber_count;
-	fhir_positiveInt* noteNumber;
-	int adjudication_count;
-	ClaimResponse_Item_Adjudication* adjudication;
-	int subDetail_count;
-	ClaimResponse_AddItem_Detail_SubDetail* subDetail;
+	Money *net;
+	U64 noteNumber_count;
+	fhir_positiveInt *noteNumber;
+	U64 adjudication_count;
+	ClaimResponse_Item_Adjudication *adjudication;
+	U64 subDetail_count;
+	ClaimResponse_AddItem_Detail_SubDetail *subDetail;
 };
 class ClaimResponse_AddItem_Detail_SubDetail {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse_AddItem_Detail_SubDetail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	Quantity* quantity;
-	Money* unitPrice;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
-	Money* net;
-	int noteNumber_count;
-	fhir_positiveInt* noteNumber;
-	int adjudication_count;
-	ClaimResponse_Item_Adjudication* adjudication;
+	Money *net;
+	U64 noteNumber_count;
+	fhir_positiveInt *noteNumber;
+	U64 adjudication_count;
+	ClaimResponse_Item_Adjudication *adjudication;
 };
 class ClaimResponse_Total {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse_Total;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* category;
-	Money* amount;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *category;
+	Money *amount;
 };
 class ClaimResponse_Payment {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse_Payment;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	Money* adjustment;
-	CodeableConcept* adjustmentReason;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	Money *adjustment;
+	CodeableConcept *adjustmentReason;
 	fhir_date date;
-	Money* amount;
-	Identifier* identifier;
+	Money *amount;
+	Identifier *identifier;
 };
 class ClaimResponse_ProcessNote {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse_ProcessNote;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt number;
 	fhir_code type;
 	fhir_string text;
-	CodeableConcept* language;
+	CodeableConcept *language;
 };
 class ClaimResponse_Insurance {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse_Insurance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
 	fhir_boolean focal;
-	Reference* coverage;
+	Reference *coverage;
 	fhir_string businessArrangement;
-	Reference* claimResponse;
+	Reference *claimResponse;
 };
 class ClaimResponse_Error {
-public:
-	ResourceType resourceType = ResourceType::ClaimResponse_Error;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt itemSequence;
 	fhir_positiveInt detailSequence;
 	fhir_positiveInt subDetailSequence;
-	CodeableConcept* code;
+	CodeableConcept *code;
 };
 class ClinicalImpression {
-public:
-	ResourceType resourceType = ResourceType::ClinicalImpression;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* statusReason;
-	CodeableConcept* code;
+	CodeableConcept *statusReason;
+	CodeableConcept *code;
 	fhir_string description;
-	Reference* subject;
-	Reference* encounter;
+	Reference *subject;
+	Reference *encounter;
 	enum class EffectiveType {
 		fhir_dateTime,
 		Period
 	};
 	EffectiveType effective_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
 	} effective;
 
 	fhir_dateTime date;
-	Reference* assessor;
-	Reference* previous;
-	int problem_count;
-	Reference* problem;
-	int investigation_count;
-	ClinicalImpression_Investigation* investigation;
-	int protocol_count;
-	fhir_uri* protocol;
+	Reference *assessor;
+	Reference *previous;
+	U64 problem_count;
+	Reference *problem;
+	U64 investigation_count;
+	ClinicalImpression_Investigation *investigation;
+	U64 protocol_count;
+	fhir_uri *protocol;
 	fhir_string summary;
-	int finding_count;
-	ClinicalImpression_Finding* finding;
-	int prognosisCodeableConcept_count;
-	CodeableConcept* prognosisCodeableConcept;
-	int prognosisReference_count;
-	Reference* prognosisReference;
-	int supportingInfo_count;
-	Reference* supportingInfo;
-	int note_count;
-	Annotation* note;
+	U64 finding_count;
+	ClinicalImpression_Finding *finding;
+	U64 prognosisCodeableConcept_count;
+	CodeableConcept *prognosisCodeableConcept;
+	U64 prognosisReference_count;
+	Reference *prognosisReference;
+	U64 supportingInfo_count;
+	Reference *supportingInfo;
+	U64 note_count;
+	Annotation *note;
 };
 class ClinicalImpression_Investigation {
-public:
-	ResourceType resourceType = ResourceType::ClinicalImpression_Investigation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	int item_count;
-	Reference* item;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	U64 item_count;
+	Reference *item;
 };
 class ClinicalImpression_Finding {
-public:
-	ResourceType resourceType = ResourceType::ClinicalImpression_Finding;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* itemCodeableConcept;
-	Reference* itemReference;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *itemCodeableConcept;
+	Reference *itemReference;
 	fhir_string basis;
 };
 class CodeSystem {
-public:
-	ResourceType resourceType = ResourceType::CodeSystem;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -3549,13 +3571,13 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	fhir_boolean caseSensitive;
@@ -3566,78 +3588,78 @@ public:
 	fhir_code content;
 	fhir_canonical supplements;
 	fhir_unsignedInt count;
-	int filter_count;
-	CodeSystem_Filter* filter;
-	int property_count;
-	CodeSystem_Property* property;
-	int concept_count;
-	CodeSystem_Concept* concept;
+	U64 filter_count;
+	CodeSystem_Filter *filter;
+	U64 property_count;
+	CodeSystem_Property *property;
+	U64 concept_count;
+	CodeSystem_Concept *concept;
 };
 class CodeSystem_Filter {
-public:
-	ResourceType resourceType = ResourceType::CodeSystem_Filter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	fhir_string description;
-	int operator__count;
-	fhir_code* operator_;
+	U64 operator__count;
+	fhir_code *operator_;
 	fhir_string value;
 };
 class CodeSystem_Property {
-public:
-	ResourceType resourceType = ResourceType::CodeSystem_Property;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	fhir_uri uri;
 	fhir_string description;
 	fhir_code type;
 };
 class CodeSystem_Concept {
-public:
-	ResourceType resourceType = ResourceType::CodeSystem_Concept;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	fhir_string display;
 	fhir_string definition;
-	int designation_count;
-	CodeSystem_Concept_Designation* designation;
-	int property_count;
-	CodeSystem_Concept_Property* property;
-	int concept_count;
-	CodeSystem_Concept* concept;
+	U64 designation_count;
+	CodeSystem_Concept_Designation *designation;
+	U64 property_count;
+	CodeSystem_Concept_Property *property;
+	U64 concept_count;
+	CodeSystem_Concept *concept;
 };
 class CodeSystem_Concept_Designation {
-public:
-	ResourceType resourceType = ResourceType::CodeSystem_Concept_Designation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code language;
-	Coding* use;
+	Coding *use;
 	fhir_string value;
 };
 class CodeSystem_Concept_Property {
-public:
-	ResourceType resourceType = ResourceType::CodeSystem_Concept_Property;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	enum class ValueType {
 		fhir_code,
@@ -3649,6 +3671,7 @@ public:
 		fhir_decimal
 	};
 	ValueType value_type;
+
 	union {
 		fhir_code valueCode;
 		Coding* valueCoding;
@@ -3661,71 +3684,72 @@ public:
 
 };
 class Communication {
-public:
-	ResourceType resourceType = ResourceType::Communication;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int instantiatesCanonical_count;
-	fhir_canonical* instantiatesCanonical;
-	int instantiatesUri_count;
-	fhir_uri* instantiatesUri;
-	int basedOn_count;
-	Reference* basedOn;
-	int partOf_count;
-	Reference* partOf;
-	int inResponseTo_count;
-	Reference* inResponseTo;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 instantiatesCanonical_count;
+	fhir_canonical *instantiatesCanonical;
+	U64 instantiatesUri_count;
+	fhir_uri *instantiatesUri;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 partOf_count;
+	Reference *partOf;
+	U64 inResponseTo_count;
+	Reference *inResponseTo;
 	fhir_code status;
-	CodeableConcept* statusReason;
-	int category_count;
-	CodeableConcept* category;
+	CodeableConcept *statusReason;
+	U64 category_count;
+	CodeableConcept *category;
 	fhir_code priority;
-	int medium_count;
-	CodeableConcept* medium;
-	Reference* subject;
-	CodeableConcept* topic;
-	int about_count;
-	Reference* about;
-	Reference* encounter;
+	U64 medium_count;
+	CodeableConcept *medium;
+	Reference *subject;
+	CodeableConcept *topic;
+	U64 about_count;
+	Reference *about;
+	Reference *encounter;
 	fhir_dateTime sent;
 	fhir_dateTime received;
-	int recipient_count;
-	Reference* recipient;
-	Reference* sender;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int payload_count;
-	Communication_Payload* payload;
-	int note_count;
-	Annotation* note;
+	U64 recipient_count;
+	Reference *recipient;
+	Reference *sender;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 payload_count;
+	Communication_Payload *payload;
+	U64 note_count;
+	Annotation *note;
 };
 class Communication_Payload {
-public:
-	ResourceType resourceType = ResourceType::Communication_Payload;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ContentType {
 		fhir_string,
 		Attachment,
 		Reference
 	};
 	ContentType content_type;
+
 	union {
 		fhir_string valueString;
 		Attachment* valueAttachment;
@@ -3734,76 +3758,78 @@ public:
 
 };
 class CommunicationRequest {
-public:
-	ResourceType resourceType = ResourceType::CommunicationRequest;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int basedOn_count;
-	Reference* basedOn;
-	int replaces_count;
-	Reference* replaces;
-	Identifier* groupIdentifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 replaces_count;
+	Reference *replaces;
+	Identifier *groupIdentifier;
 	fhir_code status;
-	CodeableConcept* statusReason;
-	int category_count;
-	CodeableConcept* category;
+	CodeableConcept *statusReason;
+	U64 category_count;
+	CodeableConcept *category;
 	fhir_code priority;
 	fhir_boolean doNotPerform;
-	int medium_count;
-	CodeableConcept* medium;
-	Reference* subject;
-	int about_count;
-	Reference* about;
-	Reference* encounter;
-	int payload_count;
-	CommunicationRequest_Payload* payload;
+	U64 medium_count;
+	CodeableConcept *medium;
+	Reference *subject;
+	U64 about_count;
+	Reference *about;
+	Reference *encounter;
+	U64 payload_count;
+	CommunicationRequest_Payload *payload;
 	enum class OccurrenceType {
 		fhir_dateTime,
 		Period
 	};
 	OccurrenceType occurrence_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
 	} occurrence;
 
 	fhir_dateTime authoredOn;
-	Reference* requester;
-	int recipient_count;
-	Reference* recipient;
-	Reference* sender;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int note_count;
-	Annotation* note;
+	Reference *requester;
+	U64 recipient_count;
+	Reference *recipient;
+	Reference *sender;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 note_count;
+	Annotation *note;
 };
 class CommunicationRequest_Payload {
-public:
-	ResourceType resourceType = ResourceType::CommunicationRequest_Payload;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ContentType {
 		fhir_string,
 		Attachment,
 		Reference
 	};
 	ContentType content_type;
+
 	union {
 		fhir_string valueString;
 		Attachment* valueAttachment;
@@ -3812,19 +3838,19 @@ public:
 
 };
 class CompartmentDefinition {
-public:
-	ResourceType resourceType = ResourceType::CompartmentDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -3832,92 +3858,93 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
+	U64 useContext_count;
+	UsageContext *useContext;
 	fhir_markdown purpose;
 	fhir_code code;
 	fhir_boolean search;
-	int resource_count;
-	CompartmentDefinition_Resource* resource;
+	U64 resource_count;
+	CompartmentDefinition_Resource *resource;
 };
 class CompartmentDefinition_Resource {
-public:
-	ResourceType resourceType = ResourceType::CompartmentDefinition_Resource;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
-	int param_count;
-	fhir_string* param;
+	U64 param_count;
+	fhir_string *param;
 	fhir_string documentation;
 };
 class Composition {
-public:
-	ResourceType resourceType = ResourceType::Composition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* type;
-	int category_count;
-	CodeableConcept* category;
-	Reference* subject;
-	Reference* encounter;
+	CodeableConcept *type;
+	U64 category_count;
+	CodeableConcept *category;
+	Reference *subject;
+	Reference *encounter;
 	fhir_dateTime date;
-	int author_count;
-	Reference* author;
+	U64 author_count;
+	Reference *author;
 	fhir_string title;
 	fhir_code confidentiality;
-	int attester_count;
-	Composition_Attester* attester;
-	Reference* custodian;
-	int relatesTo_count;
-	Composition_RelatesTo* relatesTo;
-	int event_count;
-	Composition_Event* event;
-	int section_count;
-	Composition_Section* section;
+	U64 attester_count;
+	Composition_Attester *attester;
+	Reference *custodian;
+	U64 relatesTo_count;
+	Composition_RelatesTo *relatesTo;
+	U64 event_count;
+	Composition_Event *event;
+	U64 section_count;
+	Composition_Section *section;
 };
 class Composition_Attester {
-public:
-	ResourceType resourceType = ResourceType::Composition_Attester;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code mode;
 	fhir_dateTime time;
-	Reference* party;
+	Reference *party;
 };
 class Composition_RelatesTo {
-public:
-	ResourceType resourceType = ResourceType::Composition_RelatesTo;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	enum class TargetType {
 		Identifier,
 		Reference
 	};
 	TargetType target_type;
+
 	union {
 		Identifier* valueIdentifier;
 		Reference* valueReference;
@@ -3925,57 +3952,57 @@ public:
 
 };
 class Composition_Event {
-public:
-	ResourceType resourceType = ResourceType::Composition_Event;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int code_count;
-	CodeableConcept* code;
-	Period* period;
-	int detail_count;
-	Reference* detail;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 code_count;
+	CodeableConcept *code;
+	Period *period;
+	U64 detail_count;
+	Reference *detail;
 };
 class Composition_Section {
-public:
-	ResourceType resourceType = ResourceType::Composition_Section;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string title;
-	CodeableConcept* code;
-	int author_count;
-	Reference* author;
-	Reference* focus;
-	Narrative* text;
+	CodeableConcept *code;
+	U64 author_count;
+	Reference *author;
+	Reference *focus;
+	Narrative *text;
 	fhir_code mode;
-	CodeableConcept* orderedBy;
-	int entry_count;
-	Reference* entry;
-	CodeableConcept* emptyReason;
-	int section_count;
-	Composition_Section* section;
+	CodeableConcept *orderedBy;
+	U64 entry_count;
+	Reference *entry;
+	CodeableConcept *emptyReason;
+	U64 section_count;
+	Composition_Section *section;
 };
 class ConceptMap {
-public:
-	ResourceType resourceType = ResourceType::ConceptMap;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	Identifier* identifier;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -3983,13 +4010,13 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	enum class SourceType {
@@ -3997,6 +4024,7 @@ public:
 		fhir_canonical
 	};
 	SourceType source_type;
+
 	union {
 		fhir_uri valueUri;
 		fhir_canonical valueCanonical;
@@ -4007,112 +4035,113 @@ public:
 		fhir_canonical
 	};
 	TargetType target_type;
+
 	union {
 		fhir_uri valueUri;
 		fhir_canonical valueCanonical;
 	} target;
 
-	int group_count;
-	ConceptMap_Group* group;
+	U64 group_count;
+	ConceptMap_Group *group;
 };
 class ConceptMap_Group {
-public:
-	ResourceType resourceType = ResourceType::ConceptMap_Group;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri source;
 	fhir_string sourceVersion;
 	fhir_uri target;
 	fhir_string targetVersion;
-	int element_count;
-	ConceptMap_Group_Element* element;
-	ConceptMap_Group_Unmapped* unmapped;
+	U64 element_count;
+	ConceptMap_Group_Element *element;
+	ConceptMap_Group_Unmapped *unmapped;
 };
 class ConceptMap_Group_Element {
-public:
-	ResourceType resourceType = ResourceType::ConceptMap_Group_Element;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	fhir_string display;
-	int target_count;
-	ConceptMap_Group_Element_Target* target;
+	U64 target_count;
+	ConceptMap_Group_Element_Target *target;
 };
 class ConceptMap_Group_Element_Target {
-public:
-	ResourceType resourceType = ResourceType::ConceptMap_Group_Element_Target;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	fhir_string display;
 	fhir_code equivalence;
 	fhir_string comment;
-	int dependsOn_count;
-	ConceptMap_Group_Element_Target_DependsOn* dependsOn;
-	int product_count;
-	ConceptMap_Group_Element_Target_DependsOn* product;
+	U64 dependsOn_count;
+	ConceptMap_Group_Element_Target_DependsOn *dependsOn;
+	U64 product_count;
+	ConceptMap_Group_Element_Target_DependsOn *product;
 };
 class ConceptMap_Group_Element_Target_DependsOn {
-public:
-	ResourceType resourceType = ResourceType::ConceptMap_Group_Element_Target_DependsOn;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri property;
 	fhir_canonical system;
 	fhir_string value;
 	fhir_string display;
 };
 class ConceptMap_Group_Unmapped {
-public:
-	ResourceType resourceType = ResourceType::ConceptMap_Group_Unmapped;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code mode;
 	fhir_code code;
 	fhir_string display;
 	fhir_canonical url;
 };
 class Condition {
-public:
-	ResourceType resourceType = ResourceType::Condition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* clinicalStatus;
-	CodeableConcept* verificationStatus;
-	int category_count;
-	CodeableConcept* category;
-	CodeableConcept* severity;
-	CodeableConcept* code;
-	int bodySite_count;
-	CodeableConcept* bodySite;
-	Reference* subject;
-	Reference* encounter;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *clinicalStatus;
+	CodeableConcept *verificationStatus;
+	U64 category_count;
+	CodeableConcept *category;
+	CodeableConcept *severity;
+	CodeableConcept *code;
+	U64 bodySite_count;
+	CodeableConcept *bodySite;
+	Reference *subject;
+	Reference *encounter;
 	enum class OnsetType {
 		fhir_dateTime,
 		Age,
@@ -4121,6 +4150,7 @@ public:
 		fhir_string
 	};
 	OnsetType onset_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Age* valueAge;
@@ -4137,6 +4167,7 @@ public:
 		fhir_string
 	};
 	AbatementType abatement_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Age* valueAge;
@@ -4146,231 +4177,234 @@ public:
 	} abatement;
 
 	fhir_dateTime recordedDate;
-	Reference* recorder;
-	Reference* asserter;
-	int stage_count;
-	Condition_Stage* stage;
-	int evidence_count;
-	Condition_Evidence* evidence;
-	int note_count;
-	Annotation* note;
+	Reference *recorder;
+	Reference *asserter;
+	U64 stage_count;
+	Condition_Stage *stage;
+	U64 evidence_count;
+	Condition_Evidence *evidence;
+	U64 note_count;
+	Annotation *note;
 };
 class Condition_Stage {
-public:
-	ResourceType resourceType = ResourceType::Condition_Stage;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* summary;
-	int assessment_count;
-	Reference* assessment;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *summary;
+	U64 assessment_count;
+	Reference *assessment;
+	CodeableConcept *type;
 };
 class Condition_Evidence {
-public:
-	ResourceType resourceType = ResourceType::Condition_Evidence;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int code_count;
-	CodeableConcept* code;
-	int detail_count;
-	Reference* detail;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 code_count;
+	CodeableConcept *code;
+	U64 detail_count;
+	Reference *detail;
 };
 class Consent {
-public:
-	ResourceType resourceType = ResourceType::Consent;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* scope;
-	int category_count;
-	CodeableConcept* category;
-	Reference* patient;
+	CodeableConcept *scope;
+	U64 category_count;
+	CodeableConcept *category;
+	Reference *patient;
 	fhir_dateTime dateTime;
-	int performer_count;
-	Reference* performer;
-	int organization_count;
-	Reference* organization;
+	U64 performer_count;
+	Reference *performer;
+	U64 organization_count;
+	Reference *organization;
 	enum class SourceType {
 		Attachment,
 		Reference
 	};
 	SourceType source_type;
+
 	union {
 		Attachment* valueAttachment;
 		Reference* valueReference;
 	} source;
 
-	int policy_count;
-	Consent_Policy* policy;
-	CodeableConcept* policyRule;
-	int verification_count;
-	Consent_Verification* verification;
-	Consent_Provision* provision;
+	U64 policy_count;
+	Consent_Policy *policy;
+	CodeableConcept *policyRule;
+	U64 verification_count;
+	Consent_Verification *verification;
+	Consent_Provision *provision;
 };
 class Consent_Policy {
-public:
-	ResourceType resourceType = ResourceType::Consent_Policy;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri authority;
 	fhir_uri uri;
 };
 class Consent_Verification {
-public:
-	ResourceType resourceType = ResourceType::Consent_Verification;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean verified;
-	Reference* verifiedWith;
+	Reference *verifiedWith;
 	fhir_dateTime verificationDate;
 };
 class Consent_Provision {
-public:
-	ResourceType resourceType = ResourceType::Consent_Provision;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
-	Period* period;
-	int actor_count;
-	Consent_Provision_Actor* actor;
-	int action_count;
-	CodeableConcept* action;
-	int securityLabel_count;
-	Coding* securityLabel;
-	int purpose_count;
-	Coding* purpose;
-	int class__count;
-	Coding* class_;
-	int code_count;
-	CodeableConcept* code;
-	Period* dataPeriod;
-	int data_count;
-	Consent_Provision_Data* data;
-	int provision_count;
-	Consent_Provision* provision;
+	Period *period;
+	U64 actor_count;
+	Consent_Provision_Actor *actor;
+	U64 action_count;
+	CodeableConcept *action;
+	U64 securityLabel_count;
+	Coding *securityLabel;
+	U64 purpose_count;
+	Coding *purpose;
+	U64 class__count;
+	Coding *class_;
+	U64 code_count;
+	CodeableConcept *code;
+	Period *dataPeriod;
+	U64 data_count;
+	Consent_Provision_Data *data;
+	U64 provision_count;
+	Consent_Provision *provision;
 };
 class Consent_Provision_Actor {
-public:
-	ResourceType resourceType = ResourceType::Consent_Provision_Actor;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* role;
-	Reference* reference;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *role;
+	Reference *reference;
 };
 class Consent_Provision_Data {
-public:
-	ResourceType resourceType = ResourceType::Consent_Provision_Data;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code meaning;
-	Reference* reference;
+	Reference *reference;
 };
 class Contract {
-public:
-	ResourceType resourceType = ResourceType::Contract;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_uri url;
 	fhir_string version;
 	fhir_code status;
-	CodeableConcept* legalState;
-	Reference* instantiatesCanonical;
+	CodeableConcept *legalState;
+	Reference *instantiatesCanonical;
 	fhir_uri instantiatesUri;
-	CodeableConcept* contentDerivative;
+	CodeableConcept *contentDerivative;
 	fhir_dateTime issued;
-	Period* applies;
-	CodeableConcept* expirationType;
-	int subject_count;
-	Reference* subject;
-	int authority_count;
-	Reference* authority;
-	int domain_count;
-	Reference* domain;
-	int site_count;
-	Reference* site;
+	Period *applies;
+	CodeableConcept *expirationType;
+	U64 subject_count;
+	Reference *subject;
+	U64 authority_count;
+	Reference *authority;
+	U64 domain_count;
+	Reference *domain;
+	U64 site_count;
+	Reference *site;
 	fhir_string name;
 	fhir_string title;
 	fhir_string subtitle;
-	int alias_count;
-	fhir_string* alias;
-	Reference* author;
-	CodeableConcept* scope;
+	U64 alias_count;
+	fhir_string *alias;
+	Reference *author;
+	CodeableConcept *scope;
 	enum class TopicType {
 		CodeableConcept,
 		Reference
 	};
 	TopicType topic_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} topic;
 
-	CodeableConcept* type;
-	int subType_count;
-	CodeableConcept* subType;
-	Contract_ContentDefinition* contentDefinition;
-	int term_count;
-	Contract_Term* term;
-	int supportingInfo_count;
-	Reference* supportingInfo;
-	int relevantHistory_count;
-	Reference* relevantHistory;
-	int signer_count;
-	Contract_Signer* signer;
-	int friendly_count;
-	Contract_Friendly* friendly;
-	int legal_count;
-	Contract_Legal* legal;
-	int rule_count;
-	Contract_Rule* rule;
+	CodeableConcept *type;
+	U64 subType_count;
+	CodeableConcept *subType;
+	Contract_ContentDefinition *contentDefinition;
+	U64 term_count;
+	Contract_Term *term;
+	U64 supportingInfo_count;
+	Reference *supportingInfo;
+	U64 relevantHistory_count;
+	Reference *relevantHistory;
+	U64 signer_count;
+	Contract_Signer *signer;
+	U64 friendly_count;
+	Contract_Friendly *friendly;
+	U64 legal_count;
+	Contract_Legal *legal;
+	U64 rule_count;
+	Contract_Rule *rule;
 	enum class LegallyBindingType {
 		Attachment,
 		Reference
 	};
 	LegallyBindingType legallyBinding_type;
+
 	union {
 		Attachment* valueAttachment;
 		Reference* valueReference;
@@ -4378,115 +4412,116 @@ public:
 
 };
 class Contract_ContentDefinition {
-public:
-	ResourceType resourceType = ResourceType::Contract_ContentDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	CodeableConcept* subType;
-	Reference* publisher;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	CodeableConcept *subType;
+	Reference *publisher;
 	fhir_dateTime publicationDate;
 	fhir_code publicationStatus;
 	fhir_markdown copyright;
 };
 class Contract_Term {
-public:
-	ResourceType resourceType = ResourceType::Contract_Term;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
 	fhir_dateTime issued;
-	Period* applies;
+	Period *applies;
 	enum class TopicType {
 		CodeableConcept,
 		Reference
 	};
 	TopicType topic_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} topic;
 
-	CodeableConcept* type;
-	CodeableConcept* subType;
+	CodeableConcept *type;
+	CodeableConcept *subType;
 	fhir_string text;
-	int securityLabel_count;
-	Contract_Term_SecurityLabel* securityLabel;
-	Contract_Term_Offer* offer;
-	int asset_count;
-	Contract_Term_Asset* asset;
-	int action_count;
-	Contract_Term_Action* action;
-	int group_count;
-	Contract_Term* group;
+	U64 securityLabel_count;
+	Contract_Term_SecurityLabel *securityLabel;
+	Contract_Term_Offer *offer;
+	U64 asset_count;
+	Contract_Term_Asset *asset;
+	U64 action_count;
+	Contract_Term_Action *action;
+	U64 group_count;
+	Contract_Term *group;
 };
 class Contract_Term_SecurityLabel {
-public:
-	ResourceType resourceType = ResourceType::Contract_Term_SecurityLabel;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int number_count;
-	fhir_unsignedInt* number;
-	Coding* classification;
-	int category_count;
-	Coding* category;
-	int control_count;
-	Coding* control;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 number_count;
+	fhir_unsignedInt *number;
+	Coding *classification;
+	U64 category_count;
+	Coding *category;
+	U64 control_count;
+	Coding *control;
 };
 class Contract_Term_Offer {
-public:
-	ResourceType resourceType = ResourceType::Contract_Term_Offer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int party_count;
-	Contract_Term_Offer_Party* party;
-	Reference* topic;
-	CodeableConcept* type;
-	CodeableConcept* decision;
-	int decisionMode_count;
-	CodeableConcept* decisionMode;
-	int answer_count;
-	Contract_Term_Offer_Answer* answer;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 party_count;
+	Contract_Term_Offer_Party *party;
+	Reference *topic;
+	CodeableConcept *type;
+	CodeableConcept *decision;
+	U64 decisionMode_count;
+	CodeableConcept *decisionMode;
+	U64 answer_count;
+	Contract_Term_Offer_Answer *answer;
 	fhir_string text;
-	int linkId_count;
-	fhir_string* linkId;
-	int securityLabelNumber_count;
-	fhir_unsignedInt* securityLabelNumber;
+	U64 linkId_count;
+	fhir_string *linkId;
+	U64 securityLabelNumber_count;
+	fhir_unsignedInt *securityLabelNumber;
 };
 class Contract_Term_Offer_Party {
-public:
-	ResourceType resourceType = ResourceType::Contract_Term_Offer_Party;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int reference_count;
-	Reference* reference;
-	CodeableConcept* role;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 reference_count;
+	Reference *reference;
+	CodeableConcept *role;
 };
 class Contract_Term_Offer_Answer {
-public:
-	ResourceType resourceType = ResourceType::Contract_Term_Offer_Answer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ValueType {
 		fhir_boolean,
 		fhir_decimal,
@@ -4502,6 +4537,7 @@ public:
 		Reference
 	};
 	ValueType value_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		fhir_decimal valueDecimal;
@@ -4519,179 +4555,182 @@ public:
 
 };
 class Contract_Term_Asset {
-public:
-	ResourceType resourceType = ResourceType::Contract_Term_Asset;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* scope;
-	int type_count;
-	CodeableConcept* type;
-	int typeReference_count;
-	Reference* typeReference;
-	int subtype_count;
-	CodeableConcept* subtype;
-	Coding* relationship;
-	int context_count;
-	Contract_Term_Asset_Context* context;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *scope;
+	U64 type_count;
+	CodeableConcept *type;
+	U64 typeReference_count;
+	Reference *typeReference;
+	U64 subtype_count;
+	CodeableConcept *subtype;
+	Coding *relationship;
+	U64 context_count;
+	Contract_Term_Asset_Context *context;
 	fhir_string condition;
-	int periodType_count;
-	CodeableConcept* periodType;
-	int period_count;
-	Period* period;
-	int usePeriod_count;
-	Period* usePeriod;
+	U64 periodType_count;
+	CodeableConcept *periodType;
+	U64 period_count;
+	Period *period;
+	U64 usePeriod_count;
+	Period *usePeriod;
 	fhir_string text;
-	int linkId_count;
-	fhir_string* linkId;
-	int answer_count;
-	Contract_Term_Offer_Answer* answer;
-	int securityLabelNumber_count;
-	fhir_unsignedInt* securityLabelNumber;
-	int valuedItem_count;
-	Contract_Term_Asset_ValuedItem* valuedItem;
+	U64 linkId_count;
+	fhir_string *linkId;
+	U64 answer_count;
+	Contract_Term_Offer_Answer *answer;
+	U64 securityLabelNumber_count;
+	fhir_unsignedInt *securityLabelNumber;
+	U64 valuedItem_count;
+	Contract_Term_Asset_ValuedItem *valuedItem;
 };
 class Contract_Term_Asset_Context {
-public:
-	ResourceType resourceType = ResourceType::Contract_Term_Asset_Context;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* reference;
-	int code_count;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *reference;
+	U64 code_count;
+	CodeableConcept *code;
 	fhir_string text;
 };
 class Contract_Term_Asset_ValuedItem {
-public:
-	ResourceType resourceType = ResourceType::Contract_Term_Asset_ValuedItem;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class EntityType {
 		CodeableConcept,
 		Reference
 	};
 	EntityType entity_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} entity;
 
-	Identifier* identifier;
+	Identifier *identifier;
 	fhir_dateTime effectiveTime;
-	Quantity* quantity;
-	Money* unitPrice;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
 	fhir_decimal points;
-	Money* net;
+	Money *net;
 	fhir_string payment;
 	fhir_dateTime paymentDate;
-	Reference* responsible;
-	Reference* recipient;
-	int linkId_count;
-	fhir_string* linkId;
-	int securityLabelNumber_count;
-	fhir_unsignedInt* securityLabelNumber;
+	Reference *responsible;
+	Reference *recipient;
+	U64 linkId_count;
+	fhir_string *linkId;
+	U64 securityLabelNumber_count;
+	fhir_unsignedInt *securityLabelNumber;
 };
 class Contract_Term_Action {
-public:
-	ResourceType resourceType = ResourceType::Contract_Term_Action;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean doNotPerform;
-	CodeableConcept* type;
-	int subject_count;
-	Contract_Term_Action_Subject* subject;
-	CodeableConcept* intent;
-	int linkId_count;
-	fhir_string* linkId;
-	CodeableConcept* status;
-	Reference* context;
-	int contextLinkId_count;
-	fhir_string* contextLinkId;
+	CodeableConcept *type;
+	U64 subject_count;
+	Contract_Term_Action_Subject *subject;
+	CodeableConcept *intent;
+	U64 linkId_count;
+	fhir_string *linkId;
+	CodeableConcept *status;
+	Reference *context;
+	U64 contextLinkId_count;
+	fhir_string *contextLinkId;
 	enum class OccurrenceType {
 		fhir_dateTime,
 		Period,
 		Timing
 	};
 	OccurrenceType occurrence_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
 		Timing* valueTiming;
 	} occurrence;
 
-	int requester_count;
-	Reference* requester;
-	int requesterLinkId_count;
-	fhir_string* requesterLinkId;
-	int performerType_count;
-	CodeableConcept* performerType;
-	CodeableConcept* performerRole;
-	Reference* performer;
-	int performerLinkId_count;
-	fhir_string* performerLinkId;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int reason_count;
-	fhir_string* reason;
-	int reasonLinkId_count;
-	fhir_string* reasonLinkId;
-	int note_count;
-	Annotation* note;
-	int securityLabelNumber_count;
-	fhir_unsignedInt* securityLabelNumber;
+	U64 requester_count;
+	Reference *requester;
+	U64 requesterLinkId_count;
+	fhir_string *requesterLinkId;
+	U64 performerType_count;
+	CodeableConcept *performerType;
+	CodeableConcept *performerRole;
+	Reference *performer;
+	U64 performerLinkId_count;
+	fhir_string *performerLinkId;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 reason_count;
+	fhir_string *reason;
+	U64 reasonLinkId_count;
+	fhir_string *reasonLinkId;
+	U64 note_count;
+	Annotation *note;
+	U64 securityLabelNumber_count;
+	fhir_unsignedInt *securityLabelNumber;
 };
 class Contract_Term_Action_Subject {
-public:
-	ResourceType resourceType = ResourceType::Contract_Term_Action_Subject;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int reference_count;
-	Reference* reference;
-	CodeableConcept* role;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 reference_count;
+	Reference *reference;
+	CodeableConcept *role;
 };
 class Contract_Signer {
-public:
-	ResourceType resourceType = ResourceType::Contract_Signer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Coding* type;
-	Reference* party;
-	int signature_count;
-	Signature* signature;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Coding *type;
+	Reference *party;
+	U64 signature_count;
+	Signature *signature;
 };
 class Contract_Friendly {
-public:
-	ResourceType resourceType = ResourceType::Contract_Friendly;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ContentType {
 		Attachment,
 		Reference
 	};
 	ContentType content_type;
+
 	union {
 		Attachment* valueAttachment;
 		Reference* valueReference;
@@ -4699,18 +4738,19 @@ public:
 
 };
 class Contract_Legal {
-public:
-	ResourceType resourceType = ResourceType::Contract_Legal;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ContentType {
 		Attachment,
 		Reference
 	};
 	ContentType content_type;
+
 	union {
 		Attachment* valueAttachment;
 		Reference* valueReference;
@@ -4718,18 +4758,19 @@ public:
 
 };
 class Contract_Rule {
-public:
-	ResourceType resourceType = ResourceType::Contract_Rule;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ContentType {
 		Attachment,
 		Reference
 	};
 	ContentType content_type;
+
 	union {
 		Attachment* valueAttachment;
 		Reference* valueReference;
@@ -4737,190 +4778,193 @@ public:
 
 };
 class Coverage {
-public:
-	ResourceType resourceType = ResourceType::Coverage;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* type;
-	Reference* policyHolder;
-	Reference* subscriber;
+	CodeableConcept *type;
+	Reference *policyHolder;
+	Reference *subscriber;
 	fhir_string subscriberId;
-	Reference* beneficiary;
+	Reference *beneficiary;
 	fhir_string dependent;
-	CodeableConcept* relationship;
-	Period* period;
-	int payor_count;
-	Reference* payor;
-	int class__count;
-	Coverage_Class* class_;
+	CodeableConcept *relationship;
+	Period *period;
+	U64 payor_count;
+	Reference *payor;
+	U64 class__count;
+	Coverage_Class *class_;
 	fhir_positiveInt order;
 	fhir_string network;
-	int costToBeneficiary_count;
-	Coverage_CostToBeneficiary* costToBeneficiary;
+	U64 costToBeneficiary_count;
+	Coverage_CostToBeneficiary *costToBeneficiary;
 	fhir_boolean subrogation;
-	int contract_count;
-	Reference* contract;
+	U64 contract_count;
+	Reference *contract;
 };
 class Coverage_Class {
-public:
-	ResourceType resourceType = ResourceType::Coverage_Class;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	fhir_string value;
 	fhir_string name;
 };
 class Coverage_CostToBeneficiary {
-public:
-	ResourceType resourceType = ResourceType::Coverage_CostToBeneficiary;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	enum class ValueType {
 		Quantity,
 		Money
 	};
 	ValueType value_type;
+
 	union {
 		Quantity* valueQuantity;
 		Money* valueMoney;
 	} value;
 
-	int exception_count;
-	Coverage_CostToBeneficiary_Exception* exception;
+	U64 exception_count;
+	Coverage_CostToBeneficiary_Exception *exception;
 };
 class Coverage_CostToBeneficiary_Exception {
-public:
-	ResourceType resourceType = ResourceType::Coverage_CostToBeneficiary_Exception;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	Period* period;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	Period *period;
 };
 class CoverageEligibilityRequest {
-public:
-	ResourceType resourceType = ResourceType::CoverageEligibilityRequest;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* priority;
-	int purpose_count;
-	fhir_code* purpose;
-	Reference* patient;
+	CodeableConcept *priority;
+	U64 purpose_count;
+	fhir_code *purpose;
+	Reference *patient;
 	enum class ServicedType {
 		fhir_date,
 		Period
 	};
 	ServicedType serviced_type;
+
 	union {
 		fhir_date valueDate;
 		Period* valuePeriod;
 	} serviced;
 
 	fhir_dateTime created;
-	Reference* enterer;
-	Reference* provider;
-	Reference* insurer;
-	Reference* facility;
-	int supportingInfo_count;
-	CoverageEligibilityRequest_SupportingInfo* supportingInfo;
-	int insurance_count;
-	CoverageEligibilityRequest_Insurance* insurance;
-	int item_count;
-	CoverageEligibilityRequest_Item* item;
+	Reference *enterer;
+	Reference *provider;
+	Reference *insurer;
+	Reference *facility;
+	U64 supportingInfo_count;
+	CoverageEligibilityRequest_SupportingInfo *supportingInfo;
+	U64 insurance_count;
+	CoverageEligibilityRequest_Insurance *insurance;
+	U64 item_count;
+	CoverageEligibilityRequest_Item *item;
 };
 class CoverageEligibilityRequest_SupportingInfo {
-public:
-	ResourceType resourceType = ResourceType::CoverageEligibilityRequest_SupportingInfo;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	Reference* information;
+	Reference *information;
 	fhir_boolean appliesToAll;
 };
 class CoverageEligibilityRequest_Insurance {
-public:
-	ResourceType resourceType = ResourceType::CoverageEligibilityRequest_Insurance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean focal;
-	Reference* coverage;
+	Reference *coverage;
 	fhir_string businessArrangement;
 };
 class CoverageEligibilityRequest_Item {
-public:
-	ResourceType resourceType = ResourceType::CoverageEligibilityRequest_Item;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int supportingInfoSequence_count;
-	fhir_positiveInt* supportingInfoSequence;
-	CodeableConcept* category;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	Reference* provider;
-	Quantity* quantity;
-	Money* unitPrice;
-	Reference* facility;
-	int diagnosis_count;
-	CoverageEligibilityRequest_Item_Diagnosis* diagnosis;
-	int detail_count;
-	Reference* detail;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 supportingInfoSequence_count;
+	fhir_positiveInt *supportingInfoSequence;
+	CodeableConcept *category;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	Reference *provider;
+	Quantity *quantity;
+	Money *unitPrice;
+	Reference *facility;
+	U64 diagnosis_count;
+	CoverageEligibilityRequest_Item_Diagnosis *diagnosis;
+	U64 detail_count;
+	Reference *detail;
 };
 class CoverageEligibilityRequest_Item_Diagnosis {
-public:
-	ResourceType resourceType = ResourceType::CoverageEligibilityRequest_Item_Diagnosis;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class DiagnosisType {
 		CodeableConcept,
 		Reference
 	};
 	DiagnosisType diagnosis_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -4928,103 +4972,105 @@ public:
 
 };
 class CoverageEligibilityResponse {
-public:
-	ResourceType resourceType = ResourceType::CoverageEligibilityResponse;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	int purpose_count;
-	fhir_code* purpose;
-	Reference* patient;
+	U64 purpose_count;
+	fhir_code *purpose;
+	Reference *patient;
 	enum class ServicedType {
 		fhir_date,
 		Period
 	};
 	ServicedType serviced_type;
+
 	union {
 		fhir_date valueDate;
 		Period* valuePeriod;
 	} serviced;
 
 	fhir_dateTime created;
-	Reference* requestor;
-	Reference* request;
+	Reference *requestor;
+	Reference *request;
 	fhir_code outcome;
 	fhir_string disposition;
-	Reference* insurer;
-	int insurance_count;
-	CoverageEligibilityResponse_Insurance* insurance;
+	Reference *insurer;
+	U64 insurance_count;
+	CoverageEligibilityResponse_Insurance *insurance;
 	fhir_string preAuthRef;
-	CodeableConcept* form;
-	int error_count;
-	CoverageEligibilityResponse_Error* error;
+	CodeableConcept *form;
+	U64 error_count;
+	CoverageEligibilityResponse_Error *error;
 };
 class CoverageEligibilityResponse_Insurance {
-public:
-	ResourceType resourceType = ResourceType::CoverageEligibilityResponse_Insurance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* coverage;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *coverage;
 	fhir_boolean inforce;
-	Period* benefitPeriod;
-	int item_count;
-	CoverageEligibilityResponse_Insurance_Item* item;
+	Period *benefitPeriod;
+	U64 item_count;
+	CoverageEligibilityResponse_Insurance_Item *item;
 };
 class CoverageEligibilityResponse_Insurance_Item {
-public:
-	ResourceType resourceType = ResourceType::CoverageEligibilityResponse_Insurance_Item;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* category;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	Reference* provider;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *category;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	Reference *provider;
 	fhir_boolean excluded;
 	fhir_string name;
 	fhir_string description;
-	CodeableConcept* network;
-	CodeableConcept* unit;
-	CodeableConcept* term;
-	int benefit_count;
-	CoverageEligibilityResponse_Insurance_Item_Benefit* benefit;
+	CodeableConcept *network;
+	CodeableConcept *unit;
+	CodeableConcept *term;
+	U64 benefit_count;
+	CoverageEligibilityResponse_Insurance_Item_Benefit *benefit;
 	fhir_boolean authorizationRequired;
-	int authorizationSupporting_count;
-	CodeableConcept* authorizationSupporting;
+	U64 authorizationSupporting_count;
+	CodeableConcept *authorizationSupporting;
 	fhir_uri authorizationUrl;
 };
 class CoverageEligibilityResponse_Insurance_Item_Benefit {
-public:
-	ResourceType resourceType = ResourceType::CoverageEligibilityResponse_Insurance_Item_Benefit;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	enum class AllowedType {
 		fhir_unsignedInt,
 		fhir_string,
 		Money
 	};
 	AllowedType allowed_type;
+
 	union {
 		fhir_unsignedInt valueUnsignedInt;
 		fhir_string valueString;
@@ -5037,6 +5083,7 @@ public:
 		Money
 	};
 	UsedType used_type;
+
 	union {
 		fhir_unsignedInt valueUnsignedInt;
 		fhir_string valueString;
@@ -5045,139 +5092,140 @@ public:
 
 };
 class CoverageEligibilityResponse_Error {
-public:
-	ResourceType resourceType = ResourceType::CoverageEligibilityResponse_Error;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
 };
 class DetectedIssue {
-public:
-	ResourceType resourceType = ResourceType::DetectedIssue;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* code;
+	CodeableConcept *code;
 	fhir_code severity;
-	Reference* patient;
+	Reference *patient;
 	enum class IdentifiedType {
 		fhir_dateTime,
 		Period
 	};
 	IdentifiedType identified_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
 	} identified;
 
-	Reference* author;
-	int implicated_count;
-	Reference* implicated;
-	int evidence_count;
-	DetectedIssue_Evidence* evidence;
+	Reference *author;
+	U64 implicated_count;
+	Reference *implicated;
+	U64 evidence_count;
+	DetectedIssue_Evidence *evidence;
 	fhir_string detail;
 	fhir_uri reference;
-	int mitigation_count;
-	DetectedIssue_Mitigation* mitigation;
+	U64 mitigation_count;
+	DetectedIssue_Mitigation *mitigation;
 };
 class DetectedIssue_Evidence {
-public:
-	ResourceType resourceType = ResourceType::DetectedIssue_Evidence;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int code_count;
-	CodeableConcept* code;
-	int detail_count;
-	Reference* detail;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 code_count;
+	CodeableConcept *code;
+	U64 detail_count;
+	Reference *detail;
 };
 class DetectedIssue_Mitigation {
-public:
-	ResourceType resourceType = ResourceType::DetectedIssue_Mitigation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* action;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *action;
 	fhir_dateTime date;
-	Reference* author;
+	Reference *author;
 };
 class Device {
-public:
-	ResourceType resourceType = ResourceType::Device;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	Reference* definition;
-	int udiCarrier_count;
-	Device_UdiCarrier* udiCarrier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	Reference *definition;
+	U64 udiCarrier_count;
+	Device_UdiCarrier *udiCarrier;
 	fhir_code status;
-	int statusReason_count;
-	CodeableConcept* statusReason;
+	U64 statusReason_count;
+	CodeableConcept *statusReason;
 	fhir_string distinctIdentifier;
 	fhir_string manufacturer;
 	fhir_dateTime manufactureDate;
 	fhir_dateTime expirationDate;
 	fhir_string lotNumber;
 	fhir_string serialNumber;
-	int deviceName_count;
-	Device_DeviceName* deviceName;
+	U64 deviceName_count;
+	Device_DeviceName *deviceName;
 	fhir_string modelNumber;
 	fhir_string partNumber;
-	CodeableConcept* type;
-	int specialization_count;
-	Device_Specialization* specialization;
-	int version_count;
-	Device_Version* version;
-	int property_count;
-	Device_Property* property;
-	Reference* patient;
-	Reference* owner;
-	int contact_count;
-	ContactPoint* contact;
-	Reference* location;
+	CodeableConcept *type;
+	U64 specialization_count;
+	Device_Specialization *specialization;
+	U64 version_count;
+	Device_Version *version;
+	U64 property_count;
+	Device_Property *property;
+	Reference *patient;
+	Reference *owner;
+	U64 contact_count;
+	ContactPoint *contact;
+	Reference *location;
 	fhir_uri url;
-	int note_count;
-	Annotation* note;
-	int safety_count;
-	CodeableConcept* safety;
-	Reference* parent;
+	U64 note_count;
+	Annotation *note;
+	U64 safety_count;
+	CodeableConcept *safety;
+	Reference *parent;
 };
 class Device_UdiCarrier {
-public:
-	ResourceType resourceType = ResourceType::Device_UdiCarrier;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string deviceIdentifier;
 	fhir_uri issuer;
 	fhir_uri jurisdiction;
@@ -5186,248 +5234,249 @@ public:
 	fhir_code entryType;
 };
 class Device_DeviceName {
-public:
-	ResourceType resourceType = ResourceType::Device_DeviceName;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_code type;
 };
 class Device_Specialization {
-public:
-	ResourceType resourceType = ResourceType::Device_Specialization;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* systemType;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *systemType;
 	fhir_string version;
 };
 class Device_Version {
-public:
-	ResourceType resourceType = ResourceType::Device_Version;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	Identifier* component;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	Identifier *component;
 	fhir_string value;
 };
 class Device_Property {
-public:
-	ResourceType resourceType = ResourceType::Device_Property;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	int valueQuantity_count;
-	Quantity* valueQuantity;
-	int valueCode_count;
-	CodeableConcept* valueCode;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	U64 valueQuantity_count;
+	Quantity *valueQuantity;
+	U64 valueCode_count;
+	CodeableConcept *valueCode;
 };
 class DeviceDefinition {
-public:
-	ResourceType resourceType = ResourceType::DeviceDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int udiDeviceIdentifier_count;
-	DeviceDefinition_UdiDeviceIdentifier* udiDeviceIdentifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 udiDeviceIdentifier_count;
+	DeviceDefinition_UdiDeviceIdentifier *udiDeviceIdentifier;
 	enum class ManufacturerType {
 		fhir_string,
 		Reference
 	};
 	ManufacturerType manufacturer_type;
+
 	union {
 		fhir_string valueString;
 		Reference* valueReference;
 	} manufacturer;
 
-	int deviceName_count;
-	DeviceDefinition_DeviceName* deviceName;
+	U64 deviceName_count;
+	DeviceDefinition_DeviceName *deviceName;
 	fhir_string modelNumber;
-	CodeableConcept* type;
-	int specialization_count;
-	DeviceDefinition_Specialization* specialization;
-	int version_count;
-	fhir_string* version;
-	int safety_count;
-	CodeableConcept* safety;
-	int shelfLifeStorage_count;
-	ProductShelfLife* shelfLifeStorage;
-	ProdCharacteristic* physicalCharacteristics;
-	int languageCode_count;
-	CodeableConcept* languageCode;
-	int capability_count;
-	DeviceDefinition_Capability* capability;
-	int property_count;
-	DeviceDefinition_Property* property;
-	Reference* owner;
-	int contact_count;
-	ContactPoint* contact;
+	CodeableConcept *type;
+	U64 specialization_count;
+	DeviceDefinition_Specialization *specialization;
+	U64 version_count;
+	fhir_string *version;
+	U64 safety_count;
+	CodeableConcept *safety;
+	U64 shelfLifeStorage_count;
+	ProductShelfLife *shelfLifeStorage;
+	ProdCharacteristic *physicalCharacteristics;
+	U64 languageCode_count;
+	CodeableConcept *languageCode;
+	U64 capability_count;
+	DeviceDefinition_Capability *capability;
+	U64 property_count;
+	DeviceDefinition_Property *property;
+	Reference *owner;
+	U64 contact_count;
+	ContactPoint *contact;
 	fhir_uri url;
 	fhir_uri onlineInformation;
-	int note_count;
-	Annotation* note;
-	Quantity* quantity;
-	Reference* parentDevice;
-	int material_count;
-	DeviceDefinition_Material* material;
+	U64 note_count;
+	Annotation *note;
+	Quantity *quantity;
+	Reference *parentDevice;
+	U64 material_count;
+	DeviceDefinition_Material *material;
 };
 class DeviceDefinition_UdiDeviceIdentifier {
-public:
-	ResourceType resourceType = ResourceType::DeviceDefinition_UdiDeviceIdentifier;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string deviceIdentifier;
 	fhir_uri issuer;
 	fhir_uri jurisdiction;
 };
 class DeviceDefinition_DeviceName {
-public:
-	ResourceType resourceType = ResourceType::DeviceDefinition_DeviceName;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_code type;
 };
 class DeviceDefinition_Specialization {
-public:
-	ResourceType resourceType = ResourceType::DeviceDefinition_Specialization;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string systemType;
 	fhir_string version;
 };
 class DeviceDefinition_Capability {
-public:
-	ResourceType resourceType = ResourceType::DeviceDefinition_Capability;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	int description_count;
-	CodeableConcept* description;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	U64 description_count;
+	CodeableConcept *description;
 };
 class DeviceDefinition_Property {
-public:
-	ResourceType resourceType = ResourceType::DeviceDefinition_Property;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	int valueQuantity_count;
-	Quantity* valueQuantity;
-	int valueCode_count;
-	CodeableConcept* valueCode;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	U64 valueQuantity_count;
+	Quantity *valueQuantity;
+	U64 valueCode_count;
+	CodeableConcept *valueCode;
 };
 class DeviceDefinition_Material {
-public:
-	ResourceType resourceType = ResourceType::DeviceDefinition_Material;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* substance;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *substance;
 	fhir_boolean alternate;
 	fhir_boolean allergenicIndicator;
 };
 class DeviceMetric {
-public:
-	ResourceType resourceType = ResourceType::DeviceMetric;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* type;
-	CodeableConcept* unit;
-	Reference* source;
-	Reference* parent;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *type;
+	CodeableConcept *unit;
+	Reference *source;
+	Reference *parent;
 	fhir_code operationalStatus;
 	fhir_code color;
 	fhir_code category;
-	Timing* measurementPeriod;
-	int calibration_count;
-	DeviceMetric_Calibration* calibration;
+	Timing *measurementPeriod;
+	U64 calibration_count;
+	DeviceMetric_Calibration *calibration;
 };
 class DeviceMetric_Calibration {
-public:
-	ResourceType resourceType = ResourceType::DeviceMetric_Calibration;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
 	fhir_code state;
 	fhir_instant time;
 };
 class DeviceRequest {
-public:
-	ResourceType resourceType = ResourceType::DeviceRequest;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int instantiatesCanonical_count;
-	fhir_canonical* instantiatesCanonical;
-	int instantiatesUri_count;
-	fhir_uri* instantiatesUri;
-	int basedOn_count;
-	Reference* basedOn;
-	int priorRequest_count;
-	Reference* priorRequest;
-	Identifier* groupIdentifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 instantiatesCanonical_count;
+	fhir_canonical *instantiatesCanonical;
+	U64 instantiatesUri_count;
+	fhir_uri *instantiatesUri;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 priorRequest_count;
+	Reference *priorRequest;
+	Identifier *groupIdentifier;
 	fhir_code status;
 	fhir_code intent;
 	fhir_code priority;
@@ -5436,21 +5485,23 @@ public:
 		CodeableConcept
 	};
 	CodeType code_type;
+
 	union {
 		Reference* valueReference;
 		CodeableConcept* valueCodeableConcept;
 	} code;
 
-	int parameter_count;
-	DeviceRequest_Parameter* parameter;
-	Reference* subject;
-	Reference* encounter;
+	U64 parameter_count;
+	DeviceRequest_Parameter *parameter;
+	Reference *subject;
+	Reference *encounter;
 	enum class OccurrenceType {
 		fhir_dateTime,
 		Period,
 		Timing
 	};
 	OccurrenceType occurrence_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -5458,31 +5509,31 @@ public:
 	} occurrence;
 
 	fhir_dateTime authoredOn;
-	Reference* requester;
-	CodeableConcept* performerType;
-	Reference* performer;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int insurance_count;
-	Reference* insurance;
-	int supportingInfo_count;
-	Reference* supportingInfo;
-	int note_count;
-	Annotation* note;
-	int relevantHistory_count;
-	Reference* relevantHistory;
+	Reference *requester;
+	CodeableConcept *performerType;
+	Reference *performer;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 insurance_count;
+	Reference *insurance;
+	U64 supportingInfo_count;
+	Reference *supportingInfo;
+	U64 note_count;
+	Annotation *note;
+	U64 relevantHistory_count;
+	Reference *relevantHistory;
 };
 class DeviceRequest_Parameter {
-public:
-	ResourceType resourceType = ResourceType::DeviceRequest_Parameter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
 	enum class ValueType {
 		CodeableConcept,
 		Quantity,
@@ -5490,6 +5541,7 @@ public:
 		fhir_boolean
 	};
 	ValueType value_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Quantity* valueQuantity;
@@ -5499,33 +5551,34 @@ public:
 
 };
 class DeviceUseStatement {
-public:
-	ResourceType resourceType = ResourceType::DeviceUseStatement;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int basedOn_count;
-	Reference* basedOn;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 basedOn_count;
+	Reference *basedOn;
 	fhir_code status;
-	Reference* subject;
-	int derivedFrom_count;
-	Reference* derivedFrom;
+	Reference *subject;
+	U64 derivedFrom_count;
+	Reference *derivedFrom;
 	enum class TimingType {
 		Timing,
 		Period,
 		fhir_dateTime
 	};
 	TimingType timing_type;
+
 	union {
 		Timing* valueTiming;
 		Period* valuePeriod;
@@ -5533,645 +5586,646 @@ public:
 	} timing;
 
 	fhir_dateTime recordedOn;
-	Reference* source;
-	Reference* device;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	CodeableConcept* bodySite;
-	int note_count;
-	Annotation* note;
+	Reference *source;
+	Reference *device;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	CodeableConcept *bodySite;
+	U64 note_count;
+	Annotation *note;
 };
 class DiagnosticReport {
-public:
-	ResourceType resourceType = ResourceType::DiagnosticReport;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int basedOn_count;
-	Reference* basedOn;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 basedOn_count;
+	Reference *basedOn;
 	fhir_code status;
-	int category_count;
-	CodeableConcept* category;
-	CodeableConcept* code;
-	Reference* subject;
-	Reference* encounter;
+	U64 category_count;
+	CodeableConcept *category;
+	CodeableConcept *code;
+	Reference *subject;
+	Reference *encounter;
 	enum class EffectiveType {
 		fhir_dateTime,
 		Period
 	};
 	EffectiveType effective_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
 	} effective;
 
 	fhir_instant issued;
-	int performer_count;
-	Reference* performer;
-	int resultsInterpreter_count;
-	Reference* resultsInterpreter;
-	int specimen_count;
-	Reference* specimen;
-	int result_count;
-	Reference* result;
-	int imagingStudy_count;
-	Reference* imagingStudy;
-	int media_count;
-	DiagnosticReport_Media* media;
+	U64 performer_count;
+	Reference *performer;
+	U64 resultsInterpreter_count;
+	Reference *resultsInterpreter;
+	U64 specimen_count;
+	Reference *specimen;
+	U64 result_count;
+	Reference *result;
+	U64 imagingStudy_count;
+	Reference *imagingStudy;
+	U64 media_count;
+	DiagnosticReport_Media *media;
 	fhir_string conclusion;
-	int conclusionCode_count;
-	CodeableConcept* conclusionCode;
-	int presentedForm_count;
-	Attachment* presentedForm;
+	U64 conclusionCode_count;
+	CodeableConcept *conclusionCode;
+	U64 presentedForm_count;
+	Attachment *presentedForm;
 };
 class DiagnosticReport_Media {
-public:
-	ResourceType resourceType = ResourceType::DiagnosticReport_Media;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string comment;
-	Reference* link;
+	Reference *link;
 };
 class DocumentManifest {
-public:
-	ResourceType resourceType = ResourceType::DocumentManifest;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* masterIdentifier;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *masterIdentifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* type;
-	Reference* subject;
+	CodeableConcept *type;
+	Reference *subject;
 	fhir_dateTime created;
-	int author_count;
-	Reference* author;
-	int recipient_count;
-	Reference* recipient;
+	U64 author_count;
+	Reference *author;
+	U64 recipient_count;
+	Reference *recipient;
 	fhir_uri source;
 	fhir_string description;
-	int content_count;
-	Reference* content;
-	int related_count;
-	DocumentManifest_Related* related;
+	U64 content_count;
+	Reference *content;
+	U64 related_count;
+	DocumentManifest_Related *related;
 };
 class DocumentManifest_Related {
-public:
-	ResourceType resourceType = ResourceType::DocumentManifest_Related;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
-	Reference* ref;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
+	Reference *ref;
 };
 class DocumentReference {
-public:
-	ResourceType resourceType = ResourceType::DocumentReference;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* masterIdentifier;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *masterIdentifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
 	fhir_code docStatus;
-	CodeableConcept* type;
-	int category_count;
-	CodeableConcept* category;
-	Reference* subject;
+	CodeableConcept *type;
+	U64 category_count;
+	CodeableConcept *category;
+	Reference *subject;
 	fhir_instant date;
-	int author_count;
-	Reference* author;
-	Reference* authenticator;
-	Reference* custodian;
-	int relatesTo_count;
-	DocumentReference_RelatesTo* relatesTo;
+	U64 author_count;
+	Reference *author;
+	Reference *authenticator;
+	Reference *custodian;
+	U64 relatesTo_count;
+	DocumentReference_RelatesTo *relatesTo;
 	fhir_string description;
-	int securityLabel_count;
-	CodeableConcept* securityLabel;
-	int content_count;
-	DocumentReference_Content* content;
-	DocumentReference_Context* context;
+	U64 securityLabel_count;
+	CodeableConcept *securityLabel;
+	U64 content_count;
+	DocumentReference_Content *content;
+	DocumentReference_Context *context;
 };
 class DocumentReference_RelatesTo {
-public:
-	ResourceType resourceType = ResourceType::DocumentReference_RelatesTo;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
-	Reference* target;
+	Reference *target;
 };
 class DocumentReference_Content {
-public:
-	ResourceType resourceType = ResourceType::DocumentReference_Content;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Attachment* attachment;
-	Coding* format;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Attachment *attachment;
+	Coding *format;
 };
 class DocumentReference_Context {
-public:
-	ResourceType resourceType = ResourceType::DocumentReference_Context;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int encounter_count;
-	Reference* encounter;
-	int event_count;
-	CodeableConcept* event;
-	Period* period;
-	CodeableConcept* facilityType;
-	CodeableConcept* practiceSetting;
-	Reference* sourcePatientInfo;
-	int related_count;
-	Reference* related;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 encounter_count;
+	Reference *encounter;
+	U64 event_count;
+	CodeableConcept *event;
+	Period *period;
+	CodeableConcept *facilityType;
+	CodeableConcept *practiceSetting;
+	Reference *sourcePatientInfo;
+	U64 related_count;
+	Reference *related;
 };
 class DomainResource {
-public:
-	ResourceType resourceType = ResourceType::DomainResource;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 };
 class EffectEvidenceSynthesis {
-public:
-	ResourceType resourceType = ResourceType::EffectEvidenceSynthesis;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
 	fhir_code status;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int note_count;
-	Annotation* note;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 note_count;
+	Annotation *note;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	int topic_count;
-	CodeableConcept* topic;
-	int author_count;
-	ContactDetail* author;
-	int editor_count;
-	ContactDetail* editor;
-	int reviewer_count;
-	ContactDetail* reviewer;
-	int endorser_count;
-	ContactDetail* endorser;
-	int relatedArtifact_count;
-	RelatedArtifact* relatedArtifact;
-	CodeableConcept* synthesisType;
-	CodeableConcept* studyType;
-	Reference* population;
-	Reference* exposure;
-	Reference* exposureAlternative;
-	Reference* outcome;
-	EffectEvidenceSynthesis_SampleSize* sampleSize;
-	int resultsByExposure_count;
-	EffectEvidenceSynthesis_ResultsByExposure* resultsByExposure;
-	int effectEstimate_count;
-	EffectEvidenceSynthesis_EffectEstimate* effectEstimate;
-	int certainty_count;
-	EffectEvidenceSynthesis_Certainty* certainty;
+	Period *effectivePeriod;
+	U64 topic_count;
+	CodeableConcept *topic;
+	U64 author_count;
+	ContactDetail *author;
+	U64 editor_count;
+	ContactDetail *editor;
+	U64 reviewer_count;
+	ContactDetail *reviewer;
+	U64 endorser_count;
+	ContactDetail *endorser;
+	U64 relatedArtifact_count;
+	RelatedArtifact *relatedArtifact;
+	CodeableConcept *synthesisType;
+	CodeableConcept *studyType;
+	Reference *population;
+	Reference *exposure;
+	Reference *exposureAlternative;
+	Reference *outcome;
+	EffectEvidenceSynthesis_SampleSize *sampleSize;
+	U64 resultsByExposure_count;
+	EffectEvidenceSynthesis_ResultsByExposure *resultsByExposure;
+	U64 effectEstimate_count;
+	EffectEvidenceSynthesis_EffectEstimate *effectEstimate;
+	U64 certainty_count;
+	EffectEvidenceSynthesis_Certainty *certainty;
 };
 class EffectEvidenceSynthesis_SampleSize {
-public:
-	ResourceType resourceType = ResourceType::EffectEvidenceSynthesis_SampleSize;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
-	Integer* numberOfStudies;
-	Integer* numberOfParticipants;
+	Integer *numberOfStudies;
+	Integer *numberOfParticipants;
 };
 class EffectEvidenceSynthesis_ResultsByExposure {
-public:
-	ResourceType resourceType = ResourceType::EffectEvidenceSynthesis_ResultsByExposure;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
 	fhir_code exposureState;
-	CodeableConcept* variantState;
-	Reference* riskEvidenceSynthesis;
+	CodeableConcept *variantState;
+	Reference *riskEvidenceSynthesis;
 };
 class EffectEvidenceSynthesis_EffectEstimate {
-public:
-	ResourceType resourceType = ResourceType::EffectEvidenceSynthesis_EffectEstimate;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
-	CodeableConcept* type;
-	CodeableConcept* variantState;
+	CodeableConcept *type;
+	CodeableConcept *variantState;
 	fhir_decimal value;
-	CodeableConcept* unitOfMeasure;
-	int precisionEstimate_count;
-	EffectEvidenceSynthesis_EffectEstimate_PrecisionEstimate* precisionEstimate;
+	CodeableConcept *unitOfMeasure;
+	U64 precisionEstimate_count;
+	EffectEvidenceSynthesis_EffectEstimate_PrecisionEstimate *precisionEstimate;
 };
 class EffectEvidenceSynthesis_EffectEstimate_PrecisionEstimate {
-public:
-	ResourceType resourceType = ResourceType::EffectEvidenceSynthesis_EffectEstimate_PrecisionEstimate;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	fhir_decimal level;
 	fhir_decimal from;
 	fhir_decimal to;
 };
 class EffectEvidenceSynthesis_Certainty {
-public:
-	ResourceType resourceType = ResourceType::EffectEvidenceSynthesis_Certainty;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int rating_count;
-	CodeableConcept* rating;
-	int note_count;
-	Annotation* note;
-	int certaintySubcomponent_count;
-	EffectEvidenceSynthesis_Certainty_CertaintySubcomponent* certaintySubcomponent;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 rating_count;
+	CodeableConcept *rating;
+	U64 note_count;
+	Annotation *note;
+	U64 certaintySubcomponent_count;
+	EffectEvidenceSynthesis_Certainty_CertaintySubcomponent *certaintySubcomponent;
 };
 class EffectEvidenceSynthesis_Certainty_CertaintySubcomponent {
-public:
-	ResourceType resourceType = ResourceType::EffectEvidenceSynthesis_Certainty_CertaintySubcomponent;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	int rating_count;
-	CodeableConcept* rating;
-	int note_count;
-	Annotation* note;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	U64 rating_count;
+	CodeableConcept *rating;
+	U64 note_count;
+	Annotation *note;
 };
 class Encounter {
-public:
-	ResourceType resourceType = ResourceType::Encounter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	int statusHistory_count;
-	Encounter_StatusHistory* statusHistory;
-	Coding* class_;
-	int classHistory_count;
-	Encounter_ClassHistory* classHistory;
-	int type_count;
-	CodeableConcept* type;
-	CodeableConcept* serviceType;
-	CodeableConcept* priority;
-	Reference* subject;
-	int episodeOfCare_count;
-	Reference* episodeOfCare;
-	int basedOn_count;
-	Reference* basedOn;
-	int participant_count;
-	Encounter_Participant* participant;
-	int appointment_count;
-	Reference* appointment;
-	Period* period;
-	Duration* length;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int diagnosis_count;
-	Encounter_Diagnosis* diagnosis;
-	int account_count;
-	Reference* account;
-	Encounter_Hospitalization* hospitalization;
-	int location_count;
-	Encounter_Location* location;
-	Reference* serviceProvider;
-	Reference* partOf;
+	U64 statusHistory_count;
+	Encounter_StatusHistory *statusHistory;
+	Coding *class_;
+	U64 classHistory_count;
+	Encounter_ClassHistory *classHistory;
+	U64 type_count;
+	CodeableConcept *type;
+	CodeableConcept *serviceType;
+	CodeableConcept *priority;
+	Reference *subject;
+	U64 episodeOfCare_count;
+	Reference *episodeOfCare;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 participant_count;
+	Encounter_Participant *participant;
+	U64 appointment_count;
+	Reference *appointment;
+	Period *period;
+	Duration *length;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 diagnosis_count;
+	Encounter_Diagnosis *diagnosis;
+	U64 account_count;
+	Reference *account;
+	Encounter_Hospitalization *hospitalization;
+	U64 location_count;
+	Encounter_Location *location;
+	Reference *serviceProvider;
+	Reference *partOf;
 };
 class Encounter_StatusHistory {
-public:
-	ResourceType resourceType = ResourceType::Encounter_StatusHistory;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code status;
-	Period* period;
+	Period *period;
 };
 class Encounter_ClassHistory {
-public:
-	ResourceType resourceType = ResourceType::Encounter_ClassHistory;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Coding* class_;
-	Period* period;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Coding *class_;
+	Period *period;
 };
 class Encounter_Participant {
-public:
-	ResourceType resourceType = ResourceType::Encounter_Participant;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int type_count;
-	CodeableConcept* type;
-	Period* period;
-	Reference* individual;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 type_count;
+	CodeableConcept *type;
+	Period *period;
+	Reference *individual;
 };
 class Encounter_Diagnosis {
-public:
-	ResourceType resourceType = ResourceType::Encounter_Diagnosis;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* condition;
-	CodeableConcept* use;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *condition;
+	CodeableConcept *use;
 	fhir_positiveInt rank;
 };
 class Encounter_Hospitalization {
-public:
-	ResourceType resourceType = ResourceType::Encounter_Hospitalization;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* preAdmissionIdentifier;
-	Reference* origin;
-	CodeableConcept* admitSource;
-	CodeableConcept* reAdmission;
-	int dietPreference_count;
-	CodeableConcept* dietPreference;
-	int specialCourtesy_count;
-	CodeableConcept* specialCourtesy;
-	int specialArrangement_count;
-	CodeableConcept* specialArrangement;
-	Reference* destination;
-	CodeableConcept* dischargeDisposition;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *preAdmissionIdentifier;
+	Reference *origin;
+	CodeableConcept *admitSource;
+	CodeableConcept *reAdmission;
+	U64 dietPreference_count;
+	CodeableConcept *dietPreference;
+	U64 specialCourtesy_count;
+	CodeableConcept *specialCourtesy;
+	U64 specialArrangement_count;
+	CodeableConcept *specialArrangement;
+	Reference *destination;
+	CodeableConcept *dischargeDisposition;
 };
 class Encounter_Location {
-public:
-	ResourceType resourceType = ResourceType::Encounter_Location;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* location;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *location;
 	fhir_code status;
-	CodeableConcept* physicalType;
-	Period* period;
+	CodeableConcept *physicalType;
+	Period *period;
 };
 class Endpoint {
-public:
-	ResourceType resourceType = ResourceType::Endpoint;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	Coding* connectionType;
+	Coding *connectionType;
 	fhir_string name;
-	Reference* managingOrganization;
-	int contact_count;
-	ContactPoint* contact;
-	Period* period;
-	int payloadType_count;
-	CodeableConcept* payloadType;
-	int payloadMimeType_count;
-	fhir_code* payloadMimeType;
+	Reference *managingOrganization;
+	U64 contact_count;
+	ContactPoint *contact;
+	Period *period;
+	U64 payloadType_count;
+	CodeableConcept *payloadType;
+	U64 payloadMimeType_count;
+	fhir_code *payloadMimeType;
 	fhir_url address;
-	int header_count;
-	fhir_string* header;
+	U64 header_count;
+	fhir_string *header;
 };
 class EnrollmentRequest {
-public:
-	ResourceType resourceType = ResourceType::EnrollmentRequest;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
 	fhir_dateTime created;
-	Reference* insurer;
-	Reference* provider;
-	Reference* candidate;
-	Reference* coverage;
+	Reference *insurer;
+	Reference *provider;
+	Reference *candidate;
+	Reference *coverage;
 };
 class EnrollmentResponse {
-public:
-	ResourceType resourceType = ResourceType::EnrollmentResponse;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	Reference* request;
+	Reference *request;
 	fhir_code outcome;
 	fhir_string disposition;
 	fhir_dateTime created;
-	Reference* organization;
-	Reference* requestProvider;
+	Reference *organization;
+	Reference *requestProvider;
 };
 class EpisodeOfCare {
-public:
-	ResourceType resourceType = ResourceType::EpisodeOfCare;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	int statusHistory_count;
-	EpisodeOfCare_StatusHistory* statusHistory;
-	int type_count;
-	CodeableConcept* type;
-	int diagnosis_count;
-	EpisodeOfCare_Diagnosis* diagnosis;
-	Reference* patient;
-	Reference* managingOrganization;
-	Period* period;
-	int referralRequest_count;
-	Reference* referralRequest;
-	Reference* careManager;
-	int team_count;
-	Reference* team;
-	int account_count;
-	Reference* account;
+	U64 statusHistory_count;
+	EpisodeOfCare_StatusHistory *statusHistory;
+	U64 type_count;
+	CodeableConcept *type;
+	U64 diagnosis_count;
+	EpisodeOfCare_Diagnosis *diagnosis;
+	Reference *patient;
+	Reference *managingOrganization;
+	Period *period;
+	U64 referralRequest_count;
+	Reference *referralRequest;
+	Reference *careManager;
+	U64 team_count;
+	Reference *team;
+	U64 account_count;
+	Reference *account;
 };
 class EpisodeOfCare_StatusHistory {
-public:
-	ResourceType resourceType = ResourceType::EpisodeOfCare_StatusHistory;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code status;
-	Period* period;
+	Period *period;
 };
 class EpisodeOfCare_Diagnosis {
-public:
-	ResourceType resourceType = ResourceType::EpisodeOfCare_Diagnosis;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* condition;
-	CodeableConcept* role;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *condition;
+	CodeableConcept *role;
 	fhir_positiveInt rank;
 };
 class EventDefinition {
-public:
-	ResourceType resourceType = ResourceType::EventDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -6183,6 +6237,7 @@ public:
 		Reference
 	};
 	SubjectType subject_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -6190,51 +6245,51 @@ public:
 
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	int topic_count;
-	CodeableConcept* topic;
-	int author_count;
-	ContactDetail* author;
-	int editor_count;
-	ContactDetail* editor;
-	int reviewer_count;
-	ContactDetail* reviewer;
-	int endorser_count;
-	ContactDetail* endorser;
-	int relatedArtifact_count;
-	RelatedArtifact* relatedArtifact;
-	int trigger_count;
-	TriggerDefinition* trigger;
+	Period *effectivePeriod;
+	U64 topic_count;
+	CodeableConcept *topic;
+	U64 author_count;
+	ContactDetail *author;
+	U64 editor_count;
+	ContactDetail *editor;
+	U64 reviewer_count;
+	ContactDetail *reviewer;
+	U64 endorser_count;
+	ContactDetail *endorser;
+	U64 relatedArtifact_count;
+	RelatedArtifact *relatedArtifact;
+	U64 trigger_count;
+	TriggerDefinition *trigger;
 };
 class Evidence {
-public:
-	ResourceType resourceType = ResourceType::Evidence;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -6243,54 +6298,54 @@ public:
 	fhir_code status;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int note_count;
-	Annotation* note;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 note_count;
+	Annotation *note;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	int topic_count;
-	CodeableConcept* topic;
-	int author_count;
-	ContactDetail* author;
-	int editor_count;
-	ContactDetail* editor;
-	int reviewer_count;
-	ContactDetail* reviewer;
-	int endorser_count;
-	ContactDetail* endorser;
-	int relatedArtifact_count;
-	RelatedArtifact* relatedArtifact;
-	Reference* exposureBackground;
-	int exposureVariant_count;
-	Reference* exposureVariant;
-	int outcome_count;
-	Reference* outcome;
+	Period *effectivePeriod;
+	U64 topic_count;
+	CodeableConcept *topic;
+	U64 author_count;
+	ContactDetail *author;
+	U64 editor_count;
+	ContactDetail *editor;
+	U64 reviewer_count;
+	ContactDetail *reviewer;
+	U64 endorser_count;
+	ContactDetail *endorser;
+	U64 relatedArtifact_count;
+	RelatedArtifact *relatedArtifact;
+	Reference *exposureBackground;
+	U64 exposureVariant_count;
+	Reference *exposureVariant;
+	U64 outcome_count;
+	Reference *outcome;
 };
 class EvidenceVariable {
-public:
-	ResourceType resourceType = ResourceType::EvidenceVariable;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -6299,43 +6354,43 @@ public:
 	fhir_code status;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int note_count;
-	Annotation* note;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 note_count;
+	Annotation *note;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	int topic_count;
-	CodeableConcept* topic;
-	int author_count;
-	ContactDetail* author;
-	int editor_count;
-	ContactDetail* editor;
-	int reviewer_count;
-	ContactDetail* reviewer;
-	int endorser_count;
-	ContactDetail* endorser;
-	int relatedArtifact_count;
-	RelatedArtifact* relatedArtifact;
+	Period *effectivePeriod;
+	U64 topic_count;
+	CodeableConcept *topic;
+	U64 author_count;
+	ContactDetail *author;
+	U64 editor_count;
+	ContactDetail *editor;
+	U64 reviewer_count;
+	ContactDetail *reviewer;
+	U64 endorser_count;
+	ContactDetail *endorser;
+	U64 relatedArtifact_count;
+	RelatedArtifact *relatedArtifact;
 	fhir_code type;
-	int characteristic_count;
-	EvidenceVariable_Characteristic* characteristic;
+	U64 characteristic_count;
+	EvidenceVariable_Characteristic *characteristic;
 };
 class EvidenceVariable_Characteristic {
-public:
-	ResourceType resourceType = ResourceType::EvidenceVariable_Characteristic;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
 	enum class DefinitionType {
 		Reference,
@@ -6346,6 +6401,7 @@ public:
 		TriggerDefinition
 	};
 	DefinitionType definition_type;
+
 	union {
 		Reference* valueReference;
 		fhir_canonical valueCanonical;
@@ -6355,8 +6411,8 @@ public:
 		TriggerDefinition* valueTriggerDefinition;
 	} definition;
 
-	int usageContext_count;
-	UsageContext* usageContext;
+	U64 usageContext_count;
+	UsageContext *usageContext;
 	fhir_boolean exclude;
 	enum class ParticipantEffectiveType {
 		fhir_dateTime,
@@ -6365,6 +6421,7 @@ public:
 		Timing
 	};
 	ParticipantEffectiveType participantEffective_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -6372,139 +6429,139 @@ public:
 		Timing* valueTiming;
 	} participantEffective;
 
-	Duration* timeFromStart;
+	Duration *timeFromStart;
 	fhir_code groupMeasure;
 };
 class ExampleScenario {
-public:
-	ResourceType resourceType = ResourceType::ExampleScenario;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_code status;
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 contact_count;
+	ContactDetail *contact;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown copyright;
 	fhir_markdown purpose;
-	int actor_count;
-	ExampleScenario_Actor* actor;
-	int instance_count;
-	ExampleScenario_Instance* instance;
-	int process_count;
-	ExampleScenario_Process* process;
-	int workflow_count;
-	fhir_canonical* workflow;
+	U64 actor_count;
+	ExampleScenario_Actor *actor;
+	U64 instance_count;
+	ExampleScenario_Instance *instance;
+	U64 process_count;
+	ExampleScenario_Process *process;
+	U64 workflow_count;
+	fhir_canonical *workflow;
 };
 class ExampleScenario_Actor {
-public:
-	ResourceType resourceType = ResourceType::ExampleScenario_Actor;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string actorId;
 	fhir_code type;
 	fhir_string name;
 	fhir_markdown description;
 };
 class ExampleScenario_Instance {
-public:
-	ResourceType resourceType = ResourceType::ExampleScenario_Instance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string resourceId;
 	fhir_code resourceType_;
 	fhir_string name;
 	fhir_markdown description;
-	int version_count;
-	ExampleScenario_Instance_Version* version;
-	int containedInstance_count;
-	ExampleScenario_Instance_ContainedInstance* containedInstance;
+	U64 version_count;
+	ExampleScenario_Instance_Version *version;
+	U64 containedInstance_count;
+	ExampleScenario_Instance_ContainedInstance *containedInstance;
 };
 class ExampleScenario_Instance_Version {
-public:
-	ResourceType resourceType = ResourceType::ExampleScenario_Instance_Version;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string versionId;
 	fhir_markdown description;
 };
 class ExampleScenario_Instance_ContainedInstance {
-public:
-	ResourceType resourceType = ResourceType::ExampleScenario_Instance_ContainedInstance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string resourceId;
 	fhir_string versionId;
 };
 class ExampleScenario_Process {
-public:
-	ResourceType resourceType = ResourceType::ExampleScenario_Process;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string title;
 	fhir_markdown description;
 	fhir_markdown preConditions;
 	fhir_markdown postConditions;
-	int step_count;
-	ExampleScenario_Process_Step* step;
+	U64 step_count;
+	ExampleScenario_Process_Step *step;
 };
 class ExampleScenario_Process_Step {
-public:
-	ResourceType resourceType = ResourceType::ExampleScenario_Process_Step;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int process_count;
-	ExampleScenario_Process* process;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 process_count;
+	ExampleScenario_Process *process;
 	fhir_boolean pause;
-	ExampleScenario_Process_Step_Operation* operation;
-	int alternative_count;
-	ExampleScenario_Process_Step_Alternative* alternative;
+	ExampleScenario_Process_Step_Operation *operation;
+	U64 alternative_count;
+	ExampleScenario_Process_Step_Alternative *alternative;
 };
 class ExampleScenario_Process_Step_Operation {
-public:
-	ResourceType resourceType = ResourceType::ExampleScenario_Process_Step_Operation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string number;
 	fhir_string type;
 	fhir_string name;
@@ -6513,148 +6570,149 @@ public:
 	fhir_markdown description;
 	fhir_boolean initiatorActive;
 	fhir_boolean receiverActive;
-	ExampleScenario_Instance_ContainedInstance* request;
-	ExampleScenario_Instance_ContainedInstance* response;
+	ExampleScenario_Instance_ContainedInstance *request;
+	ExampleScenario_Instance_ContainedInstance *response;
 };
 class ExampleScenario_Process_Step_Alternative {
-public:
-	ResourceType resourceType = ResourceType::ExampleScenario_Process_Step_Alternative;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string title;
 	fhir_markdown description;
-	int step_count;
-	ExampleScenario_Process_Step* step;
+	U64 step_count;
+	ExampleScenario_Process_Step *step;
 };
 class ExplanationOfBenefit {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* type;
-	CodeableConcept* subType;
+	CodeableConcept *type;
+	CodeableConcept *subType;
 	fhir_code use;
-	Reference* patient;
-	Period* billablePeriod;
+	Reference *patient;
+	Period *billablePeriod;
 	fhir_dateTime created;
-	Reference* enterer;
-	Reference* insurer;
-	Reference* provider;
-	CodeableConcept* priority;
-	CodeableConcept* fundsReserveRequested;
-	CodeableConcept* fundsReserve;
-	int related_count;
-	ExplanationOfBenefit_Related* related;
-	Reference* prescription;
-	Reference* originalPrescription;
-	ExplanationOfBenefit_Payee* payee;
-	Reference* referral;
-	Reference* facility;
-	Reference* claim;
-	Reference* claimResponse;
+	Reference *enterer;
+	Reference *insurer;
+	Reference *provider;
+	CodeableConcept *priority;
+	CodeableConcept *fundsReserveRequested;
+	CodeableConcept *fundsReserve;
+	U64 related_count;
+	ExplanationOfBenefit_Related *related;
+	Reference *prescription;
+	Reference *originalPrescription;
+	ExplanationOfBenefit_Payee *payee;
+	Reference *referral;
+	Reference *facility;
+	Reference *claim;
+	Reference *claimResponse;
 	fhir_code outcome;
 	fhir_string disposition;
-	int preAuthRef_count;
-	fhir_string* preAuthRef;
-	int preAuthRefPeriod_count;
-	Period* preAuthRefPeriod;
-	int careTeam_count;
-	ExplanationOfBenefit_CareTeam* careTeam;
-	int supportingInfo_count;
-	ExplanationOfBenefit_SupportingInfo* supportingInfo;
-	int diagnosis_count;
-	ExplanationOfBenefit_Diagnosis* diagnosis;
-	int procedure_count;
-	ExplanationOfBenefit_Procedure* procedure;
+	U64 preAuthRef_count;
+	fhir_string *preAuthRef;
+	U64 preAuthRefPeriod_count;
+	Period *preAuthRefPeriod;
+	U64 careTeam_count;
+	ExplanationOfBenefit_CareTeam *careTeam;
+	U64 supportingInfo_count;
+	ExplanationOfBenefit_SupportingInfo *supportingInfo;
+	U64 diagnosis_count;
+	ExplanationOfBenefit_Diagnosis *diagnosis;
+	U64 procedure_count;
+	ExplanationOfBenefit_Procedure *procedure;
 	fhir_positiveInt precedence;
-	int insurance_count;
-	ExplanationOfBenefit_Insurance* insurance;
-	ExplanationOfBenefit_Accident* accident;
-	int item_count;
-	ExplanationOfBenefit_Item* item;
-	int addItem_count;
-	ExplanationOfBenefit_AddItem* addItem;
-	int adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication* adjudication;
-	int total_count;
-	ExplanationOfBenefit_Total* total;
-	ExplanationOfBenefit_Payment* payment;
-	CodeableConcept* formCode;
-	Attachment* form;
-	int processNote_count;
-	ExplanationOfBenefit_ProcessNote* processNote;
-	Period* benefitPeriod;
-	int benefitBalance_count;
-	ExplanationOfBenefit_BenefitBalance* benefitBalance;
+	U64 insurance_count;
+	ExplanationOfBenefit_Insurance *insurance;
+	ExplanationOfBenefit_Accident *accident;
+	U64 item_count;
+	ExplanationOfBenefit_Item *item;
+	U64 addItem_count;
+	ExplanationOfBenefit_AddItem *addItem;
+	U64 adjudication_count;
+	ExplanationOfBenefit_Item_Adjudication *adjudication;
+	U64 total_count;
+	ExplanationOfBenefit_Total *total;
+	ExplanationOfBenefit_Payment *payment;
+	CodeableConcept *formCode;
+	Attachment *form;
+	U64 processNote_count;
+	ExplanationOfBenefit_ProcessNote *processNote;
+	Period *benefitPeriod;
+	U64 benefitBalance_count;
+	ExplanationOfBenefit_BenefitBalance *benefitBalance;
 };
 class ExplanationOfBenefit_Related {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_Related;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* claim;
-	CodeableConcept* relationship;
-	Identifier* reference;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *claim;
+	CodeableConcept *relationship;
+	Identifier *reference;
 };
 class ExplanationOfBenefit_Payee {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_Payee;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	Reference* party;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	Reference *party;
 };
 class ExplanationOfBenefit_CareTeam {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_CareTeam;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	Reference* provider;
+	Reference *provider;
 	fhir_boolean responsible;
-	CodeableConcept* role;
-	CodeableConcept* qualification;
+	CodeableConcept *role;
+	CodeableConcept *qualification;
 };
 class ExplanationOfBenefit_SupportingInfo {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_SupportingInfo;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	CodeableConcept* category;
-	CodeableConcept* code;
+	CodeableConcept *category;
+	CodeableConcept *code;
 	enum class TimingType {
 		fhir_date,
 		Period
 	};
 	TimingType timing_type;
+
 	union {
 		fhir_date valueDate;
 		Period* valuePeriod;
@@ -6668,6 +6726,7 @@ public:
 		Reference
 	};
 	ValueType value_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		fhir_string valueString;
@@ -6676,85 +6735,88 @@ public:
 		Reference* valueReference;
 	} value;
 
-	Coding* reason;
+	Coding *reason;
 };
 class ExplanationOfBenefit_Diagnosis {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_Diagnosis;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
 	enum class DiagnosisType {
 		CodeableConcept,
 		Reference
 	};
 	DiagnosisType diagnosis_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} diagnosis;
 
-	int type_count;
-	CodeableConcept* type;
-	CodeableConcept* onAdmission;
-	CodeableConcept* packageCode;
+	U64 type_count;
+	CodeableConcept *type;
+	CodeableConcept *onAdmission;
+	CodeableConcept *packageCode;
 };
 class ExplanationOfBenefit_Procedure {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_Procedure;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	int type_count;
-	CodeableConcept* type;
+	U64 type_count;
+	CodeableConcept *type;
 	fhir_dateTime date;
 	enum class ProcedureType {
 		CodeableConcept,
 		Reference
 	};
 	ProcedureType procedure_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} procedure;
 
-	int udi_count;
-	Reference* udi;
+	U64 udi_count;
+	Reference *udi;
 };
 class ExplanationOfBenefit_Insurance {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_Insurance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean focal;
-	Reference* coverage;
-	int preAuthRef_count;
-	fhir_string* preAuthRef;
+	Reference *coverage;
+	U64 preAuthRef_count;
+	fhir_string *preAuthRef;
 };
 class ExplanationOfBenefit_Accident {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_Accident;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_date date;
-	CodeableConcept* type;
+	CodeableConcept *type;
 	enum class LocationType {
 		Address,
 		Reference
 	};
 	LocationType location_type;
+
 	union {
 		Address* valueAddress;
 		Reference* valueReference;
@@ -6762,34 +6824,35 @@ public:
 
 };
 class ExplanationOfBenefit_Item {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_Item;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	int careTeamSequence_count;
-	fhir_positiveInt* careTeamSequence;
-	int diagnosisSequence_count;
-	fhir_positiveInt* diagnosisSequence;
-	int procedureSequence_count;
-	fhir_positiveInt* procedureSequence;
-	int informationSequence_count;
-	fhir_positiveInt* informationSequence;
-	CodeableConcept* revenue;
-	CodeableConcept* category;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	int programCode_count;
-	CodeableConcept* programCode;
+	U64 careTeamSequence_count;
+	fhir_positiveInt *careTeamSequence;
+	U64 diagnosisSequence_count;
+	fhir_positiveInt *diagnosisSequence;
+	U64 procedureSequence_count;
+	fhir_positiveInt *procedureSequence;
+	U64 informationSequence_count;
+	fhir_positiveInt *informationSequence;
+	CodeableConcept *revenue;
+	CodeableConcept *category;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	U64 programCode_count;
+	CodeableConcept *programCode;
 	enum class ServicedType {
 		fhir_date,
 		Period
 	};
 	ServicedType serviced_type;
+
 	union {
 		fhir_date valueDate;
 		Period* valuePeriod;
@@ -6801,125 +6864,127 @@ public:
 		Reference
 	};
 	LocationType location_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Address* valueAddress;
 		Reference* valueReference;
 	} location;
 
-	Quantity* quantity;
-	Money* unitPrice;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
-	Money* net;
-	int udi_count;
-	Reference* udi;
-	CodeableConcept* bodySite;
-	int subSite_count;
-	CodeableConcept* subSite;
-	int encounter_count;
-	Reference* encounter;
-	int noteNumber_count;
-	fhir_positiveInt* noteNumber;
-	int adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication* adjudication;
-	int detail_count;
-	ExplanationOfBenefit_Item_Detail* detail;
+	Money *net;
+	U64 udi_count;
+	Reference *udi;
+	CodeableConcept *bodySite;
+	U64 subSite_count;
+	CodeableConcept *subSite;
+	U64 encounter_count;
+	Reference *encounter;
+	U64 noteNumber_count;
+	fhir_positiveInt *noteNumber;
+	U64 adjudication_count;
+	ExplanationOfBenefit_Item_Adjudication *adjudication;
+	U64 detail_count;
+	ExplanationOfBenefit_Item_Detail *detail;
 };
 class ExplanationOfBenefit_Item_Adjudication {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_Item_Adjudication;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* category;
-	CodeableConcept* reason;
-	Money* amount;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *category;
+	CodeableConcept *reason;
+	Money *amount;
 	fhir_decimal value;
 };
 class ExplanationOfBenefit_Item_Detail {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_Item_Detail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	CodeableConcept* revenue;
-	CodeableConcept* category;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	int programCode_count;
-	CodeableConcept* programCode;
-	Quantity* quantity;
-	Money* unitPrice;
+	CodeableConcept *revenue;
+	CodeableConcept *category;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	U64 programCode_count;
+	CodeableConcept *programCode;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
-	Money* net;
-	int udi_count;
-	Reference* udi;
-	int noteNumber_count;
-	fhir_positiveInt* noteNumber;
-	int adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication* adjudication;
-	int subDetail_count;
-	ExplanationOfBenefit_Item_Detail_SubDetail* subDetail;
+	Money *net;
+	U64 udi_count;
+	Reference *udi;
+	U64 noteNumber_count;
+	fhir_positiveInt *noteNumber;
+	U64 adjudication_count;
+	ExplanationOfBenefit_Item_Adjudication *adjudication;
+	U64 subDetail_count;
+	ExplanationOfBenefit_Item_Detail_SubDetail *subDetail;
 };
 class ExplanationOfBenefit_Item_Detail_SubDetail {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_Item_Detail_SubDetail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	CodeableConcept* revenue;
-	CodeableConcept* category;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	int programCode_count;
-	CodeableConcept* programCode;
-	Quantity* quantity;
-	Money* unitPrice;
+	CodeableConcept *revenue;
+	CodeableConcept *category;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	U64 programCode_count;
+	CodeableConcept *programCode;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
-	Money* net;
-	int udi_count;
-	Reference* udi;
-	int noteNumber_count;
-	fhir_positiveInt* noteNumber;
-	int adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication* adjudication;
+	Money *net;
+	U64 udi_count;
+	Reference *udi;
+	U64 noteNumber_count;
+	fhir_positiveInt *noteNumber;
+	U64 adjudication_count;
+	ExplanationOfBenefit_Item_Adjudication *adjudication;
 };
 class ExplanationOfBenefit_AddItem {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_AddItem;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int itemSequence_count;
-	fhir_positiveInt* itemSequence;
-	int detailSequence_count;
-	fhir_positiveInt* detailSequence;
-	int subDetailSequence_count;
-	fhir_positiveInt* subDetailSequence;
-	int provider_count;
-	Reference* provider;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	int programCode_count;
-	CodeableConcept* programCode;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 itemSequence_count;
+	fhir_positiveInt *itemSequence;
+	U64 detailSequence_count;
+	fhir_positiveInt *detailSequence;
+	U64 subDetailSequence_count;
+	fhir_positiveInt *subDetailSequence;
+	U64 provider_count;
+	Reference *provider;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	U64 programCode_count;
+	CodeableConcept *programCode;
 	enum class ServicedType {
 		fhir_date,
 		Period
 	};
 	ServicedType serviced_type;
+
 	union {
 		fhir_date valueDate;
 		Period* valuePeriod;
@@ -6931,140 +6996,142 @@ public:
 		Reference
 	};
 	LocationType location_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Address* valueAddress;
 		Reference* valueReference;
 	} location;
 
-	Quantity* quantity;
-	Money* unitPrice;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
-	Money* net;
-	CodeableConcept* bodySite;
-	int subSite_count;
-	CodeableConcept* subSite;
-	int noteNumber_count;
-	fhir_positiveInt* noteNumber;
-	int adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication* adjudication;
-	int detail_count;
-	ExplanationOfBenefit_AddItem_Detail* detail;
+	Money *net;
+	CodeableConcept *bodySite;
+	U64 subSite_count;
+	CodeableConcept *subSite;
+	U64 noteNumber_count;
+	fhir_positiveInt *noteNumber;
+	U64 adjudication_count;
+	ExplanationOfBenefit_Item_Adjudication *adjudication;
+	U64 detail_count;
+	ExplanationOfBenefit_AddItem_Detail *detail;
 };
 class ExplanationOfBenefit_AddItem_Detail {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_AddItem_Detail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	Quantity* quantity;
-	Money* unitPrice;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
-	Money* net;
-	int noteNumber_count;
-	fhir_positiveInt* noteNumber;
-	int adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication* adjudication;
-	int subDetail_count;
-	ExplanationOfBenefit_AddItem_Detail_SubDetail* subDetail;
+	Money *net;
+	U64 noteNumber_count;
+	fhir_positiveInt *noteNumber;
+	U64 adjudication_count;
+	ExplanationOfBenefit_Item_Adjudication *adjudication;
+	U64 subDetail_count;
+	ExplanationOfBenefit_AddItem_Detail_SubDetail *subDetail;
 };
 class ExplanationOfBenefit_AddItem_Detail_SubDetail {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_AddItem_Detail_SubDetail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* productOrService;
-	int modifier_count;
-	CodeableConcept* modifier;
-	Quantity* quantity;
-	Money* unitPrice;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *productOrService;
+	U64 modifier_count;
+	CodeableConcept *modifier;
+	Quantity *quantity;
+	Money *unitPrice;
 	fhir_decimal factor;
-	Money* net;
-	int noteNumber_count;
-	fhir_positiveInt* noteNumber;
-	int adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication* adjudication;
+	Money *net;
+	U64 noteNumber_count;
+	fhir_positiveInt *noteNumber;
+	U64 adjudication_count;
+	ExplanationOfBenefit_Item_Adjudication *adjudication;
 };
 class ExplanationOfBenefit_Total {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_Total;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* category;
-	Money* amount;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *category;
+	Money *amount;
 };
 class ExplanationOfBenefit_Payment {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_Payment;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	Money* adjustment;
-	CodeableConcept* adjustmentReason;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	Money *adjustment;
+	CodeableConcept *adjustmentReason;
 	fhir_date date;
-	Money* amount;
-	Identifier* identifier;
+	Money *amount;
+	Identifier *identifier;
 };
 class ExplanationOfBenefit_ProcessNote {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_ProcessNote;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt number;
 	fhir_code type;
 	fhir_string text;
-	CodeableConcept* language;
+	CodeableConcept *language;
 };
 class ExplanationOfBenefit_BenefitBalance {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_BenefitBalance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* category;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *category;
 	fhir_boolean excluded;
 	fhir_string name;
 	fhir_string description;
-	CodeableConcept* network;
-	CodeableConcept* unit;
-	CodeableConcept* term;
-	int financial_count;
-	ExplanationOfBenefit_BenefitBalance_Financial* financial;
+	CodeableConcept *network;
+	CodeableConcept *unit;
+	CodeableConcept *term;
+	U64 financial_count;
+	ExplanationOfBenefit_BenefitBalance_Financial *financial;
 };
 class ExplanationOfBenefit_BenefitBalance_Financial {
-public:
-	ResourceType resourceType = ResourceType::ExplanationOfBenefit_BenefitBalance_Financial;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	enum class AllowedType {
 		fhir_unsignedInt,
 		fhir_string,
 		Money
 	};
 	AllowedType allowed_type;
+
 	union {
 		fhir_unsignedInt valueUnsignedInt;
 		fhir_string valueString;
@@ -7076,6 +7143,7 @@ public:
 		Money
 	};
 	UsedType used_type;
+
 	union {
 		fhir_unsignedInt valueUnsignedInt;
 		Money* valueMoney;
@@ -7083,38 +7151,39 @@ public:
 
 };
 class FamilyMemberHistory {
-public:
-	ResourceType resourceType = ResourceType::FamilyMemberHistory;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int instantiatesCanonical_count;
-	fhir_canonical* instantiatesCanonical;
-	int instantiatesUri_count;
-	fhir_uri* instantiatesUri;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 instantiatesCanonical_count;
+	fhir_canonical *instantiatesCanonical;
+	U64 instantiatesUri_count;
+	fhir_uri *instantiatesUri;
 	fhir_code status;
-	CodeableConcept* dataAbsentReason;
-	Reference* patient;
+	CodeableConcept *dataAbsentReason;
+	Reference *patient;
 	fhir_dateTime date;
 	fhir_string name;
-	CodeableConcept* relationship;
-	CodeableConcept* sex;
+	CodeableConcept *relationship;
+	CodeableConcept *sex;
 	enum class BornType {
 		Period,
 		fhir_date,
 		fhir_string
 	};
 	BornType born_type;
+
 	union {
 		Period* valuePeriod;
 		fhir_date valueDate;
@@ -7127,6 +7196,7 @@ public:
 		fhir_string
 	};
 	AgeType age_type;
+
 	union {
 		Age* valueAge;
 		Range* valueRange;
@@ -7142,6 +7212,7 @@ public:
 		fhir_string
 	};
 	DeceasedType deceased_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		Age* valueAge;
@@ -7150,25 +7221,25 @@ public:
 		fhir_string valueString;
 	} deceased;
 
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int note_count;
-	Annotation* note;
-	int condition_count;
-	FamilyMemberHistory_Condition* condition;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 note_count;
+	Annotation *note;
+	U64 condition_count;
+	FamilyMemberHistory_Condition *condition;
 };
 class FamilyMemberHistory_Condition {
-public:
-	ResourceType resourceType = ResourceType::FamilyMemberHistory_Condition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	CodeableConcept* outcome;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	CodeableConcept *outcome;
 	fhir_boolean contributedToDeath;
 	enum class OnsetType {
 		Age,
@@ -7177,6 +7248,7 @@ public:
 		fhir_string
 	};
 	OnsetType onset_type;
+
 	union {
 		Age* valueAge;
 		Range* valueRange;
@@ -7184,90 +7256,91 @@ public:
 		fhir_string valueString;
 	} onset;
 
-	int note_count;
-	Annotation* note;
+	U64 note_count;
+	Annotation *note;
 };
 class Flag {
-public:
-	ResourceType resourceType = ResourceType::Flag;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	int category_count;
-	CodeableConcept* category;
-	CodeableConcept* code;
-	Reference* subject;
-	Period* period;
-	Reference* encounter;
-	Reference* author;
+	U64 category_count;
+	CodeableConcept *category;
+	CodeableConcept *code;
+	Reference *subject;
+	Period *period;
+	Reference *encounter;
+	Reference *author;
 };
 class Goal {
-public:
-	ResourceType resourceType = ResourceType::Goal;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code lifecycleStatus;
-	CodeableConcept* achievementStatus;
-	int category_count;
-	CodeableConcept* category;
-	CodeableConcept* priority;
-	CodeableConcept* description;
-	Reference* subject;
+	CodeableConcept *achievementStatus;
+	U64 category_count;
+	CodeableConcept *category;
+	CodeableConcept *priority;
+	CodeableConcept *description;
+	Reference *subject;
 	enum class StartType {
 		fhir_date,
 		CodeableConcept
 	};
 	StartType start_type;
+
 	union {
 		fhir_date valueDate;
 		CodeableConcept* valueCodeableConcept;
 	} start;
 
-	int target_count;
-	Goal_Target* target;
+	U64 target_count;
+	Goal_Target *target;
 	fhir_date statusDate;
 	fhir_string statusReason;
-	Reference* expressedBy;
-	int addresses_count;
-	Reference* addresses;
-	int note_count;
-	Annotation* note;
-	int outcomeCode_count;
-	CodeableConcept* outcomeCode;
-	int outcomeReference_count;
-	Reference* outcomeReference;
+	Reference *expressedBy;
+	U64 addresses_count;
+	Reference *addresses;
+	U64 note_count;
+	Annotation *note;
+	U64 outcomeCode_count;
+	CodeableConcept *outcomeCode;
+	U64 outcomeReference_count;
+	Reference *outcomeReference;
 };
 class Goal_Target {
-public:
-	ResourceType resourceType = ResourceType::Goal_Target;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* measure;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *measure;
 	enum class DetailType {
 		Quantity,
 		Range,
@@ -7278,6 +7351,7 @@ public:
 		Ratio
 	};
 	DetailType detail_type;
+
 	union {
 		Quantity* valueQuantity;
 		Range* valueRange;
@@ -7293,6 +7367,7 @@ public:
 		Duration
 	};
 	DueType due_type;
+
 	union {
 		fhir_date valueDate;
 		Duration* valueDuration;
@@ -7300,19 +7375,19 @@ public:
 
 };
 class GraphDefinition {
-public:
-	ResourceType resourceType = ResourceType::GraphDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -7320,59 +7395,59 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_code start;
 	fhir_canonical profile;
-	int link_count;
-	GraphDefinition_Link* link;
+	U64 link_count;
+	GraphDefinition_Link *link;
 };
 class GraphDefinition_Link {
-public:
-	ResourceType resourceType = ResourceType::GraphDefinition_Link;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string path;
 	fhir_string sliceName;
-	Integer* min;
+	Integer *min;
 	fhir_string max;
 	fhir_string description;
-	int target_count;
-	GraphDefinition_Link_Target* target;
+	U64 target_count;
+	GraphDefinition_Link_Target *target;
 };
 class GraphDefinition_Link_Target {
-public:
-	ResourceType resourceType = ResourceType::GraphDefinition_Link_Target;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
 	fhir_string params;
 	fhir_canonical profile;
-	int compartment_count;
-	GraphDefinition_Link_Target_Compartment* compartment;
-	int link_count;
-	GraphDefinition_Link* link;
+	U64 compartment_count;
+	GraphDefinition_Link_Target_Compartment *compartment;
+	U64 link_count;
+	GraphDefinition_Link *link;
 };
 class GraphDefinition_Link_Target_Compartment {
-public:
-	ResourceType resourceType = ResourceType::GraphDefinition_Link_Target_Compartment;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code use;
 	fhir_code code;
 	fhir_code rule;
@@ -7380,42 +7455,42 @@ public:
 	fhir_string description;
 };
 class Group {
-public:
-	ResourceType resourceType = ResourceType::Group;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_boolean active;
 	fhir_code type;
 	fhir_boolean actual;
-	CodeableConcept* code;
+	CodeableConcept *code;
 	fhir_string name;
 	fhir_unsignedInt quantity;
-	Reference* managingEntity;
-	int characteristic_count;
-	Group_Characteristic* characteristic;
-	int member_count;
-	Group_Member* member;
+	Reference *managingEntity;
+	U64 characteristic_count;
+	Group_Characteristic *characteristic;
+	U64 member_count;
+	Group_Member *member;
 };
 class Group_Characteristic {
-public:
-	ResourceType resourceType = ResourceType::Group_Characteristic;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
 	enum class ValueType {
 		CodeableConcept,
 		fhir_boolean,
@@ -7424,6 +7499,7 @@ public:
 		Reference
 	};
 	ValueType value_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		fhir_boolean valueBoolean;
@@ -7433,43 +7509,44 @@ public:
 	} value;
 
 	fhir_boolean exclude;
-	Period* period;
+	Period *period;
 };
 class Group_Member {
-public:
-	ResourceType resourceType = ResourceType::Group_Member;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* entity;
-	Period* period;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *entity;
+	Period *period;
 	fhir_boolean inactive;
 };
 class GuidanceResponse {
-public:
-	ResourceType resourceType = ResourceType::GuidanceResponse;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* requestIdentifier;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *requestIdentifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	enum class ModuleType {
 		fhir_uri,
 		fhir_canonical,
 		CodeableConcept
 	};
 	ModuleType module_type;
+
 	union {
 		fhir_uri valueUri;
 		fhir_canonical valueCanonical;
@@ -7477,234 +7554,235 @@ public:
 	} module;
 
 	fhir_code status;
-	Reference* subject;
-	Reference* encounter;
+	Reference *subject;
+	Reference *encounter;
 	fhir_dateTime occurrenceDateTime;
-	Reference* performer;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int note_count;
-	Annotation* note;
-	int evaluationMessage_count;
-	Reference* evaluationMessage;
-	Reference* outputParameters;
-	Reference* result;
-	int dataRequirement_count;
-	DataRequirement* dataRequirement;
+	Reference *performer;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 note_count;
+	Annotation *note;
+	U64 evaluationMessage_count;
+	Reference *evaluationMessage;
+	Reference *outputParameters;
+	Reference *result;
+	U64 dataRequirement_count;
+	DataRequirement *dataRequirement;
 };
 class HealthcareService {
-public:
-	ResourceType resourceType = ResourceType::HealthcareService;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_boolean active;
-	Reference* providedBy;
-	int category_count;
-	CodeableConcept* category;
-	int type_count;
-	CodeableConcept* type;
-	int specialty_count;
-	CodeableConcept* specialty;
-	int location_count;
-	Reference* location;
+	Reference *providedBy;
+	U64 category_count;
+	CodeableConcept *category;
+	U64 type_count;
+	CodeableConcept *type;
+	U64 specialty_count;
+	CodeableConcept *specialty;
+	U64 location_count;
+	Reference *location;
 	fhir_string name;
 	fhir_string comment;
 	fhir_markdown extraDetails;
-	Attachment* photo;
-	int telecom_count;
-	ContactPoint* telecom;
-	int coverageArea_count;
-	Reference* coverageArea;
-	int serviceProvisionCode_count;
-	CodeableConcept* serviceProvisionCode;
-	int eligibility_count;
-	HealthcareService_Eligibility* eligibility;
-	int program_count;
-	CodeableConcept* program;
-	int characteristic_count;
-	CodeableConcept* characteristic;
-	int communication_count;
-	CodeableConcept* communication;
-	int referralMethod_count;
-	CodeableConcept* referralMethod;
+	Attachment *photo;
+	U64 telecom_count;
+	ContactPoint *telecom;
+	U64 coverageArea_count;
+	Reference *coverageArea;
+	U64 serviceProvisionCode_count;
+	CodeableConcept *serviceProvisionCode;
+	U64 eligibility_count;
+	HealthcareService_Eligibility *eligibility;
+	U64 program_count;
+	CodeableConcept *program;
+	U64 characteristic_count;
+	CodeableConcept *characteristic;
+	U64 communication_count;
+	CodeableConcept *communication;
+	U64 referralMethod_count;
+	CodeableConcept *referralMethod;
 	fhir_boolean appointmentRequired;
-	int availableTime_count;
-	HealthcareService_AvailableTime* availableTime;
-	int notAvailable_count;
-	HealthcareService_NotAvailable* notAvailable;
+	U64 availableTime_count;
+	HealthcareService_AvailableTime *availableTime;
+	U64 notAvailable_count;
+	HealthcareService_NotAvailable *notAvailable;
 	fhir_string availabilityExceptions;
-	int endpoint_count;
-	Reference* endpoint;
+	U64 endpoint_count;
+	Reference *endpoint;
 };
 class HealthcareService_Eligibility {
-public:
-	ResourceType resourceType = ResourceType::HealthcareService_Eligibility;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
 	fhir_markdown comment;
 };
 class HealthcareService_AvailableTime {
-public:
-	ResourceType resourceType = ResourceType::HealthcareService_AvailableTime;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int daysOfWeek_count;
-	fhir_code* daysOfWeek;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 daysOfWeek_count;
+	fhir_code *daysOfWeek;
 	fhir_boolean allDay;
 	fhir_time availableStartTime;
 	fhir_time availableEndTime;
 };
 class HealthcareService_NotAvailable {
-public:
-	ResourceType resourceType = ResourceType::HealthcareService_NotAvailable;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
-	Period* during;
+	Period *during;
 };
 class ImagingStudy {
-public:
-	ResourceType resourceType = ResourceType::ImagingStudy;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	int modality_count;
-	Coding* modality;
-	Reference* subject;
-	Reference* encounter;
+	U64 modality_count;
+	Coding *modality;
+	Reference *subject;
+	Reference *encounter;
 	fhir_dateTime started;
-	int basedOn_count;
-	Reference* basedOn;
-	Reference* referrer;
-	int interpreter_count;
-	Reference* interpreter;
-	int endpoint_count;
-	Reference* endpoint;
+	U64 basedOn_count;
+	Reference *basedOn;
+	Reference *referrer;
+	U64 interpreter_count;
+	Reference *interpreter;
+	U64 endpoint_count;
+	Reference *endpoint;
 	fhir_unsignedInt numberOfSeries;
 	fhir_unsignedInt numberOfInstances;
-	Reference* procedureReference;
-	int procedureCode_count;
-	CodeableConcept* procedureCode;
-	Reference* location;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int note_count;
-	Annotation* note;
+	Reference *procedureReference;
+	U64 procedureCode_count;
+	CodeableConcept *procedureCode;
+	Reference *location;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 note_count;
+	Annotation *note;
 	fhir_string description;
-	int series_count;
-	ImagingStudy_Series* series;
+	U64 series_count;
+	ImagingStudy_Series *series;
 };
 class ImagingStudy_Series {
-public:
-	ResourceType resourceType = ResourceType::ImagingStudy_Series;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_id uid;
 	fhir_unsignedInt number;
-	Coding* modality;
+	Coding *modality;
 	fhir_string description;
 	fhir_unsignedInt numberOfInstances;
-	int endpoint_count;
-	Reference* endpoint;
-	Coding* bodySite;
-	Coding* laterality;
-	int specimen_count;
-	Reference* specimen;
+	U64 endpoint_count;
+	Reference *endpoint;
+	Coding *bodySite;
+	Coding *laterality;
+	U64 specimen_count;
+	Reference *specimen;
 	fhir_dateTime started;
-	int performer_count;
-	ImagingStudy_Series_Performer* performer;
-	int instance_count;
-	ImagingStudy_Series_Instance* instance;
+	U64 performer_count;
+	ImagingStudy_Series_Performer *performer;
+	U64 instance_count;
+	ImagingStudy_Series_Instance *instance;
 };
 class ImagingStudy_Series_Performer {
-public:
-	ResourceType resourceType = ResourceType::ImagingStudy_Series_Performer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* function_;
-	Reference* actor;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *function_;
+	Reference *actor;
 };
 class ImagingStudy_Series_Instance {
-public:
-	ResourceType resourceType = ResourceType::ImagingStudy_Series_Instance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_id uid;
-	Coding* sopClass;
+	Coding *sopClass;
 	fhir_unsignedInt number;
 	fhir_string title;
 };
 class Immunization {
-public:
-	ResourceType resourceType = ResourceType::Immunization;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* statusReason;
-	CodeableConcept* vaccineCode;
-	Reference* patient;
-	Reference* encounter;
+	CodeableConcept *statusReason;
+	CodeableConcept *vaccineCode;
+	Reference *patient;
+	Reference *encounter;
 	enum class OccurrenceType {
 		fhir_dateTime,
 		fhir_string
 	};
 	OccurrenceType occurrence_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		fhir_string valueString;
@@ -7712,88 +7790,89 @@ public:
 
 	fhir_dateTime recorded;
 	fhir_boolean primarySource;
-	CodeableConcept* reportOrigin;
-	Reference* location;
-	Reference* manufacturer;
+	CodeableConcept *reportOrigin;
+	Reference *location;
+	Reference *manufacturer;
 	fhir_string lotNumber;
 	fhir_date expirationDate;
-	CodeableConcept* site;
-	CodeableConcept* route;
-	Quantity* doseQuantity;
-	int performer_count;
-	Immunization_Performer* performer;
-	int note_count;
-	Annotation* note;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
+	CodeableConcept *site;
+	CodeableConcept *route;
+	Quantity *doseQuantity;
+	U64 performer_count;
+	Immunization_Performer *performer;
+	U64 note_count;
+	Annotation *note;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
 	fhir_boolean isSubpotent;
-	int subpotentReason_count;
-	CodeableConcept* subpotentReason;
-	int education_count;
-	Immunization_Education* education;
-	int programEligibility_count;
-	CodeableConcept* programEligibility;
-	CodeableConcept* fundingSource;
-	int reaction_count;
-	Immunization_Reaction* reaction;
-	int protocolApplied_count;
-	Immunization_ProtocolApplied* protocolApplied;
+	U64 subpotentReason_count;
+	CodeableConcept *subpotentReason;
+	U64 education_count;
+	Immunization_Education *education;
+	U64 programEligibility_count;
+	CodeableConcept *programEligibility;
+	CodeableConcept *fundingSource;
+	U64 reaction_count;
+	Immunization_Reaction *reaction;
+	U64 protocolApplied_count;
+	Immunization_ProtocolApplied *protocolApplied;
 };
 class Immunization_Performer {
-public:
-	ResourceType resourceType = ResourceType::Immunization_Performer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* function_;
-	Reference* actor;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *function_;
+	Reference *actor;
 };
 class Immunization_Education {
-public:
-	ResourceType resourceType = ResourceType::Immunization_Education;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string documentType;
 	fhir_uri reference;
 	fhir_dateTime publicationDate;
 	fhir_dateTime presentationDate;
 };
 class Immunization_Reaction {
-public:
-	ResourceType resourceType = ResourceType::Immunization_Reaction;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_dateTime date;
-	Reference* detail;
+	Reference *detail;
 	fhir_boolean reported;
 };
 class Immunization_ProtocolApplied {
-public:
-	ResourceType resourceType = ResourceType::Immunization_ProtocolApplied;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string series;
-	Reference* authority;
-	int targetDisease_count;
-	CodeableConcept* targetDisease;
+	Reference *authority;
+	U64 targetDisease_count;
+	CodeableConcept *targetDisease;
 	enum class DoseNumberType {
 		fhir_positiveInt,
 		fhir_string
 	};
 	DoseNumberType doseNumber_type;
+
 	union {
 		fhir_positiveInt valuePositiveInt;
 		fhir_string valueString;
@@ -7804,6 +7883,7 @@ public:
 		fhir_string
 	};
 	SeriesDosesType seriesDoses_type;
+
 	union {
 		fhir_positiveInt valuePositiveInt;
 		fhir_string valueString;
@@ -7811,30 +7891,30 @@ public:
 
 };
 class ImmunizationEvaluation {
-public:
-	ResourceType resourceType = ResourceType::ImmunizationEvaluation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	Reference* patient;
+	Reference *patient;
 	fhir_dateTime date;
-	Reference* authority;
-	CodeableConcept* targetDisease;
-	Reference* immunizationEvent;
-	CodeableConcept* doseStatus;
-	int doseStatusReason_count;
-	CodeableConcept* doseStatusReason;
+	Reference *authority;
+	CodeableConcept *targetDisease;
+	Reference *immunizationEvent;
+	CodeableConcept *doseStatus;
+	U64 doseStatusReason_count;
+	CodeableConcept *doseStatusReason;
 	fhir_string description;
 	fhir_string series;
 	enum class DoseNumberType {
@@ -7842,6 +7922,7 @@ public:
 		fhir_string
 	};
 	DoseNumberType doseNumber_type;
+
 	union {
 		fhir_positiveInt valuePositiveInt;
 		fhir_string valueString;
@@ -7852,6 +7933,7 @@ public:
 		fhir_string
 	};
 	SeriesDosesType seriesDoses_type;
+
 	union {
 		fhir_positiveInt valuePositiveInt;
 		fhir_string valueString;
@@ -7859,45 +7941,45 @@ public:
 
 };
 class ImmunizationRecommendation {
-public:
-	ResourceType resourceType = ResourceType::ImmunizationRecommendation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	Reference* patient;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	Reference *patient;
 	fhir_dateTime date;
-	Reference* authority;
-	int recommendation_count;
-	ImmunizationRecommendation_Recommendation* recommendation;
+	Reference *authority;
+	U64 recommendation_count;
+	ImmunizationRecommendation_Recommendation *recommendation;
 };
 class ImmunizationRecommendation_Recommendation {
-public:
-	ResourceType resourceType = ResourceType::ImmunizationRecommendation_Recommendation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int vaccineCode_count;
-	CodeableConcept* vaccineCode;
-	CodeableConcept* targetDisease;
-	int contraindicatedVaccineCode_count;
-	CodeableConcept* contraindicatedVaccineCode;
-	CodeableConcept* forecastStatus;
-	int forecastReason_count;
-	CodeableConcept* forecastReason;
-	int dateCriterion_count;
-	ImmunizationRecommendation_Recommendation_DateCriterion* dateCriterion;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 vaccineCode_count;
+	CodeableConcept *vaccineCode;
+	CodeableConcept *targetDisease;
+	U64 contraindicatedVaccineCode_count;
+	CodeableConcept *contraindicatedVaccineCode;
+	CodeableConcept *forecastStatus;
+	U64 forecastReason_count;
+	CodeableConcept *forecastReason;
+	U64 dateCriterion_count;
+	ImmunizationRecommendation_Recommendation_DateCriterion *dateCriterion;
 	fhir_string description;
 	fhir_string series;
 	enum class DoseNumberType {
@@ -7905,6 +7987,7 @@ public:
 		fhir_string
 	};
 	DoseNumberType doseNumber_type;
+
 	union {
 		fhir_positiveInt valuePositiveInt;
 		fhir_string valueString;
@@ -7915,41 +7998,42 @@ public:
 		fhir_string
 	};
 	SeriesDosesType seriesDoses_type;
+
 	union {
 		fhir_positiveInt valuePositiveInt;
 		fhir_string valueString;
 	} seriesDoses;
 
-	int supportingImmunization_count;
-	Reference* supportingImmunization;
-	int supportingPatientInformation_count;
-	Reference* supportingPatientInformation;
+	U64 supportingImmunization_count;
+	Reference *supportingImmunization;
+	U64 supportingPatientInformation_count;
+	Reference *supportingPatientInformation;
 };
 class ImmunizationRecommendation_Recommendation_DateCriterion {
-public:
-	ResourceType resourceType = ResourceType::ImmunizationRecommendation_Recommendation_DateCriterion;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
 	fhir_dateTime value;
 };
 class ImplementationGuide {
-public:
-	ResourceType resourceType = ResourceType::ImplementationGuide;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -7958,88 +8042,88 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown copyright;
 	fhir_id packageId;
 	fhir_code license;
-	int fhirVersion_count;
-	fhir_code* fhirVersion;
-	int dependsOn_count;
-	ImplementationGuide_DependsOn* dependsOn;
-	int global__count;
-	ImplementationGuide_Global* global_;
-	ImplementationGuide_Definition* definition;
-	ImplementationGuide_Manifest* manifest;
+	U64 fhirVersion_count;
+	fhir_code *fhirVersion;
+	U64 dependsOn_count;
+	ImplementationGuide_DependsOn *dependsOn;
+	U64 global__count;
+	ImplementationGuide_Global *global_;
+	ImplementationGuide_Definition *definition;
+	ImplementationGuide_Manifest *manifest;
 };
 class ImplementationGuide_DependsOn {
-public:
-	ResourceType resourceType = ResourceType::ImplementationGuide_DependsOn;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_canonical uri;
 	fhir_id packageId;
 	fhir_string version;
 };
 class ImplementationGuide_Global {
-public:
-	ResourceType resourceType = ResourceType::ImplementationGuide_Global;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
 	fhir_canonical profile;
 };
 class ImplementationGuide_Definition {
-public:
-	ResourceType resourceType = ResourceType::ImplementationGuide_Definition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int grouping_count;
-	ImplementationGuide_Definition_Grouping* grouping;
-	int resource_count;
-	ImplementationGuide_Definition_Resource* resource;
-	ImplementationGuide_Definition_Page* page;
-	int parameter_count;
-	ImplementationGuide_Definition_Parameter* parameter;
-	int template__count;
-	ImplementationGuide_Definition_Template* template_;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 grouping_count;
+	ImplementationGuide_Definition_Grouping *grouping;
+	U64 resource_count;
+	ImplementationGuide_Definition_Resource *resource;
+	ImplementationGuide_Definition_Page *page;
+	U64 parameter_count;
+	ImplementationGuide_Definition_Parameter *parameter;
+	U64 template__count;
+	ImplementationGuide_Definition_Template *template_;
 };
 class ImplementationGuide_Definition_Grouping {
-public:
-	ResourceType resourceType = ResourceType::ImplementationGuide_Definition_Grouping;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_string description;
 };
 class ImplementationGuide_Definition_Resource {
-public:
-	ResourceType resourceType = ResourceType::ImplementationGuide_Definition_Resource;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* reference;
-	int fhirVersion_count;
-	fhir_code* fhirVersion;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *reference;
+	U64 fhirVersion_count;
+	fhir_code *fhirVersion;
 	fhir_string name;
 	fhir_string description;
 	enum class ExampleType {
@@ -8047,6 +8131,7 @@ public:
 		fhir_canonical
 	};
 	ExampleType example_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		fhir_canonical valueCanonical;
@@ -8055,18 +8140,19 @@ public:
 	fhir_id groupingId;
 };
 class ImplementationGuide_Definition_Page {
-public:
-	ResourceType resourceType = ResourceType::ImplementationGuide_Definition_Page;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class NameType {
 		fhir_url,
 		Reference
 	};
 	NameType name_type;
+
 	union {
 		fhir_url valueUrl;
 		Reference* valueReference;
@@ -8074,64 +8160,65 @@ public:
 
 	fhir_string title;
 	fhir_code generation;
-	int page_count;
-	ImplementationGuide_Definition_Page* page;
+	U64 page_count;
+	ImplementationGuide_Definition_Page *page;
 };
 class ImplementationGuide_Definition_Parameter {
-public:
-	ResourceType resourceType = ResourceType::ImplementationGuide_Definition_Parameter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	fhir_string value;
 };
 class ImplementationGuide_Definition_Template {
-public:
-	ResourceType resourceType = ResourceType::ImplementationGuide_Definition_Template;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	fhir_string source;
 	fhir_string scope;
 };
 class ImplementationGuide_Manifest {
-public:
-	ResourceType resourceType = ResourceType::ImplementationGuide_Manifest;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_url rendering;
-	int resource_count;
-	ImplementationGuide_Manifest_Resource* resource;
-	int page_count;
-	ImplementationGuide_Manifest_Page* page;
-	int image_count;
-	fhir_string* image;
-	int other_count;
-	fhir_string* other;
+	U64 resource_count;
+	ImplementationGuide_Manifest_Resource *resource;
+	U64 page_count;
+	ImplementationGuide_Manifest_Page *page;
+	U64 image_count;
+	fhir_string *image;
+	U64 other_count;
+	fhir_string *other;
 };
 class ImplementationGuide_Manifest_Resource {
-public:
-	ResourceType resourceType = ResourceType::ImplementationGuide_Manifest_Resource;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* reference;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *reference;
 	enum class ExampleType {
 		fhir_boolean,
 		fhir_canonical
 	};
 	ExampleType example_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		fhir_canonical valueCanonical;
@@ -8140,290 +8227,292 @@ public:
 	fhir_url relativePath;
 };
 class ImplementationGuide_Manifest_Page {
-public:
-	ResourceType resourceType = ResourceType::ImplementationGuide_Manifest_Page;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_string title;
-	int anchor_count;
-	fhir_string* anchor;
+	U64 anchor_count;
+	fhir_string *anchor;
 };
 class InsurancePlan {
-public:
-	ResourceType resourceType = ResourceType::InsurancePlan;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	int type_count;
-	CodeableConcept* type;
+	U64 type_count;
+	CodeableConcept *type;
 	fhir_string name;
-	int alias_count;
-	fhir_string* alias;
-	Period* period;
-	Reference* ownedBy;
-	Reference* administeredBy;
-	int coverageArea_count;
-	Reference* coverageArea;
-	int contact_count;
-	InsurancePlan_Contact* contact;
-	int endpoint_count;
-	Reference* endpoint;
-	int network_count;
-	Reference* network;
-	int coverage_count;
-	InsurancePlan_Coverage* coverage;
-	int plan_count;
-	InsurancePlan_Plan* plan;
+	U64 alias_count;
+	fhir_string *alias;
+	Period *period;
+	Reference *ownedBy;
+	Reference *administeredBy;
+	U64 coverageArea_count;
+	Reference *coverageArea;
+	U64 contact_count;
+	InsurancePlan_Contact *contact;
+	U64 endpoint_count;
+	Reference *endpoint;
+	U64 network_count;
+	Reference *network;
+	U64 coverage_count;
+	InsurancePlan_Coverage *coverage;
+	U64 plan_count;
+	InsurancePlan_Plan *plan;
 };
 class InsurancePlan_Contact {
-public:
-	ResourceType resourceType = ResourceType::InsurancePlan_Contact;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* purpose;
-	HumanName* name;
-	int telecom_count;
-	ContactPoint* telecom;
-	Address* address;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *purpose;
+	HumanName *name;
+	U64 telecom_count;
+	ContactPoint *telecom;
+	Address *address;
 };
 class InsurancePlan_Coverage {
-public:
-	ResourceType resourceType = ResourceType::InsurancePlan_Coverage;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	int network_count;
-	Reference* network;
-	int benefit_count;
-	InsurancePlan_Coverage_Benefit* benefit;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	U64 network_count;
+	Reference *network;
+	U64 benefit_count;
+	InsurancePlan_Coverage_Benefit *benefit;
 };
 class InsurancePlan_Coverage_Benefit {
-public:
-	ResourceType resourceType = ResourceType::InsurancePlan_Coverage_Benefit;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	fhir_string requirement;
-	int limit_count;
-	InsurancePlan_Coverage_Benefit_Limit* limit;
+	U64 limit_count;
+	InsurancePlan_Coverage_Benefit_Limit *limit;
 };
 class InsurancePlan_Coverage_Benefit_Limit {
-public:
-	ResourceType resourceType = ResourceType::InsurancePlan_Coverage_Benefit_Limit;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Quantity* value;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Quantity *value;
+	CodeableConcept *code;
 };
 class InsurancePlan_Plan {
-public:
-	ResourceType resourceType = ResourceType::InsurancePlan_Plan;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* type;
-	int coverageArea_count;
-	Reference* coverageArea;
-	int network_count;
-	Reference* network;
-	int generalCost_count;
-	InsurancePlan_Plan_GeneralCost* generalCost;
-	int specificCost_count;
-	InsurancePlan_Plan_SpecificCost* specificCost;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *type;
+	U64 coverageArea_count;
+	Reference *coverageArea;
+	U64 network_count;
+	Reference *network;
+	U64 generalCost_count;
+	InsurancePlan_Plan_GeneralCost *generalCost;
+	U64 specificCost_count;
+	InsurancePlan_Plan_SpecificCost *specificCost;
 };
 class InsurancePlan_Plan_GeneralCost {
-public:
-	ResourceType resourceType = ResourceType::InsurancePlan_Plan_GeneralCost;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	fhir_positiveInt groupSize;
-	Money* cost;
+	Money *cost;
 	fhir_string comment;
 };
 class InsurancePlan_Plan_SpecificCost {
-public:
-	ResourceType resourceType = ResourceType::InsurancePlan_Plan_SpecificCost;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* category;
-	int benefit_count;
-	InsurancePlan_Plan_SpecificCost_Benefit* benefit;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *category;
+	U64 benefit_count;
+	InsurancePlan_Plan_SpecificCost_Benefit *benefit;
 };
 class InsurancePlan_Plan_SpecificCost_Benefit {
-public:
-	ResourceType resourceType = ResourceType::InsurancePlan_Plan_SpecificCost_Benefit;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	int cost_count;
-	InsurancePlan_Plan_SpecificCost_Benefit_Cost* cost;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	U64 cost_count;
+	InsurancePlan_Plan_SpecificCost_Benefit_Cost *cost;
 };
 class InsurancePlan_Plan_SpecificCost_Benefit_Cost {
-public:
-	ResourceType resourceType = ResourceType::InsurancePlan_Plan_SpecificCost_Benefit_Cost;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	CodeableConcept* applicability;
-	int qualifiers_count;
-	CodeableConcept* qualifiers;
-	Quantity* value;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	CodeableConcept *applicability;
+	U64 qualifiers_count;
+	CodeableConcept *qualifiers;
+	Quantity *value;
 };
 class Invoice {
-public:
-	ResourceType resourceType = ResourceType::Invoice;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
 	fhir_string cancelledReason;
-	CodeableConcept* type;
-	Reference* subject;
-	Reference* recipient;
+	CodeableConcept *type;
+	Reference *subject;
+	Reference *recipient;
 	fhir_dateTime date;
-	int participant_count;
-	Invoice_Participant* participant;
-	Reference* issuer;
-	Reference* account;
-	int lineItem_count;
-	Invoice_LineItem* lineItem;
-	int totalPriceComponent_count;
-	Invoice_LineItem_PriceComponent* totalPriceComponent;
-	Money* totalNet;
-	Money* totalGross;
+	U64 participant_count;
+	Invoice_Participant *participant;
+	Reference *issuer;
+	Reference *account;
+	U64 lineItem_count;
+	Invoice_LineItem *lineItem;
+	U64 totalPriceComponent_count;
+	Invoice_LineItem_PriceComponent *totalPriceComponent;
+	Money *totalNet;
+	Money *totalGross;
 	fhir_markdown paymentTerms;
-	int note_count;
-	Annotation* note;
+	U64 note_count;
+	Annotation *note;
 };
 class Invoice_Participant {
-public:
-	ResourceType resourceType = ResourceType::Invoice_Participant;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* role;
-	Reference* actor;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *role;
+	Reference *actor;
 };
 class Invoice_LineItem {
-public:
-	ResourceType resourceType = ResourceType::Invoice_LineItem;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt sequence;
 	enum class ChargeItemType {
 		Reference,
 		CodeableConcept
 	};
 	ChargeItemType chargeItem_type;
+
 	union {
 		Reference* valueReference;
 		CodeableConcept* valueCodeableConcept;
 	} chargeItem;
 
-	int priceComponent_count;
-	Invoice_LineItem_PriceComponent* priceComponent;
+	U64 priceComponent_count;
+	Invoice_LineItem_PriceComponent *priceComponent;
 };
 class Invoice_LineItem_PriceComponent {
-public:
-	ResourceType resourceType = ResourceType::Invoice_LineItem_PriceComponent;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
-	CodeableConcept* code;
+	CodeableConcept *code;
 	fhir_decimal factor;
-	Money* amount;
+	Money *amount;
 };
 class Library {
-public:
-	ResourceType resourceType = ResourceType::Library;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
 	fhir_string subtitle;
 	fhir_code status;
 	fhir_boolean experimental;
-	CodeableConcept* type;
+	CodeableConcept *type;
 	enum class SubjectType {
 		CodeableConcept,
 		Reference
 	};
 	SubjectType subject_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -8431,193 +8520,193 @@ public:
 
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	int topic_count;
-	CodeableConcept* topic;
-	int author_count;
-	ContactDetail* author;
-	int editor_count;
-	ContactDetail* editor;
-	int reviewer_count;
-	ContactDetail* reviewer;
-	int endorser_count;
-	ContactDetail* endorser;
-	int relatedArtifact_count;
-	RelatedArtifact* relatedArtifact;
-	int parameter_count;
-	ParameterDefinition* parameter;
-	int dataRequirement_count;
-	DataRequirement* dataRequirement;
-	int content_count;
-	Attachment* content;
+	Period *effectivePeriod;
+	U64 topic_count;
+	CodeableConcept *topic;
+	U64 author_count;
+	ContactDetail *author;
+	U64 editor_count;
+	ContactDetail *editor;
+	U64 reviewer_count;
+	ContactDetail *reviewer;
+	U64 endorser_count;
+	ContactDetail *endorser;
+	U64 relatedArtifact_count;
+	RelatedArtifact *relatedArtifact;
+	U64 parameter_count;
+	ParameterDefinition *parameter;
+	U64 dataRequirement_count;
+	DataRequirement *dataRequirement;
+	U64 content_count;
+	Attachment *content;
 };
 class Linkage {
-public:
-	ResourceType resourceType = ResourceType::Linkage;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean active;
-	Reference* author;
-	int item_count;
-	Linkage_Item* item;
+	Reference *author;
+	U64 item_count;
+	Linkage_Item *item;
 };
 class Linkage_Item {
-public:
-	ResourceType resourceType = ResourceType::Linkage_Item;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
-	Reference* resource;
+	Reference *resource;
 };
 class List {
-public:
-	ResourceType resourceType = ResourceType::List;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
 	fhir_code mode;
 	fhir_string title;
-	CodeableConcept* code;
-	Reference* subject;
-	Reference* encounter;
+	CodeableConcept *code;
+	Reference *subject;
+	Reference *encounter;
 	fhir_dateTime date;
-	Reference* source;
-	CodeableConcept* orderedBy;
-	int note_count;
-	Annotation* note;
-	int entry_count;
-	List_Entry* entry;
-	CodeableConcept* emptyReason;
+	Reference *source;
+	CodeableConcept *orderedBy;
+	U64 note_count;
+	Annotation *note;
+	U64 entry_count;
+	List_Entry *entry;
+	CodeableConcept *emptyReason;
 };
 class List_Entry {
-public:
-	ResourceType resourceType = ResourceType::List_Entry;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* flag;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *flag;
 	fhir_boolean deleted;
 	fhir_dateTime date;
-	Reference* item;
+	Reference *item;
 };
 class Location {
-public:
-	ResourceType resourceType = ResourceType::Location;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	Coding* operationalStatus;
+	Coding *operationalStatus;
 	fhir_string name;
-	int alias_count;
-	fhir_string* alias;
+	U64 alias_count;
+	fhir_string *alias;
 	fhir_string description;
 	fhir_code mode;
-	int type_count;
-	CodeableConcept* type;
-	int telecom_count;
-	ContactPoint* telecom;
-	Address* address;
-	CodeableConcept* physicalType;
-	Location_Position* position;
-	Reference* managingOrganization;
-	Reference* partOf;
-	int hoursOfOperation_count;
-	Location_HoursOfOperation* hoursOfOperation;
+	U64 type_count;
+	CodeableConcept *type;
+	U64 telecom_count;
+	ContactPoint *telecom;
+	Address *address;
+	CodeableConcept *physicalType;
+	Location_Position *position;
+	Reference *managingOrganization;
+	Reference *partOf;
+	U64 hoursOfOperation_count;
+	Location_HoursOfOperation *hoursOfOperation;
 	fhir_string availabilityExceptions;
-	int endpoint_count;
-	Reference* endpoint;
+	U64 endpoint_count;
+	Reference *endpoint;
 };
 class Location_Position {
-public:
-	ResourceType resourceType = ResourceType::Location_Position;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_decimal longitude;
 	fhir_decimal latitude;
 	fhir_decimal altitude;
 };
 class Location_HoursOfOperation {
-public:
-	ResourceType resourceType = ResourceType::Location_HoursOfOperation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int daysOfWeek_count;
-	fhir_code* daysOfWeek;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 daysOfWeek_count;
+	fhir_code *daysOfWeek;
 	fhir_boolean allDay;
 	fhir_time openingTime;
 	fhir_time closingTime;
 };
 class Measure {
-public:
-	ResourceType resourceType = ResourceType::Measure;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -8629,6 +8718,7 @@ public:
 		Reference
 	};
 	SubjectType subject_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -8636,425 +8726,430 @@ public:
 
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	int topic_count;
-	CodeableConcept* topic;
-	int author_count;
-	ContactDetail* author;
-	int editor_count;
-	ContactDetail* editor;
-	int reviewer_count;
-	ContactDetail* reviewer;
-	int endorser_count;
-	ContactDetail* endorser;
-	int relatedArtifact_count;
-	RelatedArtifact* relatedArtifact;
-	int library_count;
-	fhir_canonical* library;
+	Period *effectivePeriod;
+	U64 topic_count;
+	CodeableConcept *topic;
+	U64 author_count;
+	ContactDetail *author;
+	U64 editor_count;
+	ContactDetail *editor;
+	U64 reviewer_count;
+	ContactDetail *reviewer;
+	U64 endorser_count;
+	ContactDetail *endorser;
+	U64 relatedArtifact_count;
+	RelatedArtifact *relatedArtifact;
+	U64 library_count;
+	fhir_canonical *library;
 	fhir_markdown disclaimer;
-	CodeableConcept* scoring;
-	CodeableConcept* compositeScoring;
-	int type_count;
-	CodeableConcept* type;
+	CodeableConcept *scoring;
+	CodeableConcept *compositeScoring;
+	U64 type_count;
+	CodeableConcept *type;
 	fhir_string riskAdjustment;
 	fhir_string rateAggregation;
 	fhir_markdown rationale;
 	fhir_markdown clinicalRecommendationStatement;
-	CodeableConcept* improvementNotation;
-	int definition_count;
-	fhir_markdown* definition;
+	CodeableConcept *improvementNotation;
+	U64 definition_count;
+	fhir_markdown *definition;
 	fhir_markdown guidance;
-	int group_count;
-	Measure_Group* group;
-	int supplementalData_count;
-	Measure_SupplementalData* supplementalData;
+	U64 group_count;
+	Measure_Group *group;
+	U64 supplementalData_count;
+	Measure_SupplementalData *supplementalData;
 };
 class Measure_Group {
-public:
-	ResourceType resourceType = ResourceType::Measure_Group;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
 	fhir_string description;
-	int population_count;
-	Measure_Group_Population* population;
-	int stratifier_count;
-	Measure_Group_Stratifier* stratifier;
+	U64 population_count;
+	Measure_Group_Population *population;
+	U64 stratifier_count;
+	Measure_Group_Stratifier *stratifier;
 };
 class Measure_Group_Population {
-public:
-	ResourceType resourceType = ResourceType::Measure_Group_Population;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
 	fhir_string description;
-	Expression* criteria;
+	Expression *criteria;
 };
 class Measure_Group_Stratifier {
-public:
-	ResourceType resourceType = ResourceType::Measure_Group_Stratifier;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
 	fhir_string description;
-	Expression* criteria;
-	int component_count;
-	Measure_Group_Stratifier_Component* component;
+	Expression *criteria;
+	U64 component_count;
+	Measure_Group_Stratifier_Component *component;
 };
 class Measure_Group_Stratifier_Component {
-public:
-	ResourceType resourceType = ResourceType::Measure_Group_Stratifier_Component;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
 	fhir_string description;
-	Expression* criteria;
+	Expression *criteria;
 };
 class Measure_SupplementalData {
-public:
-	ResourceType resourceType = ResourceType::Measure_SupplementalData;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	int usage_count;
-	CodeableConcept* usage;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	U64 usage_count;
+	CodeableConcept *usage;
 	fhir_string description;
-	Expression* criteria;
+	Expression *criteria;
 };
 class MeasureReport {
-public:
-	ResourceType resourceType = ResourceType::MeasureReport;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
 	fhir_code type;
 	fhir_canonical measure;
-	Reference* subject;
+	Reference *subject;
 	fhir_dateTime date;
-	Reference* reporter;
-	Period* period;
-	CodeableConcept* improvementNotation;
-	int group_count;
-	MeasureReport_Group* group;
-	int evaluatedResource_count;
-	Reference* evaluatedResource;
+	Reference *reporter;
+	Period *period;
+	CodeableConcept *improvementNotation;
+	U64 group_count;
+	MeasureReport_Group *group;
+	U64 evaluatedResource_count;
+	Reference *evaluatedResource;
 };
 class MeasureReport_Group {
-public:
-	ResourceType resourceType = ResourceType::MeasureReport_Group;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	int population_count;
-	MeasureReport_Group_Population* population;
-	Quantity* measureScore;
-	int stratifier_count;
-	MeasureReport_Group_Stratifier* stratifier;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	U64 population_count;
+	MeasureReport_Group_Population *population;
+	Quantity *measureScore;
+	U64 stratifier_count;
+	MeasureReport_Group_Stratifier *stratifier;
 };
 class MeasureReport_Group_Population {
-public:
-	ResourceType resourceType = ResourceType::MeasureReport_Group_Population;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	Integer* count;
-	Reference* subjectResults;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	Integer *count;
+	Reference *subjectResults;
 };
 class MeasureReport_Group_Stratifier {
-public:
-	ResourceType resourceType = ResourceType::MeasureReport_Group_Stratifier;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int code_count;
-	CodeableConcept* code;
-	int stratum_count;
-	MeasureReport_Group_Stratifier_Stratum* stratum;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 code_count;
+	CodeableConcept *code;
+	U64 stratum_count;
+	MeasureReport_Group_Stratifier_Stratum *stratum;
 };
 class MeasureReport_Group_Stratifier_Stratum {
-public:
-	ResourceType resourceType = ResourceType::MeasureReport_Group_Stratifier_Stratum;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* value;
-	int component_count;
-	MeasureReport_Group_Stratifier_Stratum_Component* component;
-	int population_count;
-	MeasureReport_Group_Stratifier_Stratum_Population* population;
-	Quantity* measureScore;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *value;
+	U64 component_count;
+	MeasureReport_Group_Stratifier_Stratum_Component *component;
+	U64 population_count;
+	MeasureReport_Group_Stratifier_Stratum_Population *population;
+	Quantity *measureScore;
 };
 class MeasureReport_Group_Stratifier_Stratum_Component {
-public:
-	ResourceType resourceType = ResourceType::MeasureReport_Group_Stratifier_Stratum_Component;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	CodeableConcept* value;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	CodeableConcept *value;
 };
 class MeasureReport_Group_Stratifier_Stratum_Population {
-public:
-	ResourceType resourceType = ResourceType::MeasureReport_Group_Stratifier_Stratum_Population;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	Integer* count;
-	Reference* subjectResults;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	Integer *count;
+	Reference *subjectResults;
 };
 class Media {
-public:
-	ResourceType resourceType = ResourceType::Media;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int basedOn_count;
-	Reference* basedOn;
-	int partOf_count;
-	Reference* partOf;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 partOf_count;
+	Reference *partOf;
 	fhir_code status;
-	CodeableConcept* type;
-	CodeableConcept* modality;
-	CodeableConcept* view;
-	Reference* subject;
-	Reference* encounter;
+	CodeableConcept *type;
+	CodeableConcept *modality;
+	CodeableConcept *view;
+	Reference *subject;
+	Reference *encounter;
 	enum class CreatedType {
 		fhir_dateTime,
 		Period
 	};
 	CreatedType created_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
 	} created;
 
 	fhir_instant issued;
-	Reference* operator_;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	CodeableConcept* bodySite;
+	Reference *operator_;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	CodeableConcept *bodySite;
 	fhir_string deviceName;
-	Reference* device;
+	Reference *device;
 	fhir_positiveInt height;
 	fhir_positiveInt width;
 	fhir_positiveInt frames;
 	fhir_decimal duration;
-	Attachment* content;
-	int note_count;
-	Annotation* note;
+	Attachment *content;
+	U64 note_count;
+	Annotation *note;
 };
 class Medication {
-public:
-	ResourceType resourceType = ResourceType::Medication;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* code;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *code;
 	fhir_code status;
-	Reference* manufacturer;
-	CodeableConcept* form;
-	Ratio* amount;
-	int ingredient_count;
-	Medication_Ingredient* ingredient;
-	Medication_Batch* batch;
+	Reference *manufacturer;
+	CodeableConcept *form;
+	Ratio *amount;
+	U64 ingredient_count;
+	Medication_Ingredient *ingredient;
+	Medication_Batch *batch;
 };
 class Medication_Ingredient {
-public:
-	ResourceType resourceType = ResourceType::Medication_Ingredient;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ItemType {
 		CodeableConcept,
 		Reference
 	};
 	ItemType item_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} item;
 
 	fhir_boolean isActive;
-	Ratio* strength;
+	Ratio *strength;
 };
 class Medication_Batch {
-public:
-	ResourceType resourceType = ResourceType::Medication_Batch;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string lotNumber;
 	fhir_dateTime expirationDate;
 };
 class MedicationAdministration {
-public:
-	ResourceType resourceType = ResourceType::MedicationAdministration;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int instantiates_count;
-	fhir_uri* instantiates;
-	int partOf_count;
-	Reference* partOf;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 instantiates_count;
+	fhir_uri *instantiates;
+	U64 partOf_count;
+	Reference *partOf;
 	fhir_code status;
-	int statusReason_count;
-	CodeableConcept* statusReason;
-	CodeableConcept* category;
+	U64 statusReason_count;
+	CodeableConcept *statusReason;
+	CodeableConcept *category;
 	enum class MedicationType {
 		CodeableConcept,
 		Reference
 	};
 	MedicationType medication_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} medication;
 
-	Reference* subject;
-	Reference* context;
-	int supportingInformation_count;
-	Reference* supportingInformation;
+	Reference *subject;
+	Reference *context;
+	U64 supportingInformation_count;
+	Reference *supportingInformation;
 	enum class EffectiveType {
 		fhir_dateTime,
 		Period
 	};
 	EffectiveType effective_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
 	} effective;
 
-	int performer_count;
-	MedicationAdministration_Performer* performer;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	Reference* request;
-	int device_count;
-	Reference* device;
-	int note_count;
-	Annotation* note;
-	MedicationAdministration_Dosage* dosage;
-	int eventHistory_count;
-	Reference* eventHistory;
+	U64 performer_count;
+	MedicationAdministration_Performer *performer;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	Reference *request;
+	U64 device_count;
+	Reference *device;
+	U64 note_count;
+	Annotation *note;
+	MedicationAdministration_Dosage *dosage;
+	U64 eventHistory_count;
+	Reference *eventHistory;
 };
 class MedicationAdministration_Performer {
-public:
-	ResourceType resourceType = ResourceType::MedicationAdministration_Performer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* function_;
-	Reference* actor;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *function_;
+	Reference *actor;
 };
 class MedicationAdministration_Dosage {
-public:
-	ResourceType resourceType = ResourceType::MedicationAdministration_Dosage;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string text;
-	CodeableConcept* site;
-	CodeableConcept* route;
-	CodeableConcept* method;
-	Quantity* dose;
+	CodeableConcept *site;
+	CodeableConcept *route;
+	CodeableConcept *method;
+	Quantity *dose;
 	enum class RateType {
 		Ratio,
 		Quantity
 	};
 	RateType rate_type;
+
 	union {
 		Ratio* valueRatio;
 		Quantity* valueQuantity;
@@ -9062,305 +9157,310 @@ public:
 
 };
 class MedicationDispense {
-public:
-	ResourceType resourceType = ResourceType::MedicationDispense;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int partOf_count;
-	Reference* partOf;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 partOf_count;
+	Reference *partOf;
 	fhir_code status;
 	enum class StatusReasonType {
 		CodeableConcept,
 		Reference
 	};
 	StatusReasonType statusReason_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} statusReason;
 
-	CodeableConcept* category;
+	CodeableConcept *category;
 	enum class MedicationType {
 		CodeableConcept,
 		Reference
 	};
 	MedicationType medication_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} medication;
 
-	Reference* subject;
-	Reference* context;
-	int supportingInformation_count;
-	Reference* supportingInformation;
-	int performer_count;
-	MedicationDispense_Performer* performer;
-	Reference* location;
-	int authorizingPrescription_count;
-	Reference* authorizingPrescription;
-	CodeableConcept* type;
-	Quantity* quantity;
-	Quantity* daysSupply;
+	Reference *subject;
+	Reference *context;
+	U64 supportingInformation_count;
+	Reference *supportingInformation;
+	U64 performer_count;
+	MedicationDispense_Performer *performer;
+	Reference *location;
+	U64 authorizingPrescription_count;
+	Reference *authorizingPrescription;
+	CodeableConcept *type;
+	Quantity *quantity;
+	Quantity *daysSupply;
 	fhir_dateTime whenPrepared;
 	fhir_dateTime whenHandedOver;
-	Reference* destination;
-	int receiver_count;
-	Reference* receiver;
-	int note_count;
-	Annotation* note;
-	int dosageInstruction_count;
-	Dosage* dosageInstruction;
-	MedicationDispense_Substitution* substitution;
-	int detectedIssue_count;
-	Reference* detectedIssue;
-	int eventHistory_count;
-	Reference* eventHistory;
+	Reference *destination;
+	U64 receiver_count;
+	Reference *receiver;
+	U64 note_count;
+	Annotation *note;
+	U64 dosageInstruction_count;
+	Dosage *dosageInstruction;
+	MedicationDispense_Substitution *substitution;
+	U64 detectedIssue_count;
+	Reference *detectedIssue;
+	U64 eventHistory_count;
+	Reference *eventHistory;
 };
 class MedicationDispense_Performer {
-public:
-	ResourceType resourceType = ResourceType::MedicationDispense_Performer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* function_;
-	Reference* actor;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *function_;
+	Reference *actor;
 };
 class MedicationDispense_Substitution {
-public:
-	ResourceType resourceType = ResourceType::MedicationDispense_Substitution;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean wasSubstituted;
-	CodeableConcept* type;
-	int reason_count;
-	CodeableConcept* reason;
-	int responsibleParty_count;
-	Reference* responsibleParty;
+	CodeableConcept *type;
+	U64 reason_count;
+	CodeableConcept *reason;
+	U64 responsibleParty_count;
+	Reference *responsibleParty;
 };
 class MedicationKnowledge {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
 	fhir_code status;
-	Reference* manufacturer;
-	CodeableConcept* doseForm;
-	Quantity* amount;
-	int synonym_count;
-	fhir_string* synonym;
-	int relatedMedicationKnowledge_count;
-	MedicationKnowledge_RelatedMedicationKnowledge* relatedMedicationKnowledge;
-	int associatedMedication_count;
-	Reference* associatedMedication;
-	int productType_count;
-	CodeableConcept* productType;
-	int monograph_count;
-	MedicationKnowledge_Monograph* monograph;
-	int ingredient_count;
-	MedicationKnowledge_Ingredient* ingredient;
+	Reference *manufacturer;
+	CodeableConcept *doseForm;
+	Quantity *amount;
+	U64 synonym_count;
+	fhir_string *synonym;
+	U64 relatedMedicationKnowledge_count;
+	MedicationKnowledge_RelatedMedicationKnowledge *relatedMedicationKnowledge;
+	U64 associatedMedication_count;
+	Reference *associatedMedication;
+	U64 productType_count;
+	CodeableConcept *productType;
+	U64 monograph_count;
+	MedicationKnowledge_Monograph *monograph;
+	U64 ingredient_count;
+	MedicationKnowledge_Ingredient *ingredient;
 	fhir_markdown preparationInstruction;
-	int intendedRoute_count;
-	CodeableConcept* intendedRoute;
-	int cost_count;
-	MedicationKnowledge_Cost* cost;
-	int monitoringProgram_count;
-	MedicationKnowledge_MonitoringProgram* monitoringProgram;
-	int administrationGuidelines_count;
-	MedicationKnowledge_AdministrationGuidelines* administrationGuidelines;
-	int medicineClassification_count;
-	MedicationKnowledge_MedicineClassification* medicineClassification;
-	MedicationKnowledge_Packaging* packaging;
-	int drugCharacteristic_count;
-	MedicationKnowledge_DrugCharacteristic* drugCharacteristic;
-	int contraindication_count;
-	Reference* contraindication;
-	int regulatory_count;
-	MedicationKnowledge_Regulatory* regulatory;
-	int kinetics_count;
-	MedicationKnowledge_Kinetics* kinetics;
+	U64 intendedRoute_count;
+	CodeableConcept *intendedRoute;
+	U64 cost_count;
+	MedicationKnowledge_Cost *cost;
+	U64 monitoringProgram_count;
+	MedicationKnowledge_MonitoringProgram *monitoringProgram;
+	U64 administrationGuidelines_count;
+	MedicationKnowledge_AdministrationGuidelines *administrationGuidelines;
+	U64 medicineClassification_count;
+	MedicationKnowledge_MedicineClassification *medicineClassification;
+	MedicationKnowledge_Packaging *packaging;
+	U64 drugCharacteristic_count;
+	MedicationKnowledge_DrugCharacteristic *drugCharacteristic;
+	U64 contraindication_count;
+	Reference *contraindication;
+	U64 regulatory_count;
+	MedicationKnowledge_Regulatory *regulatory;
+	U64 kinetics_count;
+	MedicationKnowledge_Kinetics *kinetics;
 };
 class MedicationKnowledge_RelatedMedicationKnowledge {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_RelatedMedicationKnowledge;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	int reference_count;
-	Reference* reference;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	U64 reference_count;
+	Reference *reference;
 };
 class MedicationKnowledge_Monograph {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_Monograph;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	Reference* source;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	Reference *source;
 };
 class MedicationKnowledge_Ingredient {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_Ingredient;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ItemType {
 		CodeableConcept,
 		Reference
 	};
 	ItemType item_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} item;
 
 	fhir_boolean isActive;
-	Ratio* strength;
+	Ratio *strength;
 };
 class MedicationKnowledge_Cost {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_Cost;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	fhir_string source;
-	Money* cost;
+	Money *cost;
 };
 class MedicationKnowledge_MonitoringProgram {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_MonitoringProgram;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	fhir_string name;
 };
 class MedicationKnowledge_AdministrationGuidelines {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_AdministrationGuidelines;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int dosage_count;
-	MedicationKnowledge_AdministrationGuidelines_Dosage* dosage;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 dosage_count;
+	MedicationKnowledge_AdministrationGuidelines_Dosage *dosage;
 	enum class IndicationType {
 		CodeableConcept,
 		Reference
 	};
 	IndicationType indication_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} indication;
 
-	int patientCharacteristics_count;
-	MedicationKnowledge_AdministrationGuidelines_PatientCharacteristics* patientCharacteristics;
+	U64 patientCharacteristics_count;
+	MedicationKnowledge_AdministrationGuidelines_PatientCharacteristics *patientCharacteristics;
 };
 class MedicationKnowledge_AdministrationGuidelines_Dosage {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_AdministrationGuidelines_Dosage;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	int dosage_count;
-	Dosage* dosage;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	U64 dosage_count;
+	Dosage *dosage;
 };
 class MedicationKnowledge_AdministrationGuidelines_PatientCharacteristics {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_AdministrationGuidelines_PatientCharacteristics;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class CharacteristicType {
 		CodeableConcept,
 		Quantity
 	};
 	CharacteristicType characteristic_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Quantity* valueQuantity;
 	} characteristic;
 
-	int value_count;
-	fhir_string* value;
+	U64 value_count;
+	fhir_string *value;
 };
 class MedicationKnowledge_MedicineClassification {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_MedicineClassification;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	int classification_count;
-	CodeableConcept* classification;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	U64 classification_count;
+	CodeableConcept *classification;
 };
 class MedicationKnowledge_Packaging {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_Packaging;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	Quantity* quantity;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	Quantity *quantity;
 };
 class MedicationKnowledge_DrugCharacteristic {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_DrugCharacteristic;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	enum class ValueType {
 		CodeableConcept,
 		fhir_string,
@@ -9368,6 +9468,7 @@ public:
 		fhir_base64Binary
 	};
 	ValueType value_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		fhir_string valueString;
@@ -9377,87 +9478,87 @@ public:
 
 };
 class MedicationKnowledge_Regulatory {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_Regulatory;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* regulatoryAuthority;
-	int substitution_count;
-	MedicationKnowledge_Regulatory_Substitution* substitution;
-	int schedule_count;
-	MedicationKnowledge_Regulatory_Schedule* schedule;
-	MedicationKnowledge_Regulatory_MaxDispense* maxDispense;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *regulatoryAuthority;
+	U64 substitution_count;
+	MedicationKnowledge_Regulatory_Substitution *substitution;
+	U64 schedule_count;
+	MedicationKnowledge_Regulatory_Schedule *schedule;
+	MedicationKnowledge_Regulatory_MaxDispense *maxDispense;
 };
 class MedicationKnowledge_Regulatory_Substitution {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_Regulatory_Substitution;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	fhir_boolean allowed;
 };
 class MedicationKnowledge_Regulatory_Schedule {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_Regulatory_Schedule;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* schedule;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *schedule;
 };
 class MedicationKnowledge_Regulatory_MaxDispense {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_Regulatory_MaxDispense;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Quantity* quantity;
-	Duration* period;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Quantity *quantity;
+	Duration *period;
 };
 class MedicationKnowledge_Kinetics {
-public:
-	ResourceType resourceType = ResourceType::MedicationKnowledge_Kinetics;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int areaUnderCurve_count;
-	Quantity* areaUnderCurve;
-	int lethalDose50_count;
-	Quantity* lethalDose50;
-	Duration* halfLifePeriod;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 areaUnderCurve_count;
+	Quantity *areaUnderCurve;
+	U64 lethalDose50_count;
+	Quantity *lethalDose50;
+	Duration *halfLifePeriod;
 };
 class MedicationRequest {
-public:
-	ResourceType resourceType = ResourceType::MedicationRequest;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* statusReason;
+	CodeableConcept *statusReason;
 	fhir_code intent;
-	int category_count;
-	CodeableConcept* category;
+	U64 category_count;
+	CodeableConcept *category;
 	fhir_code priority;
 	fhir_boolean doNotPerform;
 	enum class ReportedType {
@@ -9465,6 +9566,7 @@ public:
 		Reference
 	};
 	ReportedType reported_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		Reference* valueReference;
@@ -9475,395 +9577,402 @@ public:
 		Reference
 	};
 	MedicationType medication_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} medication;
 
-	Reference* subject;
-	Reference* encounter;
-	int supportingInformation_count;
-	Reference* supportingInformation;
+	Reference *subject;
+	Reference *encounter;
+	U64 supportingInformation_count;
+	Reference *supportingInformation;
 	fhir_dateTime authoredOn;
-	Reference* requester;
-	Reference* performer;
-	CodeableConcept* performerType;
-	Reference* recorder;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int instantiatesCanonical_count;
-	fhir_canonical* instantiatesCanonical;
-	int instantiatesUri_count;
-	fhir_uri* instantiatesUri;
-	int basedOn_count;
-	Reference* basedOn;
-	Identifier* groupIdentifier;
-	CodeableConcept* courseOfTherapyType;
-	int insurance_count;
-	Reference* insurance;
-	int note_count;
-	Annotation* note;
-	int dosageInstruction_count;
-	Dosage* dosageInstruction;
-	MedicationRequest_DispenseRequest* dispenseRequest;
-	MedicationRequest_Substitution* substitution;
-	Reference* priorPrescription;
-	int detectedIssue_count;
-	Reference* detectedIssue;
-	int eventHistory_count;
-	Reference* eventHistory;
+	Reference *requester;
+	Reference *performer;
+	CodeableConcept *performerType;
+	Reference *recorder;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 instantiatesCanonical_count;
+	fhir_canonical *instantiatesCanonical;
+	U64 instantiatesUri_count;
+	fhir_uri *instantiatesUri;
+	U64 basedOn_count;
+	Reference *basedOn;
+	Identifier *groupIdentifier;
+	CodeableConcept *courseOfTherapyType;
+	U64 insurance_count;
+	Reference *insurance;
+	U64 note_count;
+	Annotation *note;
+	U64 dosageInstruction_count;
+	Dosage *dosageInstruction;
+	MedicationRequest_DispenseRequest *dispenseRequest;
+	MedicationRequest_Substitution *substitution;
+	Reference *priorPrescription;
+	U64 detectedIssue_count;
+	Reference *detectedIssue;
+	U64 eventHistory_count;
+	Reference *eventHistory;
 };
 class MedicationRequest_DispenseRequest {
-public:
-	ResourceType resourceType = ResourceType::MedicationRequest_DispenseRequest;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	MedicationRequest_DispenseRequest_InitialFill* initialFill;
-	Duration* dispenseInterval;
-	Period* validityPeriod;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	MedicationRequest_DispenseRequest_InitialFill *initialFill;
+	Duration *dispenseInterval;
+	Period *validityPeriod;
 	fhir_unsignedInt numberOfRepeatsAllowed;
-	Quantity* quantity;
-	Duration* expectedSupplyDuration;
-	Reference* performer;
+	Quantity *quantity;
+	Duration *expectedSupplyDuration;
+	Reference *performer;
 };
 class MedicationRequest_DispenseRequest_InitialFill {
-public:
-	ResourceType resourceType = ResourceType::MedicationRequest_DispenseRequest_InitialFill;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Quantity* quantity;
-	Duration* duration;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Quantity *quantity;
+	Duration *duration;
 };
 class MedicationRequest_Substitution {
-public:
-	ResourceType resourceType = ResourceType::MedicationRequest_Substitution;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class AllowedType {
 		fhir_boolean,
 		CodeableConcept
 	};
 	AllowedType allowed_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		CodeableConcept* valueCodeableConcept;
 	} allowed;
 
-	CodeableConcept* reason;
+	CodeableConcept *reason;
 };
 class MedicationStatement {
-public:
-	ResourceType resourceType = ResourceType::MedicationStatement;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int basedOn_count;
-	Reference* basedOn;
-	int partOf_count;
-	Reference* partOf;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 partOf_count;
+	Reference *partOf;
 	fhir_code status;
-	int statusReason_count;
-	CodeableConcept* statusReason;
-	CodeableConcept* category;
+	U64 statusReason_count;
+	CodeableConcept *statusReason;
+	CodeableConcept *category;
 	enum class MedicationType {
 		CodeableConcept,
 		Reference
 	};
 	MedicationType medication_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} medication;
 
-	Reference* subject;
-	Reference* context;
+	Reference *subject;
+	Reference *context;
 	enum class EffectiveType {
 		fhir_dateTime,
 		Period
 	};
 	EffectiveType effective_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
 	} effective;
 
 	fhir_dateTime dateAsserted;
-	Reference* informationSource;
-	int derivedFrom_count;
-	Reference* derivedFrom;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int note_count;
-	Annotation* note;
-	int dosage_count;
-	Dosage* dosage;
+	Reference *informationSource;
+	U64 derivedFrom_count;
+	Reference *derivedFrom;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 note_count;
+	Annotation *note;
+	U64 dosage_count;
+	Dosage *dosage;
 };
 class MedicinalProduct {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProduct;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* type;
-	Coding* domain;
-	CodeableConcept* combinedPharmaceuticalDoseForm;
-	CodeableConcept* legalStatusOfSupply;
-	CodeableConcept* additionalMonitoringIndicator;
-	int specialMeasures_count;
-	fhir_string* specialMeasures;
-	CodeableConcept* paediatricUseIndicator;
-	int productClassification_count;
-	CodeableConcept* productClassification;
-	int marketingStatus_count;
-	MarketingStatus* marketingStatus;
-	int pharmaceuticalProduct_count;
-	Reference* pharmaceuticalProduct;
-	int packagedMedicinalProduct_count;
-	Reference* packagedMedicinalProduct;
-	int attachedDocument_count;
-	Reference* attachedDocument;
-	int masterFile_count;
-	Reference* masterFile;
-	int contact_count;
-	Reference* contact;
-	int clinicalTrial_count;
-	Reference* clinicalTrial;
-	int name_count;
-	MedicinalProduct_Name* name;
-	int crossReference_count;
-	Identifier* crossReference;
-	int manufacturingBusinessOperation_count;
-	MedicinalProduct_ManufacturingBusinessOperation* manufacturingBusinessOperation;
-	int specialDesignation_count;
-	MedicinalProduct_SpecialDesignation* specialDesignation;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *type;
+	Coding *domain;
+	CodeableConcept *combinedPharmaceuticalDoseForm;
+	CodeableConcept *legalStatusOfSupply;
+	CodeableConcept *additionalMonitoringIndicator;
+	U64 specialMeasures_count;
+	fhir_string *specialMeasures;
+	CodeableConcept *paediatricUseIndicator;
+	U64 productClassification_count;
+	CodeableConcept *productClassification;
+	U64 marketingStatus_count;
+	MarketingStatus *marketingStatus;
+	U64 pharmaceuticalProduct_count;
+	Reference *pharmaceuticalProduct;
+	U64 packagedMedicinalProduct_count;
+	Reference *packagedMedicinalProduct;
+	U64 attachedDocument_count;
+	Reference *attachedDocument;
+	U64 masterFile_count;
+	Reference *masterFile;
+	U64 contact_count;
+	Reference *contact;
+	U64 clinicalTrial_count;
+	Reference *clinicalTrial;
+	U64 name_count;
+	MedicinalProduct_Name *name;
+	U64 crossReference_count;
+	Identifier *crossReference;
+	U64 manufacturingBusinessOperation_count;
+	MedicinalProduct_ManufacturingBusinessOperation *manufacturingBusinessOperation;
+	U64 specialDesignation_count;
+	MedicinalProduct_SpecialDesignation *specialDesignation;
 };
 class MedicinalProduct_Name {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProduct_Name;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string productName;
-	int namePart_count;
-	MedicinalProduct_Name_NamePart* namePart;
-	int countryLanguage_count;
-	MedicinalProduct_Name_CountryLanguage* countryLanguage;
+	U64 namePart_count;
+	MedicinalProduct_Name_NamePart *namePart;
+	U64 countryLanguage_count;
+	MedicinalProduct_Name_CountryLanguage *countryLanguage;
 };
 class MedicinalProduct_Name_NamePart {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProduct_Name_NamePart;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string part;
-	Coding* type;
+	Coding *type;
 };
 class MedicinalProduct_Name_CountryLanguage {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProduct_Name_CountryLanguage;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* country;
-	CodeableConcept* jurisdiction;
-	CodeableConcept* language;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *country;
+	CodeableConcept *jurisdiction;
+	CodeableConcept *language;
 };
 class MedicinalProduct_ManufacturingBusinessOperation {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProduct_ManufacturingBusinessOperation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* operationType;
-	Identifier* authorisationReferenceNumber;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *operationType;
+	Identifier *authorisationReferenceNumber;
 	fhir_dateTime effectiveDate;
-	CodeableConcept* confidentialityIndicator;
-	int manufacturer_count;
-	Reference* manufacturer;
-	Reference* regulator;
+	CodeableConcept *confidentialityIndicator;
+	U64 manufacturer_count;
+	Reference *manufacturer;
+	Reference *regulator;
 };
 class MedicinalProduct_SpecialDesignation {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProduct_SpecialDesignation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* type;
-	CodeableConcept* intendedUse;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *type;
+	CodeableConcept *intendedUse;
 	enum class IndicationType {
 		CodeableConcept,
 		Reference
 	};
 	IndicationType indication_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} indication;
 
-	CodeableConcept* status;
+	CodeableConcept *status;
 	fhir_dateTime date;
-	CodeableConcept* species;
+	CodeableConcept *species;
 };
 class MedicinalProductAuthorization {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductAuthorization;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	Reference* subject;
-	int country_count;
-	CodeableConcept* country;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
-	CodeableConcept* status;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	Reference *subject;
+	U64 country_count;
+	CodeableConcept *country;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
+	CodeableConcept *status;
 	fhir_dateTime statusDate;
 	fhir_dateTime restoreDate;
-	Period* validityPeriod;
-	Period* dataExclusivityPeriod;
+	Period *validityPeriod;
+	Period *dataExclusivityPeriod;
 	fhir_dateTime dateOfFirstAuthorization;
 	fhir_dateTime internationalBirthDate;
-	CodeableConcept* legalBasis;
-	int jurisdictionalAuthorization_count;
-	MedicinalProductAuthorization_JurisdictionalAuthorization* jurisdictionalAuthorization;
-	Reference* holder;
-	Reference* regulator;
-	MedicinalProductAuthorization_Procedure* procedure;
+	CodeableConcept *legalBasis;
+	U64 jurisdictionalAuthorization_count;
+	MedicinalProductAuthorization_JurisdictionalAuthorization *jurisdictionalAuthorization;
+	Reference *holder;
+	Reference *regulator;
+	MedicinalProductAuthorization_Procedure *procedure;
 };
 class MedicinalProductAuthorization_JurisdictionalAuthorization {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductAuthorization_JurisdictionalAuthorization;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* country;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
-	CodeableConcept* legalStatusOfSupply;
-	Period* validityPeriod;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *country;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
+	CodeableConcept *legalStatusOfSupply;
+	Period *validityPeriod;
 };
 class MedicinalProductAuthorization_Procedure {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductAuthorization_Procedure;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
+	CodeableConcept *type;
 	enum class DateType {
 		Period,
 		fhir_dateTime
 	};
 	DateType date_type;
+
 	union {
 		Period* valuePeriod;
 		fhir_dateTime valueDateTime;
 	} date;
 
-	int application_count;
-	MedicinalProductAuthorization_Procedure* application;
+	U64 application_count;
+	MedicinalProductAuthorization_Procedure *application;
 };
 class MedicinalProductContraindication {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductContraindication;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int subject_count;
-	Reference* subject;
-	CodeableConcept* disease;
-	CodeableConcept* diseaseStatus;
-	int comorbidity_count;
-	CodeableConcept* comorbidity;
-	int therapeuticIndication_count;
-	Reference* therapeuticIndication;
-	int otherTherapy_count;
-	MedicinalProductContraindication_OtherTherapy* otherTherapy;
-	int population_count;
-	Population* population;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 subject_count;
+	Reference *subject;
+	CodeableConcept *disease;
+	CodeableConcept *diseaseStatus;
+	U64 comorbidity_count;
+	CodeableConcept *comorbidity;
+	U64 therapeuticIndication_count;
+	Reference *therapeuticIndication;
+	U64 otherTherapy_count;
+	MedicinalProductContraindication_OtherTherapy *otherTherapy;
+	U64 population_count;
+	Population *population;
 };
 class MedicinalProductContraindication_OtherTherapy {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductContraindication_OtherTherapy;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* therapyRelationshipType;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *therapyRelationshipType;
 	enum class MedicationType {
 		CodeableConcept,
 		Reference
 	};
 	MedicationType medication_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -9871,48 +9980,49 @@ public:
 
 };
 class MedicinalProductIndication {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductIndication;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int subject_count;
-	Reference* subject;
-	CodeableConcept* diseaseSymptomProcedure;
-	CodeableConcept* diseaseStatus;
-	int comorbidity_count;
-	CodeableConcept* comorbidity;
-	CodeableConcept* intendedEffect;
-	Quantity* duration;
-	int otherTherapy_count;
-	MedicinalProductIndication_OtherTherapy* otherTherapy;
-	int undesirableEffect_count;
-	Reference* undesirableEffect;
-	int population_count;
-	Population* population;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 subject_count;
+	Reference *subject;
+	CodeableConcept *diseaseSymptomProcedure;
+	CodeableConcept *diseaseStatus;
+	U64 comorbidity_count;
+	CodeableConcept *comorbidity;
+	CodeableConcept *intendedEffect;
+	Quantity *duration;
+	U64 otherTherapy_count;
+	MedicinalProductIndication_OtherTherapy *otherTherapy;
+	U64 undesirableEffect_count;
+	Reference *undesirableEffect;
+	U64 population_count;
+	Population *population;
 };
 class MedicinalProductIndication_OtherTherapy {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductIndication_OtherTherapy;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* therapyRelationshipType;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *therapyRelationshipType;
 	enum class MedicationType {
 		CodeableConcept,
 		Reference
 	};
 	MedicationType medication_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -9920,124 +10030,125 @@ public:
 
 };
 class MedicinalProductIngredient {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductIngredient;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
-	CodeableConcept* role;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
+	CodeableConcept *role;
 	fhir_boolean allergenicIndicator;
-	int manufacturer_count;
-	Reference* manufacturer;
-	int specifiedSubstance_count;
-	MedicinalProductIngredient_SpecifiedSubstance* specifiedSubstance;
-	MedicinalProductIngredient_Substance* substance;
+	U64 manufacturer_count;
+	Reference *manufacturer;
+	U64 specifiedSubstance_count;
+	MedicinalProductIngredient_SpecifiedSubstance *specifiedSubstance;
+	MedicinalProductIngredient_Substance *substance;
 };
 class MedicinalProductIngredient_SpecifiedSubstance {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductIngredient_SpecifiedSubstance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	CodeableConcept* group;
-	CodeableConcept* confidentiality;
-	int strength_count;
-	MedicinalProductIngredient_SpecifiedSubstance_Strength* strength;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	CodeableConcept *group;
+	CodeableConcept *confidentiality;
+	U64 strength_count;
+	MedicinalProductIngredient_SpecifiedSubstance_Strength *strength;
 };
 class MedicinalProductIngredient_SpecifiedSubstance_Strength {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductIngredient_SpecifiedSubstance_Strength;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Ratio* presentation;
-	Ratio* presentationLowLimit;
-	Ratio* concentration;
-	Ratio* concentrationLowLimit;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Ratio *presentation;
+	Ratio *presentationLowLimit;
+	Ratio *concentration;
+	Ratio *concentrationLowLimit;
 	fhir_string measurementPoint;
-	int country_count;
-	CodeableConcept* country;
-	int referenceStrength_count;
-	MedicinalProductIngredient_SpecifiedSubstance_Strength_ReferenceStrength* referenceStrength;
+	U64 country_count;
+	CodeableConcept *country;
+	U64 referenceStrength_count;
+	MedicinalProductIngredient_SpecifiedSubstance_Strength_ReferenceStrength *referenceStrength;
 };
 class MedicinalProductIngredient_SpecifiedSubstance_Strength_ReferenceStrength {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductIngredient_SpecifiedSubstance_Strength_ReferenceStrength;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* substance;
-	Ratio* strength;
-	Ratio* strengthLowLimit;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *substance;
+	Ratio *strength;
+	Ratio *strengthLowLimit;
 	fhir_string measurementPoint;
-	int country_count;
-	CodeableConcept* country;
+	U64 country_count;
+	CodeableConcept *country;
 };
 class MedicinalProductIngredient_Substance {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductIngredient_Substance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	int strength_count;
-	MedicinalProductIngredient_SpecifiedSubstance_Strength* strength;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	U64 strength_count;
+	MedicinalProductIngredient_SpecifiedSubstance_Strength *strength;
 };
 class MedicinalProductInteraction {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductInteraction;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int subject_count;
-	Reference* subject;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 subject_count;
+	Reference *subject;
 	fhir_string description;
-	int interactant_count;
-	MedicinalProductInteraction_Interactant* interactant;
-	CodeableConcept* type;
-	CodeableConcept* effect;
-	CodeableConcept* incidence;
-	CodeableConcept* management;
+	U64 interactant_count;
+	MedicinalProductInteraction_Interactant *interactant;
+	CodeableConcept *type;
+	CodeableConcept *effect;
+	CodeableConcept *incidence;
+	CodeableConcept *management;
 };
 class MedicinalProductInteraction_Interactant {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductInteraction_Interactant;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ItemType {
 		Reference,
 		CodeableConcept
 	};
 	ItemType item_type;
+
 	union {
 		Reference* valueReference;
 		CodeableConcept* valueCodeableConcept;
@@ -10045,443 +10156,445 @@ public:
 
 };
 class MedicinalProductManufactured {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductManufactured;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* manufacturedDoseForm;
-	CodeableConcept* unitOfPresentation;
-	Quantity* quantity;
-	int manufacturer_count;
-	Reference* manufacturer;
-	int ingredient_count;
-	Reference* ingredient;
-	ProdCharacteristic* physicalCharacteristics;
-	int otherCharacteristics_count;
-	CodeableConcept* otherCharacteristics;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *manufacturedDoseForm;
+	CodeableConcept *unitOfPresentation;
+	Quantity *quantity;
+	U64 manufacturer_count;
+	Reference *manufacturer;
+	U64 ingredient_count;
+	Reference *ingredient;
+	ProdCharacteristic *physicalCharacteristics;
+	U64 otherCharacteristics_count;
+	CodeableConcept *otherCharacteristics;
 };
 class MedicinalProductPackaged {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductPackaged;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int subject_count;
-	Reference* subject;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 subject_count;
+	Reference *subject;
 	fhir_string description;
-	CodeableConcept* legalStatusOfSupply;
-	int marketingStatus_count;
-	MarketingStatus* marketingStatus;
-	Reference* marketingAuthorization;
-	int manufacturer_count;
-	Reference* manufacturer;
-	int batchIdentifier_count;
-	MedicinalProductPackaged_BatchIdentifier* batchIdentifier;
-	int packageItem_count;
-	MedicinalProductPackaged_PackageItem* packageItem;
+	CodeableConcept *legalStatusOfSupply;
+	U64 marketingStatus_count;
+	MarketingStatus *marketingStatus;
+	Reference *marketingAuthorization;
+	U64 manufacturer_count;
+	Reference *manufacturer;
+	U64 batchIdentifier_count;
+	MedicinalProductPackaged_BatchIdentifier *batchIdentifier;
+	U64 packageItem_count;
+	MedicinalProductPackaged_PackageItem *packageItem;
 };
 class MedicinalProductPackaged_BatchIdentifier {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductPackaged_BatchIdentifier;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* outerPackaging;
-	Identifier* immediatePackaging;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *outerPackaging;
+	Identifier *immediatePackaging;
 };
 class MedicinalProductPackaged_PackageItem {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductPackaged_PackageItem;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* type;
-	Quantity* quantity;
-	int material_count;
-	CodeableConcept* material;
-	int alternateMaterial_count;
-	CodeableConcept* alternateMaterial;
-	int device_count;
-	Reference* device;
-	int manufacturedItem_count;
-	Reference* manufacturedItem;
-	int packageItem_count;
-	MedicinalProductPackaged_PackageItem* packageItem;
-	ProdCharacteristic* physicalCharacteristics;
-	int otherCharacteristics_count;
-	CodeableConcept* otherCharacteristics;
-	int shelfLifeStorage_count;
-	ProductShelfLife* shelfLifeStorage;
-	int manufacturer_count;
-	Reference* manufacturer;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *type;
+	Quantity *quantity;
+	U64 material_count;
+	CodeableConcept *material;
+	U64 alternateMaterial_count;
+	CodeableConcept *alternateMaterial;
+	U64 device_count;
+	Reference *device;
+	U64 manufacturedItem_count;
+	Reference *manufacturedItem;
+	U64 packageItem_count;
+	MedicinalProductPackaged_PackageItem *packageItem;
+	ProdCharacteristic *physicalCharacteristics;
+	U64 otherCharacteristics_count;
+	CodeableConcept *otherCharacteristics;
+	U64 shelfLifeStorage_count;
+	ProductShelfLife *shelfLifeStorage;
+	U64 manufacturer_count;
+	Reference *manufacturer;
 };
 class MedicinalProductPharmaceutical {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductPharmaceutical;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* administrableDoseForm;
-	CodeableConcept* unitOfPresentation;
-	int ingredient_count;
-	Reference* ingredient;
-	int device_count;
-	Reference* device;
-	int characteristics_count;
-	MedicinalProductPharmaceutical_Characteristics* characteristics;
-	int routeOfAdministration_count;
-	MedicinalProductPharmaceutical_RouteOfAdministration* routeOfAdministration;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *administrableDoseForm;
+	CodeableConcept *unitOfPresentation;
+	U64 ingredient_count;
+	Reference *ingredient;
+	U64 device_count;
+	Reference *device;
+	U64 characteristics_count;
+	MedicinalProductPharmaceutical_Characteristics *characteristics;
+	U64 routeOfAdministration_count;
+	MedicinalProductPharmaceutical_RouteOfAdministration *routeOfAdministration;
 };
 class MedicinalProductPharmaceutical_Characteristics {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductPharmaceutical_Characteristics;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	CodeableConcept* status;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	CodeableConcept *status;
 };
 class MedicinalProductPharmaceutical_RouteOfAdministration {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductPharmaceutical_RouteOfAdministration;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	Quantity* firstDose;
-	Quantity* maxSingleDose;
-	Quantity* maxDosePerDay;
-	Ratio* maxDosePerTreatmentPeriod;
-	Duration* maxTreatmentPeriod;
-	int targetSpecies_count;
-	MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies* targetSpecies;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	Quantity *firstDose;
+	Quantity *maxSingleDose;
+	Quantity *maxDosePerDay;
+	Ratio *maxDosePerTreatmentPeriod;
+	Duration *maxTreatmentPeriod;
+	U64 targetSpecies_count;
+	MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies *targetSpecies;
 };
 class MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	int withdrawalPeriod_count;
-	MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies_WithdrawalPeriod* withdrawalPeriod;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	U64 withdrawalPeriod_count;
+	MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies_WithdrawalPeriod *withdrawalPeriod;
 };
 class MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies_WithdrawalPeriod {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies_WithdrawalPeriod;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* tissue;
-	Quantity* value;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *tissue;
+	Quantity *value;
 	fhir_string supportingInformation;
 };
 class MedicinalProductUndesirableEffect {
-public:
-	ResourceType resourceType = ResourceType::MedicinalProductUndesirableEffect;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int subject_count;
-	Reference* subject;
-	CodeableConcept* symptomConditionEffect;
-	CodeableConcept* classification;
-	CodeableConcept* frequencyOfOccurrence;
-	int population_count;
-	Population* population;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 subject_count;
+	Reference *subject;
+	CodeableConcept *symptomConditionEffect;
+	CodeableConcept *classification;
+	CodeableConcept *frequencyOfOccurrence;
+	U64 population_count;
+	Population *population;
 };
 class MessageDefinition {
-public:
-	ResourceType resourceType = ResourceType::MessageDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
-	int replaces_count;
-	fhir_canonical* replaces;
+	U64 replaces_count;
+	fhir_canonical *replaces;
 	fhir_code status;
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	fhir_canonical base;
-	int parent_count;
-	fhir_canonical* parent;
+	U64 parent_count;
+	fhir_canonical *parent;
 	enum class EventType {
 		Coding,
 		fhir_uri
 	};
 	EventType event_type;
+
 	union {
 		Coding* valueCoding;
 		fhir_uri valueUri;
 	} event;
 
 	fhir_code category;
-	int focus_count;
-	MessageDefinition_Focus* focus;
+	U64 focus_count;
+	MessageDefinition_Focus *focus;
 	fhir_code responseRequired;
-	int allowedResponse_count;
-	MessageDefinition_AllowedResponse* allowedResponse;
-	int graph_count;
-	fhir_canonical* graph;
+	U64 allowedResponse_count;
+	MessageDefinition_AllowedResponse *allowedResponse;
+	U64 graph_count;
+	fhir_canonical *graph;
 };
 class MessageDefinition_Focus {
-public:
-	ResourceType resourceType = ResourceType::MessageDefinition_Focus;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	fhir_canonical profile;
 	fhir_unsignedInt min;
 	fhir_string max;
 };
 class MessageDefinition_AllowedResponse {
-public:
-	ResourceType resourceType = ResourceType::MessageDefinition_AllowedResponse;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_canonical message;
 	fhir_markdown situation;
 };
 class MessageHeader {
-public:
-	ResourceType resourceType = ResourceType::MessageHeader;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class EventType {
 		Coding,
 		fhir_uri
 	};
 	EventType event_type;
+
 	union {
 		Coding* valueCoding;
 		fhir_uri valueUri;
 	} event;
 
-	int destination_count;
-	MessageHeader_Destination* destination;
-	Reference* sender;
-	Reference* enterer;
-	Reference* author;
-	MessageHeader_Source* source;
-	Reference* responsible;
-	CodeableConcept* reason;
-	MessageHeader_Response* response;
-	int focus_count;
-	Reference* focus;
+	U64 destination_count;
+	MessageHeader_Destination *destination;
+	Reference *sender;
+	Reference *enterer;
+	Reference *author;
+	MessageHeader_Source *source;
+	Reference *responsible;
+	CodeableConcept *reason;
+	MessageHeader_Response *response;
+	U64 focus_count;
+	Reference *focus;
 	fhir_canonical definition;
 };
 class MessageHeader_Destination {
-public:
-	ResourceType resourceType = ResourceType::MessageHeader_Destination;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
-	Reference* target;
+	Reference *target;
 	fhir_url endpoint;
-	Reference* receiver;
+	Reference *receiver;
 };
 class MessageHeader_Source {
-public:
-	ResourceType resourceType = ResourceType::MessageHeader_Source;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_string software;
 	fhir_string version;
-	ContactPoint* contact;
+	ContactPoint *contact;
 	fhir_url endpoint;
 };
 class MessageHeader_Response {
-public:
-	ResourceType resourceType = ResourceType::MessageHeader_Response;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_id identifier;
 	fhir_code code;
-	Reference* details;
+	Reference *details;
 };
 class MolecularSequence {
-public:
-	ResourceType resourceType = ResourceType::MolecularSequence;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code type;
-	Integer* coordinateSystem;
-	Reference* patient;
-	Reference* specimen;
-	Reference* device;
-	Reference* performer;
-	Quantity* quantity;
-	MolecularSequence_ReferenceSeq* referenceSeq;
-	int variant_count;
-	MolecularSequence_Variant* variant;
+	Integer *coordinateSystem;
+	Reference *patient;
+	Reference *specimen;
+	Reference *device;
+	Reference *performer;
+	Quantity *quantity;
+	MolecularSequence_ReferenceSeq *referenceSeq;
+	U64 variant_count;
+	MolecularSequence_Variant *variant;
 	fhir_string observedSeq;
-	int quality_count;
-	MolecularSequence_Quality* quality;
-	Integer* readCoverage;
-	int repository_count;
-	MolecularSequence_Repository* repository;
-	int pointer_count;
-	Reference* pointer;
-	int structureVariant_count;
-	MolecularSequence_StructureVariant* structureVariant;
+	U64 quality_count;
+	MolecularSequence_Quality *quality;
+	Integer *readCoverage;
+	U64 repository_count;
+	MolecularSequence_Repository *repository;
+	U64 pointer_count;
+	Reference *pointer;
+	U64 structureVariant_count;
+	MolecularSequence_StructureVariant *structureVariant;
 };
 class MolecularSequence_ReferenceSeq {
-public:
-	ResourceType resourceType = ResourceType::MolecularSequence_ReferenceSeq;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* chromosome;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *chromosome;
 	fhir_string genomeBuild;
 	fhir_code orientation;
-	CodeableConcept* referenceSeqId;
-	Reference* referenceSeqPointer;
+	CodeableConcept *referenceSeqId;
+	Reference *referenceSeqPointer;
 	fhir_string referenceSeqString;
 	fhir_code strand;
-	Integer* windowStart;
-	Integer* windowEnd;
+	Integer *windowStart;
+	Integer *windowEnd;
 };
 class MolecularSequence_Variant {
-public:
-	ResourceType resourceType = ResourceType::MolecularSequence_Variant;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Integer* start;
-	Integer* end;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Integer *start;
+	Integer *end;
 	fhir_string observedAllele;
 	fhir_string referenceAllele;
 	fhir_string cigar;
-	Reference* variantPointer;
+	Reference *variantPointer;
 };
 class MolecularSequence_Quality {
-public:
-	ResourceType resourceType = ResourceType::MolecularSequence_Quality;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
-	CodeableConcept* standardSequence;
-	Integer* start;
-	Integer* end;
-	Quantity* score;
-	CodeableConcept* method;
+	CodeableConcept *standardSequence;
+	Integer *start;
+	Integer *end;
+	Quantity *score;
+	CodeableConcept *method;
 	fhir_decimal truthTP;
 	fhir_decimal queryTP;
 	fhir_decimal truthFN;
@@ -10490,39 +10603,39 @@ public:
 	fhir_decimal precision;
 	fhir_decimal recall;
 	fhir_decimal fScore;
-	MolecularSequence_Quality_Roc* roc;
+	MolecularSequence_Quality_Roc *roc;
 };
 class MolecularSequence_Quality_Roc {
-public:
-	ResourceType resourceType = ResourceType::MolecularSequence_Quality_Roc;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int score_count;
-	Integer* score;
-	int numTP_count;
-	Integer* numTP;
-	int numFP_count;
-	Integer* numFP;
-	int numFN_count;
-	Integer* numFN;
-	int precision_count;
-	fhir_decimal* precision;
-	int sensitivity_count;
-	fhir_decimal* sensitivity;
-	int fMeasure_count;
-	fhir_decimal* fMeasure;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 score_count;
+	Integer *score;
+	U64 numTP_count;
+	Integer *numTP;
+	U64 numFP_count;
+	Integer *numFP;
+	U64 numFN_count;
+	Integer *numFN;
+	U64 precision_count;
+	fhir_decimal *precision;
+	U64 sensitivity_count;
+	fhir_decimal *sensitivity;
+	U64 fMeasure_count;
+	fhir_decimal *fMeasure;
 };
 class MolecularSequence_Repository {
-public:
-	ResourceType resourceType = ResourceType::MolecularSequence_Repository;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
 	fhir_uri url;
 	fhir_string name;
@@ -10531,219 +10644,220 @@ public:
 	fhir_string readsetId;
 };
 class MolecularSequence_StructureVariant {
-public:
-	ResourceType resourceType = ResourceType::MolecularSequence_StructureVariant;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* variantType;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *variantType;
 	fhir_boolean exact;
-	Integer* length;
-	MolecularSequence_StructureVariant_Outer* outer;
-	MolecularSequence_StructureVariant_Inner* inner;
+	Integer *length;
+	MolecularSequence_StructureVariant_Outer *outer;
+	MolecularSequence_StructureVariant_Inner *inner;
 };
 class MolecularSequence_StructureVariant_Outer {
-public:
-	ResourceType resourceType = ResourceType::MolecularSequence_StructureVariant_Outer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Integer* start;
-	Integer* end;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Integer *start;
+	Integer *end;
 };
 class MolecularSequence_StructureVariant_Inner {
-public:
-	ResourceType resourceType = ResourceType::MolecularSequence_StructureVariant_Inner;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Integer* start;
-	Integer* end;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Integer *start;
+	Integer *end;
 };
 class NamingSystem {
-public:
-	ResourceType resourceType = ResourceType::NamingSystem;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_code status;
 	fhir_code kind;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_string responsible;
-	CodeableConcept* type;
+	CodeableConcept *type;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_string usage;
-	int uniqueId_count;
-	NamingSystem_UniqueId* uniqueId;
+	U64 uniqueId_count;
+	NamingSystem_UniqueId *uniqueId;
 };
 class NamingSystem_UniqueId {
-public:
-	ResourceType resourceType = ResourceType::NamingSystem_UniqueId;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
 	fhir_string value;
 	fhir_boolean preferred;
 	fhir_string comment;
-	Period* period;
+	Period *period;
 };
 class NutritionOrder {
-public:
-	ResourceType resourceType = ResourceType::NutritionOrder;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int instantiatesCanonical_count;
-	fhir_canonical* instantiatesCanonical;
-	int instantiatesUri_count;
-	fhir_uri* instantiatesUri;
-	int instantiates_count;
-	fhir_uri* instantiates;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 instantiatesCanonical_count;
+	fhir_canonical *instantiatesCanonical;
+	U64 instantiatesUri_count;
+	fhir_uri *instantiatesUri;
+	U64 instantiates_count;
+	fhir_uri *instantiates;
 	fhir_code status;
 	fhir_code intent;
-	Reference* patient;
-	Reference* encounter;
+	Reference *patient;
+	Reference *encounter;
 	fhir_dateTime dateTime;
-	Reference* orderer;
-	int allergyIntolerance_count;
-	Reference* allergyIntolerance;
-	int foodPreferenceModifier_count;
-	CodeableConcept* foodPreferenceModifier;
-	int excludeFoodModifier_count;
-	CodeableConcept* excludeFoodModifier;
-	NutritionOrder_OralDiet* oralDiet;
-	int supplement_count;
-	NutritionOrder_Supplement* supplement;
-	NutritionOrder_EnteralFormula* enteralFormula;
-	int note_count;
-	Annotation* note;
+	Reference *orderer;
+	U64 allergyIntolerance_count;
+	Reference *allergyIntolerance;
+	U64 foodPreferenceModifier_count;
+	CodeableConcept *foodPreferenceModifier;
+	U64 excludeFoodModifier_count;
+	CodeableConcept *excludeFoodModifier;
+	NutritionOrder_OralDiet *oralDiet;
+	U64 supplement_count;
+	NutritionOrder_Supplement *supplement;
+	NutritionOrder_EnteralFormula *enteralFormula;
+	U64 note_count;
+	Annotation *note;
 };
 class NutritionOrder_OralDiet {
-public:
-	ResourceType resourceType = ResourceType::NutritionOrder_OralDiet;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int type_count;
-	CodeableConcept* type;
-	int schedule_count;
-	Timing* schedule;
-	int nutrient_count;
-	NutritionOrder_OralDiet_Nutrient* nutrient;
-	int texture_count;
-	NutritionOrder_OralDiet_Texture* texture;
-	int fluidConsistencyType_count;
-	CodeableConcept* fluidConsistencyType;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 type_count;
+	CodeableConcept *type;
+	U64 schedule_count;
+	Timing *schedule;
+	U64 nutrient_count;
+	NutritionOrder_OralDiet_Nutrient *nutrient;
+	U64 texture_count;
+	NutritionOrder_OralDiet_Texture *texture;
+	U64 fluidConsistencyType_count;
+	CodeableConcept *fluidConsistencyType;
 	fhir_string instruction;
 };
 class NutritionOrder_OralDiet_Nutrient {
-public:
-	ResourceType resourceType = ResourceType::NutritionOrder_OralDiet_Nutrient;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* modifier;
-	Quantity* amount;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *modifier;
+	Quantity *amount;
 };
 class NutritionOrder_OralDiet_Texture {
-public:
-	ResourceType resourceType = ResourceType::NutritionOrder_OralDiet_Texture;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* modifier;
-	CodeableConcept* foodType;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *modifier;
+	CodeableConcept *foodType;
 };
 class NutritionOrder_Supplement {
-public:
-	ResourceType resourceType = ResourceType::NutritionOrder_Supplement;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	fhir_string productName;
-	int schedule_count;
-	Timing* schedule;
-	Quantity* quantity;
+	U64 schedule_count;
+	Timing *schedule;
+	Quantity *quantity;
 	fhir_string instruction;
 };
 class NutritionOrder_EnteralFormula {
-public:
-	ResourceType resourceType = ResourceType::NutritionOrder_EnteralFormula;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* baseFormulaType;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *baseFormulaType;
 	fhir_string baseFormulaProductName;
-	CodeableConcept* additiveType;
+	CodeableConcept *additiveType;
 	fhir_string additiveProductName;
-	Quantity* caloricDensity;
-	CodeableConcept* routeofAdministration;
-	int administration_count;
-	NutritionOrder_EnteralFormula_Administration* administration;
-	Quantity* maxVolumeToDeliver;
+	Quantity *caloricDensity;
+	CodeableConcept *routeofAdministration;
+	U64 administration_count;
+	NutritionOrder_EnteralFormula_Administration *administration;
+	Quantity *maxVolumeToDeliver;
 	fhir_string administrationInstruction;
 };
 class NutritionOrder_EnteralFormula_Administration {
-public:
-	ResourceType resourceType = ResourceType::NutritionOrder_EnteralFormula_Administration;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Timing* schedule;
-	Quantity* quantity;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Timing *schedule;
+	Quantity *quantity;
 	enum class RateType {
 		Quantity,
 		Ratio
 	};
 	RateType rate_type;
+
 	union {
 		Quantity* valueQuantity;
 		Ratio* valueRatio;
@@ -10751,33 +10865,33 @@ public:
 
 };
 class Observation {
-public:
-	ResourceType resourceType = ResourceType::Observation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int basedOn_count;
-	Reference* basedOn;
-	int partOf_count;
-	Reference* partOf;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 partOf_count;
+	Reference *partOf;
 	fhir_code status;
-	int category_count;
-	CodeableConcept* category;
-	CodeableConcept* code;
-	Reference* subject;
-	int focus_count;
-	Reference* focus;
-	Reference* encounter;
+	U64 category_count;
+	CodeableConcept *category;
+	CodeableConcept *code;
+	Reference *subject;
+	U64 focus_count;
+	Reference *focus;
+	Reference *encounter;
 	enum class EffectiveType {
 		fhir_dateTime,
 		Period,
@@ -10785,6 +10899,7 @@ public:
 		fhir_instant
 	};
 	EffectiveType effective_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -10793,8 +10908,8 @@ public:
 	} effective;
 
 	fhir_instant issued;
-	int performer_count;
-	Reference* performer;
+	U64 performer_count;
+	Reference *performer;
 	enum class ValueType {
 		Quantity,
 		CodeableConcept,
@@ -10809,6 +10924,7 @@ public:
 		Period
 	};
 	ValueType value_type;
+
 	union {
 		Quantity* valueQuantity;
 		CodeableConcept* valueCodeableConcept;
@@ -10823,49 +10939,49 @@ public:
 		Period* valuePeriod;
 	} value;
 
-	CodeableConcept* dataAbsentReason;
-	int interpretation_count;
-	CodeableConcept* interpretation;
-	int note_count;
-	Annotation* note;
-	CodeableConcept* bodySite;
-	CodeableConcept* method;
-	Reference* specimen;
-	Reference* device;
-	int referenceRange_count;
-	Observation_ReferenceRange* referenceRange;
-	int hasMember_count;
-	Reference* hasMember;
-	int derivedFrom_count;
-	Reference* derivedFrom;
-	int component_count;
-	Observation_Component* component;
+	CodeableConcept *dataAbsentReason;
+	U64 interpretation_count;
+	CodeableConcept *interpretation;
+	U64 note_count;
+	Annotation *note;
+	CodeableConcept *bodySite;
+	CodeableConcept *method;
+	Reference *specimen;
+	Reference *device;
+	U64 referenceRange_count;
+	Observation_ReferenceRange *referenceRange;
+	U64 hasMember_count;
+	Reference *hasMember;
+	U64 derivedFrom_count;
+	Reference *derivedFrom;
+	U64 component_count;
+	Observation_Component *component;
 };
 class Observation_ReferenceRange {
-public:
-	ResourceType resourceType = ResourceType::Observation_ReferenceRange;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Quantity* low;
-	Quantity* high;
-	CodeableConcept* type;
-	int appliesTo_count;
-	CodeableConcept* appliesTo;
-	Range* age;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Quantity *low;
+	Quantity *high;
+	CodeableConcept *type;
+	U64 appliesTo_count;
+	CodeableConcept *appliesTo;
+	Range *age;
 	fhir_string text;
 };
 class Observation_Component {
-public:
-	ResourceType resourceType = ResourceType::Observation_Component;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
 	enum class ValueType {
 		Quantity,
 		CodeableConcept,
@@ -10880,6 +10996,7 @@ public:
 		Period
 	};
 	ValueType value_type;
+
 	union {
 		Quantity* valueQuantity;
 		CodeableConcept* valueCodeableConcept;
@@ -10894,89 +11011,89 @@ public:
 		Period* valuePeriod;
 	} value;
 
-	CodeableConcept* dataAbsentReason;
-	int interpretation_count;
-	CodeableConcept* interpretation;
-	int referenceRange_count;
-	Observation_ReferenceRange* referenceRange;
+	CodeableConcept *dataAbsentReason;
+	U64 interpretation_count;
+	CodeableConcept *interpretation;
+	U64 referenceRange_count;
+	Observation_ReferenceRange *referenceRange;
 };
 class ObservationDefinition {
-public:
-	ResourceType resourceType = ResourceType::ObservationDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int category_count;
-	CodeableConcept* category;
-	CodeableConcept* code;
-	int identifier_count;
-	Identifier* identifier;
-	int permittedDataType_count;
-	fhir_code* permittedDataType;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 category_count;
+	CodeableConcept *category;
+	CodeableConcept *code;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 permittedDataType_count;
+	fhir_code *permittedDataType;
 	fhir_boolean multipleResultsAllowed;
-	CodeableConcept* method;
+	CodeableConcept *method;
 	fhir_string preferredReportName;
-	ObservationDefinition_QuantitativeDetails* quantitativeDetails;
-	int qualifiedInterval_count;
-	ObservationDefinition_QualifiedInterval* qualifiedInterval;
-	Reference* validCodedValueSet;
-	Reference* normalCodedValueSet;
-	Reference* abnormalCodedValueSet;
-	Reference* criticalCodedValueSet;
+	ObservationDefinition_QuantitativeDetails *quantitativeDetails;
+	U64 qualifiedInterval_count;
+	ObservationDefinition_QualifiedInterval *qualifiedInterval;
+	Reference *validCodedValueSet;
+	Reference *normalCodedValueSet;
+	Reference *abnormalCodedValueSet;
+	Reference *criticalCodedValueSet;
 };
 class ObservationDefinition_QuantitativeDetails {
-public:
-	ResourceType resourceType = ResourceType::ObservationDefinition_QuantitativeDetails;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* customaryUnit;
-	CodeableConcept* unit;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *customaryUnit;
+	CodeableConcept *unit;
 	fhir_decimal conversionFactor;
-	Integer* decimalPrecision;
+	Integer *decimalPrecision;
 };
 class ObservationDefinition_QualifiedInterval {
-public:
-	ResourceType resourceType = ResourceType::ObservationDefinition_QualifiedInterval;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code category;
-	Range* range;
-	CodeableConcept* context;
-	int appliesTo_count;
-	CodeableConcept* appliesTo;
+	Range *range;
+	CodeableConcept *context;
+	U64 appliesTo_count;
+	CodeableConcept *appliesTo;
 	fhir_code gender;
-	Range* age;
-	Range* gestationalAge;
+	Range *age;
+	Range *gestationalAge;
 	fhir_string condition;
 };
 class OperationDefinition {
-public:
-	ResourceType resourceType = ResourceType::OperationDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -10986,220 +11103,220 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_boolean affectsState;
 	fhir_code code;
 	fhir_markdown comment;
 	fhir_canonical base;
-	int resource_count;
-	fhir_code* resource;
+	U64 resource_count;
+	fhir_code *resource;
 	fhir_boolean system;
 	fhir_boolean type;
 	fhir_boolean instance;
 	fhir_canonical inputProfile;
 	fhir_canonical outputProfile;
-	int parameter_count;
-	OperationDefinition_Parameter* parameter;
-	int overload_count;
-	OperationDefinition_Overload* overload;
+	U64 parameter_count;
+	OperationDefinition_Parameter *parameter;
+	U64 overload_count;
+	OperationDefinition_Overload *overload;
 };
 class OperationDefinition_Parameter {
-public:
-	ResourceType resourceType = ResourceType::OperationDefinition_Parameter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code name;
 	fhir_code use;
-	Integer* min;
+	Integer *min;
 	fhir_string max;
 	fhir_string documentation;
 	fhir_code type;
-	int targetProfile_count;
-	fhir_canonical* targetProfile;
+	U64 targetProfile_count;
+	fhir_canonical *targetProfile;
 	fhir_code searchType;
-	OperationDefinition_Parameter_Binding* binding;
-	int referencedFrom_count;
-	OperationDefinition_Parameter_ReferencedFrom* referencedFrom;
-	int part_count;
-	OperationDefinition_Parameter* part;
+	OperationDefinition_Parameter_Binding *binding;
+	U64 referencedFrom_count;
+	OperationDefinition_Parameter_ReferencedFrom *referencedFrom;
+	U64 part_count;
+	OperationDefinition_Parameter *part;
 };
 class OperationDefinition_Parameter_Binding {
-public:
-	ResourceType resourceType = ResourceType::OperationDefinition_Parameter_Binding;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code strength;
 	fhir_canonical valueSet;
 };
 class OperationDefinition_Parameter_ReferencedFrom {
-public:
-	ResourceType resourceType = ResourceType::OperationDefinition_Parameter_ReferencedFrom;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string source;
 	fhir_string sourceId;
 };
 class OperationDefinition_Overload {
-public:
-	ResourceType resourceType = ResourceType::OperationDefinition_Overload;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int parameterName_count;
-	fhir_string* parameterName;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 parameterName_count;
+	fhir_string *parameterName;
 	fhir_string comment;
 };
 class OperationOutcome {
-public:
-	ResourceType resourceType = ResourceType::OperationOutcome;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int issue_count;
-	OperationOutcome_Issue* issue;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 issue_count;
+	OperationOutcome_Issue *issue;
 };
 class OperationOutcome_Issue {
-public:
-	ResourceType resourceType = ResourceType::OperationOutcome_Issue;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code severity;
 	fhir_code code;
-	CodeableConcept* details;
+	CodeableConcept *details;
 	fhir_string diagnostics;
-	int location_count;
-	fhir_string* location;
-	int expression_count;
-	fhir_string* expression;
+	U64 location_count;
+	fhir_string *location;
+	U64 expression_count;
+	fhir_string *expression;
 };
 class Organization {
-public:
-	ResourceType resourceType = ResourceType::Organization;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_boolean active;
-	int type_count;
-	CodeableConcept* type;
+	U64 type_count;
+	CodeableConcept *type;
 	fhir_string name;
-	int alias_count;
-	fhir_string* alias;
-	int telecom_count;
-	ContactPoint* telecom;
-	int address_count;
-	Address* address;
-	Reference* partOf;
-	int contact_count;
-	Organization_Contact* contact;
-	int endpoint_count;
-	Reference* endpoint;
+	U64 alias_count;
+	fhir_string *alias;
+	U64 telecom_count;
+	ContactPoint *telecom;
+	U64 address_count;
+	Address *address;
+	Reference *partOf;
+	U64 contact_count;
+	Organization_Contact *contact;
+	U64 endpoint_count;
+	Reference *endpoint;
 };
 class Organization_Contact {
-public:
-	ResourceType resourceType = ResourceType::Organization_Contact;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* purpose;
-	HumanName* name;
-	int telecom_count;
-	ContactPoint* telecom;
-	Address* address;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *purpose;
+	HumanName *name;
+	U64 telecom_count;
+	ContactPoint *telecom;
+	Address *address;
 };
 class OrganizationAffiliation {
-public:
-	ResourceType resourceType = ResourceType::OrganizationAffiliation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_boolean active;
-	Period* period;
-	Reference* organization;
-	Reference* participatingOrganization;
-	int network_count;
-	Reference* network;
-	int code_count;
-	CodeableConcept* code;
-	int specialty_count;
-	CodeableConcept* specialty;
-	int location_count;
-	Reference* location;
-	int healthcareService_count;
-	Reference* healthcareService;
-	int telecom_count;
-	ContactPoint* telecom;
-	int endpoint_count;
-	Reference* endpoint;
+	Period *period;
+	Reference *organization;
+	Reference *participatingOrganization;
+	U64 network_count;
+	Reference *network;
+	U64 code_count;
+	CodeableConcept *code;
+	U64 specialty_count;
+	CodeableConcept *specialty;
+	U64 location_count;
+	Reference *location;
+	U64 healthcareService_count;
+	Reference *healthcareService;
+	U64 telecom_count;
+	ContactPoint *telecom;
+	U64 endpoint_count;
+	Reference *endpoint;
 };
 class Parameters {
-public:
-	ResourceType resourceType = ResourceType::Parameters;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	int parameter_count;
-	Parameters_Parameter* parameter;
+	U64 parameter_count;
+	Parameters_Parameter *parameter;
 };
 class Parameters_Parameter {
-public:
-	ResourceType resourceType = ResourceType::Parameters_Parameter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	enum class ValueType {
 		fhir_base64Binary,
@@ -11254,6 +11371,7 @@ public:
 		Meta
 	};
 	ValueType value_type;
+
 	union {
 		fhir_base64Binary valueBase64Binary;
 		fhir_boolean valueBoolean;
@@ -11307,31 +11425,31 @@ public:
 		Meta* valueMeta;
 	} value;
 
-	Resource* resource;
-	int part_count;
-	Parameters_Parameter* part;
+	Resource *resource;
+	U64 part_count;
+	Parameters_Parameter *part;
 };
 class Patient {
-public:
-	ResourceType resourceType = ResourceType::Patient;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_boolean active;
-	int name_count;
-	HumanName* name;
-	int telecom_count;
-	ContactPoint* telecom;
+	U64 name_count;
+	HumanName *name;
+	U64 telecom_count;
+	ContactPoint *telecom;
 	fhir_code gender;
 	fhir_date birthDate;
 	enum class DeceasedType {
@@ -11339,230 +11457,232 @@ public:
 		fhir_dateTime
 	};
 	DeceasedType deceased_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		fhir_dateTime valueDateTime;
 	} deceased;
 
-	int address_count;
-	Address* address;
-	CodeableConcept* maritalStatus;
+	U64 address_count;
+	Address *address;
+	CodeableConcept *maritalStatus;
 	enum class MultipleBirthType {
 		fhir_boolean,
 		Integer
 	};
 	MultipleBirthType multipleBirth_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		Integer* valueInteger;
 	} multipleBirth;
 
-	int photo_count;
-	Attachment* photo;
-	int contact_count;
-	Patient_Contact* contact;
-	int communication_count;
-	Patient_Communication* communication;
-	int generalPractitioner_count;
-	Reference* generalPractitioner;
-	Reference* managingOrganization;
-	int link_count;
-	Patient_Link* link;
+	U64 photo_count;
+	Attachment *photo;
+	U64 contact_count;
+	Patient_Contact *contact;
+	U64 communication_count;
+	Patient_Communication *communication;
+	U64 generalPractitioner_count;
+	Reference *generalPractitioner;
+	Reference *managingOrganization;
+	U64 link_count;
+	Patient_Link *link;
 };
 class Patient_Contact {
-public:
-	ResourceType resourceType = ResourceType::Patient_Contact;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int relationship_count;
-	CodeableConcept* relationship;
-	HumanName* name;
-	int telecom_count;
-	ContactPoint* telecom;
-	Address* address;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 relationship_count;
+	CodeableConcept *relationship;
+	HumanName *name;
+	U64 telecom_count;
+	ContactPoint *telecom;
+	Address *address;
 	fhir_code gender;
-	Reference* organization;
-	Period* period;
+	Reference *organization;
+	Period *period;
 };
 class Patient_Communication {
-public:
-	ResourceType resourceType = ResourceType::Patient_Communication;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* language;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *language;
 	fhir_boolean preferred;
 };
 class Patient_Link {
-public:
-	ResourceType resourceType = ResourceType::Patient_Link;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* other;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *other;
 	fhir_code type;
 };
 class PaymentNotice {
-public:
-	ResourceType resourceType = ResourceType::PaymentNotice;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	Reference* request;
-	Reference* response;
+	Reference *request;
+	Reference *response;
 	fhir_dateTime created;
-	Reference* provider;
-	Reference* payment;
+	Reference *provider;
+	Reference *payment;
 	fhir_date paymentDate;
-	Reference* payee;
-	Reference* recipient;
-	Money* amount;
-	CodeableConcept* paymentStatus;
+	Reference *payee;
+	Reference *recipient;
+	Money *amount;
+	CodeableConcept *paymentStatus;
 };
 class PaymentReconciliation {
-public:
-	ResourceType resourceType = ResourceType::PaymentReconciliation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	Period* period;
+	Period *period;
 	fhir_dateTime created;
-	Reference* paymentIssuer;
-	Reference* request;
-	Reference* requestor;
+	Reference *paymentIssuer;
+	Reference *request;
+	Reference *requestor;
 	fhir_code outcome;
 	fhir_string disposition;
 	fhir_date paymentDate;
-	Money* paymentAmount;
-	Identifier* paymentIdentifier;
-	int detail_count;
-	PaymentReconciliation_Detail* detail;
-	CodeableConcept* formCode;
-	int processNote_count;
-	PaymentReconciliation_ProcessNote* processNote;
+	Money *paymentAmount;
+	Identifier *paymentIdentifier;
+	U64 detail_count;
+	PaymentReconciliation_Detail *detail;
+	CodeableConcept *formCode;
+	U64 processNote_count;
+	PaymentReconciliation_ProcessNote *processNote;
 };
 class PaymentReconciliation_Detail {
-public:
-	ResourceType resourceType = ResourceType::PaymentReconciliation_Detail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
-	Identifier* predecessor;
-	CodeableConcept* type;
-	Reference* request;
-	Reference* submitter;
-	Reference* response;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
+	Identifier *predecessor;
+	CodeableConcept *type;
+	Reference *request;
+	Reference *submitter;
+	Reference *response;
 	fhir_date date;
-	Reference* responsible;
-	Reference* payee;
-	Money* amount;
+	Reference *responsible;
+	Reference *payee;
+	Money *amount;
 };
 class PaymentReconciliation_ProcessNote {
-public:
-	ResourceType resourceType = ResourceType::PaymentReconciliation_ProcessNote;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
 	fhir_string text;
 };
 class Person {
-public:
-	ResourceType resourceType = ResourceType::Person;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int name_count;
-	HumanName* name;
-	int telecom_count;
-	ContactPoint* telecom;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 name_count;
+	HumanName *name;
+	U64 telecom_count;
+	ContactPoint *telecom;
 	fhir_code gender;
 	fhir_date birthDate;
-	int address_count;
-	Address* address;
-	Attachment* photo;
-	Reference* managingOrganization;
+	U64 address_count;
+	Address *address;
+	Attachment *photo;
+	Reference *managingOrganization;
 	fhir_boolean active;
-	int link_count;
-	Person_Link* link;
+	U64 link_count;
+	Person_Link *link;
 };
 class Person_Link {
-public:
-	ResourceType resourceType = ResourceType::Person_Link;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* target;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *target;
 	fhir_code assurance;
 };
 class PlanDefinition {
-public:
-	ResourceType resourceType = ResourceType::PlanDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
 	fhir_string subtitle;
-	CodeableConcept* type;
+	CodeableConcept *type;
 	fhir_code status;
 	fhir_boolean experimental;
 	enum class SubjectType {
@@ -11570,6 +11690,7 @@ public:
 		Reference
 	};
 	SubjectType subject_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -11577,121 +11698,123 @@ public:
 
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	int topic_count;
-	CodeableConcept* topic;
-	int author_count;
-	ContactDetail* author;
-	int editor_count;
-	ContactDetail* editor;
-	int reviewer_count;
-	ContactDetail* reviewer;
-	int endorser_count;
-	ContactDetail* endorser;
-	int relatedArtifact_count;
-	RelatedArtifact* relatedArtifact;
-	int library_count;
-	fhir_canonical* library;
-	int goal_count;
-	PlanDefinition_Goal* goal;
-	int action_count;
-	PlanDefinition_Action* action;
+	Period *effectivePeriod;
+	U64 topic_count;
+	CodeableConcept *topic;
+	U64 author_count;
+	ContactDetail *author;
+	U64 editor_count;
+	ContactDetail *editor;
+	U64 reviewer_count;
+	ContactDetail *reviewer;
+	U64 endorser_count;
+	ContactDetail *endorser;
+	U64 relatedArtifact_count;
+	RelatedArtifact *relatedArtifact;
+	U64 library_count;
+	fhir_canonical *library;
+	U64 goal_count;
+	PlanDefinition_Goal *goal;
+	U64 action_count;
+	PlanDefinition_Action *action;
 };
 class PlanDefinition_Goal {
-public:
-	ResourceType resourceType = ResourceType::PlanDefinition_Goal;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* category;
-	CodeableConcept* description;
-	CodeableConcept* priority;
-	CodeableConcept* start;
-	int addresses_count;
-	CodeableConcept* addresses;
-	int documentation_count;
-	RelatedArtifact* documentation;
-	int target_count;
-	PlanDefinition_Goal_Target* target;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *category;
+	CodeableConcept *description;
+	CodeableConcept *priority;
+	CodeableConcept *start;
+	U64 addresses_count;
+	CodeableConcept *addresses;
+	U64 documentation_count;
+	RelatedArtifact *documentation;
+	U64 target_count;
+	PlanDefinition_Goal_Target *target;
 };
 class PlanDefinition_Goal_Target {
-public:
-	ResourceType resourceType = ResourceType::PlanDefinition_Goal_Target;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* measure;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *measure;
 	enum class DetailType {
 		Quantity,
 		Range,
 		CodeableConcept
 	};
 	DetailType detail_type;
+
 	union {
 		Quantity* valueQuantity;
 		Range* valueRange;
 		CodeableConcept* valueCodeableConcept;
 	} detail;
 
-	Duration* due;
+	Duration *due;
 };
 class PlanDefinition_Action {
-public:
-	ResourceType resourceType = ResourceType::PlanDefinition_Action;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string prefix;
 	fhir_string title;
 	fhir_string description;
 	fhir_string textEquivalent;
 	fhir_code priority;
-	int code_count;
-	CodeableConcept* code;
-	int reason_count;
-	CodeableConcept* reason;
-	int documentation_count;
-	RelatedArtifact* documentation;
-	int goalId_count;
-	fhir_id* goalId;
+	U64 code_count;
+	CodeableConcept *code;
+	U64 reason_count;
+	CodeableConcept *reason;
+	U64 documentation_count;
+	RelatedArtifact *documentation;
+	U64 goalId_count;
+	fhir_id *goalId;
 	enum class SubjectType {
 		CodeableConcept,
 		Reference
 	};
 	SubjectType subject_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} subject;
 
-	int trigger_count;
-	TriggerDefinition* trigger;
-	int condition_count;
-	PlanDefinition_Action_Condition* condition;
-	int input_count;
-	DataRequirement* input;
-	int output_count;
-	DataRequirement* output;
-	int relatedAction_count;
-	PlanDefinition_Action_RelatedAction* relatedAction;
+	U64 trigger_count;
+	TriggerDefinition *trigger;
+	U64 condition_count;
+	PlanDefinition_Action_Condition *condition;
+	U64 input_count;
+	DataRequirement *input;
+	U64 output_count;
+	DataRequirement *output;
+	U64 relatedAction_count;
+	PlanDefinition_Action_RelatedAction *relatedAction;
 	enum class TimingType {
 		fhir_dateTime,
 		Age,
@@ -11701,6 +11824,7 @@ public:
 		Timing
 	};
 	TimingType timing_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Age* valueAge;
@@ -11710,9 +11834,9 @@ public:
 		Timing* valueTiming;
 	} timing;
 
-	int participant_count;
-	PlanDefinition_Action_Participant* participant;
-	CodeableConcept* type;
+	U64 participant_count;
+	PlanDefinition_Action_Participant *participant;
+	CodeableConcept *type;
 	fhir_code groupingBehavior;
 	fhir_code selectionBehavior;
 	fhir_code requiredBehavior;
@@ -11723,36 +11847,37 @@ public:
 		fhir_uri
 	};
 	DefinitionType definition_type;
+
 	union {
 		fhir_canonical valueCanonical;
 		fhir_uri valueUri;
 	} definition;
 
 	fhir_canonical transform;
-	int dynamicValue_count;
-	PlanDefinition_Action_DynamicValue* dynamicValue;
-	int action_count;
-	PlanDefinition_Action* action;
+	U64 dynamicValue_count;
+	PlanDefinition_Action_DynamicValue *dynamicValue;
+	U64 action_count;
+	PlanDefinition_Action *action;
 };
 class PlanDefinition_Action_Condition {
-public:
-	ResourceType resourceType = ResourceType::PlanDefinition_Action_Condition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code kind;
-	Expression* expression;
+	Expression *expression;
 };
 class PlanDefinition_Action_RelatedAction {
-public:
-	ResourceType resourceType = ResourceType::PlanDefinition_Action_RelatedAction;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_id actionId;
 	fhir_code relationship;
 	enum class OffsetType {
@@ -11760,6 +11885,7 @@ public:
 		Range
 	};
 	OffsetType offset_type;
+
 	union {
 		Duration* valueDuration;
 		Range* valueRange;
@@ -11767,166 +11893,166 @@ public:
 
 };
 class PlanDefinition_Action_Participant {
-public:
-	ResourceType resourceType = ResourceType::PlanDefinition_Action_Participant;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
-	CodeableConcept* role;
+	CodeableConcept *role;
 };
 class PlanDefinition_Action_DynamicValue {
-public:
-	ResourceType resourceType = ResourceType::PlanDefinition_Action_DynamicValue;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string path;
-	Expression* expression;
+	Expression *expression;
 };
 class Practitioner {
-public:
-	ResourceType resourceType = ResourceType::Practitioner;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_boolean active;
-	int name_count;
-	HumanName* name;
-	int telecom_count;
-	ContactPoint* telecom;
-	int address_count;
-	Address* address;
+	U64 name_count;
+	HumanName *name;
+	U64 telecom_count;
+	ContactPoint *telecom;
+	U64 address_count;
+	Address *address;
 	fhir_code gender;
 	fhir_date birthDate;
-	int photo_count;
-	Attachment* photo;
-	int qualification_count;
-	Practitioner_Qualification* qualification;
-	int communication_count;
-	CodeableConcept* communication;
+	U64 photo_count;
+	Attachment *photo;
+	U64 qualification_count;
+	Practitioner_Qualification *qualification;
+	U64 communication_count;
+	CodeableConcept *communication;
 };
 class Practitioner_Qualification {
-public:
-	ResourceType resourceType = ResourceType::Practitioner_Qualification;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	CodeableConcept* code;
-	Period* period;
-	Reference* issuer;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	CodeableConcept *code;
+	Period *period;
+	Reference *issuer;
 };
 class PractitionerRole {
-public:
-	ResourceType resourceType = ResourceType::PractitionerRole;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_boolean active;
-	Period* period;
-	Reference* practitioner;
-	Reference* organization;
-	int code_count;
-	CodeableConcept* code;
-	int specialty_count;
-	CodeableConcept* specialty;
-	int location_count;
-	Reference* location;
-	int healthcareService_count;
-	Reference* healthcareService;
-	int telecom_count;
-	ContactPoint* telecom;
-	int availableTime_count;
-	PractitionerRole_AvailableTime* availableTime;
-	int notAvailable_count;
-	PractitionerRole_NotAvailable* notAvailable;
+	Period *period;
+	Reference *practitioner;
+	Reference *organization;
+	U64 code_count;
+	CodeableConcept *code;
+	U64 specialty_count;
+	CodeableConcept *specialty;
+	U64 location_count;
+	Reference *location;
+	U64 healthcareService_count;
+	Reference *healthcareService;
+	U64 telecom_count;
+	ContactPoint *telecom;
+	U64 availableTime_count;
+	PractitionerRole_AvailableTime *availableTime;
+	U64 notAvailable_count;
+	PractitionerRole_NotAvailable *notAvailable;
 	fhir_string availabilityExceptions;
-	int endpoint_count;
-	Reference* endpoint;
+	U64 endpoint_count;
+	Reference *endpoint;
 };
 class PractitionerRole_AvailableTime {
-public:
-	ResourceType resourceType = ResourceType::PractitionerRole_AvailableTime;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int daysOfWeek_count;
-	fhir_code* daysOfWeek;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 daysOfWeek_count;
+	fhir_code *daysOfWeek;
 	fhir_boolean allDay;
 	fhir_time availableStartTime;
 	fhir_time availableEndTime;
 };
 class PractitionerRole_NotAvailable {
-public:
-	ResourceType resourceType = ResourceType::PractitionerRole_NotAvailable;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
-	Period* during;
+	Period *during;
 };
 class Procedure {
-public:
-	ResourceType resourceType = ResourceType::Procedure;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int instantiatesCanonical_count;
-	fhir_canonical* instantiatesCanonical;
-	int instantiatesUri_count;
-	fhir_uri* instantiatesUri;
-	int basedOn_count;
-	Reference* basedOn;
-	int partOf_count;
-	Reference* partOf;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 instantiatesCanonical_count;
+	fhir_canonical *instantiatesCanonical;
+	U64 instantiatesUri_count;
+	fhir_uri *instantiatesUri;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 partOf_count;
+	Reference *partOf;
 	fhir_code status;
-	CodeableConcept* statusReason;
-	CodeableConcept* category;
-	CodeableConcept* code;
-	Reference* subject;
-	Reference* encounter;
+	CodeableConcept *statusReason;
+	CodeableConcept *category;
+	CodeableConcept *code;
+	Reference *subject;
+	Reference *encounter;
 	enum class PerformedType {
 		fhir_dateTime,
 		Period,
@@ -11935,6 +12061,7 @@ public:
 		Range
 	};
 	PerformedType performed_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -11943,208 +12070,209 @@ public:
 		Range* valueRange;
 	} performed;
 
-	Reference* recorder;
-	Reference* asserter;
-	int performer_count;
-	Procedure_Performer* performer;
-	Reference* location;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int bodySite_count;
-	CodeableConcept* bodySite;
-	CodeableConcept* outcome;
-	int report_count;
-	Reference* report;
-	int complication_count;
-	CodeableConcept* complication;
-	int complicationDetail_count;
-	Reference* complicationDetail;
-	int followUp_count;
-	CodeableConcept* followUp;
-	int note_count;
-	Annotation* note;
-	int focalDevice_count;
-	Procedure_FocalDevice* focalDevice;
-	int usedReference_count;
-	Reference* usedReference;
-	int usedCode_count;
-	CodeableConcept* usedCode;
+	Reference *recorder;
+	Reference *asserter;
+	U64 performer_count;
+	Procedure_Performer *performer;
+	Reference *location;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 bodySite_count;
+	CodeableConcept *bodySite;
+	CodeableConcept *outcome;
+	U64 report_count;
+	Reference *report;
+	U64 complication_count;
+	CodeableConcept *complication;
+	U64 complicationDetail_count;
+	Reference *complicationDetail;
+	U64 followUp_count;
+	CodeableConcept *followUp;
+	U64 note_count;
+	Annotation *note;
+	U64 focalDevice_count;
+	Procedure_FocalDevice *focalDevice;
+	U64 usedReference_count;
+	Reference *usedReference;
+	U64 usedCode_count;
+	CodeableConcept *usedCode;
 };
 class Procedure_Performer {
-public:
-	ResourceType resourceType = ResourceType::Procedure_Performer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* function_;
-	Reference* actor;
-	Reference* onBehalfOf;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *function_;
+	Reference *actor;
+	Reference *onBehalfOf;
 };
 class Procedure_FocalDevice {
-public:
-	ResourceType resourceType = ResourceType::Procedure_FocalDevice;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* action;
-	Reference* manipulated;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *action;
+	Reference *manipulated;
 };
 class Provenance {
-public:
-	ResourceType resourceType = ResourceType::Provenance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int target_count;
-	Reference* target;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 target_count;
+	Reference *target;
 	enum class OccurredType {
 		Period,
 		fhir_dateTime
 	};
 	OccurredType occurred_type;
+
 	union {
 		Period* valuePeriod;
 		fhir_dateTime valueDateTime;
 	} occurred;
 
 	fhir_instant recorded;
-	int policy_count;
-	fhir_uri* policy;
-	Reference* location;
-	int reason_count;
-	CodeableConcept* reason;
-	CodeableConcept* activity;
-	int agent_count;
-	Provenance_Agent* agent;
-	int entity_count;
-	Provenance_Entity* entity;
-	int signature_count;
-	Signature* signature;
+	U64 policy_count;
+	fhir_uri *policy;
+	Reference *location;
+	U64 reason_count;
+	CodeableConcept *reason;
+	CodeableConcept *activity;
+	U64 agent_count;
+	Provenance_Agent *agent;
+	U64 entity_count;
+	Provenance_Entity *entity;
+	U64 signature_count;
+	Signature *signature;
 };
 class Provenance_Agent {
-public:
-	ResourceType resourceType = ResourceType::Provenance_Agent;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	int role_count;
-	CodeableConcept* role;
-	Reference* who;
-	Reference* onBehalfOf;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	U64 role_count;
+	CodeableConcept *role;
+	Reference *who;
+	Reference *onBehalfOf;
 };
 class Provenance_Entity {
-public:
-	ResourceType resourceType = ResourceType::Provenance_Entity;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code role;
-	Reference* what;
-	int agent_count;
-	Provenance_Agent* agent;
+	Reference *what;
+	U64 agent_count;
+	Provenance_Agent *agent;
 };
 class Questionnaire {
-public:
-	ResourceType resourceType = ResourceType::Questionnaire;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
-	int derivedFrom_count;
-	fhir_canonical* derivedFrom;
+	U64 derivedFrom_count;
+	fhir_canonical *derivedFrom;
 	fhir_code status;
 	fhir_boolean experimental;
-	int subjectType_count;
-	fhir_code* subjectType;
+	U64 subjectType_count;
+	fhir_code *subjectType;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	int code_count;
-	Coding* code;
-	int item_count;
-	Questionnaire_Item* item;
+	Period *effectivePeriod;
+	U64 code_count;
+	Coding *code;
+	U64 item_count;
+	Questionnaire_Item *item;
 };
 class Questionnaire_Item {
-public:
-	ResourceType resourceType = ResourceType::Questionnaire_Item;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string linkId;
 	fhir_uri definition;
-	int code_count;
-	Coding* code;
+	U64 code_count;
+	Coding *code;
 	fhir_string prefix;
 	fhir_string text;
 	fhir_code type;
-	int enableWhen_count;
-	Questionnaire_Item_EnableWhen* enableWhen;
+	U64 enableWhen_count;
+	Questionnaire_Item_EnableWhen *enableWhen;
 	fhir_code enableBehavior;
 	fhir_boolean required;
 	fhir_boolean repeats;
 	fhir_boolean readOnly;
-	Integer* maxLength;
+	Integer *maxLength;
 	fhir_canonical answerValueSet;
-	int answerOption_count;
-	Questionnaire_Item_AnswerOption* answerOption;
-	int initial_count;
-	Questionnaire_Item_Initial* initial;
-	int item_count;
-	Questionnaire_Item* item;
+	U64 answerOption_count;
+	Questionnaire_Item_AnswerOption *answerOption;
+	U64 initial_count;
+	Questionnaire_Item_Initial *initial;
+	U64 item_count;
+	Questionnaire_Item *item;
 };
 class Questionnaire_Item_EnableWhen {
-public:
-	ResourceType resourceType = ResourceType::Questionnaire_Item_EnableWhen;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string question;
 	fhir_code operator_;
 	enum class AnswerType {
@@ -12160,6 +12288,7 @@ public:
 		Reference
 	};
 	AnswerType answer_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		fhir_decimal valueDecimal;
@@ -12175,13 +12304,13 @@ public:
 
 };
 class Questionnaire_Item_AnswerOption {
-public:
-	ResourceType resourceType = ResourceType::Questionnaire_Item_AnswerOption;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ValueType {
 		Integer,
 		fhir_date,
@@ -12191,6 +12320,7 @@ public:
 		Reference
 	};
 	ValueType value_type;
+
 	union {
 		Integer* valueInteger;
 		fhir_date valueDate;
@@ -12203,13 +12333,13 @@ public:
 	fhir_boolean initialSelected;
 };
 class Questionnaire_Item_Initial {
-public:
-	ResourceType resourceType = ResourceType::Questionnaire_Item_Initial;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ValueType {
 		fhir_boolean,
 		fhir_decimal,
@@ -12225,6 +12355,7 @@ public:
 		Reference
 	};
 	ValueType value_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		fhir_decimal valueDecimal;
@@ -12242,58 +12373,58 @@ public:
 
 };
 class QuestionnaireResponse {
-public:
-	ResourceType resourceType = ResourceType::QuestionnaireResponse;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
-	int basedOn_count;
-	Reference* basedOn;
-	int partOf_count;
-	Reference* partOf;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 partOf_count;
+	Reference *partOf;
 	fhir_canonical questionnaire;
 	fhir_code status;
-	Reference* subject;
-	Reference* encounter;
+	Reference *subject;
+	Reference *encounter;
 	fhir_dateTime authored;
-	Reference* author;
-	Reference* source;
-	int item_count;
-	QuestionnaireResponse_Item* item;
+	Reference *author;
+	Reference *source;
+	U64 item_count;
+	QuestionnaireResponse_Item *item;
 };
 class QuestionnaireResponse_Item {
-public:
-	ResourceType resourceType = ResourceType::QuestionnaireResponse_Item;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string linkId;
 	fhir_uri definition;
 	fhir_string text;
-	int answer_count;
-	QuestionnaireResponse_Item_Answer* answer;
-	int item_count;
-	QuestionnaireResponse_Item* item;
+	U64 answer_count;
+	QuestionnaireResponse_Item_Answer *answer;
+	U64 item_count;
+	QuestionnaireResponse_Item *item;
 };
 class QuestionnaireResponse_Item_Answer {
-public:
-	ResourceType resourceType = ResourceType::QuestionnaireResponse_Item_Answer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ValueType {
 		fhir_boolean,
 		fhir_decimal,
@@ -12309,6 +12440,7 @@ public:
 		Reference
 	};
 	ValueType value_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		fhir_decimal valueDecimal;
@@ -12324,117 +12456,117 @@ public:
 		Reference* valueReference;
 	} value;
 
-	int item_count;
-	QuestionnaireResponse_Item* item;
+	U64 item_count;
+	QuestionnaireResponse_Item *item;
 };
 class RelatedPerson {
-public:
-	ResourceType resourceType = ResourceType::RelatedPerson;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_boolean active;
-	Reference* patient;
-	int relationship_count;
-	CodeableConcept* relationship;
-	int name_count;
-	HumanName* name;
-	int telecom_count;
-	ContactPoint* telecom;
+	Reference *patient;
+	U64 relationship_count;
+	CodeableConcept *relationship;
+	U64 name_count;
+	HumanName *name;
+	U64 telecom_count;
+	ContactPoint *telecom;
 	fhir_code gender;
 	fhir_date birthDate;
-	int address_count;
-	Address* address;
-	int photo_count;
-	Attachment* photo;
-	Period* period;
-	int communication_count;
-	RelatedPerson_Communication* communication;
+	U64 address_count;
+	Address *address;
+	U64 photo_count;
+	Attachment *photo;
+	Period *period;
+	U64 communication_count;
+	RelatedPerson_Communication *communication;
 };
 class RelatedPerson_Communication {
-public:
-	ResourceType resourceType = ResourceType::RelatedPerson_Communication;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* language;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *language;
 	fhir_boolean preferred;
 };
 class RequestGroup {
-public:
-	ResourceType resourceType = ResourceType::RequestGroup;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int instantiatesCanonical_count;
-	fhir_canonical* instantiatesCanonical;
-	int instantiatesUri_count;
-	fhir_uri* instantiatesUri;
-	int basedOn_count;
-	Reference* basedOn;
-	int replaces_count;
-	Reference* replaces;
-	Identifier* groupIdentifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 instantiatesCanonical_count;
+	fhir_canonical *instantiatesCanonical;
+	U64 instantiatesUri_count;
+	fhir_uri *instantiatesUri;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 replaces_count;
+	Reference *replaces;
+	Identifier *groupIdentifier;
 	fhir_code status;
 	fhir_code intent;
 	fhir_code priority;
-	CodeableConcept* code;
-	Reference* subject;
-	Reference* encounter;
+	CodeableConcept *code;
+	Reference *subject;
+	Reference *encounter;
 	fhir_dateTime authoredOn;
-	Reference* author;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int note_count;
-	Annotation* note;
-	int action_count;
-	RequestGroup_Action* action;
+	Reference *author;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 note_count;
+	Annotation *note;
+	U64 action_count;
+	RequestGroup_Action *action;
 };
 class RequestGroup_Action {
-public:
-	ResourceType resourceType = ResourceType::RequestGroup_Action;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string prefix;
 	fhir_string title;
 	fhir_string description;
 	fhir_string textEquivalent;
 	fhir_code priority;
-	int code_count;
-	CodeableConcept* code;
-	int documentation_count;
-	RelatedArtifact* documentation;
-	int condition_count;
-	RequestGroup_Action_Condition* condition;
-	int relatedAction_count;
-	RequestGroup_Action_RelatedAction* relatedAction;
+	U64 code_count;
+	CodeableConcept *code;
+	U64 documentation_count;
+	RelatedArtifact *documentation;
+	U64 condition_count;
+	RequestGroup_Action_Condition *condition;
+	U64 relatedAction_count;
+	RequestGroup_Action_RelatedAction *relatedAction;
 	enum class TimingType {
 		fhir_dateTime,
 		Age,
@@ -12444,6 +12576,7 @@ public:
 		Timing
 	};
 	TimingType timing_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Age* valueAge;
@@ -12453,37 +12586,37 @@ public:
 		Timing* valueTiming;
 	} timing;
 
-	int participant_count;
-	Reference* participant;
-	CodeableConcept* type;
+	U64 participant_count;
+	Reference *participant;
+	CodeableConcept *type;
 	fhir_code groupingBehavior;
 	fhir_code selectionBehavior;
 	fhir_code requiredBehavior;
 	fhir_code precheckBehavior;
 	fhir_code cardinalityBehavior;
-	Reference* resource;
-	int action_count;
-	RequestGroup_Action* action;
+	Reference *resource;
+	U64 action_count;
+	RequestGroup_Action *action;
 };
 class RequestGroup_Action_Condition {
-public:
-	ResourceType resourceType = ResourceType::RequestGroup_Action_Condition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code kind;
-	Expression* expression;
+	Expression *expression;
 };
 class RequestGroup_Action_RelatedAction {
-public:
-	ResourceType resourceType = ResourceType::RequestGroup_Action_RelatedAction;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_id actionId;
 	fhir_code relationship;
 	enum class OffsetType {
@@ -12491,6 +12624,7 @@ public:
 		Range
 	};
 	OffsetType offset_type;
+
 	union {
 		Duration* valueDuration;
 		Range* valueRange;
@@ -12498,22 +12632,22 @@ public:
 
 };
 class ResearchDefinition {
-public:
-	ResourceType resourceType = ResourceType::ResearchDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -12526,6 +12660,7 @@ public:
 		Reference
 	};
 	SubjectType subject_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -12533,57 +12668,57 @@ public:
 
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int comment_count;
-	fhir_string* comment;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 comment_count;
+	fhir_string *comment;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	int topic_count;
-	CodeableConcept* topic;
-	int author_count;
-	ContactDetail* author;
-	int editor_count;
-	ContactDetail* editor;
-	int reviewer_count;
-	ContactDetail* reviewer;
-	int endorser_count;
-	ContactDetail* endorser;
-	int relatedArtifact_count;
-	RelatedArtifact* relatedArtifact;
-	int library_count;
-	fhir_canonical* library;
-	Reference* population;
-	Reference* exposure;
-	Reference* exposureAlternative;
-	Reference* outcome;
+	Period *effectivePeriod;
+	U64 topic_count;
+	CodeableConcept *topic;
+	U64 author_count;
+	ContactDetail *author;
+	U64 editor_count;
+	ContactDetail *editor;
+	U64 reviewer_count;
+	ContactDetail *reviewer;
+	U64 endorser_count;
+	ContactDetail *endorser;
+	U64 relatedArtifact_count;
+	RelatedArtifact *relatedArtifact;
+	U64 library_count;
+	fhir_canonical *library;
+	Reference *population;
+	Reference *exposure;
+	Reference *exposureAlternative;
+	Reference *outcome;
 };
 class ResearchElementDefinition {
-public:
-	ResourceType resourceType = ResourceType::ResearchElementDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -12596,6 +12731,7 @@ public:
 		Reference
 	};
 	SubjectType subject_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -12603,48 +12739,48 @@ public:
 
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int comment_count;
-	fhir_string* comment;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 comment_count;
+	fhir_string *comment;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	int topic_count;
-	CodeableConcept* topic;
-	int author_count;
-	ContactDetail* author;
-	int editor_count;
-	ContactDetail* editor;
-	int reviewer_count;
-	ContactDetail* reviewer;
-	int endorser_count;
-	ContactDetail* endorser;
-	int relatedArtifact_count;
-	RelatedArtifact* relatedArtifact;
-	int library_count;
-	fhir_canonical* library;
+	Period *effectivePeriod;
+	U64 topic_count;
+	CodeableConcept *topic;
+	U64 author_count;
+	ContactDetail *author;
+	U64 editor_count;
+	ContactDetail *editor;
+	U64 reviewer_count;
+	ContactDetail *reviewer;
+	U64 endorser_count;
+	ContactDetail *endorser;
+	U64 relatedArtifact_count;
+	RelatedArtifact *relatedArtifact;
+	U64 library_count;
+	fhir_canonical *library;
 	fhir_code type;
 	fhir_code variableType;
-	int characteristic_count;
-	ResearchElementDefinition_Characteristic* characteristic;
+	U64 characteristic_count;
+	ResearchElementDefinition_Characteristic *characteristic;
 };
 class ResearchElementDefinition_Characteristic {
-public:
-	ResourceType resourceType = ResourceType::ResearchElementDefinition_Characteristic;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class DefinitionType {
 		CodeableConcept,
 		fhir_canonical,
@@ -12652,6 +12788,7 @@ public:
 		DataRequirement
 	};
 	DefinitionType definition_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		fhir_canonical valueCanonical;
@@ -12659,10 +12796,10 @@ public:
 		DataRequirement* valueDataRequirement;
 	} definition;
 
-	int usageContext_count;
-	UsageContext* usageContext;
+	U64 usageContext_count;
+	UsageContext *usageContext;
 	fhir_boolean exclude;
-	CodeableConcept* unitOfMeasure;
+	CodeableConcept *unitOfMeasure;
 	fhir_string studyEffectiveDescription;
 	enum class StudyEffectiveType {
 		fhir_dateTime,
@@ -12671,6 +12808,7 @@ public:
 		Timing
 	};
 	StudyEffectiveType studyEffective_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -12678,7 +12816,7 @@ public:
 		Timing* valueTiming;
 	} studyEffective;
 
-	Duration* studyEffectiveTimeFromStart;
+	Duration *studyEffectiveTimeFromStart;
 	fhir_code studyEffectiveGroupMeasure;
 	fhir_string participantEffectiveDescription;
 	enum class ParticipantEffectiveType {
@@ -12688,6 +12826,7 @@ public:
 		Timing
 	};
 	ParticipantEffectiveType participantEffective_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -12695,183 +12834,186 @@ public:
 		Timing* valueTiming;
 	} participantEffective;
 
-	Duration* participantEffectiveTimeFromStart;
+	Duration *participantEffectiveTimeFromStart;
 	fhir_code participantEffectiveGroupMeasure;
 };
 class ResearchStudy {
-public:
-	ResourceType resourceType = ResourceType::ResearchStudy;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string title;
-	int protocol_count;
-	Reference* protocol;
-	int partOf_count;
-	Reference* partOf;
+	U64 protocol_count;
+	Reference *protocol;
+	U64 partOf_count;
+	Reference *partOf;
 	fhir_code status;
-	CodeableConcept* primaryPurposeType;
-	CodeableConcept* phase;
-	int category_count;
-	CodeableConcept* category;
-	int focus_count;
-	CodeableConcept* focus;
-	int condition_count;
-	CodeableConcept* condition;
-	int contact_count;
-	ContactDetail* contact;
-	int relatedArtifact_count;
-	RelatedArtifact* relatedArtifact;
-	int keyword_count;
-	CodeableConcept* keyword;
-	int location_count;
-	CodeableConcept* location;
+	CodeableConcept *primaryPurposeType;
+	CodeableConcept *phase;
+	U64 category_count;
+	CodeableConcept *category;
+	U64 focus_count;
+	CodeableConcept *focus;
+	U64 condition_count;
+	CodeableConcept *condition;
+	U64 contact_count;
+	ContactDetail *contact;
+	U64 relatedArtifact_count;
+	RelatedArtifact *relatedArtifact;
+	U64 keyword_count;
+	CodeableConcept *keyword;
+	U64 location_count;
+	CodeableConcept *location;
 	fhir_markdown description;
-	int enrollment_count;
-	Reference* enrollment;
-	Period* period;
-	Reference* sponsor;
-	Reference* principalInvestigator;
-	int site_count;
-	Reference* site;
-	CodeableConcept* reasonStopped;
-	int note_count;
-	Annotation* note;
-	int arm_count;
-	ResearchStudy_Arm* arm;
-	int objective_count;
-	ResearchStudy_Objective* objective;
+	U64 enrollment_count;
+	Reference *enrollment;
+	Period *period;
+	Reference *sponsor;
+	Reference *principalInvestigator;
+	U64 site_count;
+	Reference *site;
+	CodeableConcept *reasonStopped;
+	U64 note_count;
+	Annotation *note;
+	U64 arm_count;
+	ResearchStudy_Arm *arm;
+	U64 objective_count;
+	ResearchStudy_Objective *objective;
 };
 class ResearchStudy_Arm {
-public:
-	ResourceType resourceType = ResourceType::ResearchStudy_Arm;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
-	CodeableConcept* type;
+	CodeableConcept *type;
 	fhir_string description;
 };
 class ResearchStudy_Objective {
-public:
-	ResourceType resourceType = ResourceType::ResearchStudy_Objective;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
-	CodeableConcept* type;
+	CodeableConcept *type;
 };
 class ResearchSubject {
-public:
-	ResourceType resourceType = ResourceType::ResearchSubject;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	Period* period;
-	Reference* study;
-	Reference* individual;
+	Period *period;
+	Reference *study;
+	Reference *individual;
 	fhir_string assignedArm;
 	fhir_string actualArm;
-	Reference* consent;
+	Reference *consent;
 };
 class RiskAssessment {
-public:
-	ResourceType resourceType = ResourceType::RiskAssessment;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	Reference* basedOn;
-	Reference* parent;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	Reference *basedOn;
+	Reference *parent;
 	fhir_code status;
-	CodeableConcept* method;
-	CodeableConcept* code;
-	Reference* subject;
-	Reference* encounter;
+	CodeableConcept *method;
+	CodeableConcept *code;
+	Reference *subject;
+	Reference *encounter;
 	enum class OccurrenceType {
 		fhir_dateTime,
 		Period
 	};
 	OccurrenceType occurrence_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
 	} occurrence;
 
-	Reference* condition;
-	Reference* performer;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int basis_count;
-	Reference* basis;
-	int prediction_count;
-	RiskAssessment_Prediction* prediction;
+	Reference *condition;
+	Reference *performer;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 basis_count;
+	Reference *basis;
+	U64 prediction_count;
+	RiskAssessment_Prediction *prediction;
 	fhir_string mitigation;
-	int note_count;
-	Annotation* note;
+	U64 note_count;
+	Annotation *note;
 };
 class RiskAssessment_Prediction {
-public:
-	ResourceType resourceType = ResourceType::RiskAssessment_Prediction;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* outcome;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *outcome;
 	enum class ProbabilityType {
 		fhir_decimal,
 		Range
 	};
 	ProbabilityType probability_type;
+
 	union {
 		fhir_decimal valueDecimal;
 		Range* valueRange;
 	} probability;
 
-	CodeableConcept* qualitativeRisk;
+	CodeableConcept *qualitativeRisk;
 	fhir_decimal relativeRisk;
 	enum class WhenType {
 		Period,
 		Range
 	};
 	WhenType when_type;
+
 	union {
 		Period* valuePeriod;
 		Range* valueRange;
@@ -12880,176 +13022,176 @@ public:
 	fhir_string rationale;
 };
 class RiskEvidenceSynthesis {
-public:
-	ResourceType resourceType = ResourceType::RiskEvidenceSynthesis;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
 	fhir_code status;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int note_count;
-	Annotation* note;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 note_count;
+	Annotation *note;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
-	Period* effectivePeriod;
-	int topic_count;
-	CodeableConcept* topic;
-	int author_count;
-	ContactDetail* author;
-	int editor_count;
-	ContactDetail* editor;
-	int reviewer_count;
-	ContactDetail* reviewer;
-	int endorser_count;
-	ContactDetail* endorser;
-	int relatedArtifact_count;
-	RelatedArtifact* relatedArtifact;
-	CodeableConcept* synthesisType;
-	CodeableConcept* studyType;
-	Reference* population;
-	Reference* exposure;
-	Reference* outcome;
-	RiskEvidenceSynthesis_SampleSize* sampleSize;
-	RiskEvidenceSynthesis_RiskEstimate* riskEstimate;
-	int certainty_count;
-	RiskEvidenceSynthesis_Certainty* certainty;
+	Period *effectivePeriod;
+	U64 topic_count;
+	CodeableConcept *topic;
+	U64 author_count;
+	ContactDetail *author;
+	U64 editor_count;
+	ContactDetail *editor;
+	U64 reviewer_count;
+	ContactDetail *reviewer;
+	U64 endorser_count;
+	ContactDetail *endorser;
+	U64 relatedArtifact_count;
+	RelatedArtifact *relatedArtifact;
+	CodeableConcept *synthesisType;
+	CodeableConcept *studyType;
+	Reference *population;
+	Reference *exposure;
+	Reference *outcome;
+	RiskEvidenceSynthesis_SampleSize *sampleSize;
+	RiskEvidenceSynthesis_RiskEstimate *riskEstimate;
+	U64 certainty_count;
+	RiskEvidenceSynthesis_Certainty *certainty;
 };
 class RiskEvidenceSynthesis_SampleSize {
-public:
-	ResourceType resourceType = ResourceType::RiskEvidenceSynthesis_SampleSize;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
-	Integer* numberOfStudies;
-	Integer* numberOfParticipants;
+	Integer *numberOfStudies;
+	Integer *numberOfParticipants;
 };
 class RiskEvidenceSynthesis_RiskEstimate {
-public:
-	ResourceType resourceType = ResourceType::RiskEvidenceSynthesis_RiskEstimate;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
-	CodeableConcept* type;
+	CodeableConcept *type;
 	fhir_decimal value;
-	CodeableConcept* unitOfMeasure;
-	Integer* denominatorCount;
-	Integer* numeratorCount;
-	int precisionEstimate_count;
-	RiskEvidenceSynthesis_RiskEstimate_PrecisionEstimate* precisionEstimate;
+	CodeableConcept *unitOfMeasure;
+	Integer *denominatorCount;
+	Integer *numeratorCount;
+	U64 precisionEstimate_count;
+	RiskEvidenceSynthesis_RiskEstimate_PrecisionEstimate *precisionEstimate;
 };
 class RiskEvidenceSynthesis_RiskEstimate_PrecisionEstimate {
-public:
-	ResourceType resourceType = ResourceType::RiskEvidenceSynthesis_RiskEstimate_PrecisionEstimate;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	fhir_decimal level;
 	fhir_decimal from;
 	fhir_decimal to;
 };
 class RiskEvidenceSynthesis_Certainty {
-public:
-	ResourceType resourceType = ResourceType::RiskEvidenceSynthesis_Certainty;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int rating_count;
-	CodeableConcept* rating;
-	int note_count;
-	Annotation* note;
-	int certaintySubcomponent_count;
-	RiskEvidenceSynthesis_Certainty_CertaintySubcomponent* certaintySubcomponent;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 rating_count;
+	CodeableConcept *rating;
+	U64 note_count;
+	Annotation *note;
+	U64 certaintySubcomponent_count;
+	RiskEvidenceSynthesis_Certainty_CertaintySubcomponent *certaintySubcomponent;
 };
 class RiskEvidenceSynthesis_Certainty_CertaintySubcomponent {
-public:
-	ResourceType resourceType = ResourceType::RiskEvidenceSynthesis_Certainty_CertaintySubcomponent;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	int rating_count;
-	CodeableConcept* rating;
-	int note_count;
-	Annotation* note;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	U64 rating_count;
+	CodeableConcept *rating;
+	U64 note_count;
+	Annotation *note;
 };
 class Schedule {
-public:
-	ResourceType resourceType = ResourceType::Schedule;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_boolean active;
-	int serviceCategory_count;
-	CodeableConcept* serviceCategory;
-	int serviceType_count;
-	CodeableConcept* serviceType;
-	int specialty_count;
-	CodeableConcept* specialty;
-	int actor_count;
-	Reference* actor;
-	Period* planningHorizon;
+	U64 serviceCategory_count;
+	CodeableConcept *serviceCategory;
+	U64 serviceType_count;
+	CodeableConcept *serviceType;
+	U64 specialty_count;
+	CodeableConcept *specialty;
+	U64 actor_count;
+	Reference *actor;
+	Period *planningHorizon;
 	fhir_string comment;
 };
 class SearchParameter {
-public:
-	ResourceType resourceType = ResourceType::SearchParameter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -13058,99 +13200,101 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_code code;
-	int base_count;
-	fhir_code* base;
+	U64 base_count;
+	fhir_code *base;
 	fhir_code type;
 	fhir_string expression;
 	fhir_string xpath;
 	fhir_code xpathUsage;
-	int target_count;
-	fhir_code* target;
+	U64 target_count;
+	fhir_code *target;
 	fhir_boolean multipleOr;
 	fhir_boolean multipleAnd;
-	int comparator_count;
-	fhir_code* comparator;
-	int modifier_count;
-	fhir_code* modifier;
-	int chain_count;
-	fhir_string* chain;
-	int component_count;
-	SearchParameter_Component* component;
+	U64 comparator_count;
+	fhir_code *comparator;
+	U64 modifier_count;
+	fhir_code *modifier;
+	U64 chain_count;
+	fhir_string *chain;
+	U64 component_count;
+	SearchParameter_Component *component;
 };
 class SearchParameter_Component {
-public:
-	ResourceType resourceType = ResourceType::SearchParameter_Component;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_canonical definition;
 	fhir_string expression;
 };
 class ServiceRequest {
-public:
-	ResourceType resourceType = ResourceType::ServiceRequest;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int instantiatesCanonical_count;
-	fhir_canonical* instantiatesCanonical;
-	int instantiatesUri_count;
-	fhir_uri* instantiatesUri;
-	int basedOn_count;
-	Reference* basedOn;
-	int replaces_count;
-	Reference* replaces;
-	Identifier* requisition;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 instantiatesCanonical_count;
+	fhir_canonical *instantiatesCanonical;
+	U64 instantiatesUri_count;
+	fhir_uri *instantiatesUri;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 replaces_count;
+	Reference *replaces;
+	Identifier *requisition;
 	fhir_code status;
 	fhir_code intent;
-	int category_count;
-	CodeableConcept* category;
+	U64 category_count;
+	CodeableConcept *category;
 	fhir_code priority;
 	fhir_boolean doNotPerform;
-	CodeableConcept* code;
-	int orderDetail_count;
-	CodeableConcept* orderDetail;
+	CodeableConcept *code;
+	U64 orderDetail_count;
+	CodeableConcept *orderDetail;
 	enum class QuantityType {
 		Quantity,
 		Ratio,
 		Range
 	};
 	QuantityType quantity_type;
+
 	union {
 		Quantity* valueQuantity;
 		Ratio* valueRatio;
 		Range* valueRange;
 	} quantity;
 
-	Reference* subject;
-	Reference* encounter;
+	Reference *subject;
+	Reference *encounter;
 	enum class OccurrenceType {
 		fhir_dateTime,
 		Period,
 		Timing
 	};
 	OccurrenceType occurrence_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -13162,62 +13306,63 @@ public:
 		CodeableConcept
 	};
 	AsNeededType asNeeded_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		CodeableConcept* valueCodeableConcept;
 	} asNeeded;
 
 	fhir_dateTime authoredOn;
-	Reference* requester;
-	CodeableConcept* performerType;
-	int performer_count;
-	Reference* performer;
-	int locationCode_count;
-	CodeableConcept* locationCode;
-	int locationReference_count;
-	Reference* locationReference;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	int insurance_count;
-	Reference* insurance;
-	int supportingInfo_count;
-	Reference* supportingInfo;
-	int specimen_count;
-	Reference* specimen;
-	int bodySite_count;
-	CodeableConcept* bodySite;
-	int note_count;
-	Annotation* note;
+	Reference *requester;
+	CodeableConcept *performerType;
+	U64 performer_count;
+	Reference *performer;
+	U64 locationCode_count;
+	CodeableConcept *locationCode;
+	U64 locationReference_count;
+	Reference *locationReference;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	U64 insurance_count;
+	Reference *insurance;
+	U64 supportingInfo_count;
+	Reference *supportingInfo;
+	U64 specimen_count;
+	Reference *specimen;
+	U64 bodySite_count;
+	CodeableConcept *bodySite;
+	U64 note_count;
+	Annotation *note;
 	fhir_string patientInstruction;
-	int relevantHistory_count;
-	Reference* relevantHistory;
+	U64 relevantHistory_count;
+	Reference *relevantHistory;
 };
 class Slot {
-public:
-	ResourceType resourceType = ResourceType::Slot;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int serviceCategory_count;
-	CodeableConcept* serviceCategory;
-	int serviceType_count;
-	CodeableConcept* serviceType;
-	int specialty_count;
-	CodeableConcept* specialty;
-	CodeableConcept* appointmentType;
-	Reference* schedule;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 serviceCategory_count;
+	CodeableConcept *serviceCategory;
+	U64 serviceType_count;
+	CodeableConcept *serviceType;
+	U64 specialty_count;
+	CodeableConcept *specialty;
+	CodeableConcept *appointmentType;
+	Reference *schedule;
 	fhir_code status;
 	fhir_instant start;
 	fhir_instant end;
@@ -13225,68 +13370,70 @@ public:
 	fhir_string comment;
 };
 class Specimen {
-public:
-	ResourceType resourceType = ResourceType::Specimen;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	Identifier* accessionIdentifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	Identifier *accessionIdentifier;
 	fhir_code status;
-	CodeableConcept* type;
-	Reference* subject;
+	CodeableConcept *type;
+	Reference *subject;
 	fhir_dateTime receivedTime;
-	int parent_count;
-	Reference* parent;
-	int request_count;
-	Reference* request;
-	Specimen_Collection* collection;
-	int processing_count;
-	Specimen_Processing* processing;
-	int container_count;
-	Specimen_Container* container;
-	int condition_count;
-	CodeableConcept* condition;
-	int note_count;
-	Annotation* note;
+	U64 parent_count;
+	Reference *parent;
+	U64 request_count;
+	Reference *request;
+	Specimen_Collection *collection;
+	U64 processing_count;
+	Specimen_Processing *processing;
+	U64 container_count;
+	Specimen_Container *container;
+	U64 condition_count;
+	CodeableConcept *condition;
+	U64 note_count;
+	Annotation *note;
 };
 class Specimen_Collection {
-public:
-	ResourceType resourceType = ResourceType::Specimen_Collection;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* collector;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *collector;
 	enum class CollectedType {
 		fhir_dateTime,
 		Period
 	};
 	CollectedType collected_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
 	} collected;
 
-	Duration* duration;
-	Quantity* quantity;
-	CodeableConcept* method;
-	CodeableConcept* bodySite;
+	Duration *duration;
+	Quantity *quantity;
+	CodeableConcept *method;
+	CodeableConcept *bodySite;
 	enum class FastingStatusType {
 		CodeableConcept,
 		Duration
 	};
 	FastingStatusType fastingStatus_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Duration* valueDuration;
@@ -13294,22 +13441,23 @@ public:
 
 };
 class Specimen_Processing {
-public:
-	ResourceType resourceType = ResourceType::Specimen_Processing;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
-	CodeableConcept* procedure;
-	int additive_count;
-	Reference* additive;
+	CodeableConcept *procedure;
+	U64 additive_count;
+	Reference *additive;
 	enum class TimeType {
 		fhir_dateTime,
 		Period
 	};
 	TimeType time_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -13317,24 +13465,25 @@ public:
 
 };
 class Specimen_Container {
-public:
-	ResourceType resourceType = ResourceType::Specimen_Container;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string description;
-	CodeableConcept* type;
-	Quantity* capacity;
-	Quantity* specimenQuantity;
+	CodeableConcept *type;
+	Quantity *capacity;
+	Quantity *specimenQuantity;
 	enum class AdditiveType {
 		CodeableConcept,
 		Reference
 	};
 	AdditiveType additive_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -13342,88 +13491,90 @@ public:
 
 };
 class SpecimenDefinition {
-public:
-	ResourceType resourceType = ResourceType::SpecimenDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
-	CodeableConcept* typeCollected;
-	int patientPreparation_count;
-	CodeableConcept* patientPreparation;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
+	CodeableConcept *typeCollected;
+	U64 patientPreparation_count;
+	CodeableConcept *patientPreparation;
 	fhir_string timeAspect;
-	int collection_count;
-	CodeableConcept* collection;
-	int typeTested_count;
-	SpecimenDefinition_TypeTested* typeTested;
+	U64 collection_count;
+	CodeableConcept *collection;
+	U64 typeTested_count;
+	SpecimenDefinition_TypeTested *typeTested;
 };
 class SpecimenDefinition_TypeTested {
-public:
-	ResourceType resourceType = ResourceType::SpecimenDefinition_TypeTested;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean isDerived;
-	CodeableConcept* type;
+	CodeableConcept *type;
 	fhir_code preference;
-	SpecimenDefinition_TypeTested_Container* container;
+	SpecimenDefinition_TypeTested_Container *container;
 	fhir_string requirement;
-	Duration* retentionTime;
-	int rejectionCriterion_count;
-	CodeableConcept* rejectionCriterion;
-	int handling_count;
-	SpecimenDefinition_TypeTested_Handling* handling;
+	Duration *retentionTime;
+	U64 rejectionCriterion_count;
+	CodeableConcept *rejectionCriterion;
+	U64 handling_count;
+	SpecimenDefinition_TypeTested_Handling *handling;
 };
 class SpecimenDefinition_TypeTested_Container {
-public:
-	ResourceType resourceType = ResourceType::SpecimenDefinition_TypeTested_Container;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* material;
-	CodeableConcept* type;
-	CodeableConcept* cap;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *material;
+	CodeableConcept *type;
+	CodeableConcept *cap;
 	fhir_string description;
-	Quantity* capacity;
+	Quantity *capacity;
 	enum class MinimumVolumeType {
 		Quantity,
 		fhir_string
 	};
 	MinimumVolumeType minimumVolume_type;
+
 	union {
 		Quantity* valueQuantity;
 		fhir_string valueString;
 	} minimumVolume;
 
-	int additive_count;
-	SpecimenDefinition_TypeTested_Container_Additive* additive;
+	U64 additive_count;
+	SpecimenDefinition_TypeTested_Container_Additive *additive;
 	fhir_string preparation;
 };
 class SpecimenDefinition_TypeTested_Container_Additive {
-public:
-	ResourceType resourceType = ResourceType::SpecimenDefinition_TypeTested_Container_Additive;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class AdditiveType {
 		CodeableConcept,
 		Reference
 	};
 	AdditiveType additive_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -13431,35 +13582,35 @@ public:
 
 };
 class SpecimenDefinition_TypeTested_Handling {
-public:
-	ResourceType resourceType = ResourceType::SpecimenDefinition_TypeTested_Handling;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* temperatureQualifier;
-	Range* temperatureRange;
-	Duration* maxDuration;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *temperatureQualifier;
+	Range *temperatureRange;
+	Duration *maxDuration;
 	fhir_string instruction;
 };
 class StructureDefinition {
-public:
-	ResourceType resourceType = ResourceType::StructureDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -13467,95 +13618,95 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
-	int keyword_count;
-	Coding* keyword;
+	U64 keyword_count;
+	Coding *keyword;
 	fhir_code fhirVersion;
-	int mapping_count;
-	StructureDefinition_Mapping* mapping;
+	U64 mapping_count;
+	StructureDefinition_Mapping *mapping;
 	fhir_code kind;
 	fhir_boolean abstract;
-	int context_count;
-	StructureDefinition_Context* context;
-	int contextInvariant_count;
-	fhir_string* contextInvariant;
+	U64 context_count;
+	StructureDefinition_Context *context;
+	U64 contextInvariant_count;
+	fhir_string *contextInvariant;
 	fhir_uri type;
 	fhir_canonical baseDefinition;
 	fhir_code derivation;
-	StructureDefinition_Snapshot* snapshot;
-	StructureDefinition_Differential* differential;
+	StructureDefinition_Snapshot *snapshot;
+	StructureDefinition_Differential *differential;
 };
 class StructureDefinition_Mapping {
-public:
-	ResourceType resourceType = ResourceType::StructureDefinition_Mapping;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_id identity;
 	fhir_uri uri;
 	fhir_string name;
 	fhir_string comment;
 };
 class StructureDefinition_Context {
-public:
-	ResourceType resourceType = ResourceType::StructureDefinition_Context;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
 	fhir_string expression;
 };
 class StructureDefinition_Snapshot {
-public:
-	ResourceType resourceType = ResourceType::StructureDefinition_Snapshot;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int element_count;
-	ElementDefinition* element;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 element_count;
+	ElementDefinition *element;
 };
 class StructureDefinition_Differential {
-public:
-	ResourceType resourceType = ResourceType::StructureDefinition_Differential;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int element_count;
-	ElementDefinition* element;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 element_count;
+	ElementDefinition *element;
 };
 class StructureMap {
-public:
-	ResourceType resourceType = ResourceType::StructureMap;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -13563,94 +13714,94 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
-	int structure_count;
-	StructureMap_Structure* structure;
-	int import_count;
-	fhir_canonical* import;
-	int group_count;
-	StructureMap_Group* group;
+	U64 structure_count;
+	StructureMap_Structure *structure;
+	U64 import_count;
+	fhir_canonical *import;
+	U64 group_count;
+	StructureMap_Group *group;
 };
 class StructureMap_Structure {
-public:
-	ResourceType resourceType = ResourceType::StructureMap_Structure;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_canonical url;
 	fhir_code mode;
 	fhir_string alias;
 	fhir_string documentation;
 };
 class StructureMap_Group {
-public:
-	ResourceType resourceType = ResourceType::StructureMap_Group;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_id name;
 	fhir_id extends;
 	fhir_code typeMode;
 	fhir_string documentation;
-	int input_count;
-	StructureMap_Group_Input* input;
-	int rule_count;
-	StructureMap_Group_Rule* rule;
+	U64 input_count;
+	StructureMap_Group_Input *input;
+	U64 rule_count;
+	StructureMap_Group_Rule *rule;
 };
 class StructureMap_Group_Input {
-public:
-	ResourceType resourceType = ResourceType::StructureMap_Group_Input;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_id name;
 	fhir_string type;
 	fhir_code mode;
 	fhir_string documentation;
 };
 class StructureMap_Group_Rule {
-public:
-	ResourceType resourceType = ResourceType::StructureMap_Group_Rule;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_id name;
-	int source_count;
-	StructureMap_Group_Rule_Source* source;
-	int target_count;
-	StructureMap_Group_Rule_Target* target;
-	int rule_count;
-	StructureMap_Group_Rule* rule;
-	int dependent_count;
-	StructureMap_Group_Rule_Dependent* dependent;
+	U64 source_count;
+	StructureMap_Group_Rule_Source *source;
+	U64 target_count;
+	StructureMap_Group_Rule_Target *target;
+	U64 rule_count;
+	StructureMap_Group_Rule *rule;
+	U64 dependent_count;
+	StructureMap_Group_Rule_Dependent *dependent;
 	fhir_string documentation;
 };
 class StructureMap_Group_Rule_Source {
-public:
-	ResourceType resourceType = ResourceType::StructureMap_Group_Rule_Source;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_id context;
-	Integer* min;
+	Integer *min;
 	fhir_string max;
 	fhir_string type;
 	enum class DefaultValueType {
@@ -13706,6 +13857,7 @@ public:
 		Meta
 	};
 	DefaultValueType defaultValue_type;
+
 	union {
 		fhir_base64Binary valueBase64Binary;
 		fhir_boolean valueBoolean;
@@ -13767,32 +13919,32 @@ public:
 	fhir_string logMessage;
 };
 class StructureMap_Group_Rule_Target {
-public:
-	ResourceType resourceType = ResourceType::StructureMap_Group_Rule_Target;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_id context;
 	fhir_code contextType;
 	fhir_string element;
 	fhir_id variable;
-	int listMode_count;
-	fhir_code* listMode;
+	U64 listMode_count;
+	fhir_code *listMode;
 	fhir_id listRuleId;
 	fhir_code transform;
-	int parameter_count;
-	StructureMap_Group_Rule_Target_Parameter* parameter;
+	U64 parameter_count;
+	StructureMap_Group_Rule_Target_Parameter *parameter;
 };
 class StructureMap_Group_Rule_Target_Parameter {
-public:
-	ResourceType resourceType = ResourceType::StructureMap_Group_Rule_Target_Parameter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class ValueType {
 		fhir_id,
 		fhir_string,
@@ -13801,6 +13953,7 @@ public:
 		fhir_decimal
 	};
 	ValueType value_type;
+
 	union {
 		fhir_id valueId;
 		fhir_string valueString;
@@ -13811,106 +13964,107 @@ public:
 
 };
 class StructureMap_Group_Rule_Dependent {
-public:
-	ResourceType resourceType = ResourceType::StructureMap_Group_Rule_Dependent;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_id name;
-	int variable_count;
-	fhir_string* variable;
+	U64 variable_count;
+	fhir_string *variable;
 };
 class Subscription {
-public:
-	ResourceType resourceType = ResourceType::Subscription;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code status;
-	int contact_count;
-	ContactPoint* contact;
+	U64 contact_count;
+	ContactPoint *contact;
 	fhir_instant end;
 	fhir_string reason;
 	fhir_string criteria;
 	fhir_string error;
-	Subscription_Channel* channel;
+	Subscription_Channel *channel;
 };
 class Subscription_Channel {
-public:
-	ResourceType resourceType = ResourceType::Subscription_Channel;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
 	fhir_url endpoint;
 	fhir_code payload;
-	int header_count;
-	fhir_string* header;
+	U64 header_count;
+	fhir_string *header;
 };
 class Substance {
-public:
-	ResourceType resourceType = ResourceType::Substance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	int category_count;
-	CodeableConcept* category;
-	CodeableConcept* code;
+	U64 category_count;
+	CodeableConcept *category;
+	CodeableConcept *code;
 	fhir_string description;
-	int instance_count;
-	Substance_Instance* instance;
-	int ingredient_count;
-	Substance_Ingredient* ingredient;
+	U64 instance_count;
+	Substance_Instance *instance;
+	U64 ingredient_count;
+	Substance_Ingredient *ingredient;
 };
 class Substance_Instance {
-public:
-	ResourceType resourceType = ResourceType::Substance_Instance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
 	fhir_dateTime expiry;
-	Quantity* quantity;
+	Quantity *quantity;
 };
 class Substance_Ingredient {
-public:
-	ResourceType resourceType = ResourceType::Substance_Ingredient;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Ratio* quantity;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Ratio *quantity;
 	enum class SubstanceType {
 		CodeableConcept,
 		Reference
 	};
 	SubstanceType substance_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -13918,477 +14072,479 @@ public:
 
 };
 class SubstanceNucleicAcid {
-public:
-	ResourceType resourceType = ResourceType::SubstanceNucleicAcid;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* sequenceType;
-	Integer* numberOfSubunits;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *sequenceType;
+	Integer *numberOfSubunits;
 	fhir_string areaOfHybridisation;
-	CodeableConcept* oligoNucleotideType;
-	int subunit_count;
-	SubstanceNucleicAcid_Subunit* subunit;
+	CodeableConcept *oligoNucleotideType;
+	U64 subunit_count;
+	SubstanceNucleicAcid_Subunit *subunit;
 };
 class SubstanceNucleicAcid_Subunit {
-public:
-	ResourceType resourceType = ResourceType::SubstanceNucleicAcid_Subunit;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Integer* subunit;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Integer *subunit;
 	fhir_string sequence;
-	Integer* length;
-	Attachment* sequenceAttachment;
-	CodeableConcept* fivePrime;
-	CodeableConcept* threePrime;
-	int linkage_count;
-	SubstanceNucleicAcid_Subunit_Linkage* linkage;
-	int sugar_count;
-	SubstanceNucleicAcid_Subunit_Sugar* sugar;
+	Integer *length;
+	Attachment *sequenceAttachment;
+	CodeableConcept *fivePrime;
+	CodeableConcept *threePrime;
+	U64 linkage_count;
+	SubstanceNucleicAcid_Subunit_Linkage *linkage;
+	U64 sugar_count;
+	SubstanceNucleicAcid_Subunit_Sugar *sugar;
 };
 class SubstanceNucleicAcid_Subunit_Linkage {
-public:
-	ResourceType resourceType = ResourceType::SubstanceNucleicAcid_Subunit_Linkage;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string connectivity;
-	Identifier* identifier;
+	Identifier *identifier;
 	fhir_string name;
 	fhir_string residueSite;
 };
 class SubstanceNucleicAcid_Subunit_Sugar {
-public:
-	ResourceType resourceType = ResourceType::SubstanceNucleicAcid_Subunit_Sugar;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
 	fhir_string name;
 	fhir_string residueSite;
 };
 class SubstancePolymer {
-public:
-	ResourceType resourceType = ResourceType::SubstancePolymer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* class_;
-	CodeableConcept* geometry;
-	int copolymerConnectivity_count;
-	CodeableConcept* copolymerConnectivity;
-	int modification_count;
-	fhir_string* modification;
-	int monomerSet_count;
-	SubstancePolymer_MonomerSet* monomerSet;
-	int repeat_count;
-	SubstancePolymer_Repeat* repeat;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *class_;
+	CodeableConcept *geometry;
+	U64 copolymerConnectivity_count;
+	CodeableConcept *copolymerConnectivity;
+	U64 modification_count;
+	fhir_string *modification;
+	U64 monomerSet_count;
+	SubstancePolymer_MonomerSet *monomerSet;
+	U64 repeat_count;
+	SubstancePolymer_Repeat *repeat;
 };
 class SubstancePolymer_MonomerSet {
-public:
-	ResourceType resourceType = ResourceType::SubstancePolymer_MonomerSet;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* ratioType;
-	int startingMaterial_count;
-	SubstancePolymer_MonomerSet_StartingMaterial* startingMaterial;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *ratioType;
+	U64 startingMaterial_count;
+	SubstancePolymer_MonomerSet_StartingMaterial *startingMaterial;
 };
 class SubstancePolymer_MonomerSet_StartingMaterial {
-public:
-	ResourceType resourceType = ResourceType::SubstancePolymer_MonomerSet_StartingMaterial;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* material;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *material;
+	CodeableConcept *type;
 	fhir_boolean isDefining;
-	SubstanceAmount* amount;
+	SubstanceAmount *amount;
 };
 class SubstancePolymer_Repeat {
-public:
-	ResourceType resourceType = ResourceType::SubstancePolymer_Repeat;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Integer* numberOfUnits;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Integer *numberOfUnits;
 	fhir_string averageMolecularFormula;
-	CodeableConcept* repeatUnitAmountType;
-	int repeatUnit_count;
-	SubstancePolymer_Repeat_RepeatUnit* repeatUnit;
+	CodeableConcept *repeatUnitAmountType;
+	U64 repeatUnit_count;
+	SubstancePolymer_Repeat_RepeatUnit *repeatUnit;
 };
 class SubstancePolymer_Repeat_RepeatUnit {
-public:
-	ResourceType resourceType = ResourceType::SubstancePolymer_Repeat_RepeatUnit;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* orientationOfPolymerisation;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *orientationOfPolymerisation;
 	fhir_string repeatUnit;
-	SubstanceAmount* amount;
-	int degreeOfPolymerisation_count;
-	SubstancePolymer_Repeat_RepeatUnit_DegreeOfPolymerisation* degreeOfPolymerisation;
-	int structuralRepresentation_count;
-	SubstancePolymer_Repeat_RepeatUnit_StructuralRepresentation* structuralRepresentation;
+	SubstanceAmount *amount;
+	U64 degreeOfPolymerisation_count;
+	SubstancePolymer_Repeat_RepeatUnit_DegreeOfPolymerisation *degreeOfPolymerisation;
+	U64 structuralRepresentation_count;
+	SubstancePolymer_Repeat_RepeatUnit_StructuralRepresentation *structuralRepresentation;
 };
 class SubstancePolymer_Repeat_RepeatUnit_DegreeOfPolymerisation {
-public:
-	ResourceType resourceType = ResourceType::SubstancePolymer_Repeat_RepeatUnit_DegreeOfPolymerisation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* degree;
-	SubstanceAmount* amount;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *degree;
+	SubstanceAmount *amount;
 };
 class SubstancePolymer_Repeat_RepeatUnit_StructuralRepresentation {
-public:
-	ResourceType resourceType = ResourceType::SubstancePolymer_Repeat_RepeatUnit_StructuralRepresentation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	fhir_string representation;
-	Attachment* attachment;
+	Attachment *attachment;
 };
 class SubstanceProtein {
-public:
-	ResourceType resourceType = ResourceType::SubstanceProtein;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* sequenceType;
-	Integer* numberOfSubunits;
-	int disulfideLinkage_count;
-	fhir_string* disulfideLinkage;
-	int subunit_count;
-	SubstanceProtein_Subunit* subunit;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *sequenceType;
+	Integer *numberOfSubunits;
+	U64 disulfideLinkage_count;
+	fhir_string *disulfideLinkage;
+	U64 subunit_count;
+	SubstanceProtein_Subunit *subunit;
 };
 class SubstanceProtein_Subunit {
-public:
-	ResourceType resourceType = ResourceType::SubstanceProtein_Subunit;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Integer* subunit;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Integer *subunit;
 	fhir_string sequence;
-	Integer* length;
-	Attachment* sequenceAttachment;
-	Identifier* nTerminalModificationId;
+	Integer *length;
+	Attachment *sequenceAttachment;
+	Identifier *nTerminalModificationId;
 	fhir_string nTerminalModification;
-	Identifier* cTerminalModificationId;
+	Identifier *cTerminalModificationId;
 	fhir_string cTerminalModification;
 };
 class SubstanceReferenceInformation {
-public:
-	ResourceType resourceType = ResourceType::SubstanceReferenceInformation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string comment;
-	int gene_count;
-	SubstanceReferenceInformation_Gene* gene;
-	int geneElement_count;
-	SubstanceReferenceInformation_GeneElement* geneElement;
-	int classification_count;
-	SubstanceReferenceInformation_Classification* classification;
-	int target_count;
-	SubstanceReferenceInformation_Target* target;
+	U64 gene_count;
+	SubstanceReferenceInformation_Gene *gene;
+	U64 geneElement_count;
+	SubstanceReferenceInformation_GeneElement *geneElement;
+	U64 classification_count;
+	SubstanceReferenceInformation_Classification *classification;
+	U64 target_count;
+	SubstanceReferenceInformation_Target *target;
 };
 class SubstanceReferenceInformation_Gene {
-public:
-	ResourceType resourceType = ResourceType::SubstanceReferenceInformation_Gene;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* geneSequenceOrigin;
-	CodeableConcept* gene;
-	int source_count;
-	Reference* source;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *geneSequenceOrigin;
+	CodeableConcept *gene;
+	U64 source_count;
+	Reference *source;
 };
 class SubstanceReferenceInformation_GeneElement {
-public:
-	ResourceType resourceType = ResourceType::SubstanceReferenceInformation_GeneElement;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
-	Identifier* element;
-	int source_count;
-	Reference* source;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
+	Identifier *element;
+	U64 source_count;
+	Reference *source;
 };
 class SubstanceReferenceInformation_Classification {
-public:
-	ResourceType resourceType = ResourceType::SubstanceReferenceInformation_Classification;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* domain;
-	CodeableConcept* classification;
-	int subtype_count;
-	CodeableConcept* subtype;
-	int source_count;
-	Reference* source;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *domain;
+	CodeableConcept *classification;
+	U64 subtype_count;
+	CodeableConcept *subtype;
+	U64 source_count;
+	Reference *source;
 };
 class SubstanceReferenceInformation_Target {
-public:
-	ResourceType resourceType = ResourceType::SubstanceReferenceInformation_Target;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* target;
-	CodeableConcept* type;
-	CodeableConcept* interaction;
-	CodeableConcept* organism;
-	CodeableConcept* organismType;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *target;
+	CodeableConcept *type;
+	CodeableConcept *interaction;
+	CodeableConcept *organism;
+	CodeableConcept *organismType;
 	enum class AmountType {
 		Quantity,
 		Range,
 		fhir_string
 	};
 	AmountType amount_type;
+
 	union {
 		Quantity* valueQuantity;
 		Range* valueRange;
 		fhir_string valueString;
 	} amount;
 
-	CodeableConcept* amountType;
-	int source_count;
-	Reference* source;
+	CodeableConcept *amountType;
+	U64 source_count;
+	Reference *source;
 };
 class SubstanceSourceMaterial {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSourceMaterial;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* sourceMaterialClass;
-	CodeableConcept* sourceMaterialType;
-	CodeableConcept* sourceMaterialState;
-	Identifier* organismId;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *sourceMaterialClass;
+	CodeableConcept *sourceMaterialType;
+	CodeableConcept *sourceMaterialState;
+	Identifier *organismId;
 	fhir_string organismName;
-	int parentSubstanceId_count;
-	Identifier* parentSubstanceId;
-	int parentSubstanceName_count;
-	fhir_string* parentSubstanceName;
-	int countryOfOrigin_count;
-	CodeableConcept* countryOfOrigin;
-	int geographicalLocation_count;
-	fhir_string* geographicalLocation;
-	CodeableConcept* developmentStage;
-	int fractionDescription_count;
-	SubstanceSourceMaterial_FractionDescription* fractionDescription;
-	SubstanceSourceMaterial_Organism* organism;
-	int partDescription_count;
-	SubstanceSourceMaterial_PartDescription* partDescription;
+	U64 parentSubstanceId_count;
+	Identifier *parentSubstanceId;
+	U64 parentSubstanceName_count;
+	fhir_string *parentSubstanceName;
+	U64 countryOfOrigin_count;
+	CodeableConcept *countryOfOrigin;
+	U64 geographicalLocation_count;
+	fhir_string *geographicalLocation;
+	CodeableConcept *developmentStage;
+	U64 fractionDescription_count;
+	SubstanceSourceMaterial_FractionDescription *fractionDescription;
+	SubstanceSourceMaterial_Organism *organism;
+	U64 partDescription_count;
+	SubstanceSourceMaterial_PartDescription *partDescription;
 };
 class SubstanceSourceMaterial_FractionDescription {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSourceMaterial_FractionDescription;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string fraction;
-	CodeableConcept* materialType;
+	CodeableConcept *materialType;
 };
 class SubstanceSourceMaterial_Organism {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSourceMaterial_Organism;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* family;
-	CodeableConcept* genus;
-	CodeableConcept* species;
-	CodeableConcept* intraspecificType;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *family;
+	CodeableConcept *genus;
+	CodeableConcept *species;
+	CodeableConcept *intraspecificType;
 	fhir_string intraspecificDescription;
-	int author_count;
-	SubstanceSourceMaterial_Organism_Author* author;
-	SubstanceSourceMaterial_Organism_Hybrid* hybrid;
-	SubstanceSourceMaterial_Organism_OrganismGeneral* organismGeneral;
+	U64 author_count;
+	SubstanceSourceMaterial_Organism_Author *author;
+	SubstanceSourceMaterial_Organism_Hybrid *hybrid;
+	SubstanceSourceMaterial_Organism_OrganismGeneral *organismGeneral;
 };
 class SubstanceSourceMaterial_Organism_Author {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSourceMaterial_Organism_Author;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* authorType;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *authorType;
 	fhir_string authorDescription;
 };
 class SubstanceSourceMaterial_Organism_Hybrid {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSourceMaterial_Organism_Hybrid;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string maternalOrganismId;
 	fhir_string maternalOrganismName;
 	fhir_string paternalOrganismId;
 	fhir_string paternalOrganismName;
-	CodeableConcept* hybridType;
+	CodeableConcept *hybridType;
 };
 class SubstanceSourceMaterial_Organism_OrganismGeneral {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSourceMaterial_Organism_OrganismGeneral;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* kingdom;
-	CodeableConcept* phylum;
-	CodeableConcept* class_;
-	CodeableConcept* order;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *kingdom;
+	CodeableConcept *phylum;
+	CodeableConcept *class_;
+	CodeableConcept *order;
 };
 class SubstanceSourceMaterial_PartDescription {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSourceMaterial_PartDescription;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* part;
-	CodeableConcept* partLocation;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *part;
+	CodeableConcept *partLocation;
 };
 class SubstanceSpecification {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSpecification;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
-	CodeableConcept* type;
-	CodeableConcept* status;
-	CodeableConcept* domain;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
+	CodeableConcept *type;
+	CodeableConcept *status;
+	CodeableConcept *domain;
 	fhir_string description;
-	int source_count;
-	Reference* source;
+	U64 source_count;
+	Reference *source;
 	fhir_string comment;
-	int moiety_count;
-	SubstanceSpecification_Moiety* moiety;
-	int property_count;
-	SubstanceSpecification_Property* property;
-	Reference* referenceInformation;
-	SubstanceSpecification_Structure* structure;
-	int code_count;
-	SubstanceSpecification_Code* code;
-	int name_count;
-	SubstanceSpecification_Name* name;
-	int molecularWeight_count;
-	SubstanceSpecification_Structure_Isotope_MolecularWeight* molecularWeight;
-	int relationship_count;
-	SubstanceSpecification_Relationship* relationship;
-	Reference* nucleicAcid;
-	Reference* polymer;
-	Reference* protein;
-	Reference* sourceMaterial;
+	U64 moiety_count;
+	SubstanceSpecification_Moiety *moiety;
+	U64 property_count;
+	SubstanceSpecification_Property *property;
+	Reference *referenceInformation;
+	SubstanceSpecification_Structure *structure;
+	U64 code_count;
+	SubstanceSpecification_Code *code;
+	U64 name_count;
+	SubstanceSpecification_Name *name;
+	U64 molecularWeight_count;
+	SubstanceSpecification_Structure_Isotope_MolecularWeight *molecularWeight;
+	U64 relationship_count;
+	SubstanceSpecification_Relationship *relationship;
+	Reference *nucleicAcid;
+	Reference *polymer;
+	Reference *protein;
+	Reference *sourceMaterial;
 };
 class SubstanceSpecification_Moiety {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSpecification_Moiety;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* role;
-	Identifier* identifier;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *role;
+	Identifier *identifier;
 	fhir_string name;
-	CodeableConcept* stereochemistry;
-	CodeableConcept* opticalActivity;
+	CodeableConcept *stereochemistry;
+	CodeableConcept *opticalActivity;
 	fhir_string molecularFormula;
 	enum class AmountType {
 		Quantity,
 		fhir_string
 	};
 	AmountType amount_type;
+
 	union {
 		Quantity* valueQuantity;
 		fhir_string valueString;
@@ -14396,21 +14552,22 @@ public:
 
 };
 class SubstanceSpecification_Property {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSpecification_Property;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* category;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *category;
+	CodeableConcept *code;
 	fhir_string parameters;
 	enum class DefiningSubstanceType {
 		Reference,
 		CodeableConcept
 	};
 	DefiningSubstanceType definingSubstance_type;
+
 	union {
 		Reference* valueReference;
 		CodeableConcept* valueCodeableConcept;
@@ -14421,6 +14578,7 @@ public:
 		fhir_string
 	};
 	AmountType amount_type;
+
 	union {
 		Quantity* valueQuantity;
 		fhir_string valueString;
@@ -14428,136 +14586,137 @@ public:
 
 };
 class SubstanceSpecification_Structure {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSpecification_Structure;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* stereochemistry;
-	CodeableConcept* opticalActivity;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *stereochemistry;
+	CodeableConcept *opticalActivity;
 	fhir_string molecularFormula;
 	fhir_string molecularFormulaByMoiety;
-	int isotope_count;
-	SubstanceSpecification_Structure_Isotope* isotope;
-	SubstanceSpecification_Structure_Isotope_MolecularWeight* molecularWeight;
-	int source_count;
-	Reference* source;
-	int representation_count;
-	SubstanceSpecification_Structure_Representation* representation;
+	U64 isotope_count;
+	SubstanceSpecification_Structure_Isotope *isotope;
+	SubstanceSpecification_Structure_Isotope_MolecularWeight *molecularWeight;
+	U64 source_count;
+	Reference *source;
+	U64 representation_count;
+	SubstanceSpecification_Structure_Representation *representation;
 };
 class SubstanceSpecification_Structure_Isotope {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSpecification_Structure_Isotope;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
-	CodeableConcept* name;
-	CodeableConcept* substitution;
-	Quantity* halfLife;
-	SubstanceSpecification_Structure_Isotope_MolecularWeight* molecularWeight;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
+	CodeableConcept *name;
+	CodeableConcept *substitution;
+	Quantity *halfLife;
+	SubstanceSpecification_Structure_Isotope_MolecularWeight *molecularWeight;
 };
 class SubstanceSpecification_Structure_Isotope_MolecularWeight {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSpecification_Structure_Isotope_MolecularWeight;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* method;
-	CodeableConcept* type;
-	Quantity* amount;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *method;
+	CodeableConcept *type;
+	Quantity *amount;
 };
 class SubstanceSpecification_Structure_Representation {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSpecification_Structure_Representation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	fhir_string representation;
-	Attachment* attachment;
+	Attachment *attachment;
 };
 class SubstanceSpecification_Code {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSpecification_Code;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
-	CodeableConcept* status;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
+	CodeableConcept *status;
 	fhir_dateTime statusDate;
 	fhir_string comment;
-	int source_count;
-	Reference* source;
+	U64 source_count;
+	Reference *source;
 };
 class SubstanceSpecification_Name {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSpecification_Name;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
-	CodeableConcept* type;
-	CodeableConcept* status;
+	CodeableConcept *type;
+	CodeableConcept *status;
 	fhir_boolean preferred;
-	int language_count;
-	CodeableConcept* language;
-	int domain_count;
-	CodeableConcept* domain;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
-	int synonym_count;
-	SubstanceSpecification_Name* synonym;
-	int translation_count;
-	SubstanceSpecification_Name* translation;
-	int official_count;
-	SubstanceSpecification_Name_Official* official;
-	int source_count;
-	Reference* source;
+	U64 language_count;
+	CodeableConcept *language;
+	U64 domain_count;
+	CodeableConcept *domain;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
+	U64 synonym_count;
+	SubstanceSpecification_Name *synonym;
+	U64 translation_count;
+	SubstanceSpecification_Name *translation;
+	U64 official_count;
+	SubstanceSpecification_Name_Official *official;
+	U64 source_count;
+	Reference *source;
 };
 class SubstanceSpecification_Name_Official {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSpecification_Name_Official;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* authority;
-	CodeableConcept* status;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *authority;
+	CodeableConcept *status;
 	fhir_dateTime date;
 };
 class SubstanceSpecification_Relationship {
-public:
-	ResourceType resourceType = ResourceType::SubstanceSpecification_Relationship;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class SubstanceType {
 		Reference,
 		CodeableConcept
 	};
 	SubstanceType substance_type;
+
 	union {
 		Reference* valueReference;
 		CodeableConcept* valueCodeableConcept;
 	} substance;
 
-	CodeableConcept* relationship;
+	CodeableConcept *relationship;
 	fhir_boolean isDefining;
 	enum class AmountType {
 		Quantity,
@@ -14566,6 +14725,7 @@ public:
 		fhir_string
 	};
 	AmountType amount_type;
+
 	union {
 		Quantity* valueQuantity;
 		Range* valueRange;
@@ -14573,66 +14733,68 @@ public:
 		fhir_string valueString;
 	} amount;
 
-	Ratio* amountRatioLowLimit;
-	CodeableConcept* amountType;
-	int source_count;
-	Reference* source;
+	Ratio *amountRatioLowLimit;
+	CodeableConcept *amountType;
+	U64 source_count;
+	Reference *source;
 };
 class SupplyDelivery {
-public:
-	ResourceType resourceType = ResourceType::SupplyDelivery;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
-	int basedOn_count;
-	Reference* basedOn;
-	int partOf_count;
-	Reference* partOf;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
+	U64 basedOn_count;
+	Reference *basedOn;
+	U64 partOf_count;
+	Reference *partOf;
 	fhir_code status;
-	Reference* patient;
-	CodeableConcept* type;
-	SupplyDelivery_SuppliedItem* suppliedItem;
+	Reference *patient;
+	CodeableConcept *type;
+	SupplyDelivery_SuppliedItem *suppliedItem;
 	enum class OccurrenceType {
 		fhir_dateTime,
 		Period,
 		Timing
 	};
 	OccurrenceType occurrence_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
 		Timing* valueTiming;
 	} occurrence;
 
-	Reference* supplier;
-	Reference* destination;
-	int receiver_count;
-	Reference* receiver;
+	Reference *supplier;
+	Reference *destination;
+	U64 receiver_count;
+	Reference *receiver;
 };
 class SupplyDelivery_SuppliedItem {
-public:
-	ResourceType resourceType = ResourceType::SupplyDelivery_SuppliedItem;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Quantity* quantity;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Quantity *quantity;
 	enum class ItemType {
 		CodeableConcept,
 		Reference
 	};
 	ItemType item_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
@@ -14640,43 +14802,45 @@ public:
 
 };
 class SupplyRequest {
-public:
-	ResourceType resourceType = ResourceType::SupplyRequest;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
-	CodeableConcept* category;
+	CodeableConcept *category;
 	fhir_code priority;
 	enum class ItemType {
 		CodeableConcept,
 		Reference
 	};
 	ItemType item_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} item;
 
-	Quantity* quantity;
-	int parameter_count;
-	SupplyRequest_Parameter* parameter;
+	Quantity *quantity;
+	U64 parameter_count;
+	SupplyRequest_Parameter *parameter;
 	enum class OccurrenceType {
 		fhir_dateTime,
 		Period,
 		Timing
 	};
 	OccurrenceType occurrence_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -14684,25 +14848,25 @@ public:
 	} occurrence;
 
 	fhir_dateTime authoredOn;
-	Reference* requester;
-	int supplier_count;
-	Reference* supplier;
-	int reasonCode_count;
-	CodeableConcept* reasonCode;
-	int reasonReference_count;
-	Reference* reasonReference;
-	Reference* deliverFrom;
-	Reference* deliverTo;
+	Reference *requester;
+	U64 supplier_count;
+	Reference *supplier;
+	U64 reasonCode_count;
+	CodeableConcept *reasonCode;
+	U64 reasonReference_count;
+	Reference *reasonReference;
+	Reference *deliverFrom;
+	Reference *deliverTo;
 };
 class SupplyRequest_Parameter {
-public:
-	ResourceType resourceType = ResourceType::SupplyRequest_Parameter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *code;
 	enum class ValueType {
 		CodeableConcept,
 		Quantity,
@@ -14710,6 +14874,7 @@ public:
 		fhir_boolean
 	};
 	ValueType value_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Quantity* valueQuantity;
@@ -14719,82 +14884,82 @@ public:
 
 };
 class Task {
-public:
-	ResourceType resourceType = ResourceType::Task;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_canonical instantiatesCanonical;
 	fhir_uri instantiatesUri;
-	int basedOn_count;
-	Reference* basedOn;
-	Identifier* groupIdentifier;
-	int partOf_count;
-	Reference* partOf;
+	U64 basedOn_count;
+	Reference *basedOn;
+	Identifier *groupIdentifier;
+	U64 partOf_count;
+	Reference *partOf;
 	fhir_code status;
-	CodeableConcept* statusReason;
-	CodeableConcept* businessStatus;
+	CodeableConcept *statusReason;
+	CodeableConcept *businessStatus;
 	fhir_code intent;
 	fhir_code priority;
-	CodeableConcept* code;
+	CodeableConcept *code;
 	fhir_string description;
-	Reference* focus;
-	Reference* for_;
-	Reference* encounter;
-	Period* executionPeriod;
+	Reference *focus;
+	Reference *for_;
+	Reference *encounter;
+	Period *executionPeriod;
 	fhir_dateTime authoredOn;
 	fhir_dateTime lastModified;
-	Reference* requester;
-	int performerType_count;
-	CodeableConcept* performerType;
-	Reference* owner;
-	Reference* location;
-	CodeableConcept* reasonCode;
-	Reference* reasonReference;
-	int insurance_count;
-	Reference* insurance;
-	int note_count;
-	Annotation* note;
-	int relevantHistory_count;
-	Reference* relevantHistory;
-	Task_Restriction* restriction;
-	int input_count;
-	Task_Input* input;
-	int output_count;
-	Task_Output* output;
+	Reference *requester;
+	U64 performerType_count;
+	CodeableConcept *performerType;
+	Reference *owner;
+	Reference *location;
+	CodeableConcept *reasonCode;
+	Reference *reasonReference;
+	U64 insurance_count;
+	Reference *insurance;
+	U64 note_count;
+	Annotation *note;
+	U64 relevantHistory_count;
+	Reference *relevantHistory;
+	Task_Restriction *restriction;
+	U64 input_count;
+	Task_Input *input;
+	U64 output_count;
+	Task_Output *output;
 };
 class Task_Restriction {
-public:
-	ResourceType resourceType = ResourceType::Task_Restriction;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_positiveInt repetitions;
-	Period* period;
-	int recipient_count;
-	Reference* recipient;
+	Period *period;
+	U64 recipient_count;
+	Reference *recipient;
 };
 class Task_Input {
-public:
-	ResourceType resourceType = ResourceType::Task_Input;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	enum class ValueType {
 		fhir_base64Binary,
 		fhir_boolean,
@@ -14848,6 +15013,7 @@ public:
 		Meta
 	};
 	ValueType value_type;
+
 	union {
 		fhir_base64Binary valueBase64Binary;
 		fhir_boolean valueBoolean;
@@ -14903,14 +15069,14 @@ public:
 
 };
 class Task_Output {
-public:
-	ResourceType resourceType = ResourceType::Task_Output;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *type;
 	enum class ValueType {
 		fhir_base64Binary,
 		fhir_boolean,
@@ -14964,6 +15130,7 @@ public:
 		Meta
 	};
 	ValueType value_type;
+
 	union {
 		fhir_base64Binary valueBase64Binary;
 		fhir_boolean valueBoolean;
@@ -15019,19 +15186,19 @@ public:
 
 };
 class TerminologyCapabilities {
-public:
-	ResourceType resourceType = ResourceType::TerminologyCapabilities;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -15040,296 +15207,296 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	fhir_code kind;
-	TerminologyCapabilities_Software* software;
-	TerminologyCapabilities_Implementation* implementation;
+	TerminologyCapabilities_Software *software;
+	TerminologyCapabilities_Implementation *implementation;
 	fhir_boolean lockedDate;
-	int codeSystem_count;
-	TerminologyCapabilities_CodeSystem* codeSystem;
-	TerminologyCapabilities_Expansion* expansion;
+	U64 codeSystem_count;
+	TerminologyCapabilities_CodeSystem *codeSystem;
+	TerminologyCapabilities_Expansion *expansion;
 	fhir_code codeSearch;
-	TerminologyCapabilities_ValidateCode* validateCode;
-	TerminologyCapabilities_Translation* translation;
-	TerminologyCapabilities_Closure* closure;
+	TerminologyCapabilities_ValidateCode *validateCode;
+	TerminologyCapabilities_Translation *translation;
+	TerminologyCapabilities_Closure *closure;
 };
 class TerminologyCapabilities_Software {
-public:
-	ResourceType resourceType = ResourceType::TerminologyCapabilities_Software;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_string version;
 };
 class TerminologyCapabilities_Implementation {
-public:
-	ResourceType resourceType = ResourceType::TerminologyCapabilities_Implementation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string description;
 	fhir_url url;
 };
 class TerminologyCapabilities_CodeSystem {
-public:
-	ResourceType resourceType = ResourceType::TerminologyCapabilities_CodeSystem;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_canonical uri;
-	int version_count;
-	TerminologyCapabilities_CodeSystem_Version* version;
+	U64 version_count;
+	TerminologyCapabilities_CodeSystem_Version *version;
 	fhir_boolean subsumption;
 };
 class TerminologyCapabilities_CodeSystem_Version {
-public:
-	ResourceType resourceType = ResourceType::TerminologyCapabilities_CodeSystem_Version;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string code;
 	fhir_boolean isDefault;
 	fhir_boolean compositional;
-	int language_count;
-	fhir_code* language;
-	int filter_count;
-	TerminologyCapabilities_CodeSystem_Version_Filter* filter;
-	int property_count;
-	fhir_code* property;
+	U64 language_count;
+	fhir_code *language;
+	U64 filter_count;
+	TerminologyCapabilities_CodeSystem_Version_Filter *filter;
+	U64 property_count;
+	fhir_code *property;
 };
 class TerminologyCapabilities_CodeSystem_Version_Filter {
-public:
-	ResourceType resourceType = ResourceType::TerminologyCapabilities_CodeSystem_Version_Filter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
-	int op_count;
-	fhir_code* op;
+	U64 op_count;
+	fhir_code *op;
 };
 class TerminologyCapabilities_Expansion {
-public:
-	ResourceType resourceType = ResourceType::TerminologyCapabilities_Expansion;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean hierarchical;
 	fhir_boolean paging;
 	fhir_boolean incomplete;
-	int parameter_count;
-	TerminologyCapabilities_Expansion_Parameter* parameter;
+	U64 parameter_count;
+	TerminologyCapabilities_Expansion_Parameter *parameter;
 	fhir_markdown textFilter;
 };
 class TerminologyCapabilities_Expansion_Parameter {
-public:
-	ResourceType resourceType = ResourceType::TerminologyCapabilities_Expansion_Parameter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code name;
 	fhir_string documentation;
 };
 class TerminologyCapabilities_ValidateCode {
-public:
-	ResourceType resourceType = ResourceType::TerminologyCapabilities_ValidateCode;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean translations;
 };
 class TerminologyCapabilities_Translation {
-public:
-	ResourceType resourceType = ResourceType::TerminologyCapabilities_Translation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean needsMap;
 };
 class TerminologyCapabilities_Closure {
-public:
-	ResourceType resourceType = ResourceType::TerminologyCapabilities_Closure;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean translation;
 };
 class TestReport {
-public:
-	ResourceType resourceType = ResourceType::TestReport;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
 	fhir_string name;
 	fhir_code status;
-	Reference* testScript;
+	Reference *testScript;
 	fhir_code result;
 	fhir_decimal score;
 	fhir_string tester;
 	fhir_dateTime issued;
-	int participant_count;
-	TestReport_Participant* participant;
-	TestReport_Setup* setup;
-	int test_count;
-	TestReport_Test* test;
-	TestReport_Teardown* teardown;
+	U64 participant_count;
+	TestReport_Participant *participant;
+	TestReport_Setup *setup;
+	U64 test_count;
+	TestReport_Test *test;
+	TestReport_Teardown *teardown;
 };
 class TestReport_Participant {
-public:
-	ResourceType resourceType = ResourceType::TestReport_Participant;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code type;
 	fhir_uri uri;
 	fhir_string display;
 };
 class TestReport_Setup {
-public:
-	ResourceType resourceType = ResourceType::TestReport_Setup;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int action_count;
-	TestReport_Setup_Action* action;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 action_count;
+	TestReport_Setup_Action *action;
 };
 class TestReport_Setup_Action {
-public:
-	ResourceType resourceType = ResourceType::TestReport_Setup_Action;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	TestReport_Setup_Action_Operation* operation;
-	TestReport_Setup_Action_Assert* assert;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	TestReport_Setup_Action_Operation *operation;
+	TestReport_Setup_Action_Assert *assert;
 };
 class TestReport_Setup_Action_Operation {
-public:
-	ResourceType resourceType = ResourceType::TestReport_Setup_Action_Operation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code result;
 	fhir_markdown message;
 	fhir_uri detail;
 };
 class TestReport_Setup_Action_Assert {
-public:
-	ResourceType resourceType = ResourceType::TestReport_Setup_Action_Assert;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code result;
 	fhir_markdown message;
 	fhir_string detail;
 };
 class TestReport_Test {
-public:
-	ResourceType resourceType = ResourceType::TestReport_Test;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_string description;
-	int action_count;
-	TestReport_Test_Action* action;
+	U64 action_count;
+	TestReport_Test_Action *action;
 };
 class TestReport_Test_Action {
-public:
-	ResourceType resourceType = ResourceType::TestReport_Test_Action;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	TestReport_Setup_Action_Operation* operation;
-	TestReport_Setup_Action_Assert* assert;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	TestReport_Setup_Action_Operation *operation;
+	TestReport_Setup_Action_Assert *assert;
 };
 class TestReport_Teardown {
-public:
-	ResourceType resourceType = ResourceType::TestReport_Teardown;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int action_count;
-	TestReport_Teardown_Action* action;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 action_count;
+	TestReport_Teardown_Action *action;
 };
 class TestReport_Teardown_Action {
-public:
-	ResourceType resourceType = ResourceType::TestReport_Teardown_Action;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	TestReport_Setup_Action_Operation* operation;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	TestReport_Setup_Action_Operation *operation;
 };
 class TestScript {
-public:
-	ResourceType resourceType = ResourceType::TestScript;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	Identifier* identifier;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -15337,115 +15504,115 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
-	int origin_count;
-	TestScript_Origin* origin;
-	int destination_count;
-	TestScript_Destination* destination;
-	TestScript_Metadata* metadata;
-	int fixture_count;
-	TestScript_Fixture* fixture;
-	int profile_count;
-	Reference* profile;
-	int variable_count;
-	TestScript_Variable* variable;
-	TestScript_Setup* setup;
-	int test_count;
-	TestScript_Test* test;
-	TestScript_Teardown* teardown;
+	U64 origin_count;
+	TestScript_Origin *origin;
+	U64 destination_count;
+	TestScript_Destination *destination;
+	TestScript_Metadata *metadata;
+	U64 fixture_count;
+	TestScript_Fixture *fixture;
+	U64 profile_count;
+	Reference *profile;
+	U64 variable_count;
+	TestScript_Variable *variable;
+	TestScript_Setup *setup;
+	U64 test_count;
+	TestScript_Test *test;
+	TestScript_Teardown *teardown;
 };
 class TestScript_Origin {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Origin;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Integer* index;
-	Coding* profile;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Integer *index;
+	Coding *profile;
 };
 class TestScript_Destination {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Destination;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Integer* index;
-	Coding* profile;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Integer *index;
+	Coding *profile;
 };
 class TestScript_Metadata {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Metadata;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int link_count;
-	TestScript_Metadata_Link* link;
-	int capability_count;
-	TestScript_Metadata_Capability* capability;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 link_count;
+	TestScript_Metadata_Link *link;
+	U64 capability_count;
+	TestScript_Metadata_Capability *capability;
 };
 class TestScript_Metadata_Link {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Metadata_Link;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
 	fhir_string description;
 };
 class TestScript_Metadata_Capability {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Metadata_Capability;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean required;
 	fhir_boolean validated;
 	fhir_string description;
-	int origin_count;
-	Integer* origin;
-	Integer* destination;
-	int link_count;
-	fhir_uri* link;
+	U64 origin_count;
+	Integer *origin;
+	Integer *destination;
+	U64 link_count;
+	fhir_uri *link;
 	fhir_canonical capabilities;
 };
 class TestScript_Fixture {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Fixture;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_boolean autocreate;
 	fhir_boolean autodelete;
-	Reference* resource;
+	Reference *resource;
 };
 class TestScript_Variable {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Variable;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_string defaultValue;
 	fhir_string description;
@@ -15456,48 +15623,48 @@ public:
 	fhir_id sourceId;
 };
 class TestScript_Setup {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Setup;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int action_count;
-	TestScript_Setup_Action* action;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 action_count;
+	TestScript_Setup_Action *action;
 };
 class TestScript_Setup_Action {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Setup_Action;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	TestScript_Setup_Action_Operation* operation;
-	TestScript_Setup_Action_Assert* assert;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	TestScript_Setup_Action_Operation *operation;
+	TestScript_Setup_Action_Assert *assert;
 };
 class TestScript_Setup_Action_Operation {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Setup_Action_Operation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Coding* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Coding *type;
 	fhir_code resource;
 	fhir_string label;
 	fhir_string description;
 	fhir_code accept;
 	fhir_code contentType;
-	Integer* destination;
+	Integer *destination;
 	fhir_boolean encodeRequestUrl;
 	fhir_code method;
-	Integer* origin;
+	Integer *origin;
 	fhir_string params;
-	int requestHeader_count;
-	TestScript_Setup_Action_Operation_RequestHeader* requestHeader;
+	U64 requestHeader_count;
+	TestScript_Setup_Action_Operation_RequestHeader *requestHeader;
 	fhir_id requestId;
 	fhir_id responseId;
 	fhir_id sourceId;
@@ -15505,24 +15672,24 @@ public:
 	fhir_string url;
 };
 class TestScript_Setup_Action_Operation_RequestHeader {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Setup_Action_Operation_RequestHeader;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string field;
 	fhir_string value;
 };
 class TestScript_Setup_Action_Assert {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Setup_Action_Assert;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string label;
 	fhir_string description;
 	fhir_code direction;
@@ -15547,67 +15714,67 @@ public:
 	fhir_boolean warningOnly;
 };
 class TestScript_Test {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Test;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	fhir_string description;
-	int action_count;
-	TestScript_Test_Action* action;
+	U64 action_count;
+	TestScript_Test_Action *action;
 };
 class TestScript_Test_Action {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Test_Action;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	TestScript_Setup_Action_Operation* operation;
-	TestScript_Setup_Action_Assert* assert;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	TestScript_Setup_Action_Operation *operation;
+	TestScript_Setup_Action_Assert *assert;
 };
 class TestScript_Teardown {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Teardown;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int action_count;
-	TestScript_Teardown_Action* action;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 action_count;
+	TestScript_Teardown_Action *action;
 };
 class TestScript_Teardown_Action {
-public:
-	ResourceType resourceType = ResourceType::TestScript_Teardown_Action;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	TestScript_Setup_Action_Operation* operation;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	TestScript_Setup_Action_Operation *operation;
 };
 class ValueSet {
-public:
-	ResourceType resourceType = ResourceType::ValueSet;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
-	int identifier_count;
-	Identifier* identifier;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -15615,113 +15782,113 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 	fhir_boolean immutable;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
-	ValueSet_Compose* compose;
-	ValueSet_Expansion* expansion;
+	ValueSet_Compose *compose;
+	ValueSet_Expansion *expansion;
 };
 class ValueSet_Compose {
-public:
-	ResourceType resourceType = ResourceType::ValueSet_Compose;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_date lockedDate;
 	fhir_boolean inactive;
-	int include_count;
-	ValueSet_Compose_Include* include;
-	int exclude_count;
-	ValueSet_Compose_Include* exclude;
+	U64 include_count;
+	ValueSet_Compose_Include *include;
+	U64 exclude_count;
+	ValueSet_Compose_Include *exclude;
 };
 class ValueSet_Compose_Include {
-public:
-	ResourceType resourceType = ResourceType::ValueSet_Compose_Include;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri system;
 	fhir_string version;
-	int concept_count;
-	ValueSet_Compose_Include_Concept* concept;
-	int filter_count;
-	ValueSet_Compose_Include_Filter* filter;
-	int valueSet_count;
-	fhir_canonical* valueSet;
+	U64 concept_count;
+	ValueSet_Compose_Include_Concept *concept;
+	U64 filter_count;
+	ValueSet_Compose_Include_Filter *filter;
+	U64 valueSet_count;
+	fhir_canonical *valueSet;
 };
 class ValueSet_Compose_Include_Concept {
-public:
-	ResourceType resourceType = ResourceType::ValueSet_Compose_Include_Concept;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code code;
 	fhir_string display;
-	int designation_count;
-	ValueSet_Compose_Include_Concept_Designation* designation;
+	U64 designation_count;
+	ValueSet_Compose_Include_Concept_Designation *designation;
 };
 class ValueSet_Compose_Include_Concept_Designation {
-public:
-	ResourceType resourceType = ResourceType::ValueSet_Compose_Include_Concept_Designation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code language;
-	Coding* use;
+	Coding *use;
 	fhir_string value;
 };
 class ValueSet_Compose_Include_Filter {
-public:
-	ResourceType resourceType = ResourceType::ValueSet_Compose_Include_Filter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_code property;
 	fhir_code op;
 	fhir_string value;
 };
 class ValueSet_Expansion {
-public:
-	ResourceType resourceType = ResourceType::ValueSet_Expansion;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri identifier;
 	fhir_dateTime timestamp;
-	Integer* total;
-	Integer* offset;
-	int parameter_count;
-	ValueSet_Expansion_Parameter* parameter;
-	int contains_count;
-	ValueSet_Expansion_Contains* contains;
+	Integer *total;
+	Integer *offset;
+	U64 parameter_count;
+	ValueSet_Expansion_Parameter *parameter;
+	U64 contains_count;
+	ValueSet_Expansion_Contains *contains;
 };
 class ValueSet_Expansion_Parameter {
-public:
-	ResourceType resourceType = ResourceType::ValueSet_Expansion_Parameter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string name;
 	enum class ValueType {
 		fhir_string,
@@ -15733,6 +15900,7 @@ public:
 		fhir_dateTime
 	};
 	ValueType value_type;
+
 	union {
 		fhir_string valueString;
 		fhir_boolean valueBoolean;
@@ -15745,181 +15913,181 @@ public:
 
 };
 class ValueSet_Expansion_Contains {
-public:
-	ResourceType resourceType = ResourceType::ValueSet_Expansion_Contains;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri system;
 	fhir_boolean abstract;
 	fhir_boolean inactive;
 	fhir_string version;
 	fhir_code code;
 	fhir_string display;
-	int designation_count;
-	ValueSet_Compose_Include_Concept_Designation* designation;
-	int contains_count;
-	ValueSet_Expansion_Contains* contains;
+	U64 designation_count;
+	ValueSet_Compose_Include_Concept_Designation *designation;
+	U64 contains_count;
+	ValueSet_Expansion_Contains *contains;
 };
 class VerificationResult {
-public:
-	ResourceType resourceType = ResourceType::VerificationResult;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int target_count;
-	Reference* target;
-	int targetLocation_count;
-	fhir_string* targetLocation;
-	CodeableConcept* need;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 target_count;
+	Reference *target;
+	U64 targetLocation_count;
+	fhir_string *targetLocation;
+	CodeableConcept *need;
 	fhir_code status;
 	fhir_dateTime statusDate;
-	CodeableConcept* validationType;
-	int validationProcess_count;
-	CodeableConcept* validationProcess;
-	Timing* frequency;
+	CodeableConcept *validationType;
+	U64 validationProcess_count;
+	CodeableConcept *validationProcess;
+	Timing *frequency;
 	fhir_dateTime lastPerformed;
 	fhir_date nextScheduled;
-	CodeableConcept* failureAction;
-	int primarySource_count;
-	VerificationResult_PrimarySource* primarySource;
-	VerificationResult_Attestation* attestation;
-	int validator_count;
-	VerificationResult_Validator* validator;
+	CodeableConcept *failureAction;
+	U64 primarySource_count;
+	VerificationResult_PrimarySource *primarySource;
+	VerificationResult_Attestation *attestation;
+	U64 validator_count;
+	VerificationResult_Validator *validator;
 };
 class VerificationResult_PrimarySource {
-public:
-	ResourceType resourceType = ResourceType::VerificationResult_PrimarySource;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* who;
-	int type_count;
-	CodeableConcept* type;
-	int communicationMethod_count;
-	CodeableConcept* communicationMethod;
-	CodeableConcept* validationStatus;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *who;
+	U64 type_count;
+	CodeableConcept *type;
+	U64 communicationMethod_count;
+	CodeableConcept *communicationMethod;
+	CodeableConcept *validationStatus;
 	fhir_dateTime validationDate;
-	CodeableConcept* canPushUpdates;
-	int pushTypeAvailable_count;
-	CodeableConcept* pushTypeAvailable;
+	CodeableConcept *canPushUpdates;
+	U64 pushTypeAvailable_count;
+	CodeableConcept *pushTypeAvailable;
 };
 class VerificationResult_Attestation {
-public:
-	ResourceType resourceType = ResourceType::VerificationResult_Attestation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* who;
-	Reference* onBehalfOf;
-	CodeableConcept* communicationMethod;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *who;
+	Reference *onBehalfOf;
+	CodeableConcept *communicationMethod;
 	fhir_date date;
 	fhir_string sourceIdentityCertificate;
 	fhir_string proxyIdentityCertificate;
-	Signature* proxySignature;
-	Signature* sourceSignature;
+	Signature *proxySignature;
+	Signature *sourceSignature;
 };
 class VerificationResult_Validator {
-public:
-	ResourceType resourceType = ResourceType::VerificationResult_Validator;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Reference* organization;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Reference *organization;
 	fhir_string identityCertificate;
-	Signature* attestationSignature;
+	Signature *attestationSignature;
 };
 class VisionPrescription {
-public:
-	ResourceType resourceType = ResourceType::VisionPrescription;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int identifier_count;
-	Identifier* identifier;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 identifier_count;
+	Identifier *identifier;
 	fhir_code status;
 	fhir_dateTime created;
-	Reference* patient;
-	Reference* encounter;
+	Reference *patient;
+	Reference *encounter;
 	fhir_dateTime dateWritten;
-	Reference* prescriber;
-	int lensSpecification_count;
-	VisionPrescription_LensSpecification* lensSpecification;
+	Reference *prescriber;
+	U64 lensSpecification_count;
+	VisionPrescription_LensSpecification *lensSpecification;
 };
 class VisionPrescription_LensSpecification {
-public:
-	ResourceType resourceType = ResourceType::VisionPrescription_LensSpecification;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* product;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *product;
 	fhir_code eye;
 	fhir_decimal sphere;
 	fhir_decimal cylinder;
-	Integer* axis;
-	int prism_count;
-	VisionPrescription_LensSpecification_Prism* prism;
+	Integer *axis;
+	U64 prism_count;
+	VisionPrescription_LensSpecification_Prism *prism;
 	fhir_decimal add;
 	fhir_decimal power;
 	fhir_decimal backCurve;
 	fhir_decimal diameter;
-	Quantity* duration;
+	Quantity *duration;
 	fhir_string color;
 	fhir_string brand;
-	int note_count;
-	Annotation* note;
+	U64 note_count;
+	Annotation *note;
 };
 class VisionPrescription_LensSpecification_Prism {
-public:
-	ResourceType resourceType = ResourceType::VisionPrescription_LensSpecification_Prism;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_decimal amount;
 	fhir_code base;
 };
 class MetadataResource {
-public:
-	ResourceType resourceType = ResourceType::MetadataResource;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	Meta* meta;
+	Meta *meta;
 	fhir_uri implicitRules;
 	fhir_code language;
-	Narrative* text;
-	int contained_count;
-	Resource* contained;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	Narrative *text;
+	U64 contained_count;
+	Resource *contained;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -15928,69 +16096,69 @@ public:
 	fhir_boolean experimental;
 	fhir_dateTime date;
 	fhir_string publisher;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 	fhir_markdown description;
-	int useContext_count;
-	UsageContext* useContext;
-	int jurisdiction_count;
-	CodeableConcept* jurisdiction;
+	U64 useContext_count;
+	UsageContext *useContext;
+	U64 jurisdiction_count;
+	CodeableConcept *jurisdiction;
 };
 class Element {
-public:
-	ResourceType resourceType = ResourceType::Element;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 };
 class BackboneElement {
-public:
-	ResourceType resourceType = ResourceType::BackboneElement;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 };
 class Integer {
-public:
-	ResourceType resourceType = ResourceType::Integer;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_unsignedInt value;
 };
 class Xhtml {
-public:
-	ResourceType resourceType = ResourceType::Xhtml;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	
+	Extension *extension;
 	fhir_string value;
 };
 class Address {
-public:
-	ResourceType resourceType = ResourceType::Address;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code use;
 	fhir_code type;
 	fhir_string text;
-	int line_count;
-	fhir_string* line;
+	U64 line_count;
+	fhir_string *line;
 	fhir_string city;
 	fhir_string district;
 	fhir_string state;
 	fhir_string postalCode;
 	fhir_string country;
-	Period* period;
+	Period *period;
 };
 class Age {
-public:
-	ResourceType resourceType = ResourceType::Age;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_decimal value;
 	fhir_code comparator;
 	fhir_string unit;
@@ -15998,16 +16166,17 @@ public:
 	fhir_code code;
 };
 class Annotation {
-public:
-	ResourceType resourceType = ResourceType::Annotation;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	enum class AuthorType {
 		Reference,
 		fhir_string
 	};
 	AuthorType author_type;
+
 	union {
 		Reference* valueReference;
 		fhir_string valueString;
@@ -16017,11 +16186,11 @@ public:
 	fhir_markdown text;
 };
 class Attachment {
-public:
-	ResourceType resourceType = ResourceType::Attachment;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code contentType;
 	fhir_code language;
 	fhir_base64Binary data;
@@ -16032,21 +16201,21 @@ public:
 	fhir_dateTime creation;
 };
 class CodeableConcept {
-public:
-	ResourceType resourceType = ResourceType::CodeableConcept;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int coding_count;
-	Coding* coding;
+	U64 extension_count;
+	Extension *extension;
+	U64 coding_count;
+	Coding *coding;
 	fhir_string text;
 };
 class Coding {
-public:
-	ResourceType resourceType = ResourceType::Coding;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_uri system;
 	fhir_string version;
 	fhir_code code;
@@ -16054,44 +16223,44 @@ public:
 	fhir_boolean userSelected;
 };
 class ContactDetail {
-public:
-	ResourceType resourceType = ResourceType::ContactDetail;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_string name;
-	int telecom_count;
-	ContactPoint* telecom;
+	U64 telecom_count;
+	ContactPoint *telecom;
 };
 class ContactPoint {
-public:
-	ResourceType resourceType = ResourceType::ContactPoint;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code system;
 	fhir_string value;
 	fhir_code use;
 	fhir_positiveInt rank;
-	Period* period;
+	Period *period;
 };
 class Contributor {
-public:
-	ResourceType resourceType = ResourceType::Contributor;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code type;
 	fhir_string name;
-	int contact_count;
-	ContactDetail* contact;
+	U64 contact_count;
+	ContactDetail *contact;
 };
 class Count {
-public:
-	ResourceType resourceType = ResourceType::Count;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_decimal value;
 	fhir_code comparator;
 	fhir_string unit;
@@ -16099,52 +16268,53 @@ public:
 	fhir_code code;
 };
 class DataRequirement {
-public:
-	ResourceType resourceType = ResourceType::DataRequirement;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code type;
-	int profile_count;
-	fhir_canonical* profile;
+	U64 profile_count;
+	fhir_canonical *profile;
 	enum class SubjectType {
 		CodeableConcept,
 		Reference
 	};
 	SubjectType subject_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Reference* valueReference;
 	} subject;
 
-	int mustSupport_count;
-	fhir_string* mustSupport;
-	int codeFilter_count;
-	DataRequirement_CodeFilter* codeFilter;
-	int dateFilter_count;
-	DataRequirement_DateFilter* dateFilter;
+	U64 mustSupport_count;
+	fhir_string *mustSupport;
+	U64 codeFilter_count;
+	DataRequirement_CodeFilter *codeFilter;
+	U64 dateFilter_count;
+	DataRequirement_DateFilter *dateFilter;
 	fhir_positiveInt limit;
-	int sort_count;
-	DataRequirement_Sort* sort;
+	U64 sort_count;
+	DataRequirement_Sort *sort;
 };
 class DataRequirement_CodeFilter {
-public:
-	ResourceType resourceType = ResourceType::DataRequirement_CodeFilter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_string path;
 	fhir_string searchParam;
 	fhir_canonical valueSet;
-	int code_count;
-	Coding* code;
+	U64 code_count;
+	Coding *code;
 };
 class DataRequirement_DateFilter {
-public:
-	ResourceType resourceType = ResourceType::DataRequirement_DateFilter;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_string path;
 	fhir_string searchParam;
 	enum class ValueType {
@@ -16153,6 +16323,7 @@ public:
 		Duration
 	};
 	ValueType value_type;
+
 	union {
 		fhir_dateTime valueDateTime;
 		Period* valuePeriod;
@@ -16161,20 +16332,20 @@ public:
 
 };
 class DataRequirement_Sort {
-public:
-	ResourceType resourceType = ResourceType::DataRequirement_Sort;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_string path;
 	fhir_code direction;
 };
 class Distance {
-public:
-	ResourceType resourceType = ResourceType::Distance;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_decimal value;
 	fhir_code comparator;
 	fhir_string unit;
@@ -16182,50 +16353,52 @@ public:
 	fhir_code code;
 };
 class Dosage {
-public:
-	ResourceType resourceType = ResourceType::Dosage;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Integer* sequence;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Integer *sequence;
 	fhir_string text;
-	int additionalInstruction_count;
-	CodeableConcept* additionalInstruction;
+	U64 additionalInstruction_count;
+	CodeableConcept *additionalInstruction;
 	fhir_string patientInstruction;
-	Timing* timing;
+	Timing *timing;
 	enum class AsNeededType {
 		fhir_boolean,
 		CodeableConcept
 	};
 	AsNeededType asNeeded_type;
+
 	union {
 		fhir_boolean valueBoolean;
 		CodeableConcept* valueCodeableConcept;
 	} asNeeded;
 
-	CodeableConcept* site;
-	CodeableConcept* route;
-	CodeableConcept* method;
-	int doseAndRate_count;
-	Dosage_DoseAndRate* doseAndRate;
-	Ratio* maxDosePerPeriod;
-	Quantity* maxDosePerAdministration;
-	Quantity* maxDosePerLifetime;
+	CodeableConcept *site;
+	CodeableConcept *route;
+	CodeableConcept *method;
+	U64 doseAndRate_count;
+	Dosage_DoseAndRate *doseAndRate;
+	Ratio *maxDosePerPeriod;
+	Quantity *maxDosePerAdministration;
+	Quantity *maxDosePerLifetime;
 };
 class Dosage_DoseAndRate {
-public:
-	ResourceType resourceType = ResourceType::Dosage_DoseAndRate;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	CodeableConcept* type;
+	U64 extension_count;
+	Extension *extension;
+	CodeableConcept *type;
 	enum class DoseType {
 		Range,
 		Quantity
 	};
 	DoseType dose_type;
+
 	union {
 		Range* valueRange;
 		Quantity* valueQuantity;
@@ -16237,6 +16410,7 @@ public:
 		Quantity
 	};
 	RateType rate_type;
+
 	union {
 		Ratio* valueRatio;
 		Range* valueRange;
@@ -16245,11 +16419,11 @@ public:
 
 };
 class Duration {
-public:
-	ResourceType resourceType = ResourceType::Duration;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_decimal value;
 	fhir_code comparator;
 	fhir_string unit;
@@ -16257,34 +16431,34 @@ public:
 	fhir_code code;
 };
 class ElementDefinition {
-public:
-	ResourceType resourceType = ResourceType::ElementDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	fhir_string path;
-	int representation_count;
-	fhir_code* representation;
+	U64 representation_count;
+	fhir_code *representation;
 	fhir_string sliceName;
 	fhir_boolean sliceIsConstraining;
 	fhir_string label;
-	int code_count;
-	Coding* code;
-	ElementDefinition_Slicing* slicing;
+	U64 code_count;
+	Coding *code;
+	ElementDefinition_Slicing *slicing;
 	fhir_string short_;
 	fhir_markdown definition;
 	fhir_markdown comment;
 	fhir_markdown requirements;
-	int alias_count;
-	fhir_string* alias;
+	U64 alias_count;
+	fhir_string *alias;
 	fhir_unsignedInt min;
 	fhir_string max;
-	ElementDefinition_Base* base;
+	ElementDefinition_Base *base;
 	fhir_uri contentReference;
-	int type_count;
-	ElementDefinition_Type* type;
+	U64 type_count;
+	ElementDefinition_Type *type;
 	enum class DefaultValueType {
 		fhir_base64Binary,
 		fhir_boolean,
@@ -16338,6 +16512,7 @@ public:
 		Meta
 	};
 	DefaultValueType defaultValue_type;
+
 	union {
 		fhir_base64Binary valueBase64Binary;
 		fhir_boolean valueBoolean;
@@ -16446,6 +16621,7 @@ public:
 		Meta
 	};
 	FixedType fixed_type;
+
 	union {
 		fhir_base64Binary valueBase64Binary;
 		fhir_boolean valueBoolean;
@@ -16552,6 +16728,7 @@ public:
 		Meta
 	};
 	PatternType pattern_type;
+
 	union {
 		fhir_base64Binary valueBase64Binary;
 		fhir_boolean valueBoolean;
@@ -16605,8 +16782,8 @@ public:
 		Meta* valueMeta;
 	} pattern;
 
-	int example_count;
-	ElementDefinition_Example* example;
+	U64 example_count;
+	ElementDefinition_Example *example;
 	enum class MinValueType {
 		fhir_date,
 		fhir_dateTime,
@@ -16619,6 +16796,7 @@ public:
 		Quantity
 	};
 	MinValueType minValue_type;
+
 	union {
 		fhir_date valueDate;
 		fhir_dateTime valueDateTime;
@@ -16643,6 +16821,7 @@ public:
 		Quantity
 	};
 	MaxValueType maxValue_type;
+
 	union {
 		fhir_date valueDate;
 		fhir_dateTime valueDateTime;
@@ -16655,71 +16834,71 @@ public:
 		Quantity* valueQuantity;
 	} maxValue;
 
-	Integer* maxLength;
-	int condition_count;
-	fhir_id* condition;
-	int constraint_count;
-	ElementDefinition_Constraint* constraint;
+	Integer *maxLength;
+	U64 condition_count;
+	fhir_id *condition;
+	U64 constraint_count;
+	ElementDefinition_Constraint *constraint;
 	fhir_boolean mustSupport;
 	fhir_boolean isModifier;
 	fhir_string isModifierReason;
 	fhir_boolean isSummary;
-	ElementDefinition_Binding* binding;
-	int mapping_count;
-	ElementDefinition_Mapping* mapping;
+	ElementDefinition_Binding *binding;
+	U64 mapping_count;
+	ElementDefinition_Mapping *mapping;
 };
 class ElementDefinition_Slicing {
-public:
-	ResourceType resourceType = ResourceType::ElementDefinition_Slicing;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int discriminator_count;
-	ElementDefinition_Slicing_Discriminator* discriminator;
+	U64 extension_count;
+	Extension *extension;
+	U64 discriminator_count;
+	ElementDefinition_Slicing_Discriminator *discriminator;
 	fhir_string description;
 	fhir_boolean ordered;
 	fhir_code rules;
 };
 class ElementDefinition_Slicing_Discriminator {
-public:
-	ResourceType resourceType = ResourceType::ElementDefinition_Slicing_Discriminator;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code type;
 	fhir_string path;
 };
 class ElementDefinition_Base {
-public:
-	ResourceType resourceType = ResourceType::ElementDefinition_Base;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_string path;
 	fhir_unsignedInt min;
 	fhir_string max;
 };
 class ElementDefinition_Type {
-public:
-	ResourceType resourceType = ResourceType::ElementDefinition_Type;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_uri code;
-	int profile_count;
-	fhir_canonical* profile;
-	int targetProfile_count;
-	fhir_canonical* targetProfile;
-	int aggregation_count;
-	fhir_code* aggregation;
+	U64 profile_count;
+	fhir_canonical *profile;
+	U64 targetProfile_count;
+	fhir_canonical *targetProfile;
+	U64 aggregation_count;
+	fhir_code *aggregation;
 	fhir_code versioning;
 };
 class ElementDefinition_Example {
-public:
-	ResourceType resourceType = ResourceType::ElementDefinition_Example;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_string label;
 	enum class ValueType {
 		fhir_base64Binary,
@@ -16774,6 +16953,7 @@ public:
 		Meta
 	};
 	ValueType value_type;
+
 	union {
 		fhir_base64Binary valueBase64Binary;
 		fhir_boolean valueBoolean;
@@ -16829,11 +17009,11 @@ public:
 
 };
 class ElementDefinition_Constraint {
-public:
-	ResourceType resourceType = ResourceType::ElementDefinition_Constraint;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_id key;
 	fhir_string requirements;
 	fhir_code severity;
@@ -16843,32 +17023,32 @@ public:
 	fhir_canonical source;
 };
 class ElementDefinition_Binding {
-public:
-	ResourceType resourceType = ResourceType::ElementDefinition_Binding;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code strength;
 	fhir_string description;
 	fhir_canonical valueSet;
 };
 class ElementDefinition_Mapping {
-public:
-	ResourceType resourceType = ResourceType::ElementDefinition_Mapping;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_id identity;
 	fhir_code language;
 	fhir_string map;
 	fhir_string comment;
 };
 class Expression {
-public:
-	ResourceType resourceType = ResourceType::Expression;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_string description;
 	fhir_id name;
 	fhir_code language;
@@ -16876,11 +17056,11 @@ public:
 	fhir_uri reference;
 };
 class Extension {
-public:
-	ResourceType resourceType = ResourceType::Extension;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_string url;
 	enum class ValueType {
 		fhir_base64Binary,
@@ -16935,6 +17115,7 @@ public:
 		Meta
 	};
 	ValueType value_type;
+
 	union {
 		fhir_base64Binary valueBase64Binary;
 		fhir_boolean valueBoolean;
@@ -16990,171 +17171,172 @@ public:
 
 };
 class HumanName {
-public:
-	ResourceType resourceType = ResourceType::HumanName;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code use;
 	fhir_string text;
 	fhir_string family;
-	int given_count;
-	fhir_string* given;
-	int prefix_count;
-	fhir_string* prefix;
-	int suffix_count;
-	fhir_string* suffix;
-	Period* period;
+	U64 given_count;
+	fhir_string *given;
+	U64 prefix_count;
+	fhir_string *prefix;
+	U64 suffix_count;
+	fhir_string *suffix;
+	Period *period;
 };
 class Identifier {
-public:
-	ResourceType resourceType = ResourceType::Identifier;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code use;
-	CodeableConcept* type;
+	CodeableConcept *type;
 	fhir_uri system;
 	fhir_string value;
-	Period* period;
-	Reference* assigner;
+	Period *period;
+	Reference *assigner;
 };
 class MarketingStatus {
-public:
-	ResourceType resourceType = ResourceType::MarketingStatus;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	CodeableConcept* country;
-	CodeableConcept* jurisdiction;
-	CodeableConcept* status;
-	Period* dateRange;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	CodeableConcept *country;
+	CodeableConcept *jurisdiction;
+	CodeableConcept *status;
+	Period *dateRange;
 	fhir_dateTime restoreDate;
 };
 class Meta {
-public:
-	ResourceType resourceType = ResourceType::Meta;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_id versionId;
 	fhir_instant lastUpdated;
 	fhir_uri source;
-	int profile_count;
-	fhir_canonical* profile;
-	int security_count;
-	Coding* security;
-	int tag_count;
-	Coding* tag;
+	U64 profile_count;
+	fhir_canonical *profile;
+	U64 security_count;
+	Coding *security;
+	U64 tag_count;
+	Coding *tag;
 };
 class Money {
-public:
-	ResourceType resourceType = ResourceType::Money;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_decimal value;
 	fhir_code currency;
 };
 class Narrative {
-public:
-	ResourceType resourceType = ResourceType::Narrative;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code status;
-	Xhtml* div;
+	Xhtml *div;
 };
 class ParameterDefinition {
-public:
-	ResourceType resourceType = ResourceType::ParameterDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code name;
 	fhir_code use;
-	Integer* min;
+	Integer *min;
 	fhir_string max;
 	fhir_string documentation;
 	fhir_code type;
 	fhir_canonical profile;
 };
 class Period {
-public:
-	ResourceType resourceType = ResourceType::Period;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_dateTime start;
 	fhir_dateTime end;
 };
 class Population {
-public:
-	ResourceType resourceType = ResourceType::Population;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class AgeType {
 		Range,
 		CodeableConcept
 	};
 	AgeType age_type;
+
 	union {
 		Range* valueRange;
 		CodeableConcept* valueCodeableConcept;
 	} age;
 
-	CodeableConcept* gender;
-	CodeableConcept* race;
-	CodeableConcept* physiologicalCondition;
+	CodeableConcept *gender;
+	CodeableConcept *race;
+	CodeableConcept *physiologicalCondition;
 };
 class ProdCharacteristic {
-public:
-	ResourceType resourceType = ResourceType::ProdCharacteristic;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Quantity* height;
-	Quantity* width;
-	Quantity* depth;
-	Quantity* weight;
-	Quantity* nominalVolume;
-	Quantity* externalDiameter;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Quantity *height;
+	Quantity *width;
+	Quantity *depth;
+	Quantity *weight;
+	Quantity *nominalVolume;
+	Quantity *externalDiameter;
 	fhir_string shape;
-	int color_count;
-	fhir_string* color;
-	int imprint_count;
-	fhir_string* imprint;
-	int image_count;
-	Attachment* image;
-	CodeableConcept* scoring;
+	U64 color_count;
+	fhir_string *color;
+	U64 imprint_count;
+	fhir_string *imprint;
+	U64 image_count;
+	Attachment *image;
+	CodeableConcept *scoring;
 };
 class ProductShelfLife {
-public:
-	ResourceType resourceType = ResourceType::ProductShelfLife;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	Identifier* identifier;
-	CodeableConcept* type;
-	Quantity* period;
-	int specialPrecautionsForStorage_count;
-	CodeableConcept* specialPrecautionsForStorage;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	Identifier *identifier;
+	CodeableConcept *type;
+	Quantity *period;
+	U64 specialPrecautionsForStorage_count;
+	CodeableConcept *specialPrecautionsForStorage;
 };
 class Quantity {
-public:
-	ResourceType resourceType = ResourceType::Quantity;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_decimal value;
 	fhir_code comparator;
 	fhir_string unit;
@@ -17162,55 +17344,55 @@ public:
 	fhir_code code;
 };
 class Range {
-public:
-	ResourceType resourceType = ResourceType::Range;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	Quantity* low;
-	Quantity* high;
+	U64 extension_count;
+	Extension *extension;
+	Quantity *low;
+	Quantity *high;
 };
 class Ratio {
-public:
-	ResourceType resourceType = ResourceType::Ratio;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	Quantity* numerator;
-	Quantity* denominator;
+	U64 extension_count;
+	Extension *extension;
+	Quantity *numerator;
+	Quantity *denominator;
 };
 class Reference {
-public:
-	ResourceType resourceType = ResourceType::Reference;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_string reference;
 	fhir_uri type;
-	Identifier* identifier;
+	Identifier *identifier;
 	fhir_string display;
 };
 class RelatedArtifact {
-public:
-	ResourceType resourceType = ResourceType::RelatedArtifact;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code type;
 	fhir_string label;
 	fhir_string display;
 	fhir_markdown citation;
 	fhir_url url;
-	Attachment* document;
+	Attachment *document;
 	fhir_canonical resource;
 };
 class SampledData {
-public:
-	ResourceType resourceType = ResourceType::SampledData;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	Quantity* origin;
+	U64 extension_count;
+	Extension *extension;
+	Quantity *origin;
 	fhir_decimal period;
 	fhir_decimal factor;
 	fhir_decimal lowerLimit;
@@ -17219,78 +17401,80 @@ public:
 	fhir_string data;
 };
 class Signature {
-public:
-	ResourceType resourceType = ResourceType::Signature;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int type_count;
-	Coding* type;
+	U64 extension_count;
+	Extension *extension;
+	U64 type_count;
+	Coding *type;
 	fhir_instant when;
-	Reference* who;
-	Reference* onBehalfOf;
+	Reference *who;
+	Reference *onBehalfOf;
 	fhir_code targetFormat;
 	fhir_code sigFormat;
 	fhir_base64Binary data;
 };
 class SubstanceAmount {
-public:
-	ResourceType resourceType = ResourceType::SubstanceAmount;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
 	enum class AmountType {
 		Quantity,
 		Range,
 		fhir_string
 	};
 	AmountType amount_type;
+
 	union {
 		Quantity* valueQuantity;
 		Range* valueRange;
 		fhir_string valueString;
 	} amount;
 
-	CodeableConcept* amountType;
+	CodeableConcept *amountType;
 	fhir_string amountText;
-	SubstanceAmount_ReferenceRange* referenceRange;
+	SubstanceAmount_ReferenceRange *referenceRange;
 };
 class SubstanceAmount_ReferenceRange {
-public:
-	ResourceType resourceType = ResourceType::SubstanceAmount_ReferenceRange;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	Quantity* lowLimit;
-	Quantity* highLimit;
+	U64 extension_count;
+	Extension *extension;
+	Quantity *lowLimit;
+	Quantity *highLimit;
 };
 class Timing {
-public:
-	ResourceType resourceType = ResourceType::Timing;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	int modifierExtension_count;
-	Extension* modifierExtension;
-	int event_count;
-	fhir_dateTime* event;
-	Timing_Repeat* repeat;
-	CodeableConcept* code;
+	U64 extension_count;
+	Extension *extension;
+	U64 modifierExtension_count;
+	Extension *modifierExtension;
+	U64 event_count;
+	fhir_dateTime *event;
+	Timing_Repeat *repeat;
+	CodeableConcept *code;
 };
 class Timing_Repeat {
-public:
-	ResourceType resourceType = ResourceType::Timing_Repeat;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	enum class BoundsType {
 		Duration,
 		Range,
 		Period
 	};
 	BoundsType bounds_type;
+
 	union {
 		Duration* valueDuration;
 		Range* valueRange;
@@ -17307,20 +17491,20 @@ public:
 	fhir_decimal period;
 	fhir_decimal periodMax;
 	fhir_code periodUnit;
-	int dayOfWeek_count;
-	fhir_code* dayOfWeek;
-	int timeOfDay_count;
-	fhir_time* timeOfDay;
-	int when_count;
-	fhir_code* when;
+	U64 dayOfWeek_count;
+	fhir_code *dayOfWeek;
+	U64 timeOfDay_count;
+	fhir_time *timeOfDay;
+	U64 when_count;
+	fhir_code *when;
 	fhir_unsignedInt offset;
 };
 class TriggerDefinition {
-public:
-	ResourceType resourceType = ResourceType::TriggerDefinition;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
+	U64 extension_count;
+	Extension *extension;
 	fhir_code type;
 	fhir_string name;
 	enum class TimingType {
@@ -17330,6 +17514,7 @@ public:
 		fhir_dateTime
 	};
 	TimingType timing_type;
+
 	union {
 		Timing* valueTiming;
 		Reference* valueReference;
@@ -17337,17 +17522,17 @@ public:
 		fhir_dateTime valueDateTime;
 	} timing;
 
-	int data_count;
-	DataRequirement* data;
-	Expression* condition;
+	U64 data_count;
+	DataRequirement *data;
+	Expression *condition;
 };
 class UsageContext {
-public:
-	ResourceType resourceType = ResourceType::UsageContext;
+public: 
+	ResourceType resourceType;
 	fhir_string id;
-	int extension_count;
-	Extension* extension;
-	Coding* code;
+	U64 extension_count;
+	Extension *extension;
+	Coding *code;
 	enum class ValueType {
 		CodeableConcept,
 		Quantity,
@@ -17355,6 +17540,7 @@ public:
 		Reference
 	};
 	ValueType value_type;
+
 	union {
 		CodeableConcept* valueCodeableConcept;
 		Quantity* valueQuantity;
@@ -17364,186 +17550,186 @@ public:
 
 };
 class MoneyQuantity : Quantity {
-public:
-	ResourceType resourceType = ResourceType::MoneyQuantity;
+public: 
+	ResourceType resourceType;
 };
 class SimpleQuantity : Quantity {
-public:
-	ResourceType resourceType = ResourceType::SimpleQuantity;
+public: 
+	ResourceType resourceType;
 };
 class Shareablemeasure : Measure {
-public:
-	ResourceType resourceType = ResourceType::Shareablemeasure;
+public: 
+	ResourceType resourceType;
 };
 class Servicerequest_genetics : ServiceRequest {
-public:
-	ResourceType resourceType = ResourceType::Servicerequest_genetics;
+public: 
+	ResourceType resourceType;
 };
 class Groupdefinition : Group {
-public:
-	ResourceType resourceType = ResourceType::Groupdefinition;
+public: 
+	ResourceType resourceType;
 };
 class Actualgroup : Group {
-public:
-	ResourceType resourceType = ResourceType::Actualgroup;
+public: 
+	ResourceType resourceType;
 };
 class Familymemberhistory_genetic : FamilyMemberHistory {
-public:
-	ResourceType resourceType = ResourceType::Familymemberhistory_genetic;
+public: 
+	ResourceType resourceType;
 };
 class Shareableactivitydefinition : ActivityDefinition {
-public:
-	ResourceType resourceType = ResourceType::Shareableactivitydefinition;
+public: 
+	ResourceType resourceType;
 };
 class Cdshooksrequestgroup : RequestGroup {
-public:
-	ResourceType resourceType = ResourceType::Cdshooksrequestgroup;
+public: 
+	ResourceType resourceType;
 };
 class Provenance_relevant_history : Provenance {
-public:
-	ResourceType resourceType = ResourceType::Provenance_relevant_history;
+public: 
+	ResourceType resourceType;
 };
 class Cqf_questionnaire : Questionnaire {
-public:
-	ResourceType resourceType = ResourceType::Cqf_questionnaire;
+public: 
+	ResourceType resourceType;
 };
 class Shareablevalueset : ValueSet {
-public:
-	ResourceType resourceType = ResourceType::Shareablevalueset;
+public: 
+	ResourceType resourceType;
 };
 class Picoelement : EvidenceVariable {
-public:
-	ResourceType resourceType = ResourceType::Picoelement;
+public: 
+	ResourceType resourceType;
 };
 class Shareablecodesystem : CodeSystem {
-public:
-	ResourceType resourceType = ResourceType::Shareablecodesystem;
+public: 
+	ResourceType resourceType;
 };
 class Cdshooksguidanceresponse : GuidanceResponse {
-public:
-	ResourceType resourceType = ResourceType::Cdshooksguidanceresponse;
+public: 
+	ResourceType resourceType;
 };
 class Devicemetricobservation : Observation {
-public:
-	ResourceType resourceType = ResourceType::Devicemetricobservation;
+public: 
+	ResourceType resourceType;
 };
 class Observation_genetics : Observation {
-public:
-	ResourceType resourceType = ResourceType::Observation_genetics;
+public: 
+	ResourceType resourceType;
 };
 class Vitalsigns : Observation {
-public:
-	ResourceType resourceType = ResourceType::Vitalsigns;
+public: 
+	ResourceType resourceType;
 };
 class Bodyweight : Observation {
-public:
-	ResourceType resourceType = ResourceType::Bodyweight;
+public: 
+	ResourceType resourceType;
 };
 class Vitalspanel : Observation {
-public:
-	ResourceType resourceType = ResourceType::Vitalspanel;
+public: 
+	ResourceType resourceType;
 };
 class Bodyheight : Observation {
-public:
-	ResourceType resourceType = ResourceType::Bodyheight;
+public: 
+	ResourceType resourceType;
 };
 class Resprate : Observation {
-public:
-	ResourceType resourceType = ResourceType::Resprate;
+public: 
+	ResourceType resourceType;
 };
 class Heartrate : Observation {
-public:
-	ResourceType resourceType = ResourceType::Heartrate;
+public: 
+	ResourceType resourceType;
 };
 class Bodytemp : Observation {
-public:
-	ResourceType resourceType = ResourceType::Bodytemp;
+public: 
+	ResourceType resourceType;
 };
 class Headcircum : Observation {
-public:
-	ResourceType resourceType = ResourceType::Headcircum;
+public: 
+	ResourceType resourceType;
 };
 class Oxygensat : Observation {
-public:
-	ResourceType resourceType = ResourceType::Oxygensat;
+public: 
+	ResourceType resourceType;
 };
 class Bmi : Observation {
-public:
-	ResourceType resourceType = ResourceType::Bmi;
+public: 
+	ResourceType resourceType;
 };
 class Bp : Observation {
-public:
-	ResourceType resourceType = ResourceType::Bp;
+public: 
+	ResourceType resourceType;
 };
 class Shareablelibrary : Library {
-public:
-	ResourceType resourceType = ResourceType::Shareablelibrary;
+public: 
+	ResourceType resourceType;
 };
 class Cqllibrary : Library {
-public:
-	ResourceType resourceType = ResourceType::Cqllibrary;
+public: 
+	ResourceType resourceType;
 };
 class Lipidprofile : DiagnosticReport {
-public:
-	ResourceType resourceType = ResourceType::Lipidprofile;
+public: 
+	ResourceType resourceType;
 };
 class Cholesterol : Observation {
-public:
-	ResourceType resourceType = ResourceType::Cholesterol;
+public: 
+	ResourceType resourceType;
 };
 class Triglyceride : Observation {
-public:
-	ResourceType resourceType = ResourceType::Triglyceride;
+public: 
+	ResourceType resourceType;
 };
 class Hdlcholesterol : Observation {
-public:
-	ResourceType resourceType = ResourceType::Hdlcholesterol;
+public: 
+	ResourceType resourceType;
 };
 class Ldlcholesterol : Observation {
-public:
-	ResourceType resourceType = ResourceType::Ldlcholesterol;
+public: 
+	ResourceType resourceType;
 };
 class Diagnosticreport_genetics : DiagnosticReport {
-public:
-	ResourceType resourceType = ResourceType::Diagnosticreport_genetics;
+public: 
+	ResourceType resourceType;
 };
 class Hlaresult : DiagnosticReport {
-public:
-	ResourceType resourceType = ResourceType::Hlaresult;
+public: 
+	ResourceType resourceType;
 };
 class Synthesis : Evidence {
-public:
-	ResourceType resourceType = ResourceType::Synthesis;
+public: 
+	ResourceType resourceType;
 };
 class Clinicaldocument : Composition {
-public:
-	ResourceType resourceType = ResourceType::Clinicaldocument;
+public: 
+	ResourceType resourceType;
 };
 class Catalog : Composition {
-public:
-	ResourceType resourceType = ResourceType::Catalog;
+public: 
+	ResourceType resourceType;
 };
 class Shareableplandefinition : PlanDefinition {
-public:
-	ResourceType resourceType = ResourceType::Shareableplandefinition;
+public: 
+	ResourceType resourceType;
 };
 class Computableplandefinition : PlanDefinition {
-public:
-	ResourceType resourceType = ResourceType::Computableplandefinition;
+public: 
+	ResourceType resourceType;
 };
 class Cdshooksserviceplandefinition : PlanDefinition {
-public:
-	ResourceType resourceType = ResourceType::Cdshooksserviceplandefinition;
+public: 
+	ResourceType resourceType;
 };
 class Elementdefinition_de : ElementDefinition {
-public:
-	ResourceType resourceType = ResourceType::Elementdefinition_de;
+public: 
+	ResourceType resourceType;
 };
 class Ehrsrle_auditevent : AuditEvent {
-public:
-	ResourceType resourceType = ResourceType::Ehrsrle_auditevent;
+public: 
+	ResourceType resourceType;
 };
 class Ehrsrle_provenance : Provenance {
-public:
-	ResourceType resourceType = ResourceType::Ehrsrle_provenance;
+public: 
+	ResourceType resourceType;
 };

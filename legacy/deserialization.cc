@@ -119,7 +119,7 @@ TypeAndCardinalityDeserialization(Arena *arena,
 {
 	Temp scratch = ScratchBegin(&arena, 1);
 	String8List result_list = { 0 };
-	String8 type_name = SerializeValueType(type, in_type_name);
+	String8 type_name = String8FromValueType(type, in_type_name);
 
 	if (type == ValueType::ResourceType)
 	{
@@ -214,7 +214,7 @@ GetMemberJSONDeserialization(Arena *arena,
 		String8 deserializtion = TypeAndCardinalityDeserialization(scratch.arena, 
 		                                  mem->types.types[0],
 		                                  mem->cardinality,
-		                                  mem->types.type_name[0],
+		                                  mem->types.type_names[0],
 		                                  mem->name,
 		                                  class_var_name,
 		                                  cjson_member_name);
@@ -242,7 +242,7 @@ GetMemberJSONDeserialization(Arena *arena,
 			*/
 			String8 internal_type_name = GetUnionInternalTypeName(scratch.arena, 
 			                                                      mem->types.types[i],
-			                                                      mem->types.type_name[i]);
+			                                                      mem->types.type_names[i]);
 			String8 parameter_name = GetParameterNameFromClassName(scratch.arena, class_name);
 
 			Str8ListPushF(scratch.arena, &result_list,
@@ -267,7 +267,7 @@ GetMemberJSONDeserialization(Arena *arena,
 			String8 deserializtion = TypeAndCardinalityDeserialization(scratch.arena, 
 									mem->types.types[i],
 									mem->cardinality,
-									mem->types.type_name[i],
+									mem->types.type_names[i],
 									member_name_and_union,
 									class_var_name,
 									Str8Lit("item"));
@@ -277,7 +277,7 @@ GetMemberJSONDeserialization(Arena *arena,
 			              deserializtion.size, deserializtion.str);
 
 			String8 enum_name = EnumNameFromMemberName(scratch.arena, mem->name);
-			String8 enum_value = SerializeValueType(mem->types.types[i], mem->types.type_name[i]);
+			String8 enum_value = String8FromValueType(mem->types.types[i], mem->types.type_names[i]);
 			String8 enum_scoped_value = PushStr8F(scratch.arena, "%.*s::%.*s::%.*s;",
 			                                    class_name.size, class_name.str,
 												enum_name.size, enum_name.str,

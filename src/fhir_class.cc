@@ -109,7 +109,7 @@ ValueTypesFromResourceMember(Arena *arena, ResourceMember *mem)
 	ValueTypes types = { 0 };
 	types.num_types = mem->value_types.node_count;
 	types.types = PushArray(arena, ValueType, types.num_types);
-	types.type_name = PushArray(arena, String8, types.num_types);
+	types.type_names = PushArray(arena, String8, types.num_types);
 
 	String8Node *vt_node = mem->value_types.first;
 	for (int i = 0; i < types.num_types; i++)
@@ -118,7 +118,7 @@ ValueTypesFromResourceMember(Arena *arena, ResourceMember *mem)
 
 		if (types.types[i] == ValueType::Class_Reference)
 		{
-			types.type_name[i] = ClassNameFromResourceName(arena, vt_node->string);
+			types.type_names[i] = ClassNameFromResourceName(arena, vt_node->string);
 		}
 		vt_node = vt_node->next;
 	}
@@ -154,81 +154,115 @@ CleanMemberName(Arena *arena, String8 member_name)
 	return member_name;
 }
 
-ClassMember*
-ClassMemberFromResourceMember(Arena *arena, ResourceMember *mem)
+
+ClassMemberList
+ClassMembersFromResourceMember(Arena *arena, ResourceMember *mem)
 {
 	Temp scratch = ScratchBegin(&arena, 1);
-	ClassMember *class_mem = PushArray(arena, ClassMember, 1);
-	class_mem->name = CleanMemberName(arena, mem->name);
+	ClassMemberList result = { 0 };
 
-	class_mem->cardinality = mem->cardinality;
+	ClassMember class_mem = { 0 };
+	class_mem.name = CleanMemberName(arena, mem->name);
+	class_mem.cardinality = mem->cardinality;
+	class_mem.type = ClassMemberType::Single;
+
+
+	ValueTypes value_types = ValueTypesFromResourceMember(arena, mem);
 	if (mem->content_reference.size != 0)
 	{
 		String8 content_reference = CleanContentReference(scratch.arena, mem->content_reference);
 		String8 class_name = ClassNameFromResourceName(arena, content_reference);
-		ValueTypes types = { 0 };
-		types.num_types = 1;
-		types.types = PushArray(arena, ValueType, types.num_types);
-		types.type_name = PushArray(arena, String8, types.num_types);
-		types.types[0] = ValueType::Class_Reference;
-		types.type_name[0] = class_name;
-		class_mem->types = types;
-	} else 
+		class_mem.value_type.single.type = ValueType::Class_Reference;
+		class_mem.value_type.single.name = class_name;
+	} else if (mem->value_types.node_count == 1)
 	{
-		ValueTypes value_types = ValueTypesFromResourceMember(arena, mem);
-		class_mem->types = value_types;
+		class_mem.value_type.single.type = value_types.types[0];
+		class_mem.value_type.single.name = value_types.type_names[0];
+	} else if (mem->value_types.node_count > 1)
+	{
+		// TODO(agw): create multiple members: enum, union
+		ClassMember _enum = { 0 };
+		_enum.name = class_mem.name;
+		_enum.cardinality = Cardinality::OneToOne;
+		_enum.type = ClassMemberType::Enum;
+		_enum.value_type.types = value_types;
+		CMListPush(arena, &result, _enum);
+
+		class_mem.type = ClassMemberType::Union;
+		class_mem.value_type.types = value_types;
 	}
 
+	CMListPush(arena, &result, class_mem);
 	ScratchEnd(scratch);
-	return class_mem;
+	return result;
 }
 
+ClassMember*
+PushResourceTypeClassMember(Arena *arena, String8 class_name)
+{
+	ClassMember *resource_type_mem = PushArray(arena, ClassMember, 1);
+	resource_type_mem->name = Str8Lit("resourceType");
+	resource_type_mem->cardinality = Cardinality::OneToOne;
+	resource_type_mem->type = ClassMemberType::Single;
+	resource_type_mem->value_type.single.type = ValueType::ResourceType;
+	resource_type_mem->value_type.single.name = class_name;
+
+	return resource_type_mem;
+}
 
 ClassDefinitionList
 GetClassDefinitionsFromResource(Arena *arena, Resource *res) 
 {
 	ClassDefinitionList result = { 0 };
 
-	ClassDefinition *class_def = PushArray(arena, ClassDefinition, 1);
+	ClassDefinition class_def = { 0 };
+	class_def.name = ClassNameFromResourceName(arena, res->name);
+	class_def.inherits = res->inherits;
 
-	class_def->name = ClassNameFromResourceName(arena, res->name);
-	class_def->inherits = res->inherits;
+	CMListPush(arena, 
+	           &class_def.members, 
+	           *PushResourceTypeClassMember(arena, class_def.name));
 
-	ClassMember *resource_type_mem = PushArray(arena, ClassMember, 1);
-	resource_type_mem->name = Str8Lit("resourceType");
-	resource_type_mem->cardinality = Cardinality::OneToOne;
-	resource_type_mem->types.num_types = 1;
-	resource_type_mem->types.types = PushArray(arena, ValueType, 1);
-	resource_type_mem->types.types[0] = ValueType::ResourceType;
-	resource_type_mem->types.type_name = PushArray(arena, String8, 1);
-	CMListPush(arena, &class_def->members, *resource_type_mem);
-
-	ResourceMemberNode *ptr = res->members.first;
-	for (int i = 0; i < res->members.count; i++)
+	for (ResourceMemberNode *ptr = res->members.first;
+		ptr;
+		ptr = ptr->next)
 	{
-		ClassMember *mem = ClassMemberFromResourceMember(arena, &ptr->member);
-		CMListPush(arena, &class_def->members, *mem);
-		ptr = ptr->next;
+		ClassMemberList mem_list = ClassMembersFromResourceMember(arena, &ptr->member);
+		for (ClassMemberNode *mem_node = mem_list.first;
+			mem_node;
+			mem_node = mem_node->next)
+		{
+			ClassMember *mem = &mem_node->mem;
+			if (mem->cardinality == Cardinality::ZeroToInf || 
+				mem->cardinality == Cardinality::OneToInf)
+			{
+				// NOTE(alex): split into two members, one for count and one for array of data
+				ClassMember *count = PushStruct(arena, ClassMember);
+				count->name = PushStr8F(arena, "%.*s_count", mem->name.size, mem->name.str);
+				count->cardinality = Cardinality::OneToOne;
+				count->type = ClassMemberType::Single;
+				count->value_type.single.type = ValueType::ArrayCount;
+				CMListPush(arena, &class_def.members, *count);
+			}
+
+			CMListPush(arena, &class_def.members, *mem);
+		}
+
 	}
 
+	CDListPush(arena, &result, class_def);
 
-
-	CDListPush(arena, &result, *class_def);
-
-	if (res->sub_resources) 
+	for (ResourceNode *res_ptr = res->sub_resources->first;
+		res_ptr;
+		res_ptr = res_ptr->next)
 	{
-		ResourceNode *res_ptr = res->sub_resources->first;
-		for (int i = 0; i < res->sub_resources->count; i++)
+		ClassDefinitionList sub_list = GetClassDefinitionsFromResource(arena, &res_ptr->resource);
+
+		for (ClassDefinitionNode *sub_ptr = sub_list.first; 
+			sub_ptr;
+			sub_ptr = sub_ptr->next) 
 		{
-			ClassDefinitionList sub_list = GetClassDefinitionsFromResource(arena, &res_ptr->resource);
-	
-			ClassDefinitionNode *sub_ptr = sub_list.first;
-			for (int j = 0; j < sub_list.count; j++) {
-				CDListPush(arena, &result, sub_ptr->def);
-				sub_ptr = sub_ptr->next;
-			}
-	
-			res_ptr = res_ptr->next;
+			CDListPush(arena, &result, sub_ptr->def);
 		}
 	}
 
@@ -245,7 +279,7 @@ ValueTypesGetByType(Arena *arena, ValueTypes types, ValueType type)
 		if (types.types[i] == type)
 		{
 			StringValueTypePair *pair = PushArray(arena, StringValueTypePair, 1);
-			pair->str = types.type_name[i];
+			pair->str = types.type_names[i];
 			pair->type = types.types[i];
 			return pair;
 		}

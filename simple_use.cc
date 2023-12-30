@@ -5,12 +5,10 @@
 #include "os/os_inc.h"
 #include "src/cJSON.h"
 #include "fhir_class_definitions.h"
-#include "fhir_class_deserialization.h"
 
 #include "base/base_inc.c"
 #include "os/os_inc.c"
 #include "src/cJSON.c"
-#include "fhir_class_deserialization.cc"
 
 #include "os/core/os_entry_point.c"
 
@@ -38,17 +36,30 @@ EntryPoint(CmdLine *cmdln)
 	char* json_str = (char*)ReadEntireFile(arena, Str8Lit("bundles/test.json"));
 	cJSON *json = cJSON_Parse(json_str);
 
-	Bundle* bundle = Deserialize_Bundle(arena, json);
-	printf("Bundle:\n");
-	printf("\tid: %.*s\n", (int)bundle->id.size, bundle->id.str);
-	printf("\ttype: %.*s\n", (int)bundle->type.size, bundle->type.str);
+	struct {
+		U64 size;
+		char *str;
+	} test;
+	printf("%zx\n", sizeof(test));
 
-	Parameters* params = (Parameters*)bundle->entry[0].resource;
-	for (int i = 0; i < params->parameter_count; i++)
+#if 0
+	ResourceType resourceType; // 0
 	{
-		Parameters_Parameter param = params->parameter[i];
-		printf("name: %.*s\n", (int)param.name.size, param.name.str);
-		char *vb = param.value.valueBoolean ? "true" : "false";
-		printf("valueBoolean: %s\n", vb);
-	}
+		U8 *str;
+		U64 size;
+	} id; // 8
+	Meta *meta; // 18
+	fhir_uri implicitRules; // 20
+	fhir_code language; // 30
+#endif
+	printf("U64 size: %d\n", sizeof(U64));
+	printf("U8* size: %d\n", sizeof(U8*));
+	printf("alignof(String8): %d\n", alignof(String8));
+	printf("sizeof(String8): %d\n", sizeof(String8));
+	printf("Resource size: %d\n", sizeof(Resource));
+	printf("Resource.resoerceType: %d\n", offsetof(Resource, resourceType));
+	printf("Resource.id: %d\n", offsetof(Resource, id));
+	printf("Resource.meta: %d\n", offsetof(Resource, meta));
+	printf("Resource.implicitRules: %d\n", offsetof(Resource, implicitRules));
+	printf("Resource.language: %d\n", offsetof(Resource, language));
 }

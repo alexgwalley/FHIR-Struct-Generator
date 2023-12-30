@@ -50,6 +50,7 @@ root_function U64 ArenaPos(Arena *arena);
 
 #define PushArrayNoZero(arena, type, count) (type *)ArenaPushNoZero((arena), sizeof(type)*(count))
 #define PushArray(arena, type, count)       (type *)ArenaPush((arena), sizeof(type)*(count))
+#define PushStruct(arena, type)				PushArray(arena, type, 1)
 
 ////////////////////////////////
 //~ rjf: Arena Temp Functions

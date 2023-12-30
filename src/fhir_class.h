@@ -1,6 +1,8 @@
 #ifndef FHIR_CLASS_H
 #define FHIR_CLASS_H
 
+#define ENUM_SIZE 4
+
 // NOTE(agw): The point of Class Definition and Class member
 // is to ease in the process of exporting the generated classes,
 // devoid of any FHIR weirdness where a string type is a class
@@ -32,11 +34,47 @@ enum class ValueType {
 	Time,
 	Instant,
 	Class_Reference,
-	ResourceType
+	ResourceType,
+	ArrayCount
+};
+
+
+typedef struct ValueTypeSizePair ValueTypeSizePair;
+struct ValueTypeSizePair 
+{
+	ValueType type;
+	U64 size;
+};
+
+ValueTypeSizePair value_type_to_size[] =
+{
+	{ ValueType::Unknown, 0 },
+	{ ValueType::Base64Binary, sizeof(String8) },
+	{ ValueType::Canonical, sizeof(String8) },
+	{ ValueType::Code, sizeof(String8) },
+	{ ValueType::Id, sizeof(String8) },
+	{ ValueType::Markdown, sizeof(String8) },
+	{ ValueType::Oid, sizeof(String8) },
+	{ ValueType::String, sizeof(String8) },
+	{ ValueType::Uri, sizeof(String8) },
+	{ ValueType::Url, sizeof(String8) },
+	{ ValueType::Uuid, sizeof(String8) },
+	{ ValueType::Boolean, sizeof(boolean) },
+	{ ValueType::PositiveInt, sizeof(U64) },
+	{ ValueType::UnsignedInt, sizeof(U64) },
+	{ ValueType::Decimal, sizeof(double) },
+	{ ValueType::Date, sizeof(String8) },
+	{ ValueType::DateTime, sizeof(String8) },
+	{ ValueType::Time, sizeof(String8) },
+	{ ValueType::Instant, sizeof(String8) },
+	{ ValueType::Class_Reference, sizeof(void*) },
+	{ ValueType::ResourceType, ENUM_SIZE },
+	{ ValueType::ArrayCount, sizeof(unsigned long) }
 };
 
 typedef struct StringValueTypePair StringValueTypePair;
-struct StringValueTypePair {
+struct StringValueTypePair 
+{
 	String8 str;
 	ValueType type;
 };
@@ -89,20 +127,37 @@ StringValueTypePair str_type_pairs_export[] = {
 	{Str8Lit("fhir_time"), ValueType::Time },
 	{Str8Lit("fhir_instant"), ValueType::Instant},
 	{Str8Lit("ResourceType"), ValueType::ResourceType},
+	{Str8Lit("U64"), ValueType::ArrayCount}
 };
 
 struct ValueTypes {
 	U64 num_types;
 	ValueType *types;
-	// will fill with class_reference name
-	String8 *type_name;
+	String8 *type_names;
+};
+
+struct ValueTypeAndName
+{
+	ValueType type;
+	String8 name;
+};
+
+enum class ClassMemberType
+{
+	Single,
+	Enum,
+	Union
 };
 
 struct ClassMember
 {
 	String8 name;
 	Cardinality cardinality;
-	ValueTypes types;
+	union {
+		ValueTypes types;
+		ValueTypeAndName single;
+	} value_type;
+	ClassMemberType type;
 };
 
 typedef struct ClassMemberNode ClassMemberNode;
@@ -141,7 +196,6 @@ struct ClassDefinitionList
 	ClassDefinitionNode *last;
 	U64 count;
 };
-
 
 void
 CDListPush(Arena *arena, ClassDefinitionList *list, ClassDefinition def);
