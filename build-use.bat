@@ -2,4 +2,4 @@
 
 echo %cd%
 set 
-cl /Fo:build\ /DOS_WINDOWS /DBUILD_CORE /DBUILD_CONSOLE_OUTPUT simple_use.cc /Zi /Isrc/code
+cl /O2 /EHsc /Fe:simple_use.exe /Fo:build\ /DOS_WINDOWS /DBUILD_CORE /DBUILD_CONSOLE_OUTPUT src/yyjson.c simple_use.cc /Zi /Isrc/code

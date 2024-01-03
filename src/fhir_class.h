@@ -59,7 +59,7 @@ ValueTypeSizePair value_type_to_size[] =
 	{ ValueType::Uri, sizeof(String8) },
 	{ ValueType::Url, sizeof(String8) },
 	{ ValueType::Uuid, sizeof(String8) },
-	{ ValueType::Boolean, sizeof(boolean) },
+	{ ValueType::Boolean, sizeof(B32) },
 	{ ValueType::PositiveInt, sizeof(U64) },
 	{ ValueType::UnsignedInt, sizeof(U64) },
 	{ ValueType::Decimal, sizeof(double) },
@@ -69,7 +69,7 @@ ValueTypeSizePair value_type_to_size[] =
 	{ ValueType::Instant, sizeof(String8) },
 	{ ValueType::Class_Reference, sizeof(void*) },
 	{ ValueType::ResourceType, ENUM_SIZE },
-	{ ValueType::ArrayCount, sizeof(unsigned long) }
+	{ ValueType::ArrayCount, sizeof(U64) }
 };
 
 typedef struct StringValueTypePair StringValueTypePair;
@@ -77,6 +77,32 @@ struct StringValueTypePair
 {
 	String8 str;
 	ValueType type;
+};
+
+
+String8 value_type_str[] = {
+	Str8Lit("Unknown"),
+	Str8Lit("Base64Binary"),
+	Str8Lit("Canonical"),
+	Str8Lit("Code"),
+	Str8Lit("Id"),
+	Str8Lit("Markdown"),
+	Str8Lit("Oid"),
+	Str8Lit("String"),
+	Str8Lit("Uri"),
+	Str8Lit("Url"),
+	Str8Lit("Uuid"),
+	Str8Lit("Boolean"),
+	Str8Lit("PositiveInt"),
+	Str8Lit("UnsignedInt"),
+	Str8Lit("Decimal"),
+	Str8Lit("Date"),
+	Str8Lit("DateTime"),
+	Str8Lit("Time"),
+	Str8Lit("Instant"),
+	Str8Lit("Class_Reference"),
+	Str8Lit("ResourceType"),
+	Str8Lit("ArrayCount")
 };
 
 StringValueTypePair str_type_pairs[] = {
@@ -144,9 +170,17 @@ struct ValueTypeAndName
 
 enum class ClassMemberType
 {
+	Unknown,
 	Single,
 	Enum,
 	Union
+};
+
+String8 class_member_type_str[] = {
+	Str8Lit("Unknown"),
+	Str8Lit("Single"),
+	Str8Lit("Enum"),
+	Str8Lit("Union")
 };
 
 struct ClassMember

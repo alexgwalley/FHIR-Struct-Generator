@@ -12,6 +12,15 @@ enum class Cardinality
 	OneToInf,
 };
 
+String8 cardinality_str[] = {
+	Str8Lit("Unknown"),
+	Str8Lit("ZeroToZero"),
+	Str8Lit("ZeroToOne"),
+	Str8Lit("ZeroToInf"),
+	Str8Lit("OneToOne"),
+	Str8Lit("OneToInf")
+};
+
 struct ResourceMember
 {
 	String8 name;

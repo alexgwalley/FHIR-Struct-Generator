@@ -1,7 +1,13 @@
+#define METADATA_MEMBER_COUNT 100
+#define POSSIBLE_TYPES_COUNT 100
 struct ClassMemberMetadata
 {
-	ClassMember mem;
+	String8 name;
+	Cardinality cardinality;
+	ClassMemberType type;
 	U16 offset;
+	U16 size;
+	ValueTypeAndName types[POSSIBLE_TYPES_COUNT];
 };
 
 struct ClassMetadata
@@ -9,7 +15,7 @@ struct ClassMetadata
 	String8 name;
 	U64 size;
 	U64 members_count;
-	ClassMemberMetadata *members;
+	ClassMemberMetadata members[METADATA_MEMBER_COUNT];
 };
 
 typedef enum class ResourceType {

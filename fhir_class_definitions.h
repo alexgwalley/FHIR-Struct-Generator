@@ -1,3 +1,4 @@
+namespace fhir_r4 {
 typedef String8 fhir_base64Binary;
 typedef String8 fhir_canonical;
 typedef String8 fhir_code;
@@ -8,7 +9,7 @@ typedef String8 fhir_string;
 typedef String8 fhir_uri;
 typedef String8 fhir_url;
 typedef String8 fhir_uuid;
-typedef boolean fhir_boolean;
+typedef int fhir_boolean;
 typedef unsigned long fhir_positiveInt;
 typedef unsigned long fhir_unsignedInt;
 typedef double fhir_decimal;
@@ -1525,11 +1526,12 @@ public:
 	fhir_string subtitle;
 	fhir_code status;
 	fhir_boolean experimental;
-	enum class SubjectType {
+	enum class SubjeType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	SubjectType subject_type;
+	SubjeType subject_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -1571,7 +1573,8 @@ public:
 	fhir_code intent;
 	fhir_code priority;
 	fhir_boolean doNotPerform;
-	enum class TimingType {
+	enum class TiminType {
+		Unknown,
 		Timing,
 		fhir_dateTime,
 		Age,
@@ -1579,7 +1582,7 @@ public:
 		Range,
 		Duration
 	};
-	TimingType timing_type;
+	TiminType timing_type_type;
 
 	union {
 		Timing* valueTiming;
@@ -1593,11 +1596,12 @@ public:
 	Reference *location;
 	U64 participant_count;
 	ActivityDefinition_Participant *participant;
-	enum class ProductType {
+	enum class ProduType {
+		Unknown,
 		Reference,
 		CodeableConcept
 	};
-	ProductType product_type;
+	ProduType product_type_type;
 
 	union {
 		Reference* valueReference;
@@ -1734,13 +1738,14 @@ public:
 	Reference *patient;
 	Reference *encounter;
 	enum class OnsetType {
+		Unknown,
 		fhir_dateTime,
 		Age,
 		Period,
 		Range,
 		fhir_string
 	};
-	OnsetType onset_type;
+	OnsetType onset_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -1972,10 +1977,11 @@ public:
 	Extension *modifierExtension;
 	fhir_string type;
 	enum class ValueType {
+		Unknown,
 		fhir_string,
 		fhir_base64Binary
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_string valueString;
@@ -2056,11 +2062,12 @@ public:
 	Extension *modifierExtension;
 	Reference *collector;
 	Reference *source;
-	enum class CollectedType {
+	enum class ColleType {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	CollectedType collected_type;
+	ColleType collected_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -2079,11 +2086,12 @@ public:
 	fhir_string description;
 	CodeableConcept *procedure;
 	Reference *additive;
-	enum class TimeType {
+	enum class Time_Type {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	TimeType time_type;
+	Time_Type time_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -2100,11 +2108,12 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	fhir_string description;
-	enum class TimeType {
+	enum class Time_Type {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	TimeType time_type;
+	Time_Type time_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -2567,12 +2576,13 @@ public:
 	fhir_code status;
 	CodeableConcept *statusReason;
 	fhir_boolean doNotPerform;
-	enum class ScheduledType {
+	enum class SchedType {
+		Unknown,
 		Timing,
 		Period,
 		fhir_string
 	};
-	ScheduledType scheduled_type;
+	SchedType scheduled_type_type;
 
 	union {
 		Timing* valueTiming;
@@ -2583,11 +2593,12 @@ public:
 	Reference *location;
 	U64 performer_count;
 	Reference *performer;
-	enum class ProductType {
+	enum class ProduType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	ProductType product_type;
+	ProduType product_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -2719,12 +2730,13 @@ public:
 	CodeableConcept *code;
 	Reference *subject;
 	Reference *context;
-	enum class OccurrenceType {
+	enum class OccurType {
+		Unknown,
 		fhir_dateTime,
 		Period,
 		Timing
 	};
-	OccurrenceType occurrence_type;
+	OccurType occurrence_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -2749,11 +2761,12 @@ public:
 	CodeableConcept *reason;
 	U64 service_count;
 	Reference *service;
-	enum class ProductType {
+	enum class ProduType {
+		Unknown,
 		Reference,
 		CodeableConcept
 	};
-	ProductType product_type;
+	ProduType product_type_type;
 
 	union {
 		Reference* valueReference;
@@ -2962,11 +2975,12 @@ public:
 	fhir_positiveInt sequence;
 	CodeableConcept *category;
 	CodeableConcept *code;
-	enum class TimingType {
+	enum class TiminType {
+		Unknown,
 		fhir_date,
 		Period
 	};
-	TimingType timing_type;
+	TiminType timing_type_type;
 
 	union {
 		fhir_date valueDate;
@@ -2974,13 +2988,14 @@ public:
 	} timing;
 
 	enum class ValueType {
+		Unknown,
 		fhir_boolean,
 		fhir_string,
 		Quantity,
 		Attachment,
 		Reference
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -3001,11 +3016,12 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	enum class DiagnosisType {
+	enum class DiagnType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	DiagnosisType diagnosis_type;
+	DiagnType diagnosis_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -3029,11 +3045,12 @@ public:
 	U64 type_count;
 	CodeableConcept *type;
 	fhir_dateTime date;
-	enum class ProcedureType {
+	enum class ProceType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	ProcedureType procedure_type;
+	ProceType procedure_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -3070,11 +3087,12 @@ public:
 	Extension *modifierExtension;
 	fhir_date date;
 	CodeableConcept *type;
-	enum class LocationType {
+	enum class LocatType {
+		Unknown,
 		Address,
 		Reference
 	};
-	LocationType location_type;
+	LocatType location_type_type;
 
 	union {
 		Address* valueAddress;
@@ -3106,23 +3124,25 @@ public:
 	CodeableConcept *modifier;
 	U64 programCode_count;
 	CodeableConcept *programCode;
-	enum class ServicedType {
+	enum class ServiType {
+		Unknown,
 		fhir_date,
 		Period
 	};
-	ServicedType serviced_type;
+	ServiType serviced_type_type;
 
 	union {
 		fhir_date valueDate;
 		Period* valuePeriod;
 	} serviced;
 
-	enum class LocationType {
+	enum class LocatType {
+		Unknown,
 		CodeableConcept,
 		Address,
 		Reference
 	};
-	LocationType location_type;
+	LocatType location_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -3323,23 +3343,25 @@ public:
 	CodeableConcept *modifier;
 	U64 programCode_count;
 	CodeableConcept *programCode;
-	enum class ServicedType {
+	enum class ServiType {
+		Unknown,
 		fhir_date,
 		Period
 	};
-	ServicedType serviced_type;
+	ServiType serviced_type_type;
 
 	union {
 		fhir_date valueDate;
 		Period* valuePeriod;
 	} serviced;
 
-	enum class LocationType {
+	enum class LocatType {
+		Unknown,
 		CodeableConcept,
 		Address,
 		Reference
 	};
-	LocationType location_type;
+	LocatType location_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -3491,11 +3513,12 @@ public:
 	fhir_string description;
 	Reference *subject;
 	Reference *encounter;
-	enum class EffectiveType {
+	enum class EffecType {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	EffectiveType effective_type;
+	EffecType effective_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -3662,6 +3685,7 @@ public:
 	Extension *modifierExtension;
 	fhir_code code;
 	enum class ValueType {
+		Unknown,
 		fhir_code,
 		Coding,
 		fhir_string,
@@ -3670,7 +3694,7 @@ public:
 		fhir_dateTime,
 		fhir_decimal
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_code valueCode;
@@ -3743,12 +3767,13 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class ContentType {
+	enum class ConteType {
+		Unknown,
 		fhir_string,
 		Attachment,
 		Reference
 	};
-	ContentType content_type;
+	ConteType content_type_type;
 
 	union {
 		fhir_string valueString;
@@ -3792,11 +3817,12 @@ public:
 	Reference *encounter;
 	U64 payload_count;
 	CommunicationRequest_Payload *payload;
-	enum class OccurrenceType {
+	enum class OccurType {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	OccurrenceType occurrence_type;
+	OccurType occurrence_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -3823,12 +3849,13 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class ContentType {
+	enum class ConteType {
+		Unknown,
 		fhir_string,
 		Attachment,
 		Reference
 	};
-	ContentType content_type;
+	ConteType content_type_type;
 
 	union {
 		fhir_string valueString;
@@ -3939,11 +3966,12 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	fhir_code code;
-	enum class TargetType {
+	enum class TargeType {
+		Unknown,
 		Identifier,
 		Reference
 	};
-	TargetType target_type;
+	TargeType target_type_type;
 
 	union {
 		Identifier* valueIdentifier;
@@ -4019,22 +4047,24 @@ public:
 	CodeableConcept *jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
-	enum class SourceType {
+	enum class SourcType {
+		Unknown,
 		fhir_uri,
 		fhir_canonical
 	};
-	SourceType source_type;
+	SourcType source_type_type;
 
 	union {
 		fhir_uri valueUri;
 		fhir_canonical valueCanonical;
 	} source;
 
-	enum class TargetType {
+	enum class TargeType {
+		Unknown,
 		fhir_uri,
 		fhir_canonical
 	};
-	TargetType target_type;
+	TargeType target_type_type;
 
 	union {
 		fhir_uri valueUri;
@@ -4143,13 +4173,14 @@ public:
 	Reference *subject;
 	Reference *encounter;
 	enum class OnsetType {
+		Unknown,
 		fhir_dateTime,
 		Age,
 		Period,
 		Range,
 		fhir_string
 	};
-	OnsetType onset_type;
+	OnsetType onset_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -4159,14 +4190,15 @@ public:
 		fhir_string valueString;
 	} onset;
 
-	enum class AbatementType {
+	enum class AbateType {
+		Unknown,
 		fhir_dateTime,
 		Age,
 		Period,
 		Range,
 		fhir_string
 	};
-	AbatementType abatement_type;
+	AbateType abatement_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -4238,11 +4270,12 @@ public:
 	Reference *performer;
 	U64 organization_count;
 	Reference *organization;
-	enum class SourceType {
+	enum class SourcType {
+		Unknown,
 		Attachment,
 		Reference
 	};
-	SourceType source_type;
+	SourcType source_type_type;
 
 	union {
 		Attachment* valueAttachment;
@@ -4371,10 +4404,11 @@ public:
 	Reference *author;
 	CodeableConcept *scope;
 	enum class TopicType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	TopicType topic_type;
+	TopicType topic_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -4399,11 +4433,12 @@ public:
 	Contract_Legal *legal;
 	U64 rule_count;
 	Contract_Rule *rule;
-	enum class LegallyBindingType {
+	enum class LegalType {
+		Unknown,
 		Attachment,
 		Reference
 	};
-	LegallyBindingType legallyBinding_type;
+	LegalType legallyBinding_type_type;
 
 	union {
 		Attachment* valueAttachment;
@@ -4438,10 +4473,11 @@ public:
 	fhir_dateTime issued;
 	Period *applies;
 	enum class TopicType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	TopicType topic_type;
+	TopicType topic_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -4523,6 +4559,7 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	enum class ValueType {
+		Unknown,
 		fhir_boolean,
 		fhir_decimal,
 		Integer,
@@ -4536,7 +4573,7 @@ public:
 		Quantity,
 		Reference
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -4610,11 +4647,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class EntityType {
+	enum class EntitType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	EntityType entity_type;
+	EntitType entity_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -4656,12 +4694,13 @@ public:
 	Reference *context;
 	U64 contextLinkId_count;
 	fhir_string *contextLinkId;
-	enum class OccurrenceType {
+	enum class OccurType {
+		Unknown,
 		fhir_dateTime,
 		Period,
 		Timing
 	};
-	OccurrenceType occurrence_type;
+	OccurType occurrence_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -4725,11 +4764,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class ContentType {
+	enum class ConteType {
+		Unknown,
 		Attachment,
 		Reference
 	};
-	ContentType content_type;
+	ConteType content_type_type;
 
 	union {
 		Attachment* valueAttachment;
@@ -4745,11 +4785,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class ContentType {
+	enum class ConteType {
+		Unknown,
 		Attachment,
 		Reference
 	};
-	ContentType content_type;
+	ConteType content_type_type;
 
 	union {
 		Attachment* valueAttachment;
@@ -4765,11 +4806,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class ContentType {
+	enum class ConteType {
+		Unknown,
 		Attachment,
 		Reference
 	};
-	ContentType content_type;
+	ConteType content_type_type;
 
 	union {
 		Attachment* valueAttachment;
@@ -4836,10 +4878,11 @@ public:
 	Extension *modifierExtension;
 	CodeableConcept *type;
 	enum class ValueType {
+		Unknown,
 		Quantity,
 		Money
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -4881,11 +4924,12 @@ public:
 	U64 purpose_count;
 	fhir_code *purpose;
 	Reference *patient;
-	enum class ServicedType {
+	enum class ServiType {
+		Unknown,
 		fhir_date,
 		Period
 	};
-	ServicedType serviced_type;
+	ServiType serviced_type_type;
 
 	union {
 		fhir_date valueDate;
@@ -4959,11 +5003,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class DiagnosisType {
+	enum class DiagnType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	DiagnosisType diagnosis_type;
+	DiagnType diagnosis_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -4991,11 +5036,12 @@ public:
 	U64 purpose_count;
 	fhir_code *purpose;
 	Reference *patient;
-	enum class ServicedType {
+	enum class ServiType {
+		Unknown,
 		fhir_date,
 		Period
 	};
-	ServicedType serviced_type;
+	ServiType serviced_type_type;
 
 	union {
 		fhir_date valueDate;
@@ -5064,12 +5110,13 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	CodeableConcept *type;
-	enum class AllowedType {
+	enum class AllowType {
+		Unknown,
 		fhir_unsignedInt,
 		fhir_string,
 		Money
 	};
-	AllowedType allowed_type;
+	AllowType allowed_type_type;
 
 	union {
 		fhir_unsignedInt valueUnsignedInt;
@@ -5077,12 +5124,13 @@ public:
 		Money* valueMoney;
 	} allowed;
 
-	enum class UsedType {
+	enum class Used_Type {
+		Unknown,
 		fhir_unsignedInt,
 		fhir_string,
 		Money
 	};
-	UsedType used_type;
+	Used_Type used_type_type;
 
 	union {
 		fhir_unsignedInt valueUnsignedInt;
@@ -5121,11 +5169,12 @@ public:
 	CodeableConcept *code;
 	fhir_code severity;
 	Reference *patient;
-	enum class IdentifiedType {
+	enum class IdentType {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	IdentifiedType identified_type;
+	IdentType identified_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -5299,11 +5348,12 @@ public:
 	Identifier *identifier;
 	U64 udiDeviceIdentifier_count;
 	DeviceDefinition_UdiDeviceIdentifier *udiDeviceIdentifier;
-	enum class ManufacturerType {
+	enum class ManufType {
+		Unknown,
 		fhir_string,
 		Reference
 	};
-	ManufacturerType manufacturer_type;
+	ManufType manufacturer_type_type;
 
 	union {
 		fhir_string valueString;
@@ -5480,11 +5530,12 @@ public:
 	fhir_code status;
 	fhir_code intent;
 	fhir_code priority;
-	enum class CodeType {
+	enum class Code_Type {
+		Unknown,
 		Reference,
 		CodeableConcept
 	};
-	CodeType code_type;
+	Code_Type code_type_type;
 
 	union {
 		Reference* valueReference;
@@ -5495,12 +5546,13 @@ public:
 	DeviceRequest_Parameter *parameter;
 	Reference *subject;
 	Reference *encounter;
-	enum class OccurrenceType {
+	enum class OccurType {
+		Unknown,
 		fhir_dateTime,
 		Period,
 		Timing
 	};
-	OccurrenceType occurrence_type;
+	OccurType occurrence_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -5535,12 +5587,13 @@ public:
 	Extension *modifierExtension;
 	CodeableConcept *code;
 	enum class ValueType {
+		Unknown,
 		CodeableConcept,
 		Quantity,
 		Range,
 		fhir_boolean
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -5572,12 +5625,13 @@ public:
 	Reference *subject;
 	U64 derivedFrom_count;
 	Reference *derivedFrom;
-	enum class TimingType {
+	enum class TiminType {
+		Unknown,
 		Timing,
 		Period,
 		fhir_dateTime
 	};
-	TimingType timing_type;
+	TiminType timing_type_type;
 
 	union {
 		Timing* valueTiming;
@@ -5620,11 +5674,12 @@ public:
 	CodeableConcept *code;
 	Reference *subject;
 	Reference *encounter;
-	enum class EffectiveType {
+	enum class EffecType {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	EffectiveType effective_type;
+	EffecType effective_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -6232,11 +6287,12 @@ public:
 	fhir_string subtitle;
 	fhir_code status;
 	fhir_boolean experimental;
-	enum class SubjectType {
+	enum class SubjeType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	SubjectType subject_type;
+	SubjeType subject_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -6392,7 +6448,8 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	fhir_string description;
-	enum class DefinitionType {
+	enum class DefinType {
+		Unknown,
 		Reference,
 		fhir_canonical,
 		CodeableConcept,
@@ -6400,7 +6457,7 @@ public:
 		DataRequirement,
 		TriggerDefinition
 	};
-	DefinitionType definition_type;
+	DefinType definition_type_type;
 
 	union {
 		Reference* valueReference;
@@ -6414,13 +6471,14 @@ public:
 	U64 usageContext_count;
 	UsageContext *usageContext;
 	fhir_boolean exclude;
-	enum class ParticipantEffectiveType {
+	enum class PartiType {
+		Unknown,
 		fhir_dateTime,
 		Period,
 		Duration,
 		Timing
 	};
-	ParticipantEffectiveType participantEffective_type;
+	PartiType participantEffective_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -6707,11 +6765,12 @@ public:
 	fhir_positiveInt sequence;
 	CodeableConcept *category;
 	CodeableConcept *code;
-	enum class TimingType {
+	enum class TiminType {
+		Unknown,
 		fhir_date,
 		Period
 	};
-	TimingType timing_type;
+	TiminType timing_type_type;
 
 	union {
 		fhir_date valueDate;
@@ -6719,13 +6778,14 @@ public:
 	} timing;
 
 	enum class ValueType {
+		Unknown,
 		fhir_boolean,
 		fhir_string,
 		Quantity,
 		Attachment,
 		Reference
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -6746,11 +6806,12 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	enum class DiagnosisType {
+	enum class DiagnType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	DiagnosisType diagnosis_type;
+	DiagnType diagnosis_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -6774,11 +6835,12 @@ public:
 	U64 type_count;
 	CodeableConcept *type;
 	fhir_dateTime date;
-	enum class ProcedureType {
+	enum class ProceType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	ProcedureType procedure_type;
+	ProceType procedure_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -6811,11 +6873,12 @@ public:
 	Extension *modifierExtension;
 	fhir_date date;
 	CodeableConcept *type;
-	enum class LocationType {
+	enum class LocatType {
+		Unknown,
 		Address,
 		Reference
 	};
-	LocationType location_type;
+	LocatType location_type_type;
 
 	union {
 		Address* valueAddress;
@@ -6847,23 +6910,25 @@ public:
 	CodeableConcept *modifier;
 	U64 programCode_count;
 	CodeableConcept *programCode;
-	enum class ServicedType {
+	enum class ServiType {
+		Unknown,
 		fhir_date,
 		Period
 	};
-	ServicedType serviced_type;
+	ServiType serviced_type_type;
 
 	union {
 		fhir_date valueDate;
 		Period* valuePeriod;
 	} serviced;
 
-	enum class LocationType {
+	enum class LocatType {
+		Unknown,
 		CodeableConcept,
 		Address,
 		Reference
 	};
-	LocationType location_type;
+	LocatType location_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -6979,23 +7044,25 @@ public:
 	CodeableConcept *modifier;
 	U64 programCode_count;
 	CodeableConcept *programCode;
-	enum class ServicedType {
+	enum class ServiType {
+		Unknown,
 		fhir_date,
 		Period
 	};
-	ServicedType serviced_type;
+	ServiType serviced_type_type;
 
 	union {
 		fhir_date valueDate;
 		Period* valuePeriod;
 	} serviced;
 
-	enum class LocationType {
+	enum class LocatType {
+		Unknown,
 		CodeableConcept,
 		Address,
 		Reference
 	};
-	LocationType location_type;
+	LocatType location_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -7125,12 +7192,13 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	CodeableConcept *type;
-	enum class AllowedType {
+	enum class AllowType {
+		Unknown,
 		fhir_unsignedInt,
 		fhir_string,
 		Money
 	};
-	AllowedType allowed_type;
+	AllowType allowed_type_type;
 
 	union {
 		fhir_unsignedInt valueUnsignedInt;
@@ -7138,11 +7206,12 @@ public:
 		Money* valueMoney;
 	} allowed;
 
-	enum class UsedType {
+	enum class Used_Type {
+		Unknown,
 		fhir_unsignedInt,
 		Money
 	};
-	UsedType used_type;
+	Used_Type used_type_type;
 
 	union {
 		fhir_unsignedInt valueUnsignedInt;
@@ -7177,12 +7246,13 @@ public:
 	fhir_string name;
 	CodeableConcept *relationship;
 	CodeableConcept *sex;
-	enum class BornType {
+	enum class Born_Type {
+		Unknown,
 		Period,
 		fhir_date,
 		fhir_string
 	};
-	BornType born_type;
+	Born_Type born_type_type;
 
 	union {
 		Period* valuePeriod;
@@ -7190,12 +7260,13 @@ public:
 		fhir_string valueString;
 	} born;
 
-	enum class AgeType {
+	enum class Age_tType {
+		Unknown,
 		Age,
 		Range,
 		fhir_string
 	};
-	AgeType age_type;
+	Age_tType age_type_type;
 
 	union {
 		Age* valueAge;
@@ -7204,14 +7275,15 @@ public:
 	} age;
 
 	fhir_boolean estimatedAge;
-	enum class DeceasedType {
+	enum class DeceaType {
+		Unknown,
 		fhir_boolean,
 		Age,
 		Range,
 		fhir_date,
 		fhir_string
 	};
-	DeceasedType deceased_type;
+	DeceaType deceased_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -7242,12 +7314,13 @@ public:
 	CodeableConcept *outcome;
 	fhir_boolean contributedToDeath;
 	enum class OnsetType {
+		Unknown,
 		Age,
 		Range,
 		Period,
 		fhir_string
 	};
-	OnsetType onset_type;
+	OnsetType onset_type_type;
 
 	union {
 		Age* valueAge;
@@ -7308,10 +7381,11 @@ public:
 	CodeableConcept *description;
 	Reference *subject;
 	enum class StartType {
+		Unknown,
 		fhir_date,
 		CodeableConcept
 	};
-	StartType start_type;
+	StartType start_type_type;
 
 	union {
 		fhir_date valueDate;
@@ -7341,7 +7415,8 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	CodeableConcept *measure;
-	enum class DetailType {
+	enum class DetaiType {
+		Unknown,
 		Quantity,
 		Range,
 		CodeableConcept,
@@ -7350,7 +7425,7 @@ public:
 		Integer,
 		Ratio
 	};
-	DetailType detail_type;
+	DetaiType detail_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -7362,11 +7437,12 @@ public:
 		Ratio* valueRatio;
 	} detail;
 
-	enum class DueType {
+	enum class Due_tType {
+		Unknown,
 		fhir_date,
 		Duration
 	};
-	DueType due_type;
+	Due_tType due_type_type;
 
 	union {
 		fhir_date valueDate;
@@ -7492,13 +7568,14 @@ public:
 	Extension *modifierExtension;
 	CodeableConcept *code;
 	enum class ValueType {
+		Unknown,
 		CodeableConcept,
 		fhir_boolean,
 		Quantity,
 		Range,
 		Reference
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -7540,12 +7617,13 @@ public:
 	Identifier *requestIdentifier;
 	U64 identifier_count;
 	Identifier *identifier;
-	enum class ModuleType {
+	enum class ModulType {
+		Unknown,
 		fhir_uri,
 		fhir_canonical,
 		CodeableConcept
 	};
-	ModuleType module_type;
+	ModulType module_type_type;
 
 	union {
 		fhir_uri valueUri;
@@ -7777,11 +7855,12 @@ public:
 	CodeableConcept *vaccineCode;
 	Reference *patient;
 	Reference *encounter;
-	enum class OccurrenceType {
+	enum class OccurType {
+		Unknown,
 		fhir_dateTime,
 		fhir_string
 	};
-	OccurrenceType occurrence_type;
+	OccurType occurrence_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -7867,22 +7946,24 @@ public:
 	Reference *authority;
 	U64 targetDisease_count;
 	CodeableConcept *targetDisease;
-	enum class DoseNumberType {
+	enum class DoseNType {
+		Unknown,
 		fhir_positiveInt,
 		fhir_string
 	};
-	DoseNumberType doseNumber_type;
+	DoseNType doseNumber_type_type;
 
 	union {
 		fhir_positiveInt valuePositiveInt;
 		fhir_string valueString;
 	} doseNumber;
 
-	enum class SeriesDosesType {
+	enum class SerieType {
+		Unknown,
 		fhir_positiveInt,
 		fhir_string
 	};
-	SeriesDosesType seriesDoses_type;
+	SerieType seriesDoses_type_type;
 
 	union {
 		fhir_positiveInt valuePositiveInt;
@@ -7917,22 +7998,24 @@ public:
 	CodeableConcept *doseStatusReason;
 	fhir_string description;
 	fhir_string series;
-	enum class DoseNumberType {
+	enum class DoseNType {
+		Unknown,
 		fhir_positiveInt,
 		fhir_string
 	};
-	DoseNumberType doseNumber_type;
+	DoseNType doseNumber_type_type;
 
 	union {
 		fhir_positiveInt valuePositiveInt;
 		fhir_string valueString;
 	} doseNumber;
 
-	enum class SeriesDosesType {
+	enum class SerieType {
+		Unknown,
 		fhir_positiveInt,
 		fhir_string
 	};
-	SeriesDosesType seriesDoses_type;
+	SerieType seriesDoses_type_type;
 
 	union {
 		fhir_positiveInt valuePositiveInt;
@@ -7982,22 +8065,24 @@ public:
 	ImmunizationRecommendation_Recommendation_DateCriterion *dateCriterion;
 	fhir_string description;
 	fhir_string series;
-	enum class DoseNumberType {
+	enum class DoseNType {
+		Unknown,
 		fhir_positiveInt,
 		fhir_string
 	};
-	DoseNumberType doseNumber_type;
+	DoseNType doseNumber_type_type;
 
 	union {
 		fhir_positiveInt valuePositiveInt;
 		fhir_string valueString;
 	} doseNumber;
 
-	enum class SeriesDosesType {
+	enum class SerieType {
+		Unknown,
 		fhir_positiveInt,
 		fhir_string
 	};
-	SeriesDosesType seriesDoses_type;
+	SerieType seriesDoses_type_type;
 
 	union {
 		fhir_positiveInt valuePositiveInt;
@@ -8126,11 +8211,12 @@ public:
 	fhir_code *fhirVersion;
 	fhir_string name;
 	fhir_string description;
-	enum class ExampleType {
+	enum class ExampType {
+		Unknown,
 		fhir_boolean,
 		fhir_canonical
 	};
-	ExampleType example_type;
+	ExampType example_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -8147,11 +8233,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class NameType {
+	enum class Name_Type {
+		Unknown,
 		fhir_url,
 		Reference
 	};
-	NameType name_type;
+	Name_Type name_type_type;
 
 	union {
 		fhir_url valueUrl;
@@ -8213,11 +8300,12 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	Reference *reference;
-	enum class ExampleType {
+	enum class ExampType {
+		Unknown,
 		fhir_boolean,
 		fhir_canonical
 	};
-	ExampleType example_type;
+	ExampType example_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -8456,11 +8544,12 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	fhir_positiveInt sequence;
-	enum class ChargeItemType {
+	enum class ChargType {
+		Unknown,
 		Reference,
 		CodeableConcept
 	};
-	ChargeItemType chargeItem_type;
+	ChargType chargeItem_type_type;
 
 	union {
 		Reference* valueReference;
@@ -8507,11 +8596,12 @@ public:
 	fhir_code status;
 	fhir_boolean experimental;
 	CodeableConcept *type;
-	enum class SubjectType {
+	enum class SubjeType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	SubjectType subject_type;
+	SubjeType subject_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -8713,11 +8803,12 @@ public:
 	fhir_string subtitle;
 	fhir_code status;
 	fhir_boolean experimental;
-	enum class SubjectType {
+	enum class SubjeType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	SubjectType subject_type;
+	SubjeType subject_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -8971,11 +9062,12 @@ public:
 	CodeableConcept *view;
 	Reference *subject;
 	Reference *encounter;
-	enum class CreatedType {
+	enum class CreatType {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	CreatedType created_type;
+	CreatType created_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -9030,11 +9122,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class ItemType {
+	enum class Item_Type {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	ItemType item_type;
+	Item_Type item_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -9079,11 +9172,12 @@ public:
 	U64 statusReason_count;
 	CodeableConcept *statusReason;
 	CodeableConcept *category;
-	enum class MedicationType {
+	enum class MedicType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	MedicationType medication_type;
+	MedicType medication_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -9094,11 +9188,12 @@ public:
 	Reference *context;
 	U64 supportingInformation_count;
 	Reference *supportingInformation;
-	enum class EffectiveType {
+	enum class EffecType {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	EffectiveType effective_type;
+	EffecType effective_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -9144,11 +9239,12 @@ public:
 	CodeableConcept *route;
 	CodeableConcept *method;
 	Quantity *dose;
-	enum class RateType {
+	enum class Rate_Type {
+		Unknown,
 		Ratio,
 		Quantity
 	};
-	RateType rate_type;
+	Rate_Type rate_type_type;
 
 	union {
 		Ratio* valueRatio;
@@ -9175,11 +9271,12 @@ public:
 	U64 partOf_count;
 	Reference *partOf;
 	fhir_code status;
-	enum class StatusReasonType {
+	enum class StatuType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	StatusReasonType statusReason_type;
+	StatuType statusReason_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -9187,11 +9284,12 @@ public:
 	} statusReason;
 
 	CodeableConcept *category;
-	enum class MedicationType {
+	enum class MedicType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	MedicationType medication_type;
+	MedicType medication_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -9334,11 +9432,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class ItemType {
+	enum class Item_Type {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	ItemType item_type;
+	Item_Type item_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -9381,11 +9480,12 @@ public:
 	Extension *modifierExtension;
 	U64 dosage_count;
 	MedicationKnowledge_AdministrationGuidelines_Dosage *dosage;
-	enum class IndicationType {
+	enum class IndicType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	IndicationType indication_type;
+	IndicType indication_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -9415,11 +9515,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class CharacteristicType {
+	enum class CharaType {
+		Unknown,
 		CodeableConcept,
 		Quantity
 	};
-	CharacteristicType characteristic_type;
+	CharaType characteristic_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -9462,12 +9563,13 @@ public:
 	Extension *modifierExtension;
 	CodeableConcept *type;
 	enum class ValueType {
+		Unknown,
 		CodeableConcept,
 		fhir_string,
 		Quantity,
 		fhir_base64Binary
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -9561,22 +9663,24 @@ public:
 	CodeableConcept *category;
 	fhir_code priority;
 	fhir_boolean doNotPerform;
-	enum class ReportedType {
+	enum class ReporType {
+		Unknown,
 		fhir_boolean,
 		Reference
 	};
-	ReportedType reported_type;
+	ReporType reported_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
 		Reference* valueReference;
 	} reported;
 
-	enum class MedicationType {
+	enum class MedicType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	MedicationType medication_type;
+	MedicType medication_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -9653,11 +9757,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class AllowedType {
+	enum class AllowType {
+		Unknown,
 		fhir_boolean,
 		CodeableConcept
 	};
-	AllowedType allowed_type;
+	AllowType allowed_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -9690,11 +9795,12 @@ public:
 	U64 statusReason_count;
 	CodeableConcept *statusReason;
 	CodeableConcept *category;
-	enum class MedicationType {
+	enum class MedicType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	MedicationType medication_type;
+	MedicType medication_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -9703,11 +9809,12 @@ public:
 
 	Reference *subject;
 	Reference *context;
-	enum class EffectiveType {
+	enum class EffecType {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	EffectiveType effective_type;
+	EffecType effective_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -9841,11 +9948,12 @@ public:
 	Identifier *identifier;
 	CodeableConcept *type;
 	CodeableConcept *intendedUse;
-	enum class IndicationType {
+	enum class IndicType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	IndicationType indication_type;
+	IndicType indication_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -9917,11 +10025,12 @@ public:
 	Extension *modifierExtension;
 	Identifier *identifier;
 	CodeableConcept *type;
-	enum class DateType {
+	enum class Date_Type {
+		Unknown,
 		Period,
 		fhir_dateTime
 	};
-	DateType date_type;
+	Date_Type date_type_type;
 
 	union {
 		Period* valuePeriod;
@@ -9967,11 +10076,12 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	CodeableConcept *therapyRelationshipType;
-	enum class MedicationType {
+	enum class MedicType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	MedicationType medication_type;
+	MedicType medication_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -10017,11 +10127,12 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	CodeableConcept *therapyRelationshipType;
-	enum class MedicationType {
+	enum class MedicType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	MedicationType medication_type;
+	MedicType medication_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -10143,11 +10254,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class ItemType {
+	enum class Item_Type {
+		Unknown,
 		Reference,
 		CodeableConcept
 	};
-	ItemType item_type;
+	Item_Type item_type_type;
 
 	union {
 		Reference* valueReference;
@@ -10391,10 +10503,11 @@ public:
 	U64 parent_count;
 	fhir_canonical *parent;
 	enum class EventType {
+		Unknown,
 		Coding,
 		fhir_uri
 	};
-	EventType event_type;
+	EventType event_type_type;
 
 	union {
 		Coding* valueCoding;
@@ -10449,10 +10562,11 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	enum class EventType {
+		Unknown,
 		Coding,
 		fhir_uri
 	};
-	EventType event_type;
+	EventType event_type_type;
 
 	union {
 		Coding* valueCoding;
@@ -10852,11 +10966,12 @@ public:
 	Extension *modifierExtension;
 	Timing *schedule;
 	Quantity *quantity;
-	enum class RateType {
+	enum class Rate_Type {
+		Unknown,
 		Quantity,
 		Ratio
 	};
-	RateType rate_type;
+	Rate_Type rate_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -10892,13 +11007,14 @@ public:
 	U64 focus_count;
 	Reference *focus;
 	Reference *encounter;
-	enum class EffectiveType {
+	enum class EffecType {
+		Unknown,
 		fhir_dateTime,
 		Period,
 		Timing,
 		fhir_instant
 	};
-	EffectiveType effective_type;
+	EffecType effective_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -10911,6 +11027,7 @@ public:
 	U64 performer_count;
 	Reference *performer;
 	enum class ValueType {
+		Unknown,
 		Quantity,
 		CodeableConcept,
 		fhir_string,
@@ -10923,7 +11040,7 @@ public:
 		fhir_dateTime,
 		Period
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -10983,6 +11100,7 @@ public:
 	Extension *modifierExtension;
 	CodeableConcept *code;
 	enum class ValueType {
+		Unknown,
 		Quantity,
 		CodeableConcept,
 		fhir_string,
@@ -10995,7 +11113,7 @@ public:
 		fhir_dateTime,
 		Period
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -11319,6 +11437,7 @@ public:
 	Extension *modifierExtension;
 	fhir_string name;
 	enum class ValueType {
+		Unknown,
 		fhir_base64Binary,
 		fhir_boolean,
 		fhir_canonical,
@@ -11370,7 +11489,7 @@ public:
 		Dosage,
 		Meta
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_base64Binary valueBase64Binary;
@@ -11452,11 +11571,12 @@ public:
 	ContactPoint *telecom;
 	fhir_code gender;
 	fhir_date birthDate;
-	enum class DeceasedType {
+	enum class DeceaType {
+		Unknown,
 		fhir_boolean,
 		fhir_dateTime
 	};
-	DeceasedType deceased_type;
+	DeceaType deceased_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -11466,11 +11586,12 @@ public:
 	U64 address_count;
 	Address *address;
 	CodeableConcept *maritalStatus;
-	enum class MultipleBirthType {
+	enum class MultiType {
+		Unknown,
 		fhir_boolean,
 		Integer
 	};
-	MultipleBirthType multipleBirth_type;
+	MultiType multipleBirth_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -11685,11 +11806,12 @@ public:
 	CodeableConcept *type;
 	fhir_code status;
 	fhir_boolean experimental;
-	enum class SubjectType {
+	enum class SubjeType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	SubjectType subject_type;
+	SubjeType subject_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -11758,12 +11880,13 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	CodeableConcept *measure;
-	enum class DetailType {
+	enum class DetaiType {
+		Unknown,
 		Quantity,
 		Range,
 		CodeableConcept
 	};
-	DetailType detail_type;
+	DetaiType detail_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -11794,11 +11917,12 @@ public:
 	RelatedArtifact *documentation;
 	U64 goalId_count;
 	fhir_id *goalId;
-	enum class SubjectType {
+	enum class SubjeType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	SubjectType subject_type;
+	SubjeType subject_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -11815,7 +11939,8 @@ public:
 	DataRequirement *output;
 	U64 relatedAction_count;
 	PlanDefinition_Action_RelatedAction *relatedAction;
-	enum class TimingType {
+	enum class TiminType {
+		Unknown,
 		fhir_dateTime,
 		Age,
 		Period,
@@ -11823,7 +11948,7 @@ public:
 		Range,
 		Timing
 	};
-	TimingType timing_type;
+	TiminType timing_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -11842,11 +11967,12 @@ public:
 	fhir_code requiredBehavior;
 	fhir_code precheckBehavior;
 	fhir_code cardinalityBehavior;
-	enum class DefinitionType {
+	enum class DefinType {
+		Unknown,
 		fhir_canonical,
 		fhir_uri
 	};
-	DefinitionType definition_type;
+	DefinType definition_type_type;
 
 	union {
 		fhir_canonical valueCanonical;
@@ -11880,11 +12006,12 @@ public:
 	Extension *modifierExtension;
 	fhir_id actionId;
 	fhir_code relationship;
-	enum class OffsetType {
+	enum class OffseType {
+		Unknown,
 		Duration,
 		Range
 	};
-	OffsetType offset_type;
+	OffseType offset_type_type;
 
 	union {
 		Duration* valueDuration;
@@ -12053,14 +12180,15 @@ public:
 	CodeableConcept *code;
 	Reference *subject;
 	Reference *encounter;
-	enum class PerformedType {
+	enum class PerfoType {
+		Unknown,
 		fhir_dateTime,
 		Period,
 		fhir_string,
 		Age,
 		Range
 	};
-	PerformedType performed_type;
+	PerfoType performed_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -12138,11 +12266,12 @@ public:
 	Extension *modifierExtension;
 	U64 target_count;
 	Reference *target;
-	enum class OccurredType {
+	enum class OccurType {
+		Unknown,
 		Period,
 		fhir_dateTime
 	};
-	OccurredType occurred_type;
+	OccurType occurred_type_type;
 
 	union {
 		Period* valuePeriod;
@@ -12275,7 +12404,8 @@ public:
 	Extension *modifierExtension;
 	fhir_string question;
 	fhir_code operator_;
-	enum class AnswerType {
+	enum class AnsweType {
+		Unknown,
 		fhir_boolean,
 		fhir_decimal,
 		Integer,
@@ -12287,7 +12417,7 @@ public:
 		Quantity,
 		Reference
 	};
-	AnswerType answer_type;
+	AnsweType answer_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -12312,6 +12442,7 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	enum class ValueType {
+		Unknown,
 		Integer,
 		fhir_date,
 		fhir_time,
@@ -12319,7 +12450,7 @@ public:
 		Coding,
 		Reference
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		Integer* valueInteger;
@@ -12341,6 +12472,7 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	enum class ValueType {
+		Unknown,
 		fhir_boolean,
 		fhir_decimal,
 		Integer,
@@ -12354,7 +12486,7 @@ public:
 		Quantity,
 		Reference
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -12426,6 +12558,7 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	enum class ValueType {
+		Unknown,
 		fhir_boolean,
 		fhir_decimal,
 		Integer,
@@ -12439,7 +12572,7 @@ public:
 		Quantity,
 		Reference
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -12567,7 +12700,8 @@ public:
 	RequestGroup_Action_Condition *condition;
 	U64 relatedAction_count;
 	RequestGroup_Action_RelatedAction *relatedAction;
-	enum class TimingType {
+	enum class TiminType {
+		Unknown,
 		fhir_dateTime,
 		Age,
 		Period,
@@ -12575,7 +12709,7 @@ public:
 		Range,
 		Timing
 	};
-	TimingType timing_type;
+	TiminType timing_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -12619,11 +12753,12 @@ public:
 	Extension *modifierExtension;
 	fhir_id actionId;
 	fhir_code relationship;
-	enum class OffsetType {
+	enum class OffseType {
+		Unknown,
 		Duration,
 		Range
 	};
-	OffsetType offset_type;
+	OffseType offset_type_type;
 
 	union {
 		Duration* valueDuration;
@@ -12655,11 +12790,12 @@ public:
 	fhir_string subtitle;
 	fhir_code status;
 	fhir_boolean experimental;
-	enum class SubjectType {
+	enum class SubjeType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	SubjectType subject_type;
+	SubjeType subject_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -12726,11 +12862,12 @@ public:
 	fhir_string subtitle;
 	fhir_code status;
 	fhir_boolean experimental;
-	enum class SubjectType {
+	enum class SubjeType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	SubjectType subject_type;
+	SubjeType subject_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -12781,13 +12918,14 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class DefinitionType {
+	enum class DefinType {
+		Unknown,
 		CodeableConcept,
 		fhir_canonical,
 		Expression,
 		DataRequirement
 	};
-	DefinitionType definition_type;
+	DefinType definition_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -12801,13 +12939,14 @@ public:
 	fhir_boolean exclude;
 	CodeableConcept *unitOfMeasure;
 	fhir_string studyEffectiveDescription;
-	enum class StudyEffectiveType {
+	enum class StudyType {
+		Unknown,
 		fhir_dateTime,
 		Period,
 		Duration,
 		Timing
 	};
-	StudyEffectiveType studyEffective_type;
+	StudyType studyEffective_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -12819,13 +12958,14 @@ public:
 	Duration *studyEffectiveTimeFromStart;
 	fhir_code studyEffectiveGroupMeasure;
 	fhir_string participantEffectiveDescription;
-	enum class ParticipantEffectiveType {
+	enum class PartiType {
+		Unknown,
 		fhir_dateTime,
 		Period,
 		Duration,
 		Timing
 	};
-	ParticipantEffectiveType participantEffective_type;
+	PartiType participantEffective_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -12961,11 +13101,12 @@ public:
 	CodeableConcept *code;
 	Reference *subject;
 	Reference *encounter;
-	enum class OccurrenceType {
+	enum class OccurType {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	OccurrenceType occurrence_type;
+	OccurType occurrence_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -12995,11 +13136,12 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	CodeableConcept *outcome;
-	enum class ProbabilityType {
+	enum class ProbaType {
+		Unknown,
 		fhir_decimal,
 		Range
 	};
-	ProbabilityType probability_type;
+	ProbaType probability_type_type;
 
 	union {
 		fhir_decimal valueDecimal;
@@ -13008,11 +13150,12 @@ public:
 
 	CodeableConcept *qualitativeRisk;
 	fhir_decimal relativeRisk;
-	enum class WhenType {
+	enum class When_Type {
+		Unknown,
 		Period,
 		Range
 	};
-	WhenType when_type;
+	When_Type when_type_type;
 
 	union {
 		Period* valuePeriod;
@@ -13273,12 +13416,13 @@ public:
 	CodeableConcept *code;
 	U64 orderDetail_count;
 	CodeableConcept *orderDetail;
-	enum class QuantityType {
+	enum class QuantType {
+		Unknown,
 		Quantity,
 		Ratio,
 		Range
 	};
-	QuantityType quantity_type;
+	QuantType quantity_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -13288,12 +13432,13 @@ public:
 
 	Reference *subject;
 	Reference *encounter;
-	enum class OccurrenceType {
+	enum class OccurType {
+		Unknown,
 		fhir_dateTime,
 		Period,
 		Timing
 	};
-	OccurrenceType occurrence_type;
+	OccurType occurrence_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -13301,11 +13446,12 @@ public:
 		Timing* valueTiming;
 	} occurrence;
 
-	enum class AsNeededType {
+	enum class AsNeeType {
+		Unknown,
 		fhir_boolean,
 		CodeableConcept
 	};
-	AsNeededType asNeeded_type;
+	AsNeeType asNeeded_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -13413,11 +13559,12 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	Reference *collector;
-	enum class CollectedType {
+	enum class ColleType {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	CollectedType collected_type;
+	ColleType collected_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -13428,11 +13575,12 @@ public:
 	Quantity *quantity;
 	CodeableConcept *method;
 	CodeableConcept *bodySite;
-	enum class FastingStatusType {
+	enum class FastiType {
+		Unknown,
 		CodeableConcept,
 		Duration
 	};
-	FastingStatusType fastingStatus_type;
+	FastiType fastingStatus_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -13452,11 +13600,12 @@ public:
 	CodeableConcept *procedure;
 	U64 additive_count;
 	Reference *additive;
-	enum class TimeType {
+	enum class Time_Type {
+		Unknown,
 		fhir_dateTime,
 		Period
 	};
-	TimeType time_type;
+	Time_Type time_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -13478,11 +13627,12 @@ public:
 	CodeableConcept *type;
 	Quantity *capacity;
 	Quantity *specimenQuantity;
-	enum class AdditiveType {
+	enum class AdditType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	AdditiveType additive_type;
+	AdditType additive_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -13546,11 +13696,12 @@ public:
 	CodeableConcept *cap;
 	fhir_string description;
 	Quantity *capacity;
-	enum class MinimumVolumeType {
+	enum class MinimType {
+		Unknown,
 		Quantity,
 		fhir_string
 	};
-	MinimumVolumeType minimumVolume_type;
+	MinimType minimumVolume_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -13569,11 +13720,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class AdditiveType {
+	enum class AdditType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	AdditiveType additive_type;
+	AdditType additive_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -13804,7 +13956,8 @@ public:
 	Integer *min;
 	fhir_string max;
 	fhir_string type;
-	enum class DefaultValueType {
+	enum class DefauType {
+		Unknown,
 		fhir_base64Binary,
 		fhir_boolean,
 		fhir_canonical,
@@ -13856,7 +14009,7 @@ public:
 		Dosage,
 		Meta
 	};
-	DefaultValueType defaultValue_type;
+	DefauType defaultValue_type_type;
 
 	union {
 		fhir_base64Binary valueBase64Binary;
@@ -13946,13 +14099,14 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	enum class ValueType {
+		Unknown,
 		fhir_id,
 		fhir_string,
 		fhir_boolean,
 		Integer,
 		fhir_decimal
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_id valueId;
@@ -14059,11 +14213,12 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	Ratio *quantity;
-	enum class SubstanceType {
+	enum class SubstType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	SubstanceType substance_type;
+	SubstType substance_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -14355,12 +14510,13 @@ public:
 	CodeableConcept *interaction;
 	CodeableConcept *organism;
 	CodeableConcept *organismType;
-	enum class AmountType {
+	enum class AmounType {
+		Unknown,
 		Quantity,
 		Range,
 		fhir_string
 	};
-	AmountType amount_type;
+	AmounType amount_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -14539,11 +14695,12 @@ public:
 	CodeableConcept *stereochemistry;
 	CodeableConcept *opticalActivity;
 	fhir_string molecularFormula;
-	enum class AmountType {
+	enum class AmounType {
+		Unknown,
 		Quantity,
 		fhir_string
 	};
-	AmountType amount_type;
+	AmounType amount_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -14562,22 +14719,24 @@ public:
 	CodeableConcept *category;
 	CodeableConcept *code;
 	fhir_string parameters;
-	enum class DefiningSubstanceType {
+	enum class DefinType {
+		Unknown,
 		Reference,
 		CodeableConcept
 	};
-	DefiningSubstanceType definingSubstance_type;
+	DefinType definingSubstance_type_type;
 
 	union {
 		Reference* valueReference;
 		CodeableConcept* valueCodeableConcept;
 	} definingSubstance;
 
-	enum class AmountType {
+	enum class AmounType {
+		Unknown,
 		Quantity,
 		fhir_string
 	};
-	AmountType amount_type;
+	AmounType amount_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -14705,11 +14864,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class SubstanceType {
+	enum class SubstType {
+		Unknown,
 		Reference,
 		CodeableConcept
 	};
-	SubstanceType substance_type;
+	SubstType substance_type_type;
 
 	union {
 		Reference* valueReference;
@@ -14718,13 +14878,14 @@ public:
 
 	CodeableConcept *relationship;
 	fhir_boolean isDefining;
-	enum class AmountType {
+	enum class AmounType {
+		Unknown,
 		Quantity,
 		Range,
 		Ratio,
 		fhir_string
 	};
-	AmountType amount_type;
+	AmounType amount_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -14762,12 +14923,13 @@ public:
 	Reference *patient;
 	CodeableConcept *type;
 	SupplyDelivery_SuppliedItem *suppliedItem;
-	enum class OccurrenceType {
+	enum class OccurType {
+		Unknown,
 		fhir_dateTime,
 		Period,
 		Timing
 	};
-	OccurrenceType occurrence_type;
+	OccurType occurrence_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -14789,11 +14951,12 @@ public:
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
 	Quantity *quantity;
-	enum class ItemType {
+	enum class Item_Type {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	ItemType item_type;
+	Item_Type item_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -14820,11 +14983,12 @@ public:
 	fhir_code status;
 	CodeableConcept *category;
 	fhir_code priority;
-	enum class ItemType {
+	enum class Item_Type {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	ItemType item_type;
+	Item_Type item_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -14834,12 +14998,13 @@ public:
 	Quantity *quantity;
 	U64 parameter_count;
 	SupplyRequest_Parameter *parameter;
-	enum class OccurrenceType {
+	enum class OccurType {
+		Unknown,
 		fhir_dateTime,
 		Period,
 		Timing
 	};
-	OccurrenceType occurrence_type;
+	OccurType occurrence_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -14868,12 +15033,13 @@ public:
 	Extension *modifierExtension;
 	CodeableConcept *code;
 	enum class ValueType {
+		Unknown,
 		CodeableConcept,
 		Quantity,
 		Range,
 		fhir_boolean
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -14961,6 +15127,7 @@ public:
 	Extension *modifierExtension;
 	CodeableConcept *type;
 	enum class ValueType {
+		Unknown,
 		fhir_base64Binary,
 		fhir_boolean,
 		fhir_canonical,
@@ -15012,7 +15179,7 @@ public:
 		Dosage,
 		Meta
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_base64Binary valueBase64Binary;
@@ -15078,6 +15245,7 @@ public:
 	Extension *modifierExtension;
 	CodeableConcept *type;
 	enum class ValueType {
+		Unknown,
 		fhir_base64Binary,
 		fhir_boolean,
 		fhir_canonical,
@@ -15129,7 +15297,7 @@ public:
 		Dosage,
 		Meta
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_base64Binary valueBase64Binary;
@@ -15891,6 +16059,7 @@ public:
 	Extension *modifierExtension;
 	fhir_string name;
 	enum class ValueType {
+		Unknown,
 		fhir_string,
 		fhir_boolean,
 		Integer,
@@ -15899,7 +16068,7 @@ public:
 		fhir_code,
 		fhir_dateTime
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_string valueString;
@@ -16171,11 +16340,12 @@ public:
 	fhir_string id;
 	U64 extension_count;
 	Extension *extension;
-	enum class AuthorType {
+	enum class AuthoType {
+		Unknown,
 		Reference,
 		fhir_string
 	};
-	AuthorType author_type;
+	AuthoType author_type_type;
 
 	union {
 		Reference* valueReference;
@@ -16276,11 +16446,12 @@ public:
 	fhir_code type;
 	U64 profile_count;
 	fhir_canonical *profile;
-	enum class SubjectType {
+	enum class SubjeType {
+		Unknown,
 		CodeableConcept,
 		Reference
 	};
-	SubjectType subject_type;
+	SubjeType subject_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -16318,11 +16489,12 @@ public:
 	fhir_string path;
 	fhir_string searchParam;
 	enum class ValueType {
+		Unknown,
 		fhir_dateTime,
 		Period,
 		Duration
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_dateTime valueDateTime;
@@ -16366,11 +16538,12 @@ public:
 	CodeableConcept *additionalInstruction;
 	fhir_string patientInstruction;
 	Timing *timing;
-	enum class AsNeededType {
+	enum class AsNeeType {
+		Unknown,
 		fhir_boolean,
 		CodeableConcept
 	};
-	AsNeededType asNeeded_type;
+	AsNeeType asNeeded_type_type;
 
 	union {
 		fhir_boolean valueBoolean;
@@ -16393,23 +16566,25 @@ public:
 	U64 extension_count;
 	Extension *extension;
 	CodeableConcept *type;
-	enum class DoseType {
+	enum class Dose_Type {
+		Unknown,
 		Range,
 		Quantity
 	};
-	DoseType dose_type;
+	Dose_Type dose_type_type;
 
 	union {
 		Range* valueRange;
 		Quantity* valueQuantity;
 	} dose;
 
-	enum class RateType {
+	enum class Rate_Type {
+		Unknown,
 		Ratio,
 		Range,
 		Quantity
 	};
-	RateType rate_type;
+	Rate_Type rate_type_type;
 
 	union {
 		Ratio* valueRatio;
@@ -16459,7 +16634,8 @@ public:
 	fhir_uri contentReference;
 	U64 type_count;
 	ElementDefinition_Type *type;
-	enum class DefaultValueType {
+	enum class DefauType {
+		Unknown,
 		fhir_base64Binary,
 		fhir_boolean,
 		fhir_canonical,
@@ -16511,7 +16687,7 @@ public:
 		Dosage,
 		Meta
 	};
-	DefaultValueType defaultValue_type;
+	DefauType defaultValue_type_type;
 
 	union {
 		fhir_base64Binary valueBase64Binary;
@@ -16569,6 +16745,7 @@ public:
 	fhir_markdown meaningWhenMissing;
 	fhir_string orderMeaning;
 	enum class FixedType {
+		Unknown,
 		fhir_base64Binary,
 		fhir_boolean,
 		fhir_canonical,
@@ -16620,7 +16797,7 @@ public:
 		Dosage,
 		Meta
 	};
-	FixedType fixed_type;
+	FixedType fixed_type_type;
 
 	union {
 		fhir_base64Binary valueBase64Binary;
@@ -16675,7 +16852,8 @@ public:
 		Meta* valueMeta;
 	} fixed;
 
-	enum class PatternType {
+	enum class PatteType {
+		Unknown,
 		fhir_base64Binary,
 		fhir_boolean,
 		fhir_canonical,
@@ -16727,7 +16905,7 @@ public:
 		Dosage,
 		Meta
 	};
-	PatternType pattern_type;
+	PatteType pattern_type_type;
 
 	union {
 		fhir_base64Binary valueBase64Binary;
@@ -16784,7 +16962,8 @@ public:
 
 	U64 example_count;
 	ElementDefinition_Example *example;
-	enum class MinValueType {
+	enum class MinVaType {
+		Unknown,
 		fhir_date,
 		fhir_dateTime,
 		fhir_instant,
@@ -16795,7 +16974,7 @@ public:
 		fhir_unsignedInt,
 		Quantity
 	};
-	MinValueType minValue_type;
+	MinVaType minValue_type_type;
 
 	union {
 		fhir_date valueDate;
@@ -16809,7 +16988,8 @@ public:
 		Quantity* valueQuantity;
 	} minValue;
 
-	enum class MaxValueType {
+	enum class MaxVaType {
+		Unknown,
 		fhir_date,
 		fhir_dateTime,
 		fhir_instant,
@@ -16820,7 +17000,7 @@ public:
 		fhir_unsignedInt,
 		Quantity
 	};
-	MaxValueType maxValue_type;
+	MaxVaType maxValue_type_type;
 
 	union {
 		fhir_date valueDate;
@@ -16901,6 +17081,7 @@ public:
 	Extension *extension;
 	fhir_string label;
 	enum class ValueType {
+		Unknown,
 		fhir_base64Binary,
 		fhir_boolean,
 		fhir_canonical,
@@ -16952,7 +17133,7 @@ public:
 		Dosage,
 		Meta
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_base64Binary valueBase64Binary;
@@ -17063,6 +17244,7 @@ public:
 	Extension *extension;
 	fhir_string url;
 	enum class ValueType {
+		Unknown,
 		fhir_base64Binary,
 		fhir_boolean,
 		fhir_canonical,
@@ -17114,7 +17296,7 @@ public:
 		Dosage,
 		Meta
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		fhir_base64Binary valueBase64Binary;
@@ -17279,11 +17461,12 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class AgeType {
+	enum class Age_tType {
+		Unknown,
 		Range,
 		CodeableConcept
 	};
-	AgeType age_type;
+	Age_tType age_type_type;
 
 	union {
 		Range* valueRange;
@@ -17423,12 +17606,13 @@ public:
 	Extension *extension;
 	U64 modifierExtension_count;
 	Extension *modifierExtension;
-	enum class AmountType {
+	enum class AmounType {
+		Unknown,
 		Quantity,
 		Range,
 		fhir_string
 	};
-	AmountType amount_type;
+	AmounType amount_type_type;
 
 	union {
 		Quantity* valueQuantity;
@@ -17468,12 +17652,13 @@ public:
 	fhir_string id;
 	U64 extension_count;
 	Extension *extension;
-	enum class BoundsType {
+	enum class BoundType {
+		Unknown,
 		Duration,
 		Range,
 		Period
 	};
-	BoundsType bounds_type;
+	BoundType bounds_type_type;
 
 	union {
 		Duration* valueDuration;
@@ -17507,13 +17692,14 @@ public:
 	Extension *extension;
 	fhir_code type;
 	fhir_string name;
-	enum class TimingType {
+	enum class TiminType {
+		Unknown,
 		Timing,
 		Reference,
 		fhir_date,
 		fhir_dateTime
 	};
-	TimingType timing_type;
+	TiminType timing_type_type;
 
 	union {
 		Timing* valueTiming;
@@ -17534,12 +17720,13 @@ public:
 	Extension *extension;
 	Coding *code;
 	enum class ValueType {
+		Unknown,
 		CodeableConcept,
 		Quantity,
 		Range,
 		Reference
 	};
-	ValueType value_type;
+	ValueType value_type_type;
 
 	union {
 		CodeableConcept* valueCodeableConcept;
@@ -17733,3 +17920,4 @@ class Ehrsrle_provenance : Provenance {
 public: 
 	ResourceType resourceType;
 };
+}

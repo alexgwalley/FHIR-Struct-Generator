@@ -16,7 +16,7 @@
 #include "resource.cc"
 #include "fhir_class.cc"
 #include "metadata.cc"
-#include "manual_deserialization.cc"
+//#include "manual_deserialization.cc"
 #include "cJSON.c"
 #include "arena_struct_exporter.cc"
 
@@ -106,7 +106,7 @@ TypedefFromValueType(Arena *arena, StringValueTypePair svtp, ClassDefinitionList
 	switch (svtp.type)
 	{
 		case ValueType::Boolean:
-			return PushStr8F(arena, "typedef boolean %.*s;\n",
+			return PushStr8F(arena, "typedef int %.*s;\n",
 			                 svtp.str.size, svtp.str.str);
 		case ValueType::PositiveInt:
 		case ValueType::UnsignedInt:
@@ -226,6 +226,9 @@ OutputClassDefinitions(Arena *arena, String8 file_name, ClassDefinitionList *lis
 	fopen_s(&f, (char*)file_name.str, "w");
 	Assert(f);
 
+	String8 _namespace = Str8Lit("namespace fhir_r4 {\n");
+	fwrite(_namespace.str, _namespace.size, 1, f);
+
 	String8 primative_types = OutputBaseTypes(arena, list);
 	String8List completed = { 0 };
 	fwrite(primative_types.str, primative_types.size, 1, f);
@@ -249,6 +252,10 @@ OutputClassDefinitions(Arena *arena, String8 file_name, ClassDefinitionList *lis
 		node = node->next;
 	}
 
+
+	String8 close_namespace = Str8Lit("}\n");
+	fwrite(close_namespace.str, close_namespace.size, 1, f);
+
 	fflush(f);
 	fclose(f);
 	ScratchEnd(scratch);
@@ -267,13 +274,21 @@ OutputClassMetadata(Arena *arena, String8 file_name, ClassDefinitionList *list)
 	Str8ListPushF(scratch.arena, &result_list, "ClassMetadata class_metadata[] =\n");
 	Str8ListPushF(scratch.arena, &result_list, "{\n");
 
+	ClassDefinition zeroed = { 0 };
+	zeroed.name = Str8Lit("Unknown");
+	ClassMetadata *meta = ClassMetadataFromClassDefinition(scratch.arena, &zeroed);
+	String8 str = SerializeClassMetadata(scratch.arena, meta);
+	Str8ListPushF(scratch.arena, &result_list, "%.*s,",
+				str.size, str.str);
+
 	for (ClassDefinitionNode *node = list->first;
 		node;
 		node = node->next)
 	{
 		ClassMetadata *meta = ClassMetadataFromClassDefinition(scratch.arena, &node->def);
 		String8 str = SerializeClassMetadata(scratch.arena, meta);
-		Str8ListPush(scratch.arena, &result_list, str);
+		Str8ListPushF(scratch.arena, &result_list, "%.*s,",
+		              str.size, str.str);
 	}
 
 
@@ -286,107 +301,6 @@ OutputClassMetadata(Arena *arena, String8 file_name, ClassDefinitionList *list)
 	ScratchEnd(scratch);
 }
 
-void
-OutputClassDefinitionDeserialization(Arena *arena,
-                                     String8 header_file_name,
-                                     String8 cc_file_name,
-                                     ClassDefinitionList *list)
-{
-
-#if 0
-	Temp scratch = ScratchBegin(&arena, 1);
-	FILE *f;
-	fopen_s(&f, (char*)cc_file_name.str, "w");
-	Assert(f);
-
-	DeserializationOptions opts = { 0 };
-	opts.flags = (int)DeserializationFlag::USE_STRING8 |
-				 (int)DeserializationFlag::USE_CJSON;
-	
-	String8 type_from_string_table = DeserializationResourceTypeFromString8Table(scratch.arena, opts, list);
-	fwrite(type_from_string_table.str, type_from_string_table.size, 1, f);
-
-	String8 type_from_string = DeserializationResourceTypeFromString8(scratch.arena, opts);
-	fwrite(type_from_string.str, type_from_string.size, 1, f);
-
-	FILE *header_file;
-	fopen_s(&header_file, (char*)header_file_name.str, "w");
-	Assert(header_file);
-
-	String8 define_header = Str8Lit("#ifndef FHIR_DESERIALIZATION_H\n"
-	                                "#define FHIR_DESERIALIZATION_H\n");
-	fwrite(define_header.str, define_header.size, 1, header_file);
-
-	ClassDefinitionNode *node = list->first;
-	for (int i = 0; i < list->count; i++)
-	{
-		String8 des = DeserializationCodeFrom(scratch.arena, opts, &node->def, list);
-		fwrite(des.str, des.size, 1, f);
-		String8 header = DeserializationCodeHeaderFrom(scratch.arena, opts, &node->def);
-		fwrite(header.str, header.size, 1, header_file);
-		node = node->next;
-	}
-
-
-	String8 end_header = Str8Lit("#endif");
-	fwrite(end_header.str, end_header.size, 1, header_file);
-
-	fflush(f);
-	fclose(f);
-	fflush(header_file);
-	fclose(header_file);
-
-	ScratchEnd(scratch);
-#endif
-}
-
-
-void
-OutputClassDefinitionSerialization(Arena *arena,
-                                     String8 header_file_name,
-                                     String8 cc_file_name,
-                                     ClassDefinitionList *list)
-{
-#if 0
-	Temp scratch = ScratchBegin(&arena, 1);
-	FILE *f;
-	fopen_s(&f, (char*)cc_file_name.str, "w");
-	Assert(f);
-
-	DeserializationOptions opts = { 0 };
-	opts.flags = (int)DeserializationFlag::USE_STRING8 |
-				 (int)DeserializationFlag::USE_CJSON;
-	
-	FILE *header_file;
-	fopen_s(&header_file, (char*)header_file_name.str, "w");
-	Assert(header_file);
-
-	String8 define_header = Str8Lit("#ifndef FHIR_SERIALIZATION_H\n"
-	                                "#define FHIR_SERIALIZATION_H\n");
-	fwrite(define_header.str, define_header.size, 1, header_file);
-
-	ClassDefinitionNode *node = list->first;
-	for (int i = 0; i < list->count; i++)
-	{
-		String8 des = SerializationCodeFrom(scratch.arena, opts, &node->def, list);
-		fwrite(des.str, des.size, 1, f);
-		String8 header = SerializationCodeHeaderFrom(scratch.arena, opts, &node->def);
-		fwrite(header.str, header.size, 1, header_file);
-		node = node->next;
-	}
-
-
-	String8 end_header = Str8Lit("#endif");
-	fwrite(end_header.str, end_header.size, 1, header_file);
-
-	fflush(f);
-	fclose(f);
-	fflush(header_file);
-	fclose(header_file);
-
-	ScratchEnd(scratch);
-#endif
-}
 
 function void
 EntryPoint(CmdLine *cmdln)
@@ -435,14 +349,6 @@ EntryPoint(CmdLine *cmdln)
 	OutputClassMetadata(arena,
 						Str8Lit("fhir_class_metadata.h"),
 						&class_defs);
-	OutputClassDefinitionDeserialization(arena, 
-	                                     Str8Lit("fhir_class_deserialization.h"),
-	                                     Str8Lit("fhir_class_deserialization.cc"),
-	                                     &class_defs);
-	OutputClassDefinitionSerialization(arena, 
-	                                     Str8Lit("fhir_class_serialization.h"),
-	                                     Str8Lit("fhir_class_serialization.cc"),
-	                                     &class_defs);
 
 	// NOTE(alex): should have two options, one using c++ stdlib
 	// another to use arenas/Ryan's system :)

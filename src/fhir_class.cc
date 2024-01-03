@@ -182,7 +182,7 @@ ClassMembersFromResourceMember(Arena *arena, ResourceMember *mem)
 	{
 		// TODO(agw): create multiple members: enum, union
 		ClassMember _enum = { 0 };
-		_enum.name = class_mem.name;
+		_enum.name = EnumMemberNameFromMemberName(arena, class_mem.name);
 		_enum.cardinality = Cardinality::OneToOne;
 		_enum.type = ClassMemberType::Enum;
 		_enum.value_type.types = value_types;

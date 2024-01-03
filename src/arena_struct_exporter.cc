@@ -17,13 +17,29 @@ String8FromValueType(Arena *arena, ValueType type, String8 class_reference_name)
 }
 
 String8
+EnumMemberNameFromMemberName(Arena *arena, String8 member_name)
+{
+	return PushStr8F(arena, "%S_type", member_name);
+}
+
+String8
+MemberNameFromEnumMemberName(Arena *arena, String8 enum_member_name)
+{
+	return Str8Chop(enum_member_name, enum_member_name.size - 5);
+}
+
+String8
 EnumNameFromMemberName(Arena *arena, String8 member_name)
 {
+	// TODO(agw): add scratch
+	Temp scratch = ScratchBegin(&arena, 1);
+
 	// member_name will likely have [x] suffix
 	// ex. incoming camelCase[x] => CamelCase
-	String8 result = PushStr8F(arena, "%.*sType", member_name.size, member_name.str);
+	String8 result = PushStr8F(arena, "%SType", MemberNameFromEnumMemberName(scratch.arena, member_name));
 	result.str[0] = CharToUpper(result.str[0]);
 
+	ScratchEnd(scratch);
 	return result;
 }
 
@@ -39,6 +55,8 @@ EnumFromClassMember(Arena *arena, ClassMember *mem)
 	              enum_name.size, enum_name.str);
 
 	ValueTypes types = mem->value_type.types;
+
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("\t\tUnknown,\n"));
 
 	for (int i = 0; i < types.num_types; i++)
 	{
@@ -59,13 +77,13 @@ EnumFromClassMember(Arena *arena, ClassMember *mem)
 
 	Str8ListPushF(scratch.arena, 
 	              &result_list,
-	              "\t};\n",
-	              mem->name.size, mem->name.str);
+	              "\t};\n");
+	String8 enum_member_name = EnumMemberNameFromMemberName(arena, mem->name);
 	Str8ListPushF(scratch.arena,
 	              &result_list,
-	              "\t%.*s %.*s_type;\n",
-	              enum_name.size, enum_name.str,
-	              mem->name.size, mem->name.str);
+	              "\t%S %S;\n",
+	              enum_name,
+	              enum_member_name);
 	String8 result = Str8ListJoin(arena, result_list, 0);
 	ScratchEnd(scratch);
 	return result;
@@ -90,6 +108,15 @@ GetUnionInternalTypeName(Arena *arena, ValueType type, String8 type_name)
 	                 "value%.*s",
 	                 str.size, str.str);
 	ScratchEnd(scratch);
+	return result;
+}
+
+String8
+GetClassNameFromUnionName(Arena* arena, String8 union_name)
+{
+	String8 str = PushStr8Copy(arena, union_name);
+	String8 result = Str8Skip(str, 5);
+	result.str[0] = CharToUpper(result.str[0]);
 	return result;
 }
 
