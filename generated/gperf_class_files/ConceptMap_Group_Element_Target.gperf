@@ -1,0 +1,23 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name ConceptMap_Group_Element_Target_MemberLookup
+%enum
+%define word-array-name word_array_ConceptMap_Group_Element_Target
+%define class-name ConceptMap_Group_Element_Target_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+code, 0x38, 6, -1
+display, 0x48, 7, -1
+equivalence, 0x58, 8, -1
+comment, 0x68, 9, -1
+dependsOn_count, 0x78, 10, -1
+dependsOn, 0x80, 11, -1
+product_count, 0x88, 12, -1
+product, 0x90, 13, -1

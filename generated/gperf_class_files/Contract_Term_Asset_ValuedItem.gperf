@@ -1,0 +1,32 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Contract_Term_Asset_ValuedItem_MemberLookup
+%enum
+%define word-array-name word_array_Contract_Term_Asset_ValuedItem
+%define class-name Contract_Term_Asset_ValuedItem_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+entityCodeableConcept, 0x40, 7, 0
+entityReference, 0x40, 7, 1
+identifier, 0x48, 8, -1
+effectiveTime, 0x50, 9, -1
+quantity, 0x60, 10, -1
+unitPrice, 0x68, 11, -1
+factor, 0x70, 12, -1
+points, 0x78, 13, -1
+net, 0x80, 14, -1
+payment, 0x88, 15, -1
+paymentDate, 0x98, 16, -1
+responsible, 0xa8, 17, -1
+recipient, 0xb0, 18, -1
+linkId_count, 0xb8, 19, -1
+linkId, 0xc0, 20, -1
+securityLabelNumber_count, 0xc8, 21, -1
+securityLabelNumber, 0xd0, 22, -1

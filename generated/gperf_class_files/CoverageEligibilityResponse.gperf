@@ -1,0 +1,41 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name CoverageEligibilityResponse_MemberLookup
+%enum
+%define word-array-name word_array_CoverageEligibilityResponse
+%define class-name CoverageEligibilityResponse_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier_count, 0x78, 12, -1
+identifier, 0x80, 13, -1
+status, 0x88, 14, -1
+purpose_count, 0x98, 15, -1
+purpose, 0xa0, 16, -1
+patient, 0xa8, 17, -1
+servicedDate, 0xb8, 19, 0
+servicedPeriod, 0xb8, 19, 1
+created, 0xc8, 20, -1
+requestor, 0xd8, 21, -1
+request, 0xe0, 22, -1
+outcome, 0xe8, 23, -1
+disposition, 0xf8, 24, -1
+insurer, 0x108, 25, -1
+insurance_count, 0x110, 26, -1
+insurance, 0x118, 27, -1
+preAuthRef, 0x120, 28, -1
+form, 0x130, 29, -1
+error_count, 0x138, 30, -1
+error, 0x140, 31, -1

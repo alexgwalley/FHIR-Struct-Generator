@@ -1,0 +1,37 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name ResearchElementDefinition_Characteristic_MemberLookup
+%enum
+%define word-array-name word_array_ResearchElementDefinition_Characteristic
+%define class-name ResearchElementDefinition_Characteristic_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+definitionCodeableConcept, 0x40, 7, 0
+definitionCanonical, 0x40, 7, 1
+definitionExpression, 0x40, 7, 2
+definitionDataRequirement, 0x40, 7, 3
+usageContext_count, 0x50, 8, -1
+usageContext, 0x58, 9, -1
+exclude, 0x60, 10, -1
+unitOfMeasure, 0x68, 11, -1
+studyEffectiveDescription, 0x70, 12, -1
+studyEffectiveDateTime, 0x88, 14, 0
+studyEffectivePeriod, 0x88, 14, 1
+studyEffectiveDuration, 0x88, 14, 2
+studyEffectiveTiming, 0x88, 14, 3
+studyEffectiveTimeFromStart, 0x98, 15, -1
+studyEffectiveGroupMeasure, 0xa0, 16, -1
+participantEffectiveDescription, 0xb0, 17, -1
+participantEffectiveDateTime, 0xc8, 19, 0
+participantEffectivePeriod, 0xc8, 19, 1
+participantEffectiveDuration, 0xc8, 19, 2
+participantEffectiveTiming, 0xc8, 19, 3
+participantEffectiveTimeFromStart, 0xd8, 20, -1
+participantEffectiveGroupMeasure, 0xe0, 21, -1

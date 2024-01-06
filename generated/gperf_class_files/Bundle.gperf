@@ -1,0 +1,23 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Bundle_MemberLookup
+%enum
+%define word-array-name word_array_Bundle
+%define class-name Bundle_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+identifier, 0x40, 5, -1
+type, 0x48, 6, -1
+timestamp, 0x58, 7, -1
+total, 0x68, 8, -1
+link_count, 0x70, 9, -1
+link, 0x78, 10, -1
+entry_count, 0x80, 11, -1
+entry, 0x88, 12, -1
+signature, 0x90, 13, -1

@@ -1,0 +1,40 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name SubstanceSourceMaterial_MemberLookup
+%enum
+%define word-array-name word_array_SubstanceSourceMaterial
+%define class-name SubstanceSourceMaterial_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+sourceMaterialClass, 0x78, 12, -1
+sourceMaterialType, 0x80, 13, -1
+sourceMaterialState, 0x88, 14, -1
+organismId, 0x90, 15, -1
+organismName, 0x98, 16, -1
+parentSubstanceId_count, 0xa8, 17, -1
+parentSubstanceId, 0xb0, 18, -1
+parentSubstanceName_count, 0xb8, 19, -1
+parentSubstanceName, 0xc0, 20, -1
+countryOfOrigin_count, 0xc8, 21, -1
+countryOfOrigin, 0xd0, 22, -1
+geographicalLocation_count, 0xd8, 23, -1
+geographicalLocation, 0xe0, 24, -1
+developmentStage, 0xe8, 25, -1
+fractionDescription_count, 0xf0, 26, -1
+fractionDescription, 0xf8, 27, -1
+organism, 0x100, 28, -1
+partDescription_count, 0x108, 29, -1
+partDescription, 0x110, 30, -1

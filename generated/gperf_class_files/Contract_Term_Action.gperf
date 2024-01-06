@@ -1,0 +1,51 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Contract_Term_Action_MemberLookup
+%enum
+%define word-array-name word_array_Contract_Term_Action
+%define class-name Contract_Term_Action_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+doNotPerform, 0x38, 6, -1
+type, 0x40, 7, -1
+subject_count, 0x48, 8, -1
+subject, 0x50, 9, -1
+intent, 0x58, 10, -1
+linkId_count, 0x60, 11, -1
+linkId, 0x68, 12, -1
+status, 0x70, 13, -1
+context, 0x78, 14, -1
+contextLinkId_count, 0x80, 15, -1
+contextLinkId, 0x88, 16, -1
+occurrenceDateTime, 0x98, 18, 0
+occurrencePeriod, 0x98, 18, 1
+occurrenceTiming, 0x98, 18, 2
+requester_count, 0xa8, 19, -1
+requester, 0xb0, 20, -1
+requesterLinkId_count, 0xb8, 21, -1
+requesterLinkId, 0xc0, 22, -1
+performerType_count, 0xc8, 23, -1
+performerType, 0xd0, 24, -1
+performerRole, 0xd8, 25, -1
+performer, 0xe0, 26, -1
+performerLinkId_count, 0xe8, 27, -1
+performerLinkId, 0xf0, 28, -1
+reasonCode_count, 0xf8, 29, -1
+reasonCode, 0x100, 30, -1
+reasonReference_count, 0x108, 31, -1
+reasonReference, 0x110, 32, -1
+reason_count, 0x118, 33, -1
+reason, 0x120, 34, -1
+reasonLinkId_count, 0x128, 35, -1
+reasonLinkId, 0x130, 36, -1
+note_count, 0x138, 37, -1
+note, 0x140, 38, -1
+securityLabelNumber_count, 0x148, 39, -1
+securityLabelNumber, 0x150, 40, -1

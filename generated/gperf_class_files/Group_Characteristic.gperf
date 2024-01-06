@@ -1,0 +1,23 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Group_Characteristic_MemberLookup
+%enum
+%define word-array-name word_array_Group_Characteristic
+%define class-name Group_Characteristic_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+code, 0x38, 6, -1
+valueCodeableConcept, 0x48, 8, 0
+valueBoolean, 0x48, 8, 1
+valueQuantity, 0x48, 8, 2
+valueRange, 0x48, 8, 3
+valueReference, 0x48, 8, 4
+exclude, 0x50, 9, -1
+period, 0x58, 10, -1

@@ -1,0 +1,33 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name SubstanceSpecification_Name_MemberLookup
+%enum
+%define word-array-name word_array_SubstanceSpecification_Name
+%define class-name SubstanceSpecification_Name_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+name, 0x38, 6, -1
+type, 0x48, 7, -1
+status, 0x50, 8, -1
+preferred, 0x58, 9, -1
+language_count, 0x60, 10, -1
+language, 0x68, 11, -1
+domain_count, 0x70, 12, -1
+domain, 0x78, 13, -1
+jurisdiction_count, 0x80, 14, -1
+jurisdiction, 0x88, 15, -1
+synonym_count, 0x90, 16, -1
+synonym, 0x98, 17, -1
+translation_count, 0xa0, 18, -1
+translation, 0xa8, 19, -1
+official_count, 0xb0, 20, -1
+official, 0xb8, 21, -1
+source_count, 0xc0, 22, -1
+source, 0xc8, 23, -1

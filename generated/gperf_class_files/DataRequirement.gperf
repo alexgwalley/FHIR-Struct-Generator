@@ -1,0 +1,27 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name DataRequirement_MemberLookup
+%enum
+%define word-array-name word_array_DataRequirement
+%define class-name DataRequirement_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+type, 0x28, 4, -1
+profile_count, 0x38, 5, -1
+profile, 0x40, 6, -1
+subjectCodeableConcept, 0x50, 8, 0
+subjectReference, 0x50, 8, 1
+mustSupport_count, 0x58, 9, -1
+mustSupport, 0x60, 10, -1
+codeFilter_count, 0x68, 11, -1
+codeFilter, 0x70, 12, -1
+dateFilter_count, 0x78, 13, -1
+dateFilter, 0x80, 14, -1
+limit, 0x88, 15, -1
+sort_count, 0x90, 16, -1
+sort, 0x98, 17, -1

@@ -1,0 +1,23 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name HumanName_MemberLookup
+%enum
+%define word-array-name word_array_HumanName
+%define class-name HumanName_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+use, 0x28, 4, -1
+text, 0x38, 5, -1
+family, 0x48, 6, -1
+given_count, 0x58, 7, -1
+given, 0x60, 8, -1
+prefix_count, 0x68, 9, -1
+prefix, 0x70, 10, -1
+suffix_count, 0x78, 11, -1
+suffix, 0x80, 12, -1
+period, 0x88, 13, -1

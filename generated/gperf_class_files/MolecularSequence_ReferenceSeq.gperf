@@ -1,0 +1,24 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name MolecularSequence_ReferenceSeq_MemberLookup
+%enum
+%define word-array-name word_array_MolecularSequence_ReferenceSeq
+%define class-name MolecularSequence_ReferenceSeq_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+chromosome, 0x38, 6, -1
+genomeBuild, 0x40, 7, -1
+orientation, 0x50, 8, -1
+referenceSeqId, 0x60, 9, -1
+referenceSeqPointer, 0x68, 10, -1
+referenceSeqString, 0x70, 11, -1
+strand, 0x80, 12, -1
+windowStart, 0x90, 13, -1
+windowEnd, 0x98, 14, -1

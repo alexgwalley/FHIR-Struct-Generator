@@ -1,0 +1,23 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name MedicinalProductPharmaceutical_RouteOfAdministration_MemberLookup
+%enum
+%define word-array-name word_array_MedicinalProductPharmaceutical_RouteOfAdministration
+%define class-name MedicinalProductPharmaceutical_RouteOfAdministration_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+code, 0x38, 6, -1
+firstDose, 0x40, 7, -1
+maxSingleDose, 0x48, 8, -1
+maxDosePerDay, 0x50, 9, -1
+maxDosePerTreatmentPeriod, 0x58, 10, -1
+maxTreatmentPeriod, 0x60, 11, -1
+targetSpecies_count, 0x68, 12, -1
+targetSpecies, 0x70, 13, -1

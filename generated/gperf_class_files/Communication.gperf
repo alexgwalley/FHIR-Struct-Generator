@@ -1,0 +1,58 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Communication_MemberLookup
+%enum
+%define word-array-name word_array_Communication
+%define class-name Communication_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier_count, 0x78, 12, -1
+identifier, 0x80, 13, -1
+instantiatesCanonical_count, 0x88, 14, -1
+instantiatesCanonical, 0x90, 15, -1
+instantiatesUri_count, 0x98, 16, -1
+instantiatesUri, 0xa0, 17, -1
+basedOn_count, 0xa8, 18, -1
+basedOn, 0xb0, 19, -1
+partOf_count, 0xb8, 20, -1
+partOf, 0xc0, 21, -1
+inResponseTo_count, 0xc8, 22, -1
+inResponseTo, 0xd0, 23, -1
+status, 0xd8, 24, -1
+statusReason, 0xe8, 25, -1
+category_count, 0xf0, 26, -1
+category, 0xf8, 27, -1
+priority, 0x100, 28, -1
+medium_count, 0x110, 29, -1
+medium, 0x118, 30, -1
+subject, 0x120, 31, -1
+topic, 0x128, 32, -1
+about_count, 0x130, 33, -1
+about, 0x138, 34, -1
+encounter, 0x140, 35, -1
+sent, 0x148, 36, -1
+received, 0x158, 37, -1
+recipient_count, 0x168, 38, -1
+recipient, 0x170, 39, -1
+sender, 0x178, 40, -1
+reasonCode_count, 0x180, 41, -1
+reasonCode, 0x188, 42, -1
+reasonReference_count, 0x190, 43, -1
+reasonReference, 0x198, 44, -1
+payload_count, 0x1a0, 45, -1
+payload, 0x1a8, 46, -1
+note_count, 0x1b0, 47, -1
+note, 0x1b8, 48, -1

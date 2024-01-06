@@ -1,0 +1,54 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name CodeSystem_MemberLookup
+%enum
+%define word-array-name word_array_CodeSystem
+%define class-name CodeSystem_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+url, 0x78, 12, -1
+identifier_count, 0x88, 13, -1
+identifier, 0x90, 14, -1
+version, 0x98, 15, -1
+name, 0xa8, 16, -1
+title, 0xb8, 17, -1
+status, 0xc8, 18, -1
+experimental, 0xd8, 19, -1
+date, 0xe0, 20, -1
+publisher, 0xf0, 21, -1
+contact_count, 0x100, 22, -1
+contact, 0x108, 23, -1
+description, 0x110, 24, -1
+useContext_count, 0x120, 25, -1
+useContext, 0x128, 26, -1
+jurisdiction_count, 0x130, 27, -1
+jurisdiction, 0x138, 28, -1
+purpose, 0x140, 29, -1
+copyright, 0x150, 30, -1
+caseSensitive, 0x160, 31, -1
+valueSet, 0x168, 32, -1
+hierarchyMeaning, 0x178, 33, -1
+compositional, 0x188, 34, -1
+versionNeeded, 0x18c, 35, -1
+content, 0x190, 36, -1
+supplements, 0x1a0, 37, -1
+count, 0x1b0, 38, -1
+filter_count, 0x1b8, 39, -1
+filter, 0x1c0, 40, -1
+property_count, 0x1c8, 41, -1
+property, 0x1d0, 42, -1
+concept_count, 0x1d8, 43, -1
+concept, 0x1e0, 44, -1

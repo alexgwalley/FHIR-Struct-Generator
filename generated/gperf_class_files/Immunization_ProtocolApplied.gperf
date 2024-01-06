@@ -1,0 +1,23 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Immunization_ProtocolApplied_MemberLookup
+%enum
+%define word-array-name word_array_Immunization_ProtocolApplied
+%define class-name Immunization_ProtocolApplied_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+series, 0x38, 6, -1
+authority, 0x48, 7, -1
+targetDisease_count, 0x50, 8, -1
+targetDisease, 0x58, 9, -1
+doseNumberPositiveInt, 0x68, 11, 0
+doseNumberString, 0x68, 11, 1
+seriesDosesPositiveInt, 0x80, 13, 0
+seriesDosesString, 0x80, 13, 1

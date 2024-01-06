@@ -1,0 +1,79 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name ExplanationOfBenefit_MemberLookup
+%enum
+%define word-array-name word_array_ExplanationOfBenefit
+%define class-name ExplanationOfBenefit_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier_count, 0x78, 12, -1
+identifier, 0x80, 13, -1
+status, 0x88, 14, -1
+type, 0x98, 15, -1
+subType, 0xa0, 16, -1
+use, 0xa8, 17, -1
+patient, 0xb8, 18, -1
+billablePeriod, 0xc0, 19, -1
+created, 0xc8, 20, -1
+enterer, 0xd8, 21, -1
+insurer, 0xe0, 22, -1
+provider, 0xe8, 23, -1
+priority, 0xf0, 24, -1
+fundsReserveRequested, 0xf8, 25, -1
+fundsReserve, 0x100, 26, -1
+related_count, 0x108, 27, -1
+related, 0x110, 28, -1
+prescription, 0x118, 29, -1
+originalPrescription, 0x120, 30, -1
+payee, 0x128, 31, -1
+referral, 0x130, 32, -1
+facility, 0x138, 33, -1
+claim, 0x140, 34, -1
+claimResponse, 0x148, 35, -1
+outcome, 0x150, 36, -1
+disposition, 0x160, 37, -1
+preAuthRef_count, 0x170, 38, -1
+preAuthRef, 0x178, 39, -1
+preAuthRefPeriod_count, 0x180, 40, -1
+preAuthRefPeriod, 0x188, 41, -1
+careTeam_count, 0x190, 42, -1
+careTeam, 0x198, 43, -1
+supportingInfo_count, 0x1a0, 44, -1
+supportingInfo, 0x1a8, 45, -1
+diagnosis_count, 0x1b0, 46, -1
+diagnosis, 0x1b8, 47, -1
+procedure_count, 0x1c0, 48, -1
+procedure, 0x1c8, 49, -1
+precedence, 0x1d0, 50, -1
+insurance_count, 0x1d8, 51, -1
+insurance, 0x1e0, 52, -1
+accident, 0x1e8, 53, -1
+item_count, 0x1f0, 54, -1
+item, 0x1f8, 55, -1
+addItem_count, 0x200, 56, -1
+addItem, 0x208, 57, -1
+adjudication_count, 0x210, 58, -1
+adjudication, 0x218, 59, -1
+total_count, 0x220, 60, -1
+total, 0x228, 61, -1
+payment, 0x230, 62, -1
+formCode, 0x238, 63, -1
+form, 0x240, 64, -1
+processNote_count, 0x248, 65, -1
+processNote, 0x250, 66, -1
+benefitPeriod, 0x258, 67, -1
+benefitBalance_count, 0x260, 68, -1
+benefitBalance, 0x268, 69, -1

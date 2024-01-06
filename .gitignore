@@ -1,6 +1,6 @@
-build/**
+build/
 generated/**
-src/gperf_hash_tables/**
+src/gperf_hash_tables/
 
 *.exp
 

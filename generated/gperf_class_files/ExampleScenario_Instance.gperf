@@ -1,0 +1,24 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name ExampleScenario_Instance_MemberLookup
+%enum
+%define word-array-name word_array_ExampleScenario_Instance
+%define class-name ExampleScenario_Instance_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+resourceId, 0x38, 6, -1
+resourceType, 0x48, 7, -1
+resourceType_, 0x48, 7, -1
+name, 0x58, 8, -1
+description, 0x68, 9, -1
+version_count, 0x78, 10, -1
+version, 0x80, 11, -1
+containedInstance_count, 0x88, 12, -1
+containedInstance, 0x90, 13, -1

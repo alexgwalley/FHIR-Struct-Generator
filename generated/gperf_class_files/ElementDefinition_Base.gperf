@@ -1,0 +1,16 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name ElementDefinition_Base_MemberLookup
+%enum
+%define word-array-name word_array_ElementDefinition_Base
+%define class-name ElementDefinition_Base_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+path, 0x28, 4, -1
+min, 0x38, 5, -1
+max, 0x40, 6, -1

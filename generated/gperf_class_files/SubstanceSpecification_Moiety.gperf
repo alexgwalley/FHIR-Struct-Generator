@@ -1,0 +1,23 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name SubstanceSpecification_Moiety_MemberLookup
+%enum
+%define word-array-name word_array_SubstanceSpecification_Moiety
+%define class-name SubstanceSpecification_Moiety_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+role, 0x38, 6, -1
+identifier, 0x40, 7, -1
+name, 0x48, 8, -1
+stereochemistry, 0x58, 9, -1
+opticalActivity, 0x60, 10, -1
+molecularFormula, 0x68, 11, -1
+amountQuantity, 0x80, 13, 0
+amountString, 0x80, 13, 1
