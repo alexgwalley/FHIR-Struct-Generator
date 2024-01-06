@@ -1,6 +1,10 @@
+build/*
+generated/*
 *.exe
 *.ilk
 *.pdb
 **/*.obj
+**/*.pdb
+**/*.ilk
 *.exp
 **/*.out

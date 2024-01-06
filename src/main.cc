@@ -1,8 +1,11 @@
 #include <windows.h>
 #include <cstdio>
 
-#include "code/base/base_inc.h"
-#include "code/os/os_inc.h"
+#include "core.h"
+#include "arena.h"
+#include "string8.h"
+#include "threading.h"
+
 #include "fhir_structure.h"
 #include "resource.h"
 #include "fhir_class.h"
@@ -10,17 +13,19 @@
 #include "metadata.h"
 #include "cJSON.h"
 
-#include "code/base/base_inc.c"
-#include "code/os/os_inc.c"
+#include "core.c"
+#include "arena.c"
+#include "string8.cc"
+#include "threading.c"
+
 #include "fhir_structure.cc"
 #include "resource.cc"
 #include "fhir_class.cc"
 #include "metadata.cc"
+
 //#include "manual_deserialization.cc"
 #include "cJSON.c"
 #include "arena_struct_exporter.cc"
-
-#include "os/core/os_entry_point.c"
 
 void*
 ReadEntireFile(Arena *arena, String8 file_name)
@@ -28,7 +33,7 @@ ReadEntireFile(Arena *arena, String8 file_name)
 	FILE *f = fopen((const char*)file_name.str, "r");
 	fseek(f,  0, SEEK_END);
 	long length = ftell(f);
-	void *result = malloc(length);
+	void *result = ArenaPush(arena, length);
 	fseek(f, 0, SEEK_SET);
 
 	fread(result, length, 1, f);
@@ -185,8 +190,8 @@ OutputClassDefinitionImpl(Arena *arena,
 		node = def->inherits.first;
 		for (int i = 0; i < def->inherits.node_count; i++)
 		{
-			ClassDefinition *def = GetClassDefinitionFromList(all, node->string);
-			OutputClassDefinitionImpl(arena, all, def, completed, f);
+			ClassDefinition *curr_def = GetClassDefinitionFromList(all, node->string);
+			OutputClassDefinitionImpl(arena, all, curr_def, completed, f);
 			node = node->next;
 		}
 	}
@@ -261,6 +266,197 @@ OutputClassDefinitions(Arena *arena, String8 file_name, ClassDefinitionList *lis
 	ScratchEnd(scratch);
 }
 
+String8
+GperfClassName(Arena *arena, ClassDefinition *def)
+{
+	return PushStr8F(arena, "%S_Gperf", def->name);
+}
+
+String8
+GperfFunctionLookup(Arena *arena, ClassDefinition *def)
+{
+	return PushStr8F(arena, "%S_MemberLookup", def->name);
+}
+
+String8
+SingleClassGperf(Arena *arena, ClassDefinition *def)
+{
+
+	Temp scratch = ScratchBegin(&arena, 1);
+	String8List result_list = { 0 };
+
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("%language=C++\n"));
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("%compare-strncmp\n"));
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("%readonly-tables\n"));
+	String8 lookup_function_name = PushStr8F(scratch.arena, "%S", GperfFunctionLookup(arena, def));
+	Str8ListPushF(scratch.arena,
+	              &result_list,
+	              "%%define lookup-function-name %S\n", lookup_function_name);
+	Str8ListPushF(scratch.arena,
+	              &result_list,
+	              "%%enum\n", def->name);
+	Str8ListPushF(scratch.arena,
+	              &result_list,
+	              "%%define word-array-name word_array_%S\n", def->name);
+	Str8ListPushF(scratch.arena,
+	              &result_list,
+	              "%%define class-name %S\n", GperfClassName(arena, def));
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("struct fhir_deserialize::MemberNameAndOffset;\n"));
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("%%\n"));
+
+
+	ClassMetadata *meta = ClassMetadataFromClassDefinition(scratch.arena, def);
+	int i = 0;
+	for (ClassMemberNode *node = def->members.first; node; node = node->next, i++)
+	{
+		ClassMember mem = node->mem;
+		U16 offset = meta->members[i].offset;
+
+		for (int illegal_index = 0; illegal_index < ArrayCount(illegal_member_names); illegal_index++)
+		{
+			String8 illegal_name = illegal_member_names_replacement[illegal_index];
+			if (Str8Match(mem.name, illegal_name, 0))
+			{
+				String8 original = illegal_member_names[illegal_index];
+				if (mem.type == ClassMemberType::Union)
+				{
+					for (int j = 0; j < mem.value_type.types.num_types; j++)
+					{
+	
+						ValueTypeAndName tan;
+						tan.type = mem.value_type.types.types[j];
+						tan.name = mem.value_type.types.type_names[j];
+						String8 union_name = GetUnionInternalTypeName(scratch.arena,
+						                                              tan.type, tan.name,
+						                                              original);
+						Str8ListPushF(scratch.arena,
+						              &result_list,
+						              "%S, 0x%x, %d, %d\n", union_name, offset, i, j);
+					}
+				}
+				else if (mem.type == ClassMemberType::Single)
+				{
+					Str8ListPushF(scratch.arena,
+					              &result_list,
+					              "%S, 0x%x, %d, %d\n", original, offset, i, -1);
+				}
+			}
+		}
+
+		if (mem.type == ClassMemberType::Union)
+		{
+			for (int j = 0; j < mem.value_type.types.num_types; j++)
+			{
+
+				ValueTypeAndName tan;
+				tan.type = mem.value_type.types.types[j];
+				tan.name = mem.value_type.types.type_names[j];
+				String8 union_name = GetUnionInternalTypeName(scratch.arena,
+				                                              tan.type, tan.name,
+				                                              mem.name);
+				Str8ListPushF(scratch.arena,
+				              &result_list,
+				              "%S, 0x%x, %d, %d\n", union_name, offset, i, j);
+			}
+		}
+		else if(mem.type == ClassMemberType::Single)
+		{
+			Str8ListPushF(scratch.arena,
+						&result_list,
+						"%S, 0x%x, %d, %d\n", mem.name, offset, i, -1);
+		}
+	}
+
+	String8 result = Str8ListJoin(arena, result_list, 0);
+	ScratchEnd(scratch);
+	return result;
+}
+
+void
+OutputGperfFiles(Arena *arena, String8 in_dir_name, ClassDefinitionList *list)
+{
+	// NOTE(agw): guarantee null terminator
+	String8 dir_name = PushStr8Copy(arena, in_dir_name);
+
+	// TODO(agw): make this operating system agnostic
+	DWORD attrib = GetFileAttributes((char*)dir_name.str);
+	if (attrib == INVALID_FILE_ATTRIBUTES ||
+		attrib & FILE_ATTRIBUTE_DIRECTORY)
+	{
+		CreateDirectory((char*)dir_name.str, 0);
+	}
+
+	String8 gperf_inc_file_name = PushStr8F(arena, "generated/gperf-inc.cc");
+
+	FILE *gperf_inc_file;
+	fopen_s(&gperf_inc_file, (char*)gperf_inc_file_name.str, "w");
+
+	for (ClassDefinitionNode *node = list->first;
+		node;
+		node = node->next)
+	{
+		String8 file_name = PushStr8F(arena, "%S/%S.gperf", dir_name, node->def.name);
+		String8 gperf_contents = SingleClassGperf(arena, &node->def);
+
+		FILE *f;
+		fopen_s(&f, (char*)file_name.str, "w");
+		if (!f)
+			Assert(false);
+		fwrite(gperf_contents.str, gperf_contents.size, 1, f);
+		fclose(f);
+
+		String8 include_declaration = PushStr8F(arena,
+		                                        "namespace %S_gperf {\n",
+		                                        node->def.name);
+		fwrite(include_declaration.str, include_declaration.size, 1, gperf_inc_file);
+
+		include_declaration = PushStr8F(arena,
+										"#include \"generated/gperf_hash_tables/%S-Member-Lookup.cc\"\n",
+										node->def.name);
+		fwrite(include_declaration.str, include_declaration.size, 1, gperf_inc_file);
+
+		include_declaration = Str8Lit("};\n");
+		fwrite(include_declaration.str, include_declaration.size, 1, gperf_inc_file);
+
+		String8 gperf_call = PushStr8F(arena, 
+		                               "gperf.exe -t %S  --output-file=src/generated/gperf_hash_tables/%S-Member-Lookup.cc -CGD",
+		                               file_name,
+		                               node->def.name);
+		system((char*)gperf_call.str);
+	}
+
+	Temp scratch = ScratchBegin(&arena, 1);
+	String8List result_list = { 0 };
+
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("const fhir_deserialize::MemberNameAndOffset *\n"));
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("ClassMemberLookup(fhir_deserialize::ResourceType type, String8 member_key)\n"));
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("{\n"));
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("\tswitch (type)"));
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("\t{\n"));
+
+	
+	for (ClassDefinitionNode *node = list->first;
+		node;
+		node = node->next)
+	{
+
+		Str8ListPushF(scratch.arena, &result_list, "\t\tcase fhir_deserialize::ResourceType::%S:\n", node->def.name);
+		Str8ListPushF(scratch.arena,
+		              &result_list,
+		              "\t\t\treturn %S_gperf::%S_Gperf::%S_MemberLookup((char*)member_key.str, member_key.size);\n",
+		              node->def.name,
+		              node->def.name,
+		              node->def.name);
+	}
+
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("\t}\n"));
+	Str8ListPush(scratch.arena, &result_list, Str8Lit("}\n"));
+	String8 switch_function = Str8ListJoin(arena, result_list, 0);
+	fwrite(switch_function.str, (size_t)switch_function.size, 1, gperf_inc_file);
+	ScratchEnd(scratch);
+
+	fclose(gperf_inc_file);
+}
 
 void
 OutputClassMetadata(Arena *arena, String8 file_name, ClassDefinitionList *list)
@@ -271,6 +467,8 @@ OutputClassMetadata(Arena *arena, String8 file_name, ClassDefinitionList *list)
 	Assert(f);
 
 	String8List result_list = { 0 };
+
+	Str8ListPushF(scratch.arena, &result_list, "namespace fhir_deserialize {\n");
 	Str8ListPushF(scratch.arena, &result_list, "ClassMetadata class_metadata[] =\n");
 	Str8ListPushF(scratch.arena, &result_list, "{\n");
 
@@ -285,13 +483,14 @@ OutputClassMetadata(Arena *arena, String8 file_name, ClassDefinitionList *list)
 		node;
 		node = node->next)
 	{
-		ClassMetadata *meta = ClassMetadataFromClassDefinition(scratch.arena, &node->def);
-		String8 str = SerializeClassMetadata(scratch.arena, meta);
+		ClassMetadata *curr_meta = ClassMetadataFromClassDefinition(scratch.arena, &node->def);
+		String8 str = SerializeClassMetadata(scratch.arena, curr_meta);
 		Str8ListPushF(scratch.arena, &result_list, "%.*s,",
 		              str.size, str.str);
 	}
 
 
+	Str8ListPushF(scratch.arena, &result_list, "};");
 	Str8ListPushF(scratch.arena, &result_list, "};");
 	String8 result = Str8ListJoin(scratch.arena, result_list, 0);
 	fwrite(result.str, result.size, 1, f);
@@ -301,27 +500,23 @@ OutputClassMetadata(Arena *arena, String8 file_name, ClassDefinitionList *list)
 	ScratchEnd(scratch);
 }
 
-
-function void
-EntryPoint(CmdLine *cmdln)
+int main()
 {
-
-	OS_InitReceipt os_init = OS_Init();
 	// Deserialize fhir files
 	printf("Loading fhir structures...\n");
 
 	Arena *arena = ArenaAlloc(Gigabytes(3));
+
 	StructureDefinitionList list = { 0 };
+	//TODO(agw): take directory name input
 	GetStructureDefinitionsForFile(arena, &list, Str8Lit("fhir/profiles-resources.json"));
-#if 1
 	GetStructureDefinitionsForFile(arena, &list, Str8Lit("fhir/profiles-types.json"));
 	GetStructureDefinitionsForFile(arena, &list, Str8Lit("fhir/profiles-others.json"));
-#endif
 
 	printf("Converting to resources...\n");
 	// Map to resources
 	StructureDefinitionNode *ptr = list.first;
-	ResourceList *resource_list = PushArray(arena, ResourceList, 1);
+	ResourceList *resource_list = PushStruct(arena, ResourceList);
 	Temp scratch = ScratchBegin(&arena, 1);
 	for (int i = 0; i < list.count; i++)
 	{
@@ -342,14 +537,19 @@ EntryPoint(CmdLine *cmdln)
 
 	// Output class definitions
 
-	OutputClassDefinitions(arena,
+	scratch = ScratchBegin(&arena, 1);
+	OutputClassDefinitions(scratch.arena,
 	                       Str8Lit("fhir_class_definitions.h"),
 	                       &class_defs);
+	ScratchEnd(scratch);
 
+	scratch = ScratchBegin(&arena, 1);
 	OutputClassMetadata(arena,
 						Str8Lit("fhir_class_metadata.h"),
 						&class_defs);
+	ScratchEnd(scratch);
 
-	// NOTE(alex): should have two options, one using c++ stdlib
-	// another to use arenas/Ryan's system :)
+	scratch = ScratchBegin(&arena, 1);
+	OutputGperfFiles(arena, Str8Lit("./generated/gperf_class_files"), &class_defs);
+	ScratchEnd(scratch);
 }

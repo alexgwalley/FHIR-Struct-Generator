@@ -1,3 +1,4 @@
+namespace fhir_deserialize {
 ClassMetadata class_metadata[] =
 {
 {
@@ -758,8 +759,8 @@ ClassMetadata class_metadata[] =
 			240,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectReference") },
 			}
 		},
 		{
@@ -1134,12 +1135,12 @@ ClassMetadata class_metadata[] =
 			624,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("timingTiming") },
+				{ ValueType::DateTime, Str8LitComp("timingDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("timingAge") },
+				{ ValueType::Class_Reference, Str8LitComp("timingPeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("timingRange") },
+				{ ValueType::Class_Reference, Str8LitComp("timingDuration") },
 			}
 		},
 		{
@@ -1190,8 +1191,8 @@ ClassMetadata class_metadata[] =
 			672,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("productReference") },
+				{ ValueType::Class_Reference, Str8LitComp("productCodeableConcept") },
 			}
 		},
 		{
@@ -2367,11 +2368,11 @@ ClassMetadata class_metadata[] =
 			232,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::DateTime, Str8LitComp("onsetDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("onsetAge") },
+				{ ValueType::Class_Reference, Str8LitComp("onsetPeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("onsetRange") },
+				{ ValueType::String, Str8LitComp("onsetString") },
 			}
 		},
 		{
@@ -5042,8 +5043,8 @@ ClassMetadata class_metadata[] =
 			80,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("collectedDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("collectedPeriod") },
 			}
 		}
 	}
@@ -5161,8 +5162,8 @@ ClassMetadata class_metadata[] =
 			96,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("timeDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("timePeriod") },
 			}
 		}
 	}
@@ -5260,8 +5261,8 @@ ClassMetadata class_metadata[] =
 			80,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("timeDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("timePeriod") },
 			}
 		}
 	}
@@ -9268,9 +9269,9 @@ ClassMetadata class_metadata[] =
 			192,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::Class_Reference, Str8LitComp("scheduledTiming") },
+				{ ValueType::Class_Reference, Str8LitComp("scheduledPeriod") },
+				{ ValueType::String, Str8LitComp("scheduledString") },
 			}
 		},
 		{
@@ -9321,8 +9322,8 @@ ClassMetadata class_metadata[] =
 			240,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("productCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("productReference") },
 			}
 		},
 		{
@@ -10479,9 +10480,9 @@ ClassMetadata class_metadata[] =
 			232,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
+				{ ValueType::DateTime, Str8LitComp("occurrenceDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrencePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrenceTiming") },
 			}
 		},
 		{
@@ -10672,8 +10673,8 @@ ClassMetadata class_metadata[] =
 			408,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("productReference") },
+				{ ValueType::Class_Reference, Str8LitComp("productCodeableConcept") },
 			}
 		},
 		{
@@ -12484,8 +12485,8 @@ ClassMetadata class_metadata[] =
 			88,
 			16,
 			{
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::Date, Str8LitComp("timingDate") },
+				{ ValueType::Class_Reference, Str8LitComp("timingPeriod") },
 			}
 		},
 		{
@@ -12621,8 +12622,8 @@ ClassMetadata class_metadata[] =
 			72,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("diagnosisCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("diagnosisReference") },
 			}
 		},
 		{
@@ -12790,8 +12791,8 @@ ClassMetadata class_metadata[] =
 			104,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("procedureCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("procedureReference") },
 			}
 		},
 		{
@@ -13066,8 +13067,8 @@ ClassMetadata class_metadata[] =
 			88,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueAddress") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("locationAddress") },
+				{ ValueType::Class_Reference, Str8LitComp("locationReference") },
 			}
 		}
 	}
@@ -13315,8 +13316,8 @@ ClassMetadata class_metadata[] =
 			192,
 			16,
 			{
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::Date, Str8LitComp("servicedDate") },
+				{ ValueType::Class_Reference, Str8LitComp("servicedPeriod") },
 			}
 		},
 		{
@@ -13338,9 +13339,9 @@ ClassMetadata class_metadata[] =
 			216,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAddress") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("locationCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("locationAddress") },
+				{ ValueType::Class_Reference, Str8LitComp("locationReference") },
 			}
 		},
 		{
@@ -15107,8 +15108,8 @@ ClassMetadata class_metadata[] =
 			168,
 			16,
 			{
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::Date, Str8LitComp("servicedDate") },
+				{ ValueType::Class_Reference, Str8LitComp("servicedPeriod") },
 			}
 		},
 		{
@@ -15130,9 +15131,9 @@ ClassMetadata class_metadata[] =
 			192,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAddress") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("locationCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("locationAddress") },
+				{ ValueType::Class_Reference, Str8LitComp("locationReference") },
 			}
 		},
 		{
@@ -16409,8 +16410,8 @@ ClassMetadata class_metadata[] =
 			208,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("effectiveDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("effectivePeriod") },
 			}
 		},
 		{
@@ -18434,9 +18435,9 @@ ClassMetadata class_metadata[] =
 			64,
 			16,
 			{
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAttachment") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::String, Str8LitComp("contentString") },
+				{ ValueType::Class_Reference, Str8LitComp("contentAttachment") },
+				{ ValueType::Class_Reference, Str8LitComp("contentReference") },
 			}
 		}
 	}
@@ -18794,8 +18795,8 @@ ClassMetadata class_metadata[] =
 			312,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("occurrenceDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrencePeriod") },
 			}
 		},
 		{
@@ -18994,9 +18995,9 @@ ClassMetadata class_metadata[] =
 			64,
 			16,
 			{
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAttachment") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::String, Str8LitComp("contentString") },
+				{ ValueType::Class_Reference, Str8LitComp("contentAttachment") },
+				{ ValueType::Class_Reference, Str8LitComp("contentReference") },
 			}
 		}
 	}
@@ -19932,8 +19933,8 @@ ClassMetadata class_metadata[] =
 			80,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueIdentifier") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("targetIdentifier") },
+				{ ValueType::Class_Reference, Str8LitComp("targetReference") },
 			}
 		}
 	}
@@ -20575,8 +20576,8 @@ ClassMetadata class_metadata[] =
 			352,
 			16,
 			{
-				{ ValueType::Uri, Str8LitComp("valueUri") },
-				{ ValueType::Canonical, Str8LitComp("valueCanonical") },
+				{ ValueType::Uri, Str8LitComp("sourceUri") },
+				{ ValueType::Canonical, Str8LitComp("sourceCanonical") },
 			}
 		},
 		{
@@ -20597,8 +20598,8 @@ ClassMetadata class_metadata[] =
 			376,
 			16,
 			{
-				{ ValueType::Uri, Str8LitComp("valueUri") },
-				{ ValueType::Canonical, Str8LitComp("valueCanonical") },
+				{ ValueType::Uri, Str8LitComp("targetUri") },
+				{ ValueType::Canonical, Str8LitComp("targetCanonical") },
 			}
 		},
 		{
@@ -21494,11 +21495,11 @@ ClassMetadata class_metadata[] =
 			224,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::DateTime, Str8LitComp("onsetDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("onsetAge") },
+				{ ValueType::Class_Reference, Str8LitComp("onsetPeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("onsetRange") },
+				{ ValueType::String, Str8LitComp("onsetString") },
 			}
 		},
 		{
@@ -21522,11 +21523,11 @@ ClassMetadata class_metadata[] =
 			248,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::DateTime, Str8LitComp("abatementDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("abatementAge") },
+				{ ValueType::Class_Reference, Str8LitComp("abatementPeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("abatementRange") },
+				{ ValueType::String, Str8LitComp("abatementString") },
 			}
 		},
 		{
@@ -22098,8 +22099,8 @@ ClassMetadata class_metadata[] =
 			240,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueAttachment") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("sourceAttachment") },
+				{ ValueType::Class_Reference, Str8LitComp("sourceReference") },
 			}
 		},
 		{
@@ -23192,8 +23193,8 @@ ClassMetadata class_metadata[] =
 			408,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("topicCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("topicReference") },
 			}
 		},
 		{
@@ -23394,8 +23395,8 @@ ClassMetadata class_metadata[] =
 			568,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueAttachment") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("legallyBindingAttachment") },
+				{ ValueType::Class_Reference, Str8LitComp("legallyBindingReference") },
 			}
 		}
 	}
@@ -23640,8 +23641,8 @@ ClassMetadata class_metadata[] =
 			96,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("topicCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("topicReference") },
 			}
 		},
 		{
@@ -24853,8 +24854,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("entityCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("entityReference") },
 			}
 		},
 		{
@@ -25203,9 +25204,9 @@ ClassMetadata class_metadata[] =
 			152,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
+				{ ValueType::DateTime, Str8LitComp("occurrenceDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrencePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrenceTiming") },
 			}
 		},
 		{
@@ -25717,8 +25718,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueAttachment") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("contentAttachment") },
+				{ ValueType::Class_Reference, Str8LitComp("contentReference") },
 			}
 		}
 	}
@@ -25806,8 +25807,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueAttachment") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("contentAttachment") },
+				{ ValueType::Class_Reference, Str8LitComp("contentReference") },
 			}
 		}
 	}
@@ -25895,8 +25896,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueAttachment") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("contentAttachment") },
+				{ ValueType::Class_Reference, Str8LitComp("contentReference") },
 			}
 		}
 	}
@@ -26764,8 +26765,8 @@ ClassMetadata class_metadata[] =
 			192,
 			16,
 			{
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::Date, Str8LitComp("servicedDate") },
+				{ ValueType::Class_Reference, Str8LitComp("servicedPeriod") },
 			}
 		},
 		{
@@ -27364,8 +27365,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("diagnosisCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("diagnosisReference") },
 			}
 		}
 	}
@@ -27573,8 +27574,8 @@ ClassMetadata class_metadata[] =
 			184,
 			16,
 			{
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::Date, Str8LitComp("servicedDate") },
+				{ ValueType::Class_Reference, Str8LitComp("servicedPeriod") },
 			}
 		},
 		{
@@ -28147,9 +28148,9 @@ ClassMetadata class_metadata[] =
 			72,
 			16,
 			{
-				{ ValueType::UnsignedInt, Str8LitComp("valueUnsignedInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Class_Reference, Str8LitComp("valueMoney") },
+				{ ValueType::UnsignedInt, Str8LitComp("allowedUnsignedInt") },
+				{ ValueType::String, Str8LitComp("allowedString") },
+				{ ValueType::Class_Reference, Str8LitComp("allowedMoney") },
 			}
 		},
 		{
@@ -28171,9 +28172,9 @@ ClassMetadata class_metadata[] =
 			96,
 			16,
 			{
-				{ ValueType::UnsignedInt, Str8LitComp("valueUnsignedInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Class_Reference, Str8LitComp("valueMoney") },
+				{ ValueType::UnsignedInt, Str8LitComp("usedUnsignedInt") },
+				{ ValueType::String, Str8LitComp("usedString") },
+				{ ValueType::Class_Reference, Str8LitComp("usedMoney") },
 			}
 		}
 	}
@@ -28458,8 +28459,8 @@ ClassMetadata class_metadata[] =
 			192,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("identifiedDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("identifiedPeriod") },
 			}
 		},
 		{
@@ -29943,8 +29944,8 @@ ClassMetadata class_metadata[] =
 			160,
 			16,
 			{
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::String, Str8LitComp("manufacturerString") },
+				{ ValueType::Class_Reference, Str8LitComp("manufacturerReference") },
 			}
 		},
 		{
@@ -31458,8 +31459,8 @@ ClassMetadata class_metadata[] =
 			264,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("codeReference") },
+				{ ValueType::Class_Reference, Str8LitComp("codeCodeableConcept") },
 			}
 		},
 		{
@@ -31521,9 +31522,9 @@ ClassMetadata class_metadata[] =
 			312,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
+				{ ValueType::DateTime, Str8LitComp("occurrenceDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrencePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrenceTiming") },
 			}
 		},
 		{
@@ -32015,9 +32016,9 @@ ClassMetadata class_metadata[] =
 			200,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("timingTiming") },
+				{ ValueType::Class_Reference, Str8LitComp("timingPeriod") },
+				{ ValueType::DateTime, Str8LitComp("timingDateTime") },
 			}
 		},
 		{
@@ -32365,8 +32366,8 @@ ClassMetadata class_metadata[] =
 			216,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("effectiveDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("effectivePeriod") },
 			}
 		},
 		{
@@ -37730,8 +37731,8 @@ ClassMetadata class_metadata[] =
 			240,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectReference") },
 			}
 		},
 		{
@@ -39177,12 +39178,12 @@ ClassMetadata class_metadata[] =
 			80,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Canonical, Str8LitComp("valueCanonical") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueExpression") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDataRequirement") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTriggerDefinition") },
+				{ ValueType::Class_Reference, Str8LitComp("definitionReference") },
+				{ ValueType::Canonical, Str8LitComp("definitionCanonical") },
+				{ ValueType::Class_Reference, Str8LitComp("definitionCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("definitionExpression") },
+				{ ValueType::Class_Reference, Str8LitComp("definitionDataRequirement") },
+				{ ValueType::Class_Reference, Str8LitComp("definitionTriggerDefinition") },
 			}
 		},
 		{
@@ -39235,10 +39236,10 @@ ClassMetadata class_metadata[] =
 			120,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
+				{ ValueType::DateTime, Str8LitComp("participantEffectiveDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("participantEffectivePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("participantEffectiveDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("participantEffectiveTiming") },
 			}
 		},
 		{
@@ -41717,8 +41718,8 @@ ClassMetadata class_metadata[] =
 			88,
 			16,
 			{
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::Date, Str8LitComp("timingDate") },
+				{ ValueType::Class_Reference, Str8LitComp("timingPeriod") },
 			}
 		},
 		{
@@ -41854,8 +41855,8 @@ ClassMetadata class_metadata[] =
 			72,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("diagnosisCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("diagnosisReference") },
 			}
 		},
 		{
@@ -42023,8 +42024,8 @@ ClassMetadata class_metadata[] =
 			104,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("procedureCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("procedureReference") },
 			}
 		},
 		{
@@ -42259,8 +42260,8 @@ ClassMetadata class_metadata[] =
 			88,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueAddress") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("locationAddress") },
+				{ ValueType::Class_Reference, Str8LitComp("locationReference") },
 			}
 		}
 	}
@@ -42508,8 +42509,8 @@ ClassMetadata class_metadata[] =
 			192,
 			16,
 			{
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::Date, Str8LitComp("servicedDate") },
+				{ ValueType::Class_Reference, Str8LitComp("servicedPeriod") },
 			}
 		},
 		{
@@ -42531,9 +42532,9 @@ ClassMetadata class_metadata[] =
 			216,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAddress") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("locationCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("locationAddress") },
+				{ ValueType::Class_Reference, Str8LitComp("locationReference") },
 			}
 		},
 		{
@@ -43542,8 +43543,8 @@ ClassMetadata class_metadata[] =
 			168,
 			16,
 			{
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::Date, Str8LitComp("servicedDate") },
+				{ ValueType::Class_Reference, Str8LitComp("servicedPeriod") },
 			}
 		},
 		{
@@ -43565,9 +43566,9 @@ ClassMetadata class_metadata[] =
 			192,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAddress") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("locationCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("locationAddress") },
+				{ ValueType::Class_Reference, Str8LitComp("locationReference") },
 			}
 		},
 		{
@@ -44648,9 +44649,9 @@ ClassMetadata class_metadata[] =
 			72,
 			16,
 			{
-				{ ValueType::UnsignedInt, Str8LitComp("valueUnsignedInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Class_Reference, Str8LitComp("valueMoney") },
+				{ ValueType::UnsignedInt, Str8LitComp("allowedUnsignedInt") },
+				{ ValueType::String, Str8LitComp("allowedString") },
+				{ ValueType::Class_Reference, Str8LitComp("allowedMoney") },
 			}
 		},
 		{
@@ -44671,8 +44672,8 @@ ClassMetadata class_metadata[] =
 			96,
 			8,
 			{
-				{ ValueType::UnsignedInt, Str8LitComp("valueUnsignedInt") },
-				{ ValueType::Class_Reference, Str8LitComp("valueMoney") },
+				{ ValueType::UnsignedInt, Str8LitComp("usedUnsignedInt") },
+				{ ValueType::Class_Reference, Str8LitComp("usedMoney") },
 			}
 		}
 	}
@@ -44951,9 +44952,9 @@ ClassMetadata class_metadata[] =
 			256,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::Class_Reference, Str8LitComp("bornPeriod") },
+				{ ValueType::Date, Str8LitComp("bornDate") },
+				{ ValueType::String, Str8LitComp("bornString") },
 			}
 		},
 		{
@@ -44975,9 +44976,9 @@ ClassMetadata class_metadata[] =
 			280,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::Class_Reference, Str8LitComp("ageAge") },
+				{ ValueType::Class_Reference, Str8LitComp("ageRange") },
+				{ ValueType::String, Str8LitComp("ageString") },
 			}
 		},
 		{
@@ -45011,11 +45012,11 @@ ClassMetadata class_metadata[] =
 			304,
 			16,
 			{
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::Boolean, Str8LitComp("deceasedBoolean") },
+				{ ValueType::Class_Reference, Str8LitComp("deceasedAge") },
+				{ ValueType::Class_Reference, Str8LitComp("deceasedRange") },
+				{ ValueType::Date, Str8LitComp("deceasedDate") },
+				{ ValueType::String, Str8LitComp("deceasedString") },
 			}
 		},
 		{
@@ -45215,10 +45216,10 @@ ClassMetadata class_metadata[] =
 			80,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::Class_Reference, Str8LitComp("onsetAge") },
+				{ ValueType::Class_Reference, Str8LitComp("onsetRange") },
+				{ ValueType::Class_Reference, Str8LitComp("onsetPeriod") },
+				{ ValueType::String, Str8LitComp("onsetString") },
 			}
 		},
 		{
@@ -45703,8 +45704,8 @@ ClassMetadata class_metadata[] =
 			208,
 			16,
 			{
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Date, Str8LitComp("startDate") },
+				{ ValueType::Class_Reference, Str8LitComp("startCodeableConcept") },
 			}
 		},
 		{
@@ -45937,13 +45938,13 @@ ClassMetadata class_metadata[] =
 			72,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Class_Reference, Str8LitComp("valueInteger") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRatio") },
+				{ ValueType::Class_Reference, Str8LitComp("detailQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("detailRange") },
+				{ ValueType::Class_Reference, Str8LitComp("detailCodeableConcept") },
+				{ ValueType::String, Str8LitComp("detailString") },
+				{ ValueType::Boolean, Str8LitComp("detailBoolean") },
+				{ ValueType::Class_Reference, Str8LitComp("detailInteger") },
+				{ ValueType::Class_Reference, Str8LitComp("detailRatio") },
 			}
 		},
 		{
@@ -45964,8 +45965,8 @@ ClassMetadata class_metadata[] =
 			96,
 			16,
 			{
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
+				{ ValueType::Date, Str8LitComp("dueDate") },
+				{ ValueType::Class_Reference, Str8LitComp("dueDuration") },
 			}
 		}
 	}
@@ -47331,9 +47332,9 @@ ClassMetadata class_metadata[] =
 			152,
 			16,
 			{
-				{ ValueType::Uri, Str8LitComp("valueUri") },
-				{ ValueType::Canonical, Str8LitComp("valueCanonical") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Uri, Str8LitComp("moduleUri") },
+				{ ValueType::Canonical, Str8LitComp("moduleCanonical") },
+				{ ValueType::Class_Reference, Str8LitComp("moduleCodeableConcept") },
 			}
 		},
 		{
@@ -49387,8 +49388,8 @@ ClassMetadata class_metadata[] =
 			192,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::DateTime, Str8LitComp("occurrenceDateTime") },
+				{ ValueType::String, Str8LitComp("occurrenceString") },
 			}
 		},
 		{
@@ -50107,8 +50108,8 @@ ClassMetadata class_metadata[] =
 			104,
 			16,
 			{
-				{ ValueType::PositiveInt, Str8LitComp("valuePositiveInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::PositiveInt, Str8LitComp("doseNumberPositiveInt") },
+				{ ValueType::String, Str8LitComp("doseNumberString") },
 			}
 		},
 		{
@@ -50129,8 +50130,8 @@ ClassMetadata class_metadata[] =
 			128,
 			16,
 			{
-				{ ValueType::PositiveInt, Str8LitComp("valuePositiveInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::PositiveInt, Str8LitComp("seriesDosesPositiveInt") },
+				{ ValueType::String, Str8LitComp("seriesDosesString") },
 			}
 		}
 	}
@@ -50408,8 +50409,8 @@ ClassMetadata class_metadata[] =
 			264,
 			16,
 			{
-				{ ValueType::PositiveInt, Str8LitComp("valuePositiveInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::PositiveInt, Str8LitComp("doseNumberPositiveInt") },
+				{ ValueType::String, Str8LitComp("doseNumberString") },
 			}
 		},
 		{
@@ -50430,8 +50431,8 @@ ClassMetadata class_metadata[] =
 			288,
 			16,
 			{
-				{ ValueType::PositiveInt, Str8LitComp("valuePositiveInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::PositiveInt, Str8LitComp("seriesDosesPositiveInt") },
+				{ ValueType::String, Str8LitComp("seriesDosesString") },
 			}
 		}
 	}
@@ -50836,8 +50837,8 @@ ClassMetadata class_metadata[] =
 			176,
 			16,
 			{
-				{ ValueType::PositiveInt, Str8LitComp("valuePositiveInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::PositiveInt, Str8LitComp("doseNumberPositiveInt") },
+				{ ValueType::String, Str8LitComp("doseNumberString") },
 			}
 		},
 		{
@@ -50858,8 +50859,8 @@ ClassMetadata class_metadata[] =
 			200,
 			16,
 			{
-				{ ValueType::PositiveInt, Str8LitComp("valuePositiveInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::PositiveInt, Str8LitComp("seriesDosesPositiveInt") },
+				{ ValueType::String, Str8LitComp("seriesDosesString") },
 			}
 		},
 		{
@@ -51939,8 +51940,8 @@ ClassMetadata class_metadata[] =
 			120,
 			16,
 			{
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Canonical, Str8LitComp("valueCanonical") },
+				{ ValueType::Boolean, Str8LitComp("exampleBoolean") },
+				{ ValueType::Canonical, Str8LitComp("exampleCanonical") },
 			}
 		},
 		{
@@ -52038,8 +52039,8 @@ ClassMetadata class_metadata[] =
 			64,
 			16,
 			{
-				{ ValueType::Url, Str8LitComp("valueUrl") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Url, Str8LitComp("nameUrl") },
+				{ ValueType::Class_Reference, Str8LitComp("nameReference") },
 			}
 		},
 		{
@@ -52518,8 +52519,8 @@ ClassMetadata class_metadata[] =
 			72,
 			16,
 			{
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Canonical, Str8LitComp("valueCanonical") },
+				{ ValueType::Boolean, Str8LitComp("exampleBoolean") },
+				{ ValueType::Canonical, Str8LitComp("exampleCanonical") },
 			}
 		},
 		{
@@ -54538,8 +54539,8 @@ ClassMetadata class_metadata[] =
 			72,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("chargeItemReference") },
+				{ ValueType::Class_Reference, Str8LitComp("chargeItemCodeableConcept") },
 			}
 		},
 		{
@@ -54914,8 +54915,8 @@ ClassMetadata class_metadata[] =
 			256,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectReference") },
 			}
 		},
 		{
@@ -56702,8 +56703,8 @@ ClassMetadata class_metadata[] =
 			240,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectReference") },
 			}
 		},
 		{
@@ -58895,8 +58896,8 @@ ClassMetadata class_metadata[] =
 			232,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("createdDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("createdPeriod") },
 			}
 		},
 		{
@@ -59351,8 +59352,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("itemCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("itemReference") },
 			}
 		},
 		{
@@ -59707,8 +59708,8 @@ ClassMetadata class_metadata[] =
 			216,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("medicationCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("medicationReference") },
 			}
 		},
 		{
@@ -59769,8 +59770,8 @@ ClassMetadata class_metadata[] =
 			264,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("effectiveDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("effectivePeriod") },
 			}
 		},
 		{
@@ -60135,8 +60136,8 @@ ClassMetadata class_metadata[] =
 			112,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueRatio") },
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("rateRatio") },
+				{ ValueType::Class_Reference, Str8LitComp("rateQuantity") },
 			}
 		}
 	}
@@ -60334,8 +60335,8 @@ ClassMetadata class_metadata[] =
 			176,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("statusReasonCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("statusReasonReference") },
 			}
 		},
 		{
@@ -60366,8 +60367,8 @@ ClassMetadata class_metadata[] =
 			200,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("medicationCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("medicationReference") },
 			}
 		},
 		{
@@ -61610,8 +61611,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("itemCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("itemReference") },
 			}
 		},
 		{
@@ -61923,8 +61924,8 @@ ClassMetadata class_metadata[] =
 			80,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("indicationCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("indicationReference") },
 			}
 		},
 		{
@@ -62129,8 +62130,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("characteristicCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("characteristicQuantity") },
 			}
 		},
 		{
@@ -63170,8 +63171,8 @@ ClassMetadata class_metadata[] =
 			216,
 			8,
 			{
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Boolean, Str8LitComp("reportedBoolean") },
+				{ ValueType::Class_Reference, Str8LitComp("reportedReference") },
 			}
 		},
 		{
@@ -63192,8 +63193,8 @@ ClassMetadata class_metadata[] =
 			232,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("medicationCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("medicationReference") },
 			}
 		},
 		{
@@ -63845,8 +63846,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Boolean, Str8LitComp("allowedBoolean") },
+				{ ValueType::Class_Reference, Str8LitComp("allowedCodeableConcept") },
 			}
 		},
 		{
@@ -64104,8 +64105,8 @@ ClassMetadata class_metadata[] =
 			216,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("medicationCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("medicationReference") },
 			}
 		},
 		{
@@ -64146,8 +64147,8 @@ ClassMetadata class_metadata[] =
 			248,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("effectiveDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("effectivePeriod") },
 			}
 		},
 		{
@@ -65300,8 +65301,8 @@ ClassMetadata class_metadata[] =
 			96,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("indicationCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("indicationReference") },
 			}
 		},
 		{
@@ -65903,8 +65904,8 @@ ClassMetadata class_metadata[] =
 			80,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("datePeriod") },
+				{ ValueType::DateTime, Str8LitComp("dateDateTime") },
 			}
 		},
 		{
@@ -66269,8 +66270,8 @@ ClassMetadata class_metadata[] =
 			72,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("medicationCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("medicationReference") },
 			}
 		}
 	}
@@ -66635,8 +66636,8 @@ ClassMetadata class_metadata[] =
 			72,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("medicationCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("medicationReference") },
 			}
 		}
 	}
@@ -67646,8 +67647,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("itemReference") },
+				{ ValueType::Class_Reference, Str8LitComp("itemCodeableConcept") },
 			}
 		}
 	}
@@ -69775,8 +69776,8 @@ ClassMetadata class_metadata[] =
 			408,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCoding") },
-				{ ValueType::Uri, Str8LitComp("valueUri") },
+				{ ValueType::Class_Reference, Str8LitComp("eventCoding") },
+				{ ValueType::Uri, Str8LitComp("eventUri") },
 			}
 		},
 		{
@@ -70198,8 +70199,8 @@ ClassMetadata class_metadata[] =
 			128,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCoding") },
-				{ ValueType::Uri, Str8LitComp("valueUri") },
+				{ ValueType::Class_Reference, Str8LitComp("eventCoding") },
+				{ ValueType::Uri, Str8LitComp("eventUri") },
 			}
 		},
 		{
@@ -73667,8 +73668,8 @@ ClassMetadata class_metadata[] =
 			80,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRatio") },
+				{ ValueType::Class_Reference, Str8LitComp("rateQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("rateRatio") },
 			}
 		}
 	}
@@ -73958,10 +73959,10 @@ ClassMetadata class_metadata[] =
 			248,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
-				{ ValueType::Instant, Str8LitComp("valueInstant") },
+				{ ValueType::DateTime, Str8LitComp("effectiveDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("effectivePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("effectiveTiming") },
+				{ ValueType::Instant, Str8LitComp("effectiveInstant") },
 			}
 		},
 		{
@@ -77566,8 +77567,8 @@ ClassMetadata class_metadata[] =
 			216,
 			16,
 			{
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
+				{ ValueType::Boolean, Str8LitComp("deceasedBoolean") },
+				{ ValueType::DateTime, Str8LitComp("deceasedDateTime") },
 			}
 		},
 		{
@@ -77618,8 +77619,8 @@ ClassMetadata class_metadata[] =
 			264,
 			8,
 			{
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Class_Reference, Str8LitComp("valueInteger") },
+				{ ValueType::Boolean, Str8LitComp("multipleBirthBoolean") },
+				{ ValueType::Class_Reference, Str8LitComp("multipleBirthInteger") },
 			}
 		},
 		{
@@ -79490,8 +79491,8 @@ ClassMetadata class_metadata[] =
 			248,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectReference") },
 			}
 		},
 		{
@@ -80087,9 +80088,9 @@ ClassMetadata class_metadata[] =
 			72,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("detailQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("detailRange") },
+				{ ValueType::Class_Reference, Str8LitComp("detailCodeableConcept") },
 			}
 		},
 		{
@@ -80317,8 +80318,8 @@ ClassMetadata class_metadata[] =
 			208,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectReference") },
 			}
 		},
 		{
@@ -80443,12 +80444,12 @@ ClassMetadata class_metadata[] =
 			304,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
+				{ ValueType::DateTime, Str8LitComp("timingDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("timingAge") },
+				{ ValueType::Class_Reference, Str8LitComp("timingPeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("timingDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("timingRange") },
+				{ ValueType::Class_Reference, Str8LitComp("timingTiming") },
 			}
 		},
 		{
@@ -80549,8 +80550,8 @@ ClassMetadata class_metadata[] =
 			432,
 			16,
 			{
-				{ ValueType::Canonical, Str8LitComp("valueCanonical") },
-				{ ValueType::Uri, Str8LitComp("valueUri") },
+				{ ValueType::Canonical, Str8LitComp("definitionCanonical") },
+				{ ValueType::Uri, Str8LitComp("definitionUri") },
 			}
 		},
 		{
@@ -80795,8 +80796,8 @@ ClassMetadata class_metadata[] =
 			96,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
+				{ ValueType::Class_Reference, Str8LitComp("offsetDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("offsetRange") },
 			}
 		}
 	}
@@ -82256,11 +82257,11 @@ ClassMetadata class_metadata[] =
 			264,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
+				{ ValueType::DateTime, Str8LitComp("performedDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("performedPeriod") },
+				{ ValueType::String, Str8LitComp("performedString") },
+				{ ValueType::Class_Reference, Str8LitComp("performedAge") },
+				{ ValueType::Class_Reference, Str8LitComp("performedRange") },
 			}
 		},
 		{
@@ -82892,8 +82893,8 @@ ClassMetadata class_metadata[] =
 			144,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("occurredPeriod") },
+				{ ValueType::DateTime, Str8LitComp("occurredDateTime") },
 			}
 		},
 		{
@@ -84067,16 +84068,16 @@ ClassMetadata class_metadata[] =
 			96,
 			16,
 			{
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Decimal, Str8LitComp("valueDecimal") },
-				{ ValueType::Class_Reference, Str8LitComp("valueInteger") },
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Time, Str8LitComp("valueTime") },
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCoding") },
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Boolean, Str8LitComp("answerBoolean") },
+				{ ValueType::Decimal, Str8LitComp("answerDecimal") },
+				{ ValueType::Class_Reference, Str8LitComp("answerInteger") },
+				{ ValueType::Date, Str8LitComp("answerDate") },
+				{ ValueType::DateTime, Str8LitComp("answerDateTime") },
+				{ ValueType::Time, Str8LitComp("answerTime") },
+				{ ValueType::String, Str8LitComp("answerString") },
+				{ ValueType::Class_Reference, Str8LitComp("answerCoding") },
+				{ ValueType::Class_Reference, Str8LitComp("answerQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("answerReference") },
 			}
 		}
 	}
@@ -85848,12 +85849,12 @@ ClassMetadata class_metadata[] =
 			208,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
+				{ ValueType::DateTime, Str8LitComp("timingDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("timingAge") },
+				{ ValueType::Class_Reference, Str8LitComp("timingPeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("timingDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("timingRange") },
+				{ ValueType::Class_Reference, Str8LitComp("timingTiming") },
 			}
 		},
 		{
@@ -86158,8 +86159,8 @@ ClassMetadata class_metadata[] =
 			96,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
+				{ ValueType::Class_Reference, Str8LitComp("offsetDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("offsetRange") },
 			}
 		}
 	}
@@ -86407,8 +86408,8 @@ ClassMetadata class_metadata[] =
 			256,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectReference") },
 			}
 		},
 		{
@@ -87006,8 +87007,8 @@ ClassMetadata class_metadata[] =
 			256,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectReference") },
 			}
 		},
 		{
@@ -87447,10 +87448,10 @@ ClassMetadata class_metadata[] =
 			64,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Canonical, Str8LitComp("valueCanonical") },
-				{ ValueType::Class_Reference, Str8LitComp("valueExpression") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDataRequirement") },
+				{ ValueType::Class_Reference, Str8LitComp("definitionCodeableConcept") },
+				{ ValueType::Canonical, Str8LitComp("definitionCanonical") },
+				{ ValueType::Class_Reference, Str8LitComp("definitionExpression") },
+				{ ValueType::Class_Reference, Str8LitComp("definitionDataRequirement") },
 			}
 		},
 		{
@@ -87523,10 +87524,10 @@ ClassMetadata class_metadata[] =
 			136,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
+				{ ValueType::DateTime, Str8LitComp("studyEffectiveDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("studyEffectivePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("studyEffectiveDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("studyEffectiveTiming") },
 			}
 		},
 		{
@@ -87579,10 +87580,10 @@ ClassMetadata class_metadata[] =
 			200,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
+				{ ValueType::DateTime, Str8LitComp("participantEffectiveDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("participantEffectivePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("participantEffectiveDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("participantEffectiveTiming") },
 			}
 		},
 		{
@@ -88758,8 +88759,8 @@ ClassMetadata class_metadata[] =
 			208,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("occurrenceDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrencePeriod") },
 			}
 		},
 		{
@@ -88987,8 +88988,8 @@ ClassMetadata class_metadata[] =
 			72,
 			8,
 			{
-				{ ValueType::Decimal, Str8LitComp("valueDecimal") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
+				{ ValueType::Decimal, Str8LitComp("probabilityDecimal") },
+				{ ValueType::Class_Reference, Str8LitComp("probabilityRange") },
 			}
 		},
 		{
@@ -89029,8 +89030,8 @@ ClassMetadata class_metadata[] =
 			104,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
+				{ ValueType::Class_Reference, Str8LitComp("whenPeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("whenRange") },
 			}
 		},
 		{
@@ -91362,9 +91363,9 @@ ClassMetadata class_metadata[] =
 			312,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRatio") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
+				{ ValueType::Class_Reference, Str8LitComp("quantityQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("quantityRatio") },
+				{ ValueType::Class_Reference, Str8LitComp("quantityRange") },
 			}
 		},
 		{
@@ -91406,9 +91407,9 @@ ClassMetadata class_metadata[] =
 			344,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
+				{ ValueType::DateTime, Str8LitComp("occurrenceDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrencePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrenceTiming") },
 			}
 		},
 		{
@@ -91429,8 +91430,8 @@ ClassMetadata class_metadata[] =
 			368,
 			8,
 			{
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Boolean, Str8LitComp("asNeededBoolean") },
+				{ ValueType::Class_Reference, Str8LitComp("asNeededCodeableConcept") },
 			}
 		},
 		{
@@ -92392,8 +92393,8 @@ ClassMetadata class_metadata[] =
 			72,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("collectedDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("collectedPeriod") },
 			}
 		},
 		{
@@ -92454,8 +92455,8 @@ ClassMetadata class_metadata[] =
 			128,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("fastingStatusCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("fastingStatusDuration") },
 			}
 		}
 	}
@@ -92583,8 +92584,8 @@ ClassMetadata class_metadata[] =
 			104,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::DateTime, Str8LitComp("timeDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("timePeriod") },
 			}
 		}
 	}
@@ -92732,8 +92733,8 @@ ClassMetadata class_metadata[] =
 			120,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("additiveCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("additiveReference") },
 			}
 		}
 	}
@@ -93255,8 +93256,8 @@ ClassMetadata class_metadata[] =
 			112,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::Class_Reference, Str8LitComp("minimumVolumeQuantity") },
+				{ ValueType::String, Str8LitComp("minimumVolumeString") },
 			}
 		},
 		{
@@ -93374,8 +93375,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("additiveCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("additiveReference") },
 			}
 		}
 	}
@@ -95408,56 +95409,56 @@ ClassMetadata class_metadata[] =
 			120,
 			16,
 			{
-				{ ValueType::Base64Binary, Str8LitComp("valueBase64Binary") },
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Canonical, Str8LitComp("valueCanonical") },
-				{ ValueType::Code, Str8LitComp("valueCode") },
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Decimal, Str8LitComp("valueDecimal") },
-				{ ValueType::Id, Str8LitComp("valueId") },
-				{ ValueType::Instant, Str8LitComp("valueInstant") },
-				{ ValueType::Class_Reference, Str8LitComp("valueInteger") },
-				{ ValueType::Markdown, Str8LitComp("valueMarkdown") },
-				{ ValueType::Oid, Str8LitComp("valueOid") },
-				{ ValueType::PositiveInt, Str8LitComp("valuePositiveInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Time, Str8LitComp("valueTime") },
-				{ ValueType::UnsignedInt, Str8LitComp("valueUnsignedInt") },
-				{ ValueType::Uri, Str8LitComp("valueUri") },
-				{ ValueType::Url, Str8LitComp("valueUrl") },
-				{ ValueType::Uuid, Str8LitComp("valueUuid") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAddress") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAnnotation") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAttachment") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCoding") },
-				{ ValueType::Class_Reference, Str8LitComp("valueContactPoint") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCount") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDistance") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
-				{ ValueType::Class_Reference, Str8LitComp("valueHumanName") },
-				{ ValueType::Class_Reference, Str8LitComp("valueIdentifier") },
-				{ ValueType::Class_Reference, Str8LitComp("valueMoney") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRatio") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Class_Reference, Str8LitComp("valueSampledData") },
-				{ ValueType::Class_Reference, Str8LitComp("valueSignature") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
-				{ ValueType::Class_Reference, Str8LitComp("valueContactDetail") },
-				{ ValueType::Class_Reference, Str8LitComp("valueContributor") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDataRequirement") },
-				{ ValueType::Class_Reference, Str8LitComp("valueExpression") },
-				{ ValueType::Class_Reference, Str8LitComp("valueParameterDefinition") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRelatedArtifact") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTriggerDefinition") },
-				{ ValueType::Class_Reference, Str8LitComp("valueUsageContext") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDosage") },
-				{ ValueType::Class_Reference, Str8LitComp("valueMeta") },
+				{ ValueType::Base64Binary, Str8LitComp("defaultValueBase64Binary") },
+				{ ValueType::Boolean, Str8LitComp("defaultValueBoolean") },
+				{ ValueType::Canonical, Str8LitComp("defaultValueCanonical") },
+				{ ValueType::Code, Str8LitComp("defaultValueCode") },
+				{ ValueType::Date, Str8LitComp("defaultValueDate") },
+				{ ValueType::DateTime, Str8LitComp("defaultValueDateTime") },
+				{ ValueType::Decimal, Str8LitComp("defaultValueDecimal") },
+				{ ValueType::Id, Str8LitComp("defaultValueId") },
+				{ ValueType::Instant, Str8LitComp("defaultValueInstant") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueInteger") },
+				{ ValueType::Markdown, Str8LitComp("defaultValueMarkdown") },
+				{ ValueType::Oid, Str8LitComp("defaultValueOid") },
+				{ ValueType::PositiveInt, Str8LitComp("defaultValuePositiveInt") },
+				{ ValueType::String, Str8LitComp("defaultValueString") },
+				{ ValueType::Time, Str8LitComp("defaultValueTime") },
+				{ ValueType::UnsignedInt, Str8LitComp("defaultValueUnsignedInt") },
+				{ ValueType::Uri, Str8LitComp("defaultValueUri") },
+				{ ValueType::Url, Str8LitComp("defaultValueUrl") },
+				{ ValueType::Uuid, Str8LitComp("defaultValueUuid") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueAddress") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueAge") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueAnnotation") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueAttachment") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueCoding") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueContactPoint") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueCount") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueDistance") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueHumanName") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueIdentifier") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueMoney") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValuePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueRange") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueRatio") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueSampledData") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueSignature") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueTiming") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueContactDetail") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueContributor") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueDataRequirement") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueExpression") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueParameterDefinition") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueRelatedArtifact") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueTriggerDefinition") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueUsageContext") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueDosage") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueMeta") },
 			}
 		},
 		{
@@ -96632,8 +96633,8 @@ ClassMetadata class_metadata[] =
 			72,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("substanceCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("substanceReference") },
 			}
 		}
 	}
@@ -99091,9 +99092,9 @@ ClassMetadata class_metadata[] =
 			104,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::Class_Reference, Str8LitComp("amountQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("amountRange") },
+				{ ValueType::String, Str8LitComp("amountString") },
 			}
 		},
 		{
@@ -100617,8 +100618,8 @@ ClassMetadata class_metadata[] =
 			128,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::Class_Reference, Str8LitComp("amountQuantity") },
+				{ ValueType::String, Str8LitComp("amountString") },
 			}
 		}
 	}
@@ -100736,8 +100737,8 @@ ClassMetadata class_metadata[] =
 			96,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("definingSubstanceReference") },
+				{ ValueType::Class_Reference, Str8LitComp("definingSubstanceCodeableConcept") },
 			}
 		},
 		{
@@ -100758,8 +100759,8 @@ ClassMetadata class_metadata[] =
 			112,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::Class_Reference, Str8LitComp("amountQuantity") },
+				{ ValueType::String, Str8LitComp("amountString") },
 			}
 		}
 	}
@@ -101806,8 +101807,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("substanceReference") },
+				{ ValueType::Class_Reference, Str8LitComp("substanceCodeableConcept") },
 			}
 		},
 		{
@@ -101850,10 +101851,10 @@ ClassMetadata class_metadata[] =
 			88,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRatio") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::Class_Reference, Str8LitComp("amountQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("amountRange") },
+				{ ValueType::Class_Reference, Str8LitComp("amountRatio") },
+				{ ValueType::String, Str8LitComp("amountString") },
 			}
 		},
 		{
@@ -102142,9 +102143,9 @@ ClassMetadata class_metadata[] =
 			216,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
+				{ ValueType::DateTime, Str8LitComp("occurrenceDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrencePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrenceTiming") },
 			}
 		},
 		{
@@ -102282,8 +102283,8 @@ ClassMetadata class_metadata[] =
 			72,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("itemCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("itemReference") },
 			}
 		}
 	}
@@ -102481,8 +102482,8 @@ ClassMetadata class_metadata[] =
 			184,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("itemCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("itemReference") },
 			}
 		},
 		{
@@ -102534,9 +102535,9 @@ ClassMetadata class_metadata[] =
 			224,
 			16,
 			{
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
+				{ ValueType::DateTime, Str8LitComp("occurrenceDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrencePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("occurrenceTiming") },
 			}
 		},
 		{
@@ -111687,53 +111688,6 @@ ClassMetadata class_metadata[] =
 	}
 }
 ,{
-	Str8Lit("Xhtml"),
-	48,
-	4,
-	{
-		{
-			Str8LitComp("resourceType"),
-			Cardinality::OneToOne,
-			ClassMemberType::Single,
-			0,
-			4,
-			{
-				{ ValueType::ResourceType, Str8LitComp("Xhtml") },
-			}
-		},
-		{
-			Str8LitComp("id"),
-			Cardinality::ZeroToOne,
-			ClassMemberType::Single,
-			8,
-			16,
-			{
-				{ ValueType::String, Str8LitComp("") },
-			}
-		},
-		{
-			Str8LitComp("extension"),
-			Cardinality::ZeroToZero,
-			ClassMemberType::Single,
-			24,
-			8,
-			{
-				{ ValueType::Class_Reference, Str8LitComp("Extension") },
-			}
-		},
-		{
-			Str8LitComp("value"),
-			Cardinality::OneToOne,
-			ClassMemberType::Single,
-			32,
-			16,
-			{
-				{ ValueType::String, Str8LitComp("") },
-			}
-		}
-	}
-}
-,{
 	Str8Lit("Address"),
 	192,
 	15,
@@ -112050,8 +112004,8 @@ ClassMetadata class_metadata[] =
 			48,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::Class_Reference, Str8LitComp("authorReference") },
+				{ ValueType::String, Str8LitComp("authorString") },
 			}
 		},
 		{
@@ -112828,8 +112782,8 @@ ClassMetadata class_metadata[] =
 			80,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("subjectReference") },
 			}
 		},
 		{
@@ -113419,8 +113373,8 @@ ClassMetadata class_metadata[] =
 			128,
 			8,
 			{
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Boolean, Str8LitComp("asNeededBoolean") },
+				{ ValueType::Class_Reference, Str8LitComp("asNeededCodeableConcept") },
 			}
 		},
 		{
@@ -113578,8 +113532,8 @@ ClassMetadata class_metadata[] =
 			56,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("doseRange") },
+				{ ValueType::Class_Reference, Str8LitComp("doseQuantity") },
 			}
 		},
 		{
@@ -113601,9 +113555,9 @@ ClassMetadata class_metadata[] =
 			72,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueRatio") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("rateRatio") },
+				{ ValueType::Class_Reference, Str8LitComp("rateRange") },
+				{ ValueType::Class_Reference, Str8LitComp("rateQuantity") },
 			}
 		}
 	}
@@ -114046,56 +114000,56 @@ ClassMetadata class_metadata[] =
 			304,
 			16,
 			{
-				{ ValueType::Base64Binary, Str8LitComp("valueBase64Binary") },
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Canonical, Str8LitComp("valueCanonical") },
-				{ ValueType::Code, Str8LitComp("valueCode") },
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Decimal, Str8LitComp("valueDecimal") },
-				{ ValueType::Id, Str8LitComp("valueId") },
-				{ ValueType::Instant, Str8LitComp("valueInstant") },
-				{ ValueType::Class_Reference, Str8LitComp("valueInteger") },
-				{ ValueType::Markdown, Str8LitComp("valueMarkdown") },
-				{ ValueType::Oid, Str8LitComp("valueOid") },
-				{ ValueType::PositiveInt, Str8LitComp("valuePositiveInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Time, Str8LitComp("valueTime") },
-				{ ValueType::UnsignedInt, Str8LitComp("valueUnsignedInt") },
-				{ ValueType::Uri, Str8LitComp("valueUri") },
-				{ ValueType::Url, Str8LitComp("valueUrl") },
-				{ ValueType::Uuid, Str8LitComp("valueUuid") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAddress") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAnnotation") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAttachment") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCoding") },
-				{ ValueType::Class_Reference, Str8LitComp("valueContactPoint") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCount") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDistance") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
-				{ ValueType::Class_Reference, Str8LitComp("valueHumanName") },
-				{ ValueType::Class_Reference, Str8LitComp("valueIdentifier") },
-				{ ValueType::Class_Reference, Str8LitComp("valueMoney") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRatio") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Class_Reference, Str8LitComp("valueSampledData") },
-				{ ValueType::Class_Reference, Str8LitComp("valueSignature") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
-				{ ValueType::Class_Reference, Str8LitComp("valueContactDetail") },
-				{ ValueType::Class_Reference, Str8LitComp("valueContributor") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDataRequirement") },
-				{ ValueType::Class_Reference, Str8LitComp("valueExpression") },
-				{ ValueType::Class_Reference, Str8LitComp("valueParameterDefinition") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRelatedArtifact") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTriggerDefinition") },
-				{ ValueType::Class_Reference, Str8LitComp("valueUsageContext") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDosage") },
-				{ ValueType::Class_Reference, Str8LitComp("valueMeta") },
+				{ ValueType::Base64Binary, Str8LitComp("defaultValueBase64Binary") },
+				{ ValueType::Boolean, Str8LitComp("defaultValueBoolean") },
+				{ ValueType::Canonical, Str8LitComp("defaultValueCanonical") },
+				{ ValueType::Code, Str8LitComp("defaultValueCode") },
+				{ ValueType::Date, Str8LitComp("defaultValueDate") },
+				{ ValueType::DateTime, Str8LitComp("defaultValueDateTime") },
+				{ ValueType::Decimal, Str8LitComp("defaultValueDecimal") },
+				{ ValueType::Id, Str8LitComp("defaultValueId") },
+				{ ValueType::Instant, Str8LitComp("defaultValueInstant") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueInteger") },
+				{ ValueType::Markdown, Str8LitComp("defaultValueMarkdown") },
+				{ ValueType::Oid, Str8LitComp("defaultValueOid") },
+				{ ValueType::PositiveInt, Str8LitComp("defaultValuePositiveInt") },
+				{ ValueType::String, Str8LitComp("defaultValueString") },
+				{ ValueType::Time, Str8LitComp("defaultValueTime") },
+				{ ValueType::UnsignedInt, Str8LitComp("defaultValueUnsignedInt") },
+				{ ValueType::Uri, Str8LitComp("defaultValueUri") },
+				{ ValueType::Url, Str8LitComp("defaultValueUrl") },
+				{ ValueType::Uuid, Str8LitComp("defaultValueUuid") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueAddress") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueAge") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueAnnotation") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueAttachment") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueCoding") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueContactPoint") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueCount") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueDistance") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueHumanName") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueIdentifier") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueMoney") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValuePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueRange") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueRatio") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueReference") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueSampledData") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueSignature") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueTiming") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueContactDetail") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueContributor") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueDataRequirement") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueExpression") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueParameterDefinition") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueRelatedArtifact") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueTriggerDefinition") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueUsageContext") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueDosage") },
+				{ ValueType::Class_Reference, Str8LitComp("defaultValueMeta") },
 			}
 		},
 		{
@@ -114184,56 +114138,56 @@ ClassMetadata class_metadata[] =
 			360,
 			16,
 			{
-				{ ValueType::Base64Binary, Str8LitComp("valueBase64Binary") },
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Canonical, Str8LitComp("valueCanonical") },
-				{ ValueType::Code, Str8LitComp("valueCode") },
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Decimal, Str8LitComp("valueDecimal") },
-				{ ValueType::Id, Str8LitComp("valueId") },
-				{ ValueType::Instant, Str8LitComp("valueInstant") },
-				{ ValueType::Class_Reference, Str8LitComp("valueInteger") },
-				{ ValueType::Markdown, Str8LitComp("valueMarkdown") },
-				{ ValueType::Oid, Str8LitComp("valueOid") },
-				{ ValueType::PositiveInt, Str8LitComp("valuePositiveInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Time, Str8LitComp("valueTime") },
-				{ ValueType::UnsignedInt, Str8LitComp("valueUnsignedInt") },
-				{ ValueType::Uri, Str8LitComp("valueUri") },
-				{ ValueType::Url, Str8LitComp("valueUrl") },
-				{ ValueType::Uuid, Str8LitComp("valueUuid") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAddress") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAnnotation") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAttachment") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCoding") },
-				{ ValueType::Class_Reference, Str8LitComp("valueContactPoint") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCount") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDistance") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
-				{ ValueType::Class_Reference, Str8LitComp("valueHumanName") },
-				{ ValueType::Class_Reference, Str8LitComp("valueIdentifier") },
-				{ ValueType::Class_Reference, Str8LitComp("valueMoney") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRatio") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Class_Reference, Str8LitComp("valueSampledData") },
-				{ ValueType::Class_Reference, Str8LitComp("valueSignature") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
-				{ ValueType::Class_Reference, Str8LitComp("valueContactDetail") },
-				{ ValueType::Class_Reference, Str8LitComp("valueContributor") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDataRequirement") },
-				{ ValueType::Class_Reference, Str8LitComp("valueExpression") },
-				{ ValueType::Class_Reference, Str8LitComp("valueParameterDefinition") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRelatedArtifact") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTriggerDefinition") },
-				{ ValueType::Class_Reference, Str8LitComp("valueUsageContext") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDosage") },
-				{ ValueType::Class_Reference, Str8LitComp("valueMeta") },
+				{ ValueType::Base64Binary, Str8LitComp("fixedBase64Binary") },
+				{ ValueType::Boolean, Str8LitComp("fixedBoolean") },
+				{ ValueType::Canonical, Str8LitComp("fixedCanonical") },
+				{ ValueType::Code, Str8LitComp("fixedCode") },
+				{ ValueType::Date, Str8LitComp("fixedDate") },
+				{ ValueType::DateTime, Str8LitComp("fixedDateTime") },
+				{ ValueType::Decimal, Str8LitComp("fixedDecimal") },
+				{ ValueType::Id, Str8LitComp("fixedId") },
+				{ ValueType::Instant, Str8LitComp("fixedInstant") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedInteger") },
+				{ ValueType::Markdown, Str8LitComp("fixedMarkdown") },
+				{ ValueType::Oid, Str8LitComp("fixedOid") },
+				{ ValueType::PositiveInt, Str8LitComp("fixedPositiveInt") },
+				{ ValueType::String, Str8LitComp("fixedString") },
+				{ ValueType::Time, Str8LitComp("fixedTime") },
+				{ ValueType::UnsignedInt, Str8LitComp("fixedUnsignedInt") },
+				{ ValueType::Uri, Str8LitComp("fixedUri") },
+				{ ValueType::Url, Str8LitComp("fixedUrl") },
+				{ ValueType::Uuid, Str8LitComp("fixedUuid") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedAddress") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedAge") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedAnnotation") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedAttachment") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedCoding") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedContactPoint") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedCount") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedDistance") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedHumanName") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedIdentifier") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedMoney") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedPeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedRange") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedRatio") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedReference") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedSampledData") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedSignature") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedTiming") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedContactDetail") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedContributor") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedDataRequirement") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedExpression") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedParameterDefinition") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedRelatedArtifact") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedTriggerDefinition") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedUsageContext") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedDosage") },
+				{ ValueType::Class_Reference, Str8LitComp("fixedMeta") },
 			}
 		},
 		{
@@ -114302,56 +114256,56 @@ ClassMetadata class_metadata[] =
 			384,
 			16,
 			{
-				{ ValueType::Base64Binary, Str8LitComp("valueBase64Binary") },
-				{ ValueType::Boolean, Str8LitComp("valueBoolean") },
-				{ ValueType::Canonical, Str8LitComp("valueCanonical") },
-				{ ValueType::Code, Str8LitComp("valueCode") },
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Decimal, Str8LitComp("valueDecimal") },
-				{ ValueType::Id, Str8LitComp("valueId") },
-				{ ValueType::Instant, Str8LitComp("valueInstant") },
-				{ ValueType::Class_Reference, Str8LitComp("valueInteger") },
-				{ ValueType::Markdown, Str8LitComp("valueMarkdown") },
-				{ ValueType::Oid, Str8LitComp("valueOid") },
-				{ ValueType::PositiveInt, Str8LitComp("valuePositiveInt") },
-				{ ValueType::String, Str8LitComp("valueString") },
-				{ ValueType::Time, Str8LitComp("valueTime") },
-				{ ValueType::UnsignedInt, Str8LitComp("valueUnsignedInt") },
-				{ ValueType::Uri, Str8LitComp("valueUri") },
-				{ ValueType::Url, Str8LitComp("valueUrl") },
-				{ ValueType::Uuid, Str8LitComp("valueUuid") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAddress") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAge") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAnnotation") },
-				{ ValueType::Class_Reference, Str8LitComp("valueAttachment") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCoding") },
-				{ ValueType::Class_Reference, Str8LitComp("valueContactPoint") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCount") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDistance") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
-				{ ValueType::Class_Reference, Str8LitComp("valueHumanName") },
-				{ ValueType::Class_Reference, Str8LitComp("valueIdentifier") },
-				{ ValueType::Class_Reference, Str8LitComp("valueMoney") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRatio") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Class_Reference, Str8LitComp("valueSampledData") },
-				{ ValueType::Class_Reference, Str8LitComp("valueSignature") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
-				{ ValueType::Class_Reference, Str8LitComp("valueContactDetail") },
-				{ ValueType::Class_Reference, Str8LitComp("valueContributor") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDataRequirement") },
-				{ ValueType::Class_Reference, Str8LitComp("valueExpression") },
-				{ ValueType::Class_Reference, Str8LitComp("valueParameterDefinition") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRelatedArtifact") },
-				{ ValueType::Class_Reference, Str8LitComp("valueTriggerDefinition") },
-				{ ValueType::Class_Reference, Str8LitComp("valueUsageContext") },
-				{ ValueType::Class_Reference, Str8LitComp("valueDosage") },
-				{ ValueType::Class_Reference, Str8LitComp("valueMeta") },
+				{ ValueType::Base64Binary, Str8LitComp("patternBase64Binary") },
+				{ ValueType::Boolean, Str8LitComp("patternBoolean") },
+				{ ValueType::Canonical, Str8LitComp("patternCanonical") },
+				{ ValueType::Code, Str8LitComp("patternCode") },
+				{ ValueType::Date, Str8LitComp("patternDate") },
+				{ ValueType::DateTime, Str8LitComp("patternDateTime") },
+				{ ValueType::Decimal, Str8LitComp("patternDecimal") },
+				{ ValueType::Id, Str8LitComp("patternId") },
+				{ ValueType::Instant, Str8LitComp("patternInstant") },
+				{ ValueType::Class_Reference, Str8LitComp("patternInteger") },
+				{ ValueType::Markdown, Str8LitComp("patternMarkdown") },
+				{ ValueType::Oid, Str8LitComp("patternOid") },
+				{ ValueType::PositiveInt, Str8LitComp("patternPositiveInt") },
+				{ ValueType::String, Str8LitComp("patternString") },
+				{ ValueType::Time, Str8LitComp("patternTime") },
+				{ ValueType::UnsignedInt, Str8LitComp("patternUnsignedInt") },
+				{ ValueType::Uri, Str8LitComp("patternUri") },
+				{ ValueType::Url, Str8LitComp("patternUrl") },
+				{ ValueType::Uuid, Str8LitComp("patternUuid") },
+				{ ValueType::Class_Reference, Str8LitComp("patternAddress") },
+				{ ValueType::Class_Reference, Str8LitComp("patternAge") },
+				{ ValueType::Class_Reference, Str8LitComp("patternAnnotation") },
+				{ ValueType::Class_Reference, Str8LitComp("patternAttachment") },
+				{ ValueType::Class_Reference, Str8LitComp("patternCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("patternCoding") },
+				{ ValueType::Class_Reference, Str8LitComp("patternContactPoint") },
+				{ ValueType::Class_Reference, Str8LitComp("patternCount") },
+				{ ValueType::Class_Reference, Str8LitComp("patternDistance") },
+				{ ValueType::Class_Reference, Str8LitComp("patternDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("patternHumanName") },
+				{ ValueType::Class_Reference, Str8LitComp("patternIdentifier") },
+				{ ValueType::Class_Reference, Str8LitComp("patternMoney") },
+				{ ValueType::Class_Reference, Str8LitComp("patternPeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("patternQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("patternRange") },
+				{ ValueType::Class_Reference, Str8LitComp("patternRatio") },
+				{ ValueType::Class_Reference, Str8LitComp("patternReference") },
+				{ ValueType::Class_Reference, Str8LitComp("patternSampledData") },
+				{ ValueType::Class_Reference, Str8LitComp("patternSignature") },
+				{ ValueType::Class_Reference, Str8LitComp("patternTiming") },
+				{ ValueType::Class_Reference, Str8LitComp("patternContactDetail") },
+				{ ValueType::Class_Reference, Str8LitComp("patternContributor") },
+				{ ValueType::Class_Reference, Str8LitComp("patternDataRequirement") },
+				{ ValueType::Class_Reference, Str8LitComp("patternExpression") },
+				{ ValueType::Class_Reference, Str8LitComp("patternParameterDefinition") },
+				{ ValueType::Class_Reference, Str8LitComp("patternRelatedArtifact") },
+				{ ValueType::Class_Reference, Str8LitComp("patternTriggerDefinition") },
+				{ ValueType::Class_Reference, Str8LitComp("patternUsageContext") },
+				{ ValueType::Class_Reference, Str8LitComp("patternDosage") },
+				{ ValueType::Class_Reference, Str8LitComp("patternMeta") },
 			}
 		},
 		{
@@ -114399,15 +114353,15 @@ ClassMetadata class_metadata[] =
 			424,
 			16,
 			{
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Instant, Str8LitComp("valueInstant") },
-				{ ValueType::Time, Str8LitComp("valueTime") },
-				{ ValueType::Decimal, Str8LitComp("valueDecimal") },
-				{ ValueType::Class_Reference, Str8LitComp("valueInteger") },
-				{ ValueType::PositiveInt, Str8LitComp("valuePositiveInt") },
-				{ ValueType::UnsignedInt, Str8LitComp("valueUnsignedInt") },
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
+				{ ValueType::Date, Str8LitComp("minValueDate") },
+				{ ValueType::DateTime, Str8LitComp("minValueDateTime") },
+				{ ValueType::Instant, Str8LitComp("minValueInstant") },
+				{ ValueType::Time, Str8LitComp("minValueTime") },
+				{ ValueType::Decimal, Str8LitComp("minValueDecimal") },
+				{ ValueType::Class_Reference, Str8LitComp("minValueInteger") },
+				{ ValueType::PositiveInt, Str8LitComp("minValuePositiveInt") },
+				{ ValueType::UnsignedInt, Str8LitComp("minValueUnsignedInt") },
+				{ ValueType::Class_Reference, Str8LitComp("minValueQuantity") },
 			}
 		},
 		{
@@ -114435,15 +114389,15 @@ ClassMetadata class_metadata[] =
 			448,
 			16,
 			{
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
-				{ ValueType::Instant, Str8LitComp("valueInstant") },
-				{ ValueType::Time, Str8LitComp("valueTime") },
-				{ ValueType::Decimal, Str8LitComp("valueDecimal") },
-				{ ValueType::Class_Reference, Str8LitComp("valueInteger") },
-				{ ValueType::PositiveInt, Str8LitComp("valuePositiveInt") },
-				{ ValueType::UnsignedInt, Str8LitComp("valueUnsignedInt") },
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
+				{ ValueType::Date, Str8LitComp("maxValueDate") },
+				{ ValueType::DateTime, Str8LitComp("maxValueDateTime") },
+				{ ValueType::Instant, Str8LitComp("maxValueInstant") },
+				{ ValueType::Time, Str8LitComp("maxValueTime") },
+				{ ValueType::Decimal, Str8LitComp("maxValueDecimal") },
+				{ ValueType::Class_Reference, Str8LitComp("maxValueInteger") },
+				{ ValueType::PositiveInt, Str8LitComp("maxValuePositiveInt") },
+				{ ValueType::UnsignedInt, Str8LitComp("maxValueUnsignedInt") },
+				{ ValueType::Class_Reference, Str8LitComp("maxValueQuantity") },
 			}
 		},
 		{
@@ -116241,7 +116195,7 @@ ClassMetadata class_metadata[] =
 }
 ,{
 	Str8Lit("Narrative"),
-	64,
+	72,
 	6,
 	{
 		{
@@ -116299,9 +116253,9 @@ ClassMetadata class_metadata[] =
 			Cardinality::OneToOne,
 			ClassMemberType::Single,
 			56,
-			8,
+			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("Xhtml") },
+				{ ValueType::Xhtml, Str8LitComp("") },
 			}
 		}
 	}
@@ -116573,8 +116527,8 @@ ClassMetadata class_metadata[] =
 			64,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valueCodeableConcept") },
+				{ ValueType::Class_Reference, Str8LitComp("ageRange") },
+				{ ValueType::Class_Reference, Str8LitComp("ageCodeableConcept") },
 			}
 		},
 		{
@@ -117696,9 +117650,9 @@ ClassMetadata class_metadata[] =
 			64,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueQuantity") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::String, Str8LitComp("valueString") },
+				{ ValueType::Class_Reference, Str8LitComp("amountQuantity") },
+				{ ValueType::Class_Reference, Str8LitComp("amountRange") },
+				{ ValueType::String, Str8LitComp("amountString") },
 			}
 		},
 		{
@@ -117971,9 +117925,9 @@ ClassMetadata class_metadata[] =
 			48,
 			8,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueDuration") },
-				{ ValueType::Class_Reference, Str8LitComp("valueRange") },
-				{ ValueType::Class_Reference, Str8LitComp("valuePeriod") },
+				{ ValueType::Class_Reference, Str8LitComp("boundsDuration") },
+				{ ValueType::Class_Reference, Str8LitComp("boundsRange") },
+				{ ValueType::Class_Reference, Str8LitComp("boundsPeriod") },
 			}
 		},
 		{
@@ -118233,10 +118187,10 @@ ClassMetadata class_metadata[] =
 			80,
 			16,
 			{
-				{ ValueType::Class_Reference, Str8LitComp("valueTiming") },
-				{ ValueType::Class_Reference, Str8LitComp("valueReference") },
-				{ ValueType::Date, Str8LitComp("valueDate") },
-				{ ValueType::DateTime, Str8LitComp("valueDateTime") },
+				{ ValueType::Class_Reference, Str8LitComp("timingTiming") },
+				{ ValueType::Class_Reference, Str8LitComp("timingReference") },
+				{ ValueType::Date, Str8LitComp("timingDate") },
+				{ ValueType::DateTime, Str8LitComp("timingDateTime") },
 			}
 		},
 		{
@@ -119136,4 +119090,4 @@ ClassMetadata class_metadata[] =
 		}
 	}
 }
-,};
+,};};

@@ -1,38 +1,38 @@
 #include <windows.h>
 #include <cstdio>
+#include <iostream>
 
-#include "src/code/base/base_inc.h"
-#include "src/code/os/os_inc.h"
-#include "src/fhir_structure.h"
-#include "src/resource.h"
-#include "src/fhir_class.h"
-#include "src/arena_struct_exporter.h"
-#include "fhir_class_definitions.h"
-#include "src/metadata.h"
+/////////////////////////
+// json includes
 #include "src/cJSON.h"
-#include "src/yyjson.h"
+#include "src/third_party/simdjson.h"
+
+#include "src/core.h"
+#include "src/arena.h"
+#include "src/string8.h"
+#include "src/threading.h"
+#include "src/manual_deserialization.h"
+
+#include "fhir_class_definitions.h"
 
 #include "src/profiler.cc"
-#include "src/code/base/base_inc.c"
-#include "src/code/os/os_inc.c"
-#include "src/fhir_structure.cc"
-#include "src/resource.cc"
-#include "src/fhir_class.cc"
-#include "src/metadata.cc"
+#include "src/core.c"
+#include "src/arena.c"
+#include "src/string8.cc"
+#include "src/threading.c"
+
+#define USE_SIMDJSON
+#define USE_PROFILER
+
 #include "fhir_class_metadata.h"
-#include "src/manual_deserialization.cc"
-#include "src/cJSON.c"
-#include "src/arena_struct_exporter.cc"
-
-
-
-#include "os/core/os_entry_point.c"
+#include "src/manual_deserialization_simdjson.cc"
 
 void*
 ReadEntireFile(Arena *arena, String8 file_name)
 {
-	TimeFunction;
-	FILE *f = fopen((const char*)file_name.str, "r");
+	String16 file_name_16 = Str16From8(arena, file_name);
+	FILE *f = {};
+	_wfopen_s(&f, (WCHAR*)file_name_16.str, L"r");
 	fseek(f,  0, SEEK_END);
 	long length = ftell(f);
 	void *result = ArenaPush(arena, length);
@@ -43,115 +43,189 @@ ReadEntireFile(Arena *arena, String8 file_name)
 	return result;
 }
 
-JsonItem
-ParseJson(String8 json_str)
-{
-	TimeFunction;
-	cJSON *json = cJSON_Parse((char*)json_str.str);
-	return JsonItemFromcJSON(json);
-}
-
 void*
-Deserialize_File(Arena *arena, String8 file_name, ResourceType *out_type)
+Deserialize_File(Arena *arena, 
+                 fhir_deserialize::DeserializationOptions options,
+                 String8 file_name,
+                 ResourceType *out_type)
 {
-	TimeFunction;
-	HashTable_Init(arena);
 
-	char* json_str = (char*)ReadEntireFile(arena, file_name);
-#if 1
-	yyjson_doc *doc = yyjson_read(json_str, strlen(json_str), 0);
-	yyjson_val *root = yyjson_doc_get_root(doc);
-	JsonItem json = JsonItemFromYYJSON(root);
-#else
-	JsonItem json = ParseJson(Str8C(json_str));
-#endif
-	JsonItem res_type_json = JsonItem_GetObjectItem(arena, json, Str8Lit("resourceType"));
+	Temp scratch = ScratchBegin(&arena, 1);
 
-	ResourceType type = ResourceTypeFromString8(JsonItem_GetStringValue(res_type_json));
-	U64 class_size = class_metadata[(int)type].size;
-	void* result = ArenaPush(arena, class_size);
-	U64 written = Resource_Deserialize(arena, type, json, result, class_size);
-	if (out_type)
-		*out_type = type;
-	yyjson_doc_free(doc);
+	simdjson::ondemand::parser parser;
+	std::string_view file_string_view{(char*)file_name.str};
+
+	auto simd_json = simdjson::padded_string::load(file_string_view);
+	simdjson::ondemand::document simd_doc = parser.iterate(simd_json);
+
+	void* result = Resource_Deserialize_SIMDJSON(arena,
+	                                             options,
+	                                             ResourceType::Unknown,
+	                                             simd_doc.get_object(),
+	                                             out_type);
+	ScratchEnd(scratch);
 	return result;
 }
 
-function void
-EntryPoint(CmdLine *cmdln)
+struct RunOptions
 {
-	BeginProfile();
+	bool profile;
+	String8 directory_name;
+	String8 benchmark_name;
+};
 
-	OS_InitReceipt os_init = OS_Init();
-	printf("Loading fhir structures...\n");
-	Arena *arena = ArenaAlloc(Gigabytes(3));
-
-#if 0
-	if (cmdln->inputs.node_count == 0)
+RunOptions
+RunOptionsFromArgs(Arena *arena, int args_count, char** args)
+{
+	// -dir directory_name
+	// -bn benchmark_name
+	// -prof // sets profile to true
+	RunOptions options = {};
+	ArenaTempBlock(arena, temp)
 	{
-		printf("Could not find any directory name\n");
-		return;
+		for (int i = 1; i < args_count; i++)
+		{
+			String8 arg_name = Str8C(args[i]);
+			if (Str8Match(arg_name, Str8Lit("-dir"), MatchFlag_CaseInsensitive))
+			{
+				i++;
+				String8 value = Str8C(args[i]);
+				options.directory_name = value;
+				// TODO(agw): can add checks later...
+			} 
+			else if(Str8Match(arg_name, Str8Lit("-bn"), MatchFlag_CaseInsensitive))
+			{
+				i++;
+				String8 value = Str8C(args[i]);
+				options.benchmark_name = value;
+				// TODO(agw): can add checks later...
+			}
+			else if(Str8Match(arg_name, Str8Lit("-prof"), MatchFlag_CaseInsensitive))
+			{
+				options.profile = true;
+			}
+
+		}
 	}
-#endif
+	return options;
+}
 
-	String8 dir_name = Str8Lit("bundles\\");
-	printf("Deserializing all in %.*s\n", (int)dir_name.size, dir_name.str);
-	OS_FileInfoList list = OS_FileInfoListFromPath(arena, dir_name);
+int 
+main(int arg_count, char** args)
+{
+	ThreadCtx tctx = ThreadCtxAlloc();
+	tctx.is_main_thread = 1;
+	SetThreadCtx(&tctx);
 
-	int count = 0;
-	for (OS_FileInfoNode *node = list.first; node; node = node->next)
+	Arena *arena = ArenaAlloc(Gigabytes(16));
+
+	RunOptions run_options = RunOptionsFromArgs(arena, arg_count, args);
+
+	fhir_deserialize::DeserializationOptions options = {};
+	options.class_metadata = (ClassMetadata*)&fhir_deserialize::class_metadata[0];
+	options.class_metadata_count = ArrayCount(fhir_deserialize::class_metadata);
+	String8 dir_name = Str8Lit("D:\\Programming Stuff\\FHIR-Struct-Generator\\bundles");
+	if (run_options.directory_name.size != 0)
 	{
-		if (node->v.attributes.flags & OS_FileFlag_Directory)
+		dir_name = run_options.directory_name;
+	}
+
+	bool should_profile = false;
+	if (run_options.benchmark_name.size != 0)
+	{
+		should_profile = true;
+	}
+
+	printf("Deserializing all in %.*s\n", (int)dir_name.size, dir_name.str);
+
+	Temp file_name_scratch = ScratchBegin(&arena, 1);
+
+	Temp scratch = ScratchBegin(&arena, 1);
+	String8 path = PushStr8F(scratch.arena, "%S\\*", dir_name);
+	String16 path16 = Str16From8(scratch.arena, path);
+
+	WIN32_FIND_DATAW data;
+	HANDLE handle = FindFirstFileW((WCHAR *)path16.str, &data);
+	ScratchEnd(scratch);
+
+	size_t total_bytes_processed = 0;
+	int count = 0;
+	if (should_profile)
+	{
+		BeginProfile();
+	}
+
+	do
+	{
+		if (data.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
 			continue;
 
-		if (FindSubstr8(node->v.name, Str8Lit(".json"), 0, 0) == node->v.name.size)
+		String16 data_file_name = Str16((U16*)data.cFileName, wcslen(data.cFileName));
+		String8 data_file_name_8 = Str8From16(scratch.arena, data_file_name);
+		if (FindSubstr8(data_file_name_8, Str8Lit(".json"), 0, 0) == data_file_name_8.size)
 		{
 			continue;
 		}
 
-		String8 file_name = PushStr8F(arena, "%S%S", 
+		total_bytes_processed += (data.nFileSizeHigh * (MAXDWORD+1)) + data.nFileSizeLow;
+		Temp scratch = ScratchBegin(&arena, 1);
+		String8 bundle_file_name = PushStr8F(scratch.arena, "%S\\%S", 
 		                              dir_name, 
-										node->v.name);
+		                              data_file_name_8);
 		ResourceType type = ResourceType::Unknown;
 
 		count++;
-		void* resource = Deserialize_File(arena, file_name, &type);
+		void* resource = Deserialize_File(arena, options, bundle_file_name, &type);
+		ScratchEnd(scratch);
 
-#if 0
-		if (type == ResourceType::Bundle)
+	} while (FindNextFileW(handle, &data));
+
+	printf("DONE, count: %d\n", count);
+
+
+	// TODO(agw); behind some define? deserialization_options somehow?
+	PrintLog(&global_log);
+
+
+	if (should_profile)
+	{
+		EndAndPrintProfile();
+		u64 CPUFreq = EstimateCPUTimerFreq();
+	
+	
+		u64 deserialization_elapsed = 0;
+		for(int i = 1; ArrayCount(GlobalProfiler.Anchors); i++)
 		{
-			fhir_r4::Bundle* bundle = (fhir_r4::Bundle*)resource;
-			if (bundle->entry_count > 0)
+			if (GlobalProfiler.Anchors[i].Label != NULL &&
+				strcmp(GlobalProfiler.Anchors[i].Label, "Resource_Deserialize_SIMDJSON") == 0)
 			{
-				for (int i = 0; i < bundle->entry_count; i++)
-				{
-					String8 resource_type = String8FromResourceType((ResourceType)bundle->entry[i].resource->resourceType);
-					printf("Entry resource type: %.*s\n", resource_type.size, resource_type.str);
-				}
+				deserialization_elapsed = GlobalProfiler.Anchors[i].TSCElapsed;
+				break;
 			}
-			break;
 		}
-#endif
-
+	
+	
+		printf("Deserialized %d bundles, %0.4f GB\n", count, (f64)total_bytes_processed / (1024 * 1024 * 1024));
+		f64 milliseconds = 1000.0 * (f64)deserialization_elapsed / (f64)CPUFreq;
+		printf("Deserialization Time: %0.4fms (%llu)\n", milliseconds, deserialization_elapsed);
+		printf("Total Bytes Processed: %llu \n", total_bytes_processed);
+	
+		printf("\nTime per bundle: %0.4fms (CPU freq %llu)\n", milliseconds / count, CPUFreq);
+	
+		f64 gigabytes = (f64)total_bytes_processed / Gigabytes(1);
+		f64 seconds = milliseconds / 1000.0;
+	
+		printf("Gigabytes: %0.4fGB \n", gigabytes);
+		printf("Seconds: %0.4fs \n", seconds);
+		printf("Deserialization GB/s: %0.4f(GB/s) \n", gigabytes / seconds);
+	
+		char buff[4096];
+		sprintf(buff, "Deserialization GB/s: %0.4f(GB/s) \n", gigabytes / seconds);
+	
+		FILE *f = fopen("tests.txt", "a");
+		fwrite(buff, strlen(buff), 1, f);
+		fclose(f);
 	}
 
-	printf("Deserialized %d bundles\n", count);
-	//String8 serialized = Resource_Serialize(arena, res_type, bundle, 0);
-
-	//printf("%.*s\n", serialized.size, serialized.str);
-
-	EndAndPrintProfile();
-	GlobalProfiler.EndTSC = ReadCPUTimer();
-	u64 CPUFreq = EstimateCPUTimerFreq();
-	u64 TotalCPUElapsed = GlobalProfiler.EndTSC - GlobalProfiler.StartTSC;
-	if (count > 0)
-	{
-		TotalCPUElapsed /= count;
-	}
-    
-	if(CPUFreq)
-	{
-		printf("\nTime per bundle: %0.4fms (CPU freq %llu)\n", 1000.0 * (f64)TotalCPUElapsed / (f64)CPUFreq, CPUFreq);
-	}
-	return;
+	return 0;
 }

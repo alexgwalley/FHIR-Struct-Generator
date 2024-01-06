@@ -9,7 +9,7 @@ ThreadCtxAlloc(void)
  {
   tctx.scratch_arenas[arena_idx] = ArenaAlloc(Gigabytes(8));
  }
- tctx.log_arena = ArenaAlloc(Megabytes(64));
+ //tctx.log_arena = ArenaAlloc(Megabytes(64));
  return tctx;
 }
 

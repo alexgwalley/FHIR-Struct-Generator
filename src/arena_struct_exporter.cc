@@ -90,7 +90,7 @@ EnumFromClassMember(Arena *arena, ClassMember *mem)
 }
 
 String8
-GetUnionInternalTypeName(Arena *arena, ValueType type, String8 type_name)
+GetUnionInternalTypeName(Arena *arena, ValueType type, String8 type_name, String8 member_name)
 {
 	Temp scratch = ScratchBegin(&arena, 1);
 	String8 str = PushStr8Copy(scratch.arena, type_name);
@@ -105,17 +105,18 @@ GetUnionInternalTypeName(Arena *arena, ValueType type, String8 type_name)
 
 	str.str[0] = CharToUpper(str.str[0]);
 	String8 result = PushStr8F(arena, 
-	                 "value%.*s",
-	                 str.size, str.str);
+							"%S%S",
+							member_name,
+							str);
 	ScratchEnd(scratch);
 	return result;
 }
 
 String8
-GetClassNameFromUnionName(Arena* arena, String8 union_name)
+GetClassNameFromUnionName(Arena* arena, String8 union_name, String8 member_name)
 {
 	String8 str = PushStr8Copy(arena, union_name);
-	String8 result = Str8Skip(str, 5);
+	String8 result = Str8Skip(str, member_name.size);
 	result.str[0] = CharToUpper(result.str[0]);
 	return result;
 }
@@ -140,7 +141,10 @@ UnionFromClassMember(Arena *arena, ClassMember *mem)
 			Str8ListPush(scratch.arena, &result_list, Str8Lit("*"));
 		}
 
-		String8 internal_name = GetUnionInternalTypeName(scratch.arena, types.types[i], types.type_names[i]);
+		String8 internal_name = GetUnionInternalTypeName(scratch.arena,
+		                                                 types.types[i],
+		                                                 types.type_names[i],
+		                                                 mem->name);
 
 		Str8ListPush(scratch.arena, &result_list, Str8Lit(" "));
 		Str8ListPush(scratch.arena, &result_list, internal_name);

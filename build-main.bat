@@ -1,1 +1,5 @@
-cl main.c fhir_serialize_gen.c string_builder.c arena.c cJSON.c /Zi
+@echo off
+
+pushd build
+cl /Fe:../main.exe /EHsc /MDd ../src/main.cc ../src/arena.c ../src/cJSON.c /Zi /I../src/code
+popd build

@@ -67,7 +67,8 @@ SerializeMemberTypes(Arena *arena, ClassMemberMetadata *mem)
 			              "Str8LitComp(\"%S\")",
 			              GetUnionInternalTypeName(scratch.arena,
 			                                       type.type,
-			                                       type.name));
+			                                       type.name,
+			                                       mem->name));
 		} else {
 			Str8ListPushF(scratch.arena, &result_list,
 			              "Str8LitComp(\"%S\")",

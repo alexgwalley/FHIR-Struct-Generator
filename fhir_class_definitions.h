@@ -6,6 +6,7 @@ typedef String8 fhir_id;
 typedef String8 fhir_markdown;
 typedef String8 fhir_oid;
 typedef String8 fhir_string;
+typedef String8 fhir_xhtml;
 typedef String8 fhir_uri;
 typedef String8 fhir_url;
 typedef String8 fhir_uuid;
@@ -630,7 +631,6 @@ typedef enum class ResourceType {
 	Element,
 	BackboneElement,
 	Integer,
-	Xhtml,
 	Address,
 	Age,
 	Annotation,
@@ -1342,7 +1342,6 @@ class MetadataResource;
 class Element;
 class BackboneElement;
 class Integer;
-class Xhtml;
 class Address;
 class Age;
 class Annotation;
@@ -1534,8 +1533,8 @@ public:
 	SubjeType subject_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* subjectCodeableConcept;
+		Reference* subjectReference;
 	} subject;
 
 	fhir_dateTime date;
@@ -1585,12 +1584,12 @@ public:
 	TiminType timing_type_type;
 
 	union {
-		Timing* valueTiming;
-		fhir_dateTime valueDateTime;
-		Age* valueAge;
-		Period* valuePeriod;
-		Range* valueRange;
-		Duration* valueDuration;
+		Timing* timingTiming;
+		fhir_dateTime timingDateTime;
+		Age* timingAge;
+		Period* timingPeriod;
+		Range* timingRange;
+		Duration* timingDuration;
 	} timing;
 
 	Reference *location;
@@ -1604,8 +1603,8 @@ public:
 	ProduType product_type_type;
 
 	union {
-		Reference* valueReference;
-		CodeableConcept* valueCodeableConcept;
+		Reference* productReference;
+		CodeableConcept* productCodeableConcept;
 	} product;
 
 	Quantity *quantity;
@@ -1748,11 +1747,11 @@ public:
 	OnsetType onset_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Age* valueAge;
-		Period* valuePeriod;
-		Range* valueRange;
-		fhir_string valueString;
+		fhir_dateTime onsetDateTime;
+		Age* onsetAge;
+		Period* onsetPeriod;
+		Range* onsetRange;
+		fhir_string onsetString;
 	} onset;
 
 	fhir_dateTime recordedDate;
@@ -2070,8 +2069,8 @@ public:
 	ColleType collected_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime collectedDateTime;
+		Period* collectedPeriod;
 	} collected;
 
 };
@@ -2094,8 +2093,8 @@ public:
 	Time_Type time_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime timeDateTime;
+		Period* timePeriod;
 	} time;
 
 };
@@ -2116,8 +2115,8 @@ public:
 	Time_Type time_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime timeDateTime;
+		Period* timePeriod;
 	} time;
 
 };
@@ -2585,9 +2584,9 @@ public:
 	SchedType scheduled_type_type;
 
 	union {
-		Timing* valueTiming;
-		Period* valuePeriod;
-		fhir_string valueString;
+		Timing* scheduledTiming;
+		Period* scheduledPeriod;
+		fhir_string scheduledString;
 	} scheduled;
 
 	Reference *location;
@@ -2601,8 +2600,8 @@ public:
 	ProduType product_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* productCodeableConcept;
+		Reference* productReference;
 	} product;
 
 	Quantity *dailyAmount;
@@ -2739,9 +2738,9 @@ public:
 	OccurType occurrence_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
-		Timing* valueTiming;
+		fhir_dateTime occurrenceDateTime;
+		Period* occurrencePeriod;
+		Timing* occurrenceTiming;
 	} occurrence;
 
 	U64 performer_count;
@@ -2769,8 +2768,8 @@ public:
 	ProduType product_type_type;
 
 	union {
-		Reference* valueReference;
-		CodeableConcept* valueCodeableConcept;
+		Reference* productReference;
+		CodeableConcept* productCodeableConcept;
 	} product;
 
 	U64 account_count;
@@ -2983,8 +2982,8 @@ public:
 	TiminType timing_type_type;
 
 	union {
-		fhir_date valueDate;
-		Period* valuePeriod;
+		fhir_date timingDate;
+		Period* timingPeriod;
 	} timing;
 
 	enum class ValueType {
@@ -3024,8 +3023,8 @@ public:
 	DiagnType diagnosis_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* diagnosisCodeableConcept;
+		Reference* diagnosisReference;
 	} diagnosis;
 
 	U64 type_count;
@@ -3053,8 +3052,8 @@ public:
 	ProceType procedure_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* procedureCodeableConcept;
+		Reference* procedureReference;
 	} procedure;
 
 	U64 udi_count;
@@ -3095,8 +3094,8 @@ public:
 	LocatType location_type_type;
 
 	union {
-		Address* valueAddress;
-		Reference* valueReference;
+		Address* locationAddress;
+		Reference* locationReference;
 	} location;
 
 };
@@ -3132,8 +3131,8 @@ public:
 	ServiType serviced_type_type;
 
 	union {
-		fhir_date valueDate;
-		Period* valuePeriod;
+		fhir_date servicedDate;
+		Period* servicedPeriod;
 	} serviced;
 
 	enum class LocatType {
@@ -3145,9 +3144,9 @@ public:
 	LocatType location_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Address* valueAddress;
-		Reference* valueReference;
+		CodeableConcept* locationCodeableConcept;
+		Address* locationAddress;
+		Reference* locationReference;
 	} location;
 
 	Quantity *quantity;
@@ -3351,8 +3350,8 @@ public:
 	ServiType serviced_type_type;
 
 	union {
-		fhir_date valueDate;
-		Period* valuePeriod;
+		fhir_date servicedDate;
+		Period* servicedPeriod;
 	} serviced;
 
 	enum class LocatType {
@@ -3364,9 +3363,9 @@ public:
 	LocatType location_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Address* valueAddress;
-		Reference* valueReference;
+		CodeableConcept* locationCodeableConcept;
+		Address* locationAddress;
+		Reference* locationReference;
 	} location;
 
 	Quantity *quantity;
@@ -3521,8 +3520,8 @@ public:
 	EffecType effective_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime effectiveDateTime;
+		Period* effectivePeriod;
 	} effective;
 
 	fhir_dateTime date;
@@ -3776,9 +3775,9 @@ public:
 	ConteType content_type_type;
 
 	union {
-		fhir_string valueString;
-		Attachment* valueAttachment;
-		Reference* valueReference;
+		fhir_string contentString;
+		Attachment* contentAttachment;
+		Reference* contentReference;
 	} content;
 
 };
@@ -3825,8 +3824,8 @@ public:
 	OccurType occurrence_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime occurrenceDateTime;
+		Period* occurrencePeriod;
 	} occurrence;
 
 	fhir_dateTime authoredOn;
@@ -3858,9 +3857,9 @@ public:
 	ConteType content_type_type;
 
 	union {
-		fhir_string valueString;
-		Attachment* valueAttachment;
-		Reference* valueReference;
+		fhir_string contentString;
+		Attachment* contentAttachment;
+		Reference* contentReference;
 	} content;
 
 };
@@ -3974,8 +3973,8 @@ public:
 	TargeType target_type_type;
 
 	union {
-		Identifier* valueIdentifier;
-		Reference* valueReference;
+		Identifier* targetIdentifier;
+		Reference* targetReference;
 	} target;
 
 };
@@ -4055,8 +4054,8 @@ public:
 	SourcType source_type_type;
 
 	union {
-		fhir_uri valueUri;
-		fhir_canonical valueCanonical;
+		fhir_uri sourceUri;
+		fhir_canonical sourceCanonical;
 	} source;
 
 	enum class TargeType {
@@ -4067,8 +4066,8 @@ public:
 	TargeType target_type_type;
 
 	union {
-		fhir_uri valueUri;
-		fhir_canonical valueCanonical;
+		fhir_uri targetUri;
+		fhir_canonical targetCanonical;
 	} target;
 
 	U64 group_count;
@@ -4183,11 +4182,11 @@ public:
 	OnsetType onset_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Age* valueAge;
-		Period* valuePeriod;
-		Range* valueRange;
-		fhir_string valueString;
+		fhir_dateTime onsetDateTime;
+		Age* onsetAge;
+		Period* onsetPeriod;
+		Range* onsetRange;
+		fhir_string onsetString;
 	} onset;
 
 	enum class AbateType {
@@ -4201,11 +4200,11 @@ public:
 	AbateType abatement_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Age* valueAge;
-		Period* valuePeriod;
-		Range* valueRange;
-		fhir_string valueString;
+		fhir_dateTime abatementDateTime;
+		Age* abatementAge;
+		Period* abatementPeriod;
+		Range* abatementRange;
+		fhir_string abatementString;
 	} abatement;
 
 	fhir_dateTime recordedDate;
@@ -4278,8 +4277,8 @@ public:
 	SourcType source_type_type;
 
 	union {
-		Attachment* valueAttachment;
-		Reference* valueReference;
+		Attachment* sourceAttachment;
+		Reference* sourceReference;
 	} source;
 
 	U64 policy_count;
@@ -4411,8 +4410,8 @@ public:
 	TopicType topic_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* topicCodeableConcept;
+		Reference* topicReference;
 	} topic;
 
 	CodeableConcept *type;
@@ -4441,8 +4440,8 @@ public:
 	LegalType legallyBinding_type_type;
 
 	union {
-		Attachment* valueAttachment;
-		Reference* valueReference;
+		Attachment* legallyBindingAttachment;
+		Reference* legallyBindingReference;
 	} legallyBinding;
 
 };
@@ -4480,8 +4479,8 @@ public:
 	TopicType topic_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* topicCodeableConcept;
+		Reference* topicReference;
 	} topic;
 
 	CodeableConcept *type;
@@ -4655,8 +4654,8 @@ public:
 	EntitType entity_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* entityCodeableConcept;
+		Reference* entityReference;
 	} entity;
 
 	Identifier *identifier;
@@ -4703,9 +4702,9 @@ public:
 	OccurType occurrence_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
-		Timing* valueTiming;
+		fhir_dateTime occurrenceDateTime;
+		Period* occurrencePeriod;
+		Timing* occurrenceTiming;
 	} occurrence;
 
 	U64 requester_count;
@@ -4772,8 +4771,8 @@ public:
 	ConteType content_type_type;
 
 	union {
-		Attachment* valueAttachment;
-		Reference* valueReference;
+		Attachment* contentAttachment;
+		Reference* contentReference;
 	} content;
 
 };
@@ -4793,8 +4792,8 @@ public:
 	ConteType content_type_type;
 
 	union {
-		Attachment* valueAttachment;
-		Reference* valueReference;
+		Attachment* contentAttachment;
+		Reference* contentReference;
 	} content;
 
 };
@@ -4814,8 +4813,8 @@ public:
 	ConteType content_type_type;
 
 	union {
-		Attachment* valueAttachment;
-		Reference* valueReference;
+		Attachment* contentAttachment;
+		Reference* contentReference;
 	} content;
 
 };
@@ -4932,8 +4931,8 @@ public:
 	ServiType serviced_type_type;
 
 	union {
-		fhir_date valueDate;
-		Period* valuePeriod;
+		fhir_date servicedDate;
+		Period* servicedPeriod;
 	} serviced;
 
 	fhir_dateTime created;
@@ -5011,8 +5010,8 @@ public:
 	DiagnType diagnosis_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* diagnosisCodeableConcept;
+		Reference* diagnosisReference;
 	} diagnosis;
 
 };
@@ -5044,8 +5043,8 @@ public:
 	ServiType serviced_type_type;
 
 	union {
-		fhir_date valueDate;
-		Period* valuePeriod;
+		fhir_date servicedDate;
+		Period* servicedPeriod;
 	} serviced;
 
 	fhir_dateTime created;
@@ -5119,9 +5118,9 @@ public:
 	AllowType allowed_type_type;
 
 	union {
-		fhir_unsignedInt valueUnsignedInt;
-		fhir_string valueString;
-		Money* valueMoney;
+		fhir_unsignedInt allowedUnsignedInt;
+		fhir_string allowedString;
+		Money* allowedMoney;
 	} allowed;
 
 	enum class Used_Type {
@@ -5133,9 +5132,9 @@ public:
 	Used_Type used_type_type;
 
 	union {
-		fhir_unsignedInt valueUnsignedInt;
-		fhir_string valueString;
-		Money* valueMoney;
+		fhir_unsignedInt usedUnsignedInt;
+		fhir_string usedString;
+		Money* usedMoney;
 	} used;
 
 };
@@ -5177,8 +5176,8 @@ public:
 	IdentType identified_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime identifiedDateTime;
+		Period* identifiedPeriod;
 	} identified;
 
 	Reference *author;
@@ -5356,8 +5355,8 @@ public:
 	ManufType manufacturer_type_type;
 
 	union {
-		fhir_string valueString;
-		Reference* valueReference;
+		fhir_string manufacturerString;
+		Reference* manufacturerReference;
 	} manufacturer;
 
 	U64 deviceName_count;
@@ -5538,8 +5537,8 @@ public:
 	Code_Type code_type_type;
 
 	union {
-		Reference* valueReference;
-		CodeableConcept* valueCodeableConcept;
+		Reference* codeReference;
+		CodeableConcept* codeCodeableConcept;
 	} code;
 
 	U64 parameter_count;
@@ -5555,9 +5554,9 @@ public:
 	OccurType occurrence_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
-		Timing* valueTiming;
+		fhir_dateTime occurrenceDateTime;
+		Period* occurrencePeriod;
+		Timing* occurrenceTiming;
 	} occurrence;
 
 	fhir_dateTime authoredOn;
@@ -5634,9 +5633,9 @@ public:
 	TiminType timing_type_type;
 
 	union {
-		Timing* valueTiming;
-		Period* valuePeriod;
-		fhir_dateTime valueDateTime;
+		Timing* timingTiming;
+		Period* timingPeriod;
+		fhir_dateTime timingDateTime;
 	} timing;
 
 	fhir_dateTime recordedOn;
@@ -5682,8 +5681,8 @@ public:
 	EffecType effective_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime effectiveDateTime;
+		Period* effectivePeriod;
 	} effective;
 
 	fhir_instant issued;
@@ -6295,8 +6294,8 @@ public:
 	SubjeType subject_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* subjectCodeableConcept;
+		Reference* subjectReference;
 	} subject;
 
 	fhir_dateTime date;
@@ -6460,12 +6459,12 @@ public:
 	DefinType definition_type_type;
 
 	union {
-		Reference* valueReference;
-		fhir_canonical valueCanonical;
-		CodeableConcept* valueCodeableConcept;
-		Expression* valueExpression;
-		DataRequirement* valueDataRequirement;
-		TriggerDefinition* valueTriggerDefinition;
+		Reference* definitionReference;
+		fhir_canonical definitionCanonical;
+		CodeableConcept* definitionCodeableConcept;
+		Expression* definitionExpression;
+		DataRequirement* definitionDataRequirement;
+		TriggerDefinition* definitionTriggerDefinition;
 	} definition;
 
 	U64 usageContext_count;
@@ -6481,10 +6480,10 @@ public:
 	PartiType participantEffective_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
-		Duration* valueDuration;
-		Timing* valueTiming;
+		fhir_dateTime participantEffectiveDateTime;
+		Period* participantEffectivePeriod;
+		Duration* participantEffectiveDuration;
+		Timing* participantEffectiveTiming;
 	} participantEffective;
 
 	Duration *timeFromStart;
@@ -6773,8 +6772,8 @@ public:
 	TiminType timing_type_type;
 
 	union {
-		fhir_date valueDate;
-		Period* valuePeriod;
+		fhir_date timingDate;
+		Period* timingPeriod;
 	} timing;
 
 	enum class ValueType {
@@ -6814,8 +6813,8 @@ public:
 	DiagnType diagnosis_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* diagnosisCodeableConcept;
+		Reference* diagnosisReference;
 	} diagnosis;
 
 	U64 type_count;
@@ -6843,8 +6842,8 @@ public:
 	ProceType procedure_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* procedureCodeableConcept;
+		Reference* procedureReference;
 	} procedure;
 
 	U64 udi_count;
@@ -6881,8 +6880,8 @@ public:
 	LocatType location_type_type;
 
 	union {
-		Address* valueAddress;
-		Reference* valueReference;
+		Address* locationAddress;
+		Reference* locationReference;
 	} location;
 
 };
@@ -6918,8 +6917,8 @@ public:
 	ServiType serviced_type_type;
 
 	union {
-		fhir_date valueDate;
-		Period* valuePeriod;
+		fhir_date servicedDate;
+		Period* servicedPeriod;
 	} serviced;
 
 	enum class LocatType {
@@ -6931,9 +6930,9 @@ public:
 	LocatType location_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Address* valueAddress;
-		Reference* valueReference;
+		CodeableConcept* locationCodeableConcept;
+		Address* locationAddress;
+		Reference* locationReference;
 	} location;
 
 	Quantity *quantity;
@@ -7052,8 +7051,8 @@ public:
 	ServiType serviced_type_type;
 
 	union {
-		fhir_date valueDate;
-		Period* valuePeriod;
+		fhir_date servicedDate;
+		Period* servicedPeriod;
 	} serviced;
 
 	enum class LocatType {
@@ -7065,9 +7064,9 @@ public:
 	LocatType location_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Address* valueAddress;
-		Reference* valueReference;
+		CodeableConcept* locationCodeableConcept;
+		Address* locationAddress;
+		Reference* locationReference;
 	} location;
 
 	Quantity *quantity;
@@ -7201,9 +7200,9 @@ public:
 	AllowType allowed_type_type;
 
 	union {
-		fhir_unsignedInt valueUnsignedInt;
-		fhir_string valueString;
-		Money* valueMoney;
+		fhir_unsignedInt allowedUnsignedInt;
+		fhir_string allowedString;
+		Money* allowedMoney;
 	} allowed;
 
 	enum class Used_Type {
@@ -7214,8 +7213,8 @@ public:
 	Used_Type used_type_type;
 
 	union {
-		fhir_unsignedInt valueUnsignedInt;
-		Money* valueMoney;
+		fhir_unsignedInt usedUnsignedInt;
+		Money* usedMoney;
 	} used;
 
 };
@@ -7255,9 +7254,9 @@ public:
 	Born_Type born_type_type;
 
 	union {
-		Period* valuePeriod;
-		fhir_date valueDate;
-		fhir_string valueString;
+		Period* bornPeriod;
+		fhir_date bornDate;
+		fhir_string bornString;
 	} born;
 
 	enum class Age_tType {
@@ -7269,9 +7268,9 @@ public:
 	Age_tType age_type_type;
 
 	union {
-		Age* valueAge;
-		Range* valueRange;
-		fhir_string valueString;
+		Age* ageAge;
+		Range* ageRange;
+		fhir_string ageString;
 	} age;
 
 	fhir_boolean estimatedAge;
@@ -7286,11 +7285,11 @@ public:
 	DeceaType deceased_type_type;
 
 	union {
-		fhir_boolean valueBoolean;
-		Age* valueAge;
-		Range* valueRange;
-		fhir_date valueDate;
-		fhir_string valueString;
+		fhir_boolean deceasedBoolean;
+		Age* deceasedAge;
+		Range* deceasedRange;
+		fhir_date deceasedDate;
+		fhir_string deceasedString;
 	} deceased;
 
 	U64 reasonCode_count;
@@ -7323,10 +7322,10 @@ public:
 	OnsetType onset_type_type;
 
 	union {
-		Age* valueAge;
-		Range* valueRange;
-		Period* valuePeriod;
-		fhir_string valueString;
+		Age* onsetAge;
+		Range* onsetRange;
+		Period* onsetPeriod;
+		fhir_string onsetString;
 	} onset;
 
 	U64 note_count;
@@ -7388,8 +7387,8 @@ public:
 	StartType start_type_type;
 
 	union {
-		fhir_date valueDate;
-		CodeableConcept* valueCodeableConcept;
+		fhir_date startDate;
+		CodeableConcept* startCodeableConcept;
 	} start;
 
 	U64 target_count;
@@ -7428,13 +7427,13 @@ public:
 	DetaiType detail_type_type;
 
 	union {
-		Quantity* valueQuantity;
-		Range* valueRange;
-		CodeableConcept* valueCodeableConcept;
-		fhir_string valueString;
-		fhir_boolean valueBoolean;
-		Integer* valueInteger;
-		Ratio* valueRatio;
+		Quantity* detailQuantity;
+		Range* detailRange;
+		CodeableConcept* detailCodeableConcept;
+		fhir_string detailString;
+		fhir_boolean detailBoolean;
+		Integer* detailInteger;
+		Ratio* detailRatio;
 	} detail;
 
 	enum class Due_tType {
@@ -7445,8 +7444,8 @@ public:
 	Due_tType due_type_type;
 
 	union {
-		fhir_date valueDate;
-		Duration* valueDuration;
+		fhir_date dueDate;
+		Duration* dueDuration;
 	} due;
 
 };
@@ -7626,9 +7625,9 @@ public:
 	ModulType module_type_type;
 
 	union {
-		fhir_uri valueUri;
-		fhir_canonical valueCanonical;
-		CodeableConcept* valueCodeableConcept;
+		fhir_uri moduleUri;
+		fhir_canonical moduleCanonical;
+		CodeableConcept* moduleCodeableConcept;
 	} module;
 
 	fhir_code status;
@@ -7863,8 +7862,8 @@ public:
 	OccurType occurrence_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		fhir_string valueString;
+		fhir_dateTime occurrenceDateTime;
+		fhir_string occurrenceString;
 	} occurrence;
 
 	fhir_dateTime recorded;
@@ -7954,8 +7953,8 @@ public:
 	DoseNType doseNumber_type_type;
 
 	union {
-		fhir_positiveInt valuePositiveInt;
-		fhir_string valueString;
+		fhir_positiveInt doseNumberPositiveInt;
+		fhir_string doseNumberString;
 	} doseNumber;
 
 	enum class SerieType {
@@ -7966,8 +7965,8 @@ public:
 	SerieType seriesDoses_type_type;
 
 	union {
-		fhir_positiveInt valuePositiveInt;
-		fhir_string valueString;
+		fhir_positiveInt seriesDosesPositiveInt;
+		fhir_string seriesDosesString;
 	} seriesDoses;
 
 };
@@ -8006,8 +8005,8 @@ public:
 	DoseNType doseNumber_type_type;
 
 	union {
-		fhir_positiveInt valuePositiveInt;
-		fhir_string valueString;
+		fhir_positiveInt doseNumberPositiveInt;
+		fhir_string doseNumberString;
 	} doseNumber;
 
 	enum class SerieType {
@@ -8018,8 +8017,8 @@ public:
 	SerieType seriesDoses_type_type;
 
 	union {
-		fhir_positiveInt valuePositiveInt;
-		fhir_string valueString;
+		fhir_positiveInt seriesDosesPositiveInt;
+		fhir_string seriesDosesString;
 	} seriesDoses;
 
 };
@@ -8073,8 +8072,8 @@ public:
 	DoseNType doseNumber_type_type;
 
 	union {
-		fhir_positiveInt valuePositiveInt;
-		fhir_string valueString;
+		fhir_positiveInt doseNumberPositiveInt;
+		fhir_string doseNumberString;
 	} doseNumber;
 
 	enum class SerieType {
@@ -8085,8 +8084,8 @@ public:
 	SerieType seriesDoses_type_type;
 
 	union {
-		fhir_positiveInt valuePositiveInt;
-		fhir_string valueString;
+		fhir_positiveInt seriesDosesPositiveInt;
+		fhir_string seriesDosesString;
 	} seriesDoses;
 
 	U64 supportingImmunization_count;
@@ -8219,8 +8218,8 @@ public:
 	ExampType example_type_type;
 
 	union {
-		fhir_boolean valueBoolean;
-		fhir_canonical valueCanonical;
+		fhir_boolean exampleBoolean;
+		fhir_canonical exampleCanonical;
 	} example;
 
 	fhir_id groupingId;
@@ -8241,8 +8240,8 @@ public:
 	Name_Type name_type_type;
 
 	union {
-		fhir_url valueUrl;
-		Reference* valueReference;
+		fhir_url nameUrl;
+		Reference* nameReference;
 	} name;
 
 	fhir_string title;
@@ -8308,8 +8307,8 @@ public:
 	ExampType example_type_type;
 
 	union {
-		fhir_boolean valueBoolean;
-		fhir_canonical valueCanonical;
+		fhir_boolean exampleBoolean;
+		fhir_canonical exampleCanonical;
 	} example;
 
 	fhir_url relativePath;
@@ -8552,8 +8551,8 @@ public:
 	ChargType chargeItem_type_type;
 
 	union {
-		Reference* valueReference;
-		CodeableConcept* valueCodeableConcept;
+		Reference* chargeItemReference;
+		CodeableConcept* chargeItemCodeableConcept;
 	} chargeItem;
 
 	U64 priceComponent_count;
@@ -8604,8 +8603,8 @@ public:
 	SubjeType subject_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* subjectCodeableConcept;
+		Reference* subjectReference;
 	} subject;
 
 	fhir_dateTime date;
@@ -8811,8 +8810,8 @@ public:
 	SubjeType subject_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* subjectCodeableConcept;
+		Reference* subjectReference;
 	} subject;
 
 	fhir_dateTime date;
@@ -9070,8 +9069,8 @@ public:
 	CreatType created_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime createdDateTime;
+		Period* createdPeriod;
 	} created;
 
 	fhir_instant issued;
@@ -9130,8 +9129,8 @@ public:
 	Item_Type item_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* itemCodeableConcept;
+		Reference* itemReference;
 	} item;
 
 	fhir_boolean isActive;
@@ -9180,8 +9179,8 @@ public:
 	MedicType medication_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* medicationCodeableConcept;
+		Reference* medicationReference;
 	} medication;
 
 	Reference *subject;
@@ -9196,8 +9195,8 @@ public:
 	EffecType effective_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime effectiveDateTime;
+		Period* effectivePeriod;
 	} effective;
 
 	U64 performer_count;
@@ -9247,8 +9246,8 @@ public:
 	Rate_Type rate_type_type;
 
 	union {
-		Ratio* valueRatio;
-		Quantity* valueQuantity;
+		Ratio* rateRatio;
+		Quantity* rateQuantity;
 	} rate;
 
 };
@@ -9279,8 +9278,8 @@ public:
 	StatuType statusReason_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* statusReasonCodeableConcept;
+		Reference* statusReasonReference;
 	} statusReason;
 
 	CodeableConcept *category;
@@ -9292,8 +9291,8 @@ public:
 	MedicType medication_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* medicationCodeableConcept;
+		Reference* medicationReference;
 	} medication;
 
 	Reference *subject;
@@ -9440,8 +9439,8 @@ public:
 	Item_Type item_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* itemCodeableConcept;
+		Reference* itemReference;
 	} item;
 
 	fhir_boolean isActive;
@@ -9488,8 +9487,8 @@ public:
 	IndicType indication_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* indicationCodeableConcept;
+		Reference* indicationReference;
 	} indication;
 
 	U64 patientCharacteristics_count;
@@ -9523,8 +9522,8 @@ public:
 	CharaType characteristic_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Quantity* valueQuantity;
+		CodeableConcept* characteristicCodeableConcept;
+		Quantity* characteristicQuantity;
 	} characteristic;
 
 	U64 value_count;
@@ -9671,8 +9670,8 @@ public:
 	ReporType reported_type_type;
 
 	union {
-		fhir_boolean valueBoolean;
-		Reference* valueReference;
+		fhir_boolean reportedBoolean;
+		Reference* reportedReference;
 	} reported;
 
 	enum class MedicType {
@@ -9683,8 +9682,8 @@ public:
 	MedicType medication_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* medicationCodeableConcept;
+		Reference* medicationReference;
 	} medication;
 
 	Reference *subject;
@@ -9765,8 +9764,8 @@ public:
 	AllowType allowed_type_type;
 
 	union {
-		fhir_boolean valueBoolean;
-		CodeableConcept* valueCodeableConcept;
+		fhir_boolean allowedBoolean;
+		CodeableConcept* allowedCodeableConcept;
 	} allowed;
 
 	CodeableConcept *reason;
@@ -9803,8 +9802,8 @@ public:
 	MedicType medication_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* medicationCodeableConcept;
+		Reference* medicationReference;
 	} medication;
 
 	Reference *subject;
@@ -9817,8 +9816,8 @@ public:
 	EffecType effective_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime effectiveDateTime;
+		Period* effectivePeriod;
 	} effective;
 
 	fhir_dateTime dateAsserted;
@@ -9956,8 +9955,8 @@ public:
 	IndicType indication_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* indicationCodeableConcept;
+		Reference* indicationReference;
 	} indication;
 
 	CodeableConcept *status;
@@ -10033,8 +10032,8 @@ public:
 	Date_Type date_type_type;
 
 	union {
-		Period* valuePeriod;
-		fhir_dateTime valueDateTime;
+		Period* datePeriod;
+		fhir_dateTime dateDateTime;
 	} date;
 
 	U64 application_count;
@@ -10084,8 +10083,8 @@ public:
 	MedicType medication_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* medicationCodeableConcept;
+		Reference* medicationReference;
 	} medication;
 
 };
@@ -10135,8 +10134,8 @@ public:
 	MedicType medication_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* medicationCodeableConcept;
+		Reference* medicationReference;
 	} medication;
 
 };
@@ -10262,8 +10261,8 @@ public:
 	Item_Type item_type_type;
 
 	union {
-		Reference* valueReference;
-		CodeableConcept* valueCodeableConcept;
+		Reference* itemReference;
+		CodeableConcept* itemCodeableConcept;
 	} item;
 
 };
@@ -10510,8 +10509,8 @@ public:
 	EventType event_type_type;
 
 	union {
-		Coding* valueCoding;
-		fhir_uri valueUri;
+		Coding* eventCoding;
+		fhir_uri eventUri;
 	} event;
 
 	fhir_code category;
@@ -10569,8 +10568,8 @@ public:
 	EventType event_type_type;
 
 	union {
-		Coding* valueCoding;
-		fhir_uri valueUri;
+		Coding* eventCoding;
+		fhir_uri eventUri;
 	} event;
 
 	U64 destination_count;
@@ -10974,8 +10973,8 @@ public:
 	Rate_Type rate_type_type;
 
 	union {
-		Quantity* valueQuantity;
-		Ratio* valueRatio;
+		Quantity* rateQuantity;
+		Ratio* rateRatio;
 	} rate;
 
 };
@@ -11017,10 +11016,10 @@ public:
 	EffecType effective_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
-		Timing* valueTiming;
-		fhir_instant valueInstant;
+		fhir_dateTime effectiveDateTime;
+		Period* effectivePeriod;
+		Timing* effectiveTiming;
+		fhir_instant effectiveInstant;
 	} effective;
 
 	fhir_instant issued;
@@ -11579,8 +11578,8 @@ public:
 	DeceaType deceased_type_type;
 
 	union {
-		fhir_boolean valueBoolean;
-		fhir_dateTime valueDateTime;
+		fhir_boolean deceasedBoolean;
+		fhir_dateTime deceasedDateTime;
 	} deceased;
 
 	U64 address_count;
@@ -11594,8 +11593,8 @@ public:
 	MultiType multipleBirth_type_type;
 
 	union {
-		fhir_boolean valueBoolean;
-		Integer* valueInteger;
+		fhir_boolean multipleBirthBoolean;
+		Integer* multipleBirthInteger;
 	} multipleBirth;
 
 	U64 photo_count;
@@ -11814,8 +11813,8 @@ public:
 	SubjeType subject_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* subjectCodeableConcept;
+		Reference* subjectReference;
 	} subject;
 
 	fhir_dateTime date;
@@ -11889,9 +11888,9 @@ public:
 	DetaiType detail_type_type;
 
 	union {
-		Quantity* valueQuantity;
-		Range* valueRange;
-		CodeableConcept* valueCodeableConcept;
+		Quantity* detailQuantity;
+		Range* detailRange;
+		CodeableConcept* detailCodeableConcept;
 	} detail;
 
 	Duration *due;
@@ -11925,8 +11924,8 @@ public:
 	SubjeType subject_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* subjectCodeableConcept;
+		Reference* subjectReference;
 	} subject;
 
 	U64 trigger_count;
@@ -11951,12 +11950,12 @@ public:
 	TiminType timing_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Age* valueAge;
-		Period* valuePeriod;
-		Duration* valueDuration;
-		Range* valueRange;
-		Timing* valueTiming;
+		fhir_dateTime timingDateTime;
+		Age* timingAge;
+		Period* timingPeriod;
+		Duration* timingDuration;
+		Range* timingRange;
+		Timing* timingTiming;
 	} timing;
 
 	U64 participant_count;
@@ -11975,8 +11974,8 @@ public:
 	DefinType definition_type_type;
 
 	union {
-		fhir_canonical valueCanonical;
-		fhir_uri valueUri;
+		fhir_canonical definitionCanonical;
+		fhir_uri definitionUri;
 	} definition;
 
 	fhir_canonical transform;
@@ -12014,8 +12013,8 @@ public:
 	OffseType offset_type_type;
 
 	union {
-		Duration* valueDuration;
-		Range* valueRange;
+		Duration* offsetDuration;
+		Range* offsetRange;
 	} offset;
 
 };
@@ -12191,11 +12190,11 @@ public:
 	PerfoType performed_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
-		fhir_string valueString;
-		Age* valueAge;
-		Range* valueRange;
+		fhir_dateTime performedDateTime;
+		Period* performedPeriod;
+		fhir_string performedString;
+		Age* performedAge;
+		Range* performedRange;
 	} performed;
 
 	Reference *recorder;
@@ -12274,8 +12273,8 @@ public:
 	OccurType occurred_type_type;
 
 	union {
-		Period* valuePeriod;
-		fhir_dateTime valueDateTime;
+		Period* occurredPeriod;
+		fhir_dateTime occurredDateTime;
 	} occurred;
 
 	fhir_instant recorded;
@@ -12420,16 +12419,16 @@ public:
 	AnsweType answer_type_type;
 
 	union {
-		fhir_boolean valueBoolean;
-		fhir_decimal valueDecimal;
-		Integer* valueInteger;
-		fhir_date valueDate;
-		fhir_dateTime valueDateTime;
-		fhir_time valueTime;
-		fhir_string valueString;
-		Coding* valueCoding;
-		Quantity* valueQuantity;
-		Reference* valueReference;
+		fhir_boolean answerBoolean;
+		fhir_decimal answerDecimal;
+		Integer* answerInteger;
+		fhir_date answerDate;
+		fhir_dateTime answerDateTime;
+		fhir_time answerTime;
+		fhir_string answerString;
+		Coding* answerCoding;
+		Quantity* answerQuantity;
+		Reference* answerReference;
 	} answer;
 
 };
@@ -12712,12 +12711,12 @@ public:
 	TiminType timing_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Age* valueAge;
-		Period* valuePeriod;
-		Duration* valueDuration;
-		Range* valueRange;
-		Timing* valueTiming;
+		fhir_dateTime timingDateTime;
+		Age* timingAge;
+		Period* timingPeriod;
+		Duration* timingDuration;
+		Range* timingRange;
+		Timing* timingTiming;
 	} timing;
 
 	U64 participant_count;
@@ -12761,8 +12760,8 @@ public:
 	OffseType offset_type_type;
 
 	union {
-		Duration* valueDuration;
-		Range* valueRange;
+		Duration* offsetDuration;
+		Range* offsetRange;
 	} offset;
 
 };
@@ -12798,8 +12797,8 @@ public:
 	SubjeType subject_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* subjectCodeableConcept;
+		Reference* subjectReference;
 	} subject;
 
 	fhir_dateTime date;
@@ -12870,8 +12869,8 @@ public:
 	SubjeType subject_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* subjectCodeableConcept;
+		Reference* subjectReference;
 	} subject;
 
 	fhir_dateTime date;
@@ -12928,10 +12927,10 @@ public:
 	DefinType definition_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		fhir_canonical valueCanonical;
-		Expression* valueExpression;
-		DataRequirement* valueDataRequirement;
+		CodeableConcept* definitionCodeableConcept;
+		fhir_canonical definitionCanonical;
+		Expression* definitionExpression;
+		DataRequirement* definitionDataRequirement;
 	} definition;
 
 	U64 usageContext_count;
@@ -12949,10 +12948,10 @@ public:
 	StudyType studyEffective_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
-		Duration* valueDuration;
-		Timing* valueTiming;
+		fhir_dateTime studyEffectiveDateTime;
+		Period* studyEffectivePeriod;
+		Duration* studyEffectiveDuration;
+		Timing* studyEffectiveTiming;
 	} studyEffective;
 
 	Duration *studyEffectiveTimeFromStart;
@@ -12968,10 +12967,10 @@ public:
 	PartiType participantEffective_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
-		Duration* valueDuration;
-		Timing* valueTiming;
+		fhir_dateTime participantEffectiveDateTime;
+		Period* participantEffectivePeriod;
+		Duration* participantEffectiveDuration;
+		Timing* participantEffectiveTiming;
 	} participantEffective;
 
 	Duration *participantEffectiveTimeFromStart;
@@ -13109,8 +13108,8 @@ public:
 	OccurType occurrence_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime occurrenceDateTime;
+		Period* occurrencePeriod;
 	} occurrence;
 
 	Reference *condition;
@@ -13144,8 +13143,8 @@ public:
 	ProbaType probability_type_type;
 
 	union {
-		fhir_decimal valueDecimal;
-		Range* valueRange;
+		fhir_decimal probabilityDecimal;
+		Range* probabilityRange;
 	} probability;
 
 	CodeableConcept *qualitativeRisk;
@@ -13158,8 +13157,8 @@ public:
 	When_Type when_type_type;
 
 	union {
-		Period* valuePeriod;
-		Range* valueRange;
+		Period* whenPeriod;
+		Range* whenRange;
 	} when;
 
 	fhir_string rationale;
@@ -13425,9 +13424,9 @@ public:
 	QuantType quantity_type_type;
 
 	union {
-		Quantity* valueQuantity;
-		Ratio* valueRatio;
-		Range* valueRange;
+		Quantity* quantityQuantity;
+		Ratio* quantityRatio;
+		Range* quantityRange;
 	} quantity;
 
 	Reference *subject;
@@ -13441,9 +13440,9 @@ public:
 	OccurType occurrence_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
-		Timing* valueTiming;
+		fhir_dateTime occurrenceDateTime;
+		Period* occurrencePeriod;
+		Timing* occurrenceTiming;
 	} occurrence;
 
 	enum class AsNeeType {
@@ -13454,8 +13453,8 @@ public:
 	AsNeeType asNeeded_type_type;
 
 	union {
-		fhir_boolean valueBoolean;
-		CodeableConcept* valueCodeableConcept;
+		fhir_boolean asNeededBoolean;
+		CodeableConcept* asNeededCodeableConcept;
 	} asNeeded;
 
 	fhir_dateTime authoredOn;
@@ -13567,8 +13566,8 @@ public:
 	ColleType collected_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime collectedDateTime;
+		Period* collectedPeriod;
 	} collected;
 
 	Duration *duration;
@@ -13583,8 +13582,8 @@ public:
 	FastiType fastingStatus_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Duration* valueDuration;
+		CodeableConcept* fastingStatusCodeableConcept;
+		Duration* fastingStatusDuration;
 	} fastingStatus;
 
 };
@@ -13608,8 +13607,8 @@ public:
 	Time_Type time_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
+		fhir_dateTime timeDateTime;
+		Period* timePeriod;
 	} time;
 
 };
@@ -13635,8 +13634,8 @@ public:
 	AdditType additive_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* additiveCodeableConcept;
+		Reference* additiveReference;
 	} additive;
 
 };
@@ -13704,8 +13703,8 @@ public:
 	MinimType minimumVolume_type_type;
 
 	union {
-		Quantity* valueQuantity;
-		fhir_string valueString;
+		Quantity* minimumVolumeQuantity;
+		fhir_string minimumVolumeString;
 	} minimumVolume;
 
 	U64 additive_count;
@@ -13728,8 +13727,8 @@ public:
 	AdditType additive_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* additiveCodeableConcept;
+		Reference* additiveReference;
 	} additive;
 
 };
@@ -14012,56 +14011,56 @@ public:
 	DefauType defaultValue_type_type;
 
 	union {
-		fhir_base64Binary valueBase64Binary;
-		fhir_boolean valueBoolean;
-		fhir_canonical valueCanonical;
-		fhir_code valueCode;
-		fhir_date valueDate;
-		fhir_dateTime valueDateTime;
-		fhir_decimal valueDecimal;
-		fhir_id valueId;
-		fhir_instant valueInstant;
-		Integer* valueInteger;
-		fhir_markdown valueMarkdown;
-		fhir_oid valueOid;
-		fhir_positiveInt valuePositiveInt;
-		fhir_string valueString;
-		fhir_time valueTime;
-		fhir_unsignedInt valueUnsignedInt;
-		fhir_uri valueUri;
-		fhir_url valueUrl;
-		fhir_uuid valueUuid;
-		Address* valueAddress;
-		Age* valueAge;
-		Annotation* valueAnnotation;
-		Attachment* valueAttachment;
-		CodeableConcept* valueCodeableConcept;
-		Coding* valueCoding;
-		ContactPoint* valueContactPoint;
-		Count* valueCount;
-		Distance* valueDistance;
-		Duration* valueDuration;
-		HumanName* valueHumanName;
-		Identifier* valueIdentifier;
-		Money* valueMoney;
-		Period* valuePeriod;
-		Quantity* valueQuantity;
-		Range* valueRange;
-		Ratio* valueRatio;
-		Reference* valueReference;
-		SampledData* valueSampledData;
-		Signature* valueSignature;
-		Timing* valueTiming;
-		ContactDetail* valueContactDetail;
-		Contributor* valueContributor;
-		DataRequirement* valueDataRequirement;
-		Expression* valueExpression;
-		ParameterDefinition* valueParameterDefinition;
-		RelatedArtifact* valueRelatedArtifact;
-		TriggerDefinition* valueTriggerDefinition;
-		UsageContext* valueUsageContext;
-		Dosage* valueDosage;
-		Meta* valueMeta;
+		fhir_base64Binary defaultValueBase64Binary;
+		fhir_boolean defaultValueBoolean;
+		fhir_canonical defaultValueCanonical;
+		fhir_code defaultValueCode;
+		fhir_date defaultValueDate;
+		fhir_dateTime defaultValueDateTime;
+		fhir_decimal defaultValueDecimal;
+		fhir_id defaultValueId;
+		fhir_instant defaultValueInstant;
+		Integer* defaultValueInteger;
+		fhir_markdown defaultValueMarkdown;
+		fhir_oid defaultValueOid;
+		fhir_positiveInt defaultValuePositiveInt;
+		fhir_string defaultValueString;
+		fhir_time defaultValueTime;
+		fhir_unsignedInt defaultValueUnsignedInt;
+		fhir_uri defaultValueUri;
+		fhir_url defaultValueUrl;
+		fhir_uuid defaultValueUuid;
+		Address* defaultValueAddress;
+		Age* defaultValueAge;
+		Annotation* defaultValueAnnotation;
+		Attachment* defaultValueAttachment;
+		CodeableConcept* defaultValueCodeableConcept;
+		Coding* defaultValueCoding;
+		ContactPoint* defaultValueContactPoint;
+		Count* defaultValueCount;
+		Distance* defaultValueDistance;
+		Duration* defaultValueDuration;
+		HumanName* defaultValueHumanName;
+		Identifier* defaultValueIdentifier;
+		Money* defaultValueMoney;
+		Period* defaultValuePeriod;
+		Quantity* defaultValueQuantity;
+		Range* defaultValueRange;
+		Ratio* defaultValueRatio;
+		Reference* defaultValueReference;
+		SampledData* defaultValueSampledData;
+		Signature* defaultValueSignature;
+		Timing* defaultValueTiming;
+		ContactDetail* defaultValueContactDetail;
+		Contributor* defaultValueContributor;
+		DataRequirement* defaultValueDataRequirement;
+		Expression* defaultValueExpression;
+		ParameterDefinition* defaultValueParameterDefinition;
+		RelatedArtifact* defaultValueRelatedArtifact;
+		TriggerDefinition* defaultValueTriggerDefinition;
+		UsageContext* defaultValueUsageContext;
+		Dosage* defaultValueDosage;
+		Meta* defaultValueMeta;
 	} defaultValue;
 
 	fhir_string element;
@@ -14221,8 +14220,8 @@ public:
 	SubstType substance_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* substanceCodeableConcept;
+		Reference* substanceReference;
 	} substance;
 
 };
@@ -14519,9 +14518,9 @@ public:
 	AmounType amount_type_type;
 
 	union {
-		Quantity* valueQuantity;
-		Range* valueRange;
-		fhir_string valueString;
+		Quantity* amountQuantity;
+		Range* amountRange;
+		fhir_string amountString;
 	} amount;
 
 	CodeableConcept *amountType;
@@ -14703,8 +14702,8 @@ public:
 	AmounType amount_type_type;
 
 	union {
-		Quantity* valueQuantity;
-		fhir_string valueString;
+		Quantity* amountQuantity;
+		fhir_string amountString;
 	} amount;
 
 };
@@ -14727,8 +14726,8 @@ public:
 	DefinType definingSubstance_type_type;
 
 	union {
-		Reference* valueReference;
-		CodeableConcept* valueCodeableConcept;
+		Reference* definingSubstanceReference;
+		CodeableConcept* definingSubstanceCodeableConcept;
 	} definingSubstance;
 
 	enum class AmounType {
@@ -14739,8 +14738,8 @@ public:
 	AmounType amount_type_type;
 
 	union {
-		Quantity* valueQuantity;
-		fhir_string valueString;
+		Quantity* amountQuantity;
+		fhir_string amountString;
 	} amount;
 
 };
@@ -14872,8 +14871,8 @@ public:
 	SubstType substance_type_type;
 
 	union {
-		Reference* valueReference;
-		CodeableConcept* valueCodeableConcept;
+		Reference* substanceReference;
+		CodeableConcept* substanceCodeableConcept;
 	} substance;
 
 	CodeableConcept *relationship;
@@ -14888,10 +14887,10 @@ public:
 	AmounType amount_type_type;
 
 	union {
-		Quantity* valueQuantity;
-		Range* valueRange;
-		Ratio* valueRatio;
-		fhir_string valueString;
+		Quantity* amountQuantity;
+		Range* amountRange;
+		Ratio* amountRatio;
+		fhir_string amountString;
 	} amount;
 
 	Ratio *amountRatioLowLimit;
@@ -14932,9 +14931,9 @@ public:
 	OccurType occurrence_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
-		Timing* valueTiming;
+		fhir_dateTime occurrenceDateTime;
+		Period* occurrencePeriod;
+		Timing* occurrenceTiming;
 	} occurrence;
 
 	Reference *supplier;
@@ -14959,8 +14958,8 @@ public:
 	Item_Type item_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* itemCodeableConcept;
+		Reference* itemReference;
 	} item;
 
 };
@@ -14991,8 +14990,8 @@ public:
 	Item_Type item_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* itemCodeableConcept;
+		Reference* itemReference;
 	} item;
 
 	Quantity *quantity;
@@ -15007,9 +15006,9 @@ public:
 	OccurType occurrence_type_type;
 
 	union {
-		fhir_dateTime valueDateTime;
-		Period* valuePeriod;
-		Timing* valueTiming;
+		fhir_dateTime occurrenceDateTime;
+		Period* occurrencePeriod;
+		Timing* occurrenceTiming;
 	} occurrence;
 
 	fhir_dateTime authoredOn;
@@ -16297,13 +16296,6 @@ public:
 	Extension *extension;
 	fhir_unsignedInt value;
 };
-class Xhtml {
-public: 
-	ResourceType resourceType;
-	fhir_string id;
-	Extension *extension;
-	fhir_string value;
-};
 class Address {
 public: 
 	ResourceType resourceType;
@@ -16348,8 +16340,8 @@ public:
 	AuthoType author_type_type;
 
 	union {
-		Reference* valueReference;
-		fhir_string valueString;
+		Reference* authorReference;
+		fhir_string authorString;
 	} author;
 
 	fhir_dateTime time;
@@ -16454,8 +16446,8 @@ public:
 	SubjeType subject_type_type;
 
 	union {
-		CodeableConcept* valueCodeableConcept;
-		Reference* valueReference;
+		CodeableConcept* subjectCodeableConcept;
+		Reference* subjectReference;
 	} subject;
 
 	U64 mustSupport_count;
@@ -16546,8 +16538,8 @@ public:
 	AsNeeType asNeeded_type_type;
 
 	union {
-		fhir_boolean valueBoolean;
-		CodeableConcept* valueCodeableConcept;
+		fhir_boolean asNeededBoolean;
+		CodeableConcept* asNeededCodeableConcept;
 	} asNeeded;
 
 	CodeableConcept *site;
@@ -16574,8 +16566,8 @@ public:
 	Dose_Type dose_type_type;
 
 	union {
-		Range* valueRange;
-		Quantity* valueQuantity;
+		Range* doseRange;
+		Quantity* doseQuantity;
 	} dose;
 
 	enum class Rate_Type {
@@ -16587,9 +16579,9 @@ public:
 	Rate_Type rate_type_type;
 
 	union {
-		Ratio* valueRatio;
-		Range* valueRange;
-		Quantity* valueQuantity;
+		Ratio* rateRatio;
+		Range* rateRange;
+		Quantity* rateQuantity;
 	} rate;
 
 };
@@ -16690,56 +16682,56 @@ public:
 	DefauType defaultValue_type_type;
 
 	union {
-		fhir_base64Binary valueBase64Binary;
-		fhir_boolean valueBoolean;
-		fhir_canonical valueCanonical;
-		fhir_code valueCode;
-		fhir_date valueDate;
-		fhir_dateTime valueDateTime;
-		fhir_decimal valueDecimal;
-		fhir_id valueId;
-		fhir_instant valueInstant;
-		Integer* valueInteger;
-		fhir_markdown valueMarkdown;
-		fhir_oid valueOid;
-		fhir_positiveInt valuePositiveInt;
-		fhir_string valueString;
-		fhir_time valueTime;
-		fhir_unsignedInt valueUnsignedInt;
-		fhir_uri valueUri;
-		fhir_url valueUrl;
-		fhir_uuid valueUuid;
-		Address* valueAddress;
-		Age* valueAge;
-		Annotation* valueAnnotation;
-		Attachment* valueAttachment;
-		CodeableConcept* valueCodeableConcept;
-		Coding* valueCoding;
-		ContactPoint* valueContactPoint;
-		Count* valueCount;
-		Distance* valueDistance;
-		Duration* valueDuration;
-		HumanName* valueHumanName;
-		Identifier* valueIdentifier;
-		Money* valueMoney;
-		Period* valuePeriod;
-		Quantity* valueQuantity;
-		Range* valueRange;
-		Ratio* valueRatio;
-		Reference* valueReference;
-		SampledData* valueSampledData;
-		Signature* valueSignature;
-		Timing* valueTiming;
-		ContactDetail* valueContactDetail;
-		Contributor* valueContributor;
-		DataRequirement* valueDataRequirement;
-		Expression* valueExpression;
-		ParameterDefinition* valueParameterDefinition;
-		RelatedArtifact* valueRelatedArtifact;
-		TriggerDefinition* valueTriggerDefinition;
-		UsageContext* valueUsageContext;
-		Dosage* valueDosage;
-		Meta* valueMeta;
+		fhir_base64Binary defaultValueBase64Binary;
+		fhir_boolean defaultValueBoolean;
+		fhir_canonical defaultValueCanonical;
+		fhir_code defaultValueCode;
+		fhir_date defaultValueDate;
+		fhir_dateTime defaultValueDateTime;
+		fhir_decimal defaultValueDecimal;
+		fhir_id defaultValueId;
+		fhir_instant defaultValueInstant;
+		Integer* defaultValueInteger;
+		fhir_markdown defaultValueMarkdown;
+		fhir_oid defaultValueOid;
+		fhir_positiveInt defaultValuePositiveInt;
+		fhir_string defaultValueString;
+		fhir_time defaultValueTime;
+		fhir_unsignedInt defaultValueUnsignedInt;
+		fhir_uri defaultValueUri;
+		fhir_url defaultValueUrl;
+		fhir_uuid defaultValueUuid;
+		Address* defaultValueAddress;
+		Age* defaultValueAge;
+		Annotation* defaultValueAnnotation;
+		Attachment* defaultValueAttachment;
+		CodeableConcept* defaultValueCodeableConcept;
+		Coding* defaultValueCoding;
+		ContactPoint* defaultValueContactPoint;
+		Count* defaultValueCount;
+		Distance* defaultValueDistance;
+		Duration* defaultValueDuration;
+		HumanName* defaultValueHumanName;
+		Identifier* defaultValueIdentifier;
+		Money* defaultValueMoney;
+		Period* defaultValuePeriod;
+		Quantity* defaultValueQuantity;
+		Range* defaultValueRange;
+		Ratio* defaultValueRatio;
+		Reference* defaultValueReference;
+		SampledData* defaultValueSampledData;
+		Signature* defaultValueSignature;
+		Timing* defaultValueTiming;
+		ContactDetail* defaultValueContactDetail;
+		Contributor* defaultValueContributor;
+		DataRequirement* defaultValueDataRequirement;
+		Expression* defaultValueExpression;
+		ParameterDefinition* defaultValueParameterDefinition;
+		RelatedArtifact* defaultValueRelatedArtifact;
+		TriggerDefinition* defaultValueTriggerDefinition;
+		UsageContext* defaultValueUsageContext;
+		Dosage* defaultValueDosage;
+		Meta* defaultValueMeta;
 	} defaultValue;
 
 	fhir_markdown meaningWhenMissing;
@@ -16800,56 +16792,56 @@ public:
 	FixedType fixed_type_type;
 
 	union {
-		fhir_base64Binary valueBase64Binary;
-		fhir_boolean valueBoolean;
-		fhir_canonical valueCanonical;
-		fhir_code valueCode;
-		fhir_date valueDate;
-		fhir_dateTime valueDateTime;
-		fhir_decimal valueDecimal;
-		fhir_id valueId;
-		fhir_instant valueInstant;
-		Integer* valueInteger;
-		fhir_markdown valueMarkdown;
-		fhir_oid valueOid;
-		fhir_positiveInt valuePositiveInt;
-		fhir_string valueString;
-		fhir_time valueTime;
-		fhir_unsignedInt valueUnsignedInt;
-		fhir_uri valueUri;
-		fhir_url valueUrl;
-		fhir_uuid valueUuid;
-		Address* valueAddress;
-		Age* valueAge;
-		Annotation* valueAnnotation;
-		Attachment* valueAttachment;
-		CodeableConcept* valueCodeableConcept;
-		Coding* valueCoding;
-		ContactPoint* valueContactPoint;
-		Count* valueCount;
-		Distance* valueDistance;
-		Duration* valueDuration;
-		HumanName* valueHumanName;
-		Identifier* valueIdentifier;
-		Money* valueMoney;
-		Period* valuePeriod;
-		Quantity* valueQuantity;
-		Range* valueRange;
-		Ratio* valueRatio;
-		Reference* valueReference;
-		SampledData* valueSampledData;
-		Signature* valueSignature;
-		Timing* valueTiming;
-		ContactDetail* valueContactDetail;
-		Contributor* valueContributor;
-		DataRequirement* valueDataRequirement;
-		Expression* valueExpression;
-		ParameterDefinition* valueParameterDefinition;
-		RelatedArtifact* valueRelatedArtifact;
-		TriggerDefinition* valueTriggerDefinition;
-		UsageContext* valueUsageContext;
-		Dosage* valueDosage;
-		Meta* valueMeta;
+		fhir_base64Binary fixedBase64Binary;
+		fhir_boolean fixedBoolean;
+		fhir_canonical fixedCanonical;
+		fhir_code fixedCode;
+		fhir_date fixedDate;
+		fhir_dateTime fixedDateTime;
+		fhir_decimal fixedDecimal;
+		fhir_id fixedId;
+		fhir_instant fixedInstant;
+		Integer* fixedInteger;
+		fhir_markdown fixedMarkdown;
+		fhir_oid fixedOid;
+		fhir_positiveInt fixedPositiveInt;
+		fhir_string fixedString;
+		fhir_time fixedTime;
+		fhir_unsignedInt fixedUnsignedInt;
+		fhir_uri fixedUri;
+		fhir_url fixedUrl;
+		fhir_uuid fixedUuid;
+		Address* fixedAddress;
+		Age* fixedAge;
+		Annotation* fixedAnnotation;
+		Attachment* fixedAttachment;
+		CodeableConcept* fixedCodeableConcept;
+		Coding* fixedCoding;
+		ContactPoint* fixedContactPoint;
+		Count* fixedCount;
+		Distance* fixedDistance;
+		Duration* fixedDuration;
+		HumanName* fixedHumanName;
+		Identifier* fixedIdentifier;
+		Money* fixedMoney;
+		Period* fixedPeriod;
+		Quantity* fixedQuantity;
+		Range* fixedRange;
+		Ratio* fixedRatio;
+		Reference* fixedReference;
+		SampledData* fixedSampledData;
+		Signature* fixedSignature;
+		Timing* fixedTiming;
+		ContactDetail* fixedContactDetail;
+		Contributor* fixedContributor;
+		DataRequirement* fixedDataRequirement;
+		Expression* fixedExpression;
+		ParameterDefinition* fixedParameterDefinition;
+		RelatedArtifact* fixedRelatedArtifact;
+		TriggerDefinition* fixedTriggerDefinition;
+		UsageContext* fixedUsageContext;
+		Dosage* fixedDosage;
+		Meta* fixedMeta;
 	} fixed;
 
 	enum class PatteType {
@@ -16908,56 +16900,56 @@ public:
 	PatteType pattern_type_type;
 
 	union {
-		fhir_base64Binary valueBase64Binary;
-		fhir_boolean valueBoolean;
-		fhir_canonical valueCanonical;
-		fhir_code valueCode;
-		fhir_date valueDate;
-		fhir_dateTime valueDateTime;
-		fhir_decimal valueDecimal;
-		fhir_id valueId;
-		fhir_instant valueInstant;
-		Integer* valueInteger;
-		fhir_markdown valueMarkdown;
-		fhir_oid valueOid;
-		fhir_positiveInt valuePositiveInt;
-		fhir_string valueString;
-		fhir_time valueTime;
-		fhir_unsignedInt valueUnsignedInt;
-		fhir_uri valueUri;
-		fhir_url valueUrl;
-		fhir_uuid valueUuid;
-		Address* valueAddress;
-		Age* valueAge;
-		Annotation* valueAnnotation;
-		Attachment* valueAttachment;
-		CodeableConcept* valueCodeableConcept;
-		Coding* valueCoding;
-		ContactPoint* valueContactPoint;
-		Count* valueCount;
-		Distance* valueDistance;
-		Duration* valueDuration;
-		HumanName* valueHumanName;
-		Identifier* valueIdentifier;
-		Money* valueMoney;
-		Period* valuePeriod;
-		Quantity* valueQuantity;
-		Range* valueRange;
-		Ratio* valueRatio;
-		Reference* valueReference;
-		SampledData* valueSampledData;
-		Signature* valueSignature;
-		Timing* valueTiming;
-		ContactDetail* valueContactDetail;
-		Contributor* valueContributor;
-		DataRequirement* valueDataRequirement;
-		Expression* valueExpression;
-		ParameterDefinition* valueParameterDefinition;
-		RelatedArtifact* valueRelatedArtifact;
-		TriggerDefinition* valueTriggerDefinition;
-		UsageContext* valueUsageContext;
-		Dosage* valueDosage;
-		Meta* valueMeta;
+		fhir_base64Binary patternBase64Binary;
+		fhir_boolean patternBoolean;
+		fhir_canonical patternCanonical;
+		fhir_code patternCode;
+		fhir_date patternDate;
+		fhir_dateTime patternDateTime;
+		fhir_decimal patternDecimal;
+		fhir_id patternId;
+		fhir_instant patternInstant;
+		Integer* patternInteger;
+		fhir_markdown patternMarkdown;
+		fhir_oid patternOid;
+		fhir_positiveInt patternPositiveInt;
+		fhir_string patternString;
+		fhir_time patternTime;
+		fhir_unsignedInt patternUnsignedInt;
+		fhir_uri patternUri;
+		fhir_url patternUrl;
+		fhir_uuid patternUuid;
+		Address* patternAddress;
+		Age* patternAge;
+		Annotation* patternAnnotation;
+		Attachment* patternAttachment;
+		CodeableConcept* patternCodeableConcept;
+		Coding* patternCoding;
+		ContactPoint* patternContactPoint;
+		Count* patternCount;
+		Distance* patternDistance;
+		Duration* patternDuration;
+		HumanName* patternHumanName;
+		Identifier* patternIdentifier;
+		Money* patternMoney;
+		Period* patternPeriod;
+		Quantity* patternQuantity;
+		Range* patternRange;
+		Ratio* patternRatio;
+		Reference* patternReference;
+		SampledData* patternSampledData;
+		Signature* patternSignature;
+		Timing* patternTiming;
+		ContactDetail* patternContactDetail;
+		Contributor* patternContributor;
+		DataRequirement* patternDataRequirement;
+		Expression* patternExpression;
+		ParameterDefinition* patternParameterDefinition;
+		RelatedArtifact* patternRelatedArtifact;
+		TriggerDefinition* patternTriggerDefinition;
+		UsageContext* patternUsageContext;
+		Dosage* patternDosage;
+		Meta* patternMeta;
 	} pattern;
 
 	U64 example_count;
@@ -16977,15 +16969,15 @@ public:
 	MinVaType minValue_type_type;
 
 	union {
-		fhir_date valueDate;
-		fhir_dateTime valueDateTime;
-		fhir_instant valueInstant;
-		fhir_time valueTime;
-		fhir_decimal valueDecimal;
-		Integer* valueInteger;
-		fhir_positiveInt valuePositiveInt;
-		fhir_unsignedInt valueUnsignedInt;
-		Quantity* valueQuantity;
+		fhir_date minValueDate;
+		fhir_dateTime minValueDateTime;
+		fhir_instant minValueInstant;
+		fhir_time minValueTime;
+		fhir_decimal minValueDecimal;
+		Integer* minValueInteger;
+		fhir_positiveInt minValuePositiveInt;
+		fhir_unsignedInt minValueUnsignedInt;
+		Quantity* minValueQuantity;
 	} minValue;
 
 	enum class MaxVaType {
@@ -17003,15 +16995,15 @@ public:
 	MaxVaType maxValue_type_type;
 
 	union {
-		fhir_date valueDate;
-		fhir_dateTime valueDateTime;
-		fhir_instant valueInstant;
-		fhir_time valueTime;
-		fhir_decimal valueDecimal;
-		Integer* valueInteger;
-		fhir_positiveInt valuePositiveInt;
-		fhir_unsignedInt valueUnsignedInt;
-		Quantity* valueQuantity;
+		fhir_date maxValueDate;
+		fhir_dateTime maxValueDateTime;
+		fhir_instant maxValueInstant;
+		fhir_time maxValueTime;
+		fhir_decimal maxValueDecimal;
+		Integer* maxValueInteger;
+		fhir_positiveInt maxValuePositiveInt;
+		fhir_unsignedInt maxValueUnsignedInt;
+		Quantity* maxValueQuantity;
 	} maxValue;
 
 	Integer *maxLength;
@@ -17428,7 +17420,7 @@ public:
 	U64 extension_count;
 	Extension *extension;
 	fhir_code status;
-	Xhtml *div;
+	fhir_xhtml div;
 };
 class ParameterDefinition {
 public: 
@@ -17469,8 +17461,8 @@ public:
 	Age_tType age_type_type;
 
 	union {
-		Range* valueRange;
-		CodeableConcept* valueCodeableConcept;
+		Range* ageRange;
+		CodeableConcept* ageCodeableConcept;
 	} age;
 
 	CodeableConcept *gender;
@@ -17615,9 +17607,9 @@ public:
 	AmounType amount_type_type;
 
 	union {
-		Quantity* valueQuantity;
-		Range* valueRange;
-		fhir_string valueString;
+		Quantity* amountQuantity;
+		Range* amountRange;
+		fhir_string amountString;
 	} amount;
 
 	CodeableConcept *amountType;
@@ -17661,9 +17653,9 @@ public:
 	BoundType bounds_type_type;
 
 	union {
-		Duration* valueDuration;
-		Range* valueRange;
-		Period* valuePeriod;
+		Duration* boundsDuration;
+		Range* boundsRange;
+		Period* boundsPeriod;
 	} bounds;
 
 	fhir_positiveInt count;
@@ -17702,10 +17694,10 @@ public:
 	TiminType timing_type_type;
 
 	union {
-		Timing* valueTiming;
-		Reference* valueReference;
-		fhir_date valueDate;
-		fhir_dateTime valueDateTime;
+		Timing* timingTiming;
+		Reference* timingReference;
+		fhir_date timingDate;
+		fhir_dateTime timingDateTime;
 	} timing;
 
 	U64 data_count;

@@ -1,4 +1,5 @@
 
+// TODO(agw): need to add this to final package
 String8 illegal_member_names[] = {
 	Str8Lit("class"),
 	Str8Lit("operator"),
@@ -9,6 +10,19 @@ String8 illegal_member_names[] = {
 	Str8Lit("global"),
 	Str8Lit("resourceType"),
 	Str8Lit("short")
+};
+
+
+String8 illegal_member_names_replacement[] = {
+	Str8Lit("class_"),
+	Str8Lit("operator_"),
+	Str8Lit("template_"),
+	Str8Lit("for_"),
+	Str8Lit("while_"),
+	Str8Lit("function_"),
+	Str8Lit("global_"),
+	Str8Lit("resourceType_"),
+	Str8Lit("short_")
 };
 
 
