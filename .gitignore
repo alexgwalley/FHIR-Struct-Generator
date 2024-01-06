@@ -1,6 +1,6 @@
-build/*
-generated/*
-src/gperf_hash_tables/*
+build/**
+generated/**
+src/gperf_hash_tables/**
 *.exe
 *.ilk
 *.pdb
