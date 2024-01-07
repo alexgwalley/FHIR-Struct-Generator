@@ -3,6 +3,7 @@ generated/**
 src/gperf_hash_tables/
 
 *.exp
+*.10x
 
 # Template
 
