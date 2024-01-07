@@ -2,6 +2,7 @@ build/
 generated/**
 src/gperf_hash_tables/
 
+*.4ed
 *.exp
 *.10x
 

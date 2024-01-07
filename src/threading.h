@@ -1,7 +1,13 @@
 #ifndef THREADING_H
 #define THREADING_H
 
+#ifdef __GNUC__
+#define per_thread __thread
+#elif defined(_MSC_VER)
+#elif __STDC_VERSION__ >= 201112L
+# define per_thread _Thread_local
 # define per_thread __declspec(thread)
+#endif
 typedef struct ThreadCtx ThreadCtx;
 struct ThreadCtx
 {

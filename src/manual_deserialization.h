@@ -11,14 +11,14 @@
 
 namespace fhir_deserialize
 {
-
+    
 	struct MemberNameAndOffset {
 		char *name;
 		size_t offset;
 		size_t member_index;
 		S64 type_index;
 	};
-
+    
 	enum class Cardinality
 	{
 		Unknown,
@@ -28,7 +28,7 @@ namespace fhir_deserialize
 		OneToOne,
 		OneToInf,
 	};
-
+    
 	enum class ValueType {
 		Unknown,
 		Base64Binary,
@@ -54,22 +54,22 @@ namespace fhir_deserialize
 		ResourceType,
 		ArrayCount
 	};
-
-
+    
+    
 	typedef struct ValueTypeAndName ValueTypeAndName;
 	struct ValueTypeAndName
 	{
 		ValueType type;
 		String8 name;
 	};
-
+    
 	typedef struct ValueTypeSizePair ValueTypeSizePair;
 	struct ValueTypeSizePair 
 	{
 		ValueType type;
 		U64 size;
 	};
-
+    
 	ValueTypeSizePair value_type_to_size[] =
 	{
 		{ ValueType::Unknown, 0 },
@@ -96,7 +96,7 @@ namespace fhir_deserialize
 		{ ValueType::ResourceType, ENUM_SIZE },
 		{ ValueType::ArrayCount, sizeof(U64) }
 	};
-
+    
 	enum class ClassMemberType
 	{
 		Unknown,
@@ -104,7 +104,7 @@ namespace fhir_deserialize
 		Enum,
 		Union
 	};
-
+    
 	struct ClassMemberMetadata
 	{
 		String8 name;
@@ -114,7 +114,7 @@ namespace fhir_deserialize
 		U16 size;
 		ValueTypeAndName types[POSSIBLE_TYPES_COUNT];
 	};
-
+    
 	struct ClassMetadata
 	{
 		String8 name;
@@ -122,15 +122,15 @@ namespace fhir_deserialize
 		U64 members_count;
 		ClassMemberMetadata members[METADATA_MEMBER_COUNT];
 	};
-
-
+    
+    
 	struct DeserializationOptions
 	{
 		ClassMetadata *class_metadata;
 		size_t class_metadata_count;
 		bool profile;
 	};
-
+    
 	typedef enum class ResourceType {
 		Unknown,
 		Resource,
@@ -845,12 +845,12 @@ namespace fhir_deserialize
 		Ehrsrle_provenance,
 		RESOURCE_COUNT,
 	} ResourceType;
-
+    
 	typedef struct ResourceTypeString8Pair {
 		ResourceType type;
 		String8 str;
 	} ResourceTypeString8Pair;
-
+    
 	ResourceTypeString8Pair resource_type_pairs[] = {
 		{ResourceType::Unknown, Str8Lit("Unknown")},
 		{ResourceType::Resource, Str8Lit("Resource")},
@@ -1564,14 +1564,14 @@ namespace fhir_deserialize
 		{ResourceType::Ehrsrle_auditevent, Str8Lit("Ehrsrle_auditevent")},
 		{ResourceType::Ehrsrle_provenance, Str8Lit("Ehrsrle_provenance")},
 	};
-
+    
 	enum class JsonItemValueCardinality
 	{
 		None,
 		Single,
 		Array
 	};
-
+    
 	enum class JsonItemType
 	{
 		None,
@@ -1579,7 +1579,7 @@ namespace fhir_deserialize
 		YYJSON,
 		SimdJSON,
 	};
-
+    
 	struct JsonItem
 	{
 #ifdef USE_CJSON
@@ -1588,24 +1588,24 @@ namespace fhir_deserialize
 #ifdef USE_YYJSON
 		yyjson_val *yyjson_value;
 #endif
-
+        
 		simdjson::ondemand::value simdjson_value;
 		simdjson::ondemand::object simdjson_object;
 		simdjson::ondemand::array simdjson_array;
-
+        
 		JsonItemValueCardinality cardinality;
 		JsonItemType type;
 		U64 count;
 	};
-
+    
 	typedef struct SerializationSettings
 	{
-		boolean pretty_print : 1;
+		bool pretty_print : 1;
 	} SerializationSettings;
-
-
+    
+    
 	JsonItem*
-	JsonItemFromcJSON(Arena *arena, cJSON *json);
-
+        JsonItemFromcJSON(Arena *arena, cJSON *json);
+    
 };
 #endif

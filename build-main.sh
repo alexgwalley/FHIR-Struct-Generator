@@ -1,0 +1,1 @@
+g++ -o main src/main.cc -std=c++17 -fwritable-strings -g

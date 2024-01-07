@@ -1,5 +1,5 @@
 #ifndef RESOURCE_H
-#define RESOURCE_HRESOURCE_H
+#define RESOURCE_H
 
 
 enum class Cardinality
@@ -27,7 +27,7 @@ struct ResourceMember
 	String8List value_types;
 	String8 content_reference;
 	Cardinality cardinality;
-
+    
 	ResourceMember(String8 _name,
 	               String8List _value_types,
 	               String8 _content_reference,
@@ -58,7 +58,7 @@ RMListPush(Arena *arena, ResourceMemberList *list, ResourceMember *member)
 {
 	ResourceMemberNode *node = PushArray(arena, ResourceMemberNode, 1);
 	node->member = *member;
-
+    
 	QueuePush(list->first, list->last, node);
 	list->count += 1;
 }
@@ -72,13 +72,13 @@ struct Resource
 	
 	// All unique members of this resource
 	ResourceMemberList members;
-
+    
 	// Ex. Account_Coverage for Resource "Account"
 	ResourceList *sub_resources;
-
+    
 	// Ex. DomainResource for Resource "Account"
 	String8List inherits;
-
+    
 	// Will recursively add a member to interited/sub resources if need be
 	void AddMemberOrSubresourceMember(String8 path, ResourceMember member);
 	void AddSubResource(String8 path, ElementDefinition* def);
@@ -104,7 +104,7 @@ ResourceListPush(Arena *arena, ResourceList *list, Resource *resource)
 {
 	ResourceNode *node = PushArray(arena, ResourceNode, 1);
 	node->resource = *resource;
-
+    
 	QueuePush(list->first, list->last, node);
 	list->count += 1;
 }

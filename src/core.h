@@ -49,9 +49,14 @@ zchk(p) ? (zset((n)->prev), (n)->next = (f), (zchk(f) ? (0) : ((f)->prev = (n)))
 #define DLLInsert(f,l,p,n)       DLLInsert_NPZ(f,l,p,n,next,prev,CheckNull,SetNull)
 #define DLLRemove(f,l,n)         DLLRemove_NPZ(f,l,n,next,prev,CheckNull,SetNull)
 
-#define FOR_EACH(list, it) for(
+#if defined(_MSC_VER)
+#define DebugBreak __debugbreak()
+#else
+#include <signal.h>
+#define DebugBreak raise(SIGTRAP)
+#endif
 
-#define Assert(b) do { if(!(b)) { __debugbreak(); } } while(0)
+#define Assert(b) do { if(!(b)) { DebugBreak; } } while(0)
 
 #define Min(a, b) (((a)<(b)) ? (a) : (b))
 #define Max(a, b) (((a)>(b)) ? (a) : (b))
@@ -68,8 +73,12 @@ zchk(p) ? (zset((n)->prev), (n)->next = (f), (zchk(f) ? (0) : ((f)->prev = (n)))
 #define local_persist  static
 # define no_name_mangle extern "C"
 
+#if defined(_MSC_VER)
 # pragma section(".roglob", read)
 #define read_only __declspec(allocate(".roglob"))
+#else
+#define read_only
+#endif
 
 #define DeferLoop(start, end) for(int _i_ = ((start), 0); _i_ == 0; _i_ += 1, (end))
 
@@ -97,12 +106,12 @@ struct U128 {U64 u64[2];};
 typedef union Rng1U64 Rng1U64;
 union Rng1U64
 {
- struct
- {
-  U64 min;
-  U64 max;
- };
- U64 v[2];
+    struct
+    {
+        U64 min;
+        U64 max;
+    };
+    U64 v[2];
 };
 
 Rng1U64 R1U64(U64 min, U64 max);

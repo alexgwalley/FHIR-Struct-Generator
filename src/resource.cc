@@ -76,16 +76,16 @@ ResourceGetSubResource(Arena *arena, Resource *res, FhirPath resource_path, bool
 				return possible_sub;
 			}
 		}
-
+        
 		bool matches = true;
-
+        
 		FhirPath res_fhir_path = FhirPathFromString8(scratch.arena, resource.name);
-
+        
 		if (res_fhir_path.parts.node_count != path_to_check.parts.node_count)
 		{
 			continue;
 		}
-
+        
 		String8Node *res_part = res_fhir_path.parts.first;
 		String8Node *without_end_part = path_to_check.parts.first;
 		for (int j = 0; j < res_fhir_path.parts.node_count; j++)
@@ -98,15 +98,15 @@ ResourceGetSubResource(Arena *arena, Resource *res, FhirPath resource_path, bool
 			res_part = res_part->next;
 			without_end_part = without_end_part->next;
 		}
-
-
+        
+        
 		if (matches) {
 			ScratchEnd(scratch);
 			return &ptr->resource;
 		}
-
+        
 	}
-
+    
 	ScratchEnd(scratch);
 	return nullptr;
 }
@@ -118,11 +118,11 @@ ResourceHasInherited(Resource *res, String8 resource_name)
 	for (int i = 0; i < res->inherits.node_count; i++)
 	{
 		if (Str8Match(resource_name, ptr->string, 0)) {
-			return TRUE;
+			return true;
 		}
 		ptr = ptr->next;
 	}
-	return FALSE;
+	return false;
 }
 
 void
@@ -135,7 +135,7 @@ ResourceAddInherited(Arena *arena, Resource *res, FhirPath path, String8 resourc
 		return;
 		//ResourceAddInherited(arena, subresource, FhirPathWithoutFront(arena, path), resource_name);
 	}
-
+    
 	Str8ListPush(arena, &to_modify->inherits, resource_name);
 }
 
@@ -146,7 +146,7 @@ CardinalityFromElementDefinition(ElementDefinition *elem_def)
 	B32 max_is_zero = Str8Match(elem_def->max, Str8Lit("0"), 0);
 	B32 max_is_one = Str8Match(elem_def->max, Str8Lit("1"), 0);
 	B32 max_is_inf = Str8Match(elem_def->max, Str8Lit("*"), 0);
-
+    
 	if (elem_def->min == 0.0 && max_is_zero)
 	{
 		return Cardinality::ZeroToZero;
@@ -166,7 +166,7 @@ CardinalityFromElementDefinition(ElementDefinition *elem_def)
 	{
 		return Cardinality::OneToOne;
 	}
-
+    
 	return Cardinality::Unknown;
 }
 
@@ -175,14 +175,14 @@ ResourceMemberFromElementDefinition(Arena *arena, ElementDefinition* elem_def)
 {
 	String8 member_name = FhirPathFinalPart(arena, elem_def->path);
 	Cardinality member_card = CardinalityFromElementDefinition(elem_def);
-
+    
 	ResourceMember *member = PushArray(arena, ResourceMember, 1);
 	member->name = member_name;
 	// NOTE(alex): not sure if we want to copy these lists entirely...what happens if element definition is realeased?
 	member->value_types = elem_def->value_types;
 	member->content_reference = elem_def->content_reference;
 	member->cardinality = member_card;
-
+    
 	return member;
 }
 
@@ -194,19 +194,19 @@ ResourceAddSubResource(Arena *arena, Resource *res, FhirPath path, ElementDefini
 	if (subresource) {
 		to_modify = subresource;
 	}
-
+    
 	Resource *resource = PushArray(arena, Resource, 1);
 	resource->name = Str8FromFhirPath(arena, FhirPathFromString8(arena, elem_def->id));
 	resource->sub_resources = PushArray(arena, ResourceList, 1);
 	ResourceListPush(arena, to_modify->sub_resources, resource);
-
+    
 	ResourceMember *member = ResourceMemberFromElementDefinition(arena, elem_def);
 	String8 class_type_name = ClassNameFromResourceName(arena, elem_def->id);
-
+    
 	String8List member_value_types = { 0 };
 	Str8ListPush(arena, &member_value_types, class_type_name);
 	member->value_types = member_value_types;
-
+    
 	RMListPush(arena, &to_modify->members, member);
 }
 
@@ -218,7 +218,7 @@ ResourceAddMemberOrSubresourceMember(Arena *arena, Resource *res, FhirPath path,
 	if (subresource) {
 		to_modify = subresource;
 	}
-
+    
 	RMListPush(arena, &to_modify->members, member);
 }
 
@@ -234,39 +234,39 @@ ResourceFromStructureDefinition(Arena *arena, StructureDefinition* def)
 			return nullptr;
 		}
 	}
-
+    
 	Resource *result = PushArray(arena, Resource, 1);
 	result->name = Str8FromFhirPath(arena, def->id);
 	result->sub_resources = PushArray(arena, ResourceList, 1);
-
-
+    
+    
 	for (int i = 0; i < def->elements.count; i++) {
 		ElementDefinition elem = def->elements.v[i];
-
+        
 		if (Str8Match(elem.id, Str8FromFhirPath(scratch.arena, def->id), 0)) continue;
 		if (elem.base_path.parts.node_count == 0) continue;
-
+        
 		String8 base_path = FhirPathFromString8(scratch.arena, elem.id).parts.first->string;
 		if (!Str8Match(base_path, def->id.parts.first->string, 0) &&
 			!ResourceGetSubResource(arena, result, FhirPathFromString8(scratch.arena, elem.id), true)) {
 			ResourceAddInherited(arena, result, elem.path, base_path);
 			continue;
 		}
-
+        
 		if (ElementDefinitionIsResource(&elem)) {
 			ResourceAddSubResource(arena, result, elem.path, &elem);
 			continue;
 		}
-
+        
 		// Regular element definition describing something...
 		// could resource or sub resource
 		String8 member_name = FhirPathFinalPart(arena, elem.path);
 		Cardinality member_card = CardinalityFromElementDefinition(&elem);
-
+        
 		ResourceMember *member = ResourceMemberFromElementDefinition(arena, &elem);
 		ResourceAddMemberOrSubresourceMember(arena, result, elem.path, member);
 	}
-
+    
 	ScratchEnd(scratch);
 	return result;
 }
