@@ -1,0 +1,22 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Questionnaire_Item_AnswerOption_MemberLookup
+%enum
+%define word-array-name word_array_Questionnaire_Item_AnswerOption
+%define class-name Questionnaire_Item_AnswerOption_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+valueInteger, 0x40, 7, 0
+valueDate, 0x40, 7, 1
+valueTime, 0x40, 7, 2
+valueString, 0x40, 7, 3
+valueCoding, 0x40, 7, 4
+valueReference, 0x40, 7, 5
+initialSelected, 0x50, 8, -1

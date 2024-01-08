@@ -1,0 +1,57 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name ClaimResponse_MemberLookup
+%enum
+%define word-array-name word_array_ClaimResponse
+%define class-name ClaimResponse_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier_count, 0x78, 12, -1
+identifier, 0x80, 13, -1
+status, 0x88, 14, -1
+type, 0x98, 15, -1
+subType, 0xa0, 16, -1
+use, 0xa8, 17, -1
+patient, 0xb8, 18, -1
+created, 0xc0, 19, -1
+insurer, 0xd0, 20, -1
+requestor, 0xd8, 21, -1
+request, 0xe0, 22, -1
+outcome, 0xe8, 23, -1
+disposition, 0xf8, 24, -1
+preAuthRef, 0x108, 25, -1
+preAuthPeriod, 0x118, 26, -1
+payeeType, 0x120, 27, -1
+item_count, 0x128, 28, -1
+item, 0x130, 29, -1
+addItem_count, 0x138, 30, -1
+addItem, 0x140, 31, -1
+adjudication_count, 0x148, 32, -1
+adjudication, 0x150, 33, -1
+total_count, 0x158, 34, -1
+total, 0x160, 35, -1
+payment, 0x168, 36, -1
+fundsReserve, 0x170, 37, -1
+formCode, 0x178, 38, -1
+form, 0x180, 39, -1
+processNote_count, 0x188, 40, -1
+processNote, 0x190, 41, -1
+communicationRequest_count, 0x198, 42, -1
+communicationRequest, 0x1a0, 43, -1
+insurance_count, 0x1a8, 44, -1
+insurance, 0x1b0, 45, -1
+error_count, 0x1b8, 46, -1
+error, 0x1c0, 47, -1

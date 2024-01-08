@@ -1,0 +1,20 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name SubstanceSourceMaterial_Organism_Hybrid_MemberLookup
+%enum
+%define word-array-name word_array_SubstanceSourceMaterial_Organism_Hybrid
+%define class-name SubstanceSourceMaterial_Organism_Hybrid_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+maternalOrganismId, 0x38, 6, -1
+maternalOrganismName, 0x48, 7, -1
+paternalOrganismId, 0x58, 8, -1
+paternalOrganismName, 0x68, 9, -1
+hybridType, 0x78, 10, -1

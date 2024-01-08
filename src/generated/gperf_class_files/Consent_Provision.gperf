@@ -1,0 +1,35 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Consent_Provision_MemberLookup
+%enum
+%define word-array-name word_array_Consent_Provision
+%define class-name Consent_Provision_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+type, 0x38, 6, -1
+period, 0x48, 7, -1
+actor_count, 0x50, 8, -1
+actor, 0x58, 9, -1
+action_count, 0x60, 10, -1
+action, 0x68, 11, -1
+securityLabel_count, 0x70, 12, -1
+securityLabel, 0x78, 13, -1
+purpose_count, 0x80, 14, -1
+purpose, 0x88, 15, -1
+class__count, 0x90, 16, -1
+class, 0x98, 17, -1
+class_, 0x98, 17, -1
+code_count, 0xa0, 18, -1
+code, 0xa8, 19, -1
+dataPeriod, 0xb0, 20, -1
+data_count, 0xb8, 21, -1
+data, 0xc0, 22, -1
+provision_count, 0xc8, 23, -1
+provision, 0xd0, 24, -1

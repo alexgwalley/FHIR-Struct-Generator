@@ -12,6 +12,8 @@ struct FileEntry
 {
     String8 file_name;
     FileAttributes attr;
+	size_t file_size_low;
+	size_t file_size_high;
 };
 
 struct FileEntries

@@ -1,0 +1,23 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name RiskEvidenceSynthesis_RiskEstimate_MemberLookup
+%enum
+%define word-array-name word_array_RiskEvidenceSynthesis_RiskEstimate
+%define class-name RiskEvidenceSynthesis_RiskEstimate_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+description, 0x38, 6, -1
+type, 0x48, 7, -1
+value, 0x50, 8, -1
+unitOfMeasure, 0x58, 9, -1
+denominatorCount, 0x60, 10, -1
+numeratorCount, 0x68, 11, -1
+precisionEstimate_count, 0x70, 12, -1
+precisionEstimate, 0x78, 13, -1

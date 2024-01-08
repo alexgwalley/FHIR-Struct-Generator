@@ -1,0 +1,32 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Contract_Term_MemberLookup
+%enum
+%define word-array-name word_array_Contract_Term
+%define class-name Contract_Term_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+identifier, 0x38, 6, -1
+issued, 0x40, 7, -1
+applies, 0x50, 8, -1
+topicCodeableConcept, 0x60, 10, 0
+topicReference, 0x60, 10, 1
+type, 0x68, 11, -1
+subType, 0x70, 12, -1
+text, 0x78, 13, -1
+securityLabel_count, 0x88, 14, -1
+securityLabel, 0x90, 15, -1
+offer, 0x98, 16, -1
+asset_count, 0xa0, 17, -1
+asset, 0xa8, 18, -1
+action_count, 0xb0, 19, -1
+action, 0xb8, 20, -1
+group_count, 0xc0, 21, -1
+group, 0xc8, 22, -1

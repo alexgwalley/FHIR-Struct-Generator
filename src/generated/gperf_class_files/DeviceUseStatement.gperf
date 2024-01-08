@@ -1,0 +1,42 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name DeviceUseStatement_MemberLookup
+%enum
+%define word-array-name word_array_DeviceUseStatement
+%define class-name DeviceUseStatement_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier_count, 0x78, 12, -1
+identifier, 0x80, 13, -1
+basedOn_count, 0x88, 14, -1
+basedOn, 0x90, 15, -1
+status, 0x98, 16, -1
+subject, 0xa8, 17, -1
+derivedFrom_count, 0xb0, 18, -1
+derivedFrom, 0xb8, 19, -1
+timingTiming, 0xc8, 21, 0
+timingPeriod, 0xc8, 21, 1
+timingDateTime, 0xc8, 21, 2
+recordedOn, 0xd8, 22, -1
+source, 0xe8, 23, -1
+device, 0xf0, 24, -1
+reasonCode_count, 0xf8, 25, -1
+reasonCode, 0x100, 26, -1
+reasonReference_count, 0x108, 27, -1
+reasonReference, 0x110, 28, -1
+bodySite, 0x118, 29, -1
+note_count, 0x120, 30, -1
+note, 0x128, 31, -1

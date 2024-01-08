@@ -24,7 +24,6 @@
 #include "fhir_class.cc"
 #include "metadata.cc"
 
-//#include "manual_deserialization.cc"
 #include "cJSON.c"
 #include "arena_struct_exporter.cc"
 
@@ -112,17 +111,14 @@ TypedefFromValueType(Arena *arena, StringValueTypePair svtp, ClassDefinitionList
 	switch (svtp.type)
 	{
 		case ValueType::Boolean:
-        return PushStr8F(arena, "typedef int %.*s;\n",
-                         svtp.str.size, svtp.str.str);
+        	return PushStr8F(arena, "typedef int %S;\n", svtp.str);
 		case ValueType::PositiveInt:
 		case ValueType::UnsignedInt:
-        return PushStr8F(arena, "typedef unsigned long %.*s;\n",
-                         svtp.str.size, svtp.str.str);
+        	return PushStr8F(arena, "typedef unsigned long %S;\n", svtp.str);
 		case ValueType::ArrayCount:
-        return Str8Lit("");
+        	return Str8Lit("");
 		case ValueType::Decimal:
-        return PushStr8F(arena, "typedef double %.*s;\n",
-                         svtp.str.size, svtp.str.str);
+        	return PushStr8F(arena, "typedef double %S;\n", svtp.str);
 		case ValueType::ResourceType:
 		{
 			Temp scratch = ScratchBegin(&arena, 1);
@@ -281,7 +277,6 @@ GperfFunctionLookup(Arena *arena, ClassDefinition *def)
 String8
 SingleClassGperf(Arena *arena, ClassDefinition *def)
 {
-    
 	Temp scratch = ScratchBegin(&arena, 1);
 	String8List result_list = { 0 };
     
@@ -373,8 +368,7 @@ SingleClassGperf(Arena *arena, ClassDefinition *def)
 }
 
 void
-OutputGperfFiles(Arena *arena, String8 in_dir_name, ClassDefinitionList *list)
-{
+OutputGperfFiles(Arena *arena, String8 in_dir_name, ClassDefinitionList *list) {
 	// NOTE(agw): guarantee null terminator
 	String8 dir_name = PushStr8Copy(arena, in_dir_name);
     
@@ -386,7 +380,7 @@ OutputGperfFiles(Arena *arena, String8 in_dir_name, ClassDefinitionList *list)
 		OS_CreateDirectory(dir_name);
 	}
     
-	String8 gperf_inc_file_name = PushStr8F(arena, "generated/gperf-inc.cc");
+	String8 gperf_inc_file_name = PushStr8F(arena, "src/generated/gperf-inc.cc");
 	FILE *gperf_inc_file = fopen((char*)gperf_inc_file_name.str, "w");
     
 	for (ClassDefinitionNode *node = list->first;
@@ -416,7 +410,7 @@ OutputGperfFiles(Arena *arena, String8 in_dir_name, ClassDefinitionList *list)
 		fwrite(include_declaration.str, include_declaration.size, 1, gperf_inc_file);
         
 		String8 gperf_call = PushStr8F(arena, 
-		                               "gperf.exe -t %S  --output-file=src/generated/gperf_hash_tables/%S-Member-Lookup.cc -CGD",
+		                               "gperf.exe -t %S --output-file=src/generated/gperf_hash_tables/%S-Member-Lookup.cc -CGD",
 		                               file_name,
                                        node->def.name);
         // TODO(agw): we don't _always_ need to call this
@@ -499,33 +493,37 @@ OutputClassMetadata(Arena *arena, String8 file_name, ClassDefinitionList *list)
 
 int main()
 {
-	// Deserialize fhir files
-	printf("Loading fhir structures...\n");
     
+	ThreadCtx tctx = ThreadCtxAlloc();
+	tctx.is_main_thread = 1;
+	SetThreadCtx(&tctx);
 	Arena *arena = ArenaAlloc(Gigabytes(3));
-    
-	StructureDefinitionList list = { 0 };
-	//TODO(agw): take directory name input
-	GetStructureDefinitionsForFile(arena, &list, Str8Lit("fhir/profiles-resources.json"));
-	GetStructureDefinitionsForFile(arena, &list, Str8Lit("fhir/profiles-types.json"));
-	GetStructureDefinitionsForFile(arena, &list, Str8Lit("fhir/profiles-others.json"));
-    
-	printf("Converting to resources...\n");
-	// Map to resources
-	StructureDefinitionNode *ptr = list.first;
+
 	ResourceList *resource_list = PushStruct(arena, ResourceList);
-	Temp scratch = ScratchBegin(&arena, 1);
-	for (int i = 0; i < list.count; i++)
+    
 	{
-		Resource *res = ResourceFromStructureDefinition(arena, &ptr->def);
-		if (res)
+		// Deserialize fhir files
+		printf("Loading fhir structures...\n");
+		ArenaTempBlock(arena, scratch)
 		{
-			ResourceListPush(arena, resource_list, res);
+			StructureDefinitionList list = { 0 };
+			//TODO(agw): take directory name input
+			GetStructureDefinitionsForFile(arena, &list, Str8Lit("fhir/profiles-resources.json"));
+			GetStructureDefinitionsForFile(arena, &list, Str8Lit("fhir/profiles-types.json"));
+			GetStructureDefinitionsForFile(arena, &list, Str8Lit("fhir/profiles-others.json"));
+    
+			printf("Converting to resources...\n");
+			// Map to resources
+			for (StructureDefinitionNode *node = list.first; node; node = node->next)
+			{
+				Resource *res = ResourceFromStructureDefinition(arena, &node->def);
+				if (res)
+				{
+					ResourceListPush(arena, resource_list, res);
+				}
+			}
 		}
-		ptr = ptr->next;
-		//printf("Resource: %.*s\n", (int)res->name.size, res->name.str);
 	}
-	ScratchEnd(scratch);
     
 	// Map to class definitions
 	ClassDefinitionList class_defs = GetAllClassDefinitions(arena, resource_list);
@@ -533,20 +531,30 @@ int main()
 	// Calculate Metadata and final form
     
 	// Output class definitions
+	{
+		ArenaTempBlock(arena, scratch)
+		{
+			OutputClassDefinitions(scratch.arena,
+			                       Str8Lit("fhir_class_definitions.h"),
+			                       &class_defs);
+		}
+	}
     
-	scratch = ScratchBegin(&arena, 1);
-	OutputClassDefinitions(scratch.arena,
-	                       Str8Lit("fhir_class_definitions.h"),
-	                       &class_defs);
-	ScratchEnd(scratch);
+	{
+		ArenaTempBlock(arena, scratch)
+		{
+			OutputClassMetadata(scratch.arena,
+								Str8Lit("fhir_class_metadata.h"),
+								&class_defs);
+		}
+	}
     
-	scratch = ScratchBegin(&arena, 1);
-	OutputClassMetadata(arena,
-						Str8Lit("fhir_class_metadata.h"),
-						&class_defs);
-	ScratchEnd(scratch);
-    
-	scratch = ScratchBegin(&arena, 1);
-	OutputGperfFiles(arena, Str8Lit("./generated/gperf_class_files"), &class_defs);
-	ScratchEnd(scratch);
+	{
+		ArenaTempBlock(arena, scratch)
+		{
+			OutputGperfFiles(scratch.arena,
+			                 Str8Lit("./src/generated/gperf_class_files"),
+			                 &class_defs);
+		}
+	}
 }

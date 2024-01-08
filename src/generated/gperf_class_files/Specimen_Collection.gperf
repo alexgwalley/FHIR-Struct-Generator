@@ -1,0 +1,24 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Specimen_Collection_MemberLookup
+%enum
+%define word-array-name word_array_Specimen_Collection
+%define class-name Specimen_Collection_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+collector, 0x38, 6, -1
+collectedDateTime, 0x48, 8, 0
+collectedPeriod, 0x48, 8, 1
+duration, 0x58, 9, -1
+quantity, 0x60, 10, -1
+method, 0x68, 11, -1
+bodySite, 0x70, 12, -1
+fastingStatusCodeableConcept, 0x80, 14, 0
+fastingStatusDuration, 0x80, 14, 1

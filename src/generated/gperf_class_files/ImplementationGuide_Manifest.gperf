@@ -1,0 +1,24 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name ImplementationGuide_Manifest_MemberLookup
+%enum
+%define word-array-name word_array_ImplementationGuide_Manifest
+%define class-name ImplementationGuide_Manifest_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+rendering, 0x38, 6, -1
+resource_count, 0x48, 7, -1
+resource, 0x50, 8, -1
+page_count, 0x58, 9, -1
+page, 0x60, 10, -1
+image_count, 0x68, 11, -1
+image, 0x70, 12, -1
+other_count, 0x78, 13, -1
+other, 0x80, 14, -1

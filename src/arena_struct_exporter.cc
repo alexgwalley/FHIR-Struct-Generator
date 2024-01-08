@@ -171,19 +171,22 @@ String8FromClassMember(Arena *arena, ClassMember *mem)
 		{
             
 			bool is_pointer = (mem->cardinality == Cardinality::ZeroToInf ||
-                               mem->cardinality == Cardinality::OneToInf ||
-                               mem->value_type.single.type == ValueType::Class_Reference);
+                               mem->cardinality == Cardinality::OneToInf
+                               );
+			bool is_class_ref = mem->value_type.single.type == ValueType::Class_Reference;
             
 			String8 ptr = is_pointer ? Str8Lit("*") : Str8Lit("");
+			String8 class_ref = is_class_ref ? Str8Lit("*") : Str8Lit("");
             
 			String8 value_type = String8FromValueType(arena,
                                                       mem->value_type.single.type,
                                                       mem->value_type.single.name);
 			String8 result = PushStr8F(arena,
-                                       "\t%.*s %.*s%.*s;",
-                                       value_type.size, value_type.str,
-                                       ptr.size, ptr.str,
-                                       mem->name.size, mem->name.str);
+                                       "\t%S %S%S%S;",
+                                       value_type,
+                                       ptr,
+                                       class_ref,
+                                       mem->name);
 			return result;
 		}
 		case ClassMemberType::Enum:

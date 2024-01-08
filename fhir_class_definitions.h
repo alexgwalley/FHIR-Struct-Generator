@@ -1458,25 +1458,25 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *type;
 	fhir_string name;
 	U64 subject_count;
-	Reference *subject;
+	Reference **subject;
 	Period *servicePeriod;
 	U64 coverage_count;
-	Account_Coverage *coverage;
+	Account_Coverage **coverage;
 	Reference *owner;
 	fhir_string description;
 	U64 guarantor_count;
-	Account_Guarantor *guarantor;
+	Account_Guarantor **guarantor;
 	Reference *partOf;
 };
 class Account_Coverage {
@@ -1484,9 +1484,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *coverage;
 	fhir_positiveInt priority;
 };
@@ -1495,9 +1495,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *party;
 	fhir_boolean onHold;
 	Period *period;
@@ -1511,14 +1511,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -1540,12 +1540,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
@@ -1553,17 +1553,17 @@ public:
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	U64 topic_count;
-	CodeableConcept *topic;
+	CodeableConcept **topic;
 	U64 author_count;
-	ContactDetail *author;
+	ContactDetail **author;
 	U64 editor_count;
-	ContactDetail *editor;
+	ContactDetail **editor;
 	U64 reviewer_count;
-	ContactDetail *reviewer;
+	ContactDetail **reviewer;
 	U64 endorser_count;
-	ContactDetail *endorser;
+	ContactDetail **endorser;
 	U64 relatedArtifact_count;
-	RelatedArtifact *relatedArtifact;
+	RelatedArtifact **relatedArtifact;
 	U64 library_count;
 	fhir_canonical *library;
 	fhir_code kind;
@@ -1594,7 +1594,7 @@ public:
 
 	Reference *location;
 	U64 participant_count;
-	ActivityDefinition_Participant *participant;
+	ActivityDefinition_Participant **participant;
 	enum class ProduType {
 		Unknown,
 		Reference,
@@ -1609,27 +1609,27 @@ public:
 
 	Quantity *quantity;
 	U64 dosage_count;
-	Dosage *dosage;
+	Dosage **dosage;
 	U64 bodySite_count;
-	CodeableConcept *bodySite;
+	CodeableConcept **bodySite;
 	U64 specimenRequirement_count;
-	Reference *specimenRequirement;
+	Reference **specimenRequirement;
 	U64 observationRequirement_count;
-	Reference *observationRequirement;
+	Reference **observationRequirement;
 	U64 observationResultRequirement_count;
-	Reference *observationResultRequirement;
+	Reference **observationResultRequirement;
 	fhir_canonical transform;
 	U64 dynamicValue_count;
-	ActivityDefinition_DynamicValue *dynamicValue;
+	ActivityDefinition_DynamicValue **dynamicValue;
 };
 class ActivityDefinition_Participant {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	CodeableConcept *role;
 };
@@ -1638,9 +1638,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string path;
 	Expression *expression;
 };
@@ -1653,15 +1653,15 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	fhir_code actuality;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	CodeableConcept *event;
 	Reference *subject;
 	Reference *encounter;
@@ -1669,43 +1669,43 @@ public:
 	fhir_dateTime detected;
 	fhir_dateTime recordedDate;
 	U64 resultingCondition_count;
-	Reference *resultingCondition;
+	Reference **resultingCondition;
 	Reference *location;
 	CodeableConcept *seriousness;
 	CodeableConcept *severity;
 	CodeableConcept *outcome;
 	Reference *recorder;
 	U64 contributor_count;
-	Reference *contributor;
+	Reference **contributor;
 	U64 suspectEntity_count;
-	AdverseEvent_SuspectEntity *suspectEntity;
+	AdverseEvent_SuspectEntity **suspectEntity;
 	U64 subjectMedicalHistory_count;
-	Reference *subjectMedicalHistory;
+	Reference **subjectMedicalHistory;
 	U64 referenceDocument_count;
-	Reference *referenceDocument;
+	Reference **referenceDocument;
 	U64 study_count;
-	Reference *study;
+	Reference **study;
 };
 class AdverseEvent_SuspectEntity {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *instance;
 	U64 causality_count;
-	AdverseEvent_SuspectEntity_Causality *causality;
+	AdverseEvent_SuspectEntity_Causality **causality;
 };
 class AdverseEvent_SuspectEntity_Causality {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *assessment;
 	fhir_string productRelatedness;
 	Reference *author;
@@ -1720,13 +1720,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *clinicalStatus;
 	CodeableConcept *verificationStatus;
 	fhir_code type;
@@ -1759,27 +1759,27 @@ public:
 	Reference *asserter;
 	fhir_dateTime lastOccurrence;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 reaction_count;
-	AllergyIntolerance_Reaction *reaction;
+	AllergyIntolerance_Reaction **reaction;
 };
 class AllergyIntolerance_Reaction {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *substance;
 	U64 manifestation_count;
-	CodeableConcept *manifestation;
+	CodeableConcept **manifestation;
 	fhir_string description;
 	fhir_dateTime onset;
 	fhir_code severity;
 	CodeableConcept *exposureRoute;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class Appointment {
 public: 
@@ -1790,55 +1790,55 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *cancelationReason;
 	U64 serviceCategory_count;
-	CodeableConcept *serviceCategory;
+	CodeableConcept **serviceCategory;
 	U64 serviceType_count;
-	CodeableConcept *serviceType;
+	CodeableConcept **serviceType;
 	U64 specialty_count;
-	CodeableConcept *specialty;
+	CodeableConcept **specialty;
 	CodeableConcept *appointmentType;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	fhir_unsignedInt priority;
 	fhir_string description;
 	U64 supportingInformation_count;
-	Reference *supportingInformation;
+	Reference **supportingInformation;
 	fhir_instant start;
 	fhir_instant end;
 	fhir_positiveInt minutesDuration;
 	U64 slot_count;
-	Reference *slot;
+	Reference **slot;
 	fhir_dateTime created;
 	fhir_string comment;
 	fhir_string patientInstruction;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 participant_count;
-	Appointment_Participant *participant;
+	Appointment_Participant **participant;
 	U64 requestedPeriod_count;
-	Period *requestedPeriod;
+	Period **requestedPeriod;
 };
 class Appointment_Participant {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	Reference *actor;
 	fhir_code required;
 	fhir_code status;
@@ -1853,18 +1853,18 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	Reference *appointment;
 	fhir_instant start;
 	fhir_instant end;
 	U64 participantType_count;
-	CodeableConcept *participantType;
+	CodeableConcept **participantType;
 	Reference *actor;
 	fhir_code participantStatus;
 	fhir_string comment;
@@ -1878,38 +1878,38 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Coding *type;
 	U64 subtype_count;
-	Coding *subtype;
+	Coding **subtype;
 	fhir_code action;
 	Period *period;
 	fhir_instant recorded;
 	fhir_code outcome;
 	fhir_string outcomeDesc;
 	U64 purposeOfEvent_count;
-	CodeableConcept *purposeOfEvent;
+	CodeableConcept **purposeOfEvent;
 	U64 agent_count;
-	AuditEvent_Agent *agent;
+	AuditEvent_Agent **agent;
 	AuditEvent_Source *source;
 	U64 entity_count;
-	AuditEvent_Entity *entity;
+	AuditEvent_Entity **entity;
 };
 class AuditEvent_Agent {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	U64 role_count;
-	CodeableConcept *role;
+	CodeableConcept **role;
 	Reference *who;
 	fhir_string altId;
 	fhir_string name;
@@ -1920,16 +1920,16 @@ public:
 	Coding *media;
 	AuditEvent_Agent_Network *network;
 	U64 purposeOfUse_count;
-	CodeableConcept *purposeOfUse;
+	CodeableConcept **purposeOfUse;
 };
 class AuditEvent_Agent_Network {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string address;
 	fhir_code type;
 };
@@ -1938,42 +1938,42 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string site;
 	Reference *observer;
 	U64 type_count;
-	Coding *type;
+	Coding **type;
 };
 class AuditEvent_Entity {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *what;
 	Coding *type;
 	Coding *role;
 	Coding *lifecycle;
 	U64 securityLabel_count;
-	Coding *securityLabel;
+	Coding **securityLabel;
 	fhir_string name;
 	fhir_string description;
 	fhir_base64Binary query;
 	U64 detail_count;
-	AuditEvent_Entity_Detail *detail;
+	AuditEvent_Entity_Detail **detail;
 };
 class AuditEvent_Entity_Detail {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string type;
 	enum class ValueType {
 		Unknown,
@@ -1997,13 +1997,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *code;
 	Reference *subject;
 	fhir_date created;
@@ -2029,36 +2029,36 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code productCategory;
 	CodeableConcept *productCode;
 	fhir_code status;
 	U64 request_count;
-	Reference *request;
+	Reference **request;
 	Integer *quantity;
 	U64 parent_count;
-	Reference *parent;
+	Reference **parent;
 	BiologicallyDerivedProduct_Collection *collection;
 	U64 processing_count;
-	BiologicallyDerivedProduct_Processing *processing;
+	BiologicallyDerivedProduct_Processing **processing;
 	BiologicallyDerivedProduct_Manipulation *manipulation;
 	U64 storage_count;
-	BiologicallyDerivedProduct_Storage *storage;
+	BiologicallyDerivedProduct_Storage **storage;
 };
 class BiologicallyDerivedProduct_Collection {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *collector;
 	Reference *source;
 	enum class ColleType {
@@ -2079,9 +2079,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	CodeableConcept *procedure;
 	Reference *additive;
@@ -2103,9 +2103,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	enum class Time_Type {
 		Unknown,
@@ -2125,9 +2125,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	fhir_decimal temperature;
 	fhir_code scale;
@@ -2142,21 +2142,21 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_boolean active;
 	CodeableConcept *morphology;
 	CodeableConcept *location;
 	U64 locationQualifier_count;
-	CodeableConcept *locationQualifier;
+	CodeableConcept **locationQualifier;
 	fhir_string description;
 	U64 image_count;
-	Attachment *image;
+	Attachment **image;
 	Reference *patient;
 };
 class Bundle {
@@ -2171,9 +2171,9 @@ public:
 	fhir_instant timestamp;
 	fhir_unsignedInt total;
 	U64 link_count;
-	Bundle_Link *link;
+	Bundle_Link **link;
 	U64 entry_count;
-	Bundle_Entry *entry;
+	Bundle_Entry **entry;
 	Signature *signature;
 };
 class Bundle_Link {
@@ -2181,9 +2181,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string relation;
 	fhir_uri url;
 };
@@ -2192,11 +2192,11 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 link_count;
-	Bundle_Link *link;
+	Bundle_Link **link;
 	fhir_uri fullUrl;
 	Resource *resource;
 	Bundle_Entry_Search *search;
@@ -2208,9 +2208,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code mode;
 	fhir_decimal score;
 };
@@ -2219,9 +2219,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code method;
 	fhir_uri url;
 	fhir_string ifNoneMatch;
@@ -2234,9 +2234,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string status;
 	fhir_uri location;
 	fhir_string etag;
@@ -2252,11 +2252,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -2266,12 +2266,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	fhir_code kind;
@@ -2289,20 +2289,20 @@ public:
 	U64 implementationGuide_count;
 	fhir_canonical *implementationGuide;
 	U64 rest_count;
-	CapabilityStatement_Rest *rest;
+	CapabilityStatement_Rest **rest;
 	U64 messaging_count;
-	CapabilityStatement_Messaging *messaging;
+	CapabilityStatement_Messaging **messaging;
 	U64 document_count;
-	CapabilityStatement_Document *document;
+	CapabilityStatement_Document **document;
 };
 class CapabilityStatement_Software {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_string version;
 	fhir_dateTime releaseDate;
@@ -2312,9 +2312,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	fhir_url url;
 	Reference *custodian;
@@ -2324,20 +2324,20 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code mode;
 	fhir_markdown documentation;
 	CapabilityStatement_Rest_Security *security;
 	U64 resource_count;
-	CapabilityStatement_Rest_Resource *resource;
+	CapabilityStatement_Rest_Resource **resource;
 	U64 interaction_count;
-	CapabilityStatement_Rest_Interaction *interaction;
+	CapabilityStatement_Rest_Interaction **interaction;
 	U64 searchParam_count;
-	CapabilityStatement_Rest_Resource_SearchParam *searchParam;
+	CapabilityStatement_Rest_Resource_SearchParam **searchParam;
 	U64 operation_count;
-	CapabilityStatement_Rest_Resource_Operation *operation;
+	CapabilityStatement_Rest_Resource_Operation **operation;
 	U64 compartment_count;
 	fhir_canonical *compartment;
 };
@@ -2346,12 +2346,12 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean cors;
 	U64 service_count;
-	CodeableConcept *service;
+	CodeableConcept **service;
 	fhir_markdown description;
 };
 class CapabilityStatement_Rest_Resource {
@@ -2359,16 +2359,16 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	fhir_canonical profile;
 	U64 supportedProfile_count;
 	fhir_canonical *supportedProfile;
 	fhir_markdown documentation;
 	U64 interaction_count;
-	CapabilityStatement_Rest_Resource_Interaction *interaction;
+	CapabilityStatement_Rest_Resource_Interaction **interaction;
 	fhir_code versioning;
 	fhir_boolean readHistory;
 	fhir_boolean updateCreate;
@@ -2383,18 +2383,18 @@ public:
 	U64 searchRevInclude_count;
 	fhir_string *searchRevInclude;
 	U64 searchParam_count;
-	CapabilityStatement_Rest_Resource_SearchParam *searchParam;
+	CapabilityStatement_Rest_Resource_SearchParam **searchParam;
 	U64 operation_count;
-	CapabilityStatement_Rest_Resource_Operation *operation;
+	CapabilityStatement_Rest_Resource_Operation **operation;
 };
 class CapabilityStatement_Rest_Resource_Interaction {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	fhir_markdown documentation;
 };
@@ -2403,9 +2403,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_canonical definition;
 	fhir_code type;
@@ -2416,9 +2416,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_canonical definition;
 	fhir_markdown documentation;
@@ -2428,9 +2428,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	fhir_markdown documentation;
 };
@@ -2439,24 +2439,24 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 endpoint_count;
-	CapabilityStatement_Messaging_Endpoint *endpoint;
+	CapabilityStatement_Messaging_Endpoint **endpoint;
 	fhir_unsignedInt reliableCache;
 	fhir_markdown documentation;
 	U64 supportedMessage_count;
-	CapabilityStatement_Messaging_SupportedMessage *supportedMessage;
+	CapabilityStatement_Messaging_SupportedMessage **supportedMessage;
 };
 class CapabilityStatement_Messaging_Endpoint {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Coding *protocol;
 	fhir_url address;
 };
@@ -2465,9 +2465,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code mode;
 	fhir_canonical definition;
 };
@@ -2476,9 +2476,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code mode;
 	fhir_markdown documentation;
 	fhir_canonical profile;
@@ -2492,27 +2492,27 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 instantiatesCanonical_count;
 	fhir_canonical *instantiatesCanonical;
 	U64 instantiatesUri_count;
 	fhir_uri *instantiatesUri;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 replaces_count;
-	Reference *replaces;
+	Reference **replaces;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	fhir_code status;
 	fhir_code intent;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	fhir_string title;
 	fhir_string description;
 	Reference *subject;
@@ -2521,34 +2521,34 @@ public:
 	fhir_dateTime created;
 	Reference *author;
 	U64 contributor_count;
-	Reference *contributor;
+	Reference **contributor;
 	U64 careTeam_count;
-	Reference *careTeam;
+	Reference **careTeam;
 	U64 addresses_count;
-	Reference *addresses;
+	Reference **addresses;
 	U64 supportingInfo_count;
-	Reference *supportingInfo;
+	Reference **supportingInfo;
 	U64 goal_count;
-	Reference *goal;
+	Reference **goal;
 	U64 activity_count;
-	CarePlan_Activity *activity;
+	CarePlan_Activity **activity;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class CarePlan_Activity {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 outcomeCodeableConcept_count;
-	CodeableConcept *outcomeCodeableConcept;
+	CodeableConcept **outcomeCodeableConcept;
 	U64 outcomeReference_count;
-	Reference *outcomeReference;
+	Reference **outcomeReference;
 	U64 progress_count;
-	Annotation *progress;
+	Annotation **progress;
 	Reference *reference;
 	CarePlan_Activity_Detail *detail;
 };
@@ -2557,9 +2557,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code kind;
 	U64 instantiatesCanonical_count;
 	fhir_canonical *instantiatesCanonical;
@@ -2567,11 +2567,11 @@ public:
 	fhir_uri *instantiatesUri;
 	CodeableConcept *code;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 goal_count;
-	Reference *goal;
+	Reference **goal;
 	fhir_code status;
 	CodeableConcept *statusReason;
 	fhir_boolean doNotPerform;
@@ -2591,7 +2591,7 @@ public:
 
 	Reference *location;
 	U64 performer_count;
-	Reference *performer;
+	Reference **performer;
 	enum class ProduType {
 		Unknown,
 		CodeableConcept,
@@ -2617,43 +2617,43 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	fhir_string name;
 	Reference *subject;
 	Reference *encounter;
 	Period *period;
 	U64 participant_count;
-	CareTeam_Participant *participant;
+	CareTeam_Participant **participant;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 managingOrganization_count;
-	Reference *managingOrganization;
+	Reference **managingOrganization;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class CareTeam_Participant {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 role_count;
-	CodeableConcept *role;
+	CodeableConcept **role;
 	Reference *member;
 	Reference *onBehalfOf;
 	Period *period;
@@ -2667,39 +2667,39 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *type;
 	fhir_boolean orderable;
 	Reference *referencedItem;
 	U64 additionalIdentifier_count;
-	Identifier *additionalIdentifier;
+	Identifier **additionalIdentifier;
 	U64 classification_count;
-	CodeableConcept *classification;
+	CodeableConcept **classification;
 	fhir_code status;
 	Period *validityPeriod;
 	fhir_dateTime validTo;
 	fhir_dateTime lastUpdated;
 	U64 additionalCharacteristic_count;
-	CodeableConcept *additionalCharacteristic;
+	CodeableConcept **additionalCharacteristic;
 	U64 additionalClassification_count;
-	CodeableConcept *additionalClassification;
+	CodeableConcept **additionalClassification;
 	U64 relatedEntry_count;
-	CatalogEntry_RelatedEntry *relatedEntry;
+	CatalogEntry_RelatedEntry **relatedEntry;
 };
 class CatalogEntry_RelatedEntry {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code relationtype;
 	Reference *item;
 };
@@ -2712,20 +2712,20 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 definitionUri_count;
 	fhir_uri *definitionUri;
 	U64 definitionCanonical_count;
 	fhir_canonical *definitionCanonical;
 	fhir_code status;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	CodeableConcept *code;
 	Reference *subject;
 	Reference *context;
@@ -2744,22 +2744,22 @@ public:
 	} occurrence;
 
 	U64 performer_count;
-	ChargeItem_Performer *performer;
+	ChargeItem_Performer **performer;
 	Reference *performingOrganization;
 	Reference *requestingOrganization;
 	Reference *costCenter;
 	Quantity *quantity;
 	U64 bodysite_count;
-	CodeableConcept *bodysite;
+	CodeableConcept **bodysite;
 	fhir_decimal factorOverride;
 	Money *priceOverride;
 	fhir_string overrideReason;
 	Reference *enterer;
 	fhir_dateTime enteredDate;
 	U64 reason_count;
-	CodeableConcept *reason;
+	CodeableConcept **reason;
 	U64 service_count;
-	Reference *service;
+	Reference **service;
 	enum class ProduType {
 		Unknown,
 		Reference,
@@ -2773,20 +2773,20 @@ public:
 	} product;
 
 	U64 account_count;
-	Reference *account;
+	Reference **account;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 supportingInformation_count;
-	Reference *supportingInformation;
+	Reference **supportingInformation;
 };
 class ChargeItem_Performer {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *function_;
 	Reference *actor;
 };
@@ -2799,14 +2799,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string title;
 	U64 derivedFromUri_count;
@@ -2820,32 +2820,32 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	CodeableConcept *code;
 	U64 instance_count;
-	Reference *instance;
+	Reference **instance;
 	U64 applicability_count;
-	ChargeItemDefinition_Applicability *applicability;
+	ChargeItemDefinition_Applicability **applicability;
 	U64 propertyGroup_count;
-	ChargeItemDefinition_PropertyGroup *propertyGroup;
+	ChargeItemDefinition_PropertyGroup **propertyGroup;
 };
 class ChargeItemDefinition_Applicability {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	fhir_string language;
 	fhir_string expression;
@@ -2855,22 +2855,22 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 applicability_count;
-	ChargeItemDefinition_Applicability *applicability;
+	ChargeItemDefinition_Applicability **applicability;
 	U64 priceComponent_count;
-	ChargeItemDefinition_PropertyGroup_PriceComponent *priceComponent;
+	ChargeItemDefinition_PropertyGroup_PriceComponent **priceComponent;
 };
 class ChargeItemDefinition_PropertyGroup_PriceComponent {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	CodeableConcept *code;
 	fhir_decimal factor;
@@ -2885,13 +2885,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *type;
 	CodeableConcept *subType;
@@ -2905,25 +2905,25 @@ public:
 	CodeableConcept *priority;
 	CodeableConcept *fundsReserve;
 	U64 related_count;
-	Claim_Related *related;
+	Claim_Related **related;
 	Reference *prescription;
 	Reference *originalPrescription;
 	Claim_Payee *payee;
 	Reference *referral;
 	Reference *facility;
 	U64 careTeam_count;
-	Claim_CareTeam *careTeam;
+	Claim_CareTeam **careTeam;
 	U64 supportingInfo_count;
-	Claim_SupportingInfo *supportingInfo;
+	Claim_SupportingInfo **supportingInfo;
 	U64 diagnosis_count;
-	Claim_Diagnosis *diagnosis;
+	Claim_Diagnosis **diagnosis;
 	U64 procedure_count;
-	Claim_Procedure *procedure;
+	Claim_Procedure **procedure;
 	U64 insurance_count;
-	Claim_Insurance *insurance;
+	Claim_Insurance **insurance;
 	Claim_Accident *accident;
 	U64 item_count;
-	Claim_Item *item;
+	Claim_Item **item;
 	Money *total;
 };
 class Claim_Related {
@@ -2931,9 +2931,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *claim;
 	CodeableConcept *relationship;
 	Identifier *reference;
@@ -2943,9 +2943,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	Reference *party;
 };
@@ -2954,9 +2954,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	Reference *provider;
 	fhir_boolean responsible;
@@ -2968,9 +2968,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	CodeableConcept *category;
 	CodeableConcept *code;
@@ -3011,9 +3011,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	enum class DiagnType {
 		Unknown,
@@ -3028,7 +3028,7 @@ public:
 	} diagnosis;
 
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	CodeableConcept *onAdmission;
 	CodeableConcept *packageCode;
 };
@@ -3037,12 +3037,12 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	fhir_dateTime date;
 	enum class ProceType {
 		Unknown,
@@ -3057,16 +3057,16 @@ public:
 	} procedure;
 
 	U64 udi_count;
-	Reference *udi;
+	Reference **udi;
 };
 class Claim_Insurance {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	fhir_boolean focal;
 	Identifier *identifier;
@@ -3081,9 +3081,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_date date;
 	CodeableConcept *type;
 	enum class LocatType {
@@ -3104,9 +3104,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	U64 careTeamSequence_count;
 	fhir_positiveInt *careTeamSequence;
@@ -3120,9 +3120,9 @@ public:
 	CodeableConcept *category;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	U64 programCode_count;
-	CodeableConcept *programCode;
+	CodeableConcept **programCode;
 	enum class ServiType {
 		Unknown,
 		fhir_date,
@@ -3154,62 +3154,62 @@ public:
 	fhir_decimal factor;
 	Money *net;
 	U64 udi_count;
-	Reference *udi;
+	Reference **udi;
 	CodeableConcept *bodySite;
 	U64 subSite_count;
-	CodeableConcept *subSite;
+	CodeableConcept **subSite;
 	U64 encounter_count;
-	Reference *encounter;
+	Reference **encounter;
 	U64 detail_count;
-	Claim_Item_Detail *detail;
+	Claim_Item_Detail **detail;
 };
 class Claim_Item_Detail {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	CodeableConcept *revenue;
 	CodeableConcept *category;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	U64 programCode_count;
-	CodeableConcept *programCode;
+	CodeableConcept **programCode;
 	Quantity *quantity;
 	Money *unitPrice;
 	fhir_decimal factor;
 	Money *net;
 	U64 udi_count;
-	Reference *udi;
+	Reference **udi;
 	U64 subDetail_count;
-	Claim_Item_Detail_SubDetail *subDetail;
+	Claim_Item_Detail_SubDetail **subDetail;
 };
 class Claim_Item_Detail_SubDetail {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	CodeableConcept *revenue;
 	CodeableConcept *category;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	U64 programCode_count;
-	CodeableConcept *programCode;
+	CodeableConcept **programCode;
 	Quantity *quantity;
 	Money *unitPrice;
 	fhir_decimal factor;
 	Money *net;
 	U64 udi_count;
-	Reference *udi;
+	Reference **udi;
 };
 class ClaimResponse {
 public: 
@@ -3220,13 +3220,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *type;
 	CodeableConcept *subType;
@@ -3242,50 +3242,50 @@ public:
 	Period *preAuthPeriod;
 	CodeableConcept *payeeType;
 	U64 item_count;
-	ClaimResponse_Item *item;
+	ClaimResponse_Item **item;
 	U64 addItem_count;
-	ClaimResponse_AddItem *addItem;
+	ClaimResponse_AddItem **addItem;
 	U64 adjudication_count;
-	ClaimResponse_Item_Adjudication *adjudication;
+	ClaimResponse_Item_Adjudication **adjudication;
 	U64 total_count;
-	ClaimResponse_Total *total;
+	ClaimResponse_Total **total;
 	ClaimResponse_Payment *payment;
 	CodeableConcept *fundsReserve;
 	CodeableConcept *formCode;
 	Attachment *form;
 	U64 processNote_count;
-	ClaimResponse_ProcessNote *processNote;
+	ClaimResponse_ProcessNote **processNote;
 	U64 communicationRequest_count;
-	Reference *communicationRequest;
+	Reference **communicationRequest;
 	U64 insurance_count;
-	ClaimResponse_Insurance *insurance;
+	ClaimResponse_Insurance **insurance;
 	U64 error_count;
-	ClaimResponse_Error *error;
+	ClaimResponse_Error **error;
 };
 class ClaimResponse_Item {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt itemSequence;
 	U64 noteNumber_count;
 	fhir_positiveInt *noteNumber;
 	U64 adjudication_count;
-	ClaimResponse_Item_Adjudication *adjudication;
+	ClaimResponse_Item_Adjudication **adjudication;
 	U64 detail_count;
-	ClaimResponse_Item_Detail *detail;
+	ClaimResponse_Item_Detail **detail;
 };
 class ClaimResponse_Item_Adjudication {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *category;
 	CodeableConcept *reason;
 	Money *amount;
@@ -3296,39 +3296,39 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt detailSequence;
 	U64 noteNumber_count;
 	fhir_positiveInt *noteNumber;
 	U64 adjudication_count;
-	ClaimResponse_Item_Adjudication *adjudication;
+	ClaimResponse_Item_Adjudication **adjudication;
 	U64 subDetail_count;
-	ClaimResponse_Item_Detail_SubDetail *subDetail;
+	ClaimResponse_Item_Detail_SubDetail **subDetail;
 };
 class ClaimResponse_Item_Detail_SubDetail {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt subDetailSequence;
 	U64 noteNumber_count;
 	fhir_positiveInt *noteNumber;
 	U64 adjudication_count;
-	ClaimResponse_Item_Adjudication *adjudication;
+	ClaimResponse_Item_Adjudication **adjudication;
 };
 class ClaimResponse_AddItem {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 itemSequence_count;
 	fhir_positiveInt *itemSequence;
 	U64 detailSequence_count;
@@ -3336,12 +3336,12 @@ public:
 	U64 subdetailSequence_count;
 	fhir_positiveInt *subdetailSequence;
 	U64 provider_count;
-	Reference *provider;
+	Reference **provider;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	U64 programCode_count;
-	CodeableConcept *programCode;
+	CodeableConcept **programCode;
 	enum class ServiType {
 		Unknown,
 		fhir_date,
@@ -3374,25 +3374,25 @@ public:
 	Money *net;
 	CodeableConcept *bodySite;
 	U64 subSite_count;
-	CodeableConcept *subSite;
+	CodeableConcept **subSite;
 	U64 noteNumber_count;
 	fhir_positiveInt *noteNumber;
 	U64 adjudication_count;
-	ClaimResponse_Item_Adjudication *adjudication;
+	ClaimResponse_Item_Adjudication **adjudication;
 	U64 detail_count;
-	ClaimResponse_AddItem_Detail *detail;
+	ClaimResponse_AddItem_Detail **detail;
 };
 class ClaimResponse_AddItem_Detail {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	Quantity *quantity;
 	Money *unitPrice;
 	fhir_decimal factor;
@@ -3400,21 +3400,21 @@ public:
 	U64 noteNumber_count;
 	fhir_positiveInt *noteNumber;
 	U64 adjudication_count;
-	ClaimResponse_Item_Adjudication *adjudication;
+	ClaimResponse_Item_Adjudication **adjudication;
 	U64 subDetail_count;
-	ClaimResponse_AddItem_Detail_SubDetail *subDetail;
+	ClaimResponse_AddItem_Detail_SubDetail **subDetail;
 };
 class ClaimResponse_AddItem_Detail_SubDetail {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	Quantity *quantity;
 	Money *unitPrice;
 	fhir_decimal factor;
@@ -3422,16 +3422,16 @@ public:
 	U64 noteNumber_count;
 	fhir_positiveInt *noteNumber;
 	U64 adjudication_count;
-	ClaimResponse_Item_Adjudication *adjudication;
+	ClaimResponse_Item_Adjudication **adjudication;
 };
 class ClaimResponse_Total {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *category;
 	Money *amount;
 };
@@ -3440,9 +3440,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	Money *adjustment;
 	CodeableConcept *adjustmentReason;
@@ -3455,9 +3455,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt number;
 	fhir_code type;
 	fhir_string text;
@@ -3468,9 +3468,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	fhir_boolean focal;
 	Reference *coverage;
@@ -3482,9 +3482,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt itemSequence;
 	fhir_positiveInt detailSequence;
 	fhir_positiveInt subDetailSequence;
@@ -3499,13 +3499,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *statusReason;
 	CodeableConcept *code;
@@ -3528,43 +3528,43 @@ public:
 	Reference *assessor;
 	Reference *previous;
 	U64 problem_count;
-	Reference *problem;
+	Reference **problem;
 	U64 investigation_count;
-	ClinicalImpression_Investigation *investigation;
+	ClinicalImpression_Investigation **investigation;
 	U64 protocol_count;
 	fhir_uri *protocol;
 	fhir_string summary;
 	U64 finding_count;
-	ClinicalImpression_Finding *finding;
+	ClinicalImpression_Finding **finding;
 	U64 prognosisCodeableConcept_count;
-	CodeableConcept *prognosisCodeableConcept;
+	CodeableConcept **prognosisCodeableConcept;
 	U64 prognosisReference_count;
-	Reference *prognosisReference;
+	Reference **prognosisReference;
 	U64 supportingInfo_count;
-	Reference *supportingInfo;
+	Reference **supportingInfo;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class ClinicalImpression_Investigation {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	U64 item_count;
-	Reference *item;
+	Reference **item;
 };
 class ClinicalImpression_Finding {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *itemCodeableConcept;
 	Reference *itemReference;
 	fhir_string basis;
@@ -3578,14 +3578,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -3594,12 +3594,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	fhir_boolean caseSensitive;
@@ -3611,20 +3611,20 @@ public:
 	fhir_canonical supplements;
 	fhir_unsignedInt count;
 	U64 filter_count;
-	CodeSystem_Filter *filter;
+	CodeSystem_Filter **filter;
 	U64 property_count;
-	CodeSystem_Property *property;
+	CodeSystem_Property **property;
 	U64 concept_count;
-	CodeSystem_Concept *concept;
+	CodeSystem_Concept **concept;
 };
 class CodeSystem_Filter {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	fhir_string description;
 	U64 operator__count;
@@ -3636,9 +3636,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	fhir_uri uri;
 	fhir_string description;
@@ -3649,27 +3649,27 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	fhir_string display;
 	fhir_string definition;
 	U64 designation_count;
-	CodeSystem_Concept_Designation *designation;
+	CodeSystem_Concept_Designation **designation;
 	U64 property_count;
-	CodeSystem_Concept_Property *property;
+	CodeSystem_Concept_Property **property;
 	U64 concept_count;
-	CodeSystem_Concept *concept;
+	CodeSystem_Concept **concept;
 };
 class CodeSystem_Concept_Designation {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code language;
 	Coding *use;
 	fhir_string value;
@@ -3679,9 +3679,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	enum class ValueType {
 		Unknown,
@@ -3715,57 +3715,57 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 instantiatesCanonical_count;
 	fhir_canonical *instantiatesCanonical;
 	U64 instantiatesUri_count;
 	fhir_uri *instantiatesUri;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	U64 inResponseTo_count;
-	Reference *inResponseTo;
+	Reference **inResponseTo;
 	fhir_code status;
 	CodeableConcept *statusReason;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	fhir_code priority;
 	U64 medium_count;
-	CodeableConcept *medium;
+	CodeableConcept **medium;
 	Reference *subject;
 	CodeableConcept *topic;
 	U64 about_count;
-	Reference *about;
+	Reference **about;
 	Reference *encounter;
 	fhir_dateTime sent;
 	fhir_dateTime received;
 	U64 recipient_count;
-	Reference *recipient;
+	Reference **recipient;
 	Reference *sender;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 payload_count;
-	Communication_Payload *payload;
+	Communication_Payload **payload;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class Communication_Payload {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class ConteType {
 		Unknown,
 		fhir_string,
@@ -3790,32 +3790,32 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 replaces_count;
-	Reference *replaces;
+	Reference **replaces;
 	Identifier *groupIdentifier;
 	fhir_code status;
 	CodeableConcept *statusReason;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	fhir_code priority;
 	fhir_boolean doNotPerform;
 	U64 medium_count;
-	CodeableConcept *medium;
+	CodeableConcept **medium;
 	Reference *subject;
 	U64 about_count;
-	Reference *about;
+	Reference **about;
 	Reference *encounter;
 	U64 payload_count;
-	CommunicationRequest_Payload *payload;
+	CommunicationRequest_Payload **payload;
 	enum class OccurType {
 		Unknown,
 		fhir_dateTime,
@@ -3831,23 +3831,23 @@ public:
 	fhir_dateTime authoredOn;
 	Reference *requester;
 	U64 recipient_count;
-	Reference *recipient;
+	Reference **recipient;
 	Reference *sender;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class CommunicationRequest_Payload {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class ConteType {
 		Unknown,
 		fhir_string,
@@ -3872,11 +3872,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -3885,24 +3885,24 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	fhir_markdown purpose;
 	fhir_code code;
 	fhir_boolean search;
 	U64 resource_count;
-	CompartmentDefinition_Resource *resource;
+	CompartmentDefinition_Resource **resource;
 };
 class CompartmentDefinition_Resource {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	U64 param_count;
 	fhir_string *param;
@@ -3917,41 +3917,41 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	fhir_code status;
 	CodeableConcept *type;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	Reference *subject;
 	Reference *encounter;
 	fhir_dateTime date;
 	U64 author_count;
-	Reference *author;
+	Reference **author;
 	fhir_string title;
 	fhir_code confidentiality;
 	U64 attester_count;
-	Composition_Attester *attester;
+	Composition_Attester **attester;
 	Reference *custodian;
 	U64 relatesTo_count;
-	Composition_RelatesTo *relatesTo;
+	Composition_RelatesTo **relatesTo;
 	U64 event_count;
-	Composition_Event *event;
+	Composition_Event **event;
 	U64 section_count;
-	Composition_Section *section;
+	Composition_Section **section;
 };
 class Composition_Attester {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code mode;
 	fhir_dateTime time;
 	Reference *party;
@@ -3961,9 +3961,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	enum class TargeType {
 		Unknown,
@@ -3983,36 +3983,36 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 code_count;
-	CodeableConcept *code;
+	CodeableConcept **code;
 	Period *period;
 	U64 detail_count;
-	Reference *detail;
+	Reference **detail;
 };
 class Composition_Section {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string title;
 	CodeableConcept *code;
 	U64 author_count;
-	Reference *author;
+	Reference **author;
 	Reference *focus;
 	Narrative *text;
 	fhir_code mode;
 	CodeableConcept *orderedBy;
 	U64 entry_count;
-	Reference *entry;
+	Reference **entry;
 	CodeableConcept *emptyReason;
 	U64 section_count;
-	Composition_Section *section;
+	Composition_Section **section;
 };
 class ConceptMap {
 public: 
@@ -4023,11 +4023,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	Identifier *identifier;
 	fhir_string version;
@@ -4038,12 +4038,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	enum class SourcType {
@@ -4071,22 +4071,22 @@ public:
 	} target;
 
 	U64 group_count;
-	ConceptMap_Group *group;
+	ConceptMap_Group **group;
 };
 class ConceptMap_Group {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri source;
 	fhir_string sourceVersion;
 	fhir_uri target;
 	fhir_string targetVersion;
 	U64 element_count;
-	ConceptMap_Group_Element *element;
+	ConceptMap_Group_Element **element;
 	ConceptMap_Group_Unmapped *unmapped;
 };
 class ConceptMap_Group_Element {
@@ -4094,39 +4094,39 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	fhir_string display;
 	U64 target_count;
-	ConceptMap_Group_Element_Target *target;
+	ConceptMap_Group_Element_Target **target;
 };
 class ConceptMap_Group_Element_Target {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	fhir_string display;
 	fhir_code equivalence;
 	fhir_string comment;
 	U64 dependsOn_count;
-	ConceptMap_Group_Element_Target_DependsOn *dependsOn;
+	ConceptMap_Group_Element_Target_DependsOn **dependsOn;
 	U64 product_count;
-	ConceptMap_Group_Element_Target_DependsOn *product;
+	ConceptMap_Group_Element_Target_DependsOn **product;
 };
 class ConceptMap_Group_Element_Target_DependsOn {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri property;
 	fhir_canonical system;
 	fhir_string value;
@@ -4137,9 +4137,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code mode;
 	fhir_code code;
 	fhir_string display;
@@ -4154,21 +4154,21 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *clinicalStatus;
 	CodeableConcept *verificationStatus;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	CodeableConcept *severity;
 	CodeableConcept *code;
 	U64 bodySite_count;
-	CodeableConcept *bodySite;
+	CodeableConcept **bodySite;
 	Reference *subject;
 	Reference *encounter;
 	enum class OnsetType {
@@ -4211,23 +4211,23 @@ public:
 	Reference *recorder;
 	Reference *asserter;
 	U64 stage_count;
-	Condition_Stage *stage;
+	Condition_Stage **stage;
 	U64 evidence_count;
-	Condition_Evidence *evidence;
+	Condition_Evidence **evidence;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class Condition_Stage {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *summary;
 	U64 assessment_count;
-	Reference *assessment;
+	Reference **assessment;
 	CodeableConcept *type;
 };
 class Condition_Evidence {
@@ -4235,13 +4235,13 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 code_count;
-	CodeableConcept *code;
+	CodeableConcept **code;
 	U64 detail_count;
-	Reference *detail;
+	Reference **detail;
 };
 class Consent {
 public: 
@@ -4252,23 +4252,23 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *scope;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	Reference *patient;
 	fhir_dateTime dateTime;
 	U64 performer_count;
-	Reference *performer;
+	Reference **performer;
 	U64 organization_count;
-	Reference *organization;
+	Reference **organization;
 	enum class SourcType {
 		Unknown,
 		Attachment,
@@ -4282,10 +4282,10 @@ public:
 	} source;
 
 	U64 policy_count;
-	Consent_Policy *policy;
+	Consent_Policy **policy;
 	CodeableConcept *policyRule;
 	U64 verification_count;
-	Consent_Verification *verification;
+	Consent_Verification **verification;
 	Consent_Provision *provision;
 };
 class Consent_Policy {
@@ -4293,9 +4293,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri authority;
 	fhir_uri uri;
 };
@@ -4304,9 +4304,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean verified;
 	Reference *verifiedWith;
 	fhir_dateTime verificationDate;
@@ -4316,37 +4316,37 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	Period *period;
 	U64 actor_count;
-	Consent_Provision_Actor *actor;
+	Consent_Provision_Actor **actor;
 	U64 action_count;
-	CodeableConcept *action;
+	CodeableConcept **action;
 	U64 securityLabel_count;
-	Coding *securityLabel;
+	Coding **securityLabel;
 	U64 purpose_count;
-	Coding *purpose;
+	Coding **purpose;
 	U64 class__count;
-	Coding *class_;
+	Coding **class_;
 	U64 code_count;
-	CodeableConcept *code;
+	CodeableConcept **code;
 	Period *dataPeriod;
 	U64 data_count;
-	Consent_Provision_Data *data;
+	Consent_Provision_Data **data;
 	U64 provision_count;
-	Consent_Provision *provision;
+	Consent_Provision **provision;
 };
 class Consent_Provision_Actor {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *role;
 	Reference *reference;
 };
@@ -4355,9 +4355,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code meaning;
 	Reference *reference;
 };
@@ -4370,13 +4370,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_uri url;
 	fhir_string version;
 	fhir_code status;
@@ -4388,13 +4388,13 @@ public:
 	Period *applies;
 	CodeableConcept *expirationType;
 	U64 subject_count;
-	Reference *subject;
+	Reference **subject;
 	U64 authority_count;
-	Reference *authority;
+	Reference **authority;
 	U64 domain_count;
-	Reference *domain;
+	Reference **domain;
 	U64 site_count;
-	Reference *site;
+	Reference **site;
 	fhir_string name;
 	fhir_string title;
 	fhir_string subtitle;
@@ -4416,22 +4416,22 @@ public:
 
 	CodeableConcept *type;
 	U64 subType_count;
-	CodeableConcept *subType;
+	CodeableConcept **subType;
 	Contract_ContentDefinition *contentDefinition;
 	U64 term_count;
-	Contract_Term *term;
+	Contract_Term **term;
 	U64 supportingInfo_count;
-	Reference *supportingInfo;
+	Reference **supportingInfo;
 	U64 relevantHistory_count;
-	Reference *relevantHistory;
+	Reference **relevantHistory;
 	U64 signer_count;
-	Contract_Signer *signer;
+	Contract_Signer **signer;
 	U64 friendly_count;
-	Contract_Friendly *friendly;
+	Contract_Friendly **friendly;
 	U64 legal_count;
-	Contract_Legal *legal;
+	Contract_Legal **legal;
 	U64 rule_count;
-	Contract_Rule *rule;
+	Contract_Rule **rule;
 	enum class LegalType {
 		Unknown,
 		Attachment,
@@ -4450,9 +4450,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	CodeableConcept *subType;
 	Reference *publisher;
@@ -4465,9 +4465,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	fhir_dateTime issued;
 	Period *applies;
@@ -4487,50 +4487,50 @@ public:
 	CodeableConcept *subType;
 	fhir_string text;
 	U64 securityLabel_count;
-	Contract_Term_SecurityLabel *securityLabel;
+	Contract_Term_SecurityLabel **securityLabel;
 	Contract_Term_Offer *offer;
 	U64 asset_count;
-	Contract_Term_Asset *asset;
+	Contract_Term_Asset **asset;
 	U64 action_count;
-	Contract_Term_Action *action;
+	Contract_Term_Action **action;
 	U64 group_count;
-	Contract_Term *group;
+	Contract_Term **group;
 };
 class Contract_Term_SecurityLabel {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 number_count;
 	fhir_unsignedInt *number;
 	Coding *classification;
 	U64 category_count;
-	Coding *category;
+	Coding **category;
 	U64 control_count;
-	Coding *control;
+	Coding **control;
 };
 class Contract_Term_Offer {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 party_count;
-	Contract_Term_Offer_Party *party;
+	Contract_Term_Offer_Party **party;
 	Reference *topic;
 	CodeableConcept *type;
 	CodeableConcept *decision;
 	U64 decisionMode_count;
-	CodeableConcept *decisionMode;
+	CodeableConcept **decisionMode;
 	U64 answer_count;
-	Contract_Term_Offer_Answer *answer;
+	Contract_Term_Offer_Answer **answer;
 	fhir_string text;
 	U64 linkId_count;
 	fhir_string *linkId;
@@ -4542,11 +4542,11 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 reference_count;
-	Reference *reference;
+	Reference **reference;
 	CodeableConcept *role;
 };
 class Contract_Term_Offer_Answer {
@@ -4554,9 +4554,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class ValueType {
 		Unknown,
 		fhir_boolean,
@@ -4595,47 +4595,47 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *scope;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	U64 typeReference_count;
-	Reference *typeReference;
+	Reference **typeReference;
 	U64 subtype_count;
-	CodeableConcept *subtype;
+	CodeableConcept **subtype;
 	Coding *relationship;
 	U64 context_count;
-	Contract_Term_Asset_Context *context;
+	Contract_Term_Asset_Context **context;
 	fhir_string condition;
 	U64 periodType_count;
-	CodeableConcept *periodType;
+	CodeableConcept **periodType;
 	U64 period_count;
-	Period *period;
+	Period **period;
 	U64 usePeriod_count;
-	Period *usePeriod;
+	Period **usePeriod;
 	fhir_string text;
 	U64 linkId_count;
 	fhir_string *linkId;
 	U64 answer_count;
-	Contract_Term_Offer_Answer *answer;
+	Contract_Term_Offer_Answer **answer;
 	U64 securityLabelNumber_count;
 	fhir_unsignedInt *securityLabelNumber;
 	U64 valuedItem_count;
-	Contract_Term_Asset_ValuedItem *valuedItem;
+	Contract_Term_Asset_ValuedItem **valuedItem;
 };
 class Contract_Term_Asset_Context {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *reference;
 	U64 code_count;
-	CodeableConcept *code;
+	CodeableConcept **code;
 	fhir_string text;
 };
 class Contract_Term_Asset_ValuedItem {
@@ -4643,9 +4643,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class EntitType {
 		Unknown,
 		CodeableConcept,
@@ -4679,13 +4679,13 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean doNotPerform;
 	CodeableConcept *type;
 	U64 subject_count;
-	Contract_Term_Action_Subject *subject;
+	Contract_Term_Action_Subject **subject;
 	CodeableConcept *intent;
 	U64 linkId_count;
 	fhir_string *linkId;
@@ -4708,25 +4708,25 @@ public:
 	} occurrence;
 
 	U64 requester_count;
-	Reference *requester;
+	Reference **requester;
 	U64 requesterLinkId_count;
 	fhir_string *requesterLinkId;
 	U64 performerType_count;
-	CodeableConcept *performerType;
+	CodeableConcept **performerType;
 	CodeableConcept *performerRole;
 	Reference *performer;
 	U64 performerLinkId_count;
 	fhir_string *performerLinkId;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 reason_count;
 	fhir_string *reason;
 	U64 reasonLinkId_count;
 	fhir_string *reasonLinkId;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 securityLabelNumber_count;
 	fhir_unsignedInt *securityLabelNumber;
 };
@@ -4735,11 +4735,11 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 reference_count;
-	Reference *reference;
+	Reference **reference;
 	CodeableConcept *role;
 };
 class Contract_Signer {
@@ -4747,22 +4747,22 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Coding *type;
 	Reference *party;
 	U64 signature_count;
-	Signature *signature;
+	Signature **signature;
 };
 class Contract_Friendly {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class ConteType {
 		Unknown,
 		Attachment,
@@ -4781,9 +4781,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class ConteType {
 		Unknown,
 		Attachment,
@@ -4802,9 +4802,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class ConteType {
 		Unknown,
 		Attachment,
@@ -4827,13 +4827,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *type;
 	Reference *policyHolder;
@@ -4844,25 +4844,25 @@ public:
 	CodeableConcept *relationship;
 	Period *period;
 	U64 payor_count;
-	Reference *payor;
+	Reference **payor;
 	U64 class__count;
-	Coverage_Class *class_;
+	Coverage_Class **class_;
 	fhir_positiveInt order;
 	fhir_string network;
 	U64 costToBeneficiary_count;
-	Coverage_CostToBeneficiary *costToBeneficiary;
+	Coverage_CostToBeneficiary **costToBeneficiary;
 	fhir_boolean subrogation;
 	U64 contract_count;
-	Reference *contract;
+	Reference **contract;
 };
 class Coverage_Class {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	fhir_string value;
 	fhir_string name;
@@ -4872,9 +4872,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	enum class ValueType {
 		Unknown,
@@ -4889,16 +4889,16 @@ public:
 	} value;
 
 	U64 exception_count;
-	Coverage_CostToBeneficiary_Exception *exception;
+	Coverage_CostToBeneficiary_Exception **exception;
 };
 class Coverage_CostToBeneficiary_Exception {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	Period *period;
 };
@@ -4911,13 +4911,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *priority;
 	U64 purpose_count;
@@ -4941,20 +4941,20 @@ public:
 	Reference *insurer;
 	Reference *facility;
 	U64 supportingInfo_count;
-	CoverageEligibilityRequest_SupportingInfo *supportingInfo;
+	CoverageEligibilityRequest_SupportingInfo **supportingInfo;
 	U64 insurance_count;
-	CoverageEligibilityRequest_Insurance *insurance;
+	CoverageEligibilityRequest_Insurance **insurance;
 	U64 item_count;
-	CoverageEligibilityRequest_Item *item;
+	CoverageEligibilityRequest_Item **item;
 };
 class CoverageEligibilityRequest_SupportingInfo {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	Reference *information;
 	fhir_boolean appliesToAll;
@@ -4964,9 +4964,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean focal;
 	Reference *coverage;
 	fhir_string businessArrangement;
@@ -4976,32 +4976,32 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 supportingInfoSequence_count;
 	fhir_positiveInt *supportingInfoSequence;
 	CodeableConcept *category;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	Reference *provider;
 	Quantity *quantity;
 	Money *unitPrice;
 	Reference *facility;
 	U64 diagnosis_count;
-	CoverageEligibilityRequest_Item_Diagnosis *diagnosis;
+	CoverageEligibilityRequest_Item_Diagnosis **diagnosis;
 	U64 detail_count;
-	Reference *detail;
+	Reference **detail;
 };
 class CoverageEligibilityRequest_Item_Diagnosis {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class DiagnType {
 		Unknown,
 		CodeableConcept,
@@ -5024,13 +5024,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	U64 purpose_count;
 	fhir_code *purpose;
@@ -5054,38 +5054,38 @@ public:
 	fhir_string disposition;
 	Reference *insurer;
 	U64 insurance_count;
-	CoverageEligibilityResponse_Insurance *insurance;
+	CoverageEligibilityResponse_Insurance **insurance;
 	fhir_string preAuthRef;
 	CodeableConcept *form;
 	U64 error_count;
-	CoverageEligibilityResponse_Error *error;
+	CoverageEligibilityResponse_Error **error;
 };
 class CoverageEligibilityResponse_Insurance {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *coverage;
 	fhir_boolean inforce;
 	Period *benefitPeriod;
 	U64 item_count;
-	CoverageEligibilityResponse_Insurance_Item *item;
+	CoverageEligibilityResponse_Insurance_Item **item;
 };
 class CoverageEligibilityResponse_Insurance_Item {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *category;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	Reference *provider;
 	fhir_boolean excluded;
 	fhir_string name;
@@ -5094,10 +5094,10 @@ public:
 	CodeableConcept *unit;
 	CodeableConcept *term;
 	U64 benefit_count;
-	CoverageEligibilityResponse_Insurance_Item_Benefit *benefit;
+	CoverageEligibilityResponse_Insurance_Item_Benefit **benefit;
 	fhir_boolean authorizationRequired;
 	U64 authorizationSupporting_count;
-	CodeableConcept *authorizationSupporting;
+	CodeableConcept **authorizationSupporting;
 	fhir_uri authorizationUrl;
 };
 class CoverageEligibilityResponse_Insurance_Item_Benefit {
@@ -5105,9 +5105,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	enum class AllowType {
 		Unknown,
@@ -5143,9 +5143,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 };
 class DetectedIssue {
@@ -5157,13 +5157,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *code;
 	fhir_code severity;
@@ -5182,35 +5182,35 @@ public:
 
 	Reference *author;
 	U64 implicated_count;
-	Reference *implicated;
+	Reference **implicated;
 	U64 evidence_count;
-	DetectedIssue_Evidence *evidence;
+	DetectedIssue_Evidence **evidence;
 	fhir_string detail;
 	fhir_uri reference;
 	U64 mitigation_count;
-	DetectedIssue_Mitigation *mitigation;
+	DetectedIssue_Mitigation **mitigation;
 };
 class DetectedIssue_Evidence {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 code_count;
-	CodeableConcept *code;
+	CodeableConcept **code;
 	U64 detail_count;
-	Reference *detail;
+	Reference **detail;
 };
 class DetectedIssue_Mitigation {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *action;
 	fhir_dateTime date;
 	Reference *author;
@@ -5224,19 +5224,19 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	Reference *definition;
 	U64 udiCarrier_count;
-	Device_UdiCarrier *udiCarrier;
+	Device_UdiCarrier **udiCarrier;
 	fhir_code status;
 	U64 statusReason_count;
-	CodeableConcept *statusReason;
+	CodeableConcept **statusReason;
 	fhir_string distinctIdentifier;
 	fhir_string manufacturer;
 	fhir_dateTime manufactureDate;
@@ -5244,26 +5244,26 @@ public:
 	fhir_string lotNumber;
 	fhir_string serialNumber;
 	U64 deviceName_count;
-	Device_DeviceName *deviceName;
+	Device_DeviceName **deviceName;
 	fhir_string modelNumber;
 	fhir_string partNumber;
 	CodeableConcept *type;
 	U64 specialization_count;
-	Device_Specialization *specialization;
+	Device_Specialization **specialization;
 	U64 version_count;
-	Device_Version *version;
+	Device_Version **version;
 	U64 property_count;
-	Device_Property *property;
+	Device_Property **property;
 	Reference *patient;
 	Reference *owner;
 	U64 contact_count;
-	ContactPoint *contact;
+	ContactPoint **contact;
 	Reference *location;
 	fhir_uri url;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 safety_count;
-	CodeableConcept *safety;
+	CodeableConcept **safety;
 	Reference *parent;
 };
 class Device_UdiCarrier {
@@ -5271,9 +5271,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string deviceIdentifier;
 	fhir_uri issuer;
 	fhir_uri jurisdiction;
@@ -5286,9 +5286,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_code type;
 };
@@ -5297,9 +5297,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *systemType;
 	fhir_string version;
 };
@@ -5308,9 +5308,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	Identifier *component;
 	fhir_string value;
@@ -5320,14 +5320,14 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	U64 valueQuantity_count;
-	Quantity *valueQuantity;
+	Quantity **valueQuantity;
 	U64 valueCode_count;
-	CodeableConcept *valueCode;
+	CodeableConcept **valueCode;
 };
 class DeviceDefinition {
 public: 
@@ -5338,15 +5338,15 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 udiDeviceIdentifier_count;
-	DeviceDefinition_UdiDeviceIdentifier *udiDeviceIdentifier;
+	DeviceDefinition_UdiDeviceIdentifier **udiDeviceIdentifier;
 	enum class ManufType {
 		Unknown,
 		fhir_string,
@@ -5360,44 +5360,44 @@ public:
 	} manufacturer;
 
 	U64 deviceName_count;
-	DeviceDefinition_DeviceName *deviceName;
+	DeviceDefinition_DeviceName **deviceName;
 	fhir_string modelNumber;
 	CodeableConcept *type;
 	U64 specialization_count;
-	DeviceDefinition_Specialization *specialization;
+	DeviceDefinition_Specialization **specialization;
 	U64 version_count;
 	fhir_string *version;
 	U64 safety_count;
-	CodeableConcept *safety;
+	CodeableConcept **safety;
 	U64 shelfLifeStorage_count;
-	ProductShelfLife *shelfLifeStorage;
+	ProductShelfLife **shelfLifeStorage;
 	ProdCharacteristic *physicalCharacteristics;
 	U64 languageCode_count;
-	CodeableConcept *languageCode;
+	CodeableConcept **languageCode;
 	U64 capability_count;
-	DeviceDefinition_Capability *capability;
+	DeviceDefinition_Capability **capability;
 	U64 property_count;
-	DeviceDefinition_Property *property;
+	DeviceDefinition_Property **property;
 	Reference *owner;
 	U64 contact_count;
-	ContactPoint *contact;
+	ContactPoint **contact;
 	fhir_uri url;
 	fhir_uri onlineInformation;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	Quantity *quantity;
 	Reference *parentDevice;
 	U64 material_count;
-	DeviceDefinition_Material *material;
+	DeviceDefinition_Material **material;
 };
 class DeviceDefinition_UdiDeviceIdentifier {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string deviceIdentifier;
 	fhir_uri issuer;
 	fhir_uri jurisdiction;
@@ -5407,9 +5407,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_code type;
 };
@@ -5418,9 +5418,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string systemType;
 	fhir_string version;
 };
@@ -5429,35 +5429,35 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	U64 description_count;
-	CodeableConcept *description;
+	CodeableConcept **description;
 };
 class DeviceDefinition_Property {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	U64 valueQuantity_count;
-	Quantity *valueQuantity;
+	Quantity **valueQuantity;
 	U64 valueCode_count;
-	CodeableConcept *valueCode;
+	CodeableConcept **valueCode;
 };
 class DeviceDefinition_Material {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *substance;
 	fhir_boolean alternate;
 	fhir_boolean allergenicIndicator;
@@ -5471,13 +5471,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *type;
 	CodeableConcept *unit;
 	Reference *source;
@@ -5487,16 +5487,16 @@ public:
 	fhir_code category;
 	Timing *measurementPeriod;
 	U64 calibration_count;
-	DeviceMetric_Calibration *calibration;
+	DeviceMetric_Calibration **calibration;
 };
 class DeviceMetric_Calibration {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	fhir_code state;
 	fhir_instant time;
@@ -5510,21 +5510,21 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 instantiatesCanonical_count;
 	fhir_canonical *instantiatesCanonical;
 	U64 instantiatesUri_count;
 	fhir_uri *instantiatesUri;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 priorRequest_count;
-	Reference *priorRequest;
+	Reference **priorRequest;
 	Identifier *groupIdentifier;
 	fhir_code status;
 	fhir_code intent;
@@ -5542,7 +5542,7 @@ public:
 	} code;
 
 	U64 parameter_count;
-	DeviceRequest_Parameter *parameter;
+	DeviceRequest_Parameter **parameter;
 	Reference *subject;
 	Reference *encounter;
 	enum class OccurType {
@@ -5564,26 +5564,26 @@ public:
 	CodeableConcept *performerType;
 	Reference *performer;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 insurance_count;
-	Reference *insurance;
+	Reference **insurance;
 	U64 supportingInfo_count;
-	Reference *supportingInfo;
+	Reference **supportingInfo;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 relevantHistory_count;
-	Reference *relevantHistory;
+	Reference **relevantHistory;
 };
 class DeviceRequest_Parameter {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	enum class ValueType {
 		Unknown,
@@ -5611,19 +5611,19 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	fhir_code status;
 	Reference *subject;
 	U64 derivedFrom_count;
-	Reference *derivedFrom;
+	Reference **derivedFrom;
 	enum class TiminType {
 		Unknown,
 		Timing,
@@ -5642,12 +5642,12 @@ public:
 	Reference *source;
 	Reference *device;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	CodeableConcept *bodySite;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class DiagnosticReport {
 public: 
@@ -5658,18 +5658,18 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	fhir_code status;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	CodeableConcept *code;
 	Reference *subject;
 	Reference *encounter;
@@ -5687,31 +5687,31 @@ public:
 
 	fhir_instant issued;
 	U64 performer_count;
-	Reference *performer;
+	Reference **performer;
 	U64 resultsInterpreter_count;
-	Reference *resultsInterpreter;
+	Reference **resultsInterpreter;
 	U64 specimen_count;
-	Reference *specimen;
+	Reference **specimen;
 	U64 result_count;
-	Reference *result;
+	Reference **result;
 	U64 imagingStudy_count;
-	Reference *imagingStudy;
+	Reference **imagingStudy;
 	U64 media_count;
-	DiagnosticReport_Media *media;
+	DiagnosticReport_Media **media;
 	fhir_string conclusion;
 	U64 conclusionCode_count;
-	CodeableConcept *conclusionCode;
+	CodeableConcept **conclusionCode;
 	U64 presentedForm_count;
-	Attachment *presentedForm;
+	Attachment **presentedForm;
 };
 class DiagnosticReport_Media {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string comment;
 	Reference *link;
 };
@@ -5724,37 +5724,37 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *masterIdentifier;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *type;
 	Reference *subject;
 	fhir_dateTime created;
 	U64 author_count;
-	Reference *author;
+	Reference **author;
 	U64 recipient_count;
-	Reference *recipient;
+	Reference **recipient;
 	fhir_uri source;
 	fhir_string description;
 	U64 content_count;
-	Reference *content;
+	Reference **content;
 	U64 related_count;
-	DocumentManifest_Related *related;
+	DocumentManifest_Related **related;
 };
 class DocumentManifest_Related {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	Reference *ref;
 };
@@ -5767,32 +5767,32 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *masterIdentifier;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	fhir_code docStatus;
 	CodeableConcept *type;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	Reference *subject;
 	fhir_instant date;
 	U64 author_count;
-	Reference *author;
+	Reference **author;
 	Reference *authenticator;
 	Reference *custodian;
 	U64 relatesTo_count;
-	DocumentReference_RelatesTo *relatesTo;
+	DocumentReference_RelatesTo **relatesTo;
 	fhir_string description;
 	U64 securityLabel_count;
-	CodeableConcept *securityLabel;
+	CodeableConcept **securityLabel;
 	U64 content_count;
-	DocumentReference_Content *content;
+	DocumentReference_Content **content;
 	DocumentReference_Context *context;
 };
 class DocumentReference_RelatesTo {
@@ -5800,9 +5800,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	Reference *target;
 };
@@ -5811,9 +5811,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Attachment *attachment;
 	Coding *format;
 };
@@ -5822,19 +5822,19 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 encounter_count;
-	Reference *encounter;
+	Reference **encounter;
 	U64 event_count;
-	CodeableConcept *event;
+	CodeableConcept **event;
 	Period *period;
 	CodeableConcept *facilityType;
 	CodeableConcept *practiceSetting;
 	Reference *sourcePatientInfo;
 	U64 related_count;
-	Reference *related;
+	Reference **related;
 };
 class DomainResource {
 public: 
@@ -5845,11 +5845,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 };
 class EffectEvidenceSynthesis {
 public: 
@@ -5860,14 +5860,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -5875,30 +5875,30 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	U64 topic_count;
-	CodeableConcept *topic;
+	CodeableConcept **topic;
 	U64 author_count;
-	ContactDetail *author;
+	ContactDetail **author;
 	U64 editor_count;
-	ContactDetail *editor;
+	ContactDetail **editor;
 	U64 reviewer_count;
-	ContactDetail *reviewer;
+	ContactDetail **reviewer;
 	U64 endorser_count;
-	ContactDetail *endorser;
+	ContactDetail **endorser;
 	U64 relatedArtifact_count;
-	RelatedArtifact *relatedArtifact;
+	RelatedArtifact **relatedArtifact;
 	CodeableConcept *synthesisType;
 	CodeableConcept *studyType;
 	Reference *population;
@@ -5907,20 +5907,20 @@ public:
 	Reference *outcome;
 	EffectEvidenceSynthesis_SampleSize *sampleSize;
 	U64 resultsByExposure_count;
-	EffectEvidenceSynthesis_ResultsByExposure *resultsByExposure;
+	EffectEvidenceSynthesis_ResultsByExposure **resultsByExposure;
 	U64 effectEstimate_count;
-	EffectEvidenceSynthesis_EffectEstimate *effectEstimate;
+	EffectEvidenceSynthesis_EffectEstimate **effectEstimate;
 	U64 certainty_count;
-	EffectEvidenceSynthesis_Certainty *certainty;
+	EffectEvidenceSynthesis_Certainty **certainty;
 };
 class EffectEvidenceSynthesis_SampleSize {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	Integer *numberOfStudies;
 	Integer *numberOfParticipants;
@@ -5930,9 +5930,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	fhir_code exposureState;
 	CodeableConcept *variantState;
@@ -5943,25 +5943,25 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	CodeableConcept *type;
 	CodeableConcept *variantState;
 	fhir_decimal value;
 	CodeableConcept *unitOfMeasure;
 	U64 precisionEstimate_count;
-	EffectEvidenceSynthesis_EffectEstimate_PrecisionEstimate *precisionEstimate;
+	EffectEvidenceSynthesis_EffectEstimate_PrecisionEstimate **precisionEstimate;
 };
 class EffectEvidenceSynthesis_EffectEstimate_PrecisionEstimate {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	fhir_decimal level;
 	fhir_decimal from;
@@ -5972,29 +5972,29 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 rating_count;
-	CodeableConcept *rating;
+	CodeableConcept **rating;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 certaintySubcomponent_count;
-	EffectEvidenceSynthesis_Certainty_CertaintySubcomponent *certaintySubcomponent;
+	EffectEvidenceSynthesis_Certainty_CertaintySubcomponent **certaintySubcomponent;
 };
 class EffectEvidenceSynthesis_Certainty_CertaintySubcomponent {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	U64 rating_count;
-	CodeableConcept *rating;
+	CodeableConcept **rating;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class Encounter {
 public: 
@@ -6005,45 +6005,45 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	U64 statusHistory_count;
-	Encounter_StatusHistory *statusHistory;
+	Encounter_StatusHistory **statusHistory;
 	Coding *class_;
 	U64 classHistory_count;
-	Encounter_ClassHistory *classHistory;
+	Encounter_ClassHistory **classHistory;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	CodeableConcept *serviceType;
 	CodeableConcept *priority;
 	Reference *subject;
 	U64 episodeOfCare_count;
-	Reference *episodeOfCare;
+	Reference **episodeOfCare;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 participant_count;
-	Encounter_Participant *participant;
+	Encounter_Participant **participant;
 	U64 appointment_count;
-	Reference *appointment;
+	Reference **appointment;
 	Period *period;
 	Duration *length;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 diagnosis_count;
-	Encounter_Diagnosis *diagnosis;
+	Encounter_Diagnosis **diagnosis;
 	U64 account_count;
-	Reference *account;
+	Reference **account;
 	Encounter_Hospitalization *hospitalization;
 	U64 location_count;
-	Encounter_Location *location;
+	Encounter_Location **location;
 	Reference *serviceProvider;
 	Reference *partOf;
 };
@@ -6052,9 +6052,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code status;
 	Period *period;
 };
@@ -6063,9 +6063,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Coding *class_;
 	Period *period;
 };
@@ -6074,11 +6074,11 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	Period *period;
 	Reference *individual;
 };
@@ -6087,9 +6087,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *condition;
 	CodeableConcept *use;
 	fhir_positiveInt rank;
@@ -6099,19 +6099,19 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *preAdmissionIdentifier;
 	Reference *origin;
 	CodeableConcept *admitSource;
 	CodeableConcept *reAdmission;
 	U64 dietPreference_count;
-	CodeableConcept *dietPreference;
+	CodeableConcept **dietPreference;
 	U64 specialCourtesy_count;
-	CodeableConcept *specialCourtesy;
+	CodeableConcept **specialCourtesy;
 	U64 specialArrangement_count;
-	CodeableConcept *specialArrangement;
+	CodeableConcept **specialArrangement;
 	Reference *destination;
 	CodeableConcept *dischargeDisposition;
 };
@@ -6120,9 +6120,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *location;
 	fhir_code status;
 	CodeableConcept *physicalType;
@@ -6137,22 +6137,22 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	Coding *connectionType;
 	fhir_string name;
 	Reference *managingOrganization;
 	U64 contact_count;
-	ContactPoint *contact;
+	ContactPoint **contact;
 	Period *period;
 	U64 payloadType_count;
-	CodeableConcept *payloadType;
+	CodeableConcept **payloadType;
 	U64 payloadMimeType_count;
 	fhir_code *payloadMimeType;
 	fhir_url address;
@@ -6168,13 +6168,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	fhir_dateTime created;
 	Reference *insurer;
@@ -6191,13 +6191,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	Reference *request;
 	fhir_code outcome;
@@ -6215,39 +6215,39 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	U64 statusHistory_count;
-	EpisodeOfCare_StatusHistory *statusHistory;
+	EpisodeOfCare_StatusHistory **statusHistory;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	U64 diagnosis_count;
-	EpisodeOfCare_Diagnosis *diagnosis;
+	EpisodeOfCare_Diagnosis **diagnosis;
 	Reference *patient;
 	Reference *managingOrganization;
 	Period *period;
 	U64 referralRequest_count;
-	Reference *referralRequest;
+	Reference **referralRequest;
 	Reference *careManager;
 	U64 team_count;
-	Reference *team;
+	Reference **team;
 	U64 account_count;
-	Reference *account;
+	Reference **account;
 };
 class EpisodeOfCare_StatusHistory {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code status;
 	Period *period;
 };
@@ -6256,9 +6256,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *condition;
 	CodeableConcept *role;
 	fhir_positiveInt rank;
@@ -6272,14 +6272,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -6301,12 +6301,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
@@ -6314,19 +6314,19 @@ public:
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	U64 topic_count;
-	CodeableConcept *topic;
+	CodeableConcept **topic;
 	U64 author_count;
-	ContactDetail *author;
+	ContactDetail **author;
 	U64 editor_count;
-	ContactDetail *editor;
+	ContactDetail **editor;
 	U64 reviewer_count;
-	ContactDetail *reviewer;
+	ContactDetail **reviewer;
 	U64 endorser_count;
-	ContactDetail *endorser;
+	ContactDetail **endorser;
 	U64 relatedArtifact_count;
-	RelatedArtifact *relatedArtifact;
+	RelatedArtifact **relatedArtifact;
 	U64 trigger_count;
-	TriggerDefinition *trigger;
+	TriggerDefinition **trigger;
 };
 class Evidence {
 public: 
@@ -6337,14 +6337,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -6354,35 +6354,35 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	U64 topic_count;
-	CodeableConcept *topic;
+	CodeableConcept **topic;
 	U64 author_count;
-	ContactDetail *author;
+	ContactDetail **author;
 	U64 editor_count;
-	ContactDetail *editor;
+	ContactDetail **editor;
 	U64 reviewer_count;
-	ContactDetail *reviewer;
+	ContactDetail **reviewer;
 	U64 endorser_count;
-	ContactDetail *endorser;
+	ContactDetail **endorser;
 	U64 relatedArtifact_count;
-	RelatedArtifact *relatedArtifact;
+	RelatedArtifact **relatedArtifact;
 	Reference *exposureBackground;
 	U64 exposureVariant_count;
-	Reference *exposureVariant;
+	Reference **exposureVariant;
 	U64 outcome_count;
-	Reference *outcome;
+	Reference **outcome;
 };
 class EvidenceVariable {
 public: 
@@ -6393,14 +6393,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -6410,42 +6410,42 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	U64 topic_count;
-	CodeableConcept *topic;
+	CodeableConcept **topic;
 	U64 author_count;
-	ContactDetail *author;
+	ContactDetail **author;
 	U64 editor_count;
-	ContactDetail *editor;
+	ContactDetail **editor;
 	U64 reviewer_count;
-	ContactDetail *reviewer;
+	ContactDetail **reviewer;
 	U64 endorser_count;
-	ContactDetail *endorser;
+	ContactDetail **endorser;
 	U64 relatedArtifact_count;
-	RelatedArtifact *relatedArtifact;
+	RelatedArtifact **relatedArtifact;
 	fhir_code type;
 	U64 characteristic_count;
-	EvidenceVariable_Characteristic *characteristic;
+	EvidenceVariable_Characteristic **characteristic;
 };
 class EvidenceVariable_Characteristic {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	enum class DefinType {
 		Unknown,
@@ -6468,7 +6468,7 @@ public:
 	} definition;
 
 	U64 usageContext_count;
-	UsageContext *usageContext;
+	UsageContext **usageContext;
 	fhir_boolean exclude;
 	enum class PartiType {
 		Unknown,
@@ -6498,14 +6498,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_code status;
@@ -6513,19 +6513,19 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown copyright;
 	fhir_markdown purpose;
 	U64 actor_count;
-	ExampleScenario_Actor *actor;
+	ExampleScenario_Actor **actor;
 	U64 instance_count;
-	ExampleScenario_Instance *instance;
+	ExampleScenario_Instance **instance;
 	U64 process_count;
-	ExampleScenario_Process *process;
+	ExampleScenario_Process **process;
 	U64 workflow_count;
 	fhir_canonical *workflow;
 };
@@ -6534,9 +6534,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string actorId;
 	fhir_code type;
 	fhir_string name;
@@ -6547,26 +6547,26 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string resourceId;
 	fhir_code resourceType_;
 	fhir_string name;
 	fhir_markdown description;
 	U64 version_count;
-	ExampleScenario_Instance_Version *version;
+	ExampleScenario_Instance_Version **version;
 	U64 containedInstance_count;
-	ExampleScenario_Instance_ContainedInstance *containedInstance;
+	ExampleScenario_Instance_ContainedInstance **containedInstance;
 };
 class ExampleScenario_Instance_Version {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string versionId;
 	fhir_markdown description;
 };
@@ -6575,9 +6575,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string resourceId;
 	fhir_string versionId;
 };
@@ -6586,39 +6586,39 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string title;
 	fhir_markdown description;
 	fhir_markdown preConditions;
 	fhir_markdown postConditions;
 	U64 step_count;
-	ExampleScenario_Process_Step *step;
+	ExampleScenario_Process_Step **step;
 };
 class ExampleScenario_Process_Step {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 process_count;
-	ExampleScenario_Process *process;
+	ExampleScenario_Process **process;
 	fhir_boolean pause;
 	ExampleScenario_Process_Step_Operation *operation;
 	U64 alternative_count;
-	ExampleScenario_Process_Step_Alternative *alternative;
+	ExampleScenario_Process_Step_Alternative **alternative;
 };
 class ExampleScenario_Process_Step_Operation {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string number;
 	fhir_string type;
 	fhir_string name;
@@ -6635,13 +6635,13 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string title;
 	fhir_markdown description;
 	U64 step_count;
-	ExampleScenario_Process_Step *step;
+	ExampleScenario_Process_Step **step;
 };
 class ExplanationOfBenefit {
 public: 
@@ -6652,13 +6652,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *type;
 	CodeableConcept *subType;
@@ -6673,7 +6673,7 @@ public:
 	CodeableConcept *fundsReserveRequested;
 	CodeableConcept *fundsReserve;
 	U64 related_count;
-	ExplanationOfBenefit_Related *related;
+	ExplanationOfBenefit_Related **related;
 	Reference *prescription;
 	Reference *originalPrescription;
 	ExplanationOfBenefit_Payee *payee;
@@ -6686,44 +6686,44 @@ public:
 	U64 preAuthRef_count;
 	fhir_string *preAuthRef;
 	U64 preAuthRefPeriod_count;
-	Period *preAuthRefPeriod;
+	Period **preAuthRefPeriod;
 	U64 careTeam_count;
-	ExplanationOfBenefit_CareTeam *careTeam;
+	ExplanationOfBenefit_CareTeam **careTeam;
 	U64 supportingInfo_count;
-	ExplanationOfBenefit_SupportingInfo *supportingInfo;
+	ExplanationOfBenefit_SupportingInfo **supportingInfo;
 	U64 diagnosis_count;
-	ExplanationOfBenefit_Diagnosis *diagnosis;
+	ExplanationOfBenefit_Diagnosis **diagnosis;
 	U64 procedure_count;
-	ExplanationOfBenefit_Procedure *procedure;
+	ExplanationOfBenefit_Procedure **procedure;
 	fhir_positiveInt precedence;
 	U64 insurance_count;
-	ExplanationOfBenefit_Insurance *insurance;
+	ExplanationOfBenefit_Insurance **insurance;
 	ExplanationOfBenefit_Accident *accident;
 	U64 item_count;
-	ExplanationOfBenefit_Item *item;
+	ExplanationOfBenefit_Item **item;
 	U64 addItem_count;
-	ExplanationOfBenefit_AddItem *addItem;
+	ExplanationOfBenefit_AddItem **addItem;
 	U64 adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication *adjudication;
+	ExplanationOfBenefit_Item_Adjudication **adjudication;
 	U64 total_count;
-	ExplanationOfBenefit_Total *total;
+	ExplanationOfBenefit_Total **total;
 	ExplanationOfBenefit_Payment *payment;
 	CodeableConcept *formCode;
 	Attachment *form;
 	U64 processNote_count;
-	ExplanationOfBenefit_ProcessNote *processNote;
+	ExplanationOfBenefit_ProcessNote **processNote;
 	Period *benefitPeriod;
 	U64 benefitBalance_count;
-	ExplanationOfBenefit_BenefitBalance *benefitBalance;
+	ExplanationOfBenefit_BenefitBalance **benefitBalance;
 };
 class ExplanationOfBenefit_Related {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *claim;
 	CodeableConcept *relationship;
 	Identifier *reference;
@@ -6733,9 +6733,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	Reference *party;
 };
@@ -6744,9 +6744,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	Reference *provider;
 	fhir_boolean responsible;
@@ -6758,9 +6758,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	CodeableConcept *category;
 	CodeableConcept *code;
@@ -6801,9 +6801,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	enum class DiagnType {
 		Unknown,
@@ -6818,7 +6818,7 @@ public:
 	} diagnosis;
 
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	CodeableConcept *onAdmission;
 	CodeableConcept *packageCode;
 };
@@ -6827,12 +6827,12 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	fhir_dateTime date;
 	enum class ProceType {
 		Unknown,
@@ -6847,16 +6847,16 @@ public:
 	} procedure;
 
 	U64 udi_count;
-	Reference *udi;
+	Reference **udi;
 };
 class ExplanationOfBenefit_Insurance {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean focal;
 	Reference *coverage;
 	U64 preAuthRef_count;
@@ -6867,9 +6867,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_date date;
 	CodeableConcept *type;
 	enum class LocatType {
@@ -6890,9 +6890,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	U64 careTeamSequence_count;
 	fhir_positiveInt *careTeamSequence;
@@ -6906,9 +6906,9 @@ public:
 	CodeableConcept *category;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	U64 programCode_count;
-	CodeableConcept *programCode;
+	CodeableConcept **programCode;
 	enum class ServiType {
 		Unknown,
 		fhir_date,
@@ -6940,27 +6940,27 @@ public:
 	fhir_decimal factor;
 	Money *net;
 	U64 udi_count;
-	Reference *udi;
+	Reference **udi;
 	CodeableConcept *bodySite;
 	U64 subSite_count;
-	CodeableConcept *subSite;
+	CodeableConcept **subSite;
 	U64 encounter_count;
-	Reference *encounter;
+	Reference **encounter;
 	U64 noteNumber_count;
 	fhir_positiveInt *noteNumber;
 	U64 adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication *adjudication;
+	ExplanationOfBenefit_Item_Adjudication **adjudication;
 	U64 detail_count;
-	ExplanationOfBenefit_Item_Detail *detail;
+	ExplanationOfBenefit_Item_Detail **detail;
 };
 class ExplanationOfBenefit_Item_Adjudication {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *category;
 	CodeableConcept *reason;
 	Money *amount;
@@ -6971,65 +6971,65 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	CodeableConcept *revenue;
 	CodeableConcept *category;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	U64 programCode_count;
-	CodeableConcept *programCode;
+	CodeableConcept **programCode;
 	Quantity *quantity;
 	Money *unitPrice;
 	fhir_decimal factor;
 	Money *net;
 	U64 udi_count;
-	Reference *udi;
+	Reference **udi;
 	U64 noteNumber_count;
 	fhir_positiveInt *noteNumber;
 	U64 adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication *adjudication;
+	ExplanationOfBenefit_Item_Adjudication **adjudication;
 	U64 subDetail_count;
-	ExplanationOfBenefit_Item_Detail_SubDetail *subDetail;
+	ExplanationOfBenefit_Item_Detail_SubDetail **subDetail;
 };
 class ExplanationOfBenefit_Item_Detail_SubDetail {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	CodeableConcept *revenue;
 	CodeableConcept *category;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	U64 programCode_count;
-	CodeableConcept *programCode;
+	CodeableConcept **programCode;
 	Quantity *quantity;
 	Money *unitPrice;
 	fhir_decimal factor;
 	Money *net;
 	U64 udi_count;
-	Reference *udi;
+	Reference **udi;
 	U64 noteNumber_count;
 	fhir_positiveInt *noteNumber;
 	U64 adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication *adjudication;
+	ExplanationOfBenefit_Item_Adjudication **adjudication;
 };
 class ExplanationOfBenefit_AddItem {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 itemSequence_count;
 	fhir_positiveInt *itemSequence;
 	U64 detailSequence_count;
@@ -7037,12 +7037,12 @@ public:
 	U64 subDetailSequence_count;
 	fhir_positiveInt *subDetailSequence;
 	U64 provider_count;
-	Reference *provider;
+	Reference **provider;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	U64 programCode_count;
-	CodeableConcept *programCode;
+	CodeableConcept **programCode;
 	enum class ServiType {
 		Unknown,
 		fhir_date,
@@ -7075,25 +7075,25 @@ public:
 	Money *net;
 	CodeableConcept *bodySite;
 	U64 subSite_count;
-	CodeableConcept *subSite;
+	CodeableConcept **subSite;
 	U64 noteNumber_count;
 	fhir_positiveInt *noteNumber;
 	U64 adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication *adjudication;
+	ExplanationOfBenefit_Item_Adjudication **adjudication;
 	U64 detail_count;
-	ExplanationOfBenefit_AddItem_Detail *detail;
+	ExplanationOfBenefit_AddItem_Detail **detail;
 };
 class ExplanationOfBenefit_AddItem_Detail {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	Quantity *quantity;
 	Money *unitPrice;
 	fhir_decimal factor;
@@ -7101,21 +7101,21 @@ public:
 	U64 noteNumber_count;
 	fhir_positiveInt *noteNumber;
 	U64 adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication *adjudication;
+	ExplanationOfBenefit_Item_Adjudication **adjudication;
 	U64 subDetail_count;
-	ExplanationOfBenefit_AddItem_Detail_SubDetail *subDetail;
+	ExplanationOfBenefit_AddItem_Detail_SubDetail **subDetail;
 };
 class ExplanationOfBenefit_AddItem_Detail_SubDetail {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *productOrService;
 	U64 modifier_count;
-	CodeableConcept *modifier;
+	CodeableConcept **modifier;
 	Quantity *quantity;
 	Money *unitPrice;
 	fhir_decimal factor;
@@ -7123,16 +7123,16 @@ public:
 	U64 noteNumber_count;
 	fhir_positiveInt *noteNumber;
 	U64 adjudication_count;
-	ExplanationOfBenefit_Item_Adjudication *adjudication;
+	ExplanationOfBenefit_Item_Adjudication **adjudication;
 };
 class ExplanationOfBenefit_Total {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *category;
 	Money *amount;
 };
@@ -7141,9 +7141,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	Money *adjustment;
 	CodeableConcept *adjustmentReason;
@@ -7156,9 +7156,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt number;
 	fhir_code type;
 	fhir_string text;
@@ -7169,9 +7169,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *category;
 	fhir_boolean excluded;
 	fhir_string name;
@@ -7180,16 +7180,16 @@ public:
 	CodeableConcept *unit;
 	CodeableConcept *term;
 	U64 financial_count;
-	ExplanationOfBenefit_BenefitBalance_Financial *financial;
+	ExplanationOfBenefit_BenefitBalance_Financial **financial;
 };
 class ExplanationOfBenefit_BenefitBalance_Financial {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	enum class AllowType {
 		Unknown,
@@ -7227,13 +7227,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 instantiatesCanonical_count;
 	fhir_canonical *instantiatesCanonical;
 	U64 instantiatesUri_count;
@@ -7293,22 +7293,22 @@ public:
 	} deceased;
 
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 condition_count;
-	FamilyMemberHistory_Condition *condition;
+	FamilyMemberHistory_Condition **condition;
 };
 class FamilyMemberHistory_Condition {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	CodeableConcept *outcome;
 	fhir_boolean contributedToDeath;
@@ -7329,7 +7329,7 @@ public:
 	} onset;
 
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class Flag {
 public: 
@@ -7340,16 +7340,16 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	CodeableConcept *code;
 	Reference *subject;
 	Period *period;
@@ -7365,17 +7365,17 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code lifecycleStatus;
 	CodeableConcept *achievementStatus;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	CodeableConcept *priority;
 	CodeableConcept *description;
 	Reference *subject;
@@ -7392,27 +7392,27 @@ public:
 	} start;
 
 	U64 target_count;
-	Goal_Target *target;
+	Goal_Target **target;
 	fhir_date statusDate;
 	fhir_string statusReason;
 	Reference *expressedBy;
 	U64 addresses_count;
-	Reference *addresses;
+	Reference **addresses;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 outcomeCode_count;
-	CodeableConcept *outcomeCode;
+	CodeableConcept **outcomeCode;
 	U64 outcomeReference_count;
-	Reference *outcomeReference;
+	Reference **outcomeReference;
 };
 class Goal_Target {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *measure;
 	enum class DetaiType {
 		Unknown,
@@ -7458,11 +7458,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -7471,58 +7471,58 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_code start;
 	fhir_canonical profile;
 	U64 link_count;
-	GraphDefinition_Link *link;
+	GraphDefinition_Link **link;
 };
 class GraphDefinition_Link {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string path;
 	fhir_string sliceName;
 	Integer *min;
 	fhir_string max;
 	fhir_string description;
 	U64 target_count;
-	GraphDefinition_Link_Target *target;
+	GraphDefinition_Link_Target **target;
 };
 class GraphDefinition_Link_Target {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	fhir_string params;
 	fhir_canonical profile;
 	U64 compartment_count;
-	GraphDefinition_Link_Target_Compartment *compartment;
+	GraphDefinition_Link_Target_Compartment **compartment;
 	U64 link_count;
-	GraphDefinition_Link *link;
+	GraphDefinition_Link **link;
 };
 class GraphDefinition_Link_Target_Compartment {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code use;
 	fhir_code code;
 	fhir_code rule;
@@ -7538,13 +7538,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_boolean active;
 	fhir_code type;
 	fhir_boolean actual;
@@ -7553,18 +7553,18 @@ public:
 	fhir_unsignedInt quantity;
 	Reference *managingEntity;
 	U64 characteristic_count;
-	Group_Characteristic *characteristic;
+	Group_Characteristic **characteristic;
 	U64 member_count;
-	Group_Member *member;
+	Group_Member **member;
 };
 class Group_Characteristic {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	enum class ValueType {
 		Unknown,
@@ -7592,9 +7592,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *entity;
 	Period *period;
 	fhir_boolean inactive;
@@ -7608,14 +7608,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *requestIdentifier;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	enum class ModulType {
 		Unknown,
 		fhir_uri,
@@ -7636,17 +7636,17 @@ public:
 	fhir_dateTime occurrenceDateTime;
 	Reference *performer;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 evaluationMessage_count;
-	Reference *evaluationMessage;
+	Reference **evaluationMessage;
 	Reference *outputParameters;
 	Reference *result;
 	U64 dataRequirement_count;
-	DataRequirement *dataRequirement;
+	DataRequirement **dataRequirement;
 };
 class HealthcareService {
 public: 
@@ -7657,60 +7657,60 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_boolean active;
 	Reference *providedBy;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	U64 specialty_count;
-	CodeableConcept *specialty;
+	CodeableConcept **specialty;
 	U64 location_count;
-	Reference *location;
+	Reference **location;
 	fhir_string name;
 	fhir_string comment;
 	fhir_markdown extraDetails;
 	Attachment *photo;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	U64 coverageArea_count;
-	Reference *coverageArea;
+	Reference **coverageArea;
 	U64 serviceProvisionCode_count;
-	CodeableConcept *serviceProvisionCode;
+	CodeableConcept **serviceProvisionCode;
 	U64 eligibility_count;
-	HealthcareService_Eligibility *eligibility;
+	HealthcareService_Eligibility **eligibility;
 	U64 program_count;
-	CodeableConcept *program;
+	CodeableConcept **program;
 	U64 characteristic_count;
-	CodeableConcept *characteristic;
+	CodeableConcept **characteristic;
 	U64 communication_count;
-	CodeableConcept *communication;
+	CodeableConcept **communication;
 	U64 referralMethod_count;
-	CodeableConcept *referralMethod;
+	CodeableConcept **referralMethod;
 	fhir_boolean appointmentRequired;
 	U64 availableTime_count;
-	HealthcareService_AvailableTime *availableTime;
+	HealthcareService_AvailableTime **availableTime;
 	U64 notAvailable_count;
-	HealthcareService_NotAvailable *notAvailable;
+	HealthcareService_NotAvailable **notAvailable;
 	fhir_string availabilityExceptions;
 	U64 endpoint_count;
-	Reference *endpoint;
+	Reference **endpoint;
 };
 class HealthcareService_Eligibility {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	fhir_markdown comment;
 };
@@ -7719,9 +7719,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 daysOfWeek_count;
 	fhir_code *daysOfWeek;
 	fhir_boolean allDay;
@@ -7733,9 +7733,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	Period *during;
 };
@@ -7748,75 +7748,75 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	U64 modality_count;
-	Coding *modality;
+	Coding **modality;
 	Reference *subject;
 	Reference *encounter;
 	fhir_dateTime started;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	Reference *referrer;
 	U64 interpreter_count;
-	Reference *interpreter;
+	Reference **interpreter;
 	U64 endpoint_count;
-	Reference *endpoint;
+	Reference **endpoint;
 	fhir_unsignedInt numberOfSeries;
 	fhir_unsignedInt numberOfInstances;
 	Reference *procedureReference;
 	U64 procedureCode_count;
-	CodeableConcept *procedureCode;
+	CodeableConcept **procedureCode;
 	Reference *location;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	fhir_string description;
 	U64 series_count;
-	ImagingStudy_Series *series;
+	ImagingStudy_Series **series;
 };
 class ImagingStudy_Series {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_id uid;
 	fhir_unsignedInt number;
 	Coding *modality;
 	fhir_string description;
 	fhir_unsignedInt numberOfInstances;
 	U64 endpoint_count;
-	Reference *endpoint;
+	Reference **endpoint;
 	Coding *bodySite;
 	Coding *laterality;
 	U64 specimen_count;
-	Reference *specimen;
+	Reference **specimen;
 	fhir_dateTime started;
 	U64 performer_count;
-	ImagingStudy_Series_Performer *performer;
+	ImagingStudy_Series_Performer **performer;
 	U64 instance_count;
-	ImagingStudy_Series_Instance *instance;
+	ImagingStudy_Series_Instance **instance;
 };
 class ImagingStudy_Series_Performer {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *function_;
 	Reference *actor;
 };
@@ -7825,9 +7825,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_id uid;
 	Coding *sopClass;
 	fhir_unsignedInt number;
@@ -7842,13 +7842,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *statusReason;
 	CodeableConcept *vaccineCode;
@@ -7877,34 +7877,34 @@ public:
 	CodeableConcept *route;
 	Quantity *doseQuantity;
 	U64 performer_count;
-	Immunization_Performer *performer;
+	Immunization_Performer **performer;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	fhir_boolean isSubpotent;
 	U64 subpotentReason_count;
-	CodeableConcept *subpotentReason;
+	CodeableConcept **subpotentReason;
 	U64 education_count;
-	Immunization_Education *education;
+	Immunization_Education **education;
 	U64 programEligibility_count;
-	CodeableConcept *programEligibility;
+	CodeableConcept **programEligibility;
 	CodeableConcept *fundingSource;
 	U64 reaction_count;
-	Immunization_Reaction *reaction;
+	Immunization_Reaction **reaction;
 	U64 protocolApplied_count;
-	Immunization_ProtocolApplied *protocolApplied;
+	Immunization_ProtocolApplied **protocolApplied;
 };
 class Immunization_Performer {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *function_;
 	Reference *actor;
 };
@@ -7913,9 +7913,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string documentType;
 	fhir_uri reference;
 	fhir_dateTime publicationDate;
@@ -7926,9 +7926,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_dateTime date;
 	Reference *detail;
 	fhir_boolean reported;
@@ -7938,13 +7938,13 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string series;
 	Reference *authority;
 	U64 targetDisease_count;
-	CodeableConcept *targetDisease;
+	CodeableConcept **targetDisease;
 	enum class DoseNType {
 		Unknown,
 		fhir_positiveInt,
@@ -7979,13 +7979,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	Reference *patient;
 	fhir_dateTime date;
@@ -7994,7 +7994,7 @@ public:
 	Reference *immunizationEvent;
 	CodeableConcept *doseStatus;
 	U64 doseStatusReason_count;
-	CodeableConcept *doseStatusReason;
+	CodeableConcept **doseStatusReason;
 	fhir_string description;
 	fhir_string series;
 	enum class DoseNType {
@@ -8031,37 +8031,37 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	Reference *patient;
 	fhir_dateTime date;
 	Reference *authority;
 	U64 recommendation_count;
-	ImmunizationRecommendation_Recommendation *recommendation;
+	ImmunizationRecommendation_Recommendation **recommendation;
 };
 class ImmunizationRecommendation_Recommendation {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 vaccineCode_count;
-	CodeableConcept *vaccineCode;
+	CodeableConcept **vaccineCode;
 	CodeableConcept *targetDisease;
 	U64 contraindicatedVaccineCode_count;
-	CodeableConcept *contraindicatedVaccineCode;
+	CodeableConcept **contraindicatedVaccineCode;
 	CodeableConcept *forecastStatus;
 	U64 forecastReason_count;
-	CodeableConcept *forecastReason;
+	CodeableConcept **forecastReason;
 	U64 dateCriterion_count;
-	ImmunizationRecommendation_Recommendation_DateCriterion *dateCriterion;
+	ImmunizationRecommendation_Recommendation_DateCriterion **dateCriterion;
 	fhir_string description;
 	fhir_string series;
 	enum class DoseNType {
@@ -8089,18 +8089,18 @@ public:
 	} seriesDoses;
 
 	U64 supportingImmunization_count;
-	Reference *supportingImmunization;
+	Reference **supportingImmunization;
 	U64 supportingPatientInformation_count;
-	Reference *supportingPatientInformation;
+	Reference **supportingPatientInformation;
 };
 class ImmunizationRecommendation_Recommendation_DateCriterion {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	fhir_dateTime value;
 };
@@ -8113,11 +8113,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -8127,21 +8127,21 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown copyright;
 	fhir_id packageId;
 	fhir_code license;
 	U64 fhirVersion_count;
 	fhir_code *fhirVersion;
 	U64 dependsOn_count;
-	ImplementationGuide_DependsOn *dependsOn;
+	ImplementationGuide_DependsOn **dependsOn;
 	U64 global__count;
-	ImplementationGuide_Global *global_;
+	ImplementationGuide_Global **global_;
 	ImplementationGuide_Definition *definition;
 	ImplementationGuide_Manifest *manifest;
 };
@@ -8150,9 +8150,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_canonical uri;
 	fhir_id packageId;
 	fhir_string version;
@@ -8162,9 +8162,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	fhir_canonical profile;
 };
@@ -8173,27 +8173,27 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 grouping_count;
-	ImplementationGuide_Definition_Grouping *grouping;
+	ImplementationGuide_Definition_Grouping **grouping;
 	U64 resource_count;
-	ImplementationGuide_Definition_Resource *resource;
+	ImplementationGuide_Definition_Resource **resource;
 	ImplementationGuide_Definition_Page *page;
 	U64 parameter_count;
-	ImplementationGuide_Definition_Parameter *parameter;
+	ImplementationGuide_Definition_Parameter **parameter;
 	U64 template__count;
-	ImplementationGuide_Definition_Template *template_;
+	ImplementationGuide_Definition_Template **template_;
 };
 class ImplementationGuide_Definition_Grouping {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_string description;
 };
@@ -8202,9 +8202,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *reference;
 	U64 fhirVersion_count;
 	fhir_code *fhirVersion;
@@ -8229,9 +8229,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class Name_Type {
 		Unknown,
 		fhir_url,
@@ -8247,16 +8247,16 @@ public:
 	fhir_string title;
 	fhir_code generation;
 	U64 page_count;
-	ImplementationGuide_Definition_Page *page;
+	ImplementationGuide_Definition_Page **page;
 };
 class ImplementationGuide_Definition_Parameter {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	fhir_string value;
 };
@@ -8265,9 +8265,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	fhir_string source;
 	fhir_string scope;
@@ -8277,14 +8277,14 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_url rendering;
 	U64 resource_count;
-	ImplementationGuide_Manifest_Resource *resource;
+	ImplementationGuide_Manifest_Resource **resource;
 	U64 page_count;
-	ImplementationGuide_Manifest_Page *page;
+	ImplementationGuide_Manifest_Page **page;
 	U64 image_count;
 	fhir_string *image;
 	U64 other_count;
@@ -8295,9 +8295,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *reference;
 	enum class ExampType {
 		Unknown,
@@ -8318,9 +8318,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_string title;
 	U64 anchor_count;
@@ -8335,16 +8335,16 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	fhir_string name;
 	U64 alias_count;
 	fhir_string *alias;
@@ -8352,30 +8352,30 @@ public:
 	Reference *ownedBy;
 	Reference *administeredBy;
 	U64 coverageArea_count;
-	Reference *coverageArea;
+	Reference **coverageArea;
 	U64 contact_count;
-	InsurancePlan_Contact *contact;
+	InsurancePlan_Contact **contact;
 	U64 endpoint_count;
-	Reference *endpoint;
+	Reference **endpoint;
 	U64 network_count;
-	Reference *network;
+	Reference **network;
 	U64 coverage_count;
-	InsurancePlan_Coverage *coverage;
+	InsurancePlan_Coverage **coverage;
 	U64 plan_count;
-	InsurancePlan_Plan *plan;
+	InsurancePlan_Plan **plan;
 };
 class InsurancePlan_Contact {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *purpose;
 	HumanName *name;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	Address *address;
 };
 class InsurancePlan_Coverage {
@@ -8383,36 +8383,36 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	U64 network_count;
-	Reference *network;
+	Reference **network;
 	U64 benefit_count;
-	InsurancePlan_Coverage_Benefit *benefit;
+	InsurancePlan_Coverage_Benefit **benefit;
 };
 class InsurancePlan_Coverage_Benefit {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	fhir_string requirement;
 	U64 limit_count;
-	InsurancePlan_Coverage_Benefit_Limit *limit;
+	InsurancePlan_Coverage_Benefit_Limit **limit;
 };
 class InsurancePlan_Coverage_Benefit_Limit {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Quantity *value;
 	CodeableConcept *code;
 };
@@ -8421,29 +8421,29 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *type;
 	U64 coverageArea_count;
-	Reference *coverageArea;
+	Reference **coverageArea;
 	U64 network_count;
-	Reference *network;
+	Reference **network;
 	U64 generalCost_count;
-	InsurancePlan_Plan_GeneralCost *generalCost;
+	InsurancePlan_Plan_GeneralCost **generalCost;
 	U64 specificCost_count;
-	InsurancePlan_Plan_SpecificCost *specificCost;
+	InsurancePlan_Plan_SpecificCost **specificCost;
 };
 class InsurancePlan_Plan_GeneralCost {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	fhir_positiveInt groupSize;
 	Money *cost;
@@ -8454,37 +8454,37 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *category;
 	U64 benefit_count;
-	InsurancePlan_Plan_SpecificCost_Benefit *benefit;
+	InsurancePlan_Plan_SpecificCost_Benefit **benefit;
 };
 class InsurancePlan_Plan_SpecificCost_Benefit {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	U64 cost_count;
-	InsurancePlan_Plan_SpecificCost_Benefit_Cost *cost;
+	InsurancePlan_Plan_SpecificCost_Benefit_Cost **cost;
 };
 class InsurancePlan_Plan_SpecificCost_Benefit_Cost {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	CodeableConcept *applicability;
 	U64 qualifiers_count;
-	CodeableConcept *qualifiers;
+	CodeableConcept **qualifiers;
 	Quantity *value;
 };
 class Invoice {
@@ -8496,13 +8496,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	fhir_string cancelledReason;
 	CodeableConcept *type;
@@ -8510,27 +8510,27 @@ public:
 	Reference *recipient;
 	fhir_dateTime date;
 	U64 participant_count;
-	Invoice_Participant *participant;
+	Invoice_Participant **participant;
 	Reference *issuer;
 	Reference *account;
 	U64 lineItem_count;
-	Invoice_LineItem *lineItem;
+	Invoice_LineItem **lineItem;
 	U64 totalPriceComponent_count;
-	Invoice_LineItem_PriceComponent *totalPriceComponent;
+	Invoice_LineItem_PriceComponent **totalPriceComponent;
 	Money *totalNet;
 	Money *totalGross;
 	fhir_markdown paymentTerms;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class Invoice_Participant {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *role;
 	Reference *actor;
 };
@@ -8539,9 +8539,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt sequence;
 	enum class ChargType {
 		Unknown,
@@ -8556,16 +8556,16 @@ public:
 	} chargeItem;
 
 	U64 priceComponent_count;
-	Invoice_LineItem_PriceComponent *priceComponent;
+	Invoice_LineItem_PriceComponent **priceComponent;
 };
 class Invoice_LineItem_PriceComponent {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	CodeableConcept *code;
 	fhir_decimal factor;
@@ -8580,14 +8580,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -8610,12 +8610,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
@@ -8623,23 +8623,23 @@ public:
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	U64 topic_count;
-	CodeableConcept *topic;
+	CodeableConcept **topic;
 	U64 author_count;
-	ContactDetail *author;
+	ContactDetail **author;
 	U64 editor_count;
-	ContactDetail *editor;
+	ContactDetail **editor;
 	U64 reviewer_count;
-	ContactDetail *reviewer;
+	ContactDetail **reviewer;
 	U64 endorser_count;
-	ContactDetail *endorser;
+	ContactDetail **endorser;
 	U64 relatedArtifact_count;
-	RelatedArtifact *relatedArtifact;
+	RelatedArtifact **relatedArtifact;
 	U64 parameter_count;
-	ParameterDefinition *parameter;
+	ParameterDefinition **parameter;
 	U64 dataRequirement_count;
-	DataRequirement *dataRequirement;
+	DataRequirement **dataRequirement;
 	U64 content_count;
-	Attachment *content;
+	Attachment **content;
 };
 class Linkage {
 public: 
@@ -8650,24 +8650,24 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean active;
 	Reference *author;
 	U64 item_count;
-	Linkage_Item *item;
+	Linkage_Item **item;
 };
 class Linkage_Item {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	Reference *resource;
 };
@@ -8680,13 +8680,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	fhir_code mode;
 	fhir_string title;
@@ -8697,9 +8697,9 @@ public:
 	Reference *source;
 	CodeableConcept *orderedBy;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 entry_count;
-	List_Entry *entry;
+	List_Entry **entry;
 	CodeableConcept *emptyReason;
 };
 class List_Entry {
@@ -8707,9 +8707,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *flag;
 	fhir_boolean deleted;
 	fhir_dateTime date;
@@ -8724,13 +8724,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	Coding *operationalStatus;
 	fhir_string name;
@@ -8739,28 +8739,28 @@ public:
 	fhir_string description;
 	fhir_code mode;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	Address *address;
 	CodeableConcept *physicalType;
 	Location_Position *position;
 	Reference *managingOrganization;
 	Reference *partOf;
 	U64 hoursOfOperation_count;
-	Location_HoursOfOperation *hoursOfOperation;
+	Location_HoursOfOperation **hoursOfOperation;
 	fhir_string availabilityExceptions;
 	U64 endpoint_count;
-	Reference *endpoint;
+	Reference **endpoint;
 };
 class Location_Position {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_decimal longitude;
 	fhir_decimal latitude;
 	fhir_decimal altitude;
@@ -8770,9 +8770,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 daysOfWeek_count;
 	fhir_code *daysOfWeek;
 	fhir_boolean allDay;
@@ -8788,14 +8788,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -8817,12 +8817,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
@@ -8830,24 +8830,24 @@ public:
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	U64 topic_count;
-	CodeableConcept *topic;
+	CodeableConcept **topic;
 	U64 author_count;
-	ContactDetail *author;
+	ContactDetail **author;
 	U64 editor_count;
-	ContactDetail *editor;
+	ContactDetail **editor;
 	U64 reviewer_count;
-	ContactDetail *reviewer;
+	ContactDetail **reviewer;
 	U64 endorser_count;
-	ContactDetail *endorser;
+	ContactDetail **endorser;
 	U64 relatedArtifact_count;
-	RelatedArtifact *relatedArtifact;
+	RelatedArtifact **relatedArtifact;
 	U64 library_count;
 	fhir_canonical *library;
 	fhir_markdown disclaimer;
 	CodeableConcept *scoring;
 	CodeableConcept *compositeScoring;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	fhir_string riskAdjustment;
 	fhir_string rateAggregation;
 	fhir_markdown rationale;
@@ -8857,33 +8857,33 @@ public:
 	fhir_markdown *definition;
 	fhir_markdown guidance;
 	U64 group_count;
-	Measure_Group *group;
+	Measure_Group **group;
 	U64 supplementalData_count;
-	Measure_SupplementalData *supplementalData;
+	Measure_SupplementalData **supplementalData;
 };
 class Measure_Group {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	fhir_string description;
 	U64 population_count;
-	Measure_Group_Population *population;
+	Measure_Group_Population **population;
 	U64 stratifier_count;
-	Measure_Group_Stratifier *stratifier;
+	Measure_Group_Stratifier **stratifier;
 };
 class Measure_Group_Population {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	fhir_string description;
 	Expression *criteria;
@@ -8893,23 +8893,23 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	fhir_string description;
 	Expression *criteria;
 	U64 component_count;
-	Measure_Group_Stratifier_Component *component;
+	Measure_Group_Stratifier_Component **component;
 };
 class Measure_Group_Stratifier_Component {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	fhir_string description;
 	Expression *criteria;
@@ -8919,12 +8919,12 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	U64 usage_count;
-	CodeableConcept *usage;
+	CodeableConcept **usage;
 	fhir_string description;
 	Expression *criteria;
 };
@@ -8937,13 +8937,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	fhir_code type;
 	fhir_canonical measure;
@@ -8953,33 +8953,33 @@ public:
 	Period *period;
 	CodeableConcept *improvementNotation;
 	U64 group_count;
-	MeasureReport_Group *group;
+	MeasureReport_Group **group;
 	U64 evaluatedResource_count;
-	Reference *evaluatedResource;
+	Reference **evaluatedResource;
 };
 class MeasureReport_Group {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	U64 population_count;
-	MeasureReport_Group_Population *population;
+	MeasureReport_Group_Population **population;
 	Quantity *measureScore;
 	U64 stratifier_count;
-	MeasureReport_Group_Stratifier *stratifier;
+	MeasureReport_Group_Stratifier **stratifier;
 };
 class MeasureReport_Group_Population {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	Integer *count;
 	Reference *subjectResults;
@@ -8989,27 +8989,27 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 code_count;
-	CodeableConcept *code;
+	CodeableConcept **code;
 	U64 stratum_count;
-	MeasureReport_Group_Stratifier_Stratum *stratum;
+	MeasureReport_Group_Stratifier_Stratum **stratum;
 };
 class MeasureReport_Group_Stratifier_Stratum {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *value;
 	U64 component_count;
-	MeasureReport_Group_Stratifier_Stratum_Component *component;
+	MeasureReport_Group_Stratifier_Stratum_Component **component;
 	U64 population_count;
-	MeasureReport_Group_Stratifier_Stratum_Population *population;
+	MeasureReport_Group_Stratifier_Stratum_Population **population;
 	Quantity *measureScore;
 };
 class MeasureReport_Group_Stratifier_Stratum_Component {
@@ -9017,9 +9017,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	CodeableConcept *value;
 };
@@ -9028,9 +9028,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	Integer *count;
 	Reference *subjectResults;
@@ -9044,17 +9044,17 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	fhir_code status;
 	CodeableConcept *type;
 	CodeableConcept *modality;
@@ -9076,7 +9076,7 @@ public:
 	fhir_instant issued;
 	Reference *operator_;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	CodeableConcept *bodySite;
 	fhir_string deviceName;
 	Reference *device;
@@ -9086,7 +9086,7 @@ public:
 	fhir_decimal duration;
 	Attachment *content;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class Medication {
 public: 
@@ -9097,20 +9097,20 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *code;
 	fhir_code status;
 	Reference *manufacturer;
 	CodeableConcept *form;
 	Ratio *amount;
 	U64 ingredient_count;
-	Medication_Ingredient *ingredient;
+	Medication_Ingredient **ingredient;
 	Medication_Batch *batch;
 };
 class Medication_Ingredient {
@@ -9118,9 +9118,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class Item_Type {
 		Unknown,
 		CodeableConcept,
@@ -9141,9 +9141,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string lotNumber;
 	fhir_dateTime expirationDate;
 };
@@ -9156,20 +9156,20 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 instantiates_count;
 	fhir_uri *instantiates;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	fhir_code status;
 	U64 statusReason_count;
-	CodeableConcept *statusReason;
+	CodeableConcept **statusReason;
 	CodeableConcept *category;
 	enum class MedicType {
 		Unknown,
@@ -9186,7 +9186,7 @@ public:
 	Reference *subject;
 	Reference *context;
 	U64 supportingInformation_count;
-	Reference *supportingInformation;
+	Reference **supportingInformation;
 	enum class EffecType {
 		Unknown,
 		fhir_dateTime,
@@ -9200,28 +9200,28 @@ public:
 	} effective;
 
 	U64 performer_count;
-	MedicationAdministration_Performer *performer;
+	MedicationAdministration_Performer **performer;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	Reference *request;
 	U64 device_count;
-	Reference *device;
+	Reference **device;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	MedicationAdministration_Dosage *dosage;
 	U64 eventHistory_count;
-	Reference *eventHistory;
+	Reference **eventHistory;
 };
 class MedicationAdministration_Performer {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *function_;
 	Reference *actor;
 };
@@ -9230,9 +9230,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string text;
 	CodeableConcept *site;
 	CodeableConcept *route;
@@ -9260,15 +9260,15 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	fhir_code status;
 	enum class StatuType {
 		Unknown,
@@ -9298,12 +9298,12 @@ public:
 	Reference *subject;
 	Reference *context;
 	U64 supportingInformation_count;
-	Reference *supportingInformation;
+	Reference **supportingInformation;
 	U64 performer_count;
-	MedicationDispense_Performer *performer;
+	MedicationDispense_Performer **performer;
 	Reference *location;
 	U64 authorizingPrescription_count;
-	Reference *authorizingPrescription;
+	Reference **authorizingPrescription;
 	CodeableConcept *type;
 	Quantity *quantity;
 	Quantity *daysSupply;
@@ -9311,25 +9311,25 @@ public:
 	fhir_dateTime whenHandedOver;
 	Reference *destination;
 	U64 receiver_count;
-	Reference *receiver;
+	Reference **receiver;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 dosageInstruction_count;
-	Dosage *dosageInstruction;
+	Dosage **dosageInstruction;
 	MedicationDispense_Substitution *substitution;
 	U64 detectedIssue_count;
-	Reference *detectedIssue;
+	Reference **detectedIssue;
 	U64 eventHistory_count;
-	Reference *eventHistory;
+	Reference **eventHistory;
 };
 class MedicationDispense_Performer {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *function_;
 	Reference *actor;
 };
@@ -9338,15 +9338,15 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean wasSubstituted;
 	CodeableConcept *type;
 	U64 reason_count;
-	CodeableConcept *reason;
+	CodeableConcept **reason;
 	U64 responsibleParty_count;
-	Reference *responsibleParty;
+	Reference **responsibleParty;
 };
 class MedicationKnowledge {
 public: 
@@ -9357,11 +9357,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	fhir_code status;
 	Reference *manufacturer;
@@ -9370,56 +9370,56 @@ public:
 	U64 synonym_count;
 	fhir_string *synonym;
 	U64 relatedMedicationKnowledge_count;
-	MedicationKnowledge_RelatedMedicationKnowledge *relatedMedicationKnowledge;
+	MedicationKnowledge_RelatedMedicationKnowledge **relatedMedicationKnowledge;
 	U64 associatedMedication_count;
-	Reference *associatedMedication;
+	Reference **associatedMedication;
 	U64 productType_count;
-	CodeableConcept *productType;
+	CodeableConcept **productType;
 	U64 monograph_count;
-	MedicationKnowledge_Monograph *monograph;
+	MedicationKnowledge_Monograph **monograph;
 	U64 ingredient_count;
-	MedicationKnowledge_Ingredient *ingredient;
+	MedicationKnowledge_Ingredient **ingredient;
 	fhir_markdown preparationInstruction;
 	U64 intendedRoute_count;
-	CodeableConcept *intendedRoute;
+	CodeableConcept **intendedRoute;
 	U64 cost_count;
-	MedicationKnowledge_Cost *cost;
+	MedicationKnowledge_Cost **cost;
 	U64 monitoringProgram_count;
-	MedicationKnowledge_MonitoringProgram *monitoringProgram;
+	MedicationKnowledge_MonitoringProgram **monitoringProgram;
 	U64 administrationGuidelines_count;
-	MedicationKnowledge_AdministrationGuidelines *administrationGuidelines;
+	MedicationKnowledge_AdministrationGuidelines **administrationGuidelines;
 	U64 medicineClassification_count;
-	MedicationKnowledge_MedicineClassification *medicineClassification;
+	MedicationKnowledge_MedicineClassification **medicineClassification;
 	MedicationKnowledge_Packaging *packaging;
 	U64 drugCharacteristic_count;
-	MedicationKnowledge_DrugCharacteristic *drugCharacteristic;
+	MedicationKnowledge_DrugCharacteristic **drugCharacteristic;
 	U64 contraindication_count;
-	Reference *contraindication;
+	Reference **contraindication;
 	U64 regulatory_count;
-	MedicationKnowledge_Regulatory *regulatory;
+	MedicationKnowledge_Regulatory **regulatory;
 	U64 kinetics_count;
-	MedicationKnowledge_Kinetics *kinetics;
+	MedicationKnowledge_Kinetics **kinetics;
 };
 class MedicationKnowledge_RelatedMedicationKnowledge {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	U64 reference_count;
-	Reference *reference;
+	Reference **reference;
 };
 class MedicationKnowledge_Monograph {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	Reference *source;
 };
@@ -9428,9 +9428,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class Item_Type {
 		Unknown,
 		CodeableConcept,
@@ -9451,9 +9451,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	fhir_string source;
 	Money *cost;
@@ -9463,9 +9463,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	fhir_string name;
 };
@@ -9474,11 +9474,11 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 dosage_count;
-	MedicationKnowledge_AdministrationGuidelines_Dosage *dosage;
+	MedicationKnowledge_AdministrationGuidelines_Dosage **dosage;
 	enum class IndicType {
 		Unknown,
 		CodeableConcept,
@@ -9492,28 +9492,28 @@ public:
 	} indication;
 
 	U64 patientCharacteristics_count;
-	MedicationKnowledge_AdministrationGuidelines_PatientCharacteristics *patientCharacteristics;
+	MedicationKnowledge_AdministrationGuidelines_PatientCharacteristics **patientCharacteristics;
 };
 class MedicationKnowledge_AdministrationGuidelines_Dosage {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	U64 dosage_count;
-	Dosage *dosage;
+	Dosage **dosage;
 };
 class MedicationKnowledge_AdministrationGuidelines_PatientCharacteristics {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class CharaType {
 		Unknown,
 		CodeableConcept,
@@ -9534,21 +9534,21 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	U64 classification_count;
-	CodeableConcept *classification;
+	CodeableConcept **classification;
 };
 class MedicationKnowledge_Packaging {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	Quantity *quantity;
 };
@@ -9557,9 +9557,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	enum class ValueType {
 		Unknown,
@@ -9583,14 +9583,14 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *regulatoryAuthority;
 	U64 substitution_count;
-	MedicationKnowledge_Regulatory_Substitution *substitution;
+	MedicationKnowledge_Regulatory_Substitution **substitution;
 	U64 schedule_count;
-	MedicationKnowledge_Regulatory_Schedule *schedule;
+	MedicationKnowledge_Regulatory_Schedule **schedule;
 	MedicationKnowledge_Regulatory_MaxDispense *maxDispense;
 };
 class MedicationKnowledge_Regulatory_Substitution {
@@ -9598,9 +9598,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	fhir_boolean allowed;
 };
@@ -9609,9 +9609,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *schedule;
 };
 class MedicationKnowledge_Regulatory_MaxDispense {
@@ -9619,9 +9619,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Quantity *quantity;
 	Duration *period;
 };
@@ -9630,13 +9630,13 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 areaUnderCurve_count;
-	Quantity *areaUnderCurve;
+	Quantity **areaUnderCurve;
 	U64 lethalDose50_count;
-	Quantity *lethalDose50;
+	Quantity **lethalDose50;
 	Duration *halfLifePeriod;
 };
 class MedicationRequest {
@@ -9648,18 +9648,18 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *statusReason;
 	fhir_code intent;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	fhir_code priority;
 	fhir_boolean doNotPerform;
 	enum class ReporType {
@@ -9689,46 +9689,46 @@ public:
 	Reference *subject;
 	Reference *encounter;
 	U64 supportingInformation_count;
-	Reference *supportingInformation;
+	Reference **supportingInformation;
 	fhir_dateTime authoredOn;
 	Reference *requester;
 	Reference *performer;
 	CodeableConcept *performerType;
 	Reference *recorder;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 instantiatesCanonical_count;
 	fhir_canonical *instantiatesCanonical;
 	U64 instantiatesUri_count;
 	fhir_uri *instantiatesUri;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	Identifier *groupIdentifier;
 	CodeableConcept *courseOfTherapyType;
 	U64 insurance_count;
-	Reference *insurance;
+	Reference **insurance;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 dosageInstruction_count;
-	Dosage *dosageInstruction;
+	Dosage **dosageInstruction;
 	MedicationRequest_DispenseRequest *dispenseRequest;
 	MedicationRequest_Substitution *substitution;
 	Reference *priorPrescription;
 	U64 detectedIssue_count;
-	Reference *detectedIssue;
+	Reference **detectedIssue;
 	U64 eventHistory_count;
-	Reference *eventHistory;
+	Reference **eventHistory;
 };
 class MedicationRequest_DispenseRequest {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	MedicationRequest_DispenseRequest_InitialFill *initialFill;
 	Duration *dispenseInterval;
 	Period *validityPeriod;
@@ -9742,9 +9742,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Quantity *quantity;
 	Duration *duration;
 };
@@ -9753,9 +9753,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class AllowType {
 		Unknown,
 		fhir_boolean,
@@ -9779,20 +9779,20 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	fhir_code status;
 	U64 statusReason_count;
-	CodeableConcept *statusReason;
+	CodeableConcept **statusReason;
 	CodeableConcept *category;
 	enum class MedicType {
 		Unknown,
@@ -9823,15 +9823,15 @@ public:
 	fhir_dateTime dateAsserted;
 	Reference *informationSource;
 	U64 derivedFrom_count;
-	Reference *derivedFrom;
+	Reference **derivedFrom;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 dosage_count;
-	Dosage *dosage;
+	Dosage **dosage;
 };
 class MedicinalProduct {
 public: 
@@ -9842,13 +9842,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *type;
 	Coding *domain;
 	CodeableConcept *combinedPharmaceuticalDoseForm;
@@ -9858,52 +9858,52 @@ public:
 	fhir_string *specialMeasures;
 	CodeableConcept *paediatricUseIndicator;
 	U64 productClassification_count;
-	CodeableConcept *productClassification;
+	CodeableConcept **productClassification;
 	U64 marketingStatus_count;
-	MarketingStatus *marketingStatus;
+	MarketingStatus **marketingStatus;
 	U64 pharmaceuticalProduct_count;
-	Reference *pharmaceuticalProduct;
+	Reference **pharmaceuticalProduct;
 	U64 packagedMedicinalProduct_count;
-	Reference *packagedMedicinalProduct;
+	Reference **packagedMedicinalProduct;
 	U64 attachedDocument_count;
-	Reference *attachedDocument;
+	Reference **attachedDocument;
 	U64 masterFile_count;
-	Reference *masterFile;
+	Reference **masterFile;
 	U64 contact_count;
-	Reference *contact;
+	Reference **contact;
 	U64 clinicalTrial_count;
-	Reference *clinicalTrial;
+	Reference **clinicalTrial;
 	U64 name_count;
-	MedicinalProduct_Name *name;
+	MedicinalProduct_Name **name;
 	U64 crossReference_count;
-	Identifier *crossReference;
+	Identifier **crossReference;
 	U64 manufacturingBusinessOperation_count;
-	MedicinalProduct_ManufacturingBusinessOperation *manufacturingBusinessOperation;
+	MedicinalProduct_ManufacturingBusinessOperation **manufacturingBusinessOperation;
 	U64 specialDesignation_count;
-	MedicinalProduct_SpecialDesignation *specialDesignation;
+	MedicinalProduct_SpecialDesignation **specialDesignation;
 };
 class MedicinalProduct_Name {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string productName;
 	U64 namePart_count;
-	MedicinalProduct_Name_NamePart *namePart;
+	MedicinalProduct_Name_NamePart **namePart;
 	U64 countryLanguage_count;
-	MedicinalProduct_Name_CountryLanguage *countryLanguage;
+	MedicinalProduct_Name_CountryLanguage **countryLanguage;
 };
 class MedicinalProduct_Name_NamePart {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string part;
 	Coding *type;
 };
@@ -9912,9 +9912,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *country;
 	CodeableConcept *jurisdiction;
 	CodeableConcept *language;
@@ -9924,15 +9924,15 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *operationType;
 	Identifier *authorisationReferenceNumber;
 	fhir_dateTime effectiveDate;
 	CodeableConcept *confidentialityIndicator;
 	U64 manufacturer_count;
-	Reference *manufacturer;
+	Reference **manufacturer;
 	Reference *regulator;
 };
 class MedicinalProduct_SpecialDesignation {
@@ -9940,11 +9940,11 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *type;
 	CodeableConcept *intendedUse;
 	enum class IndicType {
@@ -9972,18 +9972,18 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	Reference *subject;
 	U64 country_count;
-	CodeableConcept *country;
+	CodeableConcept **country;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	CodeableConcept *status;
 	fhir_dateTime statusDate;
 	fhir_dateTime restoreDate;
@@ -9993,7 +9993,7 @@ public:
 	fhir_dateTime internationalBirthDate;
 	CodeableConcept *legalBasis;
 	U64 jurisdictionalAuthorization_count;
-	MedicinalProductAuthorization_JurisdictionalAuthorization *jurisdictionalAuthorization;
+	MedicinalProductAuthorization_JurisdictionalAuthorization **jurisdictionalAuthorization;
 	Reference *holder;
 	Reference *regulator;
 	MedicinalProductAuthorization_Procedure *procedure;
@@ -10003,14 +10003,14 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *country;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	CodeableConcept *legalStatusOfSupply;
 	Period *validityPeriod;
 };
@@ -10019,9 +10019,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	CodeableConcept *type;
 	enum class Date_Type {
@@ -10037,7 +10037,7 @@ public:
 	} date;
 
 	U64 application_count;
-	MedicinalProductAuthorization_Procedure *application;
+	MedicinalProductAuthorization_Procedure **application;
 };
 class MedicinalProductContraindication {
 public: 
@@ -10048,32 +10048,32 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 subject_count;
-	Reference *subject;
+	Reference **subject;
 	CodeableConcept *disease;
 	CodeableConcept *diseaseStatus;
 	U64 comorbidity_count;
-	CodeableConcept *comorbidity;
+	CodeableConcept **comorbidity;
 	U64 therapeuticIndication_count;
-	Reference *therapeuticIndication;
+	Reference **therapeuticIndication;
 	U64 otherTherapy_count;
-	MedicinalProductContraindication_OtherTherapy *otherTherapy;
+	MedicinalProductContraindication_OtherTherapy **otherTherapy;
 	U64 population_count;
-	Population *population;
+	Population **population;
 };
 class MedicinalProductContraindication_OtherTherapy {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *therapyRelationshipType;
 	enum class MedicType {
 		Unknown,
@@ -10097,34 +10097,34 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 subject_count;
-	Reference *subject;
+	Reference **subject;
 	CodeableConcept *diseaseSymptomProcedure;
 	CodeableConcept *diseaseStatus;
 	U64 comorbidity_count;
-	CodeableConcept *comorbidity;
+	CodeableConcept **comorbidity;
 	CodeableConcept *intendedEffect;
 	Quantity *duration;
 	U64 otherTherapy_count;
-	MedicinalProductIndication_OtherTherapy *otherTherapy;
+	MedicinalProductIndication_OtherTherapy **otherTherapy;
 	U64 undesirableEffect_count;
-	Reference *undesirableEffect;
+	Reference **undesirableEffect;
 	U64 population_count;
-	Population *population;
+	Population **population;
 };
 class MedicinalProductIndication_OtherTherapy {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *therapyRelationshipType;
 	enum class MedicType {
 		Unknown,
@@ -10148,18 +10148,18 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	CodeableConcept *role;
 	fhir_boolean allergenicIndicator;
 	U64 manufacturer_count;
-	Reference *manufacturer;
+	Reference **manufacturer;
 	U64 specifiedSubstance_count;
-	MedicinalProductIngredient_SpecifiedSubstance *specifiedSubstance;
+	MedicinalProductIngredient_SpecifiedSubstance **specifiedSubstance;
 	MedicinalProductIngredient_Substance *substance;
 };
 class MedicinalProductIngredient_SpecifiedSubstance {
@@ -10167,59 +10167,59 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	CodeableConcept *group;
 	CodeableConcept *confidentiality;
 	U64 strength_count;
-	MedicinalProductIngredient_SpecifiedSubstance_Strength *strength;
+	MedicinalProductIngredient_SpecifiedSubstance_Strength **strength;
 };
 class MedicinalProductIngredient_SpecifiedSubstance_Strength {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Ratio *presentation;
 	Ratio *presentationLowLimit;
 	Ratio *concentration;
 	Ratio *concentrationLowLimit;
 	fhir_string measurementPoint;
 	U64 country_count;
-	CodeableConcept *country;
+	CodeableConcept **country;
 	U64 referenceStrength_count;
-	MedicinalProductIngredient_SpecifiedSubstance_Strength_ReferenceStrength *referenceStrength;
+	MedicinalProductIngredient_SpecifiedSubstance_Strength_ReferenceStrength **referenceStrength;
 };
 class MedicinalProductIngredient_SpecifiedSubstance_Strength_ReferenceStrength {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *substance;
 	Ratio *strength;
 	Ratio *strengthLowLimit;
 	fhir_string measurementPoint;
 	U64 country_count;
-	CodeableConcept *country;
+	CodeableConcept **country;
 };
 class MedicinalProductIngredient_Substance {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	U64 strength_count;
-	MedicinalProductIngredient_SpecifiedSubstance_Strength *strength;
+	MedicinalProductIngredient_SpecifiedSubstance_Strength **strength;
 };
 class MedicinalProductInteraction {
 public: 
@@ -10230,16 +10230,16 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 subject_count;
-	Reference *subject;
+	Reference **subject;
 	fhir_string description;
 	U64 interactant_count;
-	MedicinalProductInteraction_Interactant *interactant;
+	MedicinalProductInteraction_Interactant **interactant;
 	CodeableConcept *type;
 	CodeableConcept *effect;
 	CodeableConcept *incidence;
@@ -10250,9 +10250,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class Item_Type {
 		Unknown,
 		Reference,
@@ -10275,21 +10275,21 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *manufacturedDoseForm;
 	CodeableConcept *unitOfPresentation;
 	Quantity *quantity;
 	U64 manufacturer_count;
-	Reference *manufacturer;
+	Reference **manufacturer;
 	U64 ingredient_count;
-	Reference *ingredient;
+	Reference **ingredient;
 	ProdCharacteristic *physicalCharacteristics;
 	U64 otherCharacteristics_count;
-	CodeableConcept *otherCharacteristics;
+	CodeableConcept **otherCharacteristics;
 };
 class MedicinalProductPackaged {
 public: 
@@ -10300,35 +10300,35 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 subject_count;
-	Reference *subject;
+	Reference **subject;
 	fhir_string description;
 	CodeableConcept *legalStatusOfSupply;
 	U64 marketingStatus_count;
-	MarketingStatus *marketingStatus;
+	MarketingStatus **marketingStatus;
 	Reference *marketingAuthorization;
 	U64 manufacturer_count;
-	Reference *manufacturer;
+	Reference **manufacturer;
 	U64 batchIdentifier_count;
-	MedicinalProductPackaged_BatchIdentifier *batchIdentifier;
+	MedicinalProductPackaged_BatchIdentifier **batchIdentifier;
 	U64 packageItem_count;
-	MedicinalProductPackaged_PackageItem *packageItem;
+	MedicinalProductPackaged_PackageItem **packageItem;
 };
 class MedicinalProductPackaged_BatchIdentifier {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *outerPackaging;
 	Identifier *immediatePackaging;
 };
@@ -10337,30 +10337,30 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *type;
 	Quantity *quantity;
 	U64 material_count;
-	CodeableConcept *material;
+	CodeableConcept **material;
 	U64 alternateMaterial_count;
-	CodeableConcept *alternateMaterial;
+	CodeableConcept **alternateMaterial;
 	U64 device_count;
-	Reference *device;
+	Reference **device;
 	U64 manufacturedItem_count;
-	Reference *manufacturedItem;
+	Reference **manufacturedItem;
 	U64 packageItem_count;
-	MedicinalProductPackaged_PackageItem *packageItem;
+	MedicinalProductPackaged_PackageItem **packageItem;
 	ProdCharacteristic *physicalCharacteristics;
 	U64 otherCharacteristics_count;
-	CodeableConcept *otherCharacteristics;
+	CodeableConcept **otherCharacteristics;
 	U64 shelfLifeStorage_count;
-	ProductShelfLife *shelfLifeStorage;
+	ProductShelfLife **shelfLifeStorage;
 	U64 manufacturer_count;
-	Reference *manufacturer;
+	Reference **manufacturer;
 };
 class MedicinalProductPharmaceutical {
 public: 
@@ -10371,32 +10371,32 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *administrableDoseForm;
 	CodeableConcept *unitOfPresentation;
 	U64 ingredient_count;
-	Reference *ingredient;
+	Reference **ingredient;
 	U64 device_count;
-	Reference *device;
+	Reference **device;
 	U64 characteristics_count;
-	MedicinalProductPharmaceutical_Characteristics *characteristics;
+	MedicinalProductPharmaceutical_Characteristics **characteristics;
 	U64 routeOfAdministration_count;
-	MedicinalProductPharmaceutical_RouteOfAdministration *routeOfAdministration;
+	MedicinalProductPharmaceutical_RouteOfAdministration **routeOfAdministration;
 };
 class MedicinalProductPharmaceutical_Characteristics {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	CodeableConcept *status;
 };
@@ -10405,9 +10405,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	Quantity *firstDose;
 	Quantity *maxSingleDose;
@@ -10415,28 +10415,28 @@ public:
 	Ratio *maxDosePerTreatmentPeriod;
 	Duration *maxTreatmentPeriod;
 	U64 targetSpecies_count;
-	MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies *targetSpecies;
+	MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies **targetSpecies;
 };
 class MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	U64 withdrawalPeriod_count;
-	MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies_WithdrawalPeriod *withdrawalPeriod;
+	MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies_WithdrawalPeriod **withdrawalPeriod;
 };
 class MedicinalProductPharmaceutical_RouteOfAdministration_TargetSpecies_WithdrawalPeriod {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *tissue;
 	Quantity *value;
 	fhir_string supportingInformation;
@@ -10450,18 +10450,18 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 subject_count;
-	Reference *subject;
+	Reference **subject;
 	CodeableConcept *symptomConditionEffect;
 	CodeableConcept *classification;
 	CodeableConcept *frequencyOfOccurrence;
 	U64 population_count;
-	Population *population;
+	Population **population;
 };
 class MessageDefinition {
 public: 
@@ -10472,14 +10472,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -10490,12 +10490,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	fhir_canonical base;
@@ -10515,10 +10515,10 @@ public:
 
 	fhir_code category;
 	U64 focus_count;
-	MessageDefinition_Focus *focus;
+	MessageDefinition_Focus **focus;
 	fhir_code responseRequired;
 	U64 allowedResponse_count;
-	MessageDefinition_AllowedResponse *allowedResponse;
+	MessageDefinition_AllowedResponse **allowedResponse;
 	U64 graph_count;
 	fhir_canonical *graph;
 };
@@ -10527,9 +10527,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	fhir_canonical profile;
 	fhir_unsignedInt min;
@@ -10540,9 +10540,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_canonical message;
 	fhir_markdown situation;
 };
@@ -10555,11 +10555,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class EventType {
 		Unknown,
 		Coding,
@@ -10573,7 +10573,7 @@ public:
 	} event;
 
 	U64 destination_count;
-	MessageHeader_Destination *destination;
+	MessageHeader_Destination **destination;
 	Reference *sender;
 	Reference *enterer;
 	Reference *author;
@@ -10582,7 +10582,7 @@ public:
 	CodeableConcept *reason;
 	MessageHeader_Response *response;
 	U64 focus_count;
-	Reference *focus;
+	Reference **focus;
 	fhir_canonical definition;
 };
 class MessageHeader_Destination {
@@ -10590,9 +10590,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	Reference *target;
 	fhir_url endpoint;
@@ -10603,9 +10603,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_string software;
 	fhir_string version;
@@ -10617,9 +10617,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_id identifier;
 	fhir_code code;
 	Reference *details;
@@ -10633,13 +10633,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code type;
 	Integer *coordinateSystem;
 	Reference *patient;
@@ -10649,26 +10649,26 @@ public:
 	Quantity *quantity;
 	MolecularSequence_ReferenceSeq *referenceSeq;
 	U64 variant_count;
-	MolecularSequence_Variant *variant;
+	MolecularSequence_Variant **variant;
 	fhir_string observedSeq;
 	U64 quality_count;
-	MolecularSequence_Quality *quality;
+	MolecularSequence_Quality **quality;
 	Integer *readCoverage;
 	U64 repository_count;
-	MolecularSequence_Repository *repository;
+	MolecularSequence_Repository **repository;
 	U64 pointer_count;
-	Reference *pointer;
+	Reference **pointer;
 	U64 structureVariant_count;
-	MolecularSequence_StructureVariant *structureVariant;
+	MolecularSequence_StructureVariant **structureVariant;
 };
 class MolecularSequence_ReferenceSeq {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *chromosome;
 	fhir_string genomeBuild;
 	fhir_code orientation;
@@ -10684,9 +10684,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Integer *start;
 	Integer *end;
 	fhir_string observedAllele;
@@ -10699,9 +10699,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	CodeableConcept *standardSequence;
 	Integer *start;
@@ -10723,17 +10723,17 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 score_count;
-	Integer *score;
+	Integer **score;
 	U64 numTP_count;
-	Integer *numTP;
+	Integer **numTP;
 	U64 numFP_count;
-	Integer *numFP;
+	Integer **numFP;
 	U64 numFN_count;
-	Integer *numFN;
+	Integer **numFN;
 	U64 precision_count;
 	fhir_decimal *precision;
 	U64 sensitivity_count;
@@ -10746,9 +10746,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	fhir_uri url;
 	fhir_string name;
@@ -10761,9 +10761,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *variantType;
 	fhir_boolean exact;
 	Integer *length;
@@ -10775,9 +10775,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Integer *start;
 	Integer *end;
 };
@@ -10786,9 +10786,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Integer *start;
 	Integer *end;
 };
@@ -10801,37 +10801,37 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_code status;
 	fhir_code kind;
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_string responsible;
 	CodeableConcept *type;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_string usage;
 	U64 uniqueId_count;
-	NamingSystem_UniqueId *uniqueId;
+	NamingSystem_UniqueId **uniqueId;
 };
 class NamingSystem_UniqueId {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	fhir_string value;
 	fhir_boolean preferred;
@@ -10847,13 +10847,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 instantiatesCanonical_count;
 	fhir_canonical *instantiatesCanonical;
 	U64 instantiatesUri_count;
@@ -10867,36 +10867,36 @@ public:
 	fhir_dateTime dateTime;
 	Reference *orderer;
 	U64 allergyIntolerance_count;
-	Reference *allergyIntolerance;
+	Reference **allergyIntolerance;
 	U64 foodPreferenceModifier_count;
-	CodeableConcept *foodPreferenceModifier;
+	CodeableConcept **foodPreferenceModifier;
 	U64 excludeFoodModifier_count;
-	CodeableConcept *excludeFoodModifier;
+	CodeableConcept **excludeFoodModifier;
 	NutritionOrder_OralDiet *oralDiet;
 	U64 supplement_count;
-	NutritionOrder_Supplement *supplement;
+	NutritionOrder_Supplement **supplement;
 	NutritionOrder_EnteralFormula *enteralFormula;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class NutritionOrder_OralDiet {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	U64 schedule_count;
-	Timing *schedule;
+	Timing **schedule;
 	U64 nutrient_count;
-	NutritionOrder_OralDiet_Nutrient *nutrient;
+	NutritionOrder_OralDiet_Nutrient **nutrient;
 	U64 texture_count;
-	NutritionOrder_OralDiet_Texture *texture;
+	NutritionOrder_OralDiet_Texture **texture;
 	U64 fluidConsistencyType_count;
-	CodeableConcept *fluidConsistencyType;
+	CodeableConcept **fluidConsistencyType;
 	fhir_string instruction;
 };
 class NutritionOrder_OralDiet_Nutrient {
@@ -10904,9 +10904,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *modifier;
 	Quantity *amount;
 };
@@ -10915,9 +10915,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *modifier;
 	CodeableConcept *foodType;
 };
@@ -10926,13 +10926,13 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	fhir_string productName;
 	U64 schedule_count;
-	Timing *schedule;
+	Timing **schedule;
 	Quantity *quantity;
 	fhir_string instruction;
 };
@@ -10941,9 +10941,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *baseFormulaType;
 	fhir_string baseFormulaProductName;
 	CodeableConcept *additiveType;
@@ -10951,7 +10951,7 @@ public:
 	Quantity *caloricDensity;
 	CodeableConcept *routeofAdministration;
 	U64 administration_count;
-	NutritionOrder_EnteralFormula_Administration *administration;
+	NutritionOrder_EnteralFormula_Administration **administration;
 	Quantity *maxVolumeToDeliver;
 	fhir_string administrationInstruction;
 };
@@ -10960,9 +10960,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Timing *schedule;
 	Quantity *quantity;
 	enum class Rate_Type {
@@ -10987,24 +10987,24 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	fhir_code status;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	CodeableConcept *code;
 	Reference *subject;
 	U64 focus_count;
-	Reference *focus;
+	Reference **focus;
 	Reference *encounter;
 	enum class EffecType {
 		Unknown,
@@ -11024,7 +11024,7 @@ public:
 
 	fhir_instant issued;
 	U64 performer_count;
-	Reference *performer;
+	Reference **performer;
 	enum class ValueType {
 		Unknown,
 		Quantity,
@@ -11057,35 +11057,35 @@ public:
 
 	CodeableConcept *dataAbsentReason;
 	U64 interpretation_count;
-	CodeableConcept *interpretation;
+	CodeableConcept **interpretation;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	CodeableConcept *bodySite;
 	CodeableConcept *method;
 	Reference *specimen;
 	Reference *device;
 	U64 referenceRange_count;
-	Observation_ReferenceRange *referenceRange;
+	Observation_ReferenceRange **referenceRange;
 	U64 hasMember_count;
-	Reference *hasMember;
+	Reference **hasMember;
 	U64 derivedFrom_count;
-	Reference *derivedFrom;
+	Reference **derivedFrom;
 	U64 component_count;
-	Observation_Component *component;
+	Observation_Component **component;
 };
 class Observation_ReferenceRange {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Quantity *low;
 	Quantity *high;
 	CodeableConcept *type;
 	U64 appliesTo_count;
-	CodeableConcept *appliesTo;
+	CodeableConcept **appliesTo;
 	Range *age;
 	fhir_string text;
 };
@@ -11094,9 +11094,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	enum class ValueType {
 		Unknown,
@@ -11130,9 +11130,9 @@ public:
 
 	CodeableConcept *dataAbsentReason;
 	U64 interpretation_count;
-	CodeableConcept *interpretation;
+	CodeableConcept **interpretation;
 	U64 referenceRange_count;
-	Observation_ReferenceRange *referenceRange;
+	Observation_ReferenceRange **referenceRange;
 };
 class ObservationDefinition {
 public: 
@@ -11143,16 +11143,16 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	CodeableConcept *code;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 permittedDataType_count;
 	fhir_code *permittedDataType;
 	fhir_boolean multipleResultsAllowed;
@@ -11160,7 +11160,7 @@ public:
 	fhir_string preferredReportName;
 	ObservationDefinition_QuantitativeDetails *quantitativeDetails;
 	U64 qualifiedInterval_count;
-	ObservationDefinition_QualifiedInterval *qualifiedInterval;
+	ObservationDefinition_QualifiedInterval **qualifiedInterval;
 	Reference *validCodedValueSet;
 	Reference *normalCodedValueSet;
 	Reference *abnormalCodedValueSet;
@@ -11171,9 +11171,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *customaryUnit;
 	CodeableConcept *unit;
 	fhir_decimal conversionFactor;
@@ -11184,14 +11184,14 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code category;
 	Range *range;
 	CodeableConcept *context;
 	U64 appliesTo_count;
-	CodeableConcept *appliesTo;
+	CodeableConcept **appliesTo;
 	fhir_code gender;
 	Range *age;
 	Range *gestationalAge;
@@ -11206,11 +11206,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -11221,12 +11221,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_boolean affectsState;
 	fhir_code code;
@@ -11240,18 +11240,18 @@ public:
 	fhir_canonical inputProfile;
 	fhir_canonical outputProfile;
 	U64 parameter_count;
-	OperationDefinition_Parameter *parameter;
+	OperationDefinition_Parameter **parameter;
 	U64 overload_count;
-	OperationDefinition_Overload *overload;
+	OperationDefinition_Overload **overload;
 };
 class OperationDefinition_Parameter {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code name;
 	fhir_code use;
 	Integer *min;
@@ -11263,18 +11263,18 @@ public:
 	fhir_code searchType;
 	OperationDefinition_Parameter_Binding *binding;
 	U64 referencedFrom_count;
-	OperationDefinition_Parameter_ReferencedFrom *referencedFrom;
+	OperationDefinition_Parameter_ReferencedFrom **referencedFrom;
 	U64 part_count;
-	OperationDefinition_Parameter *part;
+	OperationDefinition_Parameter **part;
 };
 class OperationDefinition_Parameter_Binding {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code strength;
 	fhir_canonical valueSet;
 };
@@ -11283,9 +11283,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string source;
 	fhir_string sourceId;
 };
@@ -11294,9 +11294,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 parameterName_count;
 	fhir_string *parameterName;
 	fhir_string comment;
@@ -11310,22 +11310,22 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 issue_count;
-	OperationOutcome_Issue *issue;
+	OperationOutcome_Issue **issue;
 };
 class OperationOutcome_Issue {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code severity;
 	fhir_code code;
 	CodeableConcept *details;
@@ -11344,41 +11344,41 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_boolean active;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	fhir_string name;
 	U64 alias_count;
 	fhir_string *alias;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	U64 address_count;
-	Address *address;
+	Address **address;
 	Reference *partOf;
 	U64 contact_count;
-	Organization_Contact *contact;
+	Organization_Contact **contact;
 	U64 endpoint_count;
-	Reference *endpoint;
+	Reference **endpoint;
 };
 class Organization_Contact {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *purpose;
 	HumanName *name;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	Address *address;
 };
 class OrganizationAffiliation {
@@ -11390,31 +11390,31 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_boolean active;
 	Period *period;
 	Reference *organization;
 	Reference *participatingOrganization;
 	U64 network_count;
-	Reference *network;
+	Reference **network;
 	U64 code_count;
-	CodeableConcept *code;
+	CodeableConcept **code;
 	U64 specialty_count;
-	CodeableConcept *specialty;
+	CodeableConcept **specialty;
 	U64 location_count;
-	Reference *location;
+	Reference **location;
 	U64 healthcareService_count;
-	Reference *healthcareService;
+	Reference **healthcareService;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	U64 endpoint_count;
-	Reference *endpoint;
+	Reference **endpoint;
 };
 class Parameters {
 public: 
@@ -11424,16 +11424,16 @@ public:
 	fhir_uri implicitRules;
 	fhir_code language;
 	U64 parameter_count;
-	Parameters_Parameter *parameter;
+	Parameters_Parameter **parameter;
 };
 class Parameters_Parameter {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	enum class ValueType {
 		Unknown,
@@ -11545,7 +11545,7 @@ public:
 
 	Resource *resource;
 	U64 part_count;
-	Parameters_Parameter *part;
+	Parameters_Parameter **part;
 };
 class Patient {
 public: 
@@ -11556,18 +11556,18 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_boolean active;
 	U64 name_count;
-	HumanName *name;
+	HumanName **name;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	fhir_code gender;
 	fhir_date birthDate;
 	enum class DeceaType {
@@ -11583,7 +11583,7 @@ public:
 	} deceased;
 
 	U64 address_count;
-	Address *address;
+	Address **address;
 	CodeableConcept *maritalStatus;
 	enum class MultiType {
 		Unknown,
@@ -11598,30 +11598,30 @@ public:
 	} multipleBirth;
 
 	U64 photo_count;
-	Attachment *photo;
+	Attachment **photo;
 	U64 contact_count;
-	Patient_Contact *contact;
+	Patient_Contact **contact;
 	U64 communication_count;
-	Patient_Communication *communication;
+	Patient_Communication **communication;
 	U64 generalPractitioner_count;
-	Reference *generalPractitioner;
+	Reference **generalPractitioner;
 	Reference *managingOrganization;
 	U64 link_count;
-	Patient_Link *link;
+	Patient_Link **link;
 };
 class Patient_Contact {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 relationship_count;
-	CodeableConcept *relationship;
+	CodeableConcept **relationship;
 	HumanName *name;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	Address *address;
 	fhir_code gender;
 	Reference *organization;
@@ -11632,9 +11632,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *language;
 	fhir_boolean preferred;
 };
@@ -11643,9 +11643,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *other;
 	fhir_code type;
 };
@@ -11658,13 +11658,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	Reference *request;
 	Reference *response;
@@ -11686,13 +11686,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	Period *period;
 	fhir_dateTime created;
@@ -11705,19 +11705,19 @@ public:
 	Money *paymentAmount;
 	Identifier *paymentIdentifier;
 	U64 detail_count;
-	PaymentReconciliation_Detail *detail;
+	PaymentReconciliation_Detail **detail;
 	CodeableConcept *formCode;
 	U64 processNote_count;
-	PaymentReconciliation_ProcessNote *processNote;
+	PaymentReconciliation_ProcessNote **processNote;
 };
 class PaymentReconciliation_Detail {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	Identifier *predecessor;
 	CodeableConcept *type;
@@ -11734,9 +11734,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	fhir_string text;
 };
@@ -11749,35 +11749,35 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 name_count;
-	HumanName *name;
+	HumanName **name;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	fhir_code gender;
 	fhir_date birthDate;
 	U64 address_count;
-	Address *address;
+	Address **address;
 	Attachment *photo;
 	Reference *managingOrganization;
 	fhir_boolean active;
 	U64 link_count;
-	Person_Link *link;
+	Person_Link **link;
 };
 class Person_Link {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *target;
 	fhir_code assurance;
 };
@@ -11790,14 +11790,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -11820,12 +11820,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
@@ -11833,51 +11833,51 @@ public:
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	U64 topic_count;
-	CodeableConcept *topic;
+	CodeableConcept **topic;
 	U64 author_count;
-	ContactDetail *author;
+	ContactDetail **author;
 	U64 editor_count;
-	ContactDetail *editor;
+	ContactDetail **editor;
 	U64 reviewer_count;
-	ContactDetail *reviewer;
+	ContactDetail **reviewer;
 	U64 endorser_count;
-	ContactDetail *endorser;
+	ContactDetail **endorser;
 	U64 relatedArtifact_count;
-	RelatedArtifact *relatedArtifact;
+	RelatedArtifact **relatedArtifact;
 	U64 library_count;
 	fhir_canonical *library;
 	U64 goal_count;
-	PlanDefinition_Goal *goal;
+	PlanDefinition_Goal **goal;
 	U64 action_count;
-	PlanDefinition_Action *action;
+	PlanDefinition_Action **action;
 };
 class PlanDefinition_Goal {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *category;
 	CodeableConcept *description;
 	CodeableConcept *priority;
 	CodeableConcept *start;
 	U64 addresses_count;
-	CodeableConcept *addresses;
+	CodeableConcept **addresses;
 	U64 documentation_count;
-	RelatedArtifact *documentation;
+	RelatedArtifact **documentation;
 	U64 target_count;
-	PlanDefinition_Goal_Target *target;
+	PlanDefinition_Goal_Target **target;
 };
 class PlanDefinition_Goal_Target {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *measure;
 	enum class DetaiType {
 		Unknown,
@@ -11900,20 +11900,20 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string prefix;
 	fhir_string title;
 	fhir_string description;
 	fhir_string textEquivalent;
 	fhir_code priority;
 	U64 code_count;
-	CodeableConcept *code;
+	CodeableConcept **code;
 	U64 reason_count;
-	CodeableConcept *reason;
+	CodeableConcept **reason;
 	U64 documentation_count;
-	RelatedArtifact *documentation;
+	RelatedArtifact **documentation;
 	U64 goalId_count;
 	fhir_id *goalId;
 	enum class SubjeType {
@@ -11929,15 +11929,15 @@ public:
 	} subject;
 
 	U64 trigger_count;
-	TriggerDefinition *trigger;
+	TriggerDefinition **trigger;
 	U64 condition_count;
-	PlanDefinition_Action_Condition *condition;
+	PlanDefinition_Action_Condition **condition;
 	U64 input_count;
-	DataRequirement *input;
+	DataRequirement **input;
 	U64 output_count;
-	DataRequirement *output;
+	DataRequirement **output;
 	U64 relatedAction_count;
-	PlanDefinition_Action_RelatedAction *relatedAction;
+	PlanDefinition_Action_RelatedAction **relatedAction;
 	enum class TiminType {
 		Unknown,
 		fhir_dateTime,
@@ -11959,7 +11959,7 @@ public:
 	} timing;
 
 	U64 participant_count;
-	PlanDefinition_Action_Participant *participant;
+	PlanDefinition_Action_Participant **participant;
 	CodeableConcept *type;
 	fhir_code groupingBehavior;
 	fhir_code selectionBehavior;
@@ -11980,18 +11980,18 @@ public:
 
 	fhir_canonical transform;
 	U64 dynamicValue_count;
-	PlanDefinition_Action_DynamicValue *dynamicValue;
+	PlanDefinition_Action_DynamicValue **dynamicValue;
 	U64 action_count;
-	PlanDefinition_Action *action;
+	PlanDefinition_Action **action;
 };
 class PlanDefinition_Action_Condition {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code kind;
 	Expression *expression;
 };
@@ -12000,9 +12000,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_id actionId;
 	fhir_code relationship;
 	enum class OffseType {
@@ -12023,9 +12023,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	CodeableConcept *role;
 };
@@ -12034,9 +12034,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string path;
 	Expression *expression;
 };
@@ -12049,39 +12049,39 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_boolean active;
 	U64 name_count;
-	HumanName *name;
+	HumanName **name;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	U64 address_count;
-	Address *address;
+	Address **address;
 	fhir_code gender;
 	fhir_date birthDate;
 	U64 photo_count;
-	Attachment *photo;
+	Attachment **photo;
 	U64 qualification_count;
-	Practitioner_Qualification *qualification;
+	Practitioner_Qualification **qualification;
 	U64 communication_count;
-	CodeableConcept *communication;
+	CodeableConcept **communication;
 };
 class Practitioner_Qualification {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	CodeableConcept *code;
 	Period *period;
 	Reference *issuer;
@@ -12095,43 +12095,43 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_boolean active;
 	Period *period;
 	Reference *practitioner;
 	Reference *organization;
 	U64 code_count;
-	CodeableConcept *code;
+	CodeableConcept **code;
 	U64 specialty_count;
-	CodeableConcept *specialty;
+	CodeableConcept **specialty;
 	U64 location_count;
-	Reference *location;
+	Reference **location;
 	U64 healthcareService_count;
-	Reference *healthcareService;
+	Reference **healthcareService;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	U64 availableTime_count;
-	PractitionerRole_AvailableTime *availableTime;
+	PractitionerRole_AvailableTime **availableTime;
 	U64 notAvailable_count;
-	PractitionerRole_NotAvailable *notAvailable;
+	PractitionerRole_NotAvailable **notAvailable;
 	fhir_string availabilityExceptions;
 	U64 endpoint_count;
-	Reference *endpoint;
+	Reference **endpoint;
 };
 class PractitionerRole_AvailableTime {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 daysOfWeek_count;
 	fhir_code *daysOfWeek;
 	fhir_boolean allDay;
@@ -12143,9 +12143,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	Period *during;
 };
@@ -12158,21 +12158,21 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 instantiatesCanonical_count;
 	fhir_canonical *instantiatesCanonical;
 	U64 instantiatesUri_count;
 	fhir_uri *instantiatesUri;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	fhir_code status;
 	CodeableConcept *statusReason;
 	CodeableConcept *category;
@@ -12200,40 +12200,40 @@ public:
 	Reference *recorder;
 	Reference *asserter;
 	U64 performer_count;
-	Procedure_Performer *performer;
+	Procedure_Performer **performer;
 	Reference *location;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 bodySite_count;
-	CodeableConcept *bodySite;
+	CodeableConcept **bodySite;
 	CodeableConcept *outcome;
 	U64 report_count;
-	Reference *report;
+	Reference **report;
 	U64 complication_count;
-	CodeableConcept *complication;
+	CodeableConcept **complication;
 	U64 complicationDetail_count;
-	Reference *complicationDetail;
+	Reference **complicationDetail;
 	U64 followUp_count;
-	CodeableConcept *followUp;
+	CodeableConcept **followUp;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 focalDevice_count;
-	Procedure_FocalDevice *focalDevice;
+	Procedure_FocalDevice **focalDevice;
 	U64 usedReference_count;
-	Reference *usedReference;
+	Reference **usedReference;
 	U64 usedCode_count;
-	CodeableConcept *usedCode;
+	CodeableConcept **usedCode;
 };
 class Procedure_Performer {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *function_;
 	Reference *actor;
 	Reference *onBehalfOf;
@@ -12243,9 +12243,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *action;
 	Reference *manipulated;
 };
@@ -12258,13 +12258,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 target_count;
-	Reference *target;
+	Reference **target;
 	enum class OccurType {
 		Unknown,
 		Period,
@@ -12282,26 +12282,26 @@ public:
 	fhir_uri *policy;
 	Reference *location;
 	U64 reason_count;
-	CodeableConcept *reason;
+	CodeableConcept **reason;
 	CodeableConcept *activity;
 	U64 agent_count;
-	Provenance_Agent *agent;
+	Provenance_Agent **agent;
 	U64 entity_count;
-	Provenance_Entity *entity;
+	Provenance_Entity **entity;
 	U64 signature_count;
-	Signature *signature;
+	Signature **signature;
 };
 class Provenance_Agent {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	U64 role_count;
-	CodeableConcept *role;
+	CodeableConcept **role;
 	Reference *who;
 	Reference *onBehalfOf;
 };
@@ -12310,13 +12310,13 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code role;
 	Reference *what;
 	U64 agent_count;
-	Provenance_Agent *agent;
+	Provenance_Agent **agent;
 };
 class Questionnaire {
 public: 
@@ -12327,14 +12327,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -12347,39 +12347,39 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	U64 code_count;
-	Coding *code;
+	Coding **code;
 	U64 item_count;
-	Questionnaire_Item *item;
+	Questionnaire_Item **item;
 };
 class Questionnaire_Item {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string linkId;
 	fhir_uri definition;
 	U64 code_count;
-	Coding *code;
+	Coding **code;
 	fhir_string prefix;
 	fhir_string text;
 	fhir_code type;
 	U64 enableWhen_count;
-	Questionnaire_Item_EnableWhen *enableWhen;
+	Questionnaire_Item_EnableWhen **enableWhen;
 	fhir_code enableBehavior;
 	fhir_boolean required;
 	fhir_boolean repeats;
@@ -12387,20 +12387,20 @@ public:
 	Integer *maxLength;
 	fhir_canonical answerValueSet;
 	U64 answerOption_count;
-	Questionnaire_Item_AnswerOption *answerOption;
+	Questionnaire_Item_AnswerOption **answerOption;
 	U64 initial_count;
-	Questionnaire_Item_Initial *initial;
+	Questionnaire_Item_Initial **initial;
 	U64 item_count;
-	Questionnaire_Item *item;
+	Questionnaire_Item **item;
 };
 class Questionnaire_Item_EnableWhen {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string question;
 	fhir_code operator_;
 	enum class AnsweType {
@@ -12437,9 +12437,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class ValueType {
 		Unknown,
 		Integer,
@@ -12467,9 +12467,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class ValueType {
 		Unknown,
 		fhir_boolean,
@@ -12512,16 +12512,16 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	fhir_canonical questionnaire;
 	fhir_code status;
 	Reference *subject;
@@ -12530,32 +12530,32 @@ public:
 	Reference *author;
 	Reference *source;
 	U64 item_count;
-	QuestionnaireResponse_Item *item;
+	QuestionnaireResponse_Item **item;
 };
 class QuestionnaireResponse_Item {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string linkId;
 	fhir_uri definition;
 	fhir_string text;
 	U64 answer_count;
-	QuestionnaireResponse_Item_Answer *answer;
+	QuestionnaireResponse_Item_Answer **answer;
 	U64 item_count;
-	QuestionnaireResponse_Item *item;
+	QuestionnaireResponse_Item **item;
 };
 class QuestionnaireResponse_Item_Answer {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class ValueType {
 		Unknown,
 		fhir_boolean,
@@ -12589,7 +12589,7 @@ public:
 	} value;
 
 	U64 item_count;
-	QuestionnaireResponse_Item *item;
+	QuestionnaireResponse_Item **item;
 };
 class RelatedPerson {
 public: 
@@ -12600,39 +12600,39 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_boolean active;
 	Reference *patient;
 	U64 relationship_count;
-	CodeableConcept *relationship;
+	CodeableConcept **relationship;
 	U64 name_count;
-	HumanName *name;
+	HumanName **name;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 	fhir_code gender;
 	fhir_date birthDate;
 	U64 address_count;
-	Address *address;
+	Address **address;
 	U64 photo_count;
-	Attachment *photo;
+	Attachment **photo;
 	Period *period;
 	U64 communication_count;
-	RelatedPerson_Communication *communication;
+	RelatedPerson_Communication **communication;
 };
 class RelatedPerson_Communication {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *language;
 	fhir_boolean preferred;
 };
@@ -12645,21 +12645,21 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 instantiatesCanonical_count;
 	fhir_canonical *instantiatesCanonical;
 	U64 instantiatesUri_count;
 	fhir_uri *instantiatesUri;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 replaces_count;
-	Reference *replaces;
+	Reference **replaces;
 	Identifier *groupIdentifier;
 	fhir_code status;
 	fhir_code intent;
@@ -12670,35 +12670,35 @@ public:
 	fhir_dateTime authoredOn;
 	Reference *author;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 action_count;
-	RequestGroup_Action *action;
+	RequestGroup_Action **action;
 };
 class RequestGroup_Action {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string prefix;
 	fhir_string title;
 	fhir_string description;
 	fhir_string textEquivalent;
 	fhir_code priority;
 	U64 code_count;
-	CodeableConcept *code;
+	CodeableConcept **code;
 	U64 documentation_count;
-	RelatedArtifact *documentation;
+	RelatedArtifact **documentation;
 	U64 condition_count;
-	RequestGroup_Action_Condition *condition;
+	RequestGroup_Action_Condition **condition;
 	U64 relatedAction_count;
-	RequestGroup_Action_RelatedAction *relatedAction;
+	RequestGroup_Action_RelatedAction **relatedAction;
 	enum class TiminType {
 		Unknown,
 		fhir_dateTime,
@@ -12720,7 +12720,7 @@ public:
 	} timing;
 
 	U64 participant_count;
-	Reference *participant;
+	Reference **participant;
 	CodeableConcept *type;
 	fhir_code groupingBehavior;
 	fhir_code selectionBehavior;
@@ -12729,16 +12729,16 @@ public:
 	fhir_code cardinalityBehavior;
 	Reference *resource;
 	U64 action_count;
-	RequestGroup_Action *action;
+	RequestGroup_Action **action;
 };
 class RequestGroup_Action_Condition {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code kind;
 	Expression *expression;
 };
@@ -12747,9 +12747,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_id actionId;
 	fhir_code relationship;
 	enum class OffseType {
@@ -12774,14 +12774,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -12804,14 +12804,14 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 comment_count;
 	fhir_string *comment;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
@@ -12819,17 +12819,17 @@ public:
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	U64 topic_count;
-	CodeableConcept *topic;
+	CodeableConcept **topic;
 	U64 author_count;
-	ContactDetail *author;
+	ContactDetail **author;
 	U64 editor_count;
-	ContactDetail *editor;
+	ContactDetail **editor;
 	U64 reviewer_count;
-	ContactDetail *reviewer;
+	ContactDetail **reviewer;
 	U64 endorser_count;
-	ContactDetail *endorser;
+	ContactDetail **endorser;
 	U64 relatedArtifact_count;
-	RelatedArtifact *relatedArtifact;
+	RelatedArtifact **relatedArtifact;
 	U64 library_count;
 	fhir_canonical *library;
 	Reference *population;
@@ -12846,14 +12846,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -12876,14 +12876,14 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 comment_count;
 	fhir_string *comment;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_string usage;
 	fhir_markdown copyright;
@@ -12891,32 +12891,32 @@ public:
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	U64 topic_count;
-	CodeableConcept *topic;
+	CodeableConcept **topic;
 	U64 author_count;
-	ContactDetail *author;
+	ContactDetail **author;
 	U64 editor_count;
-	ContactDetail *editor;
+	ContactDetail **editor;
 	U64 reviewer_count;
-	ContactDetail *reviewer;
+	ContactDetail **reviewer;
 	U64 endorser_count;
-	ContactDetail *endorser;
+	ContactDetail **endorser;
 	U64 relatedArtifact_count;
-	RelatedArtifact *relatedArtifact;
+	RelatedArtifact **relatedArtifact;
 	U64 library_count;
 	fhir_canonical *library;
 	fhir_code type;
 	fhir_code variableType;
 	U64 characteristic_count;
-	ResearchElementDefinition_Characteristic *characteristic;
+	ResearchElementDefinition_Characteristic **characteristic;
 };
 class ResearchElementDefinition_Characteristic {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class DefinType {
 		Unknown,
 		CodeableConcept,
@@ -12934,7 +12934,7 @@ public:
 	} definition;
 
 	U64 usageContext_count;
-	UsageContext *usageContext;
+	UsageContext **usageContext;
 	fhir_boolean exclude;
 	CodeableConcept *unitOfMeasure;
 	fhir_string studyEffectiveDescription;
@@ -12985,59 +12985,59 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string title;
 	U64 protocol_count;
-	Reference *protocol;
+	Reference **protocol;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	fhir_code status;
 	CodeableConcept *primaryPurposeType;
 	CodeableConcept *phase;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	U64 focus_count;
-	CodeableConcept *focus;
+	CodeableConcept **focus;
 	U64 condition_count;
-	CodeableConcept *condition;
+	CodeableConcept **condition;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	U64 relatedArtifact_count;
-	RelatedArtifact *relatedArtifact;
+	RelatedArtifact **relatedArtifact;
 	U64 keyword_count;
-	CodeableConcept *keyword;
+	CodeableConcept **keyword;
 	U64 location_count;
-	CodeableConcept *location;
+	CodeableConcept **location;
 	fhir_markdown description;
 	U64 enrollment_count;
-	Reference *enrollment;
+	Reference **enrollment;
 	Period *period;
 	Reference *sponsor;
 	Reference *principalInvestigator;
 	U64 site_count;
-	Reference *site;
+	Reference **site;
 	CodeableConcept *reasonStopped;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 arm_count;
-	ResearchStudy_Arm *arm;
+	ResearchStudy_Arm **arm;
 	U64 objective_count;
-	ResearchStudy_Objective *objective;
+	ResearchStudy_Objective **objective;
 };
 class ResearchStudy_Arm {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	CodeableConcept *type;
 	fhir_string description;
@@ -13047,9 +13047,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	CodeableConcept *type;
 };
@@ -13062,13 +13062,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	Period *period;
 	Reference *study;
@@ -13086,13 +13086,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	Reference *basedOn;
 	Reference *parent;
 	fhir_code status;
@@ -13115,25 +13115,25 @@ public:
 	Reference *condition;
 	Reference *performer;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 basis_count;
-	Reference *basis;
+	Reference **basis;
 	U64 prediction_count;
-	RiskAssessment_Prediction *prediction;
+	RiskAssessment_Prediction **prediction;
 	fhir_string mitigation;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class RiskAssessment_Prediction {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *outcome;
 	enum class ProbaType {
 		Unknown,
@@ -13172,14 +13172,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -13187,30 +13187,30 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown copyright;
 	fhir_date approvalDate;
 	fhir_date lastReviewDate;
 	Period *effectivePeriod;
 	U64 topic_count;
-	CodeableConcept *topic;
+	CodeableConcept **topic;
 	U64 author_count;
-	ContactDetail *author;
+	ContactDetail **author;
 	U64 editor_count;
-	ContactDetail *editor;
+	ContactDetail **editor;
 	U64 reviewer_count;
-	ContactDetail *reviewer;
+	ContactDetail **reviewer;
 	U64 endorser_count;
-	ContactDetail *endorser;
+	ContactDetail **endorser;
 	U64 relatedArtifact_count;
-	RelatedArtifact *relatedArtifact;
+	RelatedArtifact **relatedArtifact;
 	CodeableConcept *synthesisType;
 	CodeableConcept *studyType;
 	Reference *population;
@@ -13219,16 +13219,16 @@ public:
 	RiskEvidenceSynthesis_SampleSize *sampleSize;
 	RiskEvidenceSynthesis_RiskEstimate *riskEstimate;
 	U64 certainty_count;
-	RiskEvidenceSynthesis_Certainty *certainty;
+	RiskEvidenceSynthesis_Certainty **certainty;
 };
 class RiskEvidenceSynthesis_SampleSize {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	Integer *numberOfStudies;
 	Integer *numberOfParticipants;
@@ -13238,9 +13238,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	CodeableConcept *type;
 	fhir_decimal value;
@@ -13248,16 +13248,16 @@ public:
 	Integer *denominatorCount;
 	Integer *numeratorCount;
 	U64 precisionEstimate_count;
-	RiskEvidenceSynthesis_RiskEstimate_PrecisionEstimate *precisionEstimate;
+	RiskEvidenceSynthesis_RiskEstimate_PrecisionEstimate **precisionEstimate;
 };
 class RiskEvidenceSynthesis_RiskEstimate_PrecisionEstimate {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	fhir_decimal level;
 	fhir_decimal from;
@@ -13268,29 +13268,29 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 rating_count;
-	CodeableConcept *rating;
+	CodeableConcept **rating;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 certaintySubcomponent_count;
-	RiskEvidenceSynthesis_Certainty_CertaintySubcomponent *certaintySubcomponent;
+	RiskEvidenceSynthesis_Certainty_CertaintySubcomponent **certaintySubcomponent;
 };
 class RiskEvidenceSynthesis_Certainty_CertaintySubcomponent {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	U64 rating_count;
-	CodeableConcept *rating;
+	CodeableConcept **rating;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class Schedule {
 public: 
@@ -13301,22 +13301,22 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_boolean active;
 	U64 serviceCategory_count;
-	CodeableConcept *serviceCategory;
+	CodeableConcept **serviceCategory;
 	U64 serviceType_count;
-	CodeableConcept *serviceType;
+	CodeableConcept **serviceType;
 	U64 specialty_count;
-	CodeableConcept *specialty;
+	CodeableConcept **specialty;
 	U64 actor_count;
-	Reference *actor;
+	Reference **actor;
 	Period *planningHorizon;
 	fhir_string comment;
 };
@@ -13329,11 +13329,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -13343,12 +13343,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_code code;
 	U64 base_count;
@@ -13368,16 +13368,16 @@ public:
 	U64 chain_count;
 	fhir_string *chain;
 	U64 component_count;
-	SearchParameter_Component *component;
+	SearchParameter_Component **component;
 };
 class SearchParameter_Component {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_canonical definition;
 	fhir_string expression;
 };
@@ -13390,31 +13390,31 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 instantiatesCanonical_count;
 	fhir_canonical *instantiatesCanonical;
 	U64 instantiatesUri_count;
 	fhir_uri *instantiatesUri;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 replaces_count;
-	Reference *replaces;
+	Reference **replaces;
 	Identifier *requisition;
 	fhir_code status;
 	fhir_code intent;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	fhir_code priority;
 	fhir_boolean doNotPerform;
 	CodeableConcept *code;
 	U64 orderDetail_count;
-	CodeableConcept *orderDetail;
+	CodeableConcept **orderDetail;
 	enum class QuantType {
 		Unknown,
 		Quantity,
@@ -13461,28 +13461,28 @@ public:
 	Reference *requester;
 	CodeableConcept *performerType;
 	U64 performer_count;
-	Reference *performer;
+	Reference **performer;
 	U64 locationCode_count;
-	CodeableConcept *locationCode;
+	CodeableConcept **locationCode;
 	U64 locationReference_count;
-	Reference *locationReference;
+	Reference **locationReference;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	U64 insurance_count;
-	Reference *insurance;
+	Reference **insurance;
 	U64 supportingInfo_count;
-	Reference *supportingInfo;
+	Reference **supportingInfo;
 	U64 specimen_count;
-	Reference *specimen;
+	Reference **specimen;
 	U64 bodySite_count;
-	CodeableConcept *bodySite;
+	CodeableConcept **bodySite;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	fhir_string patientInstruction;
 	U64 relevantHistory_count;
-	Reference *relevantHistory;
+	Reference **relevantHistory;
 };
 class Slot {
 public: 
@@ -13493,19 +13493,19 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 serviceCategory_count;
-	CodeableConcept *serviceCategory;
+	CodeableConcept **serviceCategory;
 	U64 serviceType_count;
-	CodeableConcept *serviceType;
+	CodeableConcept **serviceType;
 	U64 specialty_count;
-	CodeableConcept *specialty;
+	CodeableConcept **specialty;
 	CodeableConcept *appointmentType;
 	Reference *schedule;
 	fhir_code status;
@@ -13523,40 +13523,40 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	Identifier *accessionIdentifier;
 	fhir_code status;
 	CodeableConcept *type;
 	Reference *subject;
 	fhir_dateTime receivedTime;
 	U64 parent_count;
-	Reference *parent;
+	Reference **parent;
 	U64 request_count;
-	Reference *request;
+	Reference **request;
 	Specimen_Collection *collection;
 	U64 processing_count;
-	Specimen_Processing *processing;
+	Specimen_Processing **processing;
 	U64 container_count;
-	Specimen_Container *container;
+	Specimen_Container **container;
 	U64 condition_count;
-	CodeableConcept *condition;
+	CodeableConcept **condition;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class Specimen_Collection {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *collector;
 	enum class ColleType {
 		Unknown,
@@ -13592,13 +13592,13 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	CodeableConcept *procedure;
 	U64 additive_count;
-	Reference *additive;
+	Reference **additive;
 	enum class Time_Type {
 		Unknown,
 		fhir_dateTime,
@@ -13617,11 +13617,11 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string description;
 	CodeableConcept *type;
 	Quantity *capacity;
@@ -13648,29 +13648,29 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	CodeableConcept *typeCollected;
 	U64 patientPreparation_count;
-	CodeableConcept *patientPreparation;
+	CodeableConcept **patientPreparation;
 	fhir_string timeAspect;
 	U64 collection_count;
-	CodeableConcept *collection;
+	CodeableConcept **collection;
 	U64 typeTested_count;
-	SpecimenDefinition_TypeTested *typeTested;
+	SpecimenDefinition_TypeTested **typeTested;
 };
 class SpecimenDefinition_TypeTested {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean isDerived;
 	CodeableConcept *type;
 	fhir_code preference;
@@ -13678,18 +13678,18 @@ public:
 	fhir_string requirement;
 	Duration *retentionTime;
 	U64 rejectionCriterion_count;
-	CodeableConcept *rejectionCriterion;
+	CodeableConcept **rejectionCriterion;
 	U64 handling_count;
-	SpecimenDefinition_TypeTested_Handling *handling;
+	SpecimenDefinition_TypeTested_Handling **handling;
 };
 class SpecimenDefinition_TypeTested_Container {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *material;
 	CodeableConcept *type;
 	CodeableConcept *cap;
@@ -13708,7 +13708,7 @@ public:
 	} minimumVolume;
 
 	U64 additive_count;
-	SpecimenDefinition_TypeTested_Container_Additive *additive;
+	SpecimenDefinition_TypeTested_Container_Additive **additive;
 	fhir_string preparation;
 };
 class SpecimenDefinition_TypeTested_Container_Additive {
@@ -13716,9 +13716,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class AdditType {
 		Unknown,
 		CodeableConcept,
@@ -13737,9 +13737,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *temperatureQualifier;
 	Range *temperatureRange;
 	Duration *maxDuration;
@@ -13754,14 +13754,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -13770,23 +13770,23 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	U64 keyword_count;
-	Coding *keyword;
+	Coding **keyword;
 	fhir_code fhirVersion;
 	U64 mapping_count;
-	StructureDefinition_Mapping *mapping;
+	StructureDefinition_Mapping **mapping;
 	fhir_code kind;
 	fhir_boolean abstract;
 	U64 context_count;
-	StructureDefinition_Context *context;
+	StructureDefinition_Context **context;
 	U64 contextInvariant_count;
 	fhir_string *contextInvariant;
 	fhir_uri type;
@@ -13800,9 +13800,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_id identity;
 	fhir_uri uri;
 	fhir_string name;
@@ -13813,9 +13813,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	fhir_string expression;
 };
@@ -13824,22 +13824,22 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 element_count;
-	ElementDefinition *element;
+	ElementDefinition **element;
 };
 class StructureDefinition_Differential {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 element_count;
-	ElementDefinition *element;
+	ElementDefinition **element;
 };
 class StructureMap {
 public: 
@@ -13850,14 +13850,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -13866,29 +13866,29 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	U64 structure_count;
-	StructureMap_Structure *structure;
+	StructureMap_Structure **structure;
 	U64 import_count;
 	fhir_canonical *import;
 	U64 group_count;
-	StructureMap_Group *group;
+	StructureMap_Group **group;
 };
 class StructureMap_Structure {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_canonical url;
 	fhir_code mode;
 	fhir_string alias;
@@ -13899,26 +13899,26 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_id name;
 	fhir_id extends;
 	fhir_code typeMode;
 	fhir_string documentation;
 	U64 input_count;
-	StructureMap_Group_Input *input;
+	StructureMap_Group_Input **input;
 	U64 rule_count;
-	StructureMap_Group_Rule *rule;
+	StructureMap_Group_Rule **rule;
 };
 class StructureMap_Group_Input {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_id name;
 	fhir_string type;
 	fhir_code mode;
@@ -13929,18 +13929,18 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_id name;
 	U64 source_count;
-	StructureMap_Group_Rule_Source *source;
+	StructureMap_Group_Rule_Source **source;
 	U64 target_count;
-	StructureMap_Group_Rule_Target *target;
+	StructureMap_Group_Rule_Target **target;
 	U64 rule_count;
-	StructureMap_Group_Rule *rule;
+	StructureMap_Group_Rule **rule;
 	U64 dependent_count;
-	StructureMap_Group_Rule_Dependent *dependent;
+	StructureMap_Group_Rule_Dependent **dependent;
 	fhir_string documentation;
 };
 class StructureMap_Group_Rule_Source {
@@ -13948,9 +13948,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_id context;
 	Integer *min;
 	fhir_string max;
@@ -14075,9 +14075,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_id context;
 	fhir_code contextType;
 	fhir_string element;
@@ -14087,16 +14087,16 @@ public:
 	fhir_id listRuleId;
 	fhir_code transform;
 	U64 parameter_count;
-	StructureMap_Group_Rule_Target_Parameter *parameter;
+	StructureMap_Group_Rule_Target_Parameter **parameter;
 };
 class StructureMap_Group_Rule_Target_Parameter {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class ValueType {
 		Unknown,
 		fhir_id,
@@ -14121,9 +14121,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_id name;
 	U64 variable_count;
 	fhir_string *variable;
@@ -14137,14 +14137,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code status;
 	U64 contact_count;
-	ContactPoint *contact;
+	ContactPoint **contact;
 	fhir_instant end;
 	fhir_string reason;
 	fhir_string criteria;
@@ -14156,9 +14156,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	fhir_url endpoint;
 	fhir_code payload;
@@ -14174,31 +14174,31 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	U64 category_count;
-	CodeableConcept *category;
+	CodeableConcept **category;
 	CodeableConcept *code;
 	fhir_string description;
 	U64 instance_count;
-	Substance_Instance *instance;
+	Substance_Instance **instance;
 	U64 ingredient_count;
-	Substance_Ingredient *ingredient;
+	Substance_Ingredient **ingredient;
 };
 class Substance_Instance {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	fhir_dateTime expiry;
 	Quantity *quantity;
@@ -14208,9 +14208,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Ratio *quantity;
 	enum class SubstType {
 		Unknown,
@@ -14234,26 +14234,26 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *sequenceType;
 	Integer *numberOfSubunits;
 	fhir_string areaOfHybridisation;
 	CodeableConcept *oligoNucleotideType;
 	U64 subunit_count;
-	SubstanceNucleicAcid_Subunit *subunit;
+	SubstanceNucleicAcid_Subunit **subunit;
 };
 class SubstanceNucleicAcid_Subunit {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Integer *subunit;
 	fhir_string sequence;
 	Integer *length;
@@ -14261,18 +14261,18 @@ public:
 	CodeableConcept *fivePrime;
 	CodeableConcept *threePrime;
 	U64 linkage_count;
-	SubstanceNucleicAcid_Subunit_Linkage *linkage;
+	SubstanceNucleicAcid_Subunit_Linkage **linkage;
 	U64 sugar_count;
-	SubstanceNucleicAcid_Subunit_Sugar *sugar;
+	SubstanceNucleicAcid_Subunit_Sugar **sugar;
 };
 class SubstanceNucleicAcid_Subunit_Linkage {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string connectivity;
 	Identifier *identifier;
 	fhir_string name;
@@ -14283,9 +14283,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	fhir_string name;
 	fhir_string residueSite;
@@ -14299,42 +14299,42 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *class_;
 	CodeableConcept *geometry;
 	U64 copolymerConnectivity_count;
-	CodeableConcept *copolymerConnectivity;
+	CodeableConcept **copolymerConnectivity;
 	U64 modification_count;
 	fhir_string *modification;
 	U64 monomerSet_count;
-	SubstancePolymer_MonomerSet *monomerSet;
+	SubstancePolymer_MonomerSet **monomerSet;
 	U64 repeat_count;
-	SubstancePolymer_Repeat *repeat;
+	SubstancePolymer_Repeat **repeat;
 };
 class SubstancePolymer_MonomerSet {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *ratioType;
 	U64 startingMaterial_count;
-	SubstancePolymer_MonomerSet_StartingMaterial *startingMaterial;
+	SubstancePolymer_MonomerSet_StartingMaterial **startingMaterial;
 };
 class SubstancePolymer_MonomerSet_StartingMaterial {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *material;
 	CodeableConcept *type;
 	fhir_boolean isDefining;
@@ -14345,39 +14345,39 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Integer *numberOfUnits;
 	fhir_string averageMolecularFormula;
 	CodeableConcept *repeatUnitAmountType;
 	U64 repeatUnit_count;
-	SubstancePolymer_Repeat_RepeatUnit *repeatUnit;
+	SubstancePolymer_Repeat_RepeatUnit **repeatUnit;
 };
 class SubstancePolymer_Repeat_RepeatUnit {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *orientationOfPolymerisation;
 	fhir_string repeatUnit;
 	SubstanceAmount *amount;
 	U64 degreeOfPolymerisation_count;
-	SubstancePolymer_Repeat_RepeatUnit_DegreeOfPolymerisation *degreeOfPolymerisation;
+	SubstancePolymer_Repeat_RepeatUnit_DegreeOfPolymerisation **degreeOfPolymerisation;
 	U64 structuralRepresentation_count;
-	SubstancePolymer_Repeat_RepeatUnit_StructuralRepresentation *structuralRepresentation;
+	SubstancePolymer_Repeat_RepeatUnit_StructuralRepresentation **structuralRepresentation;
 };
 class SubstancePolymer_Repeat_RepeatUnit_DegreeOfPolymerisation {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *degree;
 	SubstanceAmount *amount;
 };
@@ -14386,9 +14386,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	fhir_string representation;
 	Attachment *attachment;
@@ -14402,26 +14402,26 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *sequenceType;
 	Integer *numberOfSubunits;
 	U64 disulfideLinkage_count;
 	fhir_string *disulfideLinkage;
 	U64 subunit_count;
-	SubstanceProtein_Subunit *subunit;
+	SubstanceProtein_Subunit **subunit;
 };
 class SubstanceProtein_Subunit {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Integer *subunit;
 	fhir_string sequence;
 	Integer *length;
@@ -14440,70 +14440,70 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string comment;
 	U64 gene_count;
-	SubstanceReferenceInformation_Gene *gene;
+	SubstanceReferenceInformation_Gene **gene;
 	U64 geneElement_count;
-	SubstanceReferenceInformation_GeneElement *geneElement;
+	SubstanceReferenceInformation_GeneElement **geneElement;
 	U64 classification_count;
-	SubstanceReferenceInformation_Classification *classification;
+	SubstanceReferenceInformation_Classification **classification;
 	U64 target_count;
-	SubstanceReferenceInformation_Target *target;
+	SubstanceReferenceInformation_Target **target;
 };
 class SubstanceReferenceInformation_Gene {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *geneSequenceOrigin;
 	CodeableConcept *gene;
 	U64 source_count;
-	Reference *source;
+	Reference **source;
 };
 class SubstanceReferenceInformation_GeneElement {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	Identifier *element;
 	U64 source_count;
-	Reference *source;
+	Reference **source;
 };
 class SubstanceReferenceInformation_Classification {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *domain;
 	CodeableConcept *classification;
 	U64 subtype_count;
-	CodeableConcept *subtype;
+	CodeableConcept **subtype;
 	U64 source_count;
-	Reference *source;
+	Reference **source;
 };
 class SubstanceReferenceInformation_Target {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *target;
 	CodeableConcept *type;
 	CodeableConcept *interaction;
@@ -14525,7 +14525,7 @@ public:
 
 	CodeableConcept *amountType;
 	U64 source_count;
-	Reference *source;
+	Reference **source;
 };
 class SubstanceSourceMaterial {
 public: 
@@ -14536,39 +14536,39 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *sourceMaterialClass;
 	CodeableConcept *sourceMaterialType;
 	CodeableConcept *sourceMaterialState;
 	Identifier *organismId;
 	fhir_string organismName;
 	U64 parentSubstanceId_count;
-	Identifier *parentSubstanceId;
+	Identifier **parentSubstanceId;
 	U64 parentSubstanceName_count;
 	fhir_string *parentSubstanceName;
 	U64 countryOfOrigin_count;
-	CodeableConcept *countryOfOrigin;
+	CodeableConcept **countryOfOrigin;
 	U64 geographicalLocation_count;
 	fhir_string *geographicalLocation;
 	CodeableConcept *developmentStage;
 	U64 fractionDescription_count;
-	SubstanceSourceMaterial_FractionDescription *fractionDescription;
+	SubstanceSourceMaterial_FractionDescription **fractionDescription;
 	SubstanceSourceMaterial_Organism *organism;
 	U64 partDescription_count;
-	SubstanceSourceMaterial_PartDescription *partDescription;
+	SubstanceSourceMaterial_PartDescription **partDescription;
 };
 class SubstanceSourceMaterial_FractionDescription {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string fraction;
 	CodeableConcept *materialType;
 };
@@ -14577,16 +14577,16 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *family;
 	CodeableConcept *genus;
 	CodeableConcept *species;
 	CodeableConcept *intraspecificType;
 	fhir_string intraspecificDescription;
 	U64 author_count;
-	SubstanceSourceMaterial_Organism_Author *author;
+	SubstanceSourceMaterial_Organism_Author **author;
 	SubstanceSourceMaterial_Organism_Hybrid *hybrid;
 	SubstanceSourceMaterial_Organism_OrganismGeneral *organismGeneral;
 };
@@ -14595,9 +14595,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *authorType;
 	fhir_string authorDescription;
 };
@@ -14606,9 +14606,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string maternalOrganismId;
 	fhir_string maternalOrganismName;
 	fhir_string paternalOrganismId;
@@ -14620,9 +14620,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *kingdom;
 	CodeableConcept *phylum;
 	CodeableConcept *class_;
@@ -14633,9 +14633,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *part;
 	CodeableConcept *partLocation;
 };
@@ -14648,33 +14648,33 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	CodeableConcept *type;
 	CodeableConcept *status;
 	CodeableConcept *domain;
 	fhir_string description;
 	U64 source_count;
-	Reference *source;
+	Reference **source;
 	fhir_string comment;
 	U64 moiety_count;
-	SubstanceSpecification_Moiety *moiety;
+	SubstanceSpecification_Moiety **moiety;
 	U64 property_count;
-	SubstanceSpecification_Property *property;
+	SubstanceSpecification_Property **property;
 	Reference *referenceInformation;
 	SubstanceSpecification_Structure *structure;
 	U64 code_count;
-	SubstanceSpecification_Code *code;
+	SubstanceSpecification_Code **code;
 	U64 name_count;
-	SubstanceSpecification_Name *name;
+	SubstanceSpecification_Name **name;
 	U64 molecularWeight_count;
-	SubstanceSpecification_Structure_Isotope_MolecularWeight *molecularWeight;
+	SubstanceSpecification_Structure_Isotope_MolecularWeight **molecularWeight;
 	U64 relationship_count;
-	SubstanceSpecification_Relationship *relationship;
+	SubstanceSpecification_Relationship **relationship;
 	Reference *nucleicAcid;
 	Reference *polymer;
 	Reference *protein;
@@ -14685,9 +14685,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *role;
 	Identifier *identifier;
 	fhir_string name;
@@ -14712,9 +14712,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *category;
 	CodeableConcept *code;
 	fhir_string parameters;
@@ -14748,29 +14748,29 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *stereochemistry;
 	CodeableConcept *opticalActivity;
 	fhir_string molecularFormula;
 	fhir_string molecularFormulaByMoiety;
 	U64 isotope_count;
-	SubstanceSpecification_Structure_Isotope *isotope;
+	SubstanceSpecification_Structure_Isotope **isotope;
 	SubstanceSpecification_Structure_Isotope_MolecularWeight *molecularWeight;
 	U64 source_count;
-	Reference *source;
+	Reference **source;
 	U64 representation_count;
-	SubstanceSpecification_Structure_Representation *representation;
+	SubstanceSpecification_Structure_Representation **representation;
 };
 class SubstanceSpecification_Structure_Isotope {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	CodeableConcept *name;
 	CodeableConcept *substitution;
@@ -14782,9 +14782,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *method;
 	CodeableConcept *type;
 	Quantity *amount;
@@ -14794,9 +14794,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	fhir_string representation;
 	Attachment *attachment;
@@ -14806,51 +14806,51 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	CodeableConcept *status;
 	fhir_dateTime statusDate;
 	fhir_string comment;
 	U64 source_count;
-	Reference *source;
+	Reference **source;
 };
 class SubstanceSpecification_Name {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	CodeableConcept *type;
 	CodeableConcept *status;
 	fhir_boolean preferred;
 	U64 language_count;
-	CodeableConcept *language;
+	CodeableConcept **language;
 	U64 domain_count;
-	CodeableConcept *domain;
+	CodeableConcept **domain;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	U64 synonym_count;
-	SubstanceSpecification_Name *synonym;
+	SubstanceSpecification_Name **synonym;
 	U64 translation_count;
-	SubstanceSpecification_Name *translation;
+	SubstanceSpecification_Name **translation;
 	U64 official_count;
-	SubstanceSpecification_Name_Official *official;
+	SubstanceSpecification_Name_Official **official;
 	U64 source_count;
-	Reference *source;
+	Reference **source;
 };
 class SubstanceSpecification_Name_Official {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *authority;
 	CodeableConcept *status;
 	fhir_dateTime date;
@@ -14860,9 +14860,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class SubstType {
 		Unknown,
 		Reference,
@@ -14896,7 +14896,7 @@ public:
 	Ratio *amountRatioLowLimit;
 	CodeableConcept *amountType;
 	U64 source_count;
-	Reference *source;
+	Reference **source;
 };
 class SupplyDelivery {
 public: 
@@ -14907,17 +14907,17 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	fhir_code status;
 	Reference *patient;
 	CodeableConcept *type;
@@ -14939,16 +14939,16 @@ public:
 	Reference *supplier;
 	Reference *destination;
 	U64 receiver_count;
-	Reference *receiver;
+	Reference **receiver;
 };
 class SupplyDelivery_SuppliedItem {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Quantity *quantity;
 	enum class Item_Type {
 		Unknown,
@@ -14972,13 +14972,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	CodeableConcept *category;
 	fhir_code priority;
@@ -14996,7 +14996,7 @@ public:
 
 	Quantity *quantity;
 	U64 parameter_count;
-	SupplyRequest_Parameter *parameter;
+	SupplyRequest_Parameter **parameter;
 	enum class OccurType {
 		Unknown,
 		fhir_dateTime,
@@ -15014,11 +15014,11 @@ public:
 	fhir_dateTime authoredOn;
 	Reference *requester;
 	U64 supplier_count;
-	Reference *supplier;
+	Reference **supplier;
 	U64 reasonCode_count;
-	CodeableConcept *reasonCode;
+	CodeableConcept **reasonCode;
 	U64 reasonReference_count;
-	Reference *reasonReference;
+	Reference **reasonReference;
 	Reference *deliverFrom;
 	Reference *deliverTo;
 };
@@ -15027,9 +15027,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *code;
 	enum class ValueType {
 		Unknown,
@@ -15057,20 +15057,20 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_canonical instantiatesCanonical;
 	fhir_uri instantiatesUri;
 	U64 basedOn_count;
-	Reference *basedOn;
+	Reference **basedOn;
 	Identifier *groupIdentifier;
 	U64 partOf_count;
-	Reference *partOf;
+	Reference **partOf;
 	fhir_code status;
 	CodeableConcept *statusReason;
 	CodeableConcept *businessStatus;
@@ -15086,44 +15086,44 @@ public:
 	fhir_dateTime lastModified;
 	Reference *requester;
 	U64 performerType_count;
-	CodeableConcept *performerType;
+	CodeableConcept **performerType;
 	Reference *owner;
 	Reference *location;
 	CodeableConcept *reasonCode;
 	Reference *reasonReference;
 	U64 insurance_count;
-	Reference *insurance;
+	Reference **insurance;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 	U64 relevantHistory_count;
-	Reference *relevantHistory;
+	Reference **relevantHistory;
 	Task_Restriction *restriction;
 	U64 input_count;
-	Task_Input *input;
+	Task_Input **input;
 	U64 output_count;
-	Task_Output *output;
+	Task_Output **output;
 };
 class Task_Restriction {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_positiveInt repetitions;
 	Period *period;
 	U64 recipient_count;
-	Reference *recipient;
+	Reference **recipient;
 };
 class Task_Input {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	enum class ValueType {
 		Unknown,
@@ -15239,9 +15239,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *type;
 	enum class ValueType {
 		Unknown,
@@ -15361,11 +15361,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -15375,12 +15375,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	fhir_code kind;
@@ -15388,7 +15388,7 @@ public:
 	TerminologyCapabilities_Implementation *implementation;
 	fhir_boolean lockedDate;
 	U64 codeSystem_count;
-	TerminologyCapabilities_CodeSystem *codeSystem;
+	TerminologyCapabilities_CodeSystem **codeSystem;
 	TerminologyCapabilities_Expansion *expansion;
 	fhir_code codeSearch;
 	TerminologyCapabilities_ValidateCode *validateCode;
@@ -15400,9 +15400,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_string version;
 };
@@ -15411,9 +15411,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string description;
 	fhir_url url;
 };
@@ -15422,12 +15422,12 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_canonical uri;
 	U64 version_count;
-	TerminologyCapabilities_CodeSystem_Version *version;
+	TerminologyCapabilities_CodeSystem_Version **version;
 	fhir_boolean subsumption;
 };
 class TerminologyCapabilities_CodeSystem_Version {
@@ -15435,16 +15435,16 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string code;
 	fhir_boolean isDefault;
 	fhir_boolean compositional;
 	U64 language_count;
 	fhir_code *language;
 	U64 filter_count;
-	TerminologyCapabilities_CodeSystem_Version_Filter *filter;
+	TerminologyCapabilities_CodeSystem_Version_Filter **filter;
 	U64 property_count;
 	fhir_code *property;
 };
@@ -15453,9 +15453,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	U64 op_count;
 	fhir_code *op;
@@ -15465,14 +15465,14 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean hierarchical;
 	fhir_boolean paging;
 	fhir_boolean incomplete;
 	U64 parameter_count;
-	TerminologyCapabilities_Expansion_Parameter *parameter;
+	TerminologyCapabilities_Expansion_Parameter **parameter;
 	fhir_markdown textFilter;
 };
 class TerminologyCapabilities_Expansion_Parameter {
@@ -15480,9 +15480,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code name;
 	fhir_string documentation;
 };
@@ -15491,9 +15491,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean translations;
 };
 class TerminologyCapabilities_Translation {
@@ -15501,9 +15501,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean needsMap;
 };
 class TerminologyCapabilities_Closure {
@@ -15511,9 +15511,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean translation;
 };
 class TestReport {
@@ -15525,11 +15525,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	fhir_string name;
 	fhir_code status;
@@ -15539,10 +15539,10 @@ public:
 	fhir_string tester;
 	fhir_dateTime issued;
 	U64 participant_count;
-	TestReport_Participant *participant;
+	TestReport_Participant **participant;
 	TestReport_Setup *setup;
 	U64 test_count;
-	TestReport_Test *test;
+	TestReport_Test **test;
 	TestReport_Teardown *teardown;
 };
 class TestReport_Participant {
@@ -15550,9 +15550,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code type;
 	fhir_uri uri;
 	fhir_string display;
@@ -15562,20 +15562,20 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 action_count;
-	TestReport_Setup_Action *action;
+	TestReport_Setup_Action **action;
 };
 class TestReport_Setup_Action {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	TestReport_Setup_Action_Operation *operation;
 	TestReport_Setup_Action_Assert *assert;
 };
@@ -15584,9 +15584,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code result;
 	fhir_markdown message;
 	fhir_uri detail;
@@ -15596,9 +15596,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code result;
 	fhir_markdown message;
 	fhir_string detail;
@@ -15608,22 +15608,22 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_string description;
 	U64 action_count;
-	TestReport_Test_Action *action;
+	TestReport_Test_Action **action;
 };
 class TestReport_Test_Action {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	TestReport_Setup_Action_Operation *operation;
 	TestReport_Setup_Action_Assert *assert;
 };
@@ -15632,20 +15632,20 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 action_count;
-	TestReport_Teardown_Action *action;
+	TestReport_Teardown_Action **action;
 };
 class TestReport_Teardown_Action {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	TestReport_Setup_Action_Operation *operation;
 };
 class TestScript {
@@ -15657,11 +15657,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	Identifier *identifier;
 	fhir_string version;
@@ -15672,28 +15672,28 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
 	U64 origin_count;
-	TestScript_Origin *origin;
+	TestScript_Origin **origin;
 	U64 destination_count;
-	TestScript_Destination *destination;
+	TestScript_Destination **destination;
 	TestScript_Metadata *metadata;
 	U64 fixture_count;
-	TestScript_Fixture *fixture;
+	TestScript_Fixture **fixture;
 	U64 profile_count;
-	Reference *profile;
+	Reference **profile;
 	U64 variable_count;
-	TestScript_Variable *variable;
+	TestScript_Variable **variable;
 	TestScript_Setup *setup;
 	U64 test_count;
-	TestScript_Test *test;
+	TestScript_Test **test;
 	TestScript_Teardown *teardown;
 };
 class TestScript_Origin {
@@ -15701,9 +15701,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Integer *index;
 	Coding *profile;
 };
@@ -15712,9 +15712,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Integer *index;
 	Coding *profile;
 };
@@ -15723,22 +15723,22 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 link_count;
-	TestScript_Metadata_Link *link;
+	TestScript_Metadata_Link **link;
 	U64 capability_count;
-	TestScript_Metadata_Capability *capability;
+	TestScript_Metadata_Capability **capability;
 };
 class TestScript_Metadata_Link {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	fhir_string description;
 };
@@ -15747,14 +15747,14 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean required;
 	fhir_boolean validated;
 	fhir_string description;
 	U64 origin_count;
-	Integer *origin;
+	Integer **origin;
 	Integer *destination;
 	U64 link_count;
 	fhir_uri *link;
@@ -15765,9 +15765,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_boolean autocreate;
 	fhir_boolean autodelete;
 	Reference *resource;
@@ -15777,9 +15777,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_string defaultValue;
 	fhir_string description;
@@ -15794,20 +15794,20 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 action_count;
-	TestScript_Setup_Action *action;
+	TestScript_Setup_Action **action;
 };
 class TestScript_Setup_Action {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	TestScript_Setup_Action_Operation *operation;
 	TestScript_Setup_Action_Assert *assert;
 };
@@ -15816,9 +15816,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Coding *type;
 	fhir_code resource;
 	fhir_string label;
@@ -15831,7 +15831,7 @@ public:
 	Integer *origin;
 	fhir_string params;
 	U64 requestHeader_count;
-	TestScript_Setup_Action_Operation_RequestHeader *requestHeader;
+	TestScript_Setup_Action_Operation_RequestHeader **requestHeader;
 	fhir_id requestId;
 	fhir_id responseId;
 	fhir_id sourceId;
@@ -15843,9 +15843,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string field;
 	fhir_string value;
 };
@@ -15854,9 +15854,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string label;
 	fhir_string description;
 	fhir_code direction;
@@ -15885,22 +15885,22 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	fhir_string description;
 	U64 action_count;
-	TestScript_Test_Action *action;
+	TestScript_Test_Action **action;
 };
 class TestScript_Test_Action {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	TestScript_Setup_Action_Operation *operation;
 	TestScript_Setup_Action_Assert *assert;
 };
@@ -15909,20 +15909,20 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 action_count;
-	TestScript_Teardown_Action *action;
+	TestScript_Teardown_Action **action;
 };
 class TestScript_Teardown_Action {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	TestScript_Setup_Action_Operation *operation;
 };
 class ValueSet {
@@ -15934,14 +15934,14 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_string version;
 	fhir_string name;
 	fhir_string title;
@@ -15950,12 +15950,12 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 	fhir_boolean immutable;
 	fhir_markdown purpose;
 	fhir_markdown copyright;
@@ -15967,30 +15967,30 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_date lockedDate;
 	fhir_boolean inactive;
 	U64 include_count;
-	ValueSet_Compose_Include *include;
+	ValueSet_Compose_Include **include;
 	U64 exclude_count;
-	ValueSet_Compose_Include *exclude;
+	ValueSet_Compose_Include **exclude;
 };
 class ValueSet_Compose_Include {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri system;
 	fhir_string version;
 	U64 concept_count;
-	ValueSet_Compose_Include_Concept *concept;
+	ValueSet_Compose_Include_Concept **concept;
 	U64 filter_count;
-	ValueSet_Compose_Include_Filter *filter;
+	ValueSet_Compose_Include_Filter **filter;
 	U64 valueSet_count;
 	fhir_canonical *valueSet;
 };
@@ -15999,22 +15999,22 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code code;
 	fhir_string display;
 	U64 designation_count;
-	ValueSet_Compose_Include_Concept_Designation *designation;
+	ValueSet_Compose_Include_Concept_Designation **designation;
 };
 class ValueSet_Compose_Include_Concept_Designation {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code language;
 	Coding *use;
 	fhir_string value;
@@ -16024,9 +16024,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_code property;
 	fhir_code op;
 	fhir_string value;
@@ -16036,26 +16036,26 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri identifier;
 	fhir_dateTime timestamp;
 	Integer *total;
 	Integer *offset;
 	U64 parameter_count;
-	ValueSet_Expansion_Parameter *parameter;
+	ValueSet_Expansion_Parameter **parameter;
 	U64 contains_count;
-	ValueSet_Expansion_Contains *contains;
+	ValueSet_Expansion_Contains **contains;
 };
 class ValueSet_Expansion_Parameter {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string name;
 	enum class ValueType {
 		Unknown,
@@ -16085,9 +16085,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri system;
 	fhir_boolean abstract;
 	fhir_boolean inactive;
@@ -16095,9 +16095,9 @@ public:
 	fhir_code code;
 	fhir_string display;
 	U64 designation_count;
-	ValueSet_Compose_Include_Concept_Designation *designation;
+	ValueSet_Compose_Include_Concept_Designation **designation;
 	U64 contains_count;
-	ValueSet_Expansion_Contains *contains;
+	ValueSet_Expansion_Contains **contains;
 };
 class VerificationResult {
 public: 
@@ -16108,13 +16108,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 target_count;
-	Reference *target;
+	Reference **target;
 	U64 targetLocation_count;
 	fhir_string *targetLocation;
 	CodeableConcept *need;
@@ -16122,44 +16122,44 @@ public:
 	fhir_dateTime statusDate;
 	CodeableConcept *validationType;
 	U64 validationProcess_count;
-	CodeableConcept *validationProcess;
+	CodeableConcept **validationProcess;
 	Timing *frequency;
 	fhir_dateTime lastPerformed;
 	fhir_date nextScheduled;
 	CodeableConcept *failureAction;
 	U64 primarySource_count;
-	VerificationResult_PrimarySource *primarySource;
+	VerificationResult_PrimarySource **primarySource;
 	VerificationResult_Attestation *attestation;
 	U64 validator_count;
-	VerificationResult_Validator *validator;
+	VerificationResult_Validator **validator;
 };
 class VerificationResult_PrimarySource {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *who;
 	U64 type_count;
-	CodeableConcept *type;
+	CodeableConcept **type;
 	U64 communicationMethod_count;
-	CodeableConcept *communicationMethod;
+	CodeableConcept **communicationMethod;
 	CodeableConcept *validationStatus;
 	fhir_dateTime validationDate;
 	CodeableConcept *canPushUpdates;
 	U64 pushTypeAvailable_count;
-	CodeableConcept *pushTypeAvailable;
+	CodeableConcept **pushTypeAvailable;
 };
 class VerificationResult_Attestation {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *who;
 	Reference *onBehalfOf;
 	CodeableConcept *communicationMethod;
@@ -16174,9 +16174,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Reference *organization;
 	fhir_string identityCertificate;
 	Signature *attestationSignature;
@@ -16190,13 +16190,13 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 identifier_count;
-	Identifier *identifier;
+	Identifier **identifier;
 	fhir_code status;
 	fhir_dateTime created;
 	Reference *patient;
@@ -16204,23 +16204,23 @@ public:
 	fhir_dateTime dateWritten;
 	Reference *prescriber;
 	U64 lensSpecification_count;
-	VisionPrescription_LensSpecification *lensSpecification;
+	VisionPrescription_LensSpecification **lensSpecification;
 };
 class VisionPrescription_LensSpecification {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *product;
 	fhir_code eye;
 	fhir_decimal sphere;
 	fhir_decimal cylinder;
 	Integer *axis;
 	U64 prism_count;
-	VisionPrescription_LensSpecification_Prism *prism;
+	VisionPrescription_LensSpecification_Prism **prism;
 	fhir_decimal add;
 	fhir_decimal power;
 	fhir_decimal backCurve;
@@ -16229,16 +16229,16 @@ public:
 	fhir_string color;
 	fhir_string brand;
 	U64 note_count;
-	Annotation *note;
+	Annotation **note;
 };
 class VisionPrescription_LensSpecification_Prism {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_decimal amount;
 	fhir_code base;
 };
@@ -16251,11 +16251,11 @@ public:
 	fhir_code language;
 	Narrative *text;
 	U64 contained_count;
-	Resource *contained;
+	Resource **contained;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_uri url;
 	fhir_string version;
 	fhir_string name;
@@ -16265,35 +16265,35 @@ public:
 	fhir_dateTime date;
 	fhir_string publisher;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 	fhir_markdown description;
 	U64 useContext_count;
-	UsageContext *useContext;
+	UsageContext **useContext;
 	U64 jurisdiction_count;
-	CodeableConcept *jurisdiction;
+	CodeableConcept **jurisdiction;
 };
 class Element {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 };
 class BackboneElement {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 };
 class Integer {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_unsignedInt value;
 };
 class Address {
@@ -16301,7 +16301,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code use;
 	fhir_code type;
 	fhir_string text;
@@ -16319,7 +16319,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_decimal value;
 	fhir_code comparator;
 	fhir_string unit;
@@ -16331,7 +16331,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	enum class AuthoType {
 		Unknown,
 		Reference,
@@ -16352,7 +16352,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code contentType;
 	fhir_code language;
 	fhir_base64Binary data;
@@ -16367,9 +16367,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 coding_count;
-	Coding *coding;
+	Coding **coding;
 	fhir_string text;
 };
 class Coding {
@@ -16377,7 +16377,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_uri system;
 	fhir_string version;
 	fhir_code code;
@@ -16389,17 +16389,17 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_string name;
 	U64 telecom_count;
-	ContactPoint *telecom;
+	ContactPoint **telecom;
 };
 class ContactPoint {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code system;
 	fhir_string value;
 	fhir_code use;
@@ -16411,18 +16411,18 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code type;
 	fhir_string name;
 	U64 contact_count;
-	ContactDetail *contact;
+	ContactDetail **contact;
 };
 class Count {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_decimal value;
 	fhir_code comparator;
 	fhir_string unit;
@@ -16434,7 +16434,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code type;
 	U64 profile_count;
 	fhir_canonical *profile;
@@ -16453,31 +16453,31 @@ public:
 	U64 mustSupport_count;
 	fhir_string *mustSupport;
 	U64 codeFilter_count;
-	DataRequirement_CodeFilter *codeFilter;
+	DataRequirement_CodeFilter **codeFilter;
 	U64 dateFilter_count;
-	DataRequirement_DateFilter *dateFilter;
+	DataRequirement_DateFilter **dateFilter;
 	fhir_positiveInt limit;
 	U64 sort_count;
-	DataRequirement_Sort *sort;
+	DataRequirement_Sort **sort;
 };
 class DataRequirement_CodeFilter {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_string path;
 	fhir_string searchParam;
 	fhir_canonical valueSet;
 	U64 code_count;
-	Coding *code;
+	Coding **code;
 };
 class DataRequirement_DateFilter {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_string path;
 	fhir_string searchParam;
 	enum class ValueType {
@@ -16500,7 +16500,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_string path;
 	fhir_code direction;
 };
@@ -16509,7 +16509,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_decimal value;
 	fhir_code comparator;
 	fhir_string unit;
@@ -16521,13 +16521,13 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Integer *sequence;
 	fhir_string text;
 	U64 additionalInstruction_count;
-	CodeableConcept *additionalInstruction;
+	CodeableConcept **additionalInstruction;
 	fhir_string patientInstruction;
 	Timing *timing;
 	enum class AsNeeType {
@@ -16546,7 +16546,7 @@ public:
 	CodeableConcept *route;
 	CodeableConcept *method;
 	U64 doseAndRate_count;
-	Dosage_DoseAndRate *doseAndRate;
+	Dosage_DoseAndRate **doseAndRate;
 	Ratio *maxDosePerPeriod;
 	Quantity *maxDosePerAdministration;
 	Quantity *maxDosePerLifetime;
@@ -16556,7 +16556,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	CodeableConcept *type;
 	enum class Dose_Type {
 		Unknown,
@@ -16590,7 +16590,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_decimal value;
 	fhir_code comparator;
 	fhir_string unit;
@@ -16602,9 +16602,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	fhir_string path;
 	U64 representation_count;
 	fhir_code *representation;
@@ -16612,7 +16612,7 @@ public:
 	fhir_boolean sliceIsConstraining;
 	fhir_string label;
 	U64 code_count;
-	Coding *code;
+	Coding **code;
 	ElementDefinition_Slicing *slicing;
 	fhir_string short_;
 	fhir_markdown definition;
@@ -16625,7 +16625,7 @@ public:
 	ElementDefinition_Base *base;
 	fhir_uri contentReference;
 	U64 type_count;
-	ElementDefinition_Type *type;
+	ElementDefinition_Type **type;
 	enum class DefauType {
 		Unknown,
 		fhir_base64Binary,
@@ -16953,7 +16953,7 @@ public:
 	} pattern;
 
 	U64 example_count;
-	ElementDefinition_Example *example;
+	ElementDefinition_Example **example;
 	enum class MinVaType {
 		Unknown,
 		fhir_date,
@@ -17010,23 +17010,23 @@ public:
 	U64 condition_count;
 	fhir_id *condition;
 	U64 constraint_count;
-	ElementDefinition_Constraint *constraint;
+	ElementDefinition_Constraint **constraint;
 	fhir_boolean mustSupport;
 	fhir_boolean isModifier;
 	fhir_string isModifierReason;
 	fhir_boolean isSummary;
 	ElementDefinition_Binding *binding;
 	U64 mapping_count;
-	ElementDefinition_Mapping *mapping;
+	ElementDefinition_Mapping **mapping;
 };
 class ElementDefinition_Slicing {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 discriminator_count;
-	ElementDefinition_Slicing_Discriminator *discriminator;
+	ElementDefinition_Slicing_Discriminator **discriminator;
 	fhir_string description;
 	fhir_boolean ordered;
 	fhir_code rules;
@@ -17036,7 +17036,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code type;
 	fhir_string path;
 };
@@ -17045,7 +17045,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_string path;
 	fhir_unsignedInt min;
 	fhir_string max;
@@ -17055,7 +17055,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_uri code;
 	U64 profile_count;
 	fhir_canonical *profile;
@@ -17070,7 +17070,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_string label;
 	enum class ValueType {
 		Unknown,
@@ -17186,7 +17186,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_id key;
 	fhir_string requirements;
 	fhir_code severity;
@@ -17200,7 +17200,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code strength;
 	fhir_string description;
 	fhir_canonical valueSet;
@@ -17210,7 +17210,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_id identity;
 	fhir_code language;
 	fhir_string map;
@@ -17221,7 +17221,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_string description;
 	fhir_id name;
 	fhir_code language;
@@ -17233,7 +17233,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_string url;
 	enum class ValueType {
 		Unknown,
@@ -17349,7 +17349,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code use;
 	fhir_string text;
 	fhir_string family;
@@ -17366,7 +17366,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code use;
 	CodeableConcept *type;
 	fhir_uri system;
@@ -17379,9 +17379,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	CodeableConcept *country;
 	CodeableConcept *jurisdiction;
 	CodeableConcept *status;
@@ -17393,23 +17393,23 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_id versionId;
 	fhir_instant lastUpdated;
 	fhir_uri source;
 	U64 profile_count;
 	fhir_canonical *profile;
 	U64 security_count;
-	Coding *security;
+	Coding **security;
 	U64 tag_count;
-	Coding *tag;
+	Coding **tag;
 };
 class Money {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_decimal value;
 	fhir_code currency;
 };
@@ -17418,7 +17418,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code status;
 	fhir_xhtml div;
 };
@@ -17427,7 +17427,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code name;
 	fhir_code use;
 	Integer *min;
@@ -17441,7 +17441,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_dateTime start;
 	fhir_dateTime end;
 };
@@ -17450,9 +17450,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class Age_tType {
 		Unknown,
 		Range,
@@ -17474,9 +17474,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Quantity *height;
 	Quantity *width;
 	Quantity *depth;
@@ -17489,7 +17489,7 @@ public:
 	U64 imprint_count;
 	fhir_string *imprint;
 	U64 image_count;
-	Attachment *image;
+	Attachment **image;
 	CodeableConcept *scoring;
 };
 class ProductShelfLife {
@@ -17497,21 +17497,21 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	Identifier *identifier;
 	CodeableConcept *type;
 	Quantity *period;
 	U64 specialPrecautionsForStorage_count;
-	CodeableConcept *specialPrecautionsForStorage;
+	CodeableConcept **specialPrecautionsForStorage;
 };
 class Quantity {
 public: 
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_decimal value;
 	fhir_code comparator;
 	fhir_string unit;
@@ -17523,7 +17523,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	Quantity *low;
 	Quantity *high;
 };
@@ -17532,7 +17532,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	Quantity *numerator;
 	Quantity *denominator;
 };
@@ -17541,7 +17541,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_string reference;
 	fhir_uri type;
 	Identifier *identifier;
@@ -17552,7 +17552,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code type;
 	fhir_string label;
 	fhir_string display;
@@ -17566,7 +17566,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	Quantity *origin;
 	fhir_decimal period;
 	fhir_decimal factor;
@@ -17580,9 +17580,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 type_count;
-	Coding *type;
+	Coding **type;
 	fhir_instant when;
 	Reference *who;
 	Reference *onBehalfOf;
@@ -17595,9 +17595,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	enum class AmounType {
 		Unknown,
 		Quantity,
@@ -17621,7 +17621,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	Quantity *lowLimit;
 	Quantity *highLimit;
 };
@@ -17630,9 +17630,9 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	U64 modifierExtension_count;
-	Extension *modifierExtension;
+	Extension **modifierExtension;
 	U64 event_count;
 	fhir_dateTime *event;
 	Timing_Repeat *repeat;
@@ -17643,7 +17643,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	enum class BoundType {
 		Unknown,
 		Duration,
@@ -17681,7 +17681,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	fhir_code type;
 	fhir_string name;
 	enum class TiminType {
@@ -17701,7 +17701,7 @@ public:
 	} timing;
 
 	U64 data_count;
-	DataRequirement *data;
+	DataRequirement **data;
 	Expression *condition;
 };
 class UsageContext {
@@ -17709,7 +17709,7 @@ public:
 	ResourceType resourceType;
 	fhir_string id;
 	U64 extension_count;
-	Extension *extension;
+	Extension **extension;
 	Coding *code;
 	enum class ValueType {
 		Unknown,

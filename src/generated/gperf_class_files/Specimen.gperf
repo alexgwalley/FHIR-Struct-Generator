@@ -1,0 +1,41 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Specimen_MemberLookup
+%enum
+%define word-array-name word_array_Specimen
+%define class-name Specimen_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier_count, 0x78, 12, -1
+identifier, 0x80, 13, -1
+accessionIdentifier, 0x88, 14, -1
+status, 0x90, 15, -1
+type, 0xa0, 16, -1
+subject, 0xa8, 17, -1
+receivedTime, 0xb0, 18, -1
+parent_count, 0xc0, 19, -1
+parent, 0xc8, 20, -1
+request_count, 0xd0, 21, -1
+request, 0xd8, 22, -1
+collection, 0xe0, 23, -1
+processing_count, 0xe8, 24, -1
+processing, 0xf0, 25, -1
+container_count, 0xf8, 26, -1
+container, 0x100, 27, -1
+condition_count, 0x108, 28, -1
+condition, 0x110, 29, -1
+note_count, 0x118, 30, -1
+note, 0x120, 31, -1

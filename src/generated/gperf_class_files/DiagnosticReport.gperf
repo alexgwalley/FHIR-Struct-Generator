@@ -1,0 +1,51 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name DiagnosticReport_MemberLookup
+%enum
+%define word-array-name word_array_DiagnosticReport
+%define class-name DiagnosticReport_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier_count, 0x78, 12, -1
+identifier, 0x80, 13, -1
+basedOn_count, 0x88, 14, -1
+basedOn, 0x90, 15, -1
+status, 0x98, 16, -1
+category_count, 0xa8, 17, -1
+category, 0xb0, 18, -1
+code, 0xb8, 19, -1
+subject, 0xc0, 20, -1
+encounter, 0xc8, 21, -1
+effectiveDateTime, 0xd8, 23, 0
+effectivePeriod, 0xd8, 23, 1
+issued, 0xe8, 24, -1
+performer_count, 0xf8, 25, -1
+performer, 0x100, 26, -1
+resultsInterpreter_count, 0x108, 27, -1
+resultsInterpreter, 0x110, 28, -1
+specimen_count, 0x118, 29, -1
+specimen, 0x120, 30, -1
+result_count, 0x128, 31, -1
+result, 0x130, 32, -1
+imagingStudy_count, 0x138, 33, -1
+imagingStudy, 0x140, 34, -1
+media_count, 0x148, 35, -1
+media, 0x150, 36, -1
+conclusion, 0x158, 37, -1
+conclusionCode_count, 0x168, 38, -1
+conclusionCode, 0x170, 39, -1
+presentedForm_count, 0x178, 40, -1
+presentedForm, 0x180, 41, -1

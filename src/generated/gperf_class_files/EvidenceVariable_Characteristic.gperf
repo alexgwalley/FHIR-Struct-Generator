@@ -1,0 +1,31 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name EvidenceVariable_Characteristic_MemberLookup
+%enum
+%define word-array-name word_array_EvidenceVariable_Characteristic
+%define class-name EvidenceVariable_Characteristic_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+description, 0x38, 6, -1
+definitionReference, 0x50, 8, 0
+definitionCanonical, 0x50, 8, 1
+definitionCodeableConcept, 0x50, 8, 2
+definitionExpression, 0x50, 8, 3
+definitionDataRequirement, 0x50, 8, 4
+definitionTriggerDefinition, 0x50, 8, 5
+usageContext_count, 0x60, 9, -1
+usageContext, 0x68, 10, -1
+exclude, 0x70, 11, -1
+participantEffectiveDateTime, 0x78, 13, 0
+participantEffectivePeriod, 0x78, 13, 1
+participantEffectiveDuration, 0x78, 13, 2
+participantEffectiveTiming, 0x78, 13, 3
+timeFromStart, 0x88, 14, -1
+groupMeasure, 0x90, 15, -1

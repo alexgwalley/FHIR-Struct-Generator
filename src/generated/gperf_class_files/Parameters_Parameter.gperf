@@ -1,0 +1,69 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Parameters_Parameter_MemberLookup
+%enum
+%define word-array-name word_array_Parameters_Parameter
+%define class-name Parameters_Parameter_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+name, 0x38, 6, -1
+valueBase64Binary, 0x50, 8, 0
+valueBoolean, 0x50, 8, 1
+valueCanonical, 0x50, 8, 2
+valueCode, 0x50, 8, 3
+valueDate, 0x50, 8, 4
+valueDateTime, 0x50, 8, 5
+valueDecimal, 0x50, 8, 6
+valueId, 0x50, 8, 7
+valueInstant, 0x50, 8, 8
+valueInteger, 0x50, 8, 9
+valueMarkdown, 0x50, 8, 10
+valueOid, 0x50, 8, 11
+valuePositiveInt, 0x50, 8, 12
+valueString, 0x50, 8, 13
+valueTime, 0x50, 8, 14
+valueUnsignedInt, 0x50, 8, 15
+valueUri, 0x50, 8, 16
+valueUrl, 0x50, 8, 17
+valueUuid, 0x50, 8, 18
+valueAddress, 0x50, 8, 19
+valueAge, 0x50, 8, 20
+valueAnnotation, 0x50, 8, 21
+valueAttachment, 0x50, 8, 22
+valueCodeableConcept, 0x50, 8, 23
+valueCoding, 0x50, 8, 24
+valueContactPoint, 0x50, 8, 25
+valueCount, 0x50, 8, 26
+valueDistance, 0x50, 8, 27
+valueDuration, 0x50, 8, 28
+valueHumanName, 0x50, 8, 29
+valueIdentifier, 0x50, 8, 30
+valueMoney, 0x50, 8, 31
+valuePeriod, 0x50, 8, 32
+valueQuantity, 0x50, 8, 33
+valueRange, 0x50, 8, 34
+valueRatio, 0x50, 8, 35
+valueReference, 0x50, 8, 36
+valueSampledData, 0x50, 8, 37
+valueSignature, 0x50, 8, 38
+valueTiming, 0x50, 8, 39
+valueContactDetail, 0x50, 8, 40
+valueContributor, 0x50, 8, 41
+valueDataRequirement, 0x50, 8, 42
+valueExpression, 0x50, 8, 43
+valueParameterDefinition, 0x50, 8, 44
+valueRelatedArtifact, 0x50, 8, 45
+valueTriggerDefinition, 0x50, 8, 46
+valueUsageContext, 0x50, 8, 47
+valueDosage, 0x50, 8, 48
+valueMeta, 0x50, 8, 49
+resource, 0x60, 9, -1
+part_count, 0x68, 10, -1
+part, 0x70, 11, -1

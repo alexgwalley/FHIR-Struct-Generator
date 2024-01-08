@@ -1,0 +1,33 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Timing_Repeat_MemberLookup
+%enum
+%define word-array-name word_array_Timing_Repeat
+%define class-name Timing_Repeat_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+boundsDuration, 0x30, 5, 0
+boundsRange, 0x30, 5, 1
+boundsPeriod, 0x30, 5, 2
+count, 0x38, 6, -1
+countMax, 0x40, 7, -1
+duration, 0x48, 8, -1
+durationMax, 0x50, 9, -1
+durationUnit, 0x58, 10, -1
+frequency, 0x68, 11, -1
+frequencyMax, 0x70, 12, -1
+period, 0x78, 13, -1
+periodMax, 0x80, 14, -1
+periodUnit, 0x88, 15, -1
+dayOfWeek_count, 0x98, 16, -1
+dayOfWeek, 0xa0, 17, -1
+timeOfDay_count, 0xa8, 18, -1
+timeOfDay, 0xb0, 19, -1
+when_count, 0xb8, 20, -1
+when, 0xc0, 21, -1
+offset, 0xc8, 22, -1

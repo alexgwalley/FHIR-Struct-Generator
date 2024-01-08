@@ -1,0 +1,51 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name ClinicalImpression_MemberLookup
+%enum
+%define word-array-name word_array_ClinicalImpression
+%define class-name ClinicalImpression_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier_count, 0x78, 12, -1
+identifier, 0x80, 13, -1
+status, 0x88, 14, -1
+statusReason, 0x98, 15, -1
+code, 0xa0, 16, -1
+description, 0xa8, 17, -1
+subject, 0xb8, 18, -1
+encounter, 0xc0, 19, -1
+effectiveDateTime, 0xd0, 21, 0
+effectivePeriod, 0xd0, 21, 1
+date, 0xe0, 22, -1
+assessor, 0xf0, 23, -1
+previous, 0xf8, 24, -1
+problem_count, 0x100, 25, -1
+problem, 0x108, 26, -1
+investigation_count, 0x110, 27, -1
+investigation, 0x118, 28, -1
+protocol_count, 0x120, 29, -1
+protocol, 0x128, 30, -1
+summary, 0x130, 31, -1
+finding_count, 0x140, 32, -1
+finding, 0x148, 33, -1
+prognosisCodeableConcept_count, 0x150, 34, -1
+prognosisCodeableConcept, 0x158, 35, -1
+prognosisReference_count, 0x160, 36, -1
+prognosisReference, 0x168, 37, -1
+supportingInfo_count, 0x170, 38, -1
+supportingInfo, 0x178, 39, -1
+note_count, 0x180, 40, -1
+note, 0x188, 41, -1

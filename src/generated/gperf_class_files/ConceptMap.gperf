@@ -1,0 +1,45 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name ConceptMap_MemberLookup
+%enum
+%define word-array-name word_array_ConceptMap
+%define class-name ConceptMap_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+url, 0x78, 12, -1
+identifier, 0x88, 13, -1
+version, 0x90, 14, -1
+name, 0xa0, 15, -1
+title, 0xb0, 16, -1
+status, 0xc0, 17, -1
+experimental, 0xd0, 18, -1
+date, 0xd8, 19, -1
+publisher, 0xe8, 20, -1
+contact_count, 0xf8, 21, -1
+contact, 0x100, 22, -1
+description, 0x108, 23, -1
+useContext_count, 0x118, 24, -1
+useContext, 0x120, 25, -1
+jurisdiction_count, 0x128, 26, -1
+jurisdiction, 0x130, 27, -1
+purpose, 0x138, 28, -1
+copyright, 0x148, 29, -1
+sourceUri, 0x160, 31, 0
+sourceCanonical, 0x160, 31, 1
+targetUri, 0x178, 33, 0
+targetCanonical, 0x178, 33, 1
+group_count, 0x188, 34, -1
+group, 0x190, 35, -1

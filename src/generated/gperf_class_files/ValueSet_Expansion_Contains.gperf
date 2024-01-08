@@ -1,0 +1,25 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name ValueSet_Expansion_Contains_MemberLookup
+%enum
+%define word-array-name word_array_ValueSet_Expansion_Contains
+%define class-name ValueSet_Expansion_Contains_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+system, 0x38, 6, -1
+abstract, 0x48, 7, -1
+inactive, 0x4c, 8, -1
+version, 0x50, 9, -1
+code, 0x60, 10, -1
+display, 0x70, 11, -1
+designation_count, 0x80, 12, -1
+designation, 0x88, 13, -1
+contains_count, 0x90, 14, -1
+contains, 0x98, 15, -1

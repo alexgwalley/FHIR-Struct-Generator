@@ -1,0 +1,18 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name MedicationRequest_Substitution_MemberLookup
+%enum
+%define word-array-name word_array_MedicationRequest_Substitution
+%define class-name MedicationRequest_Substitution_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+allowedBoolean, 0x40, 7, 0
+allowedCodeableConcept, 0x40, 7, 1
+reason, 0x48, 8, -1

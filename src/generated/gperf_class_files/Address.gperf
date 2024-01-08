@@ -1,0 +1,24 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Address_MemberLookup
+%enum
+%define word-array-name word_array_Address
+%define class-name Address_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+use, 0x28, 4, -1
+type, 0x38, 5, -1
+text, 0x48, 6, -1
+line_count, 0x58, 7, -1
+line, 0x60, 8, -1
+city, 0x68, 9, -1
+district, 0x78, 10, -1
+state, 0x88, 11, -1
+postalCode, 0x98, 12, -1
+country, 0xa8, 13, -1
+period, 0xb8, 14, -1

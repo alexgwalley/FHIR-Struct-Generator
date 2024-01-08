@@ -1,0 +1,23 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name VerificationResult_Attestation_MemberLookup
+%enum
+%define word-array-name word_array_VerificationResult_Attestation
+%define class-name VerificationResult_Attestation_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+who, 0x38, 6, -1
+onBehalfOf, 0x40, 7, -1
+communicationMethod, 0x48, 8, -1
+date, 0x50, 9, -1
+sourceIdentityCertificate, 0x60, 10, -1
+proxyIdentityCertificate, 0x70, 11, -1
+proxySignature, 0x80, 12, -1
+sourceSignature, 0x88, 13, -1

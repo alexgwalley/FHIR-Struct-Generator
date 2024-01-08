@@ -50,13 +50,13 @@ zchk(p) ? (zset((n)->prev), (n)->next = (f), (zchk(f) ? (0) : ((f)->prev = (n)))
 #define DLLRemove(f,l,n)         DLLRemove_NPZ(f,l,n,next,prev,CheckNull,SetNull)
 
 #if defined(_MSC_VER)
-#define DebugBreak __debugbreak()
+#define OS_DebugBreak __debugbreak()
 #else
 #include <signal.h>
-#define DebugBreak raise(SIGTRAP)
+#define OS_DebugBreak raise(SIGTRAP)
 #endif
 
-#define Assert(b) do { if(!(b)) { DebugBreak; } } while(0)
+#define Assert(b) do { if(!(b)) { OS_DebugBreak; } } while(0)
 
 #define Min(a, b) (((a)<(b)) ? (a) : (b))
 #define Max(a, b) (((a)>(b)) ? (a) : (b))
@@ -80,7 +80,8 @@ zchk(p) ? (zset((n)->prev), (n)->next = (f), (zchk(f) ? (0) : ((f)->prev = (n)))
 #define read_only
 #endif
 
-#define DeferLoop(start, end) for(int _i_ = ((start), 0); _i_ == 0; _i_ += 1, (end))
+#define DeferLoop(start, end) for (int _i_ = ((start), 0); _i_ == 0; _i_ += 1, (end))
+#define FOR(var_name, start, end) for (int (var_name) = (start); i < (end); i++)
 
 ////////////////////////////////
 //~ rjf: Base-Types

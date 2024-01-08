@@ -1,0 +1,23 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name StructureMap_Group_MemberLookup
+%enum
+%define word-array-name word_array_StructureMap_Group
+%define class-name StructureMap_Group_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+name, 0x38, 6, -1
+extends, 0x48, 7, -1
+typeMode, 0x58, 8, -1
+documentation, 0x68, 9, -1
+input_count, 0x78, 10, -1
+input, 0x80, 11, -1
+rule_count, 0x88, 12, -1
+rule, 0x90, 13, -1

@@ -1,0 +1,60 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Immunization_MemberLookup
+%enum
+%define word-array-name word_array_Immunization
+%define class-name Immunization_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier_count, 0x78, 12, -1
+identifier, 0x80, 13, -1
+status, 0x88, 14, -1
+statusReason, 0x98, 15, -1
+vaccineCode, 0xa0, 16, -1
+patient, 0xa8, 17, -1
+encounter, 0xb0, 18, -1
+occurrenceDateTime, 0xc0, 20, 0
+occurrenceString, 0xc0, 20, 1
+recorded, 0xd0, 21, -1
+primarySource, 0xe0, 22, -1
+reportOrigin, 0xe8, 23, -1
+location, 0xf0, 24, -1
+manufacturer, 0xf8, 25, -1
+lotNumber, 0x100, 26, -1
+expirationDate, 0x110, 27, -1
+site, 0x120, 28, -1
+route, 0x128, 29, -1
+doseQuantity, 0x130, 30, -1
+performer_count, 0x138, 31, -1
+performer, 0x140, 32, -1
+note_count, 0x148, 33, -1
+note, 0x150, 34, -1
+reasonCode_count, 0x158, 35, -1
+reasonCode, 0x160, 36, -1
+reasonReference_count, 0x168, 37, -1
+reasonReference, 0x170, 38, -1
+isSubpotent, 0x178, 39, -1
+subpotentReason_count, 0x180, 40, -1
+subpotentReason, 0x188, 41, -1
+education_count, 0x190, 42, -1
+education, 0x198, 43, -1
+programEligibility_count, 0x1a0, 44, -1
+programEligibility, 0x1a8, 45, -1
+fundingSource, 0x1b0, 46, -1
+reaction_count, 0x1b8, 47, -1
+reaction, 0x1c0, 48, -1
+protocolApplied_count, 0x1c8, 49, -1
+protocolApplied, 0x1d0, 50, -1

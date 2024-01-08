@@ -1,0 +1,61 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name PlanDefinition_Action_MemberLookup
+%enum
+%define word-array-name word_array_PlanDefinition_Action
+%define class-name PlanDefinition_Action_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+prefix, 0x38, 6, -1
+title, 0x48, 7, -1
+description, 0x58, 8, -1
+textEquivalent, 0x68, 9, -1
+priority, 0x78, 10, -1
+code_count, 0x88, 11, -1
+code, 0x90, 12, -1
+reason_count, 0x98, 13, -1
+reason, 0xa0, 14, -1
+documentation_count, 0xa8, 15, -1
+documentation, 0xb0, 16, -1
+goalId_count, 0xb8, 17, -1
+goalId, 0xc0, 18, -1
+subjectCodeableConcept, 0xd0, 20, 0
+subjectReference, 0xd0, 20, 1
+trigger_count, 0xd8, 21, -1
+trigger, 0xe0, 22, -1
+condition_count, 0xe8, 23, -1
+condition, 0xf0, 24, -1
+input_count, 0xf8, 25, -1
+input, 0x100, 26, -1
+output_count, 0x108, 27, -1
+output, 0x110, 28, -1
+relatedAction_count, 0x118, 29, -1
+relatedAction, 0x120, 30, -1
+timingDateTime, 0x130, 32, 0
+timingAge, 0x130, 32, 1
+timingPeriod, 0x130, 32, 2
+timingDuration, 0x130, 32, 3
+timingRange, 0x130, 32, 4
+timingTiming, 0x130, 32, 5
+participant_count, 0x140, 33, -1
+participant, 0x148, 34, -1
+type, 0x150, 35, -1
+groupingBehavior, 0x158, 36, -1
+selectionBehavior, 0x168, 37, -1
+requiredBehavior, 0x178, 38, -1
+precheckBehavior, 0x188, 39, -1
+cardinalityBehavior, 0x198, 40, -1
+definitionCanonical, 0x1b0, 42, 0
+definitionUri, 0x1b0, 42, 1
+transform, 0x1c0, 43, -1
+dynamicValue_count, 0x1d0, 44, -1
+dynamicValue, 0x1d8, 45, -1
+action_count, 0x1e0, 46, -1
+action, 0x1e8, 47, -1

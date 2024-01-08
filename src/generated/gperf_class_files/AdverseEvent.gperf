@@ -1,0 +1,48 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name AdverseEvent_MemberLookup
+%enum
+%define word-array-name word_array_AdverseEvent
+%define class-name AdverseEvent_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier, 0x78, 12, -1
+actuality, 0x80, 13, -1
+category_count, 0x90, 14, -1
+category, 0x98, 15, -1
+event, 0xa0, 16, -1
+subject, 0xa8, 17, -1
+encounter, 0xb0, 18, -1
+date, 0xb8, 19, -1
+detected, 0xc8, 20, -1
+recordedDate, 0xd8, 21, -1
+resultingCondition_count, 0xe8, 22, -1
+resultingCondition, 0xf0, 23, -1
+location, 0xf8, 24, -1
+seriousness, 0x100, 25, -1
+severity, 0x108, 26, -1
+outcome, 0x110, 27, -1
+recorder, 0x118, 28, -1
+contributor_count, 0x120, 29, -1
+contributor, 0x128, 30, -1
+suspectEntity_count, 0x130, 31, -1
+suspectEntity, 0x138, 32, -1
+subjectMedicalHistory_count, 0x140, 33, -1
+subjectMedicalHistory, 0x148, 34, -1
+referenceDocument_count, 0x150, 35, -1
+referenceDocument, 0x158, 36, -1
+study_count, 0x160, 37, -1
+study, 0x168, 38, -1

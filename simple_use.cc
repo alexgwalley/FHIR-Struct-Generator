@@ -8,14 +8,15 @@
 
 /////////////////////////
 // json includes
-#include "src/cJSON.h"
-#include "src/third_party/simdjson.h"
+#include "cJSON.h"
+#include "third_party/simdjson.h"
 
-#include "src/core.h"
-#include "src/arena.h"
-#include "src/string8.h"
-#include "src/threading.h"
-#include "src/manual_deserialization.h"
+#include "core.h"
+#include "arena.h"
+#include "string8.h"
+#include "threading.h"
+#include "os.h"
+#include "manual_deserialization.h"
 
 #include "fhir_class_definitions.h"
 
@@ -24,6 +25,7 @@
 #include "src/arena.c"
 #include "src/string8.cc"
 #include "src/threading.c"
+#include "os.cc"
 
 #define USE_SIMDJSON
 #define USE_PROFILER
@@ -34,8 +36,7 @@
 void*
 ReadEntireFile(Arena *arena, String8 file_name)
 {
-	FILE *f = {};
-	fopen_s(&f, file_name.str, L"r");
+	FILE *f = fopen((char*)file_name.str, "r");
 	fseek(f,  0, SEEK_END);
 	long length = ftell(f);
 	void *result = ArenaPush(arena, length);
@@ -107,7 +108,6 @@ RunOptionsFromArgs(Arena *arena, int args_count, char** args)
 			{
 				options.profile = true;
 			}
-            ˚
 		}
 	}
 	return options;
@@ -125,6 +125,7 @@ main(int arg_count, char** args)
 	SetThreadCtx(&tctx);
     
 	Arena *arena = ArenaAlloc(Gigabytes(16));
+	global_log.arena = ArenaAlloc(Megabytes(64));
     
 	RunOptions run_options = RunOptionsFromArgs(arena, arg_count, args);
     
@@ -152,7 +153,7 @@ main(int arg_count, char** args)
 	String16 path16 = Str16From8(scratch.arena, path);
     
     
-    FileEntries entries = GetFileEntries(arena, dir_name);
+    FileEntries entries = OS_EnumerateDirectory(arena, dir_name);
 	ScratchEnd(scratch);
     
 	size_t total_bytes_processed = 0;
@@ -162,10 +163,10 @@ main(int arg_count, char** args)
 		BeginProfile();
 	}
     
-    for(int i = 0; i < entries.count; i++)
+	FOR(i, 0, entries.count)
     {
-        
-        if (FindSubstr8(data_file_name_8, Str8Lit(".json"), 0, 0) == data_file_name_8.size)
+		if (entries.v[i].attr & FileAttributes_Directory ||
+			FindSubstr8(entries.v[i].file_name, Str8Lit(".json"), 0, 0) == entries.v[i].file_name.size)
         {
             continue;
         }
@@ -177,16 +178,18 @@ main(int arg_count, char** args)
         ResourceType type = ResourceType::Unknown;
         
         count++;
-        void* resource = Deserialize_File(arena, options, bundle_file_name, &type);
+        fhir_r4::Bundle* resource = (fhir_r4::Bundle*)Deserialize_File(arena, options, bundle_file_name, &type);
+		total_bytes_processed += entries.v[i].file_size_low;
+
+		// TODO(agw): deal with this later
+		Assert(entries.v[i].file_size_high == 0);
         ScratchEnd(scratch);
     }
     
     printf("DONE, count: %d\n", count);
     
-    
-    // TODO(agw); behind some define? deserialization_options somehow?
+    // TODO(agw): behind some define? deserialization_options somehow?
     PrintLog(&global_log);
-    
     
     if (should_profile)
     {
@@ -195,9 +198,9 @@ main(int arg_count, char** args)
         
         
         u64 deserialization_elapsed = 0;
-        for(int i = 1; ArrayCount(GlobalProfiler.Anchors); i++)
+        FOR(i, 1, ArrayCount(GlobalProfiler.Anchors))
         {
-            if (GlobalProfiler.Anchors[i].Label != NULL &&
+			if (GlobalProfiler.Anchors[i].TSCElapsed > 0 && GlobalProfiler.Anchors[i].Label != NULL &&
                 strcmp(GlobalProfiler.Anchors[i].Label, "Resource_Deserialize_SIMDJSON") == 0)
             {
                 deserialization_elapsed = GlobalProfiler.Anchors[i].TSCElapsed;
@@ -211,6 +214,7 @@ main(int arg_count, char** args)
         printf("Deserialization Time: %0.4fms (%llu)\n", milliseconds, deserialization_elapsed);
         printf("Total Bytes Processed: %llu \n", total_bytes_processed);
         
+		// TODO(agw): this doesn't really mean much...
         printf("\nTime per bundle: %0.4fms (CPU freq %llu)\n", milliseconds / count, CPUFreq);
         
         f64 gigabytes = (f64)total_bytes_processed / Gigabytes(1);

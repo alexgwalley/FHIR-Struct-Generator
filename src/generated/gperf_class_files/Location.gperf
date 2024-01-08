@@ -1,0 +1,44 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Location_MemberLookup
+%enum
+%define word-array-name word_array_Location
+%define class-name Location_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier_count, 0x78, 12, -1
+identifier, 0x80, 13, -1
+status, 0x88, 14, -1
+operationalStatus, 0x98, 15, -1
+name, 0xa0, 16, -1
+alias_count, 0xb0, 17, -1
+alias, 0xb8, 18, -1
+description, 0xc0, 19, -1
+mode, 0xd0, 20, -1
+type_count, 0xe0, 21, -1
+type, 0xe8, 22, -1
+telecom_count, 0xf0, 23, -1
+telecom, 0xf8, 24, -1
+address, 0x100, 25, -1
+physicalType, 0x108, 26, -1
+position, 0x110, 27, -1
+managingOrganization, 0x118, 28, -1
+partOf, 0x120, 29, -1
+hoursOfOperation_count, 0x128, 30, -1
+hoursOfOperation, 0x130, 31, -1
+availabilityExceptions, 0x138, 32, -1
+endpoint_count, 0x148, 33, -1
+endpoint, 0x150, 34, -1

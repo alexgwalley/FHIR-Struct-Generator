@@ -78,7 +78,7 @@ CalculateCStringLength(char *cstr)
 
 //- rjf: Basic Constructors
 
-root_function String8
+inline root_function String8
 Str8(U8 *str, U64 size)
 {
 	String8 string;

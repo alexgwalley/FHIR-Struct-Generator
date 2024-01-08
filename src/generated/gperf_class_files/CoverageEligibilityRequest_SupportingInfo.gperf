@@ -1,0 +1,18 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name CoverageEligibilityRequest_SupportingInfo_MemberLookup
+%enum
+%define word-array-name word_array_CoverageEligibilityRequest_SupportingInfo
+%define class-name CoverageEligibilityRequest_SupportingInfo_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+sequence, 0x38, 6, -1
+information, 0x40, 7, -1
+appliesToAll, 0x48, 8, -1

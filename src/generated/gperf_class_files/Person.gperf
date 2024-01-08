@@ -1,0 +1,36 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Person_MemberLookup
+%enum
+%define word-array-name word_array_Person
+%define class-name Person_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier_count, 0x78, 12, -1
+identifier, 0x80, 13, -1
+name_count, 0x88, 14, -1
+name, 0x90, 15, -1
+telecom_count, 0x98, 16, -1
+telecom, 0xa0, 17, -1
+gender, 0xa8, 18, -1
+birthDate, 0xb8, 19, -1
+address_count, 0xc8, 20, -1
+address, 0xd0, 21, -1
+photo, 0xd8, 22, -1
+managingOrganization, 0xe0, 23, -1
+active, 0xe8, 24, -1
+link_count, 0xf0, 25, -1
+link, 0xf8, 26, -1

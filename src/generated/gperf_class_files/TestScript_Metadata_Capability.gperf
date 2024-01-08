@@ -1,0 +1,24 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name TestScript_Metadata_Capability_MemberLookup
+%enum
+%define word-array-name word_array_TestScript_Metadata_Capability
+%define class-name TestScript_Metadata_Capability_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+required, 0x38, 6, -1
+validated, 0x3c, 7, -1
+description, 0x40, 8, -1
+origin_count, 0x50, 9, -1
+origin, 0x58, 10, -1
+destination, 0x60, 11, -1
+link_count, 0x68, 12, -1
+link, 0x70, 13, -1
+capabilities, 0x78, 14, -1

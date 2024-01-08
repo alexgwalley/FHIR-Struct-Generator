@@ -1,0 +1,25 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name StructureMap_Group_Rule_Target_MemberLookup
+%enum
+%define word-array-name word_array_StructureMap_Group_Rule_Target
+%define class-name StructureMap_Group_Rule_Target_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+context, 0x38, 6, -1
+contextType, 0x48, 7, -1
+element, 0x58, 8, -1
+variable, 0x68, 9, -1
+listMode_count, 0x78, 10, -1
+listMode, 0x80, 11, -1
+listRuleId, 0x88, 12, -1
+transform, 0x98, 13, -1
+parameter_count, 0xa8, 14, -1
+parameter, 0xb0, 15, -1

@@ -1,0 +1,25 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name SubstanceNucleicAcid_Subunit_MemberLookup
+%enum
+%define word-array-name word_array_SubstanceNucleicAcid_Subunit
+%define class-name SubstanceNucleicAcid_Subunit_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+subunit, 0x38, 6, -1
+sequence, 0x40, 7, -1
+length, 0x50, 8, -1
+sequenceAttachment, 0x58, 9, -1
+fivePrime, 0x60, 10, -1
+threePrime, 0x68, 11, -1
+linkage_count, 0x70, 12, -1
+linkage, 0x78, 13, -1
+sugar_count, 0x80, 14, -1
+sugar, 0x88, 15, -1

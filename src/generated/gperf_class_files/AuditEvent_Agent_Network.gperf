@@ -1,0 +1,17 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name AuditEvent_Agent_Network_MemberLookup
+%enum
+%define word-array-name word_array_AuditEvent_Agent_Network
+%define class-name AuditEvent_Agent_Network_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+address, 0x38, 6, -1
+type, 0x48, 7, -1

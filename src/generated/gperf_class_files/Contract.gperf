@@ -1,0 +1,70 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Contract_MemberLookup
+%enum
+%define word-array-name word_array_Contract
+%define class-name Contract_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+meta, 0x18, 2, -1
+implicitRules, 0x20, 3, -1
+language, 0x30, 4, -1
+text, 0x40, 5, -1
+contained_count, 0x48, 6, -1
+contained, 0x50, 7, -1
+extension_count, 0x58, 8, -1
+extension, 0x60, 9, -1
+modifierExtension_count, 0x68, 10, -1
+modifierExtension, 0x70, 11, -1
+identifier_count, 0x78, 12, -1
+identifier, 0x80, 13, -1
+url, 0x88, 14, -1
+version, 0x98, 15, -1
+status, 0xa8, 16, -1
+legalState, 0xb8, 17, -1
+instantiatesCanonical, 0xc0, 18, -1
+instantiatesUri, 0xc8, 19, -1
+contentDerivative, 0xd8, 20, -1
+issued, 0xe0, 21, -1
+applies, 0xf0, 22, -1
+expirationType, 0xf8, 23, -1
+subject_count, 0x100, 24, -1
+subject, 0x108, 25, -1
+authority_count, 0x110, 26, -1
+authority, 0x118, 27, -1
+domain_count, 0x120, 28, -1
+domain, 0x128, 29, -1
+site_count, 0x130, 30, -1
+site, 0x138, 31, -1
+name, 0x140, 32, -1
+title, 0x150, 33, -1
+subtitle, 0x160, 34, -1
+alias_count, 0x170, 35, -1
+alias, 0x178, 36, -1
+author, 0x180, 37, -1
+scope, 0x188, 38, -1
+topicCodeableConcept, 0x198, 40, 0
+topicReference, 0x198, 40, 1
+type, 0x1a0, 41, -1
+subType_count, 0x1a8, 42, -1
+subType, 0x1b0, 43, -1
+contentDefinition, 0x1b8, 44, -1
+term_count, 0x1c0, 45, -1
+term, 0x1c8, 46, -1
+supportingInfo_count, 0x1d0, 47, -1
+supportingInfo, 0x1d8, 48, -1
+relevantHistory_count, 0x1e0, 49, -1
+relevantHistory, 0x1e8, 50, -1
+signer_count, 0x1f0, 51, -1
+signer, 0x1f8, 52, -1
+friendly_count, 0x200, 53, -1
+friendly, 0x208, 54, -1
+legal_count, 0x210, 55, -1
+legal, 0x218, 56, -1
+rule_count, 0x220, 57, -1
+rule, 0x228, 58, -1
+legallyBindingAttachment, 0x238, 60, 0
+legallyBindingReference, 0x238, 60, 1

@@ -1,0 +1,26 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name InsurancePlan_Plan_MemberLookup
+%enum
+%define word-array-name word_array_InsurancePlan_Plan
+%define class-name InsurancePlan_Plan_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+identifier_count, 0x38, 6, -1
+identifier, 0x40, 7, -1
+type, 0x48, 8, -1
+coverageArea_count, 0x50, 9, -1
+coverageArea, 0x58, 10, -1
+network_count, 0x60, 11, -1
+network, 0x68, 12, -1
+generalCost_count, 0x70, 13, -1
+generalCost, 0x78, 14, -1
+specificCost_count, 0x80, 15, -1
+specificCost, 0x88, 16, -1

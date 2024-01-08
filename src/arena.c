@@ -1,6 +1,8 @@
 #include "arena.h"
 
-#if WINDOWS
+U64 _page_size = 0;
+#if defined(_MSC_VER) 
+
 void *
 OS_Reserve(U64 size)
 {
@@ -35,9 +37,13 @@ OS_Decommit(void *ptr, U64 size)
 U64
 OS_PageSize(void)
 {
-    SYSTEM_INFO info;
-    GetSystemInfo(&info);
-    return info.dwPageSize;
+	if (_page_size == 0)
+	{
+		SYSTEM_INFO info;
+		GetSystemInfo(&info);
+		_page_size = info.dwPageSize;
+	}
+	return _page_size;
 }
 #else
 #include <sys/mman.h>
@@ -85,7 +91,11 @@ OS_Decommit(void *ptr, U64 size)
 U64
 OS_PageSize(void)
 {
-    return getpagesize();
+	if (_page_size == 0)
+	{
+		_page_size = getpagesize();
+	}
+	return _pagw_size;
 }
 #endif
 

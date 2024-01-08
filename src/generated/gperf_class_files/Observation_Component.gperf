@@ -1,0 +1,32 @@
+%language=C++
+%compare-strncmp
+%readonly-tables
+%define lookup-function-name Observation_Component_MemberLookup
+%enum
+%define word-array-name word_array_Observation_Component
+%define class-name Observation_Component_Gperf
+struct fhir_deserialize::MemberNameAndOffset;
+%%
+resourceType, 0x0, 0, -1
+id, 0x8, 1, -1
+extension_count, 0x18, 2, -1
+extension, 0x20, 3, -1
+modifierExtension_count, 0x28, 4, -1
+modifierExtension, 0x30, 5, -1
+code, 0x38, 6, -1
+valueQuantity, 0x48, 8, 0
+valueCodeableConcept, 0x48, 8, 1
+valueString, 0x48, 8, 2
+valueBoolean, 0x48, 8, 3
+valueInteger, 0x48, 8, 4
+valueRange, 0x48, 8, 5
+valueRatio, 0x48, 8, 6
+valueSampledData, 0x48, 8, 7
+valueTime, 0x48, 8, 8
+valueDateTime, 0x48, 8, 9
+valuePeriod, 0x48, 8, 10
+dataAbsentReason, 0x58, 9, -1
+interpretation_count, 0x60, 10, -1
+interpretation, 0x68, 11, -1
+referenceRange_count, 0x70, 12, -1
+referenceRange, 0x78, 13, -1

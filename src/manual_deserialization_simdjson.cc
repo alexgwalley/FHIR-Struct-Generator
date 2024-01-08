@@ -4,7 +4,7 @@
 
 #include "manual_deserialization.h"
 #include "hash_table.cc"
-#include "gperf_hash_tables/gperf-inc.cc"
+#include "generated/gperf-inc.cc"
 #include "resources-gperf.cc"
 
 using namespace fhir_deserialize;
@@ -276,18 +276,15 @@ static Log global_log;
 void
 AddError(Log *log, LogType type, char* format, ...)
 {
-	Temp scratch = ScratchBegin(0, 0);
 	va_list args = 0;
 	va_start(args, format);
-	String8 log_message = PushStr8FV(scratch.arena, format, args);
+	String8 log_message = PushStr8FV(log->arena, format, args);
 	va_end(args);
     
-	LogNode *node = PushStruct(scratch.arena, LogNode);
+	LogNode *node = PushStruct(log->arena, LogNode);
 	node->type = type;
 	node->log_message = log_message;
 	QueuePush(log->logs.first, log->logs.last, node);
-    
-	ScratchEnd(scratch);
 }
 
 void
@@ -457,7 +454,11 @@ Deserialize_Array(Arena *arena,
 				std::string_view str_view;
 				auto res = value.get(str_view);
 				Assert(res == simdjson::error_code::SUCCESS);
-				String8 str = PushStr8Copy(arena, Str8((U8*)str_view.data(), str_view.size()));
+				String8 str = {};
+				str.size = str_view.size();
+				str.str = (U8*)ArenaPushNoZero(arena, str_view.size());
+				MemoryCopy(str.str, str_view.data(), str.size);
+
 				String8 *str_ptr = PushStruct(arena, String8);
 				*str_ptr = str;
                 
@@ -501,9 +502,12 @@ Deserialize_Array(Arena *arena,
 																	&res_type,
 																	&size);
 				// TODO(agw): we don't want to have to do this copy
+				size_t *resource_ptr = (size_t*)ArenaPush(arena, sizeof(size_t));
+				*resource_ptr = (size_t)resource;
+
 				ArrayValue value;
-				value.data = resource;
-				value.size = size;
+				value.data = (void*)resource_ptr;
+				value.size = sizeof(size_t);
 				ValueListPush(temp.arena, &list, value);
 			} break;
 			case simdjson::ondemand::json_type::array: // copy into dest
@@ -562,14 +566,18 @@ Resource_Deserialize_Impl_SIMDJSON(Arena *arena,
 		index++;
         
 		std::string_view key_view = field.unescaped_key();
-		String8 key = Str8((U8*)key_view.data(), key_view.size());
+		String8 key = {};
+		key.str = (U8*)key_view.data();
+		key.size = key_view.size();
         
 		if (index == 0)
 		{
 			if (!type_found)
 			{
 				std::string_view resource_type_value = field.value().get_string();
-				String8 res_type_str = Str8((U8*)resource_type_value.data(), resource_type_value.size());
+				String8 res_type_str = {};
+				res_type_str.str = (U8*)resource_type_value.data();
+				res_type_str.size = resource_type_value.size();
 				resource_type = ResourceTypeFromString8(res_type_str);
                 
 				out = PushResource(arena, resource_type);
@@ -606,7 +614,11 @@ Resource_Deserialize_Impl_SIMDJSON(Arena *arena,
 				std::string_view str_view;
 				auto res = value.get(str_view);
 				Assert(res == simdjson::error_code::SUCCESS);
-				String8 str = PushStr8Copy(arena, Str8((U8*)str_view.data(), str_view.size()));
+
+				String8 str = {};
+				str.size = str_view.size();
+				str.str = (U8*)ArenaPushNoZero(arena, str.size);
+				MemoryCopy(str.str, str_view.data(), str.size);
 				memcpy(dest, &str, sizeof(str));
 			} break;
 			case simdjson::ondemand::json_type::number: // copy into dest
