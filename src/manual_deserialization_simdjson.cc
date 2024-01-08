@@ -418,7 +418,7 @@ struct ValueList
 void
 ValueListPush(Arena *arena, ValueList *list, ArrayValue array_value)
 {
-	ValueNode *node = PushStruct(arena, ValueNode);
+	ValueNode *node = PushStructNoZero(arena, ValueNode);
 	node->v = array_value;
 	QueuePush(list->first, list->last, node);
 	list->node_count += 1;

@@ -224,11 +224,13 @@ main(int arg_count, char** args)
         printf("Seconds: %0.4fs \n", seconds);
         printf("Deserialization GB/s: %0.4f(GB/s) \n", gigabytes / seconds);
         
-        char buff[4096];
-        sprintf(buff, "Deserialization GB/s: %0.4f(GB/s) \n", gigabytes / seconds);
+        String8 test_str = PushStr8F(arena,
+                                     "Benchmark Name: %S, Deserialization GB/s: %0.4f(GB/s) \n",
+                                     run_options.benchmark_name,
+                                     gigabytes / seconds);
         
         FILE *f = fopen("tests.txt", "a");
-        fwrite(buff, strlen(buff), 1, f);
+        fwrite(test_str.str, test_str.size, 1, f);
         fclose(f);
     }
     
