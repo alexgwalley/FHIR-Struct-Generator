@@ -7,14 +7,14 @@
 %define class-name RelatedArtifact_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-type, 0x28, 4, -1
-label, 0x38, 5, -1
-display, 0x48, 6, -1
-citation, 0x58, 7, -1
-url, 0x68, 8, -1
-document, 0x78, 9, -1
-resource, 0x80, 10, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+type, 0x28, 4, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+label, 0x38, 5, -1, {(U8*)"label", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+display, 0x48, 6, -1, {(U8*)"display", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+citation, 0x58, 7, -1, {(U8*)"citation", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+url, 0x68, 8, -1, {(U8*)"url", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+document, 0x78, 9, -1, {(U8*)"document", 8}, fhir_deserialize::ResourceType::Attachment, 0, fhir_deserialize::ResourceType::Unknown
+resource, 0x80, 10, -1, {(U8*)"resource", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown

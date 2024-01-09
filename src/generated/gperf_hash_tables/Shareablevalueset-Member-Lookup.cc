@@ -33,7 +33,7 @@ Shareablevalueset_Gperf::hash (register const char *str, register unsigned int l
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Shareablevalueset[] =
   {
 #line 10 "./src/generated/gperf_class_files/Shareablevalueset.gperf"
-    {"resourceType", 0x0, 0, -1}
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

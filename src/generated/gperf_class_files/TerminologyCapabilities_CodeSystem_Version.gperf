@@ -7,18 +7,18 @@
 %define class-name TerminologyCapabilities_CodeSystem_Version_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-code, 0x38, 6, -1
-isDefault, 0x48, 7, -1
-compositional, 0x4c, 8, -1
-language_count, 0x50, 9, -1
-language, 0x58, 10, -1
-filter_count, 0x60, 11, -1
-filter, 0x68, 12, -1
-property_count, 0x70, 13, -1
-property, 0x78, 14, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+code, 0x38, 6, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+isDefault, 0x48, 7, -1, {(U8*)"isDefault", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+compositional, 0x4c, 8, -1, {(U8*)"compositional", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+language_count, 0x50, 9, -1, {(U8*)"language_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+language, 0x58, 10, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+filter_count, 0x60, 11, -1, {(U8*)"filter_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+filter, 0x68, 12, -1, {(U8*)"filter", 6}, fhir_deserialize::ResourceType::TerminologyCapabilities_CodeSystem_Version_Filter, 0, fhir_deserialize::ResourceType::Unknown
+property_count, 0x70, 13, -1, {(U8*)"property_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+property, 0x78, 14, -1, {(U8*)"property", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown

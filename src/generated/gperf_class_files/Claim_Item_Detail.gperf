@@ -7,25 +7,25 @@
 %define class-name Claim_Item_Detail_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-sequence, 0x38, 6, -1
-revenue, 0x40, 7, -1
-category, 0x48, 8, -1
-productOrService, 0x50, 9, -1
-modifier_count, 0x58, 10, -1
-modifier, 0x60, 11, -1
-programCode_count, 0x68, 12, -1
-programCode, 0x70, 13, -1
-quantity, 0x78, 14, -1
-unitPrice, 0x80, 15, -1
-factor, 0x88, 16, -1
-net, 0x90, 17, -1
-udi_count, 0x98, 18, -1
-udi, 0xa0, 19, -1
-subDetail_count, 0xa8, 20, -1
-subDetail, 0xb0, 21, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+sequence, 0x38, 6, -1, {(U8*)"sequence", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+revenue, 0x40, 7, -1, {(U8*)"revenue", 7}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+category, 0x48, 8, -1, {(U8*)"category", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+productOrService, 0x50, 9, -1, {(U8*)"productOrService", 16}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+modifier_count, 0x58, 10, -1, {(U8*)"modifier_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifier, 0x60, 11, -1, {(U8*)"modifier", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+programCode_count, 0x68, 12, -1, {(U8*)"programCode_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+programCode, 0x70, 13, -1, {(U8*)"programCode", 11}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+quantity, 0x78, 14, -1, {(U8*)"quantity", 8}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown
+unitPrice, 0x80, 15, -1, {(U8*)"unitPrice", 9}, fhir_deserialize::ResourceType::Money, 0, fhir_deserialize::ResourceType::Unknown
+factor, 0x88, 16, -1, {(U8*)"factor", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+net, 0x90, 17, -1, {(U8*)"net", 3}, fhir_deserialize::ResourceType::Money, 0, fhir_deserialize::ResourceType::Unknown
+udi_count, 0x98, 18, -1, {(U8*)"udi_count", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+udi, 0xa0, 19, -1, {(U8*)"udi", 3}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+subDetail_count, 0xa8, 20, -1, {(U8*)"subDetail_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+subDetail, 0xb0, 21, -1, {(U8*)"subDetail", 9}, fhir_deserialize::ResourceType::Claim_Item_Detail_SubDetail, 0, fhir_deserialize::ResourceType::Unknown

@@ -99,57 +99,57 @@ MessageHeader_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_MessageHeader[] =
   {
 #line 11 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"reason", 0xc8, 21, -1},
+    {"reason", 0xc8, 21, -1, {(U8*)"reason", 6}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"focus", 0xe0, 24, -1},
+    {"focus", 0xe0, 24, -1, {(U8*)"focus", 5}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"destination", 0x98, 15, -1},
+    {"destination", 0x98, 15, -1, {(U8*)"destination", 11}, fhir_deserialize::ResourceType::MessageHeader_Destination, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"sender", 0xa0, 16, -1},
+    {"sender", 0xa0, 16, -1, {(U8*)"sender", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"focus_count", 0xd8, 23, -1},
+    {"focus_count", 0xd8, 23, -1, {(U8*)"focus_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"destination_count", 0x90, 14, -1},
+    {"destination_count", 0x90, 14, -1, {(U8*)"destination_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"response", 0xd0, 22, -1},
+    {"response", 0xd0, 22, -1, {(U8*)"response", 8}, fhir_deserialize::ResourceType::MessageHeader_Response, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"definition", 0xe8, 25, -1},
+    {"definition", 0xe8, 25, -1, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"responsible", 0xc0, 20, -1},
+    {"responsible", 0xc0, 20, -1, {(U8*)"responsible", 11}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"enterer", 0xa8, 17, -1},
+    {"enterer", 0xa8, 17, -1, {(U8*)"enterer", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"eventUri", 0x80, 13, 1},
+    {"eventUri", 0x80, 13, 1, {(U8*)"event", 5}, fhir_deserialize::ResourceType::Coding, 9, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"eventCoding", 0x80, 13, 0},
+    {"eventCoding", 0x80, 13, 0, {(U8*)"event", 5}, fhir_deserialize::ResourceType::Coding, 20, fhir_deserialize::ResourceType::Coding},
 #line 21 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"source", 0xb8, 19, -1},
+    {"source", 0xb8, 19, -1, {(U8*)"source", 6}, fhir_deserialize::ResourceType::MessageHeader_Source, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/MessageHeader.gperf"
-    {"author", 0xb0, 18, -1}
+    {"author", 0xb0, 18, -1, {(U8*)"author", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

@@ -88,43 +88,43 @@ Composition_Section_Gperf::hash (register const char *str, register unsigned int
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Composition_Section[] =
   {
 #line 22 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"mode", 0x70, 12, -1},
+    {"mode", 0x70, 12, -1, {(U8*)"mode", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"focus", 0x60, 10, -1},
+    {"focus", 0x60, 10, -1, {(U8*)"focus", 5}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"author", 0x58, 9, -1},
+    {"author", 0x58, 9, -1, {(U8*)"author", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"section", 0xa8, 18, -1},
+    {"section", 0xa8, 18, -1, {(U8*)"section", 7}, fhir_deserialize::ResourceType::Composition_Section, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"entry", 0x90, 15, -1},
+    {"entry", 0x90, 15, -1, {(U8*)"entry", 5}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"emptyReason", 0x98, 16, -1},
+    {"emptyReason", 0x98, 16, -1, {(U8*)"emptyReason", 11}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"author_count", 0x50, 8, -1},
+    {"author_count", 0x50, 8, -1, {(U8*)"author_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"section_count", 0xa0, 17, -1},
+    {"section_count", 0xa0, 17, -1, {(U8*)"section_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"text", 0x68, 11, -1},
+    {"text", 0x68, 11, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"entry_count", 0x88, 14, -1},
+    {"entry_count", 0x88, 14, -1, {(U8*)"entry_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"orderedBy", 0x80, 13, -1},
+    {"orderedBy", 0x80, 13, -1, {(U8*)"orderedBy", 9}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"title", 0x38, 6, -1},
+    {"title", 0x38, 6, -1, {(U8*)"title", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"code", 0x48, 7, -1},
+    {"code", 0x48, 7, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 11 "./src/generated/gperf_class_files/Composition_Section.gperf"
-    {"id", 0x8, 1, -1}
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

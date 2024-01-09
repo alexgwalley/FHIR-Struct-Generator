@@ -112,67 +112,67 @@ SubstanceSourceMaterial_Gperf::hash (register const char *str, register unsigned
 static const struct fhir_deserialize::MemberNameAndOffset word_array_SubstanceSourceMaterial[] =
   {
 #line 11 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"organism", 0x100, 28, -1},
+    {"organism", 0x100, 28, -1, {(U8*)"organism", 8}, fhir_deserialize::ResourceType::SubstanceSourceMaterial_Organism, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"organismId", 0x90, 15, -1},
+    {"organismId", 0x90, 15, -1, {(U8*)"organismId", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"organismName", 0x98, 16, -1},
+    {"organismName", 0x98, 16, -1, {(U8*)"organismName", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"developmentStage", 0xe8, 25, -1},
+    {"developmentStage", 0xe8, 25, -1, {(U8*)"developmentStage", 16}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"parentSubstanceId", 0xb0, 18, -1},
+    {"parentSubstanceId", 0xb0, 18, -1, {(U8*)"parentSubstanceId", 17}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"parentSubstanceName", 0xc0, 20, -1},
+    {"parentSubstanceName", 0xc0, 20, -1, {(U8*)"parentSubstanceName", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"partDescription", 0x110, 30, -1},
+    {"partDescription", 0x110, 30, -1, {(U8*)"partDescription", 15}, fhir_deserialize::ResourceType::SubstanceSourceMaterial_PartDescription, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"parentSubstanceId_count", 0xa8, 17, -1},
+    {"parentSubstanceId_count", 0xa8, 17, -1, {(U8*)"parentSubstanceId_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"parentSubstanceName_count", 0xb8, 19, -1},
+    {"parentSubstanceName_count", 0xb8, 19, -1, {(U8*)"parentSubstanceName_count", 25}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"partDescription_count", 0x108, 29, -1},
+    {"partDescription_count", 0x108, 29, -1, {(U8*)"partDescription_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"sourceMaterialType", 0x80, 13, -1},
+    {"sourceMaterialType", 0x80, 13, -1, {(U8*)"sourceMaterialType", 18}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"sourceMaterialState", 0x88, 14, -1},
+    {"sourceMaterialState", 0x88, 14, -1, {(U8*)"sourceMaterialState", 19}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"countryOfOrigin", 0xd0, 22, -1},
+    {"countryOfOrigin", 0xd0, 22, -1, {(U8*)"countryOfOrigin", 15}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"fractionDescription", 0xf8, 27, -1},
+    {"fractionDescription", 0xf8, 27, -1, {(U8*)"fractionDescription", 19}, fhir_deserialize::ResourceType::SubstanceSourceMaterial_FractionDescription, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"geographicalLocation", 0xe0, 24, -1},
+    {"geographicalLocation", 0xe0, 24, -1, {(U8*)"geographicalLocation", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"countryOfOrigin_count", 0xc8, 21, -1},
+    {"countryOfOrigin_count", 0xc8, 21, -1, {(U8*)"countryOfOrigin_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"sourceMaterialClass", 0x78, 12, -1},
+    {"sourceMaterialClass", 0x78, 12, -1, {(U8*)"sourceMaterialClass", 19}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"fractionDescription_count", 0xf0, 26, -1},
+    {"fractionDescription_count", 0xf0, 26, -1, {(U8*)"fractionDescription_count", 25}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/SubstanceSourceMaterial.gperf"
-    {"geographicalLocation_count", 0xd8, 23, -1}
+    {"geographicalLocation_count", 0xd8, 23, -1, {(U8*)"geographicalLocation_count", 26}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

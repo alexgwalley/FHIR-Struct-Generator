@@ -7,15 +7,15 @@
 %define class-name SubstanceAmount_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-amountQuantity, 0x40, 7, 0
-amountRange, 0x40, 7, 1
-amountString, 0x40, 7, 2
-amountType, 0x50, 8, -1
-amountText, 0x58, 9, -1
-referenceRange, 0x68, 10, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+amountQuantity, 0x40, 7, 0, {(U8*)"amount", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Quantity
+amountRange, 0x40, 7, 1, {(U8*)"amount", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Range
+amountString, 0x40, 7, 2, {(U8*)"amount", 6}, fhir_deserialize::ResourceType::Quantity, 7, fhir_deserialize::ResourceType::Unknown
+amountType, 0x50, 8, -1, {(U8*)"amountType", 10}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+amountText, 0x58, 9, -1, {(U8*)"amountText", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+referenceRange, 0x68, 10, -1, {(U8*)"referenceRange", 14}, fhir_deserialize::ResourceType::SubstanceAmount_ReferenceRange, 0, fhir_deserialize::ResourceType::Unknown

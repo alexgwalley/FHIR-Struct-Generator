@@ -7,4 +7,4 @@
 %define class-name Triglyceride_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown

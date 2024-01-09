@@ -33,25 +33,25 @@ ImagingStudy_Series_Instance_Gperf::hash (register const char *str, register uns
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ImagingStudy_Series_Instance[] =
   {
 #line 11 "./src/generated/gperf_class_files/ImagingStudy_Series_Instance.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ImagingStudy_Series_Instance.gperf"
-    {"uid", 0x38, 6, -1},
+    {"uid", 0x38, 6, -1, {(U8*)"uid", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ImagingStudy_Series_Instance.gperf"
-    {"title", 0x58, 9, -1},
+    {"title", 0x58, 9, -1, {(U8*)"title", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ImagingStudy_Series_Instance.gperf"
-    {"number", 0x50, 8, -1},
+    {"number", 0x50, 8, -1, {(U8*)"number", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ImagingStudy_Series_Instance.gperf"
-    {"sopClass", 0x48, 7, -1},
+    {"sopClass", 0x48, 7, -1, {(U8*)"sopClass", 8}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ImagingStudy_Series_Instance.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ImagingStudy_Series_Instance.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ImagingStudy_Series_Instance.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ImagingStudy_Series_Instance.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ImagingStudy_Series_Instance.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

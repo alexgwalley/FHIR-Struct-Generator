@@ -88,33 +88,33 @@ ConceptMap_Group_Element_Target_Gperf::hash (register const char *str, register 
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ConceptMap_Group_Element_Target[] =
   {
 #line 11 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"product", 0x90, 13, -1},
+    {"product", 0x90, 13, -1, {(U8*)"product", 7}, fhir_deserialize::ResourceType::ConceptMap_Group_Element_Target_DependsOn, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"equivalence", 0x58, 8, -1},
+    {"equivalence", 0x58, 8, -1, {(U8*)"equivalence", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"display", 0x48, 7, -1},
+    {"display", 0x48, 7, -1, {(U8*)"display", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"product_count", 0x88, 12, -1},
+    {"product_count", 0x88, 12, -1, {(U8*)"product_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"dependsOn", 0x80, 11, -1},
+    {"dependsOn", 0x80, 11, -1, {(U8*)"dependsOn", 9}, fhir_deserialize::ResourceType::ConceptMap_Group_Element_Target_DependsOn, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"code", 0x38, 6, -1},
+    {"code", 0x38, 6, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"dependsOn_count", 0x78, 10, -1},
+    {"dependsOn_count", 0x78, 10, -1, {(U8*)"dependsOn_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"comment", 0x68, 9, -1},
+    {"comment", 0x68, 9, -1, {(U8*)"comment", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ConceptMap_Group_Element_Target.gperf"
-    {"resourceType", 0x0, 0, -1}
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

@@ -88,35 +88,35 @@ ExampleScenario_Instance_Gperf::hash (register const char *str, register unsigne
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ExampleScenario_Instance[] =
   {
 #line 11 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"name", 0x58, 8, -1},
+    {"name", 0x58, 8, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"version", 0x80, 11, -1},
+    {"version", 0x80, 11, -1, {(U8*)"version", 7}, fhir_deserialize::ResourceType::ExampleScenario_Instance_Version, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"description", 0x68, 9, -1},
+    {"description", 0x68, 9, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"version_count", 0x78, 10, -1},
+    {"version_count", 0x78, 10, -1, {(U8*)"version_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"resourceId", 0x38, 6, -1},
+    {"resourceId", 0x38, 6, -1, {(U8*)"resourceId", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"resourceType", 0x48, 7, -1},
+    {"resourceType", 0x48, 7, -1, {(U8*)"resourceType_", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"resourceType_", 0x48, 7, -1},
+    {"resourceType_", 0x48, 7, -1, {(U8*)"resourceType_", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"containedInstance", 0x90, 13, -1},
+    {"containedInstance", 0x90, 13, -1, {(U8*)"containedInstance", 17}, fhir_deserialize::ResourceType::ExampleScenario_Instance_ContainedInstance, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/ExampleScenario_Instance.gperf"
-    {"containedInstance_count", 0x88, 12, -1}
+    {"containedInstance_count", 0x88, 12, -1, {(U8*)"containedInstance_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

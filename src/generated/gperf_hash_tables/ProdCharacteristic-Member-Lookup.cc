@@ -88,45 +88,45 @@ ProdCharacteristic_Gperf::hash (register const char *str, register unsigned int 
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ProdCharacteristic[] =
   {
 #line 11 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"image", 0xa0, 18, -1},
+    {"image", 0xa0, 18, -1, {(U8*)"image", 5}, fhir_deserialize::ResourceType::Attachment, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"height", 0x38, 6, -1},
+    {"height", 0x38, 6, -1, {(U8*)"height", 6}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"imprint", 0x90, 16, -1},
+    {"imprint", 0x90, 16, -1, {(U8*)"imprint", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"shape", 0x68, 12, -1},
+    {"shape", 0x68, 12, -1, {(U8*)"shape", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"image_count", 0x98, 17, -1},
+    {"image_count", 0x98, 17, -1, {(U8*)"image_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"scoring", 0xa8, 19, -1},
+    {"scoring", 0xa8, 19, -1, {(U8*)"scoring", 7}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"imprint_count", 0x88, 15, -1},
+    {"imprint_count", 0x88, 15, -1, {(U8*)"imprint_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"externalDiameter", 0x60, 11, -1},
+    {"externalDiameter", 0x60, 11, -1, {(U8*)"externalDiameter", 16}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"nominalVolume", 0x58, 10, -1},
+    {"nominalVolume", 0x58, 10, -1, {(U8*)"nominalVolume", 13}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"width", 0x40, 7, -1},
+    {"width", 0x40, 7, -1, {(U8*)"width", 5}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"weight", 0x50, 9, -1},
+    {"weight", 0x50, 9, -1, {(U8*)"weight", 6}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"color", 0x80, 14, -1},
+    {"color", 0x80, 14, -1, {(U8*)"color", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"depth", 0x48, 8, -1},
+    {"depth", 0x48, 8, -1, {(U8*)"depth", 5}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/ProdCharacteristic.gperf"
-    {"color_count", 0x78, 13, -1}
+    {"color_count", 0x78, 13, -1, {(U8*)"color_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

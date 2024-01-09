@@ -104,57 +104,57 @@ TestReport_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_TestReport[] =
   {
 #line 34 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"test", 0x100, 24, -1},
+    {"test", 0x100, 24, -1, {(U8*)"test", 4}, fhir_deserialize::ResourceType::TestReport_Test, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"setup", 0xf0, 22, -1},
+    {"setup", 0xf0, 22, -1, {(U8*)"setup", 5}, fhir_deserialize::ResourceType::TestReport_Setup, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"tester", 0xc0, 18, -1},
+    {"tester", 0xc0, 18, -1, {(U8*)"tester", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 11 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"score", 0xb8, 17, -1},
+    {"score", 0xb8, 17, -1, {(U8*)"score", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"issued", 0xd0, 19, -1},
+    {"issued", 0xd0, 19, -1, {(U8*)"issued", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"identifier", 0x78, 12, -1},
+    {"identifier", 0x78, 12, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"participant", 0xe8, 21, -1},
+    {"participant", 0xe8, 21, -1, {(U8*)"participant", 11}, fhir_deserialize::ResourceType::TestReport_Participant, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"result", 0xa8, 16, -1},
+    {"result", 0xa8, 16, -1, {(U8*)"result", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"participant_count", 0xe0, 20, -1},
+    {"participant_count", 0xe0, 20, -1, {(U8*)"participant_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"name", 0x80, 13, -1},
+    {"name", 0x80, 13, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"test_count", 0xf8, 23, -1},
+    {"test_count", 0xf8, 23, -1, {(U8*)"test_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"testScript", 0xa0, 15, -1},
+    {"testScript", 0xa0, 15, -1, {(U8*)"testScript", 10}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"status", 0x90, 14, -1},
+    {"status", 0x90, 14, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"teardown", 0x108, 25, -1},
+    {"teardown", 0x108, 25, -1, {(U8*)"teardown", 8}, fhir_deserialize::ResourceType::TestReport_Teardown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/TestReport.gperf"
-    {"contained_count", 0x48, 6, -1}
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

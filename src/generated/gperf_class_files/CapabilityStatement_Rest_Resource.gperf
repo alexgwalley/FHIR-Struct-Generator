@@ -7,33 +7,33 @@
 %define class-name CapabilityStatement_Rest_Resource_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-type, 0x38, 6, -1
-profile, 0x48, 7, -1
-supportedProfile_count, 0x58, 8, -1
-supportedProfile, 0x60, 9, -1
-documentation, 0x68, 10, -1
-interaction_count, 0x78, 11, -1
-interaction, 0x80, 12, -1
-versioning, 0x88, 13, -1
-readHistory, 0x98, 14, -1
-updateCreate, 0x9c, 15, -1
-conditionalCreate, 0xa0, 16, -1
-conditionalRead, 0xa8, 17, -1
-conditionalUpdate, 0xb8, 18, -1
-conditionalDelete, 0xc0, 19, -1
-referencePolicy_count, 0xd0, 20, -1
-referencePolicy, 0xd8, 21, -1
-searchInclude_count, 0xe0, 22, -1
-searchInclude, 0xe8, 23, -1
-searchRevInclude_count, 0xf0, 24, -1
-searchRevInclude, 0xf8, 25, -1
-searchParam_count, 0x100, 26, -1
-searchParam, 0x108, 27, -1
-operation_count, 0x110, 28, -1
-operation, 0x118, 29, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+type, 0x38, 6, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+profile, 0x48, 7, -1, {(U8*)"profile", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+supportedProfile_count, 0x58, 8, -1, {(U8*)"supportedProfile_count", 22}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+supportedProfile, 0x60, 9, -1, {(U8*)"supportedProfile", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+documentation, 0x68, 10, -1, {(U8*)"documentation", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+interaction_count, 0x78, 11, -1, {(U8*)"interaction_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+interaction, 0x80, 12, -1, {(U8*)"interaction", 11}, fhir_deserialize::ResourceType::CapabilityStatement_Rest_Resource_Interaction, 0, fhir_deserialize::ResourceType::Unknown
+versioning, 0x88, 13, -1, {(U8*)"versioning", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+readHistory, 0x98, 14, -1, {(U8*)"readHistory", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+updateCreate, 0x9c, 15, -1, {(U8*)"updateCreate", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+conditionalCreate, 0xa0, 16, -1, {(U8*)"conditionalCreate", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+conditionalRead, 0xa8, 17, -1, {(U8*)"conditionalRead", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+conditionalUpdate, 0xb8, 18, -1, {(U8*)"conditionalUpdate", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+conditionalDelete, 0xc0, 19, -1, {(U8*)"conditionalDelete", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+referencePolicy_count, 0xd0, 20, -1, {(U8*)"referencePolicy_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+referencePolicy, 0xd8, 21, -1, {(U8*)"referencePolicy", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+searchInclude_count, 0xe0, 22, -1, {(U8*)"searchInclude_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+searchInclude, 0xe8, 23, -1, {(U8*)"searchInclude", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+searchRevInclude_count, 0xf0, 24, -1, {(U8*)"searchRevInclude_count", 22}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+searchRevInclude, 0xf8, 25, -1, {(U8*)"searchRevInclude", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+searchParam_count, 0x100, 26, -1, {(U8*)"searchParam_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+searchParam, 0x108, 27, -1, {(U8*)"searchParam", 11}, fhir_deserialize::ResourceType::CapabilityStatement_Rest_Resource_SearchParam, 0, fhir_deserialize::ResourceType::Unknown
+operation_count, 0x110, 28, -1, {(U8*)"operation_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+operation, 0x118, 29, -1, {(U8*)"operation", 9}, fhir_deserialize::ResourceType::CapabilityStatement_Rest_Resource_Operation, 0, fhir_deserialize::ResourceType::Unknown

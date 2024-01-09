@@ -88,31 +88,31 @@ Meta_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Meta[] =
   {
 #line 11 "./src/generated/gperf_class_files/Meta.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Meta.gperf"
-    {"tag", 0x80, 12, -1},
+    {"tag", 0x80, 12, -1, {(U8*)"tag", 3}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Meta.gperf"
-    {"source", 0x48, 6, -1},
+    {"source", 0x48, 6, -1, {(U8*)"source", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Meta.gperf"
-    {"profile", 0x60, 8, -1},
+    {"profile", 0x60, 8, -1, {(U8*)"profile", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Meta.gperf"
-    {"security", 0x70, 10, -1},
+    {"security", 0x70, 10, -1, {(U8*)"security", 8}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Meta.gperf"
-    {"tag_count", 0x78, 11, -1},
+    {"tag_count", 0x78, 11, -1, {(U8*)"tag_count", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Meta.gperf"
-    {"lastUpdated", 0x38, 5, -1},
+    {"lastUpdated", 0x38, 5, -1, {(U8*)"lastUpdated", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Meta.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Meta.gperf"
-    {"profile_count", 0x58, 7, -1},
+    {"profile_count", 0x58, 7, -1, {(U8*)"profile_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Meta.gperf"
-    {"security_count", 0x68, 9, -1},
+    {"security_count", 0x68, 9, -1, {(U8*)"security_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Meta.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Meta.gperf"
-    {"versionId", 0x28, 4, -1},
+    {"versionId", 0x28, 4, -1, {(U8*)"versionId", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Meta.gperf"
-    {"extension_count", 0x18, 2, -1}
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

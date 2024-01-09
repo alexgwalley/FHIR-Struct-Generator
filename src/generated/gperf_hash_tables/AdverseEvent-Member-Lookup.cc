@@ -102,83 +102,83 @@ AdverseEvent_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_AdverseEvent[] =
   {
 #line 11 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"event", 0xa0, 16, -1},
+    {"event", 0xa0, 16, -1, {(U8*)"event", 5}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"recorder", 0x118, 28, -1},
+    {"recorder", 0x118, 28, -1, {(U8*)"recorder", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"date", 0xb8, 19, -1},
+    {"date", 0xb8, 19, -1, {(U8*)"date", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"identifier", 0x78, 12, -1},
+    {"identifier", 0x78, 12, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"contributor", 0x128, 30, -1},
+    {"contributor", 0x128, 30, -1, {(U8*)"contributor", 11}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"recordedDate", 0xd8, 21, -1},
+    {"recordedDate", 0xd8, 21, -1, {(U8*)"recordedDate", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"severity", 0x108, 26, -1},
+    {"severity", 0x108, 26, -1, {(U8*)"severity", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"study", 0x168, 38, -1},
+    {"study", 0x168, 38, -1, {(U8*)"study", 5}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"contributor_count", 0x120, 29, -1},
+    {"contributor_count", 0x120, 29, -1, {(U8*)"contributor_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"study_count", 0x160, 37, -1},
+    {"study_count", 0x160, 37, -1, {(U8*)"study_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 46 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"referenceDocument", 0x158, 36, -1},
+    {"referenceDocument", 0x158, 36, -1, {(U8*)"referenceDocument", 17}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"location", 0xf8, 24, -1},
+    {"location", 0xf8, 24, -1, {(U8*)"location", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"subject", 0xa8, 17, -1},
+    {"subject", 0xa8, 17, -1, {(U8*)"subject", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 45 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"referenceDocument_count", 0x150, 35, -1},
+    {"referenceDocument_count", 0x150, 35, -1, {(U8*)"referenceDocument_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"encounter", 0xb0, 18, -1},
+    {"encounter", 0xb0, 18, -1, {(U8*)"encounter", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"seriousness", 0x100, 25, -1},
+    {"seriousness", 0x100, 25, -1, {(U8*)"seriousness", 11}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"category", 0x98, 15, -1},
+    {"category", 0x98, 15, -1, {(U8*)"category", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"category_count", 0x90, 14, -1},
+    {"category_count", 0x90, 14, -1, {(U8*)"category_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"subjectMedicalHistory", 0x148, 34, -1},
+    {"subjectMedicalHistory", 0x148, 34, -1, {(U8*)"subjectMedicalHistory", 21}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"resultingCondition", 0xf0, 23, -1},
+    {"resultingCondition", 0xf0, 23, -1, {(U8*)"resultingCondition", 18}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"actuality", 0x80, 13, -1},
+    {"actuality", 0x80, 13, -1, {(U8*)"actuality", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 43 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"subjectMedicalHistory_count", 0x140, 33, -1},
+    {"subjectMedicalHistory_count", 0x140, 33, -1, {(U8*)"subjectMedicalHistory_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"resultingCondition_count", 0xe8, 22, -1},
+    {"resultingCondition_count", 0xe8, 22, -1, {(U8*)"resultingCondition_count", 24}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"suspectEntity", 0x138, 32, -1},
+    {"suspectEntity", 0x138, 32, -1, {(U8*)"suspectEntity", 13}, fhir_deserialize::ResourceType::AdverseEvent_SuspectEntity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"outcome", 0x110, 27, -1},
+    {"outcome", 0x110, 27, -1, {(U8*)"outcome", 7}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 41 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"suspectEntity_count", 0x130, 31, -1},
+    {"suspectEntity_count", 0x130, 31, -1, {(U8*)"suspectEntity_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/AdverseEvent.gperf"
-    {"detected", 0xc8, 20, -1}
+    {"detected", 0xc8, 20, -1, {(U8*)"detected", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

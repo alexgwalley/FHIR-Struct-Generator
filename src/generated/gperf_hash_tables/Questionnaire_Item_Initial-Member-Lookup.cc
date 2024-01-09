@@ -101,41 +101,41 @@ Questionnaire_Item_Initial_Gperf::hash (register const char *str, register unsig
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Questionnaire_Item_Initial[] =
   {
 #line 11 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"valueUri", 0x40, 7, 7},
+    {"valueUri", 0x40, 7, 7, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 9, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"valueDate", 0x40, 7, 3},
+    {"valueDate", 0x40, 7, 3, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 16, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"valueString", 0x40, 7, 6},
+    {"valueString", 0x40, 7, 6, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 7, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"valueDecimal", 0x40, 7, 1},
+    {"valueDecimal", 0x40, 7, 1, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 15, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"valueDateTime", 0x40, 7, 4},
+    {"valueDateTime", 0x40, 7, 4, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 17, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"valueAttachment", 0x40, 7, 8},
+    {"valueAttachment", 0x40, 7, 8, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Attachment},
 #line 25 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"valueCoding", 0x40, 7, 9},
+    {"valueCoding", 0x40, 7, 9, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Coding},
 #line 15 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"valueQuantity", 0x40, 7, 10},
+    {"valueQuantity", 0x40, 7, 10, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Quantity},
 #line 21 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"valueTime", 0x40, 7, 5},
+    {"valueTime", 0x40, 7, 5, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 18, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"valueReference", 0x40, 7, 11},
+    {"valueReference", 0x40, 7, 11, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Reference},
 #line 18 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"valueInteger", 0x40, 7, 2},
+    {"valueInteger", 0x40, 7, 2, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Integer},
 #line 16 "./src/generated/gperf_class_files/Questionnaire_Item_Initial.gperf"
-    {"valueBoolean", 0x40, 7, 0}
+    {"valueBoolean", 0x40, 7, 0, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 12, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

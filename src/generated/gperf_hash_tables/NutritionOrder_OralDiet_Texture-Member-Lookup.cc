@@ -88,21 +88,21 @@ NutritionOrder_OralDiet_Texture_Gperf::hash (register const char *str, register 
 static const struct fhir_deserialize::MemberNameAndOffset word_array_NutritionOrder_OralDiet_Texture[] =
   {
 #line 11 "./src/generated/gperf_class_files/NutritionOrder_OralDiet_Texture.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/NutritionOrder_OralDiet_Texture.gperf"
-    {"modifier", 0x38, 6, -1},
+    {"modifier", 0x38, 6, -1, {(U8*)"modifier", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/NutritionOrder_OralDiet_Texture.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/NutritionOrder_OralDiet_Texture.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/NutritionOrder_OralDiet_Texture.gperf"
-    {"foodType", 0x40, 7, -1},
+    {"foodType", 0x40, 7, -1, {(U8*)"foodType", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/NutritionOrder_OralDiet_Texture.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/NutritionOrder_OralDiet_Texture.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/NutritionOrder_OralDiet_Texture.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

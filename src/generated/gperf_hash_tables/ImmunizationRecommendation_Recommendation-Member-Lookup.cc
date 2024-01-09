@@ -88,57 +88,57 @@ ImmunizationRecommendation_Recommendation_Gperf::hash (register const char *str,
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ImmunizationRecommendation_Recommendation[] =
   {
 #line 11 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"description", 0x88, 16, -1},
+    {"description", 0x88, 16, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"dateCriterion", 0x80, 15, -1},
+    {"dateCriterion", 0x80, 15, -1, {(U8*)"dateCriterion", 13}, fhir_deserialize::ResourceType::ImmunizationRecommendation_Recommendation_DateCriterion, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"forecastReason", 0x70, 13, -1},
+    {"forecastReason", 0x70, 13, -1, {(U8*)"forecastReason", 14}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"series", 0x98, 17, -1},
+    {"series", 0x98, 17, -1, {(U8*)"series", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"vaccineCode", 0x40, 7, -1},
+    {"vaccineCode", 0x40, 7, -1, {(U8*)"vaccineCode", 11}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"targetDisease", 0x48, 8, -1},
+    {"targetDisease", 0x48, 8, -1, {(U8*)"targetDisease", 13}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"supportingImmunization", 0xe0, 23, -1},
+    {"supportingImmunization", 0xe0, 23, -1, {(U8*)"supportingImmunization", 22}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"forecastStatus", 0x60, 11, -1},
+    {"forecastStatus", 0x60, 11, -1, {(U8*)"forecastStatus", 14}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"vaccineCode_count", 0x38, 6, -1},
+    {"vaccineCode_count", 0x38, 6, -1, {(U8*)"vaccineCode_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"supportingPatientInformation", 0xf0, 25, -1},
+    {"supportingPatientInformation", 0xf0, 25, -1, {(U8*)"supportingPatientInformation", 28}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"dateCriterion_count", 0x78, 14, -1},
+    {"dateCriterion_count", 0x78, 14, -1, {(U8*)"dateCriterion_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"forecastReason_count", 0x68, 12, -1},
+    {"forecastReason_count", 0x68, 12, -1, {(U8*)"forecastReason_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"doseNumberPositiveInt", 0xb0, 19, 0},
+    {"doseNumberPositiveInt", 0xb0, 19, 0, {(U8*)"doseNumber", 10}, fhir_deserialize::ResourceType::Unknown, 13, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"seriesDosesPositiveInt", 0xc8, 21, 0},
+    {"seriesDosesPositiveInt", 0xc8, 21, 0, {(U8*)"seriesDoses", 11}, fhir_deserialize::ResourceType::Unknown, 13, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"contraindicatedVaccineCode", 0x58, 10, -1},
+    {"contraindicatedVaccineCode", 0x58, 10, -1, {(U8*)"contraindicatedVaccineCode", 26}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"doseNumberString", 0xb0, 19, 1},
+    {"doseNumberString", 0xb0, 19, 1, {(U8*)"doseNumber", 10}, fhir_deserialize::ResourceType::Unknown, 7, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"seriesDosesString", 0xc8, 21, 1},
+    {"seriesDosesString", 0xc8, 21, 1, {(U8*)"seriesDoses", 11}, fhir_deserialize::ResourceType::Unknown, 7, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"supportingImmunization_count", 0xd8, 22, -1},
+    {"supportingImmunization_count", 0xd8, 22, -1, {(U8*)"supportingImmunization_count", 28}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"contraindicatedVaccineCode_count", 0x50, 9, -1},
+    {"contraindicatedVaccineCode_count", 0x50, 9, -1, {(U8*)"contraindicatedVaccineCode_count", 32}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/ImmunizationRecommendation_Recommendation.gperf"
-    {"supportingPatientInformation_count", 0xe8, 24, -1}
+    {"supportingPatientInformation_count", 0xe8, 24, -1, {(U8*)"supportingPatientInformation_count", 34}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

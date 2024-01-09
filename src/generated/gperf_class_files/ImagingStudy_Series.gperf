@@ -7,25 +7,25 @@
 %define class-name ImagingStudy_Series_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-uid, 0x38, 6, -1
-number, 0x48, 7, -1
-modality, 0x50, 8, -1
-description, 0x58, 9, -1
-numberOfInstances, 0x68, 10, -1
-endpoint_count, 0x70, 11, -1
-endpoint, 0x78, 12, -1
-bodySite, 0x80, 13, -1
-laterality, 0x88, 14, -1
-specimen_count, 0x90, 15, -1
-specimen, 0x98, 16, -1
-started, 0xa0, 17, -1
-performer_count, 0xb0, 18, -1
-performer, 0xb8, 19, -1
-instance_count, 0xc0, 20, -1
-instance, 0xc8, 21, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+uid, 0x38, 6, -1, {(U8*)"uid", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+number, 0x48, 7, -1, {(U8*)"number", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modality, 0x50, 8, -1, {(U8*)"modality", 8}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown
+description, 0x58, 9, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+numberOfInstances, 0x68, 10, -1, {(U8*)"numberOfInstances", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+endpoint_count, 0x70, 11, -1, {(U8*)"endpoint_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+endpoint, 0x78, 12, -1, {(U8*)"endpoint", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+bodySite, 0x80, 13, -1, {(U8*)"bodySite", 8}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown
+laterality, 0x88, 14, -1, {(U8*)"laterality", 10}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown
+specimen_count, 0x90, 15, -1, {(U8*)"specimen_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+specimen, 0x98, 16, -1, {(U8*)"specimen", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+started, 0xa0, 17, -1, {(U8*)"started", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+performer_count, 0xb0, 18, -1, {(U8*)"performer_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+performer, 0xb8, 19, -1, {(U8*)"performer", 9}, fhir_deserialize::ResourceType::ImagingStudy_Series_Performer, 0, fhir_deserialize::ResourceType::Unknown
+instance_count, 0xc0, 20, -1, {(U8*)"instance_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+instance, 0xc8, 21, -1, {(U8*)"instance", 8}, fhir_deserialize::ResourceType::ImagingStudy_Series_Instance, 0, fhir_deserialize::ResourceType::Unknown

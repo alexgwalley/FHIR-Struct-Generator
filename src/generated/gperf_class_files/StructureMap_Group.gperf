@@ -7,17 +7,17 @@
 %define class-name StructureMap_Group_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-name, 0x38, 6, -1
-extends, 0x48, 7, -1
-typeMode, 0x58, 8, -1
-documentation, 0x68, 9, -1
-input_count, 0x78, 10, -1
-input, 0x80, 11, -1
-rule_count, 0x88, 12, -1
-rule, 0x90, 13, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+name, 0x38, 6, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extends, 0x48, 7, -1, {(U8*)"extends", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+typeMode, 0x58, 8, -1, {(U8*)"typeMode", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+documentation, 0x68, 9, -1, {(U8*)"documentation", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+input_count, 0x78, 10, -1, {(U8*)"input_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+input, 0x80, 11, -1, {(U8*)"input", 5}, fhir_deserialize::ResourceType::StructureMap_Group_Input, 0, fhir_deserialize::ResourceType::Unknown
+rule_count, 0x88, 12, -1, {(U8*)"rule_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+rule, 0x90, 13, -1, {(U8*)"rule", 4}, fhir_deserialize::ResourceType::StructureMap_Group_Rule, 0, fhir_deserialize::ResourceType::Unknown

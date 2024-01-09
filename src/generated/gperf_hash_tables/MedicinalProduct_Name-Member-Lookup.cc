@@ -88,27 +88,27 @@ MedicinalProduct_Name_Gperf::hash (register const char *str, register unsigned i
 static const struct fhir_deserialize::MemberNameAndOffset word_array_MedicinalProduct_Name[] =
   {
 #line 11 "./src/generated/gperf_class_files/MedicinalProduct_Name.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/MedicinalProduct_Name.gperf"
-    {"namePart", 0x50, 8, -1},
+    {"namePart", 0x50, 8, -1, {(U8*)"namePart", 8}, fhir_deserialize::ResourceType::MedicinalProduct_Name_NamePart, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/MedicinalProduct_Name.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/MedicinalProduct_Name.gperf"
-    {"productName", 0x38, 6, -1},
+    {"productName", 0x38, 6, -1, {(U8*)"productName", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/MedicinalProduct_Name.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/MedicinalProduct_Name.gperf"
-    {"namePart_count", 0x48, 7, -1},
+    {"namePart_count", 0x48, 7, -1, {(U8*)"namePart_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/MedicinalProduct_Name.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/MedicinalProduct_Name.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/MedicinalProduct_Name.gperf"
-    {"countryLanguage", 0x60, 10, -1},
+    {"countryLanguage", 0x60, 10, -1, {(U8*)"countryLanguage", 15}, fhir_deserialize::ResourceType::MedicinalProduct_Name_CountryLanguage, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/MedicinalProduct_Name.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/MedicinalProduct_Name.gperf"
-    {"countryLanguage_count", 0x58, 9, -1}
+    {"countryLanguage_count", 0x58, 9, -1, {(U8*)"countryLanguage_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

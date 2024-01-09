@@ -88,37 +88,37 @@ NutritionOrder_EnteralFormula_Gperf::hash (register const char *str, register un
 static const struct fhir_deserialize::MemberNameAndOffset word_array_NutritionOrder_EnteralFormula[] =
   {
 #line 11 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"additiveType", 0x50, 8, -1},
+    {"additiveType", 0x50, 8, -1, {(U8*)"additiveType", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"administration", 0x80, 13, -1},
+    {"administration", 0x80, 13, -1, {(U8*)"administration", 14}, fhir_deserialize::ResourceType::NutritionOrder_EnteralFormula_Administration, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"maxVolumeToDeliver", 0x88, 14, -1},
+    {"maxVolumeToDeliver", 0x88, 14, -1, {(U8*)"maxVolumeToDeliver", 18}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"additiveProductName", 0x58, 9, -1},
+    {"additiveProductName", 0x58, 9, -1, {(U8*)"additiveProductName", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"administration_count", 0x78, 12, -1},
+    {"administration_count", 0x78, 12, -1, {(U8*)"administration_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"caloricDensity", 0x68, 10, -1},
+    {"caloricDensity", 0x68, 10, -1, {(U8*)"caloricDensity", 14}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"administrationInstruction", 0x90, 15, -1},
+    {"administrationInstruction", 0x90, 15, -1, {(U8*)"administrationInstruction", 25}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"baseFormulaType", 0x38, 6, -1},
+    {"baseFormulaType", 0x38, 6, -1, {(U8*)"baseFormulaType", 15}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"routeofAdministration", 0x70, 11, -1},
+    {"routeofAdministration", 0x70, 11, -1, {(U8*)"routeofAdministration", 21}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/NutritionOrder_EnteralFormula.gperf"
-    {"baseFormulaProductName", 0x40, 7, -1}
+    {"baseFormulaProductName", 0x40, 7, -1, {(U8*)"baseFormulaProductName", 22}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

@@ -88,23 +88,23 @@ AdverseEvent_SuspectEntity_Gperf::hash (register const char *str, register unsig
 static const struct fhir_deserialize::MemberNameAndOffset word_array_AdverseEvent_SuspectEntity[] =
   {
 #line 11 "./src/generated/gperf_class_files/AdverseEvent_SuspectEntity.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/AdverseEvent_SuspectEntity.gperf"
-    {"instance", 0x38, 6, -1},
+    {"instance", 0x38, 6, -1, {(U8*)"instance", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/AdverseEvent_SuspectEntity.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/AdverseEvent_SuspectEntity.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/AdverseEvent_SuspectEntity.gperf"
-    {"causality", 0x48, 8, -1},
+    {"causality", 0x48, 8, -1, {(U8*)"causality", 9}, fhir_deserialize::ResourceType::AdverseEvent_SuspectEntity_Causality, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/AdverseEvent_SuspectEntity.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/AdverseEvent_SuspectEntity.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/AdverseEvent_SuspectEntity.gperf"
-    {"causality_count", 0x40, 7, -1},
+    {"causality_count", 0x40, 7, -1, {(U8*)"causality_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/AdverseEvent_SuspectEntity.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

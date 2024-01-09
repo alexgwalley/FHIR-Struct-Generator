@@ -98,109 +98,109 @@ ChargeItem_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ChargeItem[] =
   {
 #line 15 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"subject", 0xd0, 22, -1},
+    {"subject", 0xd0, 22, -1, {(U8*)"subject", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 58 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"note_count", 0x1b0, 47, -1},
+    {"note_count", 0x1b0, 47, -1, {(U8*)"note_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"enterer", 0x158, 37, -1},
+    {"enterer", 0x158, 37, -1, {(U8*)"enterer", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"partOf_count", 0xb8, 19, -1},
+    {"partOf_count", 0xb8, 19, -1, {(U8*)"partOf_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 52 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"service_count", 0x180, 41, -1},
+    {"service_count", 0x180, 41, -1, {(U8*)"service_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"performer", 0x100, 27, -1},
+    {"performer", 0x100, 27, -1, {(U8*)"performer", 9}, fhir_deserialize::ResourceType::ChargeItem_Performer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"performer_count", 0xf8, 26, -1},
+    {"performer_count", 0xf8, 26, -1, {(U8*)"performer_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 11 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 59 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"note", 0x1b8, 48, -1},
+    {"note", 0x1b8, 48, -1, {(U8*)"note", 4}, fhir_deserialize::ResourceType::Annotation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 41 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"costCenter", 0x118, 30, -1},
+    {"costCenter", 0x118, 30, -1, {(U8*)"costCenter", 10}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 60 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"supportingInformation_count", 0x1c0, 49, -1},
+    {"supportingInformation_count", 0x1c0, 49, -1, {(U8*)"supportingInformation_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 49 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"enteredDate", 0x160, 38, -1},
+    {"enteredDate", 0x160, 38, -1, {(U8*)"enteredDate", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 53 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"service", 0x188, 42, -1},
+    {"service", 0x188, 42, -1, {(U8*)"service", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 43 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"bodysite_count", 0x128, 32, -1},
+    {"bodysite_count", 0x128, 32, -1, {(U8*)"bodysite_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"identifier", 0x80, 13, -1},
+    {"identifier", 0x80, 13, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"identifier_count", 0x78, 12, -1},
+    {"identifier_count", 0x78, 12, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"context", 0xd8, 23, -1},
+    {"context", 0xd8, 23, -1, {(U8*)"context", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"partOf", 0xc0, 20, -1},
+    {"partOf", 0xc0, 20, -1, {(U8*)"partOf", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"code", 0xc8, 21, -1},
+    {"code", 0xc8, 21, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 57 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"account", 0x1a8, 46, -1},
+    {"account", 0x1a8, 46, -1, {(U8*)"account", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"bodysite", 0x130, 33, -1},
+    {"bodysite", 0x130, 33, -1, {(U8*)"bodysite", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"definitionUri_count", 0x88, 14, -1},
+    {"definitionUri_count", 0x88, 14, -1, {(U8*)"definitionUri_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 61 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"supportingInformation", 0x1c8, 50, -1},
+    {"supportingInformation", 0x1c8, 50, -1, {(U8*)"supportingInformation", 21}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"requestingOrganization", 0x110, 29, -1},
+    {"requestingOrganization", 0x110, 29, -1, {(U8*)"requestingOrganization", 22}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 56 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"account_count", 0x1a0, 45, -1},
+    {"account_count", 0x1a0, 45, -1, {(U8*)"account_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"definitionCanonical_count", 0x98, 16, -1},
+    {"definitionCanonical_count", 0x98, 16, -1, {(U8*)"definitionCanonical_count", 25}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"occurrenceTiming", 0xe8, 25, 2},
+    {"occurrenceTiming", 0xe8, 25, 2, {(U8*)"occurrence", 10}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Timing},
 #line 39 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"performingOrganization", 0x108, 28, -1},
+    {"performingOrganization", 0x108, 28, -1, {(U8*)"performingOrganization", 22}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 50 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"reason_count", 0x170, 39, -1},
+    {"reason_count", 0x170, 39, -1, {(U8*)"reason_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 46 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"priceOverride", 0x140, 35, -1},
+    {"priceOverride", 0x140, 35, -1, {(U8*)"priceOverride", 13}, fhir_deserialize::ResourceType::Money, 0, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"overrideReason", 0x148, 36, -1},
+    {"overrideReason", 0x148, 36, -1, {(U8*)"overrideReason", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"status", 0xa8, 18, -1},
+    {"status", 0xa8, 18, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"quantity", 0x120, 31, -1},
+    {"quantity", 0x120, 31, -1, {(U8*)"quantity", 8}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"definitionCanonical", 0xa0, 17, -1},
+    {"definitionCanonical", 0xa0, 17, -1, {(U8*)"definitionCanonical", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"definitionUri", 0x90, 15, -1},
+    {"definitionUri", 0x90, 15, -1, {(U8*)"definitionUri", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 45 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"factorOverride", 0x138, 34, -1},
+    {"factorOverride", 0x138, 34, -1, {(U8*)"factorOverride", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"occurrencePeriod", 0xe8, 25, 1},
+    {"occurrencePeriod", 0xe8, 25, 1, {(U8*)"occurrence", 10}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Period},
 #line 55 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"productCodeableConcept", 0x198, 44, 1},
+    {"productCodeableConcept", 0x198, 44, 1, {(U8*)"product", 7}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::CodeableConcept},
 #line 34 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"occurrenceDateTime", 0xe8, 25, 0},
+    {"occurrenceDateTime", 0xe8, 25, 0, {(U8*)"occurrence", 10}, fhir_deserialize::ResourceType::Unknown, 17, fhir_deserialize::ResourceType::Unknown},
 #line 51 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"reason", 0x178, 40, -1},
+    {"reason", 0x178, 40, -1, {(U8*)"reason", 6}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 54 "./src/generated/gperf_class_files/ChargeItem.gperf"
-    {"productReference", 0x198, 44, 0}
+    {"productReference", 0x198, 44, 0, {(U8*)"product", 7}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::Reference}
   };
 
 static const signed char lookup[] =

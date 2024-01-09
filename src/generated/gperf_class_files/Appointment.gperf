@@ -7,48 +7,48 @@
 %define class-name Appointment_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-meta, 0x18, 2, -1
-implicitRules, 0x20, 3, -1
-language, 0x30, 4, -1
-text, 0x40, 5, -1
-contained_count, 0x48, 6, -1
-contained, 0x50, 7, -1
-extension_count, 0x58, 8, -1
-extension, 0x60, 9, -1
-modifierExtension_count, 0x68, 10, -1
-modifierExtension, 0x70, 11, -1
-identifier_count, 0x78, 12, -1
-identifier, 0x80, 13, -1
-status, 0x88, 14, -1
-cancelationReason, 0x98, 15, -1
-serviceCategory_count, 0xa0, 16, -1
-serviceCategory, 0xa8, 17, -1
-serviceType_count, 0xb0, 18, -1
-serviceType, 0xb8, 19, -1
-specialty_count, 0xc0, 20, -1
-specialty, 0xc8, 21, -1
-appointmentType, 0xd0, 22, -1
-reasonCode_count, 0xd8, 23, -1
-reasonCode, 0xe0, 24, -1
-reasonReference_count, 0xe8, 25, -1
-reasonReference, 0xf0, 26, -1
-priority, 0xf8, 27, -1
-description, 0x100, 28, -1
-supportingInformation_count, 0x110, 29, -1
-supportingInformation, 0x118, 30, -1
-start, 0x120, 31, -1
-end, 0x130, 32, -1
-minutesDuration, 0x140, 33, -1
-slot_count, 0x148, 34, -1
-slot, 0x150, 35, -1
-created, 0x158, 36, -1
-comment, 0x168, 37, -1
-patientInstruction, 0x178, 38, -1
-basedOn_count, 0x188, 39, -1
-basedOn, 0x190, 40, -1
-participant_count, 0x198, 41, -1
-participant, 0x1a0, 42, -1
-requestedPeriod_count, 0x1a8, 43, -1
-requestedPeriod, 0x1b0, 44, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+meta, 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown
+implicitRules, 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+language, 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+text, 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown
+contained_count, 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+contained, 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+identifier_count, 0x78, 12, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+identifier, 0x80, 13, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown
+status, 0x88, 14, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+cancelationReason, 0x98, 15, -1, {(U8*)"cancelationReason", 17}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+serviceCategory_count, 0xa0, 16, -1, {(U8*)"serviceCategory_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+serviceCategory, 0xa8, 17, -1, {(U8*)"serviceCategory", 15}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+serviceType_count, 0xb0, 18, -1, {(U8*)"serviceType_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+serviceType, 0xb8, 19, -1, {(U8*)"serviceType", 11}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+specialty_count, 0xc0, 20, -1, {(U8*)"specialty_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+specialty, 0xc8, 21, -1, {(U8*)"specialty", 9}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+appointmentType, 0xd0, 22, -1, {(U8*)"appointmentType", 15}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+reasonCode_count, 0xd8, 23, -1, {(U8*)"reasonCode_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+reasonCode, 0xe0, 24, -1, {(U8*)"reasonCode", 10}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+reasonReference_count, 0xe8, 25, -1, {(U8*)"reasonReference_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+reasonReference, 0xf0, 26, -1, {(U8*)"reasonReference", 15}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+priority, 0xf8, 27, -1, {(U8*)"priority", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+description, 0x100, 28, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+supportingInformation_count, 0x110, 29, -1, {(U8*)"supportingInformation_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+supportingInformation, 0x118, 30, -1, {(U8*)"supportingInformation", 21}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+start, 0x120, 31, -1, {(U8*)"start", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+end, 0x130, 32, -1, {(U8*)"end", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+minutesDuration, 0x140, 33, -1, {(U8*)"minutesDuration", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+slot_count, 0x148, 34, -1, {(U8*)"slot_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+slot, 0x150, 35, -1, {(U8*)"slot", 4}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+created, 0x158, 36, -1, {(U8*)"created", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+comment, 0x168, 37, -1, {(U8*)"comment", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+patientInstruction, 0x178, 38, -1, {(U8*)"patientInstruction", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+basedOn_count, 0x188, 39, -1, {(U8*)"basedOn_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+basedOn, 0x190, 40, -1, {(U8*)"basedOn", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+participant_count, 0x198, 41, -1, {(U8*)"participant_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+participant, 0x1a0, 42, -1, {(U8*)"participant", 11}, fhir_deserialize::ResourceType::Appointment_Participant, 0, fhir_deserialize::ResourceType::Unknown
+requestedPeriod_count, 0x1a8, 43, -1, {(U8*)"requestedPeriod_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+requestedPeriod, 0x1b0, 44, -1, {(U8*)"requestedPeriod", 15}, fhir_deserialize::ResourceType::Period, 0, fhir_deserialize::ResourceType::Unknown

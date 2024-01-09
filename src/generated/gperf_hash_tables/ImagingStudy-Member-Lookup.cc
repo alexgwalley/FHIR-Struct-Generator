@@ -101,89 +101,89 @@ ImagingStudy_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ImagingStudy[] =
   {
 #line 11 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 51 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"series", 0x178, 41, -1},
+    {"series", 0x178, 41, -1, {(U8*)"series", 6}, fhir_deserialize::ResourceType::ImagingStudy_Series, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"started", 0xb8, 19, -1},
+    {"started", 0xb8, 19, -1, {(U8*)"started", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"referrer", 0xd8, 22, -1},
+    {"referrer", 0xd8, 22, -1, {(U8*)"referrer", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"reasonCode", 0x138, 34, -1},
+    {"reasonCode", 0x138, 34, -1, {(U8*)"reasonCode", 10}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"interpreter", 0xe8, 24, -1},
+    {"interpreter", 0xe8, 24, -1, {(U8*)"interpreter", 11}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 50 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"series_count", 0x170, 40, -1},
+    {"series_count", 0x170, 40, -1, {(U8*)"series_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"endpoint", 0xf8, 26, -1},
+    {"endpoint", 0xf8, 26, -1, {(U8*)"endpoint", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 46 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"reasonReference", 0x148, 36, -1},
+    {"reasonReference", 0x148, 36, -1, {(U8*)"reasonReference", 15}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 43 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"reasonCode_count", 0x130, 33, -1},
+    {"reasonCode_count", 0x130, 33, -1, {(U8*)"reasonCode_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"interpreter_count", 0xe0, 23, -1},
+    {"interpreter_count", 0xe0, 23, -1, {(U8*)"interpreter_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"endpoint_count", 0xf0, 25, -1},
+    {"endpoint_count", 0xf0, 25, -1, {(U8*)"endpoint_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 45 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"reasonReference_count", 0x140, 35, -1},
+    {"reasonReference_count", 0x140, 35, -1, {(U8*)"reasonReference_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"subject", 0xa8, 17, -1},
+    {"subject", 0xa8, 17, -1, {(U8*)"subject", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 41 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"procedureCode", 0x120, 31, -1},
+    {"procedureCode", 0x120, 31, -1, {(U8*)"procedureCode", 13}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"note", 0x158, 38, -1},
+    {"note", 0x158, 38, -1, {(U8*)"note", 4}, fhir_deserialize::ResourceType::Annotation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"identifier", 0x80, 13, -1},
+    {"identifier", 0x80, 13, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"status", 0x88, 14, -1},
+    {"status", 0x88, 14, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"basedOn", 0xd0, 21, -1},
+    {"basedOn", 0xd0, 21, -1, {(U8*)"basedOn", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"procedureReference", 0x110, 29, -1},
+    {"procedureReference", 0x110, 29, -1, {(U8*)"procedureReference", 18}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"procedureCode_count", 0x118, 30, -1},
+    {"procedureCode_count", 0x118, 30, -1, {(U8*)"procedureCode_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"note_count", 0x150, 37, -1},
+    {"note_count", 0x150, 37, -1, {(U8*)"note_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"identifier_count", 0x78, 12, -1},
+    {"identifier_count", 0x78, 12, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"basedOn_count", 0xc8, 20, -1},
+    {"basedOn_count", 0xc8, 20, -1, {(U8*)"basedOn_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 49 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"description", 0x160, 39, -1},
+    {"description", 0x160, 39, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"modality", 0xa0, 16, -1},
+    {"modality", 0xa0, 16, -1, {(U8*)"modality", 8}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"numberOfSeries", 0x100, 27, -1},
+    {"numberOfSeries", 0x100, 27, -1, {(U8*)"numberOfSeries", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"numberOfInstances", 0x108, 28, -1},
+    {"numberOfInstances", 0x108, 28, -1, {(U8*)"numberOfInstances", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"modality_count", 0x98, 15, -1},
+    {"modality_count", 0x98, 15, -1, {(U8*)"modality_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"encounter", 0xb0, 18, -1},
+    {"encounter", 0xb0, 18, -1, {(U8*)"encounter", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/ImagingStudy.gperf"
-    {"location", 0x128, 32, -1}
+    {"location", 0x128, 32, -1, {(U8*)"location", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

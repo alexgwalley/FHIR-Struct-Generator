@@ -7,18 +7,18 @@
 %define class-name MolecularSequence_ReferenceSeq_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-chromosome, 0x38, 6, -1
-genomeBuild, 0x40, 7, -1
-orientation, 0x50, 8, -1
-referenceSeqId, 0x60, 9, -1
-referenceSeqPointer, 0x68, 10, -1
-referenceSeqString, 0x70, 11, -1
-strand, 0x80, 12, -1
-windowStart, 0x90, 13, -1
-windowEnd, 0x98, 14, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+chromosome, 0x38, 6, -1, {(U8*)"chromosome", 10}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+genomeBuild, 0x40, 7, -1, {(U8*)"genomeBuild", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+orientation, 0x50, 8, -1, {(U8*)"orientation", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+referenceSeqId, 0x60, 9, -1, {(U8*)"referenceSeqId", 14}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+referenceSeqPointer, 0x68, 10, -1, {(U8*)"referenceSeqPointer", 19}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+referenceSeqString, 0x70, 11, -1, {(U8*)"referenceSeqString", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+strand, 0x80, 12, -1, {(U8*)"strand", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+windowStart, 0x90, 13, -1, {(U8*)"windowStart", 11}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown
+windowEnd, 0x98, 14, -1, {(U8*)"windowEnd", 9}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown

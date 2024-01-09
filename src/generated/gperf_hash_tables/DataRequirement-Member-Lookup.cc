@@ -88,41 +88,41 @@ DataRequirement_Gperf::hash (register const char *str, register unsigned int len
 static const struct fhir_deserialize::MemberNameAndOffset word_array_DataRequirement[] =
   {
 #line 11 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"sort", 0x98, 17, -1},
+    {"sort", 0x98, 17, -1, {(U8*)"sort", 4}, fhir_deserialize::ResourceType::DataRequirement_Sort, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"limit", 0x88, 15, -1},
+    {"limit", 0x88, 15, -1, {(U8*)"limit", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"profile", 0x40, 6, -1},
+    {"profile", 0x40, 6, -1, {(U8*)"profile", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"sort_count", 0x90, 16, -1},
+    {"sort_count", 0x90, 16, -1, {(U8*)"sort_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"mustSupport", 0x60, 10, -1},
+    {"mustSupport", 0x60, 10, -1, {(U8*)"mustSupport", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"profile_count", 0x38, 5, -1},
+    {"profile_count", 0x38, 5, -1, {(U8*)"profile_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"type", 0x28, 4, -1},
+    {"type", 0x28, 4, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"subjectReference", 0x50, 8, 1},
+    {"subjectReference", 0x50, 8, 1, {(U8*)"subject", 7}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::Reference},
 #line 19 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"mustSupport_count", 0x58, 9, -1},
+    {"mustSupport_count", 0x58, 9, -1, {(U8*)"mustSupport_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"dateFilter", 0x80, 14, -1},
+    {"dateFilter", 0x80, 14, -1, {(U8*)"dateFilter", 10}, fhir_deserialize::ResourceType::DataRequirement_DateFilter, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"subjectCodeableConcept", 0x50, 8, 0},
+    {"subjectCodeableConcept", 0x50, 8, 0, {(U8*)"subject", 7}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::CodeableConcept},
 #line 22 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"codeFilter", 0x70, 12, -1},
+    {"codeFilter", 0x70, 12, -1, {(U8*)"codeFilter", 10}, fhir_deserialize::ResourceType::DataRequirement_CodeFilter, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"dateFilter_count", 0x78, 13, -1},
+    {"dateFilter_count", 0x78, 13, -1, {(U8*)"dateFilter_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/DataRequirement.gperf"
-    {"codeFilter_count", 0x68, 11, -1}
+    {"codeFilter_count", 0x68, 11, -1, {(U8*)"codeFilter_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

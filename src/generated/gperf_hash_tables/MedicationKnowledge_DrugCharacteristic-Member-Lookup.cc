@@ -88,27 +88,27 @@ MedicationKnowledge_DrugCharacteristic_Gperf::hash (register const char *str, re
 static const struct fhir_deserialize::MemberNameAndOffset word_array_MedicationKnowledge_DrugCharacteristic[] =
   {
 #line 11 "./src/generated/gperf_class_files/MedicationKnowledge_DrugCharacteristic.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/MedicationKnowledge_DrugCharacteristic.gperf"
-    {"type", 0x38, 6, -1},
+    {"type", 0x38, 6, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/MedicationKnowledge_DrugCharacteristic.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/MedicationKnowledge_DrugCharacteristic.gperf"
-    {"valueString", 0x48, 8, 1},
+    {"valueString", 0x48, 8, 1, {(U8*)"value", 5}, fhir_deserialize::ResourceType::CodeableConcept, 7, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/MedicationKnowledge_DrugCharacteristic.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/MedicationKnowledge_DrugCharacteristic.gperf"
-    {"valueQuantity", 0x48, 8, 2},
+    {"valueQuantity", 0x48, 8, 2, {(U8*)"value", 5}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::Quantity},
 #line 12 "./src/generated/gperf_class_files/MedicationKnowledge_DrugCharacteristic.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/MedicationKnowledge_DrugCharacteristic.gperf"
-    {"valueBase64Binary", 0x48, 8, 3},
+    {"valueBase64Binary", 0x48, 8, 3, {(U8*)"value", 5}, fhir_deserialize::ResourceType::CodeableConcept, 1, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/MedicationKnowledge_DrugCharacteristic.gperf"
-    {"valueCodeableConcept", 0x48, 8, 0},
+    {"valueCodeableConcept", 0x48, 8, 0, {(U8*)"value", 5}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::CodeableConcept},
 #line 15 "./src/generated/gperf_class_files/MedicationKnowledge_DrugCharacteristic.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/MedicationKnowledge_DrugCharacteristic.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

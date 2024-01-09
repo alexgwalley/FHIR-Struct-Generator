@@ -106,61 +106,61 @@ ResearchElementDefinition_Characteristic_Gperf::hash (register const char *str, 
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ResearchElementDefinition_Characteristic[] =
   {
 #line 11 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"usageContext", 0x58, 9, -1},
+    {"usageContext", 0x58, 9, -1, {(U8*)"usageContext", 12}, fhir_deserialize::ResourceType::UsageContext, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"usageContext_count", 0x50, 8, -1},
+    {"usageContext_count", 0x50, 8, -1, {(U8*)"usageContext_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"studyEffectivePeriod", 0x88, 14, 1},
+    {"studyEffectivePeriod", 0x88, 14, 1, {(U8*)"studyEffective", 14}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Period},
 #line 27 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"studyEffectiveDuration", 0x88, 14, 2},
+    {"studyEffectiveDuration", 0x88, 14, 2, {(U8*)"studyEffective", 14}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Duration},
 #line 14 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"studyEffectiveDescription", 0x70, 12, -1},
+    {"studyEffectiveDescription", 0x70, 12, -1, {(U8*)"studyEffectiveDescription", 25}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"participantEffectivePeriod", 0xc8, 19, 1},
+    {"participantEffectivePeriod", 0xc8, 19, 1, {(U8*)"participantEffective", 20}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Period},
 #line 29 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"studyEffectiveTimeFromStart", 0x98, 15, -1},
+    {"studyEffectiveTimeFromStart", 0x98, 15, -1, {(U8*)"studyEffectiveTimeFromStart", 27}, fhir_deserialize::ResourceType::Duration, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"participantEffectiveDuration", 0xc8, 19, 2},
+    {"participantEffectiveDuration", 0xc8, 19, 2, {(U8*)"participantEffective", 20}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Duration},
 #line 17 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"definitionCanonical", 0x40, 7, 1},
+    {"definitionCanonical", 0x40, 7, 1, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::CodeableConcept, 2, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"studyEffectiveTiming", 0x88, 14, 3},
+    {"studyEffectiveTiming", 0x88, 14, 3, {(U8*)"studyEffective", 14}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Timing},
 #line 31 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"participantEffectiveDescription", 0xb0, 17, -1},
+    {"participantEffectiveDescription", 0xb0, 17, -1, {(U8*)"participantEffectiveDescription", 31}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"exclude", 0x60, 10, -1},
+    {"exclude", 0x60, 10, -1, {(U8*)"exclude", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"participantEffectiveTimeFromStart", 0xd8, 20, -1},
+    {"participantEffectiveTimeFromStart", 0xd8, 20, -1, {(U8*)"participantEffectiveTimeFromStart", 33}, fhir_deserialize::ResourceType::Duration, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"definitionCodeableConcept", 0x40, 7, 0},
+    {"definitionCodeableConcept", 0x40, 7, 0, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::CodeableConcept},
 #line 35 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"participantEffectiveTiming", 0xc8, 19, 3},
+    {"participantEffectiveTiming", 0xc8, 19, 3, {(U8*)"participantEffective", 20}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Timing},
 #line 10 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"unitOfMeasure", 0x68, 11, -1},
+    {"unitOfMeasure", 0x68, 11, -1, {(U8*)"unitOfMeasure", 13}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"definitionExpression", 0x40, 7, 2},
+    {"definitionExpression", 0x40, 7, 2, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::Expression},
 #line 19 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"definitionDataRequirement", 0x40, 7, 3},
+    {"definitionDataRequirement", 0x40, 7, 3, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::DataRequirement},
 #line 25 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"studyEffectiveDateTime", 0x88, 14, 0},
+    {"studyEffectiveDateTime", 0x88, 14, 0, {(U8*)"studyEffective", 14}, fhir_deserialize::ResourceType::Unknown, 17, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"studyEffectiveGroupMeasure", 0xa0, 16, -1},
+    {"studyEffectiveGroupMeasure", 0xa0, 16, -1, {(U8*)"studyEffectiveGroupMeasure", 26}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"participantEffectiveDateTime", 0xc8, 19, 0},
+    {"participantEffectiveDateTime", 0xc8, 19, 0, {(U8*)"participantEffective", 20}, fhir_deserialize::ResourceType::Unknown, 17, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/ResearchElementDefinition_Characteristic.gperf"
-    {"participantEffectiveGroupMeasure", 0xe0, 21, -1}
+    {"participantEffectiveGroupMeasure", 0xe0, 21, -1, {(U8*)"participantEffectiveGroupMeasure", 32}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

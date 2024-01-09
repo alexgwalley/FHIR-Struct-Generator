@@ -88,29 +88,29 @@ ElementDefinition_Type_Gperf::hash (register const char *str, register unsigned 
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ElementDefinition_Type[] =
   {
 #line 11 "./src/generated/gperf_class_files/ElementDefinition_Type.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ElementDefinition_Type.gperf"
-    {"code", 0x28, 4, -1},
+    {"code", 0x28, 4, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ElementDefinition_Type.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/ElementDefinition_Type.gperf"
-    {"versioning", 0x68, 11, -1},
+    {"versioning", 0x68, 11, -1, {(U8*)"versioning", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/ElementDefinition_Type.gperf"
-    {"aggregation", 0x60, 10, -1},
+    {"aggregation", 0x60, 10, -1, {(U8*)"aggregation", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ElementDefinition_Type.gperf"
-    {"profile", 0x40, 6, -1},
+    {"profile", 0x40, 6, -1, {(U8*)"profile", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ElementDefinition_Type.gperf"
-    {"targetProfile", 0x50, 8, -1},
+    {"targetProfile", 0x50, 8, -1, {(U8*)"targetProfile", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ElementDefinition_Type.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ElementDefinition_Type.gperf"
-    {"aggregation_count", 0x58, 9, -1},
+    {"aggregation_count", 0x58, 9, -1, {(U8*)"aggregation_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ElementDefinition_Type.gperf"
-    {"profile_count", 0x38, 5, -1},
+    {"profile_count", 0x38, 5, -1, {(U8*)"profile_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ElementDefinition_Type.gperf"
-    {"targetProfile_count", 0x48, 7, -1},
+    {"targetProfile_count", 0x48, 7, -1, {(U8*)"targetProfile_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ElementDefinition_Type.gperf"
-    {"resourceType", 0x0, 0, -1}
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

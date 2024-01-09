@@ -88,45 +88,45 @@ AuditEvent_Agent_Gperf::hash (register const char *str, register unsigned int le
 static const struct fhir_deserialize::MemberNameAndOffset word_array_AuditEvent_Agent[] =
   {
 #line 11 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"who", 0x50, 9, -1},
+    {"who", 0x50, 9, -1, {(U8*)"who", 3}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"type", 0x38, 6, -1},
+    {"type", 0x38, 6, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"media", 0x98, 16, -1},
+    {"media", 0x98, 16, -1, {(U8*)"media", 5}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"network", 0xa0, 17, -1},
+    {"network", 0xa0, 17, -1, {(U8*)"network", 7}, fhir_deserialize::ResourceType::AuditEvent_Agent_Network, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"requestor", 0x78, 12, -1},
+    {"requestor", 0x78, 12, -1, {(U8*)"requestor", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"altId", 0x58, 10, -1},
+    {"altId", 0x58, 10, -1, {(U8*)"altId", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"role", 0x48, 8, -1},
+    {"role", 0x48, 8, -1, {(U8*)"role", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"policy", 0x90, 15, -1},
+    {"policy", 0x90, 15, -1, {(U8*)"policy", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"purposeOfUse", 0xb0, 19, -1},
+    {"purposeOfUse", 0xb0, 19, -1, {(U8*)"purposeOfUse", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"location", 0x80, 13, -1},
+    {"location", 0x80, 13, -1, {(U8*)"location", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"role_count", 0x40, 7, -1},
+    {"role_count", 0x40, 7, -1, {(U8*)"role_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"policy_count", 0x88, 14, -1},
+    {"policy_count", 0x88, 14, -1, {(U8*)"policy_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"purposeOfUse_count", 0xa8, 18, -1},
+    {"purposeOfUse_count", 0xa8, 18, -1, {(U8*)"purposeOfUse_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"name", 0x68, 11, -1},
+    {"name", 0x68, 11, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/AuditEvent_Agent.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

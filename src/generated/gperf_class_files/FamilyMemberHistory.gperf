@@ -7,48 +7,48 @@
 %define class-name FamilyMemberHistory_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-meta, 0x18, 2, -1
-implicitRules, 0x20, 3, -1
-language, 0x30, 4, -1
-text, 0x40, 5, -1
-contained_count, 0x48, 6, -1
-contained, 0x50, 7, -1
-extension_count, 0x58, 8, -1
-extension, 0x60, 9, -1
-modifierExtension_count, 0x68, 10, -1
-modifierExtension, 0x70, 11, -1
-identifier_count, 0x78, 12, -1
-identifier, 0x80, 13, -1
-instantiatesCanonical_count, 0x88, 14, -1
-instantiatesCanonical, 0x90, 15, -1
-instantiatesUri_count, 0x98, 16, -1
-instantiatesUri, 0xa0, 17, -1
-status, 0xa8, 18, -1
-dataAbsentReason, 0xb8, 19, -1
-patient, 0xc0, 20, -1
-date, 0xc8, 21, -1
-name, 0xd8, 22, -1
-relationship, 0xe8, 23, -1
-sex, 0xf0, 24, -1
-bornPeriod, 0x100, 26, 0
-bornDate, 0x100, 26, 1
-bornString, 0x100, 26, 2
-ageAge, 0x118, 28, 0
-ageRange, 0x118, 28, 1
-ageString, 0x118, 28, 2
-estimatedAge, 0x128, 29, -1
-deceasedBoolean, 0x130, 31, 0
-deceasedAge, 0x130, 31, 1
-deceasedRange, 0x130, 31, 2
-deceasedDate, 0x130, 31, 3
-deceasedString, 0x130, 31, 4
-reasonCode_count, 0x140, 32, -1
-reasonCode, 0x148, 33, -1
-reasonReference_count, 0x150, 34, -1
-reasonReference, 0x158, 35, -1
-note_count, 0x160, 36, -1
-note, 0x168, 37, -1
-condition_count, 0x170, 38, -1
-condition, 0x178, 39, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+meta, 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown
+implicitRules, 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+language, 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+text, 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown
+contained_count, 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+contained, 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+identifier_count, 0x78, 12, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+identifier, 0x80, 13, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown
+instantiatesCanonical_count, 0x88, 14, -1, {(U8*)"instantiatesCanonical_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+instantiatesCanonical, 0x90, 15, -1, {(U8*)"instantiatesCanonical", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+instantiatesUri_count, 0x98, 16, -1, {(U8*)"instantiatesUri_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+instantiatesUri, 0xa0, 17, -1, {(U8*)"instantiatesUri", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+status, 0xa8, 18, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+dataAbsentReason, 0xb8, 19, -1, {(U8*)"dataAbsentReason", 16}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+patient, 0xc0, 20, -1, {(U8*)"patient", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+date, 0xc8, 21, -1, {(U8*)"date", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+name, 0xd8, 22, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+relationship, 0xe8, 23, -1, {(U8*)"relationship", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+sex, 0xf0, 24, -1, {(U8*)"sex", 3}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+bornPeriod, 0x100, 26, 0, {(U8*)"born", 4}, fhir_deserialize::ResourceType::Period, 20, fhir_deserialize::ResourceType::Period
+bornDate, 0x100, 26, 1, {(U8*)"born", 4}, fhir_deserialize::ResourceType::Period, 16, fhir_deserialize::ResourceType::Unknown
+bornString, 0x100, 26, 2, {(U8*)"born", 4}, fhir_deserialize::ResourceType::Period, 7, fhir_deserialize::ResourceType::Unknown
+ageAge, 0x118, 28, 0, {(U8*)"age", 3}, fhir_deserialize::ResourceType::Age, 20, fhir_deserialize::ResourceType::Age
+ageRange, 0x118, 28, 1, {(U8*)"age", 3}, fhir_deserialize::ResourceType::Age, 20, fhir_deserialize::ResourceType::Range
+ageString, 0x118, 28, 2, {(U8*)"age", 3}, fhir_deserialize::ResourceType::Age, 7, fhir_deserialize::ResourceType::Unknown
+estimatedAge, 0x128, 29, -1, {(U8*)"estimatedAge", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+deceasedBoolean, 0x130, 31, 0, {(U8*)"deceased", 8}, fhir_deserialize::ResourceType::Unknown, 12, fhir_deserialize::ResourceType::Unknown
+deceasedAge, 0x130, 31, 1, {(U8*)"deceased", 8}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Age
+deceasedRange, 0x130, 31, 2, {(U8*)"deceased", 8}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Range
+deceasedDate, 0x130, 31, 3, {(U8*)"deceased", 8}, fhir_deserialize::ResourceType::Unknown, 16, fhir_deserialize::ResourceType::Unknown
+deceasedString, 0x130, 31, 4, {(U8*)"deceased", 8}, fhir_deserialize::ResourceType::Unknown, 7, fhir_deserialize::ResourceType::Unknown
+reasonCode_count, 0x140, 32, -1, {(U8*)"reasonCode_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+reasonCode, 0x148, 33, -1, {(U8*)"reasonCode", 10}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+reasonReference_count, 0x150, 34, -1, {(U8*)"reasonReference_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+reasonReference, 0x158, 35, -1, {(U8*)"reasonReference", 15}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+note_count, 0x160, 36, -1, {(U8*)"note_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+note, 0x168, 37, -1, {(U8*)"note", 4}, fhir_deserialize::ResourceType::Annotation, 0, fhir_deserialize::ResourceType::Unknown
+condition_count, 0x170, 38, -1, {(U8*)"condition_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+condition, 0x178, 39, -1, {(U8*)"condition", 9}, fhir_deserialize::ResourceType::FamilyMemberHistory_Condition, 0, fhir_deserialize::ResourceType::Unknown

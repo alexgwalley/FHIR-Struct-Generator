@@ -101,107 +101,107 @@ ResearchStudy_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ResearchStudy[] =
   {
 #line 15 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"title", 0x88, 14, -1},
+    {"title", 0x88, 14, -1, {(U8*)"title", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"partOf", 0xb0, 18, -1},
+    {"partOf", 0xb0, 18, -1, {(U8*)"partOf", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 43 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"keyword", 0x130, 33, -1},
+    {"keyword", 0x130, 33, -1, {(U8*)"keyword", 7}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"protocol", 0xa0, 16, -1},
+    {"protocol", 0xa0, 16, -1, {(U8*)"protocol", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"focus", 0xf0, 25, -1},
+    {"focus", 0xf0, 25, -1, {(U8*)"focus", 5}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"partOf_count", 0xa8, 17, -1},
+    {"partOf_count", 0xa8, 17, -1, {(U8*)"partOf_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"keyword_count", 0x128, 32, -1},
+    {"keyword_count", 0x128, 32, -1, {(U8*)"keyword_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"protocol_count", 0x98, 15, -1},
+    {"protocol_count", 0x98, 15, -1, {(U8*)"protocol_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"focus_count", 0xe8, 24, -1},
+    {"focus_count", 0xe8, 24, -1, {(U8*)"focus_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"contact", 0x110, 29, -1},
+    {"contact", 0x110, 29, -1, {(U8*)"contact", 7}, fhir_deserialize::ResourceType::ContactDetail, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"category", 0xe0, 23, -1},
+    {"category", 0xe0, 23, -1, {(U8*)"category", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 11 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"contact_count", 0x108, 28, -1},
+    {"contact_count", 0x108, 28, -1, {(U8*)"contact_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"category_count", 0xd8, 22, -1},
+    {"category_count", 0xd8, 22, -1, {(U8*)"category_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 49 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"period", 0x168, 39, -1},
+    {"period", 0x168, 39, -1, {(U8*)"period", 6}, fhir_deserialize::ResourceType::Period, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 53 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"site", 0x188, 43, -1},
+    {"site", 0x188, 43, -1, {(U8*)"site", 4}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"phase", 0xd0, 21, -1},
+    {"phase", 0xd0, 21, -1, {(U8*)"phase", 5}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"status", 0xb8, 19, -1},
+    {"status", 0xb8, 19, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 56 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"note", 0x1a0, 46, -1},
+    {"note", 0x1a0, 46, -1, {(U8*)"note", 4}, fhir_deserialize::ResourceType::Annotation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 52 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"site_count", 0x180, 42, -1},
+    {"site_count", 0x180, 42, -1, {(U8*)"site_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 54 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"reasonStopped", 0x190, 44, -1},
+    {"reasonStopped", 0x190, 44, -1, {(U8*)"reasonStopped", 13}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"condition", 0x100, 27, -1},
+    {"condition", 0x100, 27, -1, {(U8*)"condition", 9}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 55 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"note_count", 0x198, 45, -1},
+    {"note_count", 0x198, 45, -1, {(U8*)"note_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 46 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"description", 0x148, 36, -1},
+    {"description", 0x148, 36, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"condition_count", 0xf8, 26, -1},
+    {"condition_count", 0xf8, 26, -1, {(U8*)"condition_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"primaryPurposeType", 0xc8, 20, -1},
+    {"primaryPurposeType", 0xc8, 20, -1, {(U8*)"primaryPurposeType", 18}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 60 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"objective", 0x1c0, 50, -1},
+    {"objective", 0x1c0, 50, -1, {(U8*)"objective", 9}, fhir_deserialize::ResourceType::ResearchStudy_Objective, 0, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"enrollment", 0x160, 38, -1},
+    {"enrollment", 0x160, 38, -1, {(U8*)"enrollment", 10}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 51 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"principalInvestigator", 0x178, 41, -1},
+    {"principalInvestigator", 0x178, 41, -1, {(U8*)"principalInvestigator", 21}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 58 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"arm", 0x1b0, 48, -1},
+    {"arm", 0x1b0, 48, -1, {(U8*)"arm", 3}, fhir_deserialize::ResourceType::ResearchStudy_Arm, 0, fhir_deserialize::ResourceType::Unknown},
 #line 59 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"objective_count", 0x1b8, 49, -1},
+    {"objective_count", 0x1b8, 49, -1, {(U8*)"objective_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"enrollment_count", 0x158, 37, -1},
+    {"enrollment_count", 0x158, 37, -1, {(U8*)"enrollment_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 45 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"location", 0x140, 35, -1},
+    {"location", 0x140, 35, -1, {(U8*)"location", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 57 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"arm_count", 0x1a8, 47, -1},
+    {"arm_count", 0x1a8, 47, -1, {(U8*)"arm_count", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"identifier", 0x80, 13, -1},
+    {"identifier", 0x80, 13, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 50 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"sponsor", 0x170, 40, -1},
+    {"sponsor", 0x170, 40, -1, {(U8*)"sponsor", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"location_count", 0x138, 34, -1},
+    {"location_count", 0x138, 34, -1, {(U8*)"location_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 41 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"relatedArtifact", 0x120, 31, -1},
+    {"relatedArtifact", 0x120, 31, -1, {(U8*)"relatedArtifact", 15}, fhir_deserialize::ResourceType::RelatedArtifact, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"identifier_count", 0x78, 12, -1},
+    {"identifier_count", 0x78, 12, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"relatedArtifact_count", 0x118, 30, -1},
+    {"relatedArtifact_count", 0x118, 30, -1, {(U8*)"relatedArtifact_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ResearchStudy.gperf"
-    {"meta", 0x18, 2, -1}
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

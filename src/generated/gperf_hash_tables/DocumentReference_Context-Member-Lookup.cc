@@ -98,37 +98,37 @@ DocumentReference_Context_Gperf::hash (register const char *str, register unsign
 static const struct fhir_deserialize::MemberNameAndOffset word_array_DocumentReference_Context[] =
   {
 #line 11 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"event", 0x50, 9, -1},
+    {"event", 0x50, 9, -1, {(U8*)"event", 5}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"period", 0x58, 10, -1},
+    {"period", 0x58, 10, -1, {(U8*)"period", 6}, fhir_deserialize::ResourceType::Period, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"related", 0x80, 15, -1},
+    {"related", 0x80, 15, -1, {(U8*)"related", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"encounter", 0x40, 7, -1},
+    {"encounter", 0x40, 7, -1, {(U8*)"encounter", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"event_count", 0x48, 8, -1},
+    {"event_count", 0x48, 8, -1, {(U8*)"event_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"facilityType", 0x60, 11, -1},
+    {"facilityType", 0x60, 11, -1, {(U8*)"facilityType", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"related_count", 0x78, 14, -1},
+    {"related_count", 0x78, 14, -1, {(U8*)"related_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"encounter_count", 0x38, 6, -1},
+    {"encounter_count", 0x38, 6, -1, {(U8*)"encounter_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"sourcePatientInfo", 0x70, 13, -1},
+    {"sourcePatientInfo", 0x70, 13, -1, {(U8*)"sourcePatientInfo", 17}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"practiceSetting", 0x68, 12, -1},
+    {"practiceSetting", 0x68, 12, -1, {(U8*)"practiceSetting", 15}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/DocumentReference_Context.gperf"
-    {"resourceType", 0x0, 0, -1}
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

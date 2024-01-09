@@ -7,55 +7,55 @@
 %define class-name PlanDefinition_Action_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-prefix, 0x38, 6, -1
-title, 0x48, 7, -1
-description, 0x58, 8, -1
-textEquivalent, 0x68, 9, -1
-priority, 0x78, 10, -1
-code_count, 0x88, 11, -1
-code, 0x90, 12, -1
-reason_count, 0x98, 13, -1
-reason, 0xa0, 14, -1
-documentation_count, 0xa8, 15, -1
-documentation, 0xb0, 16, -1
-goalId_count, 0xb8, 17, -1
-goalId, 0xc0, 18, -1
-subjectCodeableConcept, 0xd0, 20, 0
-subjectReference, 0xd0, 20, 1
-trigger_count, 0xd8, 21, -1
-trigger, 0xe0, 22, -1
-condition_count, 0xe8, 23, -1
-condition, 0xf0, 24, -1
-input_count, 0xf8, 25, -1
-input, 0x100, 26, -1
-output_count, 0x108, 27, -1
-output, 0x110, 28, -1
-relatedAction_count, 0x118, 29, -1
-relatedAction, 0x120, 30, -1
-timingDateTime, 0x130, 32, 0
-timingAge, 0x130, 32, 1
-timingPeriod, 0x130, 32, 2
-timingDuration, 0x130, 32, 3
-timingRange, 0x130, 32, 4
-timingTiming, 0x130, 32, 5
-participant_count, 0x140, 33, -1
-participant, 0x148, 34, -1
-type, 0x150, 35, -1
-groupingBehavior, 0x158, 36, -1
-selectionBehavior, 0x168, 37, -1
-requiredBehavior, 0x178, 38, -1
-precheckBehavior, 0x188, 39, -1
-cardinalityBehavior, 0x198, 40, -1
-definitionCanonical, 0x1b0, 42, 0
-definitionUri, 0x1b0, 42, 1
-transform, 0x1c0, 43, -1
-dynamicValue_count, 0x1d0, 44, -1
-dynamicValue, 0x1d8, 45, -1
-action_count, 0x1e0, 46, -1
-action, 0x1e8, 47, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+prefix, 0x38, 6, -1, {(U8*)"prefix", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+title, 0x48, 7, -1, {(U8*)"title", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+description, 0x58, 8, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+textEquivalent, 0x68, 9, -1, {(U8*)"textEquivalent", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+priority, 0x78, 10, -1, {(U8*)"priority", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+code_count, 0x88, 11, -1, {(U8*)"code_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+code, 0x90, 12, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+reason_count, 0x98, 13, -1, {(U8*)"reason_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+reason, 0xa0, 14, -1, {(U8*)"reason", 6}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+documentation_count, 0xa8, 15, -1, {(U8*)"documentation_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+documentation, 0xb0, 16, -1, {(U8*)"documentation", 13}, fhir_deserialize::ResourceType::RelatedArtifact, 0, fhir_deserialize::ResourceType::Unknown
+goalId_count, 0xb8, 17, -1, {(U8*)"goalId_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+goalId, 0xc0, 18, -1, {(U8*)"goalId", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+subjectCodeableConcept, 0xd0, 20, 0, {(U8*)"subject", 7}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::CodeableConcept
+subjectReference, 0xd0, 20, 1, {(U8*)"subject", 7}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::Reference
+trigger_count, 0xd8, 21, -1, {(U8*)"trigger_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+trigger, 0xe0, 22, -1, {(U8*)"trigger", 7}, fhir_deserialize::ResourceType::TriggerDefinition, 0, fhir_deserialize::ResourceType::Unknown
+condition_count, 0xe8, 23, -1, {(U8*)"condition_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+condition, 0xf0, 24, -1, {(U8*)"condition", 9}, fhir_deserialize::ResourceType::PlanDefinition_Action_Condition, 0, fhir_deserialize::ResourceType::Unknown
+input_count, 0xf8, 25, -1, {(U8*)"input_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+input, 0x100, 26, -1, {(U8*)"input", 5}, fhir_deserialize::ResourceType::DataRequirement, 0, fhir_deserialize::ResourceType::Unknown
+output_count, 0x108, 27, -1, {(U8*)"output_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+output, 0x110, 28, -1, {(U8*)"output", 6}, fhir_deserialize::ResourceType::DataRequirement, 0, fhir_deserialize::ResourceType::Unknown
+relatedAction_count, 0x118, 29, -1, {(U8*)"relatedAction_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+relatedAction, 0x120, 30, -1, {(U8*)"relatedAction", 13}, fhir_deserialize::ResourceType::PlanDefinition_Action_RelatedAction, 0, fhir_deserialize::ResourceType::Unknown
+timingDateTime, 0x130, 32, 0, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Unknown, 17, fhir_deserialize::ResourceType::Unknown
+timingAge, 0x130, 32, 1, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Age
+timingPeriod, 0x130, 32, 2, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Period
+timingDuration, 0x130, 32, 3, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Duration
+timingRange, 0x130, 32, 4, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Range
+timingTiming, 0x130, 32, 5, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Timing
+participant_count, 0x140, 33, -1, {(U8*)"participant_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+participant, 0x148, 34, -1, {(U8*)"participant", 11}, fhir_deserialize::ResourceType::PlanDefinition_Action_Participant, 0, fhir_deserialize::ResourceType::Unknown
+type, 0x150, 35, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+groupingBehavior, 0x158, 36, -1, {(U8*)"groupingBehavior", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+selectionBehavior, 0x168, 37, -1, {(U8*)"selectionBehavior", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+requiredBehavior, 0x178, 38, -1, {(U8*)"requiredBehavior", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+precheckBehavior, 0x188, 39, -1, {(U8*)"precheckBehavior", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+cardinalityBehavior, 0x198, 40, -1, {(U8*)"cardinalityBehavior", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+definitionCanonical, 0x1b0, 42, 0, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Unknown, 2, fhir_deserialize::ResourceType::Unknown
+definitionUri, 0x1b0, 42, 1, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Unknown, 9, fhir_deserialize::ResourceType::Unknown
+transform, 0x1c0, 43, -1, {(U8*)"transform", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+dynamicValue_count, 0x1d0, 44, -1, {(U8*)"dynamicValue_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+dynamicValue, 0x1d8, 45, -1, {(U8*)"dynamicValue", 12}, fhir_deserialize::ResourceType::PlanDefinition_Action_DynamicValue, 0, fhir_deserialize::ResourceType::Unknown
+action_count, 0x1e0, 46, -1, {(U8*)"action_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+action, 0x1e8, 47, -1, {(U8*)"action", 6}, fhir_deserialize::ResourceType::PlanDefinition_Action, 0, fhir_deserialize::ResourceType::Unknown

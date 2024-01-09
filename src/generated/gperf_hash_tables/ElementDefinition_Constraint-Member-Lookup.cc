@@ -98,27 +98,27 @@ ElementDefinition_Constraint_Gperf::hash (register const char *str, register uns
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ElementDefinition_Constraint[] =
   {
 #line 11 "./src/generated/gperf_class_files/ElementDefinition_Constraint.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ElementDefinition_Constraint.gperf"
-    {"key", 0x28, 4, -1},
+    {"key", 0x28, 4, -1, {(U8*)"key", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ElementDefinition_Constraint.gperf"
-    {"human", 0x58, 7, -1},
+    {"human", 0x58, 7, -1, {(U8*)"human", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/ElementDefinition_Constraint.gperf"
-    {"source", 0x88, 10, -1},
+    {"source", 0x88, 10, -1, {(U8*)"source", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ElementDefinition_Constraint.gperf"
-    {"severity", 0x48, 6, -1},
+    {"severity", 0x48, 6, -1, {(U8*)"severity", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ElementDefinition_Constraint.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ElementDefinition_Constraint.gperf"
-    {"expression", 0x68, 8, -1},
+    {"expression", 0x68, 8, -1, {(U8*)"expression", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ElementDefinition_Constraint.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ElementDefinition_Constraint.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ElementDefinition_Constraint.gperf"
-    {"requirements", 0x38, 5, -1},
+    {"requirements", 0x38, 5, -1, {(U8*)"requirements", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ElementDefinition_Constraint.gperf"
-    {"xpath", 0x78, 9, -1}
+    {"xpath", 0x78, 9, -1, {(U8*)"xpath", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

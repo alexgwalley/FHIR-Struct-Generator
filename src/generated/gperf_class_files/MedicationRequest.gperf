@@ -7,62 +7,62 @@
 %define class-name MedicationRequest_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-meta, 0x18, 2, -1
-implicitRules, 0x20, 3, -1
-language, 0x30, 4, -1
-text, 0x40, 5, -1
-contained_count, 0x48, 6, -1
-contained, 0x50, 7, -1
-extension_count, 0x58, 8, -1
-extension, 0x60, 9, -1
-modifierExtension_count, 0x68, 10, -1
-modifierExtension, 0x70, 11, -1
-identifier_count, 0x78, 12, -1
-identifier, 0x80, 13, -1
-status, 0x88, 14, -1
-statusReason, 0x98, 15, -1
-intent, 0xa0, 16, -1
-category_count, 0xb0, 17, -1
-category, 0xb8, 18, -1
-priority, 0xc0, 19, -1
-doNotPerform, 0xd0, 20, -1
-reportedBoolean, 0xd8, 22, 0
-reportedReference, 0xd8, 22, 1
-medicationCodeableConcept, 0xe8, 24, 0
-medicationReference, 0xe8, 24, 1
-subject, 0xf0, 25, -1
-encounter, 0xf8, 26, -1
-supportingInformation_count, 0x100, 27, -1
-supportingInformation, 0x108, 28, -1
-authoredOn, 0x110, 29, -1
-requester, 0x120, 30, -1
-performer, 0x128, 31, -1
-performerType, 0x130, 32, -1
-recorder, 0x138, 33, -1
-reasonCode_count, 0x140, 34, -1
-reasonCode, 0x148, 35, -1
-reasonReference_count, 0x150, 36, -1
-reasonReference, 0x158, 37, -1
-instantiatesCanonical_count, 0x160, 38, -1
-instantiatesCanonical, 0x168, 39, -1
-instantiatesUri_count, 0x170, 40, -1
-instantiatesUri, 0x178, 41, -1
-basedOn_count, 0x180, 42, -1
-basedOn, 0x188, 43, -1
-groupIdentifier, 0x190, 44, -1
-courseOfTherapyType, 0x198, 45, -1
-insurance_count, 0x1a0, 46, -1
-insurance, 0x1a8, 47, -1
-note_count, 0x1b0, 48, -1
-note, 0x1b8, 49, -1
-dosageInstruction_count, 0x1c0, 50, -1
-dosageInstruction, 0x1c8, 51, -1
-dispenseRequest, 0x1d0, 52, -1
-substitution, 0x1d8, 53, -1
-priorPrescription, 0x1e0, 54, -1
-detectedIssue_count, 0x1e8, 55, -1
-detectedIssue, 0x1f0, 56, -1
-eventHistory_count, 0x1f8, 57, -1
-eventHistory, 0x200, 58, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+meta, 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown
+implicitRules, 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+language, 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+text, 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown
+contained_count, 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+contained, 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+identifier_count, 0x78, 12, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+identifier, 0x80, 13, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown
+status, 0x88, 14, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+statusReason, 0x98, 15, -1, {(U8*)"statusReason", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+intent, 0xa0, 16, -1, {(U8*)"intent", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+category_count, 0xb0, 17, -1, {(U8*)"category_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+category, 0xb8, 18, -1, {(U8*)"category", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+priority, 0xc0, 19, -1, {(U8*)"priority", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+doNotPerform, 0xd0, 20, -1, {(U8*)"doNotPerform", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+reportedBoolean, 0xd8, 22, 0, {(U8*)"reported", 8}, fhir_deserialize::ResourceType::Unknown, 12, fhir_deserialize::ResourceType::Unknown
+reportedReference, 0xd8, 22, 1, {(U8*)"reported", 8}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Reference
+medicationCodeableConcept, 0xe8, 24, 0, {(U8*)"medication", 10}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::CodeableConcept
+medicationReference, 0xe8, 24, 1, {(U8*)"medication", 10}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::Reference
+subject, 0xf0, 25, -1, {(U8*)"subject", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+encounter, 0xf8, 26, -1, {(U8*)"encounter", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+supportingInformation_count, 0x100, 27, -1, {(U8*)"supportingInformation_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+supportingInformation, 0x108, 28, -1, {(U8*)"supportingInformation", 21}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+authoredOn, 0x110, 29, -1, {(U8*)"authoredOn", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+requester, 0x120, 30, -1, {(U8*)"requester", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+performer, 0x128, 31, -1, {(U8*)"performer", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+performerType, 0x130, 32, -1, {(U8*)"performerType", 13}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+recorder, 0x138, 33, -1, {(U8*)"recorder", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+reasonCode_count, 0x140, 34, -1, {(U8*)"reasonCode_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+reasonCode, 0x148, 35, -1, {(U8*)"reasonCode", 10}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+reasonReference_count, 0x150, 36, -1, {(U8*)"reasonReference_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+reasonReference, 0x158, 37, -1, {(U8*)"reasonReference", 15}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+instantiatesCanonical_count, 0x160, 38, -1, {(U8*)"instantiatesCanonical_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+instantiatesCanonical, 0x168, 39, -1, {(U8*)"instantiatesCanonical", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+instantiatesUri_count, 0x170, 40, -1, {(U8*)"instantiatesUri_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+instantiatesUri, 0x178, 41, -1, {(U8*)"instantiatesUri", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+basedOn_count, 0x180, 42, -1, {(U8*)"basedOn_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+basedOn, 0x188, 43, -1, {(U8*)"basedOn", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+groupIdentifier, 0x190, 44, -1, {(U8*)"groupIdentifier", 15}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown
+courseOfTherapyType, 0x198, 45, -1, {(U8*)"courseOfTherapyType", 19}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+insurance_count, 0x1a0, 46, -1, {(U8*)"insurance_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+insurance, 0x1a8, 47, -1, {(U8*)"insurance", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+note_count, 0x1b0, 48, -1, {(U8*)"note_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+note, 0x1b8, 49, -1, {(U8*)"note", 4}, fhir_deserialize::ResourceType::Annotation, 0, fhir_deserialize::ResourceType::Unknown
+dosageInstruction_count, 0x1c0, 50, -1, {(U8*)"dosageInstruction_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+dosageInstruction, 0x1c8, 51, -1, {(U8*)"dosageInstruction", 17}, fhir_deserialize::ResourceType::Dosage, 0, fhir_deserialize::ResourceType::Unknown
+dispenseRequest, 0x1d0, 52, -1, {(U8*)"dispenseRequest", 15}, fhir_deserialize::ResourceType::MedicationRequest_DispenseRequest, 0, fhir_deserialize::ResourceType::Unknown
+substitution, 0x1d8, 53, -1, {(U8*)"substitution", 12}, fhir_deserialize::ResourceType::MedicationRequest_Substitution, 0, fhir_deserialize::ResourceType::Unknown
+priorPrescription, 0x1e0, 54, -1, {(U8*)"priorPrescription", 17}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+detectedIssue_count, 0x1e8, 55, -1, {(U8*)"detectedIssue_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+detectedIssue, 0x1f0, 56, -1, {(U8*)"detectedIssue", 13}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+eventHistory_count, 0x1f8, 57, -1, {(U8*)"eventHistory_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+eventHistory, 0x200, 58, -1, {(U8*)"eventHistory", 12}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown

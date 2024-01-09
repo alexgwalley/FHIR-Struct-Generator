@@ -101,79 +101,79 @@ ExampleScenario_Gperf::hash (register const char *str, register unsigned int len
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ExampleScenario[] =
   {
 #line 11 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"url", 0x78, 12, -1},
+    {"url", 0x78, 12, -1, {(U8*)"url", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"status", 0xb8, 17, -1},
+    {"status", 0xb8, 17, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"contact", 0xf8, 22, -1},
+    {"contact", 0xf8, 22, -1, {(U8*)"contact", 7}, fhir_deserialize::ResourceType::ContactDetail, 0, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"instance", 0x158, 32, -1},
+    {"instance", 0x158, 32, -1, {(U8*)"instance", 8}, fhir_deserialize::ResourceType::ExampleScenario_Instance, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"useContext", 0x108, 24, -1},
+    {"useContext", 0x108, 24, -1, {(U8*)"useContext", 10}, fhir_deserialize::ResourceType::UsageContext, 0, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"process", 0x168, 34, -1},
+    {"process", 0x168, 34, -1, {(U8*)"process", 7}, fhir_deserialize::ResourceType::ExampleScenario_Process, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"contact_count", 0xf0, 21, -1},
+    {"contact_count", 0xf0, 21, -1, {(U8*)"contact_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 41 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"instance_count", 0x150, 31, -1},
+    {"instance_count", 0x150, 31, -1, {(U8*)"instance_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"useContext_count", 0x100, 23, -1},
+    {"useContext_count", 0x100, 23, -1, {(U8*)"useContext_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"purpose", 0x130, 28, -1},
+    {"purpose", 0x130, 28, -1, {(U8*)"purpose", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 43 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"process_count", 0x160, 33, -1},
+    {"process_count", 0x160, 33, -1, {(U8*)"process_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"actor", 0x148, 30, -1},
+    {"actor", 0x148, 30, -1, {(U8*)"actor", 5}, fhir_deserialize::ResourceType::ExampleScenario_Actor, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"experimental", 0xc8, 18, -1},
+    {"experimental", 0xc8, 18, -1, {(U8*)"experimental", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"actor_count", 0x140, 29, -1},
+    {"actor_count", 0x140, 29, -1, {(U8*)"actor_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 46 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"workflow", 0x178, 36, -1},
+    {"workflow", 0x178, 36, -1, {(U8*)"workflow", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"name", 0xa8, 16, -1},
+    {"name", 0xa8, 16, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"identifier", 0x90, 14, -1},
+    {"identifier", 0x90, 14, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"version", 0x98, 15, -1},
+    {"version", 0x98, 15, -1, {(U8*)"version", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 45 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"workflow_count", 0x170, 35, -1},
+    {"workflow_count", 0x170, 35, -1, {(U8*)"workflow_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"identifier_count", 0x88, 13, -1},
+    {"identifier_count", 0x88, 13, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"jurisdiction", 0x118, 26, -1},
+    {"jurisdiction", 0x118, 26, -1, {(U8*)"jurisdiction", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"publisher", 0xe0, 20, -1},
+    {"publisher", 0xe0, 20, -1, {(U8*)"publisher", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"jurisdiction_count", 0x110, 25, -1},
+    {"jurisdiction_count", 0x110, 25, -1, {(U8*)"jurisdiction_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"copyright", 0x120, 27, -1},
+    {"copyright", 0x120, 27, -1, {(U8*)"copyright", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/ExampleScenario.gperf"
-    {"date", 0xd0, 19, -1}
+    {"date", 0xd0, 19, -1, {(U8*)"date", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

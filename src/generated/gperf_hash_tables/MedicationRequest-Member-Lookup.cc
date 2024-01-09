@@ -112,123 +112,123 @@ MedicationRequest_Gperf::hash (register const char *str, register unsigned int l
 static const struct fhir_deserialize::MemberNameAndOffset word_array_MedicationRequest[] =
   {
 #line 12 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 53 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"basedOn", 0x188, 43, -1},
+    {"basedOn", 0x188, 43, -1, {(U8*)"basedOn", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 45 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"reasonCode", 0x148, 35, -1},
+    {"reasonCode", 0x148, 35, -1, {(U8*)"reasonCode", 10}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 63 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"substitution", 0x1d8, 53, -1},
+    {"substitution", 0x1d8, 53, -1, {(U8*)"substitution", 12}, fhir_deserialize::ResourceType::MedicationRequest_Substitution, 0, fhir_deserialize::ResourceType::Unknown},
 #line 43 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"recorder", 0x138, 33, -1},
+    {"recorder", 0x138, 33, -1, {(U8*)"recorder", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"encounter", 0xf8, 26, -1},
+    {"encounter", 0xf8, 26, -1, {(U8*)"encounter", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"authoredOn", 0x110, 29, -1},
+    {"authoredOn", 0x110, 29, -1, {(U8*)"authoredOn", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 59 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"note", 0x1b8, 49, -1},
+    {"note", 0x1b8, 49, -1, {(U8*)"note", 4}, fhir_deserialize::ResourceType::Annotation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"reportedBoolean", 0xd8, 22, 0},
+    {"reportedBoolean", 0xd8, 22, 0, {(U8*)"reported", 8}, fhir_deserialize::ResourceType::Unknown, 12, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"reasonCode_count", 0x140, 34, -1},
+    {"reasonCode_count", 0x140, 34, -1, {(U8*)"reasonCode_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"reportedReference", 0xd8, 22, 1},
+    {"reportedReference", 0xd8, 22, 1, {(U8*)"reported", 8}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Reference},
 #line 29 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"priority", 0xc0, 19, -1},
+    {"priority", 0xc0, 19, -1, {(U8*)"priority", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 58 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"note_count", 0x1b0, 48, -1},
+    {"note_count", 0x1b0, 48, -1, {(U8*)"note_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 68 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"eventHistory", 0x200, 58, -1},
+    {"eventHistory", 0x200, 58, -1, {(U8*)"eventHistory", 12}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 66 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"detectedIssue", 0x1f0, 56, -1},
+    {"detectedIssue", 0x1f0, 56, -1, {(U8*)"detectedIssue", 13}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"requester", 0x120, 30, -1},
+    {"requester", 0x120, 30, -1, {(U8*)"requester", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"reasonReference", 0x158, 37, -1},
+    {"reasonReference", 0x158, 37, -1, {(U8*)"reasonReference", 15}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"doNotPerform", 0xd0, 20, -1},
+    {"doNotPerform", 0xd0, 20, -1, {(U8*)"doNotPerform", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 67 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"eventHistory_count", 0x1f8, 57, -1},
+    {"eventHistory_count", 0x1f8, 57, -1, {(U8*)"eventHistory_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 65 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"detectedIssue_count", 0x1e8, 55, -1},
+    {"detectedIssue_count", 0x1e8, 55, -1, {(U8*)"detectedIssue_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 46 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"reasonReference_count", 0x150, 36, -1},
+    {"reasonReference_count", 0x150, 36, -1, {(U8*)"reasonReference_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 11 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"category", 0xb8, 18, -1},
+    {"category", 0xb8, 18, -1, {(U8*)"category", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 41 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"performer", 0x128, 31, -1},
+    {"performer", 0x128, 31, -1, {(U8*)"performer", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 62 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"dispenseRequest", 0x1d0, 52, -1},
+    {"dispenseRequest", 0x1d0, 52, -1, {(U8*)"dispenseRequest", 15}, fhir_deserialize::ResourceType::MedicationRequest_DispenseRequest, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"intent", 0xa0, 16, -1},
+    {"intent", 0xa0, 16, -1, {(U8*)"intent", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 64 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"priorPrescription", 0x1e0, 54, -1},
+    {"priorPrescription", 0x1e0, 54, -1, {(U8*)"priorPrescription", 17}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"performerType", 0x130, 32, -1},
+    {"performerType", 0x130, 32, -1, {(U8*)"performerType", 13}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"status", 0x88, 14, -1},
+    {"status", 0x88, 14, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"subject", 0xf0, 25, -1},
+    {"subject", 0xf0, 25, -1, {(U8*)"subject", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 55 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"courseOfTherapyType", 0x198, 45, -1},
+    {"courseOfTherapyType", 0x198, 45, -1, {(U8*)"courseOfTherapyType", 19}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"supportingInformation", 0x108, 28, -1},
+    {"supportingInformation", 0x108, 28, -1, {(U8*)"supportingInformation", 21}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"statusReason", 0x98, 15, -1},
+    {"statusReason", 0x98, 15, -1, {(U8*)"statusReason", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 52 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"basedOn_count", 0x180, 42, -1},
+    {"basedOn_count", 0x180, 42, -1, {(U8*)"basedOn_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"supportingInformation_count", 0x100, 27, -1},
+    {"supportingInformation_count", 0x100, 27, -1, {(U8*)"supportingInformation_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"category_count", 0xb0, 17, -1},
+    {"category_count", 0xb0, 17, -1, {(U8*)"category_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"identifier", 0x80, 13, -1},
+    {"identifier", 0x80, 13, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 61 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"dosageInstruction", 0x1c8, 51, -1},
+    {"dosageInstruction", 0x1c8, 51, -1, {(U8*)"dosageInstruction", 17}, fhir_deserialize::ResourceType::Dosage, 0, fhir_deserialize::ResourceType::Unknown},
 #line 57 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"insurance", 0x1a8, 47, -1},
+    {"insurance", 0x1a8, 47, -1, {(U8*)"insurance", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 60 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"dosageInstruction_count", 0x1c0, 50, -1},
+    {"dosageInstruction_count", 0x1c0, 50, -1, {(U8*)"dosageInstruction_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 54 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"groupIdentifier", 0x190, 44, -1},
+    {"groupIdentifier", 0x190, 44, -1, {(U8*)"groupIdentifier", 15}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"identifier_count", 0x78, 12, -1},
+    {"identifier_count", 0x78, 12, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"medicationReference", 0xe8, 24, 1},
+    {"medicationReference", 0xe8, 24, 1, {(U8*)"medication", 10}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::Reference},
 #line 33 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"medicationCodeableConcept", 0xe8, 24, 0},
+    {"medicationCodeableConcept", 0xe8, 24, 0, {(U8*)"medication", 10}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::CodeableConcept},
 #line 17 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 56 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"insurance_count", 0x1a0, 46, -1},
+    {"insurance_count", 0x1a0, 46, -1, {(U8*)"insurance_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 51 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"instantiatesUri", 0x178, 41, -1},
+    {"instantiatesUri", 0x178, 41, -1, {(U8*)"instantiatesUri", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 49 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"instantiatesCanonical", 0x168, 39, -1},
+    {"instantiatesCanonical", 0x168, 39, -1, {(U8*)"instantiatesCanonical", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 50 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"instantiatesUri_count", 0x170, 40, -1},
+    {"instantiatesUri_count", 0x170, 40, -1, {(U8*)"instantiatesUri_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"instantiatesCanonical_count", 0x160, 38, -1},
+    {"instantiatesCanonical_count", 0x160, 38, -1, {(U8*)"instantiatesCanonical_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/MedicationRequest.gperf"
-    {"contained_count", 0x48, 6, -1}
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

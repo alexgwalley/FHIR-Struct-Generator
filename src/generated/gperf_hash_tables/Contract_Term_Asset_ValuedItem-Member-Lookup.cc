@@ -88,51 +88,51 @@ Contract_Term_Asset_ValuedItem_Gperf::hash (register const char *str, register u
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Contract_Term_Asset_ValuedItem[] =
   {
 #line 11 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"net", 0x80, 14, -1},
+    {"net", 0x80, 14, -1, {(U8*)"net", 3}, fhir_deserialize::ResourceType::Money, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"points", 0x78, 13, -1},
+    {"points", 0x78, 13, -1, {(U8*)"points", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"quantity", 0x60, 10, -1},
+    {"quantity", 0x60, 10, -1, {(U8*)"quantity", 8}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"recipient", 0xb0, 18, -1},
+    {"recipient", 0xb0, 18, -1, {(U8*)"recipient", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"identifier", 0x48, 8, -1},
+    {"identifier", 0x48, 8, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"responsible", 0xa8, 17, -1},
+    {"responsible", 0xa8, 17, -1, {(U8*)"responsible", 11}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"effectiveTime", 0x50, 9, -1},
+    {"effectiveTime", 0x50, 9, -1, {(U8*)"effectiveTime", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"unitPrice", 0x68, 11, -1},
+    {"unitPrice", 0x68, 11, -1, {(U8*)"unitPrice", 9}, fhir_deserialize::ResourceType::Money, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"linkId", 0xc0, 20, -1},
+    {"linkId", 0xc0, 20, -1, {(U8*)"linkId", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"securityLabelNumber", 0xd0, 22, -1},
+    {"securityLabelNumber", 0xd0, 22, -1, {(U8*)"securityLabelNumber", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"entityReference", 0x40, 7, 1},
+    {"entityReference", 0x40, 7, 1, {(U8*)"entity", 6}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::Reference},
 #line 29 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"linkId_count", 0xb8, 19, -1},
+    {"linkId_count", 0xb8, 19, -1, {(U8*)"linkId_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"securityLabelNumber_count", 0xc8, 21, -1},
+    {"securityLabelNumber_count", 0xc8, 21, -1, {(U8*)"securityLabelNumber_count", 25}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"entityCodeableConcept", 0x40, 7, 0},
+    {"entityCodeableConcept", 0x40, 7, 0, {(U8*)"entity", 6}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::CodeableConcept},
 #line 12 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"factor", 0x70, 12, -1},
+    {"factor", 0x70, 12, -1, {(U8*)"factor", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"payment", 0x88, 15, -1},
+    {"payment", 0x88, 15, -1, {(U8*)"payment", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Contract_Term_Asset_ValuedItem.gperf"
-    {"paymentDate", 0x98, 16, -1}
+    {"paymentDate", 0x98, 16, -1, {(U8*)"paymentDate", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

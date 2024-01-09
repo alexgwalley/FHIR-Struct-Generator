@@ -7,17 +7,17 @@
 %define class-name ImplementationGuide_Definition_Resource_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-reference, 0x38, 6, -1
-fhirVersion_count, 0x40, 7, -1
-fhirVersion, 0x48, 8, -1
-name, 0x50, 9, -1
-description, 0x60, 10, -1
-exampleBoolean, 0x78, 12, 0
-exampleCanonical, 0x78, 12, 1
-groupingId, 0x88, 13, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+reference, 0x38, 6, -1, {(U8*)"reference", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+fhirVersion_count, 0x40, 7, -1, {(U8*)"fhirVersion_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+fhirVersion, 0x48, 8, -1, {(U8*)"fhirVersion", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+name, 0x50, 9, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+description, 0x60, 10, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+exampleBoolean, 0x78, 12, 0, {(U8*)"example", 7}, fhir_deserialize::ResourceType::Unknown, 12, fhir_deserialize::ResourceType::Unknown
+exampleCanonical, 0x78, 12, 1, {(U8*)"example", 7}, fhir_deserialize::ResourceType::Unknown, 2, fhir_deserialize::ResourceType::Unknown
+groupingId, 0x88, 13, -1, {(U8*)"groupingId", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown

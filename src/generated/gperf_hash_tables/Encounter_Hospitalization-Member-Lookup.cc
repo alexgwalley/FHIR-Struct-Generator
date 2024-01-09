@@ -98,41 +98,41 @@ Encounter_Hospitalization_Gperf::hash (register const char *str, register unsign
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Encounter_Hospitalization[] =
   {
 #line 11 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"origin", 0x40, 7, -1},
+    {"origin", 0x40, 7, -1, {(U8*)"origin", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"admitSource", 0x48, 8, -1},
+    {"admitSource", 0x48, 8, -1, {(U8*)"admitSource", 11}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"dietPreference", 0x60, 11, -1},
+    {"dietPreference", 0x60, 11, -1, {(U8*)"dietPreference", 14}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"specialCourtesy", 0x70, 13, -1},
+    {"specialCourtesy", 0x70, 13, -1, {(U8*)"specialCourtesy", 15}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"destination", 0x88, 16, -1},
+    {"destination", 0x88, 16, -1, {(U8*)"destination", 11}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"specialArrangement", 0x80, 15, -1},
+    {"specialArrangement", 0x80, 15, -1, {(U8*)"specialArrangement", 18}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"dietPreference_count", 0x58, 10, -1},
+    {"dietPreference_count", 0x58, 10, -1, {(U8*)"dietPreference_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"specialCourtesy_count", 0x68, 12, -1},
+    {"specialCourtesy_count", 0x68, 12, -1, {(U8*)"specialCourtesy_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"preAdmissionIdentifier", 0x38, 6, -1},
+    {"preAdmissionIdentifier", 0x38, 6, -1, {(U8*)"preAdmissionIdentifier", 22}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"specialArrangement_count", 0x78, 14, -1},
+    {"specialArrangement_count", 0x78, 14, -1, {(U8*)"specialArrangement_count", 24}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"dischargeDisposition", 0x90, 17, -1},
+    {"dischargeDisposition", 0x90, 17, -1, {(U8*)"dischargeDisposition", 20}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"reAdmission", 0x50, 9, -1},
+    {"reAdmission", 0x50, 9, -1, {(U8*)"reAdmission", 11}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Encounter_Hospitalization.gperf"
-    {"extension_count", 0x18, 2, -1}
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

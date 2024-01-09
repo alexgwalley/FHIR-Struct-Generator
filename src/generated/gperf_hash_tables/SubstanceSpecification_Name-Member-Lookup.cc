@@ -98,53 +98,53 @@ SubstanceSpecification_Name_Gperf::hash (register const char *str, register unsi
 static const struct fhir_deserialize::MemberNameAndOffset word_array_SubstanceSpecification_Name[] =
   {
 #line 11 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"name", 0x38, 6, -1},
+    {"name", 0x38, 6, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"domain", 0x78, 13, -1},
+    {"domain", 0x78, 13, -1, {(U8*)"domain", 6}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"synonym", 0x98, 17, -1},
+    {"synonym", 0x98, 17, -1, {(U8*)"synonym", 7}, fhir_deserialize::ResourceType::SubstanceSpecification_Name, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"language", 0x68, 11, -1},
+    {"language", 0x68, 11, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"status", 0x50, 8, -1},
+    {"status", 0x50, 8, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"domain_count", 0x70, 12, -1},
+    {"domain_count", 0x70, 12, -1, {(U8*)"domain_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"synonym_count", 0x90, 16, -1},
+    {"synonym_count", 0x90, 16, -1, {(U8*)"synonym_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"language_count", 0x60, 10, -1},
+    {"language_count", 0x60, 10, -1, {(U8*)"language_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"translation", 0xa8, 19, -1},
+    {"translation", 0xa8, 19, -1, {(U8*)"translation", 11}, fhir_deserialize::ResourceType::SubstanceSpecification_Name, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"jurisdiction", 0x88, 15, -1},
+    {"jurisdiction", 0x88, 15, -1, {(U8*)"jurisdiction", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"official", 0xb8, 21, -1},
+    {"official", 0xb8, 21, -1, {(U8*)"official", 8}, fhir_deserialize::ResourceType::SubstanceSpecification_Name_Official, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"type", 0x48, 7, -1},
+    {"type", 0x48, 7, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"source", 0xc8, 23, -1},
+    {"source", 0xc8, 23, -1, {(U8*)"source", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"translation_count", 0xa0, 18, -1},
+    {"translation_count", 0xa0, 18, -1, {(U8*)"translation_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"jurisdiction_count", 0x80, 14, -1},
+    {"jurisdiction_count", 0x80, 14, -1, {(U8*)"jurisdiction_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"official_count", 0xb0, 20, -1},
+    {"official_count", 0xb0, 20, -1, {(U8*)"official_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"source_count", 0xc0, 22, -1},
+    {"source_count", 0xc0, 22, -1, {(U8*)"source_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"preferred", 0x58, 9, -1},
+    {"preferred", 0x58, 9, -1, {(U8*)"preferred", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/SubstanceSpecification_Name.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

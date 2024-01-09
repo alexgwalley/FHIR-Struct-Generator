@@ -104,41 +104,41 @@ SubstanceSpecification_Relationship_Gperf::hash (register const char *str, regis
 static const struct fhir_deserialize::MemberNameAndOffset word_array_SubstanceSpecification_Relationship[] =
   {
 #line 11 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"source", 0x80, 15, -1},
+    {"source", 0x80, 15, -1, {(U8*)"source", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"isDefining", 0x50, 9, -1},
+    {"isDefining", 0x50, 9, -1, {(U8*)"isDefining", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"amountRange", 0x58, 11, 1},
+    {"amountRange", 0x58, 11, 1, {(U8*)"amount", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Range},
 #line 18 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"relationship", 0x48, 8, -1},
+    {"relationship", 0x48, 8, -1, {(U8*)"relationship", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"amountQuantity", 0x58, 11, 0},
+    {"amountQuantity", 0x58, 11, 0, {(U8*)"amount", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Quantity},
 #line 12 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"amountRatio", 0x58, 11, 2},
+    {"amountRatio", 0x58, 11, 2, {(U8*)"amount", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Ratio},
 #line 23 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"amountString", 0x58, 11, 3},
+    {"amountString", 0x58, 11, 3, {(U8*)"amount", 6}, fhir_deserialize::ResourceType::Quantity, 7, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"amountType", 0x70, 13, -1},
+    {"amountType", 0x70, 13, -1, {(U8*)"amountType", 10}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"substanceReference", 0x40, 7, 0},
+    {"substanceReference", 0x40, 7, 0, {(U8*)"substance", 9}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::Reference},
 #line 24 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"amountRatioLowLimit", 0x68, 12, -1},
+    {"amountRatioLowLimit", 0x68, 12, -1, {(U8*)"amountRatioLowLimit", 19}, fhir_deserialize::ResourceType::Ratio, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"source_count", 0x78, 14, -1},
+    {"source_count", 0x78, 14, -1, {(U8*)"source_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"substanceCodeableConcept", 0x40, 7, 1},
+    {"substanceCodeableConcept", 0x40, 7, 1, {(U8*)"substance", 9}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::CodeableConcept},
 #line 10 "./src/generated/gperf_class_files/SubstanceSpecification_Relationship.gperf"
-    {"resourceType", 0x0, 0, -1}
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

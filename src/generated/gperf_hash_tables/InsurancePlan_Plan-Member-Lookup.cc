@@ -88,39 +88,39 @@ InsurancePlan_Plan_Gperf::hash (register const char *str, register unsigned int 
 static const struct fhir_deserialize::MemberNameAndOffset word_array_InsurancePlan_Plan[] =
   {
 #line 11 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"type", 0x48, 8, -1},
+    {"type", 0x48, 8, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"network", 0x68, 12, -1},
+    {"network", 0x68, 12, -1, {(U8*)"network", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"identifier", 0x40, 7, -1},
+    {"identifier", 0x40, 7, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"specificCost", 0x88, 16, -1},
+    {"specificCost", 0x88, 16, -1, {(U8*)"specificCost", 12}, fhir_deserialize::ResourceType::InsurancePlan_Plan_SpecificCost, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"network_count", 0x60, 11, -1},
+    {"network_count", 0x60, 11, -1, {(U8*)"network_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"identifier_count", 0x38, 6, -1},
+    {"identifier_count", 0x38, 6, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"specificCost_count", 0x80, 15, -1},
+    {"specificCost_count", 0x80, 15, -1, {(U8*)"specificCost_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"generalCost", 0x78, 14, -1},
+    {"generalCost", 0x78, 14, -1, {(U8*)"generalCost", 11}, fhir_deserialize::ResourceType::InsurancePlan_Plan_GeneralCost, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"coverageArea", 0x58, 10, -1},
+    {"coverageArea", 0x58, 10, -1, {(U8*)"coverageArea", 12}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"generalCost_count", 0x70, 13, -1},
+    {"generalCost_count", 0x70, 13, -1, {(U8*)"generalCost_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"coverageArea_count", 0x50, 9, -1},
+    {"coverageArea_count", 0x50, 9, -1, {(U8*)"coverageArea_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/InsurancePlan_Plan.gperf"
-    {"resourceType", 0x0, 0, -1}
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

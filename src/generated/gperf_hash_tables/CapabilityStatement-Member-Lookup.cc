@@ -101,103 +101,103 @@ CapabilityStatement_Gperf::hash (register const char *str, register unsigned int
 static const struct fhir_deserialize::MemberNameAndOffset word_array_CapabilityStatement[] =
   {
 #line 11 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"title", 0xa8, 15, -1},
+    {"title", 0xa8, 15, -1, {(U8*)"title", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"status", 0xb8, 16, -1},
+    {"status", 0xb8, 16, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"purpose", 0x130, 27, -1},
+    {"purpose", 0x130, 27, -1, {(U8*)"purpose", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"software", 0x180, 34, -1},
+    {"software", 0x180, 34, -1, {(U8*)"software", 8}, fhir_deserialize::ResourceType::CapabilityStatement_Software, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"publisher", 0xe0, 19, -1},
+    {"publisher", 0xe0, 19, -1, {(U8*)"publisher", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 41 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"instantiates", 0x168, 31, -1},
+    {"instantiates", 0x168, 31, -1, {(U8*)"instantiates", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 45 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"implementation", 0x188, 35, -1},
+    {"implementation", 0x188, 35, -1, {(U8*)"implementation", 14}, fhir_deserialize::ResourceType::CapabilityStatement_Implementation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 43 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"imports", 0x178, 33, -1},
+    {"imports", 0x178, 33, -1, {(U8*)"imports", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"instantiates_count", 0x160, 30, -1},
+    {"instantiates_count", 0x160, 30, -1, {(U8*)"instantiates_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 52 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"implementationGuide", 0x1c8, 42, -1},
+    {"implementationGuide", 0x1c8, 42, -1, {(U8*)"implementationGuide", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"contact", 0xf8, 21, -1},
+    {"contact", 0xf8, 21, -1, {(U8*)"contact", 7}, fhir_deserialize::ResourceType::ContactDetail, 0, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"imports_count", 0x170, 32, -1},
+    {"imports_count", 0x170, 32, -1, {(U8*)"imports_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 51 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"implementationGuide_count", 0x1c0, 41, -1},
+    {"implementationGuide_count", 0x1c0, 41, -1, {(U8*)"implementationGuide_count", 25}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 50 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"patchFormat", 0x1b8, 40, -1},
+    {"patchFormat", 0x1b8, 40, -1, {(U8*)"patchFormat", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"version", 0x88, 13, -1},
+    {"version", 0x88, 13, -1, {(U8*)"version", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"contact_count", 0xf0, 20, -1},
+    {"contact_count", 0xf0, 20, -1, {(U8*)"contact_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 56 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"messaging", 0x1e8, 46, -1},
+    {"messaging", 0x1e8, 46, -1, {(U8*)"messaging", 9}, fhir_deserialize::ResourceType::CapabilityStatement_Messaging, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 49 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"patchFormat_count", 0x1b0, 39, -1},
+    {"patchFormat_count", 0x1b0, 39, -1, {(U8*)"patchFormat_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"url", 0x78, 12, -1},
+    {"url", 0x78, 12, -1, {(U8*)"url", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"date", 0xd0, 18, -1},
+    {"date", 0xd0, 18, -1, {(U8*)"date", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 55 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"messaging_count", 0x1e0, 45, -1},
+    {"messaging_count", 0x1e0, 45, -1, {(U8*)"messaging_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"description", 0x100, 22, -1},
+    {"description", 0x100, 22, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"experimental", 0xc8, 17, -1},
+    {"experimental", 0xc8, 17, -1, {(U8*)"experimental", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 54 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"rest", 0x1d8, 44, -1},
+    {"rest", 0x1d8, 44, -1, {(U8*)"rest", 4}, fhir_deserialize::ResourceType::CapabilityStatement_Rest, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"format", 0x1a8, 38, -1},
+    {"format", 0x1a8, 38, -1, {(U8*)"format", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"copyright", 0x140, 28, -1},
+    {"copyright", 0x140, 28, -1, {(U8*)"copyright", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 53 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"rest_count", 0x1d0, 43, -1},
+    {"rest_count", 0x1d0, 43, -1, {(U8*)"rest_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"format_count", 0x1a0, 37, -1},
+    {"format_count", 0x1a0, 37, -1, {(U8*)"format_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 58 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"document", 0x1f8, 48, -1},
+    {"document", 0x1f8, 48, -1, {(U8*)"document", 8}, fhir_deserialize::ResourceType::CapabilityStatement_Document, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"name", 0x98, 14, -1},
+    {"name", 0x98, 14, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"useContext", 0x118, 24, -1},
+    {"useContext", 0x118, 24, -1, {(U8*)"useContext", 10}, fhir_deserialize::ResourceType::UsageContext, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"jurisdiction", 0x128, 26, -1},
+    {"jurisdiction", 0x128, 26, -1, {(U8*)"jurisdiction", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 57 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"document_count", 0x1f0, 47, -1},
+    {"document_count", 0x1f0, 47, -1, {(U8*)"document_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"useContext_count", 0x110, 23, -1},
+    {"useContext_count", 0x110, 23, -1, {(U8*)"useContext_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"jurisdiction_count", 0x120, 25, -1},
+    {"jurisdiction_count", 0x120, 25, -1, {(U8*)"jurisdiction_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"kind", 0x150, 29, -1},
+    {"kind", 0x150, 29, -1, {(U8*)"kind", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 46 "./src/generated/gperf_class_files/CapabilityStatement.gperf"
-    {"fhirVersion", 0x190, 36, -1}
+    {"fhirVersion", 0x190, 36, -1, {(U8*)"fhirVersion", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

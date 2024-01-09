@@ -100,123 +100,123 @@ EffectEvidenceSynthesis_Gperf::hash (register const char *str, register unsigned
 static const struct fhir_deserialize::MemberNameAndOffset word_array_EffectEvidenceSynthesis[] =
   {
 #line 11 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 59 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"exposure", 0x1f8, 49, -1},
+    {"exposure", 0x1f8, 49, -1, {(U8*)"exposure", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"publisher", 0xe8, 20, -1},
+    {"publisher", 0xe8, 20, -1, {(U8*)"publisher", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 58 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"population", 0x1f0, 48, -1},
+    {"population", 0x1f0, 48, -1, {(U8*)"population", 10}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 49 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"editor", 0x1a8, 39, -1},
+    {"editor", 0x1a8, 39, -1, {(U8*)"editor", 6}, fhir_deserialize::ResourceType::ContactDetail, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"copyright", 0x148, 30, -1},
+    {"copyright", 0x148, 30, -1, {(U8*)"copyright", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"identifier", 0x90, 14, -1},
+    {"identifier", 0x90, 14, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"status", 0xc8, 18, -1},
+    {"status", 0xc8, 18, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"editor_count", 0x1a0, 38, -1},
+    {"editor_count", 0x1a0, 38, -1, {(U8*)"editor_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 60 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"exposureAlternative", 0x200, 50, -1},
+    {"exposureAlternative", 0x200, 50, -1, {(U8*)"exposureAlternative", 19}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 45 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"topic", 0x188, 35, -1},
+    {"topic", 0x188, 35, -1, {(U8*)"topic", 5}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"identifier_count", 0x88, 13, -1},
+    {"identifier_count", 0x88, 13, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 41 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"approvalDate", 0x158, 31, -1},
+    {"approvalDate", 0x158, 31, -1, {(U8*)"approvalDate", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"topic_count", 0x180, 34, -1},
+    {"topic_count", 0x180, 34, -1, {(U8*)"topic_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 61 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"outcome", 0x208, 51, -1},
+    {"outcome", 0x208, 51, -1, {(U8*)"outcome", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"author", 0x198, 37, -1},
+    {"author", 0x198, 37, -1, {(U8*)"author", 6}, fhir_deserialize::ResourceType::ContactDetail, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"contact", 0x100, 22, -1},
+    {"contact", 0x100, 22, -1, {(U8*)"contact", 7}, fhir_deserialize::ResourceType::ContactDetail, 0, fhir_deserialize::ResourceType::Unknown},
 #line 56 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"synthesisType", 0x1e0, 46, -1},
+    {"synthesisType", 0x1e0, 46, -1, {(U8*)"synthesisType", 13}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"title", 0xb8, 17, -1},
+    {"title", 0xb8, 17, -1, {(U8*)"title", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 46 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"author_count", 0x190, 36, -1},
+    {"author_count", 0x190, 36, -1, {(U8*)"author_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"contact_count", 0xf8, 21, -1},
+    {"contact_count", 0xf8, 21, -1, {(U8*)"contact_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"note", 0x120, 25, -1},
+    {"note", 0x120, 25, -1, {(U8*)"note", 4}, fhir_deserialize::ResourceType::Annotation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 53 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"endorser", 0x1c8, 43, -1},
+    {"endorser", 0x1c8, 43, -1, {(U8*)"endorser", 8}, fhir_deserialize::ResourceType::ContactDetail, 0, fhir_deserialize::ResourceType::Unknown},
 #line 68 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"certainty", 0x240, 58, -1},
+    {"certainty", 0x240, 58, -1, {(U8*)"certainty", 9}, fhir_deserialize::ResourceType::EffectEvidenceSynthesis_Certainty, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"note_count", 0x118, 24, -1},
+    {"note_count", 0x118, 24, -1, {(U8*)"note_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"description", 0x108, 23, -1},
+    {"description", 0x108, 23, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 64 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"resultsByExposure", 0x220, 54, -1},
+    {"resultsByExposure", 0x220, 54, -1, {(U8*)"resultsByExposure", 17}, fhir_deserialize::ResourceType::EffectEvidenceSynthesis_ResultsByExposure, 0, fhir_deserialize::ResourceType::Unknown},
 #line 52 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"endorser_count", 0x1c0, 42, -1},
+    {"endorser_count", 0x1c0, 42, -1, {(U8*)"endorser_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 67 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"certainty_count", 0x238, 57, -1},
+    {"certainty_count", 0x238, 57, -1, {(U8*)"certainty_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"jurisdiction", 0x140, 29, -1},
+    {"jurisdiction", 0x140, 29, -1, {(U8*)"jurisdiction", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 63 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"resultsByExposure_count", 0x218, 53, -1},
+    {"resultsByExposure_count", 0x218, 53, -1, {(U8*)"resultsByExposure_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"date", 0xd8, 19, -1},
+    {"date", 0xd8, 19, -1, {(U8*)"date", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 62 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"sampleSize", 0x210, 52, -1},
+    {"sampleSize", 0x210, 52, -1, {(U8*)"sampleSize", 10}, fhir_deserialize::ResourceType::EffectEvidenceSynthesis_SampleSize, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"jurisdiction_count", 0x138, 28, -1},
+    {"jurisdiction_count", 0x138, 28, -1, {(U8*)"jurisdiction_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"lastReviewDate", 0x168, 32, -1},
+    {"lastReviewDate", 0x168, 32, -1, {(U8*)"lastReviewDate", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 57 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"studyType", 0x1e8, 47, -1},
+    {"studyType", 0x1e8, 47, -1, {(U8*)"studyType", 9}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"useContext", 0x130, 27, -1},
+    {"useContext", 0x130, 27, -1, {(U8*)"useContext", 10}, fhir_deserialize::ResourceType::UsageContext, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"useContext_count", 0x128, 26, -1},
+    {"useContext_count", 0x128, 26, -1, {(U8*)"useContext_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"name", 0xa8, 16, -1},
+    {"name", 0xa8, 16, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 66 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"effectEstimate", 0x230, 56, -1},
+    {"effectEstimate", 0x230, 56, -1, {(U8*)"effectEstimate", 14}, fhir_deserialize::ResourceType::EffectEvidenceSynthesis_EffectEstimate, 0, fhir_deserialize::ResourceType::Unknown},
 #line 43 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"effectivePeriod", 0x178, 33, -1},
+    {"effectivePeriod", 0x178, 33, -1, {(U8*)"effectivePeriod", 15}, fhir_deserialize::ResourceType::Period, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"version", 0x98, 15, -1},
+    {"version", 0x98, 15, -1, {(U8*)"version", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 51 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"reviewer", 0x1b8, 41, -1},
+    {"reviewer", 0x1b8, 41, -1, {(U8*)"reviewer", 8}, fhir_deserialize::ResourceType::ContactDetail, 0, fhir_deserialize::ResourceType::Unknown},
 #line 65 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"effectEstimate_count", 0x228, 55, -1},
+    {"effectEstimate_count", 0x228, 55, -1, {(U8*)"effectEstimate_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 50 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"reviewer_count", 0x1b0, 40, -1},
+    {"reviewer_count", 0x1b0, 40, -1, {(U8*)"reviewer_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 55 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"relatedArtifact", 0x1d8, 45, -1},
+    {"relatedArtifact", 0x1d8, 45, -1, {(U8*)"relatedArtifact", 15}, fhir_deserialize::ResourceType::RelatedArtifact, 0, fhir_deserialize::ResourceType::Unknown},
 #line 54 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"relatedArtifact_count", 0x1d0, 44, -1},
+    {"relatedArtifact_count", 0x1d0, 44, -1, {(U8*)"relatedArtifact_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"url", 0x78, 12, -1},
+    {"url", 0x78, 12, -1, {(U8*)"url", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/EffectEvidenceSynthesis.gperf"
-    {"modifierExtension_count", 0x68, 10, -1}
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

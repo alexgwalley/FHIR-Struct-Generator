@@ -88,39 +88,39 @@ SubstanceSpecification_Structure_Gperf::hash (register const char *str, register
 static const struct fhir_deserialize::MemberNameAndOffset word_array_SubstanceSpecification_Structure[] =
   {
 #line 11 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"source", 0x88, 14, -1},
+    {"source", 0x88, 14, -1, {(U8*)"source", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"isotope", 0x70, 11, -1},
+    {"isotope", 0x70, 11, -1, {(U8*)"isotope", 7}, fhir_deserialize::ResourceType::SubstanceSpecification_Structure_Isotope, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"source_count", 0x80, 13, -1},
+    {"source_count", 0x80, 13, -1, {(U8*)"source_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"isotope_count", 0x68, 10, -1},
+    {"isotope_count", 0x68, 10, -1, {(U8*)"isotope_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"stereochemistry", 0x38, 6, -1},
+    {"stereochemistry", 0x38, 6, -1, {(U8*)"stereochemistry", 15}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"representation", 0x98, 16, -1},
+    {"representation", 0x98, 16, -1, {(U8*)"representation", 14}, fhir_deserialize::ResourceType::SubstanceSpecification_Structure_Representation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"molecularWeight", 0x78, 12, -1},
+    {"molecularWeight", 0x78, 12, -1, {(U8*)"molecularWeight", 15}, fhir_deserialize::ResourceType::SubstanceSpecification_Structure_Isotope_MolecularWeight, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"molecularFormula", 0x48, 8, -1},
+    {"molecularFormula", 0x48, 8, -1, {(U8*)"molecularFormula", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"representation_count", 0x90, 15, -1},
+    {"representation_count", 0x90, 15, -1, {(U8*)"representation_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"molecularFormulaByMoiety", 0x58, 9, -1},
+    {"molecularFormulaByMoiety", 0x58, 9, -1, {(U8*)"molecularFormulaByMoiety", 24}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/SubstanceSpecification_Structure.gperf"
-    {"opticalActivity", 0x40, 7, -1}
+    {"opticalActivity", 0x40, 7, -1, {(U8*)"opticalActivity", 15}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

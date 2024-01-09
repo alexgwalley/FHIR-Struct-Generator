@@ -88,27 +88,27 @@ RelatedArtifact_Gperf::hash (register const char *str, register unsigned int len
 static const struct fhir_deserialize::MemberNameAndOffset word_array_RelatedArtifact[] =
   {
 #line 11 "./src/generated/gperf_class_files/RelatedArtifact.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/RelatedArtifact.gperf"
-    {"url", 0x68, 8, -1},
+    {"url", 0x68, 8, -1, {(U8*)"url", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/RelatedArtifact.gperf"
-    {"type", 0x28, 4, -1},
+    {"type", 0x28, 4, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/RelatedArtifact.gperf"
-    {"label", 0x38, 5, -1},
+    {"label", 0x38, 5, -1, {(U8*)"label", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/RelatedArtifact.gperf"
-    {"resource", 0x80, 10, -1},
+    {"resource", 0x80, 10, -1, {(U8*)"resource", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/RelatedArtifact.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/RelatedArtifact.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/RelatedArtifact.gperf"
-    {"citation", 0x58, 7, -1},
+    {"citation", 0x58, 7, -1, {(U8*)"citation", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/RelatedArtifact.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/RelatedArtifact.gperf"
-    {"display", 0x48, 6, -1},
+    {"display", 0x48, 6, -1, {(U8*)"display", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/RelatedArtifact.gperf"
-    {"document", 0x78, 9, -1}
+    {"document", 0x78, 9, -1, {(U8*)"document", 8}, fhir_deserialize::ResourceType::Attachment, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

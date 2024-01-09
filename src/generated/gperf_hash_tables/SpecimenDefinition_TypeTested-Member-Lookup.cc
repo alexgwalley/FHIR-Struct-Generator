@@ -88,37 +88,37 @@ SpecimenDefinition_TypeTested_Gperf::hash (register const char *str, register un
 static const struct fhir_deserialize::MemberNameAndOffset word_array_SpecimenDefinition_TypeTested[] =
   {
 #line 11 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"type", 0x40, 7, -1},
+    {"type", 0x40, 7, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"handling", 0x90, 15, -1},
+    {"handling", 0x90, 15, -1, {(U8*)"handling", 8}, fhir_deserialize::ResourceType::SpecimenDefinition_TypeTested_Handling, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"isDerived", 0x38, 6, -1},
+    {"isDerived", 0x38, 6, -1, {(U8*)"isDerived", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"preference", 0x48, 8, -1},
+    {"preference", 0x48, 8, -1, {(U8*)"preference", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"requirement", 0x60, 10, -1},
+    {"requirement", 0x60, 10, -1, {(U8*)"requirement", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"retentionTime", 0x70, 11, -1},
+    {"retentionTime", 0x70, 11, -1, {(U8*)"retentionTime", 13}, fhir_deserialize::ResourceType::Duration, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"handling_count", 0x88, 14, -1},
+    {"handling_count", 0x88, 14, -1, {(U8*)"handling_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"rejectionCriterion", 0x80, 13, -1},
+    {"rejectionCriterion", 0x80, 13, -1, {(U8*)"rejectionCriterion", 18}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"rejectionCriterion_count", 0x78, 12, -1},
+    {"rejectionCriterion_count", 0x78, 12, -1, {(U8*)"rejectionCriterion_count", 24}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/SpecimenDefinition_TypeTested.gperf"
-    {"container", 0x58, 9, -1}
+    {"container", 0x58, 9, -1, {(U8*)"container", 9}, fhir_deserialize::ResourceType::SpecimenDefinition_TypeTested_Container, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

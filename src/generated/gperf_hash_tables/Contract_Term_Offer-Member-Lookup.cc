@@ -99,49 +99,49 @@ Contract_Term_Offer_Gperf::hash (register const char *str, register unsigned int
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Contract_Term_Offer[] =
   {
 #line 11 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"topic", 0x58, 10, -1},
+    {"topic", 0x58, 10, -1, {(U8*)"topic", 5}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"decision", 0x68, 12, -1},
+    {"decision", 0x68, 12, -1, {(U8*)"decision", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"text", 0x90, 17, -1},
+    {"text", 0x90, 17, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"party", 0x50, 9, -1},
+    {"party", 0x50, 9, -1, {(U8*)"party", 5}, fhir_deserialize::ResourceType::Contract_Term_Offer_Party, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"decisionMode", 0x78, 14, -1},
+    {"decisionMode", 0x78, 14, -1, {(U8*)"decisionMode", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"type", 0x60, 11, -1},
+    {"type", 0x60, 11, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"party_count", 0x48, 8, -1},
+    {"party_count", 0x48, 8, -1, {(U8*)"party_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"decisionMode_count", 0x70, 13, -1},
+    {"decisionMode_count", 0x70, 13, -1, {(U8*)"decisionMode_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"identifier", 0x40, 7, -1},
+    {"identifier", 0x40, 7, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"answer", 0x88, 16, -1},
+    {"answer", 0x88, 16, -1, {(U8*)"answer", 6}, fhir_deserialize::ResourceType::Contract_Term_Offer_Answer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"securityLabelNumber", 0xb8, 21, -1},
+    {"securityLabelNumber", 0xb8, 21, -1, {(U8*)"securityLabelNumber", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"identifier_count", 0x38, 6, -1},
+    {"identifier_count", 0x38, 6, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"answer_count", 0x80, 15, -1},
+    {"answer_count", 0x80, 15, -1, {(U8*)"answer_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"securityLabelNumber_count", 0xb0, 20, -1},
+    {"securityLabelNumber_count", 0xb0, 20, -1, {(U8*)"securityLabelNumber_count", 25}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"linkId", 0xa8, 19, -1},
+    {"linkId", 0xa8, 19, -1, {(U8*)"linkId", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Contract_Term_Offer.gperf"
-    {"linkId_count", 0xa0, 18, -1}
+    {"linkId_count", 0xa0, 18, -1, {(U8*)"linkId_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

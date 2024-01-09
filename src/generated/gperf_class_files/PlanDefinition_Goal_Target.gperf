@@ -7,14 +7,14 @@
 %define class-name PlanDefinition_Goal_Target_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-measure, 0x38, 6, -1
-detailQuantity, 0x48, 8, 0
-detailRange, 0x48, 8, 1
-detailCodeableConcept, 0x48, 8, 2
-due, 0x50, 9, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+measure, 0x38, 6, -1, {(U8*)"measure", 7}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+detailQuantity, 0x48, 8, 0, {(U8*)"detail", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Quantity
+detailRange, 0x48, 8, 1, {(U8*)"detail", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Range
+detailCodeableConcept, 0x48, 8, 2, {(U8*)"detail", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::CodeableConcept
+due, 0x50, 9, -1, {(U8*)"due", 3}, fhir_deserialize::ResourceType::Duration, 0, fhir_deserialize::ResourceType::Unknown

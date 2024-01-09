@@ -7,12 +7,12 @@
 %define class-name UsageContext_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-code, 0x28, 4, -1
-valueCodeableConcept, 0x38, 6, 0
-valueQuantity, 0x38, 6, 1
-valueRange, 0x38, 6, 2
-valueReference, 0x38, 6, 3
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+code, 0x28, 4, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown
+valueCodeableConcept, 0x38, 6, 0, {(U8*)"value", 5}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::CodeableConcept
+valueQuantity, 0x38, 6, 1, {(U8*)"value", 5}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::Quantity
+valueRange, 0x38, 6, 2, {(U8*)"value", 5}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::Range
+valueReference, 0x38, 6, 3, {(U8*)"value", 5}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::Reference

@@ -7,34 +7,34 @@
 %define class-name VerificationResult_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-meta, 0x18, 2, -1
-implicitRules, 0x20, 3, -1
-language, 0x30, 4, -1
-text, 0x40, 5, -1
-contained_count, 0x48, 6, -1
-contained, 0x50, 7, -1
-extension_count, 0x58, 8, -1
-extension, 0x60, 9, -1
-modifierExtension_count, 0x68, 10, -1
-modifierExtension, 0x70, 11, -1
-target_count, 0x78, 12, -1
-target, 0x80, 13, -1
-targetLocation_count, 0x88, 14, -1
-targetLocation, 0x90, 15, -1
-need, 0x98, 16, -1
-status, 0xa0, 17, -1
-statusDate, 0xb0, 18, -1
-validationType, 0xc0, 19, -1
-validationProcess_count, 0xc8, 20, -1
-validationProcess, 0xd0, 21, -1
-frequency, 0xd8, 22, -1
-lastPerformed, 0xe0, 23, -1
-nextScheduled, 0xf0, 24, -1
-failureAction, 0x100, 25, -1
-primarySource_count, 0x108, 26, -1
-primarySource, 0x110, 27, -1
-attestation, 0x118, 28, -1
-validator_count, 0x120, 29, -1
-validator, 0x128, 30, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+meta, 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown
+implicitRules, 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+language, 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+text, 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown
+contained_count, 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+contained, 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+target_count, 0x78, 12, -1, {(U8*)"target_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+target, 0x80, 13, -1, {(U8*)"target", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+targetLocation_count, 0x88, 14, -1, {(U8*)"targetLocation_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+targetLocation, 0x90, 15, -1, {(U8*)"targetLocation", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+need, 0x98, 16, -1, {(U8*)"need", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+status, 0xa0, 17, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+statusDate, 0xb0, 18, -1, {(U8*)"statusDate", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+validationType, 0xc0, 19, -1, {(U8*)"validationType", 14}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+validationProcess_count, 0xc8, 20, -1, {(U8*)"validationProcess_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+validationProcess, 0xd0, 21, -1, {(U8*)"validationProcess", 17}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+frequency, 0xd8, 22, -1, {(U8*)"frequency", 9}, fhir_deserialize::ResourceType::Timing, 0, fhir_deserialize::ResourceType::Unknown
+lastPerformed, 0xe0, 23, -1, {(U8*)"lastPerformed", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+nextScheduled, 0xf0, 24, -1, {(U8*)"nextScheduled", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+failureAction, 0x100, 25, -1, {(U8*)"failureAction", 13}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+primarySource_count, 0x108, 26, -1, {(U8*)"primarySource_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+primarySource, 0x110, 27, -1, {(U8*)"primarySource", 13}, fhir_deserialize::ResourceType::VerificationResult_PrimarySource, 0, fhir_deserialize::ResourceType::Unknown
+attestation, 0x118, 28, -1, {(U8*)"attestation", 11}, fhir_deserialize::ResourceType::VerificationResult_Attestation, 0, fhir_deserialize::ResourceType::Unknown
+validator_count, 0x120, 29, -1, {(U8*)"validator_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+validator, 0x128, 30, -1, {(U8*)"validator", 9}, fhir_deserialize::ResourceType::VerificationResult_Validator, 0, fhir_deserialize::ResourceType::Unknown

@@ -88,27 +88,27 @@ SubstancePolymer_Repeat_Gperf::hash (register const char *str, register unsigned
 static const struct fhir_deserialize::MemberNameAndOffset word_array_SubstancePolymer_Repeat[] =
   {
 #line 11 "./src/generated/gperf_class_files/SubstancePolymer_Repeat.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/SubstancePolymer_Repeat.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/SubstancePolymer_Repeat.gperf"
-    {"repeatUnit", 0x60, 10, -1},
+    {"repeatUnit", 0x60, 10, -1, {(U8*)"repeatUnit", 10}, fhir_deserialize::ResourceType::SubstancePolymer_Repeat_RepeatUnit, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/SubstancePolymer_Repeat.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/SubstancePolymer_Repeat.gperf"
-    {"numberOfUnits", 0x38, 6, -1},
+    {"numberOfUnits", 0x38, 6, -1, {(U8*)"numberOfUnits", 13}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/SubstancePolymer_Repeat.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/SubstancePolymer_Repeat.gperf"
-    {"repeatUnit_count", 0x58, 9, -1},
+    {"repeatUnit_count", 0x58, 9, -1, {(U8*)"repeatUnit_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/SubstancePolymer_Repeat.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/SubstancePolymer_Repeat.gperf"
-    {"repeatUnitAmountType", 0x50, 8, -1},
+    {"repeatUnitAmountType", 0x50, 8, -1, {(U8*)"repeatUnitAmountType", 20}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/SubstancePolymer_Repeat.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/SubstancePolymer_Repeat.gperf"
-    {"averageMolecularFormula", 0x40, 7, -1}
+    {"averageMolecularFormula", 0x40, 7, -1, {(U8*)"averageMolecularFormula", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

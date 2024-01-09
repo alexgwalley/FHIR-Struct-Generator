@@ -7,27 +7,27 @@
 %define class-name MedicinalProductContraindication_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-meta, 0x18, 2, -1
-implicitRules, 0x20, 3, -1
-language, 0x30, 4, -1
-text, 0x40, 5, -1
-contained_count, 0x48, 6, -1
-contained, 0x50, 7, -1
-extension_count, 0x58, 8, -1
-extension, 0x60, 9, -1
-modifierExtension_count, 0x68, 10, -1
-modifierExtension, 0x70, 11, -1
-subject_count, 0x78, 12, -1
-subject, 0x80, 13, -1
-disease, 0x88, 14, -1
-diseaseStatus, 0x90, 15, -1
-comorbidity_count, 0x98, 16, -1
-comorbidity, 0xa0, 17, -1
-therapeuticIndication_count, 0xa8, 18, -1
-therapeuticIndication, 0xb0, 19, -1
-otherTherapy_count, 0xb8, 20, -1
-otherTherapy, 0xc0, 21, -1
-population_count, 0xc8, 22, -1
-population, 0xd0, 23, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+meta, 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown
+implicitRules, 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+language, 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+text, 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown
+contained_count, 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+contained, 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+subject_count, 0x78, 12, -1, {(U8*)"subject_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+subject, 0x80, 13, -1, {(U8*)"subject", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+disease, 0x88, 14, -1, {(U8*)"disease", 7}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+diseaseStatus, 0x90, 15, -1, {(U8*)"diseaseStatus", 13}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+comorbidity_count, 0x98, 16, -1, {(U8*)"comorbidity_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+comorbidity, 0xa0, 17, -1, {(U8*)"comorbidity", 11}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+therapeuticIndication_count, 0xa8, 18, -1, {(U8*)"therapeuticIndication_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+therapeuticIndication, 0xb0, 19, -1, {(U8*)"therapeuticIndication", 21}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+otherTherapy_count, 0xb8, 20, -1, {(U8*)"otherTherapy_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+otherTherapy, 0xc0, 21, -1, {(U8*)"otherTherapy", 12}, fhir_deserialize::ResourceType::MedicinalProductContraindication_OtherTherapy, 0, fhir_deserialize::ResourceType::Unknown
+population_count, 0xc8, 22, -1, {(U8*)"population_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+population, 0xd0, 23, -1, {(U8*)"population", 10}, fhir_deserialize::ResourceType::Population, 0, fhir_deserialize::ResourceType::Unknown

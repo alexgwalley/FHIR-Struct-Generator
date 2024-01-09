@@ -12,12 +12,6 @@
 namespace fhir_deserialize
 {
     
-	struct MemberNameAndOffset {
-		char *name;
-		size_t offset;
-		size_t member_index;
-		S64 type_index;
-	};
     
 	enum class Cardinality
 	{
@@ -1607,5 +1601,16 @@ namespace fhir_deserialize
 	JsonItem*
         JsonItemFromcJSON(Arena *arena, cJSON *json);
     
+
+	struct MemberNameAndOffset {
+		char *name;
+		size_t offset;
+		size_t member_index;
+		S64 type_index;
+		String8 member_name;
+		ResourceType member_first_type_class_type;
+		int union_type_type;
+		ResourceType union_resource_type;
+	};
 };
 #endif

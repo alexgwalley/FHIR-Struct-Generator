@@ -88,33 +88,33 @@ SubstanceSpecification_Moiety_Gperf::hash (register const char *str, register un
 static const struct fhir_deserialize::MemberNameAndOffset word_array_SubstanceSpecification_Moiety[] =
   {
 #line 11 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"role", 0x38, 6, -1},
+    {"role", 0x38, 6, -1, {(U8*)"role", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"identifier", 0x40, 7, -1},
+    {"identifier", 0x40, 7, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"name", 0x48, 8, -1},
+    {"name", 0x48, 8, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"molecularFormula", 0x68, 11, -1},
+    {"molecularFormula", 0x68, 11, -1, {(U8*)"molecularFormula", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"stereochemistry", 0x58, 9, -1},
+    {"stereochemistry", 0x58, 9, -1, {(U8*)"stereochemistry", 15}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"amountString", 0x80, 13, 1},
+    {"amountString", 0x80, 13, 1, {(U8*)"amount", 6}, fhir_deserialize::ResourceType::Quantity, 7, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"amountQuantity", 0x80, 13, 0},
+    {"amountQuantity", 0x80, 13, 0, {(U8*)"amount", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Quantity},
 #line 20 "./src/generated/gperf_class_files/SubstanceSpecification_Moiety.gperf"
-    {"opticalActivity", 0x60, 10, -1}
+    {"opticalActivity", 0x60, 10, -1, {(U8*)"opticalActivity", 15}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

@@ -101,63 +101,63 @@ TestScript_Setup_Action_Assert_Gperf::hash (register const char *str, register u
 static const struct fhir_deserialize::MemberNameAndOffset word_array_TestScript_Setup_Action_Assert[] =
   {
 #line 37 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"value", 0x170, 26, -1},
+    {"value", 0x170, 26, -1, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 11 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"response", 0x130, 22, -1},
+    {"response", 0x130, 22, -1, {(U8*)"response", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"requestURL", 0x110, 20, -1},
+    {"requestURL", 0x110, 20, -1, {(U8*)"requestURL", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"headerField", 0xb8, 14, -1},
+    {"headerField", 0xb8, 14, -1, {(U8*)"headerField", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"responseCode", 0x140, 23, -1},
+    {"responseCode", 0x140, 23, -1, {(U8*)"responseCode", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"requestMethod", 0x100, 19, -1},
+    {"requestMethod", 0x100, 19, -1, {(U8*)"requestMethod", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"minimumId", 0xc8, 15, -1},
+    {"minimumId", 0xc8, 15, -1, {(U8*)"minimumId", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"expression", 0xa8, 13, -1},
+    {"expression", 0xa8, 13, -1, {(U8*)"expression", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"validateProfileId", 0x160, 25, -1},
+    {"validateProfileId", 0x160, 25, -1, {(U8*)"validateProfileId", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"sourceId", 0x150, 24, -1},
+    {"sourceId", 0x150, 24, -1, {(U8*)"sourceId", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"navigationLinks", 0xd8, 16, -1},
+    {"navigationLinks", 0xd8, 16, -1, {(U8*)"navigationLinks", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"description", 0x48, 7, -1},
+    {"description", 0x48, 7, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"direction", 0x58, 8, -1},
+    {"direction", 0x58, 8, -1, {(U8*)"direction", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"contentType", 0x98, 12, -1},
+    {"contentType", 0x98, 12, -1, {(U8*)"contentType", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"compareToSourceId", 0x68, 9, -1},
+    {"compareToSourceId", 0x68, 9, -1, {(U8*)"compareToSourceId", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"compareToSourcePath", 0x88, 11, -1},
+    {"compareToSourcePath", 0x88, 11, -1, {(U8*)"compareToSourcePath", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"label", 0x38, 6, -1},
+    {"label", 0x38, 6, -1, {(U8*)"label", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"resource", 0x120, 21, -1},
+    {"resource", 0x120, 21, -1, {(U8*)"resource", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"path", 0xf0, 18, -1},
+    {"path", 0xf0, 18, -1, {(U8*)"path", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"compareToSourceExpression", 0x78, 10, -1},
+    {"compareToSourceExpression", 0x78, 10, -1, {(U8*)"compareToSourceExpression", 25}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"warningOnly", 0x180, 27, -1},
+    {"warningOnly", 0x180, 27, -1, {(U8*)"warningOnly", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"operator", 0xe0, 17, -1},
+    {"operator", 0xe0, 17, -1, {(U8*)"operator_", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/TestScript_Setup_Action_Assert.gperf"
-    {"operator_", 0xe0, 17, -1}
+    {"operator_", 0xe0, 17, -1, {(U8*)"operator_", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

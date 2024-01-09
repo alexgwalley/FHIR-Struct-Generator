@@ -7,17 +7,17 @@
 %define class-name VerificationResult_Attestation_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-who, 0x38, 6, -1
-onBehalfOf, 0x40, 7, -1
-communicationMethod, 0x48, 8, -1
-date, 0x50, 9, -1
-sourceIdentityCertificate, 0x60, 10, -1
-proxyIdentityCertificate, 0x70, 11, -1
-proxySignature, 0x80, 12, -1
-sourceSignature, 0x88, 13, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+who, 0x38, 6, -1, {(U8*)"who", 3}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+onBehalfOf, 0x40, 7, -1, {(U8*)"onBehalfOf", 10}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+communicationMethod, 0x48, 8, -1, {(U8*)"communicationMethod", 19}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+date, 0x50, 9, -1, {(U8*)"date", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+sourceIdentityCertificate, 0x60, 10, -1, {(U8*)"sourceIdentityCertificate", 25}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+proxyIdentityCertificate, 0x70, 11, -1, {(U8*)"proxyIdentityCertificate", 24}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+proxySignature, 0x80, 12, -1, {(U8*)"proxySignature", 14}, fhir_deserialize::ResourceType::Signature, 0, fhir_deserialize::ResourceType::Unknown
+sourceSignature, 0x88, 13, -1, {(U8*)"sourceSignature", 15}, fhir_deserialize::ResourceType::Signature, 0, fhir_deserialize::ResourceType::Unknown

@@ -88,67 +88,67 @@ VerificationResult_Gperf::hash (register const char *str, register unsigned int 
 static const struct fhir_deserialize::MemberNameAndOffset word_array_VerificationResult[] =
   {
 #line 15 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"target", 0x80, 13, -1},
+    {"target", 0x80, 13, -1, {(U8*)"target", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 11 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"status", 0xa0, 17, -1},
+    {"status", 0xa0, 17, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"target_count", 0x78, 12, -1},
+    {"target_count", 0x78, 12, -1, {(U8*)"target_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"lastPerformed", 0xe0, 23, -1},
+    {"lastPerformed", 0xe0, 23, -1, {(U8*)"lastPerformed", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"targetLocation", 0x90, 15, -1},
+    {"targetLocation", 0x90, 15, -1, {(U8*)"targetLocation", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"statusDate", 0xb0, 18, -1},
+    {"statusDate", 0xb0, 18, -1, {(U8*)"statusDate", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"attestation", 0x118, 28, -1},
+    {"attestation", 0x118, 28, -1, {(U8*)"attestation", 11}, fhir_deserialize::ResourceType::VerificationResult_Attestation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"frequency", 0xd8, 22, -1},
+    {"frequency", 0xd8, 22, -1, {(U8*)"frequency", 9}, fhir_deserialize::ResourceType::Timing, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"validator", 0x128, 30, -1},
+    {"validator", 0x128, 30, -1, {(U8*)"validator", 9}, fhir_deserialize::ResourceType::VerificationResult_Validator, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"targetLocation_count", 0x88, 14, -1},
+    {"targetLocation_count", 0x88, 14, -1, {(U8*)"targetLocation_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"failureAction", 0x100, 25, -1},
+    {"failureAction", 0x100, 25, -1, {(U8*)"failureAction", 13}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"primarySource", 0x110, 27, -1},
+    {"primarySource", 0x110, 27, -1, {(U8*)"primarySource", 13}, fhir_deserialize::ResourceType::VerificationResult_PrimarySource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"validationType", 0xc0, 19, -1},
+    {"validationType", 0xc0, 19, -1, {(U8*)"validationType", 14}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"validator_count", 0x120, 29, -1},
+    {"validator_count", 0x120, 29, -1, {(U8*)"validator_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"validationProcess", 0xd0, 21, -1},
+    {"validationProcess", 0xd0, 21, -1, {(U8*)"validationProcess", 17}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"primarySource_count", 0x108, 26, -1},
+    {"primarySource_count", 0x108, 26, -1, {(U8*)"primarySource_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"validationProcess_count", 0xc8, 20, -1},
+    {"validationProcess_count", 0xc8, 20, -1, {(U8*)"validationProcess_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"need", 0x98, 16, -1},
+    {"need", 0x98, 16, -1, {(U8*)"need", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"nextScheduled", 0xf0, 24, -1},
+    {"nextScheduled", 0xf0, 24, -1, {(U8*)"nextScheduled", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/VerificationResult.gperf"
-    {"extension_count", 0x58, 8, -1}
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

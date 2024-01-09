@@ -102,57 +102,57 @@ Consent_Provision_Gperf::hash (register const char *str, register unsigned int l
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Consent_Provision[] =
   {
 #line 11 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"code", 0xa8, 19, -1},
+    {"code", 0xa8, 19, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"class", 0x98, 17, -1},
+    {"class", 0x98, 17, -1, {(U8*)"class_", 6}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"class_", 0x98, 17, -1},
+    {"class_", 0x98, 17, -1, {(U8*)"class_", 6}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"actor", 0x58, 9, -1},
+    {"actor", 0x58, 9, -1, {(U8*)"actor", 5}, fhir_deserialize::ResourceType::Consent_Provision_Actor, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"action", 0x68, 11, -1},
+    {"action", 0x68, 11, -1, {(U8*)"action", 6}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"class__count", 0x90, 16, -1},
+    {"class__count", 0x90, 16, -1, {(U8*)"class__count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"securityLabel", 0x78, 13, -1},
+    {"securityLabel", 0x78, 13, -1, {(U8*)"securityLabel", 13}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"data", 0xc0, 22, -1},
+    {"data", 0xc0, 22, -1, {(U8*)"data", 4}, fhir_deserialize::ResourceType::Consent_Provision_Data, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"actor_count", 0x50, 8, -1},
+    {"actor_count", 0x50, 8, -1, {(U8*)"actor_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"action_count", 0x60, 10, -1},
+    {"action_count", 0x60, 10, -1, {(U8*)"action_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"securityLabel_count", 0x70, 12, -1},
+    {"securityLabel_count", 0x70, 12, -1, {(U8*)"securityLabel_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"dataPeriod", 0xb0, 20, -1},
+    {"dataPeriod", 0xb0, 20, -1, {(U8*)"dataPeriod", 10}, fhir_deserialize::ResourceType::Period, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"period", 0x48, 7, -1},
+    {"period", 0x48, 7, -1, {(U8*)"period", 6}, fhir_deserialize::ResourceType::Period, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"purpose", 0x88, 15, -1},
+    {"purpose", 0x88, 15, -1, {(U8*)"purpose", 7}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"provision", 0xd0, 24, -1},
+    {"provision", 0xd0, 24, -1, {(U8*)"provision", 9}, fhir_deserialize::ResourceType::Consent_Provision, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"code_count", 0xa0, 18, -1},
+    {"code_count", 0xa0, 18, -1, {(U8*)"code_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"purpose_count", 0x80, 14, -1},
+    {"purpose_count", 0x80, 14, -1, {(U8*)"purpose_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"type", 0x38, 6, -1},
+    {"type", 0x38, 6, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"provision_count", 0xc8, 23, -1},
+    {"provision_count", 0xc8, 23, -1, {(U8*)"provision_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/Consent_Provision.gperf"
-    {"data_count", 0xb8, 21, -1}
+    {"data_count", 0xb8, 21, -1, {(U8*)"data_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

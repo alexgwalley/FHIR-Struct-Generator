@@ -7,19 +7,19 @@
 %define class-name Goal_Target_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-measure, 0x38, 6, -1
-detailQuantity, 0x48, 8, 0
-detailRange, 0x48, 8, 1
-detailCodeableConcept, 0x48, 8, 2
-detailString, 0x48, 8, 3
-detailBoolean, 0x48, 8, 4
-detailInteger, 0x48, 8, 5
-detailRatio, 0x48, 8, 6
-dueDate, 0x60, 10, 0
-dueDuration, 0x60, 10, 1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+measure, 0x38, 6, -1, {(U8*)"measure", 7}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+detailQuantity, 0x48, 8, 0, {(U8*)"detail", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Quantity
+detailRange, 0x48, 8, 1, {(U8*)"detail", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Range
+detailCodeableConcept, 0x48, 8, 2, {(U8*)"detail", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::CodeableConcept
+detailString, 0x48, 8, 3, {(U8*)"detail", 6}, fhir_deserialize::ResourceType::Quantity, 7, fhir_deserialize::ResourceType::Unknown
+detailBoolean, 0x48, 8, 4, {(U8*)"detail", 6}, fhir_deserialize::ResourceType::Quantity, 12, fhir_deserialize::ResourceType::Unknown
+detailInteger, 0x48, 8, 5, {(U8*)"detail", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Integer
+detailRatio, 0x48, 8, 6, {(U8*)"detail", 6}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Ratio
+dueDate, 0x60, 10, 0, {(U8*)"due", 3}, fhir_deserialize::ResourceType::Unknown, 16, fhir_deserialize::ResourceType::Unknown
+dueDuration, 0x60, 10, 1, {(U8*)"due", 3}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Duration

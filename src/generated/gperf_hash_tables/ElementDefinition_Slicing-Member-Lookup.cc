@@ -33,23 +33,23 @@ ElementDefinition_Slicing_Gperf::hash (register const char *str, register unsign
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ElementDefinition_Slicing[] =
   {
 #line 11 "./src/generated/gperf_class_files/ElementDefinition_Slicing.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ElementDefinition_Slicing.gperf"
-    {"rules", 0x50, 8, -1},
+    {"rules", 0x50, 8, -1, {(U8*)"rules", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ElementDefinition_Slicing.gperf"
-    {"ordered", 0x48, 7, -1},
+    {"ordered", 0x48, 7, -1, {(U8*)"ordered", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ElementDefinition_Slicing.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ElementDefinition_Slicing.gperf"
-    {"description", 0x38, 6, -1},
+    {"description", 0x38, 6, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ElementDefinition_Slicing.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ElementDefinition_Slicing.gperf"
-    {"discriminator", 0x30, 5, -1},
+    {"discriminator", 0x30, 5, -1, {(U8*)"discriminator", 13}, fhir_deserialize::ResourceType::ElementDefinition_Slicing_Discriminator, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ElementDefinition_Slicing.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ElementDefinition_Slicing.gperf"
-    {"discriminator_count", 0x28, 4, -1}
+    {"discriminator_count", 0x28, 4, -1, {(U8*)"discriminator_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

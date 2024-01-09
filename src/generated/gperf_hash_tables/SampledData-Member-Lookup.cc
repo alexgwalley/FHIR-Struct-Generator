@@ -88,27 +88,27 @@ SampledData_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_SampledData[] =
   {
 #line 11 "./src/generated/gperf_class_files/SampledData.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/SampledData.gperf"
-    {"data", 0x58, 10, -1},
+    {"data", 0x58, 10, -1, {(U8*)"data", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/SampledData.gperf"
-    {"period", 0x30, 5, -1},
+    {"period", 0x30, 5, -1, {(U8*)"period", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/SampledData.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/SampledData.gperf"
-    {"dimensions", 0x50, 9, -1},
+    {"dimensions", 0x50, 9, -1, {(U8*)"dimensions", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/SampledData.gperf"
-    {"origin", 0x28, 4, -1},
+    {"origin", 0x28, 4, -1, {(U8*)"origin", 6}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/SampledData.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/SampledData.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/SampledData.gperf"
-    {"factor", 0x38, 6, -1},
+    {"factor", 0x38, 6, -1, {(U8*)"factor", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/SampledData.gperf"
-    {"upperLimit", 0x48, 8, -1},
+    {"upperLimit", 0x48, 8, -1, {(U8*)"upperLimit", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/SampledData.gperf"
-    {"lowerLimit", 0x40, 7, -1}
+    {"lowerLimit", 0x40, 7, -1, {(U8*)"lowerLimit", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

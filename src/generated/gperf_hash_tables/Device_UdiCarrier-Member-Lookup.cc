@@ -88,29 +88,29 @@ Device_UdiCarrier_Gperf::hash (register const char *str, register unsigned int l
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Device_UdiCarrier[] =
   {
 #line 11 "./src/generated/gperf_class_files/Device_UdiCarrier.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Device_UdiCarrier.gperf"
-    {"issuer", 0x48, 7, -1},
+    {"issuer", 0x48, 7, -1, {(U8*)"issuer", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Device_UdiCarrier.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Device_UdiCarrier.gperf"
-    {"carrierHRF", 0x78, 10, -1},
+    {"carrierHRF", 0x78, 10, -1, {(U8*)"carrierHRF", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Device_UdiCarrier.gperf"
-    {"carrierAIDC", 0x68, 9, -1},
+    {"carrierAIDC", 0x68, 9, -1, {(U8*)"carrierAIDC", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Device_UdiCarrier.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Device_UdiCarrier.gperf"
-    {"entryType", 0x88, 11, -1},
+    {"entryType", 0x88, 11, -1, {(U8*)"entryType", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Device_UdiCarrier.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Device_UdiCarrier.gperf"
-    {"deviceIdentifier", 0x38, 6, -1},
+    {"deviceIdentifier", 0x38, 6, -1, {(U8*)"deviceIdentifier", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Device_UdiCarrier.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Device_UdiCarrier.gperf"
-    {"jurisdiction", 0x58, 8, -1},
+    {"jurisdiction", 0x58, 8, -1, {(U8*)"jurisdiction", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Device_UdiCarrier.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

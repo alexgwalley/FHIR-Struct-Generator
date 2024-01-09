@@ -109,127 +109,127 @@ Contract_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Contract[] =
   {
 #line 24 "./src/generated/gperf_class_files/Contract.gperf"
-    {"url", 0x88, 14, -1},
+    {"url", 0x88, 14, -1, {(U8*)"url", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/Contract.gperf"
-    {"name", 0x140, 32, -1},
+    {"name", 0x140, 32, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 46 "./src/generated/gperf_class_files/Contract.gperf"
-    {"alias", 0x178, 36, -1},
+    {"alias", 0x178, 36, -1, {(U8*)"alias", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Contract.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 66 "./src/generated/gperf_class_files/Contract.gperf"
-    {"legal", 0x218, 56, -1},
+    {"legal", 0x218, 56, -1, {(U8*)"legal", 5}, fhir_deserialize::ResourceType::Contract_Legal, 0, fhir_deserialize::ResourceType::Unknown},
 #line 45 "./src/generated/gperf_class_files/Contract.gperf"
-    {"alias_count", 0x170, 35, -1},
+    {"alias_count", 0x170, 35, -1, {(U8*)"alias_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/Contract.gperf"
-    {"applies", 0xf0, 22, -1},
+    {"applies", 0xf0, 22, -1, {(U8*)"applies", 7}, fhir_deserialize::ResourceType::Period, 0, fhir_deserialize::ResourceType::Unknown},
 #line 51 "./src/generated/gperf_class_files/Contract.gperf"
-    {"type", 0x1a0, 41, -1},
+    {"type", 0x1a0, 41, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Contract.gperf"
-    {"legalState", 0xb8, 17, -1},
+    {"legalState", 0xb8, 17, -1, {(U8*)"legalState", 10}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 65 "./src/generated/gperf_class_files/Contract.gperf"
-    {"legal_count", 0x210, 55, -1},
+    {"legal_count", 0x210, 55, -1, {(U8*)"legal_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 64 "./src/generated/gperf_class_files/Contract.gperf"
-    {"friendly", 0x208, 54, -1},
+    {"friendly", 0x208, 54, -1, {(U8*)"friendly", 8}, fhir_deserialize::ResourceType::Contract_Friendly, 0, fhir_deserialize::ResourceType::Unknown},
 #line 41 "./src/generated/gperf_class_files/Contract.gperf"
-    {"site", 0x138, 31, -1},
+    {"site", 0x138, 31, -1, {(U8*)"site", 4}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 43 "./src/generated/gperf_class_files/Contract.gperf"
-    {"title", 0x150, 33, -1},
+    {"title", 0x150, 33, -1, {(U8*)"title", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 62 "./src/generated/gperf_class_files/Contract.gperf"
-    {"signer", 0x1f8, 52, -1},
+    {"signer", 0x1f8, 52, -1, {(U8*)"signer", 6}, fhir_deserialize::ResourceType::Contract_Signer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 11 "./src/generated/gperf_class_files/Contract.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Contract.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/Contract.gperf"
-    {"scope", 0x188, 38, -1},
+    {"scope", 0x188, 38, -1, {(U8*)"scope", 5}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/Contract.gperf"
-    {"issued", 0xe0, 21, -1},
+    {"issued", 0xe0, 21, -1, {(U8*)"issued", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 61 "./src/generated/gperf_class_files/Contract.gperf"
-    {"signer_count", 0x1f0, 51, -1},
+    {"signer_count", 0x1f0, 51, -1, {(U8*)"signer_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 70 "./src/generated/gperf_class_files/Contract.gperf"
-    {"legallyBindingReference", 0x238, 60, 1},
+    {"legallyBindingReference", 0x238, 60, 1, {(U8*)"legallyBinding", 14}, fhir_deserialize::ResourceType::Attachment, 20, fhir_deserialize::ResourceType::Reference},
 #line 69 "./src/generated/gperf_class_files/Contract.gperf"
-    {"legallyBindingAttachment", 0x238, 60, 0},
+    {"legallyBindingAttachment", 0x238, 60, 0, {(U8*)"legallyBinding", 14}, fhir_deserialize::ResourceType::Attachment, 20, fhir_deserialize::ResourceType::Attachment},
 #line 26 "./src/generated/gperf_class_files/Contract.gperf"
-    {"status", 0xa8, 16, -1},
+    {"status", 0xa8, 16, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/Contract.gperf"
-    {"subject", 0x108, 25, -1},
+    {"subject", 0x108, 25, -1, {(U8*)"subject", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/Contract.gperf"
-    {"subtitle", 0x160, 34, -1},
+    {"subtitle", 0x160, 34, -1, {(U8*)"subtitle", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/Contract.gperf"
-    {"expirationType", 0xf8, 23, -1},
+    {"expirationType", 0xf8, 23, -1, {(U8*)"expirationType", 14}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/Contract.gperf"
-    {"site_count", 0x130, 30, -1},
+    {"site_count", 0x130, 30, -1, {(U8*)"site_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/Contract.gperf"
-    {"domain", 0x128, 29, -1},
+    {"domain", 0x128, 29, -1, {(U8*)"domain", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 53 "./src/generated/gperf_class_files/Contract.gperf"
-    {"subType", 0x1b0, 43, -1},
+    {"subType", 0x1b0, 43, -1, {(U8*)"subType", 7}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Contract.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Contract.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Contract.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/Contract.gperf"
-    {"domain_count", 0x120, 28, -1},
+    {"domain_count", 0x120, 28, -1, {(U8*)"domain_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/Contract.gperf"
-    {"subject_count", 0x100, 24, -1},
+    {"subject_count", 0x100, 24, -1, {(U8*)"subject_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 68 "./src/generated/gperf_class_files/Contract.gperf"
-    {"rule", 0x228, 58, -1},
+    {"rule", 0x228, 58, -1, {(U8*)"rule", 4}, fhir_deserialize::ResourceType::Contract_Rule, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Contract.gperf"
-    {"version", 0x98, 15, -1},
+    {"version", 0x98, 15, -1, {(U8*)"version", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 52 "./src/generated/gperf_class_files/Contract.gperf"
-    {"subType_count", 0x1a8, 42, -1},
+    {"subType_count", 0x1a8, 42, -1, {(U8*)"subType_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 56 "./src/generated/gperf_class_files/Contract.gperf"
-    {"term", 0x1c8, 46, -1},
+    {"term", 0x1c8, 46, -1, {(U8*)"term", 4}, fhir_deserialize::ResourceType::Contract_Term, 0, fhir_deserialize::ResourceType::Unknown},
 #line 49 "./src/generated/gperf_class_files/Contract.gperf"
-    {"topicCodeableConcept", 0x198, 40, 0},
+    {"topicCodeableConcept", 0x198, 40, 0, {(U8*)"topic", 5}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::CodeableConcept},
 #line 14 "./src/generated/gperf_class_files/Contract.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Contract.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/Contract.gperf"
-    {"instantiatesUri", 0xc8, 19, -1},
+    {"instantiatesUri", 0xc8, 19, -1, {(U8*)"instantiatesUri", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Contract.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 63 "./src/generated/gperf_class_files/Contract.gperf"
-    {"friendly_count", 0x200, 53, -1},
+    {"friendly_count", 0x200, 53, -1, {(U8*)"friendly_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 67 "./src/generated/gperf_class_files/Contract.gperf"
-    {"rule_count", 0x220, 57, -1},
+    {"rule_count", 0x220, 57, -1, {(U8*)"rule_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Contract.gperf"
-    {"instantiatesCanonical", 0xc0, 18, -1},
+    {"instantiatesCanonical", 0xc0, 18, -1, {(U8*)"instantiatesCanonical", 21}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 55 "./src/generated/gperf_class_files/Contract.gperf"
-    {"term_count", 0x1c0, 45, -1},
+    {"term_count", 0x1c0, 45, -1, {(U8*)"term_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/Contract.gperf"
-    {"author", 0x180, 37, -1},
+    {"author", 0x180, 37, -1, {(U8*)"author", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/Contract.gperf"
-    {"authority", 0x118, 27, -1},
+    {"authority", 0x118, 27, -1, {(U8*)"authority", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Contract.gperf"
-    {"identifier", 0x80, 13, -1},
+    {"identifier", 0x80, 13, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 54 "./src/generated/gperf_class_files/Contract.gperf"
-    {"contentDefinition", 0x1b8, 44, -1},
+    {"contentDefinition", 0x1b8, 44, -1, {(U8*)"contentDefinition", 17}, fhir_deserialize::ResourceType::Contract_ContentDefinition, 0, fhir_deserialize::ResourceType::Unknown},
 #line 58 "./src/generated/gperf_class_files/Contract.gperf"
-    {"supportingInfo", 0x1d8, 48, -1},
+    {"supportingInfo", 0x1d8, 48, -1, {(U8*)"supportingInfo", 14}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 60 "./src/generated/gperf_class_files/Contract.gperf"
-    {"relevantHistory", 0x1e8, 50, -1},
+    {"relevantHistory", 0x1e8, 50, -1, {(U8*)"relevantHistory", 15}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Contract.gperf"
-    {"identifier_count", 0x78, 12, -1},
+    {"identifier_count", 0x78, 12, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Contract.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 57 "./src/generated/gperf_class_files/Contract.gperf"
-    {"supportingInfo_count", 0x1d0, 47, -1},
+    {"supportingInfo_count", 0x1d0, 47, -1, {(U8*)"supportingInfo_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 59 "./src/generated/gperf_class_files/Contract.gperf"
-    {"relevantHistory_count", 0x1e0, 49, -1},
+    {"relevantHistory_count", 0x1e0, 49, -1, {(U8*)"relevantHistory_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Contract.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 50 "./src/generated/gperf_class_files/Contract.gperf"
-    {"topicReference", 0x198, 40, 1},
+    {"topicReference", 0x198, 40, 1, {(U8*)"topic", 5}, fhir_deserialize::ResourceType::CodeableConcept, 20, fhir_deserialize::ResourceType::Reference},
 #line 16 "./src/generated/gperf_class_files/Contract.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/Contract.gperf"
-    {"authority_count", 0x110, 26, -1},
+    {"authority_count", 0x110, 26, -1, {(U8*)"authority_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/Contract.gperf"
-    {"contentDerivative", 0xd8, 20, -1}
+    {"contentDerivative", 0xd8, 20, -1, {(U8*)"contentDerivative", 17}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

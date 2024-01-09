@@ -7,16 +7,16 @@
 %define class-name TriggerDefinition_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-type, 0x28, 4, -1
-name, 0x38, 5, -1
-timingTiming, 0x50, 7, 0
-timingReference, 0x50, 7, 1
-timingDate, 0x50, 7, 2
-timingDateTime, 0x50, 7, 3
-data_count, 0x60, 8, -1
-data, 0x68, 9, -1
-condition, 0x70, 10, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+type, 0x28, 4, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+name, 0x38, 5, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+timingTiming, 0x50, 7, 0, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Timing, 20, fhir_deserialize::ResourceType::Timing
+timingReference, 0x50, 7, 1, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Timing, 20, fhir_deserialize::ResourceType::Reference
+timingDate, 0x50, 7, 2, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Timing, 16, fhir_deserialize::ResourceType::Unknown
+timingDateTime, 0x50, 7, 3, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Timing, 17, fhir_deserialize::ResourceType::Unknown
+data_count, 0x60, 8, -1, {(U8*)"data_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+data, 0x68, 9, -1, {(U8*)"data", 4}, fhir_deserialize::ResourceType::DataRequirement, 0, fhir_deserialize::ResourceType::Unknown
+condition, 0x70, 10, -1, {(U8*)"condition", 9}, fhir_deserialize::ResourceType::Expression, 0, fhir_deserialize::ResourceType::Unknown

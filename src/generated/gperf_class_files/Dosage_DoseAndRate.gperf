@@ -7,13 +7,13 @@
 %define class-name Dosage_DoseAndRate_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-type, 0x28, 4, -1
-doseRange, 0x38, 6, 0
-doseQuantity, 0x38, 6, 1
-rateRatio, 0x48, 8, 0
-rateRange, 0x48, 8, 1
-rateQuantity, 0x48, 8, 2
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+type, 0x28, 4, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+doseRange, 0x38, 6, 0, {(U8*)"dose", 4}, fhir_deserialize::ResourceType::Range, 20, fhir_deserialize::ResourceType::Range
+doseQuantity, 0x38, 6, 1, {(U8*)"dose", 4}, fhir_deserialize::ResourceType::Range, 20, fhir_deserialize::ResourceType::Quantity
+rateRatio, 0x48, 8, 0, {(U8*)"rate", 4}, fhir_deserialize::ResourceType::Ratio, 20, fhir_deserialize::ResourceType::Ratio
+rateRange, 0x48, 8, 1, {(U8*)"rate", 4}, fhir_deserialize::ResourceType::Ratio, 20, fhir_deserialize::ResourceType::Range
+rateQuantity, 0x48, 8, 2, {(U8*)"rate", 4}, fhir_deserialize::ResourceType::Ratio, 20, fhir_deserialize::ResourceType::Quantity

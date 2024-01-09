@@ -88,35 +88,35 @@ ImplementationGuide_Manifest_Gperf::hash (register const char *str, register uns
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ImplementationGuide_Manifest[] =
   {
 #line 11 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"page", 0x60, 10, -1},
+    {"page", 0x60, 10, -1, {(U8*)"page", 4}, fhir_deserialize::ResourceType::ImplementationGuide_Manifest_Page, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"image", 0x70, 12, -1},
+    {"image", 0x70, 12, -1, {(U8*)"image", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"resource", 0x50, 8, -1},
+    {"resource", 0x50, 8, -1, {(U8*)"resource", 8}, fhir_deserialize::ResourceType::ImplementationGuide_Manifest_Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"rendering", 0x38, 6, -1},
+    {"rendering", 0x38, 6, -1, {(U8*)"rendering", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"page_count", 0x58, 9, -1},
+    {"page_count", 0x58, 9, -1, {(U8*)"page_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"image_count", 0x68, 11, -1},
+    {"image_count", 0x68, 11, -1, {(U8*)"image_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"resource_count", 0x48, 7, -1},
+    {"resource_count", 0x48, 7, -1, {(U8*)"resource_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"other", 0x80, 14, -1},
+    {"other", 0x80, 14, -1, {(U8*)"other", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"other_count", 0x78, 13, -1},
+    {"other_count", 0x78, 13, -1, {(U8*)"other_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ImplementationGuide_Manifest.gperf"
-    {"extension_count", 0x18, 2, -1}
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

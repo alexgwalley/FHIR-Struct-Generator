@@ -88,31 +88,31 @@ TriggerDefinition_Gperf::hash (register const char *str, register unsigned int l
 static const struct fhir_deserialize::MemberNameAndOffset word_array_TriggerDefinition[] =
   {
 #line 11 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"type", 0x28, 4, -1},
+    {"type", 0x28, 4, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"name", 0x38, 5, -1},
+    {"name", 0x38, 5, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"timingDate", 0x50, 7, 2},
+    {"timingDate", 0x50, 7, 2, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Timing, 16, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"timingTiming", 0x50, 7, 0},
+    {"timingTiming", 0x50, 7, 0, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Timing, 20, fhir_deserialize::ResourceType::Timing},
 #line 22 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"condition", 0x70, 10, -1},
+    {"condition", 0x70, 10, -1, {(U8*)"condition", 9}, fhir_deserialize::ResourceType::Expression, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"timingDateTime", 0x50, 7, 3},
+    {"timingDateTime", 0x50, 7, 3, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Timing, 17, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"timingReference", 0x50, 7, 1},
+    {"timingReference", 0x50, 7, 1, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Timing, 20, fhir_deserialize::ResourceType::Reference},
 #line 10 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"data", 0x68, 9, -1},
+    {"data", 0x68, 9, -1, {(U8*)"data", 4}, fhir_deserialize::ResourceType::DataRequirement, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"data_count", 0x60, 8, -1},
+    {"data_count", 0x60, 8, -1, {(U8*)"data_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/TriggerDefinition.gperf"
-    {"extension_count", 0x18, 2, -1}
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

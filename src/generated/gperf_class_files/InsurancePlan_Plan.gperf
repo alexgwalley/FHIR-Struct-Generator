@@ -7,20 +7,20 @@
 %define class-name InsurancePlan_Plan_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-identifier_count, 0x38, 6, -1
-identifier, 0x40, 7, -1
-type, 0x48, 8, -1
-coverageArea_count, 0x50, 9, -1
-coverageArea, 0x58, 10, -1
-network_count, 0x60, 11, -1
-network, 0x68, 12, -1
-generalCost_count, 0x70, 13, -1
-generalCost, 0x78, 14, -1
-specificCost_count, 0x80, 15, -1
-specificCost, 0x88, 16, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+identifier_count, 0x38, 6, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+identifier, 0x40, 7, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown
+type, 0x48, 8, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+coverageArea_count, 0x50, 9, -1, {(U8*)"coverageArea_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+coverageArea, 0x58, 10, -1, {(U8*)"coverageArea", 12}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+network_count, 0x60, 11, -1, {(U8*)"network_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+network, 0x68, 12, -1, {(U8*)"network", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown
+generalCost_count, 0x70, 13, -1, {(U8*)"generalCost_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+generalCost, 0x78, 14, -1, {(U8*)"generalCost", 11}, fhir_deserialize::ResourceType::InsurancePlan_Plan_GeneralCost, 0, fhir_deserialize::ResourceType::Unknown
+specificCost_count, 0x80, 15, -1, {(U8*)"specificCost_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+specificCost, 0x88, 16, -1, {(U8*)"specificCost", 12}, fhir_deserialize::ResourceType::InsurancePlan_Plan_SpecificCost, 0, fhir_deserialize::ResourceType::Unknown

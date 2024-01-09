@@ -107,125 +107,125 @@ Parameters_Parameter_Gperf::hash (register const char *str, register unsigned in
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Parameters_Parameter[] =
   {
 #line 11 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"name", 0x38, 6, -1},
+    {"name", 0x38, 6, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueOid", 0x50, 8, 11},
+    {"valueOid", 0x50, 8, 11, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 6, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueCode", 0x50, 8, 3},
+    {"valueCode", 0x50, 8, 3, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 3, fhir_deserialize::ResourceType::Unknown},
 #line 51 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueRange", 0x50, 8, 34},
+    {"valueRange", 0x50, 8, 34, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Range},
 #line 41 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueCoding", 0x50, 8, 24},
+    {"valueCoding", 0x50, 8, 24, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Coding},
 #line 24 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueId", 0x50, 8, 7},
+    {"valueId", 0x50, 8, 7, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 4, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueCanonical", 0x50, 8, 2},
+    {"valueCanonical", 0x50, 8, 2, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 2, fhir_deserialize::ResourceType::Unknown},
 #line 52 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueRatio", 0x50, 8, 35},
+    {"valueRatio", 0x50, 8, 35, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Ratio},
 #line 58 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueContributor", 0x50, 8, 41},
+    {"valueContributor", 0x50, 8, 41, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Contributor},
 #line 42 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueContactPoint", 0x50, 8, 25},
+    {"valueContactPoint", 0x50, 8, 25, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::ContactPoint},
 #line 57 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueContactDetail", 0x50, 8, 40},
+    {"valueContactDetail", 0x50, 8, 40, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::ContactDetail},
 #line 21 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueDate", 0x50, 8, 4},
+    {"valueDate", 0x50, 8, 4, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 16, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueCodeableConcept", 0x50, 8, 23},
+    {"valueCodeableConcept", 0x50, 8, 23, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::CodeableConcept},
 #line 26 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueInteger", 0x50, 8, 9},
+    {"valueInteger", 0x50, 8, 9, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Integer},
 #line 22 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueDateTime", 0x50, 8, 5},
+    {"valueDateTime", 0x50, 8, 5, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 17, fhir_deserialize::ResourceType::Unknown},
 #line 69 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"part", 0x70, 11, -1},
+    {"part", 0x70, 11, -1, {(U8*)"part", 4}, fhir_deserialize::ResourceType::Parameters_Parameter, 0, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueIdentifier", 0x50, 8, 30},
+    {"valueIdentifier", 0x50, 8, 30, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Identifier},
 #line 65 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueDosage", 0x50, 8, 48},
+    {"valueDosage", 0x50, 8, 48, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Dosage},
 #line 25 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueInstant", 0x50, 8, 8},
+    {"valueInstant", 0x50, 8, 8, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 19, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueDistance", 0x50, 8, 27},
+    {"valueDistance", 0x50, 8, 27, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Distance},
 #line 31 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueTime", 0x50, 8, 14},
+    {"valueTime", 0x50, 8, 14, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 18, fhir_deserialize::ResourceType::Unknown},
 #line 59 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueDataRequirement", 0x50, 8, 42},
+    {"valueDataRequirement", 0x50, 8, 42, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::DataRequirement},
 #line 56 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueTiming", 0x50, 8, 39},
+    {"valueTiming", 0x50, 8, 39, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Timing},
 #line 36 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueAddress", 0x50, 8, 19},
+    {"valueAddress", 0x50, 8, 19, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Address},
 #line 37 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueAge", 0x50, 8, 20},
+    {"valueAge", 0x50, 8, 20, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Age},
 #line 53 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueReference", 0x50, 8, 36},
+    {"valueReference", 0x50, 8, 36, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Reference},
 #line 38 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueAnnotation", 0x50, 8, 21},
+    {"valueAnnotation", 0x50, 8, 21, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Annotation},
 #line 29 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valuePositiveInt", 0x50, 8, 12},
+    {"valuePositiveInt", 0x50, 8, 12, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 13, fhir_deserialize::ResourceType::Unknown},
 #line 63 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueTriggerDefinition", 0x50, 8, 46},
+    {"valueTriggerDefinition", 0x50, 8, 46, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::TriggerDefinition},
 #line 45 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueDuration", 0x50, 8, 28},
+    {"valueDuration", 0x50, 8, 28, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Duration},
 #line 55 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueSignature", 0x50, 8, 38},
+    {"valueSignature", 0x50, 8, 38, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Signature},
 #line 39 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueAttachment", 0x50, 8, 22},
+    {"valueAttachment", 0x50, 8, 22, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Attachment},
 #line 49 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valuePeriod", 0x50, 8, 32},
+    {"valuePeriod", 0x50, 8, 32, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Period},
 #line 15 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueUri", 0x50, 8, 16},
+    {"valueUri", 0x50, 8, 16, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 9, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueUuid", 0x50, 8, 18},
+    {"valueUuid", 0x50, 8, 18, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 11, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueMoney", 0x50, 8, 31},
+    {"valueMoney", 0x50, 8, 31, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Money},
 #line 54 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueSampledData", 0x50, 8, 37},
+    {"valueSampledData", 0x50, 8, 37, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::SampledData},
 #line 23 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueDecimal", 0x50, 8, 6},
+    {"valueDecimal", 0x50, 8, 6, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 15, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 66 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueMeta", 0x50, 8, 49},
+    {"valueMeta", 0x50, 8, 49, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Meta},
 #line 62 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueRelatedArtifact", 0x50, 8, 45},
+    {"valueRelatedArtifact", 0x50, 8, 45, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::RelatedArtifact},
 #line 17 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueBase64Binary", 0x50, 8, 0},
+    {"valueBase64Binary", 0x50, 8, 0, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 1, fhir_deserialize::ResourceType::Unknown},
 #line 67 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"resource", 0x60, 9, -1},
+    {"resource", 0x60, 9, -1, {(U8*)"resource", 8}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 61 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueParameterDefinition", 0x50, 8, 44},
+    {"valueParameterDefinition", 0x50, 8, 44, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::ParameterDefinition},
 #line 43 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueCount", 0x50, 8, 26},
+    {"valueCount", 0x50, 8, 26, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Count},
 #line 30 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueString", 0x50, 8, 13},
+    {"valueString", 0x50, 8, 13, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 7, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 50 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueQuantity", 0x50, 8, 33},
+    {"valueQuantity", 0x50, 8, 33, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Quantity},
 #line 13 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 60 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueExpression", 0x50, 8, 43},
+    {"valueExpression", 0x50, 8, 43, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Expression},
 #line 32 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueUnsignedInt", 0x50, 8, 15},
+    {"valueUnsignedInt", 0x50, 8, 15, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 14, fhir_deserialize::ResourceType::Unknown},
 #line 64 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueUsageContext", 0x50, 8, 47},
+    {"valueUsageContext", 0x50, 8, 47, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::UsageContext},
 #line 46 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueHumanName", 0x50, 8, 29},
+    {"valueHumanName", 0x50, 8, 29, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::HumanName},
 #line 12 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueMarkdown", 0x50, 8, 10},
+    {"valueMarkdown", 0x50, 8, 10, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 5, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueBoolean", 0x50, 8, 1},
+    {"valueBoolean", 0x50, 8, 1, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 12, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"valueUrl", 0x50, 8, 17},
+    {"valueUrl", 0x50, 8, 17, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 10, fhir_deserialize::ResourceType::Unknown},
 #line 68 "./src/generated/gperf_class_files/Parameters_Parameter.gperf"
-    {"part_count", 0x68, 10, -1}
+    {"part_count", 0x68, 10, -1, {(U8*)"part_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

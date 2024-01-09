@@ -310,12 +310,10 @@ PrintLog(Log *log)
 
 // NOTE (agw): Deserialization ========================================================
 
-int
+const MemberNameAndOffset*
 GetMemberMetadata(ClassMetadata *in_class_metadata,
                   ResourceType type, 
-                  String8 unvalidated_key,
-                  ClassMemberMetadata **mem_meta,
-                  ValueTypeAndName *union_type)
+                  String8 unvalidated_key)
 {
 	const MemberNameAndOffset *mem_and_offset = ClassMemberLookup(type, unvalidated_key);
     
@@ -323,65 +321,10 @@ GetMemberMetadata(ClassMetadata *in_class_metadata,
 	{
 		AddError(&global_log, LogType::Error, "Could not find key \"%S\" on resource type \"%S\"",
 		         unvalidated_key, String8FromResourceType(type));
-		return -1;
+		return NULL;
 	}
-    
-	ClassMemberMetadata *member_meta = &in_class_metadata[(int)type].members[mem_and_offset->member_index];
-	*mem_meta = member_meta;
-    
-	// TODO(agw): should really preserve type[0] to be Nil...
-	if (mem_and_offset->type_index > 0)
-	{
-		*union_type = member_meta->types[mem_and_offset->type_index];
-	}
-    
-	return mem_and_offset->member_index;
-    
-#if 0
-	ClassMetadata *meta = &class_metadata[(int)type];
-	for (int i = 0; i < meta->members_count; i++)
-	{
-		if (meta->members[i].name.str[0] != key.str[0])
-		{
-			continue;
-		}
-        
-		if (Str8Match(meta->members[i].name, key, 0))
-		{
-			*mem_meta = &meta->members[i];
-			return i;
-		}
-        
-		if (meta->members[i].type == ClassMemberType::Enum)
-		{
-			continue;
-		}
-        
-		if (IsUnion(&meta->members[i]))
-		{
-			for (int j = 0; j < ArrayCount(meta->members[i].types); j++)
-			{
-				if (meta->members[i].types[j].type == ValueType::Unknown)
-				{
-					Assert(false);
-				}
-                
-				if (meta->members[i].types[j].name.str[0] != key.str[0])
-				{
-					continue;
-				}
-                
-				if (Str8Match(meta->members[i].types[j].name, key, 0))
-				{
-					*union_type = meta->members[i].types[j];
-					*mem_meta = &meta->members[i];
-					return i;
-				}
-			}
-		}
-	}
-	Assert(false);
-#endif
+
+	return mem_and_offset;
 }
 
 inline void*
@@ -428,18 +371,13 @@ ValueListPush(Arena *arena, ValueList *list, ArrayValue array_value)
 void*
 Deserialize_Array(Arena *arena,
                   DeserializationOptions options,
-                  ClassMemberMetadata *mem_meta,
+                  ResourceType member_type,
                   simdjson::ondemand::array array,
                   U64 *count)
 {
-	Assert (!IsUnion(mem_meta));
-	ValueTypeAndName value_type = mem_meta->types[0];
-    
 	Temp temp = ScratchBegin(&arena, 1);
 	ValueList list = {};
     
-	// TODO(agw): don't assume size here
-	//Arena *values_arena = ArenaAlloc(Gigabytes(1)); // if we do this...we are copying the data twice
     
 	int field_count = 0;
 	for (auto field : array)
@@ -493,7 +431,7 @@ Deserialize_Array(Arena *arena,
 				simdjson::ondemand::object child;
 				auto res = value.get(child);
                 
-				ResourceType res_type = ResourceTypeFromString8(mem_meta->types[0].name);
+				ResourceType res_type = member_type;
 				U64 size = 0;
 				void *resource = Resource_Deserialize_Impl_SIMDJSON(arena,
 				                                                    options,
@@ -502,7 +440,7 @@ Deserialize_Array(Arena *arena,
 																	&res_type,
 																	&size);
 				// TODO(agw): we don't want to have to do this copy
-				size_t *resource_ptr = (size_t*)ArenaPush(arena, sizeof(size_t));
+				size_t *resource_ptr = (size_t*)ArenaPushNoZero(arena, sizeof(size_t));
 				*resource_ptr = (size_t)resource;
 
 				ArrayValue value;
@@ -518,6 +456,7 @@ Deserialize_Array(Arena *arena,
 			} break;
 		}
 	}
+
 	void *output_array;
 	size_t size_allocated = temp.arena->pos - temp.pos;
 	output_array = ArenaPushNoZero(arena, list.total_size);
@@ -592,20 +531,15 @@ Resource_Deserialize_Impl_SIMDJSON(Arena *arena,
 				continue;
 		}
         
-		ClassMemberMetadata *mem_meta = NULL;
-        
-        
-		ValueTypeAndName union_type = {}; // TODO(agw): may not need this
-		int mem_index = GetMemberMetadata(options.class_metadata,
-		                                  resource_type, 
-		                                  key,
-		                                  &mem_meta,
-		                                  &union_type);
-		if (mem_index == -1)
+		const MemberNameAndOffset *mem_info = GetMemberMetadata(options.class_metadata,
+																resource_type, 
+		                                                        key);
+		                                  
+		if (mem_info == NULL)
 			continue;
         
         
-		void *dest = (char*)out + mem_meta->offset;
+		void *dest = (char*)out + mem_info->offset;
 		simdjson::ondemand::value value = field.value();
 		switch (value.type())
 		{
@@ -644,14 +578,13 @@ Resource_Deserialize_Impl_SIMDJSON(Arena *arena,
                 
 				// TODO(agw): check if it would be faster if inside an "else" clause
 				ResourceType type;
-				if (union_type.type == ValueType::Class_Reference)
+				if ((ValueType)mem_info->union_type_type == ValueType::Class_Reference)
 				{
-					String8 class_name = GetClassNameFromUnionName(arena, union_type.name, mem_meta->name);
-					type = ResourceTypeFromString8(class_name);
+					type = mem_info->union_resource_type;
 				}
 				else
 				{
-					type = ResourceTypeFromString8(mem_meta->types[0].name);
+					type = mem_info->member_first_type_class_type;
 				}
                 
 				void *resource = Resource_Deserialize_Impl_SIMDJSON(arena, options, type, child, 0, 0);
@@ -662,10 +595,10 @@ Resource_Deserialize_Impl_SIMDJSON(Arena *arena,
 				simdjson::ondemand::array arr;
 				auto res = value.get(arr);
 				U64 count = 0;
-				void *array_result = Deserialize_Array(arena, options, mem_meta, arr, &count);
+				void *array_result = Deserialize_Array(arena, options, mem_info->member_first_type_class_type, arr, &count);
 				*(size_t*)dest = (size_t)array_result;
                 
-				ClassMemberMetadata *prev_mem = &meta->members[mem_index-1];
+				ClassMemberMetadata *prev_mem = &meta->members[mem_info->member_index-1];
 				void *count_dest = (char*)out + prev_mem->offset;
 				// TODO(agw): need to link this 
 				Assert(sizeof(count) == prev_mem->size);

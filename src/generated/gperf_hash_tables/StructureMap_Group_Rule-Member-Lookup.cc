@@ -88,37 +88,37 @@ StructureMap_Group_Rule_Gperf::hash (register const char *str, register unsigned
 static const struct fhir_deserialize::MemberNameAndOffset word_array_StructureMap_Group_Rule[] =
   {
 #line 11 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"rule", 0x70, 12, -1},
+    {"rule", 0x70, 12, -1, {(U8*)"rule", 4}, fhir_deserialize::ResourceType::StructureMap_Group_Rule, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"dependent", 0x80, 14, -1},
+    {"dependent", 0x80, 14, -1, {(U8*)"dependent", 9}, fhir_deserialize::ResourceType::StructureMap_Group_Rule_Dependent, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"rule_count", 0x68, 11, -1},
+    {"rule_count", 0x68, 11, -1, {(U8*)"rule_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"target", 0x60, 10, -1},
+    {"target", 0x60, 10, -1, {(U8*)"target", 6}, fhir_deserialize::ResourceType::StructureMap_Group_Rule_Target, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"documentation", 0x88, 15, -1},
+    {"documentation", 0x88, 15, -1, {(U8*)"documentation", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"dependent_count", 0x78, 13, -1},
+    {"dependent_count", 0x78, 13, -1, {(U8*)"dependent_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"source", 0x50, 8, -1},
+    {"source", 0x50, 8, -1, {(U8*)"source", 6}, fhir_deserialize::ResourceType::StructureMap_Group_Rule_Source, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"target_count", 0x58, 9, -1},
+    {"target_count", 0x58, 9, -1, {(U8*)"target_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"name", 0x38, 6, -1},
+    {"name", 0x38, 6, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"source_count", 0x48, 7, -1},
+    {"source_count", 0x48, 7, -1, {(U8*)"source_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/StructureMap_Group_Rule.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

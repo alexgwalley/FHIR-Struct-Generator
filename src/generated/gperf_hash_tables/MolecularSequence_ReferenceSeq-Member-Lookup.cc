@@ -88,35 +88,35 @@ MolecularSequence_ReferenceSeq_Gperf::hash (register const char *str, register u
 static const struct fhir_deserialize::MemberNameAndOffset word_array_MolecularSequence_ReferenceSeq[] =
   {
 #line 11 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"strand", 0x80, 12, -1},
+    {"strand", 0x80, 12, -1, {(U8*)"strand", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"windowEnd", 0x98, 14, -1},
+    {"windowEnd", 0x98, 14, -1, {(U8*)"windowEnd", 9}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"chromosome", 0x38, 6, -1},
+    {"chromosome", 0x38, 6, -1, {(U8*)"chromosome", 10}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"windowStart", 0x90, 13, -1},
+    {"windowStart", 0x90, 13, -1, {(U8*)"windowStart", 11}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"referenceSeqId", 0x60, 9, -1},
+    {"referenceSeqId", 0x60, 9, -1, {(U8*)"referenceSeqId", 14}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"orientation", 0x50, 8, -1},
+    {"orientation", 0x50, 8, -1, {(U8*)"orientation", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"referenceSeqString", 0x70, 11, -1},
+    {"referenceSeqString", 0x70, 11, -1, {(U8*)"referenceSeqString", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"referenceSeqPointer", 0x68, 10, -1},
+    {"referenceSeqPointer", 0x68, 10, -1, {(U8*)"referenceSeqPointer", 19}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"genomeBuild", 0x40, 7, -1},
+    {"genomeBuild", 0x40, 7, -1, {(U8*)"genomeBuild", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/MolecularSequence_ReferenceSeq.gperf"
-    {"extension_count", 0x18, 2, -1}
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

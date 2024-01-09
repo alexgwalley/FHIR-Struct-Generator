@@ -88,49 +88,49 @@ Dosage_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Dosage[] =
   {
 #line 11 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"site", 0x88, 14, -1},
+    {"site", 0x88, 14, -1, {(U8*)"site", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"route", 0x90, 15, -1},
+    {"route", 0x90, 15, -1, {(U8*)"route", 5}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"method", 0x98, 16, -1},
+    {"method", 0x98, 16, -1, {(U8*)"method", 6}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"sequence", 0x38, 6, -1},
+    {"sequence", 0x38, 6, -1, {(U8*)"sequence", 8}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"text", 0x40, 7, -1},
+    {"text", 0x40, 7, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"timing", 0x70, 11, -1},
+    {"timing", 0x70, 11, -1, {(U8*)"timing", 6}, fhir_deserialize::ResourceType::Timing, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"maxDosePerPeriod", 0xb0, 19, -1},
+    {"maxDosePerPeriod", 0xb0, 19, -1, {(U8*)"maxDosePerPeriod", 16}, fhir_deserialize::ResourceType::Ratio, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"maxDosePerLifetime", 0xc0, 21, -1},
+    {"maxDosePerLifetime", 0xc0, 21, -1, {(U8*)"maxDosePerLifetime", 18}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"asNeededBoolean", 0x80, 13, 0},
+    {"asNeededBoolean", 0x80, 13, 0, {(U8*)"asNeeded", 8}, fhir_deserialize::ResourceType::Unknown, 12, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"doseAndRate", 0xa8, 18, -1},
+    {"doseAndRate", 0xa8, 18, -1, {(U8*)"doseAndRate", 11}, fhir_deserialize::ResourceType::Dosage_DoseAndRate, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"maxDosePerAdministration", 0xb8, 20, -1},
+    {"maxDosePerAdministration", 0xb8, 20, -1, {(U8*)"maxDosePerAdministration", 24}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"additionalInstruction", 0x58, 9, -1},
+    {"additionalInstruction", 0x58, 9, -1, {(U8*)"additionalInstruction", 21}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"doseAndRate_count", 0xa0, 17, -1},
+    {"doseAndRate_count", 0xa0, 17, -1, {(U8*)"doseAndRate_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"asNeededCodeableConcept", 0x80, 13, 1},
+    {"asNeededCodeableConcept", 0x80, 13, 1, {(U8*)"asNeeded", 8}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::CodeableConcept},
 #line 18 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"additionalInstruction_count", 0x50, 8, -1},
+    {"additionalInstruction_count", 0x50, 8, -1, {(U8*)"additionalInstruction_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Dosage.gperf"
-    {"patientInstruction", 0x60, 10, -1}
+    {"patientInstruction", 0x60, 10, -1, {(U8*)"patientInstruction", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

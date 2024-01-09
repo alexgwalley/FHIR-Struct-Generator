@@ -88,25 +88,25 @@ ExplanationOfBenefit_Accident_Gperf::hash (register const char *str, register un
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ExplanationOfBenefit_Accident[] =
   {
 #line 11 "./src/generated/gperf_class_files/ExplanationOfBenefit_Accident.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ExplanationOfBenefit_Accident.gperf"
-    {"type", 0x48, 7, -1},
+    {"type", 0x48, 7, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ExplanationOfBenefit_Accident.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ExplanationOfBenefit_Accident.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ExplanationOfBenefit_Accident.gperf"
-    {"date", 0x38, 6, -1},
+    {"date", 0x38, 6, -1, {(U8*)"date", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ExplanationOfBenefit_Accident.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ExplanationOfBenefit_Accident.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ExplanationOfBenefit_Accident.gperf"
-    {"locationAddress", 0x58, 9, 0},
+    {"locationAddress", 0x58, 9, 0, {(U8*)"location", 8}, fhir_deserialize::ResourceType::Address, 20, fhir_deserialize::ResourceType::Address},
 #line 19 "./src/generated/gperf_class_files/ExplanationOfBenefit_Accident.gperf"
-    {"locationReference", 0x58, 9, 1},
+    {"locationReference", 0x58, 9, 1, {(U8*)"location", 8}, fhir_deserialize::ResourceType::Address, 20, fhir_deserialize::ResourceType::Reference},
 #line 14 "./src/generated/gperf_class_files/ExplanationOfBenefit_Accident.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

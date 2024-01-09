@@ -105,51 +105,51 @@ Observation_Component_Gperf::hash (register const char *str, register unsigned i
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Observation_Component[] =
   {
 #line 11 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"code", 0x38, 6, -1},
+    {"code", 0x38, 6, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"valueRatio", 0x48, 8, 6},
+    {"valueRatio", 0x48, 8, 6, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Ratio},
 #line 19 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"valueString", 0x48, 8, 2},
+    {"valueString", 0x48, 8, 2, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 7, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"valueQuantity", 0x48, 8, 0},
+    {"valueQuantity", 0x48, 8, 0, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Quantity},
 #line 30 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"interpretation", 0x68, 11, -1},
+    {"interpretation", 0x68, 11, -1, {(U8*)"interpretation", 14}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"valueSampledData", 0x48, 8, 7},
+    {"valueSampledData", 0x48, 8, 7, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::SampledData},
 #line 15 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"valueDateTime", 0x48, 8, 9},
+    {"valueDateTime", 0x48, 8, 9, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 17, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"referenceRange", 0x78, 13, -1},
+    {"referenceRange", 0x78, 13, -1, {(U8*)"referenceRange", 14}, fhir_deserialize::ResourceType::Observation_ReferenceRange, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"interpretation_count", 0x60, 10, -1},
+    {"interpretation_count", 0x60, 10, -1, {(U8*)"interpretation_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"dataAbsentReason", 0x58, 9, -1},
+    {"dataAbsentReason", 0x58, 9, -1, {(U8*)"dataAbsentReason", 16}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"valueInteger", 0x48, 8, 4},
+    {"valueInteger", 0x48, 8, 4, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Integer},
 #line 14 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"valueTime", 0x48, 8, 8},
+    {"valueTime", 0x48, 8, 8, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 18, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"referenceRange_count", 0x70, 12, -1},
+    {"referenceRange_count", 0x70, 12, -1, {(U8*)"referenceRange_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"valuePeriod", 0x48, 8, 10},
+    {"valuePeriod", 0x48, 8, 10, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Period},
 #line 20 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"valueBoolean", 0x48, 8, 3},
+    {"valueBoolean", 0x48, 8, 3, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 12, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"valueRange", 0x48, 8, 5},
+    {"valueRange", 0x48, 8, 5, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Range},
 #line 18 "./src/generated/gperf_class_files/Observation_Component.gperf"
-    {"valueCodeableConcept", 0x48, 8, 1}
+    {"valueCodeableConcept", 0x48, 8, 1, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::CodeableConcept}
   };
 
 static const signed char lookup[] =

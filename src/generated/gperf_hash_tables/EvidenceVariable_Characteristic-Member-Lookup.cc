@@ -119,49 +119,49 @@ EvidenceVariable_Characteristic_Gperf::hash (register const char *str, register 
 static const struct fhir_deserialize::MemberNameAndOffset word_array_EvidenceVariable_Characteristic[] =
   {
 #line 11 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"exclude", 0x70, 11, -1},
+    {"exclude", 0x70, 11, -1, {(U8*)"exclude", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"description", 0x38, 6, -1},
+    {"description", 0x38, 6, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"usageContext", 0x68, 10, -1},
+    {"usageContext", 0x68, 10, -1, {(U8*)"usageContext", 12}, fhir_deserialize::ResourceType::UsageContext, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"timeFromStart", 0x88, 14, -1},
+    {"timeFromStart", 0x88, 14, -1, {(U8*)"timeFromStart", 13}, fhir_deserialize::ResourceType::Duration, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"usageContext_count", 0x60, 9, -1},
+    {"usageContext_count", 0x60, 9, -1, {(U8*)"usageContext_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"definitionCanonical", 0x50, 8, 1},
+    {"definitionCanonical", 0x50, 8, 1, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 2, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"definitionExpression", 0x50, 8, 3},
+    {"definitionExpression", 0x50, 8, 3, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::Expression},
 #line 31 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"groupMeasure", 0x90, 15, -1},
+    {"groupMeasure", 0x90, 15, -1, {(U8*)"groupMeasure", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"definitionReference", 0x50, 8, 0},
+    {"definitionReference", 0x50, 8, 0, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::Reference},
 #line 19 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"definitionCodeableConcept", 0x50, 8, 2},
+    {"definitionCodeableConcept", 0x50, 8, 2, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::CodeableConcept},
 #line 29 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"participantEffectiveTiming", 0x78, 13, 3},
+    {"participantEffectiveTiming", 0x78, 13, 3, {(U8*)"participantEffective", 20}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Timing},
 #line 10 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"participantEffectiveDateTime", 0x78, 13, 0},
+    {"participantEffectiveDateTime", 0x78, 13, 0, {(U8*)"participantEffective", 20}, fhir_deserialize::ResourceType::Unknown, 17, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"definitionDataRequirement", 0x50, 8, 4},
+    {"definitionDataRequirement", 0x50, 8, 4, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::DataRequirement},
 #line 27 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"participantEffectivePeriod", 0x78, 13, 1},
+    {"participantEffectivePeriod", 0x78, 13, 1, {(U8*)"participantEffective", 20}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Period},
 #line 22 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"definitionTriggerDefinition", 0x50, 8, 5},
+    {"definitionTriggerDefinition", 0x50, 8, 5, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::TriggerDefinition},
 #line 28 "./src/generated/gperf_class_files/EvidenceVariable_Characteristic.gperf"
-    {"participantEffectiveDuration", 0x78, 13, 2}
+    {"participantEffectiveDuration", 0x78, 13, 2, {(U8*)"participantEffective", 20}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Duration}
   };
 
 static const signed char lookup[] =

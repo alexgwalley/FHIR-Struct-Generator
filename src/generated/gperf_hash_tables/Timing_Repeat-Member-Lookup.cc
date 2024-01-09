@@ -88,53 +88,53 @@ Timing_Repeat_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Timing_Repeat[] =
   {
 #line 11 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"count", 0x38, 6, -1},
+    {"count", 0x38, 6, -1, {(U8*)"count", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"period", 0x78, 13, -1},
+    {"period", 0x78, 13, -1, {(U8*)"period", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"countMax", 0x40, 7, -1},
+    {"countMax", 0x40, 7, -1, {(U8*)"countMax", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"periodMax", 0x80, 14, -1},
+    {"periodMax", 0x80, 14, -1, {(U8*)"periodMax", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"periodUnit", 0x88, 15, -1},
+    {"periodUnit", 0x88, 15, -1, {(U8*)"periodUnit", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"offset", 0xc8, 22, -1},
+    {"offset", 0xc8, 22, -1, {(U8*)"offset", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"duration", 0x48, 8, -1},
+    {"duration", 0x48, 8, -1, {(U8*)"duration", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"dayOfWeek", 0xa0, 17, -1},
+    {"dayOfWeek", 0xa0, 17, -1, {(U8*)"dayOfWeek", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"durationMax", 0x50, 9, -1},
+    {"durationMax", 0x50, 9, -1, {(U8*)"durationMax", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"durationUnit", 0x58, 10, -1},
+    {"durationUnit", 0x58, 10, -1, {(U8*)"durationUnit", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"when", 0xc0, 21, -1},
+    {"when", 0xc0, 21, -1, {(U8*)"when", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"dayOfWeek_count", 0x98, 16, -1},
+    {"dayOfWeek_count", 0x98, 16, -1, {(U8*)"dayOfWeek_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"boundsRange", 0x30, 5, 1},
+    {"boundsRange", 0x30, 5, 1, {(U8*)"bounds", 6}, fhir_deserialize::ResourceType::Duration, 20, fhir_deserialize::ResourceType::Range},
 #line 16 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"boundsPeriod", 0x30, 5, 2},
+    {"boundsPeriod", 0x30, 5, 2, {(U8*)"bounds", 6}, fhir_deserialize::ResourceType::Duration, 20, fhir_deserialize::ResourceType::Period},
 #line 14 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"boundsDuration", 0x30, 5, 0},
+    {"boundsDuration", 0x30, 5, 0, {(U8*)"bounds", 6}, fhir_deserialize::ResourceType::Duration, 20, fhir_deserialize::ResourceType::Duration},
 #line 31 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"when_count", 0xb8, 20, -1},
+    {"when_count", 0xb8, 20, -1, {(U8*)"when_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"timeOfDay", 0xb0, 19, -1},
+    {"timeOfDay", 0xb0, 19, -1, {(U8*)"timeOfDay", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"frequency", 0x68, 11, -1},
+    {"frequency", 0x68, 11, -1, {(U8*)"frequency", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"timeOfDay_count", 0xa8, 18, -1},
+    {"timeOfDay_count", 0xa8, 18, -1, {(U8*)"timeOfDay_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"frequencyMax", 0x70, 12, -1},
+    {"frequencyMax", 0x70, 12, -1, {(U8*)"frequencyMax", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Timing_Repeat.gperf"
-    {"extension_count", 0x18, 2, -1}
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

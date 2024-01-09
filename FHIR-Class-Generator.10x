@@ -151,13 +151,10 @@
 				<Path>fhir_class_metadata.h</Path>
 			</File>
 			<File>
-				<Path>fhir_serialize_gen.c</Path>
-			</File>
-			<File>
-				<Path>fhir_structs_gen.h</Path>
-			</File>
-			<File>
 				<Path>simple_use.cc</Path>
+			</File>
+			<File>
+				<Path>tests.txt</Path>
 			</File>
 		</Children>
 	</Workspace>

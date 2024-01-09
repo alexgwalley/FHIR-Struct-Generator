@@ -109,65 +109,65 @@ CapabilityStatement_Rest_Resource_Gperf::hash (register const char *str, registe
 static const struct fhir_deserialize::MemberNameAndOffset word_array_CapabilityStatement_Rest_Resource[] =
   {
 #line 11 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"type", 0x38, 6, -1},
+    {"type", 0x38, 6, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"profile", 0x48, 7, -1},
+    {"profile", 0x48, 7, -1, {(U8*)"profile", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"versioning", 0x88, 13, -1},
+    {"versioning", 0x88, 13, -1, {(U8*)"versioning", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"searchParam", 0x108, 27, -1},
+    {"searchParam", 0x108, 27, -1, {(U8*)"searchParam", 11}, fhir_deserialize::ResourceType::CapabilityStatement_Rest_Resource_SearchParam, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"searchInclude", 0xe8, 23, -1},
+    {"searchInclude", 0xe8, 23, -1, {(U8*)"searchInclude", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"conditionalRead", 0xa8, 17, -1},
+    {"conditionalRead", 0xa8, 17, -1, {(U8*)"conditionalRead", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"searchRevInclude", 0xf8, 25, -1},
+    {"searchRevInclude", 0xf8, 25, -1, {(U8*)"searchRevInclude", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"documentation", 0x68, 10, -1},
+    {"documentation", 0x68, 10, -1, {(U8*)"documentation", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"searchInclude_count", 0xe0, 22, -1},
+    {"searchInclude_count", 0xe0, 22, -1, {(U8*)"searchInclude_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"interaction", 0x80, 12, -1},
+    {"interaction", 0x80, 12, -1, {(U8*)"interaction", 11}, fhir_deserialize::ResourceType::CapabilityStatement_Rest_Resource_Interaction, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"searchRevInclude_count", 0xf0, 24, -1},
+    {"searchRevInclude_count", 0xf0, 24, -1, {(U8*)"searchRevInclude_count", 22}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"operation", 0x118, 29, -1},
+    {"operation", 0x118, 29, -1, {(U8*)"operation", 9}, fhir_deserialize::ResourceType::CapabilityStatement_Rest_Resource_Operation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"referencePolicy", 0xd8, 21, -1},
+    {"referencePolicy", 0xd8, 21, -1, {(U8*)"referencePolicy", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"supportedProfile", 0x60, 9, -1},
+    {"supportedProfile", 0x60, 9, -1, {(U8*)"supportedProfile", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"searchParam_count", 0x100, 26, -1},
+    {"searchParam_count", 0x100, 26, -1, {(U8*)"searchParam_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"conditionalDelete", 0xc0, 19, -1},
+    {"conditionalDelete", 0xc0, 19, -1, {(U8*)"conditionalDelete", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"referencePolicy_count", 0xd0, 20, -1},
+    {"referencePolicy_count", 0xd0, 20, -1, {(U8*)"referencePolicy_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"supportedProfile_count", 0x58, 8, -1},
+    {"supportedProfile_count", 0x58, 8, -1, {(U8*)"supportedProfile_count", 22}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"operation_count", 0x110, 28, -1},
+    {"operation_count", 0x110, 28, -1, {(U8*)"operation_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"readHistory", 0x98, 14, -1},
+    {"readHistory", 0x98, 14, -1, {(U8*)"readHistory", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"interaction_count", 0x78, 11, -1},
+    {"interaction_count", 0x78, 11, -1, {(U8*)"interaction_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"conditionalCreate", 0xa0, 16, -1},
+    {"conditionalCreate", 0xa0, 16, -1, {(U8*)"conditionalCreate", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"updateCreate", 0x9c, 15, -1},
+    {"updateCreate", 0x9c, 15, -1, {(U8*)"updateCreate", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/CapabilityStatement_Rest_Resource.gperf"
-    {"conditionalUpdate", 0xb8, 18, -1}
+    {"conditionalUpdate", 0xb8, 18, -1, {(U8*)"conditionalUpdate", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

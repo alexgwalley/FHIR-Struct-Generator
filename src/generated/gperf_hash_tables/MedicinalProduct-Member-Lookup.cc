@@ -98,97 +98,97 @@ MedicinalProduct_Gperf::hash (register const char *str, register unsigned int le
 static const struct fhir_deserialize::MemberNameAndOffset word_array_MedicinalProduct[] =
   {
 #line 11 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 45 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"contact", 0x130, 35, -1},
+    {"contact", 0x130, 35, -1, {(U8*)"contact", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 43 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"masterFile", 0x120, 33, -1},
+    {"masterFile", 0x120, 33, -1, {(U8*)"masterFile", 10}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"contact_count", 0x128, 34, -1},
+    {"contact_count", 0x128, 34, -1, {(U8*)"contact_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"masterFile_count", 0x118, 32, -1},
+    {"masterFile_count", 0x118, 32, -1, {(U8*)"masterFile_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"legalStatusOfSupply", 0xa0, 17, -1},
+    {"legalStatusOfSupply", 0xa0, 17, -1, {(U8*)"legalStatusOfSupply", 19}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"identifier", 0x80, 13, -1},
+    {"identifier", 0x80, 13, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"pharmaceuticalProduct", 0xf0, 27, -1},
+    {"pharmaceuticalProduct", 0xf0, 27, -1, {(U8*)"pharmaceuticalProduct", 21}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"type", 0x88, 14, -1},
+    {"type", 0x88, 14, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"specialMeasures", 0xb8, 20, -1},
+    {"specialMeasures", 0xb8, 20, -1, {(U8*)"specialMeasures", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"identifier_count", 0x78, 12, -1},
+    {"identifier_count", 0x78, 12, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"pharmaceuticalProduct_count", 0xe8, 26, -1},
+    {"pharmaceuticalProduct_count", 0xe8, 26, -1, {(U8*)"pharmaceuticalProduct_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 55 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"specialDesignation", 0x180, 45, -1},
+    {"specialDesignation", 0x180, 45, -1, {(U8*)"specialDesignation", 18}, fhir_deserialize::ResourceType::MedicinalProduct_SpecialDesignation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"additionalMonitoringIndicator", 0xa8, 18, -1},
+    {"additionalMonitoringIndicator", 0xa8, 18, -1, {(U8*)"additionalMonitoringIndicator", 29}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 53 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"manufacturingBusinessOperation", 0x170, 43, -1},
+    {"manufacturingBusinessOperation", 0x170, 43, -1, {(U8*)"manufacturingBusinessOperation", 30}, fhir_deserialize::ResourceType::MedicinalProduct_ManufacturingBusinessOperation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"specialMeasures_count", 0xb0, 19, -1},
+    {"specialMeasures_count", 0xb0, 19, -1, {(U8*)"specialMeasures_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"paediatricUseIndicator", 0xc0, 21, -1},
+    {"paediatricUseIndicator", 0xc0, 21, -1, {(U8*)"paediatricUseIndicator", 22}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 54 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"specialDesignation_count", 0x178, 44, -1},
+    {"specialDesignation_count", 0x178, 44, -1, {(U8*)"specialDesignation_count", 24}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"marketingStatus", 0xe0, 25, -1},
+    {"marketingStatus", 0xe0, 25, -1, {(U8*)"marketingStatus", 15}, fhir_deserialize::ResourceType::MarketingStatus, 0, fhir_deserialize::ResourceType::Unknown},
 #line 52 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"manufacturingBusinessOperation_count", 0x168, 42, -1},
+    {"manufacturingBusinessOperation_count", 0x168, 42, -1, {(U8*)"manufacturingBusinessOperation_count", 36}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"marketingStatus_count", 0xd8, 24, -1},
+    {"marketingStatus_count", 0xd8, 24, -1, {(U8*)"marketingStatus_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"clinicalTrial", 0x140, 37, -1},
+    {"clinicalTrial", 0x140, 37, -1, {(U8*)"clinicalTrial", 13}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 51 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"crossReference", 0x160, 41, -1},
+    {"crossReference", 0x160, 41, -1, {(U8*)"crossReference", 14}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 41 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"attachedDocument", 0x110, 31, -1},
+    {"attachedDocument", 0x110, 31, -1, {(U8*)"attachedDocument", 16}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 46 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"clinicalTrial_count", 0x138, 36, -1},
+    {"clinicalTrial_count", 0x138, 36, -1, {(U8*)"clinicalTrial_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 50 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"crossReference_count", 0x158, 40, -1},
+    {"crossReference_count", 0x158, 40, -1, {(U8*)"crossReference_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"productClassification", 0xd0, 23, -1},
+    {"productClassification", 0xd0, 23, -1, {(U8*)"productClassification", 21}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"attachedDocument_count", 0x108, 30, -1},
+    {"attachedDocument_count", 0x108, 30, -1, {(U8*)"attachedDocument_count", 22}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 49 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"name", 0x150, 39, -1},
+    {"name", 0x150, 39, -1, {(U8*)"name", 4}, fhir_deserialize::ResourceType::MedicinalProduct_Name, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"domain", 0x90, 15, -1},
+    {"domain", 0x90, 15, -1, {(U8*)"domain", 6}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"productClassification_count", 0xc8, 22, -1},
+    {"productClassification_count", 0xc8, 22, -1, {(U8*)"productClassification_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"packagedMedicinalProduct", 0x100, 29, -1},
+    {"packagedMedicinalProduct", 0x100, 29, -1, {(U8*)"packagedMedicinalProduct", 24}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"name_count", 0x148, 38, -1},
+    {"name_count", 0x148, 38, -1, {(U8*)"name_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"packagedMedicinalProduct_count", 0xf8, 28, -1},
+    {"packagedMedicinalProduct_count", 0xf8, 28, -1, {(U8*)"packagedMedicinalProduct_count", 30}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/MedicinalProduct.gperf"
-    {"combinedPharmaceuticalDoseForm", 0x98, 16, -1}
+    {"combinedPharmaceuticalDoseForm", 0x98, 16, -1, {(U8*)"combinedPharmaceuticalDoseForm", 30}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

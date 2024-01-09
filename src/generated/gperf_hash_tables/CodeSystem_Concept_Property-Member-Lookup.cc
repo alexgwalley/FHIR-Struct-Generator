@@ -101,33 +101,33 @@ CodeSystem_Concept_Property_Gperf::hash (register const char *str, register unsi
 static const struct fhir_deserialize::MemberNameAndOffset word_array_CodeSystem_Concept_Property[] =
   {
 #line 11 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"code", 0x38, 6, -1},
+    {"code", 0x38, 6, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"valueString", 0x50, 8, 2},
+    {"valueString", 0x50, 8, 2, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 7, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"valueDecimal", 0x50, 8, 6},
+    {"valueDecimal", 0x50, 8, 6, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 15, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"valueDateTime", 0x50, 8, 5},
+    {"valueDateTime", 0x50, 8, 5, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 17, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"valueCode", 0x50, 8, 0},
+    {"valueCode", 0x50, 8, 0, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 3, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"valueCoding", 0x50, 8, 1},
+    {"valueCoding", 0x50, 8, 1, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Coding},
 #line 15 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"valueBoolean", 0x50, 8, 4},
+    {"valueBoolean", 0x50, 8, 4, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 12, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/CodeSystem_Concept_Property.gperf"
-    {"valueInteger", 0x50, 8, 3}
+    {"valueInteger", 0x50, 8, 3, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Integer}
   };
 
 static const signed char lookup[] =

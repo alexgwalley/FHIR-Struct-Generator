@@ -98,127 +98,127 @@ Procedure_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Procedure[] =
   {
 #line 12 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"subject", 0xf0, 26, -1},
+    {"subject", 0xf0, 26, -1, {(U8*)"subject", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"category", 0xe0, 24, -1},
+    {"category", 0xe0, 24, -1, {(U8*)"category", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 63 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"note_count", 0x1b8, 50, -1},
+    {"note_count", 0x1b8, 50, -1, {(U8*)"note_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"reasonCode_count", 0x140, 35, -1},
+    {"reasonCode_count", 0x140, 35, -1, {(U8*)"reasonCode_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 50 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"reasonReference_count", 0x150, 37, -1},
+    {"reasonReference_count", 0x150, 37, -1, {(U8*)"reasonReference_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"partOf_count", 0xb8, 20, -1},
+    {"partOf_count", 0xb8, 20, -1, {(U8*)"partOf_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 64 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"note", 0x1c0, 51, -1},
+    {"note", 0x1c0, 51, -1, {(U8*)"note", 4}, fhir_deserialize::ResourceType::Annotation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 45 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"performer_count", 0x128, 32, -1},
+    {"performer_count", 0x128, 32, -1, {(U8*)"performer_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"partOf", 0xc0, 21, -1},
+    {"partOf", 0xc0, 21, -1, {(U8*)"partOf", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 54 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"outcome", 0x170, 41, -1},
+    {"outcome", 0x170, 41, -1, {(U8*)"outcome", 7}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 46 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"performer", 0x130, 33, -1},
+    {"performer", 0x130, 33, -1, {(U8*)"performer", 9}, fhir_deserialize::ResourceType::Procedure_Performer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 49 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"reasonCode", 0x148, 36, -1},
+    {"reasonCode", 0x148, 36, -1, {(U8*)"reasonCode", 10}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"status", 0xc8, 22, -1},
+    {"status", 0xc8, 22, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 69 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"usedCode_count", 0x1e8, 56, -1},
+    {"usedCode_count", 0x1e8, 56, -1, {(U8*)"usedCode_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 51 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"reasonReference", 0x158, 38, -1},
+    {"reasonReference", 0x158, 38, -1, {(U8*)"reasonReference", 15}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"identifier_count", 0x78, 12, -1},
+    {"identifier_count", 0x78, 12, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 11 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"basedOn_count", 0xa8, 18, -1},
+    {"basedOn_count", 0xa8, 18, -1, {(U8*)"basedOn_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 67 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"usedReference_count", 0x1d8, 54, -1},
+    {"usedReference_count", 0x1d8, 54, -1, {(U8*)"usedReference_count", 19}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"identifier", 0x80, 13, -1},
+    {"identifier", 0x80, 13, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 41 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"performedAge", 0x108, 29, 3},
+    {"performedAge", 0x108, 29, 3, {(U8*)"performed", 9}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Age},
 #line 44 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"asserter", 0x120, 31, -1},
+    {"asserter", 0x120, 31, -1, {(U8*)"asserter", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"performedRange", 0x108, 29, 4},
+    {"performedRange", 0x108, 29, 4, {(U8*)"performed", 9}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Range},
 #line 27 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"instantiatesUri", 0xa0, 17, -1},
+    {"instantiatesUri", 0xa0, 17, -1, {(U8*)"instantiatesUri", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"instantiatesUri_count", 0x98, 16, -1},
+    {"instantiatesUri_count", 0x98, 16, -1, {(U8*)"instantiatesUri_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"performedDateTime", 0x108, 29, 0},
+    {"performedDateTime", 0x108, 29, 0, {(U8*)"performed", 9}, fhir_deserialize::ResourceType::Unknown, 17, fhir_deserialize::ResourceType::Unknown},
 #line 70 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"usedCode", 0x1f0, 57, -1},
+    {"usedCode", 0x1f0, 57, -1, {(U8*)"usedCode", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 52 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"bodySite_count", 0x160, 39, -1},
+    {"bodySite_count", 0x160, 39, -1, {(U8*)"bodySite_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"performedString", 0x108, 29, 2},
+    {"performedString", 0x108, 29, 2, {(U8*)"performed", 9}, fhir_deserialize::ResourceType::Unknown, 7, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"instantiatesCanonical_count", 0x88, 14, -1},
+    {"instantiatesCanonical_count", 0x88, 14, -1, {(U8*)"instantiatesCanonical_count", 27}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 68 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"usedReference", 0x1e0, 55, -1},
+    {"usedReference", 0x1e0, 55, -1, {(U8*)"usedReference", 13}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 56 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"report", 0x180, 43, -1},
+    {"report", 0x180, 43, -1, {(U8*)"report", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"code", 0xe8, 25, -1},
+    {"code", 0xe8, 25, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"performedPeriod", 0x108, 29, 1},
+    {"performedPeriod", 0x108, 29, 1, {(U8*)"performed", 9}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Period},
 #line 55 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"report_count", 0x178, 42, -1},
+    {"report_count", 0x178, 42, -1, {(U8*)"report_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 53 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"bodySite", 0x168, 40, -1},
+    {"bodySite", 0x168, 40, -1, {(U8*)"bodySite", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"statusReason", 0xd8, 23, -1},
+    {"statusReason", 0xd8, 23, -1, {(U8*)"statusReason", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 61 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"followUp_count", 0x1a8, 48, -1},
+    {"followUp_count", 0x1a8, 48, -1, {(U8*)"followUp_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 65 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"focalDevice_count", 0x1c8, 52, -1},
+    {"focalDevice_count", 0x1c8, 52, -1, {(U8*)"focalDevice_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 43 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"recorder", 0x118, 30, -1},
+    {"recorder", 0x118, 30, -1, {(U8*)"recorder", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"encounter", 0xf8, 27, -1},
+    {"encounter", 0xf8, 27, -1, {(U8*)"encounter", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 57 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"complication_count", 0x188, 44, -1},
+    {"complication_count", 0x188, 44, -1, {(U8*)"complication_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 59 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"complicationDetail_count", 0x198, 46, -1},
+    {"complicationDetail_count", 0x198, 46, -1, {(U8*)"complicationDetail_count", 24}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 66 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"focalDevice", 0x1d0, 53, -1},
+    {"focalDevice", 0x1d0, 53, -1, {(U8*)"focalDevice", 11}, fhir_deserialize::ResourceType::Procedure_FocalDevice, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"basedOn", 0xb0, 19, -1},
+    {"basedOn", 0xb0, 19, -1, {(U8*)"basedOn", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"instantiatesCanonical", 0x90, 15, -1},
+    {"instantiatesCanonical", 0x90, 15, -1, {(U8*)"instantiatesCanonical", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 62 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"followUp", 0x1b0, 49, -1},
+    {"followUp", 0x1b0, 49, -1, {(U8*)"followUp", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"location", 0x138, 34, -1},
+    {"location", 0x138, 34, -1, {(U8*)"location", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 58 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"complication", 0x190, 45, -1},
+    {"complication", 0x190, 45, -1, {(U8*)"complication", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 60 "./src/generated/gperf_class_files/Procedure.gperf"
-    {"complicationDetail", 0x1a0, 47, -1}
+    {"complicationDetail", 0x1a0, 47, -1, {(U8*)"complicationDetail", 18}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

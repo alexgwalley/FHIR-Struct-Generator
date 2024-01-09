@@ -88,25 +88,25 @@ ValueSet_Compose_Include_Concept_Gperf::hash (register const char *str, register
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ValueSet_Compose_Include_Concept[] =
   {
 #line 11 "./src/generated/gperf_class_files/ValueSet_Compose_Include_Concept.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ValueSet_Compose_Include_Concept.gperf"
-    {"code", 0x38, 6, -1},
+    {"code", 0x38, 6, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ValueSet_Compose_Include_Concept.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ValueSet_Compose_Include_Concept.gperf"
-    {"display", 0x48, 7, -1},
+    {"display", 0x48, 7, -1, {(U8*)"display", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ValueSet_Compose_Include_Concept.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ValueSet_Compose_Include_Concept.gperf"
-    {"designation", 0x60, 9, -1},
+    {"designation", 0x60, 9, -1, {(U8*)"designation", 11}, fhir_deserialize::ResourceType::ValueSet_Compose_Include_Concept_Designation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ValueSet_Compose_Include_Concept.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ValueSet_Compose_Include_Concept.gperf"
-    {"designation_count", 0x58, 8, -1},
+    {"designation_count", 0x58, 8, -1, {(U8*)"designation_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ValueSet_Compose_Include_Concept.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ValueSet_Compose_Include_Concept.gperf"
-    {"resourceType", 0x0, 0, -1}
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

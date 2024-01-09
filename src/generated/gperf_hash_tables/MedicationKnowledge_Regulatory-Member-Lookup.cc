@@ -88,29 +88,29 @@ MedicationKnowledge_Regulatory_Gperf::hash (register const char *str, register u
 static const struct fhir_deserialize::MemberNameAndOffset word_array_MedicationKnowledge_Regulatory[] =
   {
 #line 11 "./src/generated/gperf_class_files/MedicationKnowledge_Regulatory.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/MedicationKnowledge_Regulatory.gperf"
-    {"schedule", 0x58, 10, -1},
+    {"schedule", 0x58, 10, -1, {(U8*)"schedule", 8}, fhir_deserialize::ResourceType::MedicationKnowledge_Regulatory_Schedule, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/MedicationKnowledge_Regulatory.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/MedicationKnowledge_Regulatory.gperf"
-    {"maxDispense", 0x60, 11, -1},
+    {"maxDispense", 0x60, 11, -1, {(U8*)"maxDispense", 11}, fhir_deserialize::ResourceType::MedicationKnowledge_Regulatory_MaxDispense, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/MedicationKnowledge_Regulatory.gperf"
-    {"substitution", 0x48, 8, -1},
+    {"substitution", 0x48, 8, -1, {(U8*)"substitution", 12}, fhir_deserialize::ResourceType::MedicationKnowledge_Regulatory_Substitution, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/MedicationKnowledge_Regulatory.gperf"
-    {"schedule_count", 0x50, 9, -1},
+    {"schedule_count", 0x50, 9, -1, {(U8*)"schedule_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/MedicationKnowledge_Regulatory.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/MedicationKnowledge_Regulatory.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/MedicationKnowledge_Regulatory.gperf"
-    {"substitution_count", 0x40, 7, -1},
+    {"substitution_count", 0x40, 7, -1, {(U8*)"substitution_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/MedicationKnowledge_Regulatory.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/MedicationKnowledge_Regulatory.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/MedicationKnowledge_Regulatory.gperf"
-    {"regulatoryAuthority", 0x38, 6, -1}
+    {"regulatoryAuthority", 0x38, 6, -1, {(U8*)"regulatoryAuthority", 19}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

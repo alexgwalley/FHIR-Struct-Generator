@@ -88,31 +88,31 @@ MedicinalProduct_ManufacturingBusinessOperation_Gperf::hash (register const char
 static const struct fhir_deserialize::MemberNameAndOffset word_array_MedicinalProduct_ManufacturingBusinessOperation[] =
   {
 #line 11 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"manufacturer", 0x68, 11, -1},
+    {"manufacturer", 0x68, 11, -1, {(U8*)"manufacturer", 12}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"effectiveDate", 0x48, 8, -1},
+    {"effectiveDate", 0x48, 8, -1, {(U8*)"effectiveDate", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"manufacturer_count", 0x60, 10, -1},
+    {"manufacturer_count", 0x60, 10, -1, {(U8*)"manufacturer_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"regulator", 0x70, 12, -1},
+    {"regulator", 0x70, 12, -1, {(U8*)"regulator", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"confidentialityIndicator", 0x58, 9, -1},
+    {"confidentialityIndicator", 0x58, 9, -1, {(U8*)"confidentialityIndicator", 24}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"operationType", 0x38, 6, -1},
+    {"operationType", 0x38, 6, -1, {(U8*)"operationType", 13}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/MedicinalProduct_ManufacturingBusinessOperation.gperf"
-    {"authorisationReferenceNumber", 0x40, 7, -1}
+    {"authorisationReferenceNumber", 0x40, 7, -1, {(U8*)"authorisationReferenceNumber", 28}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

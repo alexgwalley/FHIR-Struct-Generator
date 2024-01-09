@@ -7,14 +7,14 @@
 %define class-name MedicinalProduct_Name_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-productName, 0x38, 6, -1
-namePart_count, 0x48, 7, -1
-namePart, 0x50, 8, -1
-countryLanguage_count, 0x58, 9, -1
-countryLanguage, 0x60, 10, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+productName, 0x38, 6, -1, {(U8*)"productName", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+namePart_count, 0x48, 7, -1, {(U8*)"namePart_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+namePart, 0x50, 8, -1, {(U8*)"namePart", 8}, fhir_deserialize::ResourceType::MedicinalProduct_Name_NamePart, 0, fhir_deserialize::ResourceType::Unknown
+countryLanguage_count, 0x58, 9, -1, {(U8*)"countryLanguage_count", 21}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+countryLanguage, 0x60, 10, -1, {(U8*)"countryLanguage", 15}, fhir_deserialize::ResourceType::MedicinalProduct_Name_CountryLanguage, 0, fhir_deserialize::ResourceType::Unknown

@@ -98,49 +98,49 @@ VisionPrescription_LensSpecification_Gperf::hash (register const char *str, regi
 static const struct fhir_deserialize::MemberNameAndOffset word_array_VisionPrescription_LensSpecification[] =
   {
 #line 11 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"add", 0x78, 13, -1},
+    {"add", 0x78, 13, -1, {(U8*)"add", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"note", 0xc8, 21, -1},
+    {"note", 0xc8, 21, -1, {(U8*)"note", 4}, fhir_deserialize::ResourceType::Annotation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"color", 0xa0, 18, -1},
+    {"color", 0xa0, 18, -1, {(U8*)"color", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"sphere", 0x50, 8, -1},
+    {"sphere", 0x50, 8, -1, {(U8*)"sphere", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"product", 0x38, 6, -1},
+    {"product", 0x38, 6, -1, {(U8*)"product", 7}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"cylinder", 0x58, 9, -1},
+    {"cylinder", 0x58, 9, -1, {(U8*)"cylinder", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"note_count", 0xc0, 20, -1},
+    {"note_count", 0xc0, 20, -1, {(U8*)"note_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"duration", 0x98, 17, -1},
+    {"duration", 0x98, 17, -1, {(U8*)"duration", 8}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"backCurve", 0x88, 15, -1},
+    {"backCurve", 0x88, 15, -1, {(U8*)"backCurve", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"eye", 0x40, 7, -1},
+    {"eye", 0x40, 7, -1, {(U8*)"eye", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"axis", 0x60, 10, -1},
+    {"axis", 0x60, 10, -1, {(U8*)"axis", 4}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"prism", 0x70, 12, -1},
+    {"prism", 0x70, 12, -1, {(U8*)"prism", 5}, fhir_deserialize::ResourceType::VisionPrescription_LensSpecification_Prism, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"brand", 0xb0, 19, -1},
+    {"brand", 0xb0, 19, -1, {(U8*)"brand", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"prism_count", 0x68, 11, -1},
+    {"prism_count", 0x68, 11, -1, {(U8*)"prism_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"diameter", 0x90, 16, -1},
+    {"diameter", 0x90, 16, -1, {(U8*)"diameter", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/VisionPrescription_LensSpecification.gperf"
-    {"power", 0x80, 14, -1}
+    {"power", 0x80, 14, -1, {(U8*)"power", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

@@ -275,6 +275,46 @@ GperfFunctionLookup(Arena *arena, ClassDefinition *def)
 }
 
 String8
+GPerfRow(Arena *arena, String8 name, size_t offset, size_t member_index, size_t type_index,
+         String8 member_name, String8 member_first_type_name, ValueType union_type_type, 
+         String8 union_type_name)
+{
+
+
+	String8 class_name;
+	if (union_type_name.size > 0 && union_type_type == ValueType::Class_Reference)
+	{
+		class_name = GetClassNameFromUnionName(arena,
+		                                       union_type_name,
+		                                       member_name);
+	}
+	else
+	{
+		class_name = Str8Lit("Unknown");
+	}
+
+	String8 mem_type_name = member_first_type_name;
+	if (mem_type_name.size == 0)
+	{
+		mem_type_name = Str8Lit("Unknown");
+	}
+
+	// TODO(agw): make namespace non-constant
+	return PushStr8F(arena,
+	                 "%S, 0x%x, %d, %d, {(U8*)\"%S\", %d}, fhir_deserialize::ResourceType::%S, %d, fhir_deserialize::ResourceType::%S\n", 
+			name,
+			offset,
+			member_index,
+			type_index,
+			member_name,
+			member_name.size,
+			mem_type_name,
+			(int)union_type_type,
+			class_name);
+}
+
+
+String8
 SingleClassGperf(Arena *arena, ClassDefinition *def)
 {
 	Temp scratch = ScratchBegin(&arena, 1);
@@ -324,16 +364,35 @@ SingleClassGperf(Arena *arena, ClassDefinition *def)
 						String8 union_name = GetUnionInternalTypeName(scratch.arena,
 						                                              tan.type, tan.name,
 						                                              original);
-						Str8ListPushF(scratch.arena,
+						Str8ListPush(scratch.arena,
 						              &result_list,
-						              "%S, 0x%x, %d, %d\n", union_name, offset, i, j);
+						              GPerfRow(scratch.arena, 
+						                       union_name,
+						                       offset,
+						                       i, j,
+						                       mem.name,
+						                       mem.value_type.types.type_names[0],
+						                       tan.type, union_name));
 					}
 				}
 				else if (mem.type == ClassMemberType::Single)
 				{
-					Str8ListPushF(scratch.arena,
+					String8 class_value_name = mem.value_type.single.name;
+					if (mem.value_type.single.type != ValueType::Class_Reference)
+					{
+						class_value_name = Str8Lit("");
+					}
+					Str8ListPush(scratch.arena,
 					              &result_list,
-					              "%S, 0x%x, %d, %d\n", original, offset, i, -1);
+					              GPerfRow(scratch.arena,
+					                       original,
+					                       offset,
+					                       i,
+					                       -1,
+					                       mem.name,
+					                       class_value_name,
+					                       ValueType::Unknown,
+					                       Str8Lit("")));
 				}
 			}
 		}
@@ -349,16 +408,39 @@ SingleClassGperf(Arena *arena, ClassDefinition *def)
 				String8 union_name = GetUnionInternalTypeName(scratch.arena,
 				                                              tan.type, tan.name,
 				                                              mem.name);
-				Str8ListPushF(scratch.arena,
+
+				Str8ListPush(scratch.arena,
 				              &result_list,
-				              "%S, 0x%x, %d, %d\n", union_name, offset, i, j);
+							GPerfRow(scratch.arena,
+									union_name,
+									offset,
+									i,
+									j,
+									mem.name,
+									mem.value_type.types.type_names[0],
+									tan.type,
+									 union_name));
 			}
 		}
 		else if(mem.type == ClassMemberType::Single)
 		{
-			Str8ListPushF(scratch.arena,
+
+			String8 class_value_name = mem.value_type.single.name;
+			if (mem.value_type.single.type != ValueType::Class_Reference)
+			{
+				class_value_name = Str8Lit("");
+			}
+			Str8ListPush(scratch.arena,
                           &result_list,
-                          "%S, 0x%x, %d, %d\n", mem.name, offset, i, -1);
+							GPerfRow(scratch.arena,
+									mem.name,
+									offset,
+									i,
+									-1,
+									mem.name,
+									 class_value_name,
+									ValueType::Unknown,
+									 Str8Lit("")));
 		}
 	}
     
@@ -414,7 +496,7 @@ OutputGperfFiles(Arena *arena, String8 in_dir_name, ClassDefinitionList *list) {
 		                               file_name,
                                        node->def.name);
         // TODO(agw): we don't _always_ need to call this
-		//system((char*)gperf_call.str);
+		system((char*)gperf_call.str);
 	}
     
 	Temp scratch = ScratchBegin(&arena, 1);

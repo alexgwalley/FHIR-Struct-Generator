@@ -88,31 +88,31 @@ MedicationAdministration_Dosage_Gperf::hash (register const char *str, register 
 static const struct fhir_deserialize::MemberNameAndOffset word_array_MedicationAdministration_Dosage[] =
   {
 #line 11 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"text", 0x38, 6, -1},
+    {"text", 0x38, 6, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"method", 0x58, 9, -1},
+    {"method", 0x58, 9, -1, {(U8*)"method", 6}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"dose", 0x60, 10, -1},
+    {"dose", 0x60, 10, -1, {(U8*)"dose", 4}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"route", 0x50, 8, -1},
+    {"route", 0x50, 8, -1, {(U8*)"route", 5}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"site", 0x48, 7, -1},
+    {"site", 0x48, 7, -1, {(U8*)"site", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"rateRatio", 0x70, 12, 0},
+    {"rateRatio", 0x70, 12, 0, {(U8*)"rate", 4}, fhir_deserialize::ResourceType::Ratio, 20, fhir_deserialize::ResourceType::Ratio},
 #line 22 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"rateQuantity", 0x70, 12, 1},
+    {"rateQuantity", 0x70, 12, 1, {(U8*)"rate", 4}, fhir_deserialize::ResourceType::Ratio, 20, fhir_deserialize::ResourceType::Quantity},
 #line 14 "./src/generated/gperf_class_files/MedicationAdministration_Dosage.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

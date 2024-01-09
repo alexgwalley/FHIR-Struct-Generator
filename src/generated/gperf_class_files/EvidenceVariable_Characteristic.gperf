@@ -7,25 +7,25 @@
 %define class-name EvidenceVariable_Characteristic_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-description, 0x38, 6, -1
-definitionReference, 0x50, 8, 0
-definitionCanonical, 0x50, 8, 1
-definitionCodeableConcept, 0x50, 8, 2
-definitionExpression, 0x50, 8, 3
-definitionDataRequirement, 0x50, 8, 4
-definitionTriggerDefinition, 0x50, 8, 5
-usageContext_count, 0x60, 9, -1
-usageContext, 0x68, 10, -1
-exclude, 0x70, 11, -1
-participantEffectiveDateTime, 0x78, 13, 0
-participantEffectivePeriod, 0x78, 13, 1
-participantEffectiveDuration, 0x78, 13, 2
-participantEffectiveTiming, 0x78, 13, 3
-timeFromStart, 0x88, 14, -1
-groupMeasure, 0x90, 15, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+description, 0x38, 6, -1, {(U8*)"description", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+definitionReference, 0x50, 8, 0, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::Reference
+definitionCanonical, 0x50, 8, 1, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 2, fhir_deserialize::ResourceType::Unknown
+definitionCodeableConcept, 0x50, 8, 2, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::CodeableConcept
+definitionExpression, 0x50, 8, 3, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::Expression
+definitionDataRequirement, 0x50, 8, 4, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::DataRequirement
+definitionTriggerDefinition, 0x50, 8, 5, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 20, fhir_deserialize::ResourceType::TriggerDefinition
+usageContext_count, 0x60, 9, -1, {(U8*)"usageContext_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+usageContext, 0x68, 10, -1, {(U8*)"usageContext", 12}, fhir_deserialize::ResourceType::UsageContext, 0, fhir_deserialize::ResourceType::Unknown
+exclude, 0x70, 11, -1, {(U8*)"exclude", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+participantEffectiveDateTime, 0x78, 13, 0, {(U8*)"participantEffective", 20}, fhir_deserialize::ResourceType::Unknown, 17, fhir_deserialize::ResourceType::Unknown
+participantEffectivePeriod, 0x78, 13, 1, {(U8*)"participantEffective", 20}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Period
+participantEffectiveDuration, 0x78, 13, 2, {(U8*)"participantEffective", 20}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Duration
+participantEffectiveTiming, 0x78, 13, 3, {(U8*)"participantEffective", 20}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Timing
+timeFromStart, 0x88, 14, -1, {(U8*)"timeFromStart", 13}, fhir_deserialize::ResourceType::Duration, 0, fhir_deserialize::ResourceType::Unknown
+groupMeasure, 0x90, 15, -1, {(U8*)"groupMeasure", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown

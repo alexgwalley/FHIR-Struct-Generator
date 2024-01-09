@@ -100,101 +100,101 @@ Device_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Device[] =
   {
 #line 11 "./src/generated/gperf_class_files/Device.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/Device.gperf"
-    {"owner", 0x190, 38, -1},
+    {"owner", 0x190, 38, -1, {(U8*)"owner", 5}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Device.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Device.gperf"
-    {"identifier", 0x80, 13, -1},
+    {"identifier", 0x80, 13, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/Device.gperf"
-    {"patient", 0x188, 37, -1},
+    {"patient", 0x188, 37, -1, {(U8*)"patient", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 52 "./src/generated/gperf_class_files/Device.gperf"
-    {"url", 0x1b0, 42, -1},
+    {"url", 0x1b0, 42, -1, {(U8*)"url", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Device.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Device.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Device.gperf"
-    {"identifier_count", 0x78, 12, -1},
+    {"identifier_count", 0x78, 12, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 46 "./src/generated/gperf_class_files/Device.gperf"
-    {"property", 0x180, 36, -1},
+    {"property", 0x180, 36, -1, {(U8*)"property", 8}, fhir_deserialize::ResourceType::Device_Property, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/Device.gperf"
-    {"modelNumber", 0x130, 28, -1},
+    {"modelNumber", 0x130, 28, -1, {(U8*)"modelNumber", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/Device.gperf"
-    {"manufacturer", 0xd0, 21, -1},
+    {"manufacturer", 0xd0, 21, -1, {(U8*)"manufacturer", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 45 "./src/generated/gperf_class_files/Device.gperf"
-    {"property_count", 0x178, 35, -1},
+    {"property_count", 0x178, 35, -1, {(U8*)"property_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/Device.gperf"
-    {"manufactureDate", 0xe0, 22, -1},
+    {"manufactureDate", 0xe0, 22, -1, {(U8*)"manufactureDate", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 57 "./src/generated/gperf_class_files/Device.gperf"
-    {"parent", 0x1e0, 47, -1},
+    {"parent", 0x1e0, 47, -1, {(U8*)"parent", 6}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Device.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/Device.gperf"
-    {"specialization", 0x160, 32, -1},
+    {"specialization", 0x160, 32, -1, {(U8*)"specialization", 14}, fhir_deserialize::ResourceType::Device_Specialization, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/Device.gperf"
-    {"partNumber", 0x140, 29, -1},
+    {"partNumber", 0x140, 29, -1, {(U8*)"partNumber", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Device.gperf"
-    {"status", 0xa0, 17, -1},
+    {"status", 0xa0, 17, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 50 "./src/generated/gperf_class_files/Device.gperf"
-    {"contact", 0x1a0, 40, -1},
+    {"contact", 0x1a0, 40, -1, {(U8*)"contact", 7}, fhir_deserialize::ResourceType::ContactPoint, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Device.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Device.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 41 "./src/generated/gperf_class_files/Device.gperf"
-    {"specialization_count", 0x158, 31, -1},
+    {"specialization_count", 0x158, 31, -1, {(U8*)"specialization_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/Device.gperf"
-    {"statusReason", 0xb8, 19, -1},
+    {"statusReason", 0xb8, 19, -1, {(U8*)"statusReason", 12}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 49 "./src/generated/gperf_class_files/Device.gperf"
-    {"contact_count", 0x198, 39, -1},
+    {"contact_count", 0x198, 39, -1, {(U8*)"contact_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Device.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Device.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 56 "./src/generated/gperf_class_files/Device.gperf"
-    {"safety", 0x1d8, 46, -1},
+    {"safety", 0x1d8, 46, -1, {(U8*)"safety", 6}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/Device.gperf"
-    {"serialNumber", 0x110, 25, -1},
+    {"serialNumber", 0x110, 25, -1, {(U8*)"serialNumber", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Device.gperf"
-    {"statusReason_count", 0xb0, 18, -1},
+    {"statusReason_count", 0xb0, 18, -1, {(U8*)"statusReason_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Device.gperf"
-    {"definition", 0x88, 14, -1},
+    {"definition", 0x88, 14, -1, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 55 "./src/generated/gperf_class_files/Device.gperf"
-    {"safety_count", 0x1d0, 45, -1},
+    {"safety_count", 0x1d0, 45, -1, {(U8*)"safety_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Device.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/Device.gperf"
-    {"lotNumber", 0x100, 24, -1},
+    {"lotNumber", 0x100, 24, -1, {(U8*)"lotNumber", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/Device.gperf"
-    {"deviceName", 0x128, 27, -1},
+    {"deviceName", 0x128, 27, -1, {(U8*)"deviceName", 10}, fhir_deserialize::ResourceType::Device_DeviceName, 0, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/Device.gperf"
-    {"version", 0x170, 34, -1},
+    {"version", 0x170, 34, -1, {(U8*)"version", 7}, fhir_deserialize::ResourceType::Device_Version, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Device.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/Device.gperf"
-    {"expirationDate", 0xf0, 23, -1},
+    {"expirationDate", 0xf0, 23, -1, {(U8*)"expirationDate", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Device.gperf"
-    {"udiCarrier", 0x98, 16, -1},
+    {"udiCarrier", 0x98, 16, -1, {(U8*)"udiCarrier", 10}, fhir_deserialize::ResourceType::Device_UdiCarrier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/Device.gperf"
-    {"deviceName_count", 0x120, 26, -1},
+    {"deviceName_count", 0x120, 26, -1, {(U8*)"deviceName_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Device.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 43 "./src/generated/gperf_class_files/Device.gperf"
-    {"version_count", 0x168, 33, -1},
+    {"version_count", 0x168, 33, -1, {(U8*)"version_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 54 "./src/generated/gperf_class_files/Device.gperf"
-    {"note", 0x1c8, 44, -1},
+    {"note", 0x1c8, 44, -1, {(U8*)"note", 4}, fhir_deserialize::ResourceType::Annotation, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Device.gperf"
-    {"udiCarrier_count", 0x90, 15, -1},
+    {"udiCarrier_count", 0x90, 15, -1, {(U8*)"udiCarrier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 51 "./src/generated/gperf_class_files/Device.gperf"
-    {"location", 0x1a8, 41, -1},
+    {"location", 0x1a8, 41, -1, {(U8*)"location", 8}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 53 "./src/generated/gperf_class_files/Device.gperf"
-    {"note_count", 0x1c0, 43, -1},
+    {"note_count", 0x1c0, 43, -1, {(U8*)"note_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/Device.gperf"
-    {"distinctIdentifier", 0xc0, 20, -1},
+    {"distinctIdentifier", 0xc0, 20, -1, {(U8*)"distinctIdentifier", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/Device.gperf"
-    {"type", 0x150, 30, -1}
+    {"type", 0x150, 30, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

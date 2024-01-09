@@ -88,31 +88,31 @@ CoverageEligibilityResponse_Insurance_Item_Benefit_Gperf::hash (register const c
 static const struct fhir_deserialize::MemberNameAndOffset word_array_CoverageEligibilityResponse_Insurance_Item_Benefit[] =
   {
 #line 11 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"type", 0x38, 6, -1},
+    {"type", 0x38, 6, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"usedMoney", 0x60, 10, 2},
+    {"usedMoney", 0x60, 10, 2, {(U8*)"used", 4}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Money},
 #line 21 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"usedString", 0x60, 10, 1},
+    {"usedString", 0x60, 10, 1, {(U8*)"used", 4}, fhir_deserialize::ResourceType::Unknown, 7, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"allowedMoney", 0x48, 8, 2},
+    {"allowedMoney", 0x48, 8, 2, {(U8*)"allowed", 7}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Money},
 #line 18 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"allowedString", 0x48, 8, 1},
+    {"allowedString", 0x48, 8, 1, {(U8*)"allowed", 7}, fhir_deserialize::ResourceType::Unknown, 7, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"usedUnsignedInt", 0x60, 10, 0},
+    {"usedUnsignedInt", 0x60, 10, 0, {(U8*)"used", 4}, fhir_deserialize::ResourceType::Unknown, 14, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"allowedUnsignedInt", 0x48, 8, 0},
+    {"allowedUnsignedInt", 0x48, 8, 0, {(U8*)"allowed", 7}, fhir_deserialize::ResourceType::Unknown, 14, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/CoverageEligibilityResponse_Insurance_Item_Benefit.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

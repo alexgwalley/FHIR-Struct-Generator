@@ -105,65 +105,65 @@ PaymentReconciliation_Gperf::hash (register const char *str, register unsigned i
 static const struct fhir_deserialize::MemberNameAndOffset word_array_PaymentReconciliation[] =
   {
 #line 11 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"detail", 0x110, 26, -1},
+    {"detail", 0x110, 26, -1, {(U8*)"detail", 6}, fhir_deserialize::ResourceType::PaymentReconciliation_Detail, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"outcome", 0xc8, 20, -1},
+    {"outcome", 0xc8, 20, -1, {(U8*)"outcome", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"extension", 0x60, 9, -1},
+    {"extension", 0x60, 9, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"disposition", 0xd8, 21, -1},
+    {"disposition", 0xd8, 21, -1, {(U8*)"disposition", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"created", 0xa0, 16, -1},
+    {"created", 0xa0, 16, -1, {(U8*)"created", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"contained", 0x50, 7, -1},
+    {"contained", 0x50, 7, -1, {(U8*)"contained", 9}, fhir_deserialize::ResourceType::Resource, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"extension_count", 0x58, 8, -1},
+    {"extension_count", 0x58, 8, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"period", 0x98, 15, -1},
+    {"period", 0x98, 15, -1, {(U8*)"period", 6}, fhir_deserialize::ResourceType::Period, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"text", 0x40, 5, -1},
+    {"text", 0x40, 5, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Narrative, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"contained_count", 0x48, 6, -1},
+    {"contained_count", 0x48, 6, -1, {(U8*)"contained_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"status", 0x88, 14, -1},
+    {"status", 0x88, 14, -1, {(U8*)"status", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"request", 0xb8, 18, -1},
+    {"request", 0xb8, 18, -1, {(U8*)"request", 7}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 37 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"formCode", 0x118, 27, -1},
+    {"formCode", 0x118, 27, -1, {(U8*)"formCode", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"requestor", 0xc0, 19, -1},
+    {"requestor", 0xc0, 19, -1, {(U8*)"requestor", 9}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"identifier", 0x80, 13, -1},
+    {"identifier", 0x80, 13, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 39 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"processNote", 0x128, 29, -1},
+    {"processNote", 0x128, 29, -1, {(U8*)"processNote", 11}, fhir_deserialize::ResourceType::PaymentReconciliation_ProcessNote, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"modifierExtension", 0x70, 11, -1},
+    {"modifierExtension", 0x70, 11, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"paymentAmount", 0xf8, 23, -1},
+    {"paymentAmount", 0xf8, 23, -1, {(U8*)"paymentAmount", 13}, fhir_deserialize::ResourceType::Money, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"identifier_count", 0x78, 12, -1},
+    {"identifier_count", 0x78, 12, -1, {(U8*)"identifier_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"processNote_count", 0x120, 28, -1},
+    {"processNote_count", 0x120, 28, -1, {(U8*)"processNote_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"modifierExtension_count", 0x68, 10, -1},
+    {"modifierExtension_count", 0x68, 10, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"paymentDate", 0xe8, 22, -1},
+    {"paymentDate", 0xe8, 22, -1, {(U8*)"paymentDate", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"detail_count", 0x108, 25, -1},
+    {"detail_count", 0x108, 25, -1, {(U8*)"detail_count", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"paymentIssuer", 0xb0, 17, -1},
+    {"paymentIssuer", 0xb0, 17, -1, {(U8*)"paymentIssuer", 13}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/PaymentReconciliation.gperf"
-    {"paymentIdentifier", 0x100, 24, -1}
+    {"paymentIdentifier", 0x100, 24, -1, {(U8*)"paymentIdentifier", 17}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

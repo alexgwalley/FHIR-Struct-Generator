@@ -100,59 +100,59 @@ Questionnaire_Item_Gperf::hash (register const char *str, register unsigned int 
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Questionnaire_Item[] =
   {
 #line 11 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 36 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"item", 0x108, 26, -1},
+    {"item", 0x108, 26, -1, {(U8*)"item", 4}, fhir_deserialize::ResourceType::Questionnaire_Item, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"prefix", 0x68, 10, -1},
+    {"prefix", 0x68, 10, -1, {(U8*)"prefix", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 34 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"initial", 0xf8, 24, -1},
+    {"initial", 0xf8, 24, -1, {(U8*)"initial", 7}, fhir_deserialize::ResourceType::Questionnaire_Item_Initial, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"type", 0x88, 12, -1},
+    {"type", 0x88, 12, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 35 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"item_count", 0x100, 25, -1},
+    {"item_count", 0x100, 25, -1, {(U8*)"item_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"linkId", 0x38, 6, -1},
+    {"linkId", 0x38, 6, -1, {(U8*)"linkId", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 33 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"initial_count", 0xf0, 23, -1},
+    {"initial_count", 0xf0, 23, -1, {(U8*)"initial_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"enableWhen", 0xa0, 14, -1},
+    {"enableWhen", 0xa0, 14, -1, {(U8*)"enableWhen", 10}, fhir_deserialize::ResourceType::Questionnaire_Item_EnableWhen, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"repeats", 0xbc, 17, -1},
+    {"repeats", 0xbc, 17, -1, {(U8*)"repeats", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"required", 0xb8, 16, -1},
+    {"required", 0xb8, 16, -1, {(U8*)"required", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"enableBehavior", 0xa8, 15, -1},
+    {"enableBehavior", 0xa8, 15, -1, {(U8*)"enableBehavior", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"enableWhen_count", 0x98, 13, -1},
+    {"enableWhen_count", 0x98, 13, -1, {(U8*)"enableWhen_count", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 32 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"answerOption", 0xe8, 22, -1},
+    {"answerOption", 0xe8, 22, -1, {(U8*)"answerOption", 12}, fhir_deserialize::ResourceType::Questionnaire_Item_AnswerOption, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"readOnly", 0xc0, 18, -1},
+    {"readOnly", 0xc0, 18, -1, {(U8*)"readOnly", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 30 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"answerValueSet", 0xd0, 20, -1},
+    {"answerValueSet", 0xd0, 20, -1, {(U8*)"answerValueSet", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"definition", 0x48, 7, -1},
+    {"definition", 0x48, 7, -1, {(U8*)"definition", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"answerOption_count", 0xe0, 21, -1},
+    {"answerOption_count", 0xe0, 21, -1, {(U8*)"answerOption_count", 18}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"text", 0x78, 11, -1},
+    {"text", 0x78, 11, -1, {(U8*)"text", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"maxLength", 0xc8, 19, -1},
+    {"maxLength", 0xc8, 19, -1, {(U8*)"maxLength", 9}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"code", 0x60, 9, -1},
+    {"code", 0x60, 9, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::Coding, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Questionnaire_Item.gperf"
-    {"code_count", 0x58, 8, -1}
+    {"code_count", 0x58, 8, -1, {(U8*)"code_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

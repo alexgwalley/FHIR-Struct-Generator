@@ -88,45 +88,45 @@ Claim_Item_Detail_SubDetail_Gperf::hash (register const char *str, register unsi
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Claim_Item_Detail_SubDetail[] =
   {
 #line 27 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"net", 0x90, 17, -1},
+    {"net", 0x90, 17, -1, {(U8*)"net", 3}, fhir_deserialize::ResourceType::Money, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"revenue", 0x40, 7, -1},
+    {"revenue", 0x40, 7, -1, {(U8*)"revenue", 7}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"sequence", 0x38, 6, -1},
+    {"sequence", 0x38, 6, -1, {(U8*)"sequence", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"programCode", 0x70, 13, -1},
+    {"programCode", 0x70, 13, -1, {(U8*)"programCode", 11}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"modifier", 0x60, 11, -1},
+    {"modifier", 0x60, 11, -1, {(U8*)"modifier", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"unitPrice", 0x80, 15, -1},
+    {"unitPrice", 0x80, 15, -1, {(U8*)"unitPrice", 9}, fhir_deserialize::ResourceType::Money, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"productOrService", 0x50, 9, -1},
+    {"productOrService", 0x50, 9, -1, {(U8*)"productOrService", 16}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"programCode_count", 0x68, 12, -1},
+    {"programCode_count", 0x68, 12, -1, {(U8*)"programCode_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"quantity", 0x78, 14, -1},
+    {"quantity", 0x78, 14, -1, {(U8*)"quantity", 8}, fhir_deserialize::ResourceType::Quantity, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"modifier_count", 0x58, 10, -1},
+    {"modifier_count", 0x58, 10, -1, {(U8*)"modifier_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"factor", 0x88, 16, -1},
+    {"factor", 0x88, 16, -1, {(U8*)"factor", 6}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"category", 0x48, 8, -1},
+    {"category", 0x48, 8, -1, {(U8*)"category", 8}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 11 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"udi", 0xa0, 19, -1},
+    {"udi", 0xa0, 19, -1, {(U8*)"udi", 3}, fhir_deserialize::ResourceType::Reference, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/Claim_Item_Detail_SubDetail.gperf"
-    {"udi_count", 0x98, 18, -1}
+    {"udi_count", 0x98, 18, -1, {(U8*)"udi_count", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

@@ -113,137 +113,137 @@ StructureMap_Group_Rule_Source_Gperf::hash (register const char *str, register u
 static const struct fhir_deserialize::MemberNameAndOffset word_array_StructureMap_Group_Rule_Source[] =
   {
 #line 11 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"type", 0x60, 9, -1},
+    {"type", 0x60, 9, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 74 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"check", 0xc8, 16, -1},
+    {"check", 0xc8, 16, -1, {(U8*)"check", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"context", 0x38, 6, -1},
+    {"context", 0x38, 6, -1, {(U8*)"context", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"min", 0x48, 7, -1},
+    {"min", 0x48, 7, -1, {(U8*)"min", 3}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 73 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"condition", 0xb8, 15, -1},
+    {"condition", 0xb8, 15, -1, {(U8*)"condition", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 75 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"logMessage", 0xd8, 17, -1},
+    {"logMessage", 0xd8, 17, -1, {(U8*)"logMessage", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 71 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"listMode", 0x98, 13, -1},
+    {"listMode", 0x98, 13, -1, {(U8*)"listMode", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 31 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueOid", 0x78, 11, 11},
+    {"defaultValueOid", 0x78, 11, 11, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 6, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueCode", 0x78, 11, 3},
+    {"defaultValueCode", 0x78, 11, 3, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 3, fhir_deserialize::ResourceType::Unknown},
 #line 70 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"element", 0x88, 12, -1},
+    {"element", 0x88, 12, -1, {(U8*)"element", 7}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 44 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueCoding", 0x78, 11, 24},
+    {"defaultValueCoding", 0x78, 11, 24, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Coding},
 #line 22 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueCanonical", 0x78, 11, 2},
+    {"defaultValueCanonical", 0x78, 11, 2, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 2, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 61 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueContributor", 0x78, 11, 41},
+    {"defaultValueContributor", 0x78, 11, 41, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Contributor},
 #line 45 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueContactPoint", 0x78, 11, 25},
+    {"defaultValueContactPoint", 0x78, 11, 25, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::ContactPoint},
 #line 60 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueContactDetail", 0x78, 11, 40},
+    {"defaultValueContactDetail", 0x78, 11, 40, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::ContactDetail},
 #line 43 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueCodeableConcept", 0x78, 11, 23},
+    {"defaultValueCodeableConcept", 0x78, 11, 23, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::CodeableConcept},
 #line 14 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 40 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueAge", 0x78, 11, 20},
+    {"defaultValueAge", 0x78, 11, 20, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Age},
 #line 63 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueExpression", 0x78, 11, 43},
+    {"defaultValueExpression", 0x78, 11, 43, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Expression},
 #line 39 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueAddress", 0x78, 11, 19},
+    {"defaultValueAddress", 0x78, 11, 19, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Address},
 #line 41 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueAnnotation", 0x78, 11, 21},
+    {"defaultValueAnnotation", 0x78, 11, 21, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Annotation},
 #line 68 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueDosage", 0x78, 11, 48},
+    {"defaultValueDosage", 0x78, 11, 48, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Dosage},
 #line 27 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueId", 0x78, 11, 7},
+    {"defaultValueId", 0x78, 11, 7, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 4, fhir_deserialize::ResourceType::Unknown},
 #line 47 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueDistance", 0x78, 11, 27},
+    {"defaultValueDistance", 0x78, 11, 27, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Distance},
 #line 24 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueDate", 0x78, 11, 4},
+    {"defaultValueDate", 0x78, 11, 4, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 16, fhir_deserialize::ResourceType::Unknown},
 #line 42 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueAttachment", 0x78, 11, 22},
+    {"defaultValueAttachment", 0x78, 11, 22, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Attachment},
 #line 18 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"max", 0x50, 8, -1},
+    {"max", 0x50, 8, -1, {(U8*)"max", 3}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueInstant", 0x78, 11, 8},
+    {"defaultValueInstant", 0x78, 11, 8, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 19, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueDateTime", 0x78, 11, 5},
+    {"defaultValueDateTime", 0x78, 11, 5, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 17, fhir_deserialize::ResourceType::Unknown},
 #line 49 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueHumanName", 0x78, 11, 29},
+    {"defaultValueHumanName", 0x78, 11, 29, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::HumanName},
 #line 50 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueIdentifier", 0x78, 11, 30},
+    {"defaultValueIdentifier", 0x78, 11, 30, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Identifier},
 #line 72 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"variable", 0xa8, 14, -1},
+    {"variable", 0xa8, 14, -1, {(U8*)"variable", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueInteger", 0x78, 11, 9},
+    {"defaultValueInteger", 0x78, 11, 9, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Integer},
 #line 36 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueUri", 0x78, 11, 16},
+    {"defaultValueUri", 0x78, 11, 16, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 9, fhir_deserialize::ResourceType::Unknown},
 #line 38 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueUuid", 0x78, 11, 18},
+    {"defaultValueUuid", 0x78, 11, 18, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 11, fhir_deserialize::ResourceType::Unknown},
 #line 62 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueDataRequirement", 0x78, 11, 42},
+    {"defaultValueDataRequirement", 0x78, 11, 42, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::DataRequirement},
 #line 35 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueUnsignedInt", 0x78, 11, 15},
+    {"defaultValueUnsignedInt", 0x78, 11, 15, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 14, fhir_deserialize::ResourceType::Unknown},
 #line 66 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueTriggerDefinition", 0x78, 11, 46},
+    {"defaultValueTriggerDefinition", 0x78, 11, 46, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::TriggerDefinition},
 #line 37 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueUrl", 0x78, 11, 17},
+    {"defaultValueUrl", 0x78, 11, 17, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 10, fhir_deserialize::ResourceType::Unknown},
 #line 58 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueSignature", 0x78, 11, 38},
+    {"defaultValueSignature", 0x78, 11, 38, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Signature},
 #line 54 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueRange", 0x78, 11, 34},
+    {"defaultValueRange", 0x78, 11, 34, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Range},
 #line 32 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValuePositiveInt", 0x78, 11, 12},
+    {"defaultValuePositiveInt", 0x78, 11, 12, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 13, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueBoolean", 0x78, 11, 1},
+    {"defaultValueBoolean", 0x78, 11, 1, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 12, fhir_deserialize::ResourceType::Unknown},
 #line 48 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueDuration", 0x78, 11, 28},
+    {"defaultValueDuration", 0x78, 11, 28, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Duration},
 #line 34 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueTime", 0x78, 11, 14},
+    {"defaultValueTime", 0x78, 11, 14, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 18, fhir_deserialize::ResourceType::Unknown},
 #line 55 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueRatio", 0x78, 11, 35},
+    {"defaultValueRatio", 0x78, 11, 35, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Ratio},
 #line 59 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueTiming", 0x78, 11, 39},
+    {"defaultValueTiming", 0x78, 11, 39, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Timing},
 #line 20 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueBase64Binary", 0x78, 11, 0},
+    {"defaultValueBase64Binary", 0x78, 11, 0, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 1, fhir_deserialize::ResourceType::Unknown},
 #line 53 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueQuantity", 0x78, 11, 33},
+    {"defaultValueQuantity", 0x78, 11, 33, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Quantity},
 #line 56 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueReference", 0x78, 11, 36},
+    {"defaultValueReference", 0x78, 11, 36, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Reference},
 #line 51 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueMoney", 0x78, 11, 31},
+    {"defaultValueMoney", 0x78, 11, 31, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Money},
 #line 33 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueString", 0x78, 11, 13},
+    {"defaultValueString", 0x78, 11, 13, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 7, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueDecimal", 0x78, 11, 6},
+    {"defaultValueDecimal", 0x78, 11, 6, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 15, fhir_deserialize::ResourceType::Unknown},
 #line 69 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueMeta", 0x78, 11, 49},
+    {"defaultValueMeta", 0x78, 11, 49, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Meta},
 #line 46 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueCount", 0x78, 11, 26},
+    {"defaultValueCount", 0x78, 11, 26, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Count},
 #line 52 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValuePeriod", 0x78, 11, 32},
+    {"defaultValuePeriod", 0x78, 11, 32, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Period},
 #line 65 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueRelatedArtifact", 0x78, 11, 45},
+    {"defaultValueRelatedArtifact", 0x78, 11, 45, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::RelatedArtifact},
 #line 57 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueSampledData", 0x78, 11, 37},
+    {"defaultValueSampledData", 0x78, 11, 37, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::SampledData},
 #line 12 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 64 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueParameterDefinition", 0x78, 11, 44},
+    {"defaultValueParameterDefinition", 0x78, 11, 44, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::ParameterDefinition},
 #line 30 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueMarkdown", 0x78, 11, 10},
+    {"defaultValueMarkdown", 0x78, 11, 10, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 5, fhir_deserialize::ResourceType::Unknown},
 #line 67 "./src/generated/gperf_class_files/StructureMap_Group_Rule_Source.gperf"
-    {"defaultValueUsageContext", 0x78, 11, 47}
+    {"defaultValueUsageContext", 0x78, 11, 47, {(U8*)"defaultValue", 12}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::UsageContext}
   };
 
 static const signed char lookup[] =

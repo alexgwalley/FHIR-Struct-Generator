@@ -88,25 +88,25 @@ ObservationDefinition_QuantitativeDetails_Gperf::hash (register const char *str,
 static const struct fhir_deserialize::MemberNameAndOffset word_array_ObservationDefinition_QuantitativeDetails[] =
   {
 #line 11 "./src/generated/gperf_class_files/ObservationDefinition_QuantitativeDetails.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/ObservationDefinition_QuantitativeDetails.gperf"
-    {"unit", 0x40, 7, -1},
+    {"unit", 0x40, 7, -1, {(U8*)"unit", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/ObservationDefinition_QuantitativeDetails.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/ObservationDefinition_QuantitativeDetails.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/ObservationDefinition_QuantitativeDetails.gperf"
-    {"customaryUnit", 0x38, 6, -1},
+    {"customaryUnit", 0x38, 6, -1, {(U8*)"customaryUnit", 13}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/ObservationDefinition_QuantitativeDetails.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/ObservationDefinition_QuantitativeDetails.gperf"
-    {"conversionFactor", 0x48, 8, -1},
+    {"conversionFactor", 0x48, 8, -1, {(U8*)"conversionFactor", 16}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/ObservationDefinition_QuantitativeDetails.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/ObservationDefinition_QuantitativeDetails.gperf"
-    {"decimalPrecision", 0x50, 9, -1},
+    {"decimalPrecision", 0x50, 9, -1, {(U8*)"decimalPrecision", 16}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/ObservationDefinition_QuantitativeDetails.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

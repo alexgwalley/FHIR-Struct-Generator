@@ -7,26 +7,26 @@
 %define class-name Observation_Component_Gperf
 struct fhir_deserialize::MemberNameAndOffset;
 %%
-resourceType, 0x0, 0, -1
-id, 0x8, 1, -1
-extension_count, 0x18, 2, -1
-extension, 0x20, 3, -1
-modifierExtension_count, 0x28, 4, -1
-modifierExtension, 0x30, 5, -1
-code, 0x38, 6, -1
-valueQuantity, 0x48, 8, 0
-valueCodeableConcept, 0x48, 8, 1
-valueString, 0x48, 8, 2
-valueBoolean, 0x48, 8, 3
-valueInteger, 0x48, 8, 4
-valueRange, 0x48, 8, 5
-valueRatio, 0x48, 8, 6
-valueSampledData, 0x48, 8, 7
-valueTime, 0x48, 8, 8
-valueDateTime, 0x48, 8, 9
-valuePeriod, 0x48, 8, 10
-dataAbsentReason, 0x58, 9, -1
-interpretation_count, 0x60, 10, -1
-interpretation, 0x68, 11, -1
-referenceRange_count, 0x70, 12, -1
-referenceRange, 0x78, 13, -1
+resourceType, 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+id, 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension_count, 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+extension, 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension_count, 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+modifierExtension, 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown
+code, 0x38, 6, -1, {(U8*)"code", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+valueQuantity, 0x48, 8, 0, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Quantity
+valueCodeableConcept, 0x48, 8, 1, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::CodeableConcept
+valueString, 0x48, 8, 2, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 7, fhir_deserialize::ResourceType::Unknown
+valueBoolean, 0x48, 8, 3, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 12, fhir_deserialize::ResourceType::Unknown
+valueInteger, 0x48, 8, 4, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Integer
+valueRange, 0x48, 8, 5, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Range
+valueRatio, 0x48, 8, 6, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Ratio
+valueSampledData, 0x48, 8, 7, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::SampledData
+valueTime, 0x48, 8, 8, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 18, fhir_deserialize::ResourceType::Unknown
+valueDateTime, 0x48, 8, 9, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 17, fhir_deserialize::ResourceType::Unknown
+valuePeriod, 0x48, 8, 10, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Quantity, 20, fhir_deserialize::ResourceType::Period
+dataAbsentReason, 0x58, 9, -1, {(U8*)"dataAbsentReason", 16}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+interpretation_count, 0x60, 10, -1, {(U8*)"interpretation_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+interpretation, 0x68, 11, -1, {(U8*)"interpretation", 14}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown
+referenceRange_count, 0x70, 12, -1, {(U8*)"referenceRange_count", 20}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown
+referenceRange, 0x78, 13, -1, {(U8*)"referenceRange", 14}, fhir_deserialize::ResourceType::Observation_ReferenceRange, 0, fhir_deserialize::ResourceType::Unknown

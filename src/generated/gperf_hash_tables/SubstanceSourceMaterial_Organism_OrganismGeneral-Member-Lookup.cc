@@ -88,27 +88,27 @@ SubstanceSourceMaterial_Organism_OrganismGeneral_Gperf::hash (register const cha
 static const struct fhir_deserialize::MemberNameAndOffset word_array_SubstanceSourceMaterial_Organism_OrganismGeneral[] =
   {
 #line 11 "./src/generated/gperf_class_files/SubstanceSourceMaterial_Organism_OrganismGeneral.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/SubstanceSourceMaterial_Organism_OrganismGeneral.gperf"
-    {"class", 0x48, 8, -1},
+    {"class", 0x48, 8, -1, {(U8*)"class_", 6}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/SubstanceSourceMaterial_Organism_OrganismGeneral.gperf"
-    {"class_", 0x48, 8, -1},
+    {"class_", 0x48, 8, -1, {(U8*)"class_", 6}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/SubstanceSourceMaterial_Organism_OrganismGeneral.gperf"
-    {"kingdom", 0x38, 6, -1},
+    {"kingdom", 0x38, 6, -1, {(U8*)"kingdom", 7}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/SubstanceSourceMaterial_Organism_OrganismGeneral.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/SubstanceSourceMaterial_Organism_OrganismGeneral.gperf"
-    {"order", 0x50, 9, -1},
+    {"order", 0x50, 9, -1, {(U8*)"order", 5}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/SubstanceSourceMaterial_Organism_OrganismGeneral.gperf"
-    {"phylum", 0x40, 7, -1},
+    {"phylum", 0x40, 7, -1, {(U8*)"phylum", 6}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/SubstanceSourceMaterial_Organism_OrganismGeneral.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/SubstanceSourceMaterial_Organism_OrganismGeneral.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/SubstanceSourceMaterial_Organism_OrganismGeneral.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/SubstanceSourceMaterial_Organism_OrganismGeneral.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

@@ -102,23 +102,23 @@ DataRequirement_DateFilter_Gperf::hash (register const char *str, register unsig
 static const struct fhir_deserialize::MemberNameAndOffset word_array_DataRequirement_DateFilter[] =
   {
 #line 11 "./src/generated/gperf_class_files/DataRequirement_DateFilter.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/DataRequirement_DateFilter.gperf"
-    {"path", 0x28, 4, -1},
+    {"path", 0x28, 4, -1, {(U8*)"path", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/DataRequirement_DateFilter.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/DataRequirement_DateFilter.gperf"
-    {"valuePeriod", 0x50, 7, 1},
+    {"valuePeriod", 0x50, 7, 1, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Period},
 #line 10 "./src/generated/gperf_class_files/DataRequirement_DateFilter.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/DataRequirement_DateFilter.gperf"
-    {"valueDuration", 0x50, 7, 2},
+    {"valueDuration", 0x50, 7, 2, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 20, fhir_deserialize::ResourceType::Duration},
 #line 12 "./src/generated/gperf_class_files/DataRequirement_DateFilter.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/DataRequirement_DateFilter.gperf"
-    {"searchParam", 0x38, 5, -1},
+    {"searchParam", 0x38, 5, -1, {(U8*)"searchParam", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/DataRequirement_DateFilter.gperf"
-    {"valueDateTime", 0x50, 7, 0}
+    {"valueDateTime", 0x50, 7, 0, {(U8*)"value", 5}, fhir_deserialize::ResourceType::Unknown, 17, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

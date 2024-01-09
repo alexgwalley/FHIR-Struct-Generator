@@ -103,25 +103,25 @@ Dosage_DoseAndRate_Gperf::hash (register const char *str, register unsigned int 
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Dosage_DoseAndRate[] =
   {
 #line 11 "./src/generated/gperf_class_files/Dosage_DoseAndRate.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Dosage_DoseAndRate.gperf"
-    {"type", 0x28, 4, -1},
+    {"type", 0x28, 4, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Dosage_DoseAndRate.gperf"
-    {"doseRange", 0x38, 6, 0},
+    {"doseRange", 0x38, 6, 0, {(U8*)"dose", 4}, fhir_deserialize::ResourceType::Range, 20, fhir_deserialize::ResourceType::Range},
 #line 10 "./src/generated/gperf_class_files/Dosage_DoseAndRate.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Dosage_DoseAndRate.gperf"
-    {"rateRange", 0x48, 8, 1},
+    {"rateRange", 0x48, 8, 1, {(U8*)"rate", 4}, fhir_deserialize::ResourceType::Ratio, 20, fhir_deserialize::ResourceType::Range},
 #line 16 "./src/generated/gperf_class_files/Dosage_DoseAndRate.gperf"
-    {"doseQuantity", 0x38, 6, 1},
+    {"doseQuantity", 0x38, 6, 1, {(U8*)"dose", 4}, fhir_deserialize::ResourceType::Range, 20, fhir_deserialize::ResourceType::Quantity},
 #line 13 "./src/generated/gperf_class_files/Dosage_DoseAndRate.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Dosage_DoseAndRate.gperf"
-    {"rateQuantity", 0x48, 8, 2},
+    {"rateQuantity", 0x48, 8, 2, {(U8*)"rate", 4}, fhir_deserialize::ResourceType::Ratio, 20, fhir_deserialize::ResourceType::Quantity},
 #line 17 "./src/generated/gperf_class_files/Dosage_DoseAndRate.gperf"
-    {"rateRatio", 0x48, 8, 0},
+    {"rateRatio", 0x48, 8, 0, {(U8*)"rate", 4}, fhir_deserialize::ResourceType::Ratio, 20, fhir_deserialize::ResourceType::Ratio},
 #line 12 "./src/generated/gperf_class_files/Dosage_DoseAndRate.gperf"
-    {"extension_count", 0x18, 2, -1}
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

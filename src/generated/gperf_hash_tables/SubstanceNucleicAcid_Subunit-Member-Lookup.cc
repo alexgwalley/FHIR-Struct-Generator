@@ -88,37 +88,37 @@ SubstanceNucleicAcid_Subunit_Gperf::hash (register const char *str, register uns
 static const struct fhir_deserialize::MemberNameAndOffset word_array_SubstanceNucleicAcid_Subunit[] =
   {
 #line 11 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"sugar", 0x88, 15, -1},
+    {"sugar", 0x88, 15, -1, {(U8*)"sugar", 5}, fhir_deserialize::ResourceType::SubstanceNucleicAcid_Subunit_Sugar, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"subunit", 0x38, 6, -1},
+    {"subunit", 0x38, 6, -1, {(U8*)"subunit", 7}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"sequence", 0x40, 7, -1},
+    {"sequence", 0x40, 7, -1, {(U8*)"sequence", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"threePrime", 0x68, 11, -1},
+    {"threePrime", 0x68, 11, -1, {(U8*)"threePrime", 10}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"sugar_count", 0x80, 14, -1},
+    {"sugar_count", 0x80, 14, -1, {(U8*)"sugar_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"fivePrime", 0x60, 10, -1},
+    {"fivePrime", 0x60, 10, -1, {(U8*)"fivePrime", 9}, fhir_deserialize::ResourceType::CodeableConcept, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"length", 0x50, 8, -1},
+    {"length", 0x50, 8, -1, {(U8*)"length", 6}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"linkage", 0x78, 13, -1},
+    {"linkage", 0x78, 13, -1, {(U8*)"linkage", 7}, fhir_deserialize::ResourceType::SubstanceNucleicAcid_Subunit_Linkage, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"sequenceAttachment", 0x58, 9, -1},
+    {"sequenceAttachment", 0x58, 9, -1, {(U8*)"sequenceAttachment", 18}, fhir_deserialize::ResourceType::Attachment, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"linkage_count", 0x70, 12, -1},
+    {"linkage_count", 0x70, 12, -1, {(U8*)"linkage_count", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/SubstanceNucleicAcid_Subunit.gperf"
-    {"modifierExtension_count", 0x28, 4, -1}
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

@@ -88,33 +88,33 @@ Bundle_Gperf::hash (register const char *str, register unsigned int len)
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Bundle[] =
   {
 #line 11 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"type", 0x48, 6, -1},
+    {"type", 0x48, 6, -1, {(U8*)"type", 4}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"total", 0x68, 8, -1},
+    {"total", 0x68, 8, -1, {(U8*)"total", 5}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"meta", 0x18, 2, -1},
+    {"meta", 0x18, 2, -1, {(U8*)"meta", 4}, fhir_deserialize::ResourceType::Meta, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"timestamp", 0x58, 7, -1},
+    {"timestamp", 0x58, 7, -1, {(U8*)"timestamp", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"identifier", 0x40, 5, -1},
+    {"identifier", 0x40, 5, -1, {(U8*)"identifier", 10}, fhir_deserialize::ResourceType::Identifier, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"implicitRules", 0x20, 3, -1},
+    {"implicitRules", 0x20, 3, -1, {(U8*)"implicitRules", 13}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"link", 0x78, 10, -1},
+    {"link", 0x78, 10, -1, {(U8*)"link", 4}, fhir_deserialize::ResourceType::Bundle_Link, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"entry", 0x88, 12, -1},
+    {"entry", 0x88, 12, -1, {(U8*)"entry", 5}, fhir_deserialize::ResourceType::Bundle_Entry, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"language", 0x30, 4, -1},
+    {"language", 0x30, 4, -1, {(U8*)"language", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"signature", 0x90, 13, -1},
+    {"signature", 0x90, 13, -1, {(U8*)"signature", 9}, fhir_deserialize::ResourceType::Signature, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"link_count", 0x70, 9, -1},
+    {"link_count", 0x70, 9, -1, {(U8*)"link_count", 10}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/Bundle.gperf"
-    {"entry_count", 0x80, 11, -1}
+    {"entry_count", 0x80, 11, -1, {(U8*)"entry_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

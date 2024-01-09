@@ -33,7 +33,7 @@ Clinicaldocument_Gperf::hash (register const char *str, register unsigned int le
 static const struct fhir_deserialize::MemberNameAndOffset word_array_Clinicaldocument[] =
   {
 #line 10 "./src/generated/gperf_class_files/Clinicaldocument.gperf"
-    {"resourceType", 0x0, 0, -1}
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =

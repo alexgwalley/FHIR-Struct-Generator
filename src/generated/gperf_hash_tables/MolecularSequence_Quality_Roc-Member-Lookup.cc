@@ -102,45 +102,45 @@ MolecularSequence_Quality_Roc_Gperf::hash (register const char *str, register un
 static const struct fhir_deserialize::MemberNameAndOffset word_array_MolecularSequence_Quality_Roc[] =
   {
 #line 11 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"id", 0x8, 1, -1},
+    {"id", 0x8, 1, -1, {(U8*)"id", 2}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 17 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"score", 0x40, 7, -1},
+    {"score", 0x40, 7, -1, {(U8*)"score", 5}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 13 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"extension", 0x20, 3, -1},
+    {"extension", 0x20, 3, -1, {(U8*)"extension", 9}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 16 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"score_count", 0x38, 6, -1},
+    {"score_count", 0x38, 6, -1, {(U8*)"score_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 10 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"resourceType", 0x0, 0, -1},
+    {"resourceType", 0x0, 0, -1, {(U8*)"resourceType", 12}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 29 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"fMeasure", 0xa0, 19, -1},
+    {"fMeasure", 0xa0, 19, -1, {(U8*)"fMeasure", 8}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 25 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"precision", 0x80, 15, -1},
+    {"precision", 0x80, 15, -1, {(U8*)"precision", 9}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 12 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"extension_count", 0x18, 2, -1},
+    {"extension_count", 0x18, 2, -1, {(U8*)"extension_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 27 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"sensitivity", 0x90, 17, -1},
+    {"sensitivity", 0x90, 17, -1, {(U8*)"sensitivity", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 28 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"fMeasure_count", 0x98, 18, -1},
+    {"fMeasure_count", 0x98, 18, -1, {(U8*)"fMeasure_count", 14}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 24 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"precision_count", 0x78, 14, -1},
+    {"precision_count", 0x78, 14, -1, {(U8*)"precision_count", 15}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 26 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"sensitivity_count", 0x88, 16, -1},
+    {"sensitivity_count", 0x88, 16, -1, {(U8*)"sensitivity_count", 17}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 19 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"numTP", 0x50, 9, -1},
+    {"numTP", 0x50, 9, -1, {(U8*)"numTP", 5}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 15 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"modifierExtension", 0x30, 5, -1},
+    {"modifierExtension", 0x30, 5, -1, {(U8*)"modifierExtension", 17}, fhir_deserialize::ResourceType::Extension, 0, fhir_deserialize::ResourceType::Unknown},
 #line 21 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"numFP", 0x60, 11, -1},
+    {"numFP", 0x60, 11, -1, {(U8*)"numFP", 5}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 18 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"numTP_count", 0x48, 8, -1},
+    {"numTP_count", 0x48, 8, -1, {(U8*)"numTP_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 14 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"modifierExtension_count", 0x28, 4, -1},
+    {"modifierExtension_count", 0x28, 4, -1, {(U8*)"modifierExtension_count", 23}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 23 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"numFN", 0x70, 13, -1},
+    {"numFN", 0x70, 13, -1, {(U8*)"numFN", 5}, fhir_deserialize::ResourceType::Integer, 0, fhir_deserialize::ResourceType::Unknown},
 #line 20 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"numFP_count", 0x58, 10, -1},
+    {"numFP_count", 0x58, 10, -1, {(U8*)"numFP_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown},
 #line 22 "./src/generated/gperf_class_files/MolecularSequence_Quality_Roc.gperf"
-    {"numFN_count", 0x68, 12, -1}
+    {"numFN_count", 0x68, 12, -1, {(U8*)"numFN_count", 11}, fhir_deserialize::ResourceType::Unknown, 0, fhir_deserialize::ResourceType::Unknown}
   };
 
 static const signed char lookup[] =
