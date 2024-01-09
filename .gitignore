@@ -8,6 +8,9 @@ src/gperf_hash_tables/**/*
 *.dSYM
 *.ilk
 *.pdb
+*.4coder
+*.rdbg
+*.DS_Store
 
 # Template
 
