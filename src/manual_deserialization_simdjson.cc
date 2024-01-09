@@ -378,7 +378,6 @@ Deserialize_Array(Arena *arena,
 	Temp temp = ScratchBegin(&arena, 1);
 	ValueList list = {};
     
-    
 	int field_count = 0;
 	for (auto field : array)
 	{

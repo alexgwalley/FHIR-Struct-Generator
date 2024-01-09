@@ -76,3 +76,7 @@ Benchmark Name: prebake_meta_resource_types_no_zero, Deserialization GB/s: 0.349
 Benchmark Name: prebake_meta_resource_types_no_zero, Deserialization GB/s: 0.3415(GB/s) 
 Benchmark Name: prebake_meta_resource_types_no_zero, Deserialization GB/s: 0.4690(GB/s) 
 Benchmark Name: prebake_meta_resource_types_no_zero, Deserialization GB/s: 0.4753(GB/s) 
+Benchmark Name: 64kb_commit_granularity, Deserialization GB/s: 0.5025(GB/s) 
+Benchmark Name: 64kb_commit_granularity, Deserialization GB/s: 0.4933(GB/s) 
+Benchmark Name: 64kb_commit_granularity, Deserialization GB/s: 0.4931(GB/s) 
+Benchmark Name: 64kb_commit_granularity, Deserialization GB/s: 0.5097(GB/s) 
