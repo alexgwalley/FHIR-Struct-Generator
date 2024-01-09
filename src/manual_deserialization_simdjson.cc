@@ -270,7 +270,7 @@ struct Log
 	LogList logs;
 };
 
-// NOTE(agw): have a log per thread (ThreadCtx)
+// TODO(agw): have a log per thread (ThreadCtx)
 static Log global_log;
 
 void
@@ -341,27 +341,27 @@ struct ArrayValue
 };
 
 
-typedef struct ValueNode ValueNode;
-struct ValueNode
+typedef struct ArrayValueNode ArrayValueNode;
+struct ArrayValueNode
 {
-	ValueNode *next;
+	ArrayValueNode *next;
 	ArrayValue v;
 };
 
-typedef struct ValueList ValueList;
-struct ValueList
+typedef struct ArrayValueList ArrayValueList;
+struct ArrayValueList
 {
-	ValueNode *first;
-	ValueNode *last;
+	ArrayValueNode *first;
+	ArrayValueNode *last;
 	U64 node_count;
 	U64 total_size;
 };
 
 
 void
-ValueListPush(Arena *arena, ValueList *list, ArrayValue array_value)
+ArrayValueListPush(Arena *arena, ArrayValueList *list, ArrayValue array_value)
 {
-	ValueNode *node = PushStructNoZero(arena, ValueNode);
+	ArrayValueNode *node = PushStructNoZero(arena, ArrayValueNode);
 	node->v = array_value;
 	QueuePush(list->first, list->last, node);
 	list->node_count += 1;
@@ -376,7 +376,7 @@ Deserialize_Array(Arena *arena,
                   U64 *count)
 {
 	Temp temp = ScratchBegin(&arena, 1);
-	ValueList list = {};
+	ArrayValueList list = {};
     
 	int field_count = 0;
 	for (auto field : array)
@@ -402,7 +402,7 @@ Deserialize_Array(Arena *arena,
 				ArrayValue value;
 				value.data = (void*)str_ptr;
 				value.size = sizeof(str_ptr);
-				ValueListPush(temp.arena, &list, value);
+				ArrayValueListPush(temp.arena, &list, value);
 			} break;
 			case simdjson::ondemand::json_type::number: // copy into dest
 			{
@@ -412,7 +412,7 @@ Deserialize_Array(Arena *arena,
 				ArrayValue value;
 				value.data = _double;
 				value.size = sizeof(_double);
-				ValueListPush(temp.arena, &list, value);
+				ArrayValueListPush(temp.arena, &list, value);
 			} break;
 			case simdjson::ondemand::json_type::boolean: 
 			{
@@ -423,7 +423,7 @@ Deserialize_Array(Arena *arena,
 				ArrayValue value;
 				value.data = _boolean;
 				value.size = sizeof(_boolean);
-				ValueListPush(temp.arena, &list, value);
+				ArrayValueListPush(temp.arena, &list, value);
 			} break;
 			case simdjson::ondemand::json_type::object: // copy into dest
 			{
@@ -445,7 +445,7 @@ Deserialize_Array(Arena *arena,
 				ArrayValue value;
 				value.data = (void*)resource_ptr;
 				value.size = sizeof(size_t);
-				ValueListPush(temp.arena, &list, value);
+				ArrayValueListPush(temp.arena, &list, value);
 			} break;
 			case simdjson::ondemand::json_type::array: // copy into dest
 			{
@@ -461,13 +461,12 @@ Deserialize_Array(Arena *arena,
 	output_array = ArenaPushNoZero(arena, list.total_size);
 	char* output_array_ptr = (char*)output_array;
     
-	for (ValueNode *node = list.first; node; node = node->next)
+	for (ArrayValueNode *node = list.first; node; node = node->next)
 	{
-		memcpy(output_array_ptr, node->v.data, node->v.size);
+		MemoryCopy(output_array_ptr, node->v.data, node->v.size);
 		output_array_ptr += node->v.size;
 	}
-    
-    
+
 	ScratchEnd(temp);
     
 	*count = field_count;
